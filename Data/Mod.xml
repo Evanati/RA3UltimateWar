@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mod.xml is the central include for mod setup data -->
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Tags></Tags>
+
+    <Includes>
+        <!-- These includes need to be in all mod.xml files -->
+		<Include 
+			type="reference" 
+			source="DATA:static.xml"/>
+        <Include 
+			type="reference" 
+			source="DATA:global.xml"/>
+        <Include 
+			type="reference" 
+			source="DATA:audio.xml"/>
+			
+		<!-- Red Alert 3: Ultimate War specific includes -->
+		<Include 
+			type="all" 
+			source="DATA:Allied/Structures/AlliedSuperWeaponAdvanced/ParticleAcceleratorFinalWeapon.xml"/>		
+    </Includes>
+</AssetDeclaration>

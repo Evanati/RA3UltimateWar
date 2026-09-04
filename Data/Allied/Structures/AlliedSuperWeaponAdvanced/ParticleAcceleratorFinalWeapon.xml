@@ -1,0 +1,28 @@
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+    <WeaponTemplate
+        id="ParticleAcceleratorFinalWeapon"
+        ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+        RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+        Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+        RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER ANTI_SUBMERGED">
+
+        <Nuggets>
+            <DamageNugget
+                Damage="600.0"
+                DamageTaperOff="300"
+                Radius="250.0"
+                DelayTimeSeconds="0.25s"
+                DamageType="EXPLOSIVE"
+                DamageFXType="ALLIED_PARTICLE"
+                DeathType="CATALYST"
+                NotifyObserversOnPreDamageEffectPosition="true"
+                RadiusAffectsBridges="true" />
+
+            <SuppressionNugget
+                Radius="10.0"
+                Suppression="25"
+                DurationSeconds="5s" />
+        </Nuggets>
+
+    </WeaponTemplate>
+</AssetDeclaration>

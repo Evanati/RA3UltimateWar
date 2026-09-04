@@ -1,0 +1,3679 @@
+// ZP01MapSounds
+	HOTSPOT:ZP01_HOTSPOT_1_TITLE
+		"Getting off"
+	End
+	
+	HOTSPOT:ZP01_HOTSPOT_1_DESC
+		"Get off the bus."
+	End	
+
+	DialogEvent:ZP01_C01_Voice01
+		"Contact!"
+	End
+	
+	DialogEvent:ZP01_C01_Voice02
+		"We are under attack! Find cover!"
+	End
+
+	DialogEvent:ZP01_C01_Voice03
+		"Report Comrade Lieutenant! We have encountered the Allied special forces and suffered heavy losses! Requesting immediate support!"
+	End
+
+	DialogEvent:ZP01_C01_Voice04
+		"Comrade Captain! There are Allied special forces over there, we need support!"
+	End
+	
+	DialogEvent:ZP01_C01_Voice05
+		"[Radio] Comrade Lieutenant! We have encountered the Allied special forces and suffered heavy losses! Request immediate support!"
+	End
+
+	DialogEvent:ZP01_C01_Voice06
+		"[Radio] Comrade Captain! There are Allied special forces over there, we need support!!"
+	End
+
+	DialogEvent:ZP01_C02_Voice01
+		"What happened? Let's go check it out."
+	End
+	
+	DialogEvent:ZP01_C02_Voice02
+		"Damn it! Didn't you guys close the cage?"
+	End
+
+	DialogEvent:ZP01_C02_Voice03
+		"Got it, we're on our way."
+	End
+
+	DialogEvent:ZP01_C02_Voice04
+		"holy crap This place is about to explode!"
+	End
+
+	DialogEvent:ZP01_C03_Voice01
+		"What's going on?"
+	End
+
+	DialogEvent:ZP01_C03_Voice02
+		"Someone's dead, there's an enemy!!! Find cover!"
+	End
+	
+	DialogEvent:ZP01_C03_Voice03
+		"Did the guard run to slack off again?"
+	End
+
+	DialogEvent:ZP01_C03_Voice04
+		"Where are those Allied soldiers? We can't let them run away!"
+	End
+
+	DialogEvent:ZP01_C03_Voice05
+		"Welcome!"
+	End
+
+	DialogEvent:ZP01_C04_Voice01
+		"Allied soldiers? our chief is living on the left mountain, go ask him you will get what you want."
+	End
+
+	DialogEvent:ZP01_C04_Voice02
+		"The Soviets, they are poisoning the river in the north."
+	End
+
+	DialogEvent:ZP01_C05_Voice01
+		"Commander, maybe we should take a different path. Look! That way, perhaps we could avoid conflicts with enemy main force."
+	End
+
+	DialogEvent:ZP01_C05_Voice02
+		"Sir, I think we should open those cages before we heading there, These little guys gonna keep them busy for a while."
+	End
+	
+	DialogEvent:ZP01_C05_Voice03
+		"Shepherd, we have found the abandoned base. Requesting deploy an outpost, Coordinates 26 42 05."
+	End
+
+	DialogEvent:ZP01_C05_Voice04
+		"Ah! This is the most disgusting place I've ever been."
+	End
+
+	DialogEvent:ZP01_C05_Voice05
+		"Shepherd!We need back up, get us outta of here!"
+	End	
+
+	DialogEvent:ZP01_C06_Voice01
+		"Glad you are here,sir.We were almost become a heap of ashes just now.Let's move out!"
+	End
+
+	DialogEvent:ZP01_C06_Voice02
+		"Jesus......They are doing some researches on a kind of toxic weapon......I just thought that it was our end!"
+	End
+	
+	DialogEvent:ZP01_C06_Voice03
+		"This is Zulu101 calling Shepherd,enemy radar has been cut,coordinate sent,requesting support."
+	End
+
+	DialogEvent:ZP01_C06_Voice04
+		"Holy crap!Look this place!"
+	End
+
+	DialogEvent:ZP01_C07_Voice01
+		"We have received anonymous intel,that the Soviet Union is engaged in the development of secret weapons in a village in the occupied area of Romania.Regardless of the type of weapon, it will create a disadvantageous situation for the front line.You have been authorized as the commander of the special operation team.Our commando Tanya and two skilled snipers will follow your command."
+	End	
+
+	DialogEvent:ZP01_C07_Voice02
+		"Lost connection with front line,mission aborted"
+	End
+
+	DialogEvent:ZP01_C07_Voice03
+		"Received, reinforcement on route"
+	End
+	
+	DialogEvent:ZP01_C07_Voice04
+		"Request granted......Teleporting mobile outpost will arrive in 3...2...1..."
+	End
+
+	DialogEvent:ZP01_C07_Voice05
+		"Now you can use any funds you collected to recruiting residents to fight for freedom.Good luck.Shepherd out."
+	End
+
+	DialogEvent:ZP01_C07_Voice06
+		"Connection established,transmitting data......"
+	End	
+
+	DialogEvent:ZP01_C07_Voice07
+		"Received,A helicopter is heading to the evacuating point in the northeast of Laboratory."
+	End		
+
+// RemixCryoBarrel		
+	Name:RemixCryoBarrel
+		"liquid nitrogen container"
+	End	
+
+	Desc:RemixCryoBarrel
+		"It looks very sturdy."
+	End
+	
+// BiohazardIncubator		
+	Name:BiohazardIncubator
+		"Biochemical Chamber"
+	End
+
+	Desc:BiohazardIncubator
+		"There is green liquid inside, it's hard to see what's inside."
+	End
+
+// BiohazardILab		
+	Name:BiohazardILab
+		"Biochemistry Lab"
+	End
+	
+	Type:BiohazardILab
+		"Technology Structure"
+	End
+
+	Desc:BiohazardILab
+		"A structure that has never been seen before."
+	End
+
+// CivilianMale		
+	Name:CivilianMale
+		"Civilian"
+	End
+
+	Desc:CivilianMale
+		"An average person."
+	End
+
+// RemixSuScientist		
+	Name:RemixSuScientist
+		"Scientist"
+	End
+	
+	Type:RemixSuScientist
+		"Know-It-All"
+	End
+
+	Desc:RemixSuScientist
+		"He appears to be somewhat disoriented."
+	End
+
+// RemixBlackHawk		
+	Name:RemixBlackHawk
+		"Grey Hawk"
+	End
+	
+	Type:RemixBlackHawk
+		"Air Transport"
+	End
+
+	Desc:RemixBlackHawk
+		"A helicopter capable of swiftly delivering troops."
+	End
+
+	
+// PlayerPowerSUT4Tower
+
+	Name:PlayerPowerSUT4Tower
+		"Tesla Cannon Authorization"
+	End	
+	
+	Desc:PlayerPowerSUT4Tower
+		"Passive: Tesla Cannon Construction Authorized"
+	End
+	
+	Type:PlayerPowerSUT4Tower
+		"Technology Authorization"
+	End		
+	
+// PlayerPowerAUT4Tower
+
+	Name:PlayerPowerAUT4Tower
+		"Lightning Generator Authorization"
+	End	
+	
+	Desc:PlayerPowerAUT4Tower
+		"Passive: Lightning Generator Construction Authorized"
+	End
+	
+	Type:PlayerPowerAUT4Tower
+		"Technology Authorization"
+	End			
+	
+// PlayerPowerJUT4Tower
+
+	Name:PlayerPowerJUT4Tower
+		"Psionic Crusher Authorization"
+	End	
+	
+	Desc:PlayerPowerJUT4Tower
+		"Passive: Psionic Crusher Construction Authorized"
+	End
+	
+	Type:PlayerPowerJUT4Tower
+		"Technology Authorization"
+	End
+	
+// SovietAntiInfantryInfantryMoto	
+	
+	NAME:SovietAntiInfantryInfantryMoto
+		"Mortarman"
+	End
+	
+	TYPE:SovietAntiInfantryInfantryMoto
+		"Anti-Infantry / Anti-Garrison"
+	End
+	
+	DESC:SovietAntiInfantryInfantryMoto
+		"A tough and experienced Soviet resistance combatant. This skilled mechanic is ready to continue the fight even without his vehicle."
+	End		
+	
+// AlliedSniperInfantry		
+	Name:AlliedSniperInfantry
+		"Sniper"
+	End
+	
+	Type:AlliedSniperInfantry
+		"Anti-Infantry / Anti-Light Vehicle"
+	End
+
+	Desc:AlliedSniperInfantry
+		"Infantry that can strike targets with precision from a long distance."
+	End
+
+	Name:ToggleAUSniperGetDown
+		"Get down"
+	End
+
+	Desc:ToggleAUSniperGetDown
+		"Lie on the ground for more stable shooting accuracy."
+	End	
+	
+	Name:ToggleAUSniperGetUp
+		"stand up"
+	End
+
+	Desc:ToggleAUSniperGetUp
+		"Stand up and be ready to move quickly at any time."
+	End		
+
+// MS04SOVIETINTEL35	
+	DialogEvent:MS04_SOVIETINTEL35
+		"Mortar Cycles from a nearby military base have arrived to aid you with their explosive firepower. Plans to construct additional Cycles have been sent to your War Factory."
+	End
+
+// CivParaDropMoto		
+	Name:CivParaDropMoto
+		"Special Delivery"
+	End
+	
+	Type:CivParaDropMoto
+		"Special Supply"
+	End
+
+	Desc:CivParaDropMoto
+		"Natasha's express delivery service can deliver goods to your doorstep for just a little money."
+	End	
+
+// AbilityEvacuateWater		
+	Name:AbilityEvacuateWater
+		"Evacuate Passenger"
+	End
+
+	Desc:AbilityEvacuateWater
+		"Unloads the passenger."
+	End	
+
+// NatashaMoto		
+	Name:NatashaMoto
+		"motorcycle"
+	End
+	
+	Type:NatashaMoto
+		"Vehicle"
+	End
+
+	Desc:NatashaMoto
+		"Perhaps someone likes this."
+	End	
+	
+// RemixAmbulance		
+	Name:RemixAmbulance
+		"Ambulance"
+	End
+
+	Desc:RemixAmbulance
+		"Although it's not very useful on the battlefield, the good news is that you don't have to pay."
+	End	
+
+// RemixBus01		
+	Name:RemixBus01
+		"Bus"
+	End
+	
+	Type:RemixBus01
+		"Civilian Vehicle"
+	End
+
+	Desc:RemixBus01
+		"It can transport many people."
+	End	
+
+// ExplodingOilTank
+	Name:ExplodingOilTank
+		"Oil Tank"
+	End
+	
+	Desc:ExplodingOilTank
+		"Maybe it's not empty."
+	End
+
+// SBSingleAirfield
+	Name:SBSingleAirfield
+		"Parking Apron"
+	End
+	
+	Desc:SBSingleAirfield
+		"A small airport where aircraft can land."
+	End
+	
+	Type:SBSingleAirfield
+		"Aircraft supply"
+	End
+
+// SUMineHelicopter
+	Name:SUMineHelicopter
+		"Mine Deployer"
+	End
+	
+	Desc:SUMineHelicopter
+		"A helicopter that can quickly deploy landmines and block enemy action routes."
+	End
+	
+	Type:SUMineHelicopter
+		"Mine deployer"
+	End
+
+// S03PortStructure
+
+	Name:PortStructureS03
+		"Fuel depot"
+	End	
+	
+	Desc:PortStructureS03
+		"If you capture this, then your fuel supply will not be a problem."
+	End
+	
+	Type:PortStructureS03
+		"Objective Structure"
+	End	
+
+// S03ImperialAdminBuilding
+
+	Name:ImperialAdminBuilding
+		"Imperial Palace"
+	End	
+	
+// CAMP S03	
+	INFOBOX:S03_REPAIRMH
+		"Command your combat engineers to repair this aircraft."
+	End	
+
+	INFOBOX:S03_TAKE_BARRACKS
+		"Command your combat engineers to capture the barrack."
+	End	
+	
+	INFOBOX:S03_ENGINNERTIPS
+		"Combat Engineer"
+	End		
+
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_6_TITLE
+		"Rescue civilian ships"
+	End	
+
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_6_DESC
+		"We will receive additional financial rewards if we find a way to rescue the detained civilian ships at the port. But more importantly, it is important to ensure the safety of civilian ships."
+	End
+	
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_5_TITLE
+		"Repair the mine deployer"
+	End	
+
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_5_DESC
+		"command the combat engineers to repair the mine deployer, so that we will receive additional battlefield support."
+	End		
+
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_4_TITLE
+		"Destroy the Imperial structures"
+	End	
+
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_4_DESC
+		"Destroying these imperial buildings can render the imperial palaces unprotected."
+	End	
+
+
+	MISSIONOBJ:S03_OBJECTIVE_4_TITLE
+		"Destroy the Imperial Palace"
+	End	
+
+
+	SCRIPT:S03_INFOBOX_GRINDERVEHICLE
+		"Now you can build Grinder in the Naval Yard."
+	End	
+	
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_2_TITLE
+		"Capturing the fuel depot."
+	End	
+	
+	MISSIONOBJ:S03_OBJECTIVE_BONUS_2_DESC
+		"Capturing the fuel depot can provide additional battlefield support."
+	End	
+
+
+// CAMP S02	
+	SCRIPT:S02_INFOBOX_TANKS
+		"These tanks can easily destory your Sickles.Take them down with the paralyzed weapons of the Tesla Trooper."
+	End	
+
+	SCRIPT:S02_INFOBOX_ShowTANKS
+		"Use the Magnetic Satellite to get rid of them."
+	End		
+
+	SCRIPT:S02_HINT_ANTIVEHICLE
+		"Use the anti-armor units to destroy the Imperial robots."
+	End		
+	
+
+// CAMP S01	
+	SCRIPT:S01_INFOBOX_COMMANDO_PROMOTION
+		"The "Field Promotion" protocol can immediately promote Natasha."
+	End		
+	
+	SUBTITLE:S02TH03_02
+		"[3.5:6.7] hey were hiding in the gypsy tents this whole time? Well no matter, the Orbital protocols is now available for you. Use it to crush the enemy."
+	End		
+
+// NewMapArcticStrom
+	SCRIPT:RemixMap_MI01_SCR01
+		"Arctic Storm\nDesigners:Arrim | Polo |ShuangLL\nScript:Arrim\nSpecial Support:YuLing\nGLHF!!!"
+	End	
+
+	SCRIPT:RemixMap_MI01_SCR02
+		"Game Timing:"
+	End		
+	
+	SCRIPT:RemixMap_MI01_SCREgg01
+		"Pigeon Bay--- please enter the port in an orderly manner"
+	End		
+
+	SCRIPT:RemixMap_MI01_SCREgg02
+		"Hello sir! (You want to sneak attack from here, right?,Don't talk about martial arts~)"
+	End	
+
+	SCRIPT:RemixMap_MI01_SCREgg02_1
+		"Which commander taught you to send Twin blades like this, Caiyin?"
+	End	
+	
+	SCRIPT:RemixMap_MI01_SCREgg03
+		"Don't hit me, I have something to say!!"
+	End		
+	
+	SCRIPT:RemixMap_MI01_SCREgg04
+		"Polo Shipyard Coo-class battleship"
+	End
+
+	SCRIPT:RemixMap_MI01_SCREgg06
+		"How will this year's movie be made?Hmmmm......the answer is:NO IDEA :o, or I'm still gooing~"
+	End	
+	
+	SCRIPT:RemixMap_MI01_SCREgg07
+		"You took away Xingbai[Shinby]'s filming funds, which may cause he to not be able to make new GMV, and the mission fails (only wonder)"
+	End		
+	
+	SCRIPT:RemixMap_MI01_SCREgg08
+		"Saien's friends are studying magic here, would you like to help them?"
+	End			
+	
+	SCRIPT:RemixMap_MI01_SCREgg08_1
+		"Thanks to your help, the ponies' magic has worked... Belch... Seems a little weird?"
+	End	
+	
+	MAP:[Remix_PVE]Arctic_stormx
+		"[Remix_PVE]Arctic Stormx"
+	End			
+	
+	SUBTITLE:RemixMap_MI01_SUB01
+		"[1.0:1.0] This is the Final Plan Commander, [2.0:5.0] The Allies hold their last base in Cape Alaska. [8.0:3.0] And what we're going to do is destroy what little faith they have![12.0:2.0] The scout force has been dispatched and will launch a full-scale attack in a moment!"
+	End
+	
+	SUBTITLE:RemixMap_MI01_SUB02
+		"[1.0:3.0] Be careful,since Allies have spotted us,it is highly likely that they will use the Chronosphere to attack."
+	End	
+	
+	SUBTITLE:RemixMap_MI01_SUB03
+		"[1.0:3.0] Commander,this is the ultimate weapon of the USSR: the Iron Fortress. [4.0:3.0] Its thick armour and powerful artillery will help you handle this base."
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB04
+		"[1.0:3.0] Warning,Allied fleet building detected."
+	End			
+	
+	SUBTITLE:RemixMap_MI01_SUB05
+		"[1.0:3.0] This Soviet outpost has long been unmanned,your arrival will brought her back to life."
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB06
+		"[1.0:3.0] Get in touch with the survivors of the advance force! [4.0:5.0] Commander, members of the advance party remind you to keep an eye out for Allied weather control towers, they seem to be able to deal a fair amount of damage to all of our troops!"
+	End			
+	
+	SUBTITLE:RemixMap_MI01_SUB07
+		"[1.0:3.0] The Allies have developed a strange weapon to protect their bases,Commander, be careful."
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB08
+		"[1.0:3.0] The Allies have invoked space-class battleships in disbelief! [4.0:3.0] Commander,this is unexpected, we've reported to the Kremlin, please try to find a way to deal with it."
+	End			
+	
+	SUBTITLE:RemixMap_MI01_SUB09
+		"[1.0:3.0] Commander,we underestimated the power of Allied technology with the help of FutureTech. [4.0:3.0] Their space power may be enough to threaten us. [7.0:3.0] Regardless, your mission remains the same, sweep up this base, we'll rehabilitate the rest."
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB10
+		"[1.0:3.0] More Zeus airships inbound!"
+	End		
+
+	SUBTITLE:RemixMap_MI01_SUB11
+		"[1.0:3.0] Commander, our engineers have revealed a beacon facility in the area with high signaling activity. [4.0:3.0] Destroying this satellite beacon may cut off the enemy space strike."
+	End	
+
+	SUBTITLE:RemixMap_MI01_SUB12
+		"[1.0:3.0] Enemy Ion Cannon connection has been cut off."
+	End	
+	
+	SUBTITLE:RemixMap_MI01_SUB13
+		"[1.0:3.0] Allied inshore naval base has been destroyed."
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB14
+		"[1.0:3.0] An Allied commander has interfered in the battlefield via a Chronosphere,take him out if necessary"
+	End
+
+	SUBTITLE:RemixMap_MI01_SUB15
+		"[1.0:3.0] Enemy field commander has been eliminated."
+	End
+	
+	SUBTITLE:RemixMap_MI01_SUB16
+		"[1.0:3.0] Contact has been established,Chronosphere coordinate has been uploaded."
+	End	
+	
+	SUBTITLE:RemixMap_MI01_SUB17
+		"[1.0:3.0] Warning: A large amount of energy superposition has been detected."
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB18
+		"[1.0:3.0] You did it, Commander. [4.0:5.0] With the Chronosphere destroyed,we can finally investigate the mystery between the Allies"
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB19
+		"[1.0:3.0] Comrade,this Allied Commander has the strike coordinates of the Space Ion Cannon,don't let him decimate our troops!"
+	End			
+
+	SUBTITLE:RemixMap_MI01_SUB20
+		"[1.0:3.0]It's it, this Chronosphere, destroy it, and Allies will have nowhere to hide in the Northern Hemisphere."
+	End
+	
+	SUBTITLE:RemixMap_MI01_SUB21
+		"[1.0:3.0] This weapon can cause a lot of damage, but react very slowly[4.0:3.0] Commander, you can try to entice him to fire before you attack!"
+	End	
+	
+	SUBTITLE:RemixMap_MI01_SUB22
+		"[1.0:3.0] (Allied alarm sounds...)"
+	End		
+	
+	SUBTITLE:RemixMap_MI01_SUB23
+		"[1.0:3.0] Out of standard game time, special buff enabled."
+	End		
+
+	SUBTITLE:RemixMap_MI01_SUB24
+		"[1.0:3.0]We've received a vague signal of contact, Commander, you'd better go and check the source."
+	End			
+	
+	SUBTITLE:RemixMap_MI01_SUB25
+		"[1.0:3.0]Given the importance of this operation, the headquarters will fully support you,and all military equipment will be of the highest standard. [4.0:3.0] Your confidential protocols will also be authorized! Commander, just focus on the battlefield!"
+	End		
+	
+	
+	MISSIONOBJ:RemixMap_MI01_MOBJ01
+		"Build up your base"
+	End	
+	
+	MISSIONOBJ:RemixMap_MI01_MOBJ02
+		"Destroy the Chronosphere"
+	End		
+
+	MISSIONOBJ:RemixMap_MI01_MOBJ03
+		"Destroy the Space uplink system"
+	End	
+	
+	MISSIONOBJ:RemixMap_MI01_MOBJ04
+		"Get rid of the Allied field commander"
+	End		
+	
+// PlayerPowerNanoSwarmHive
+
+	Desc:PlayerPowerNanoSwarmHive
+		"Using nanobots to enhance friendly vehicles in the target area."
+	End
+
+	Desc:JapanSuperWeapon
+		"Dispatch a large number of nanobots to strengthen our own vehicles in specific areas."
+	End
+	
+	Desc:JAPANSUPERWEAPONEGG
+		"Special drones that unfurl into the Nanoswarm Hive, Enhance your own vehicles."
+	End
+	
+// SpecialPower_TimeBeltFuture
+
+	Name:SpecialPower_TimeBeltFuture
+		"Blink"
+	End	
+	
+	Desc:SpecialPower_TimeBeltFuture
+		"Teleport Tanya to the nearby area."
+	End
+	
+// J01
+	SCRIPT:J01_INFOBOX_16_IMPERIALWARRIORNANO
+		"You can use the "nano injection" protocol on your infantry, which can strengthen your infantry."
+	End	
+
+// WhirlWind
+
+	Name:AbilityJNMWhirlWind
+		"Tatsumaki"
+	End	
+	
+	Desc:AbilityJNMWhirlWind
+		"You must know this."
+	End
+	
+// CatchTheRabbit
+	SCRIPT:RemixMap_CR_SCOREP1
+		"P1 SCORE"
+	End	
+
+	SCRIPT:RemixMap_CR_SCOREP2
+		"P2 SCORE"
+	End	
+	
+	SCRIPT:RemixMap_CR_Note
+		"Catch 10 rabbits to win.Be careful of those colored rabbits."
+	End	
+
+	SCRIPT:RemixMap_CR_Time
+		"Time left"
+	End	
+	
+	Name:JAPANCOMMANDOTECH1CR
+		"Alpha rabbit catcher"
+	End	
+	
+	Desc:JAPANCOMMANDOTECH1CR
+		"A firm and focused dreamer."
+	End
+	
+	Type:JAPANCOMMANDOTECH1CR
+		"Psionic rabbit catcher"
+	End		
+	
+// SovietNewTower
+
+	Name:SovietNewTower
+		"Tesla Cannon"
+	End	
+	
+	Desc:SovietNewTower
+		"Powerful defense system with super long range."
+	End
+	
+	Type:SovietNewTower
+		"Ultimate Defense Weapon"
+	End	
+	
+// SovietT4TowerUpg	
+	UpgradeName:SovietT4TowerUpg
+		"Tesla Cannon Authorization"
+	End		
+	
+	UpgradePrereq:SovietT4TowerUpg
+		"Once aquired the authorization, the Tesla Cannon can be built from a Construction Station."
+	End	
+
+	TypeDescription:SovietT4TowerUpg
+		"Technology Authorization"
+	End	
+
+	Description:SovietT4TowerUpg
+		"Authorization to build Tesla Cannon"
+	End	
+	
+// JapanNewTowerEgg
+
+	Name:JapanNewTowerEgg
+		"Crusher Core"
+	End	
+	
+	Desc:JapanNewTowerEgg
+		"Special drones that unfurl into the Psionic Crusher, Use Psionic to affect a wide range of areas."
+	End
+	
+	Type:JapanNewTowerEgg
+		"Portable Ultimate Defense Weapon"
+	End		
+	
+// JapanNewTower
+
+	Name:JapanNewTower
+		"Psionic Crusher"
+	End	
+	
+	Desc:JapanNewTower
+		"Smashing targets with psionics takes a long time, but it has a wide range of effects."
+	End
+	
+	Type:JapanNewTower
+		"Ultimate Defense Weapon"
+	End		
+	
+// AbilityUnPackUnPackJapanNewTowerEgg
+
+	Name:AbilityUnPackUnPackJapanNewTowerEgg
+		"Unfurl"
+	End	
+	
+	Desc:AbilityUnPackUnPackJapanNewTowerEgg
+		"Initiates nano-unfurling sequence, converting to the Psionic Crusher in seconds."
+	End
+	
+// JapanT4TowerUpg	
+	UpgradeName:JapanT4TowerUpg
+		"Psionic Crusher Authorization"
+	End		
+	
+	UpgradePrereq:JapanT4TowerUpg
+		"Once aquired the authorization, the Psionic Crusher can be built from a Construction Station."
+	End	
+
+	TypeDescription:JapanT4TowerUpg
+		"Technology Authorization"
+	End	
+
+	Description:JapanT4TowerUpg
+		"Authorization to build Psionic Crusher"
+	End		
+	
+// RemixWeatherControl
+	Name:ABWeatherControl
+		"Lightning Generator"
+	End
+	
+	Desc:ABWeatherControl
+		"The latest secret weapon developed by the Allies.It can affect the weather in a large area."
+	End
+	
+	Type:ABWeatherControl
+		"Ultimate Defense Weapon"
+	End	
+	
+// AlliedT4TowerUpg	
+	UpgradeName:AlliedT4TowerUpg
+		"Lightning Generator Authorization"
+	End		
+	
+	UpgradePrereq:AlliedT4TowerUpg
+		"Once aquired the authorization, the Lightning generator can be built from a Construction Station."
+	End	
+
+	TypeDescription:AlliedT4TowerUpg
+		"Technology Authorization"
+	End	
+
+	Description:AlliedT4TowerUpg
+		"Authorization to build Lightning Generator"
+	End		
+
+// RemixGhoulJAII
+	Name:Remix_GhoulMJAII
+		"Ghoul"
+	End
+	
+	Desc:Remix_GhoulMJAII
+		"Ghoul."
+	End
+	
+	Type:Remix_GhoulMJAII
+		"Ghoul"
+	End
+	
+	Name:Remix_Zombies_JAII
+		"Ghoul"
+	End
+	
+	Desc:Remix_Zombies_JAII
+		"Ghoul."
+	End
+	
+	Type:Remix_Zombies_JAII
+		"Ghoul"
+	End	
+
+// NewMapArtificialDisaster
+	MISSIONOBJ:RemixMap_JunYou05_OBJEC01
+		"Destroy the suppressor."
+	End	
+
+	MISSIONOBJ:RemixMap_JunYou05_OBJEC02
+		"Protect the missile launcher."
+	End	
+	
+	MISSIONOBJ:RemixMap_JunYou05_OBJEC03
+		"Destroy the technology suppressor and unlock the air force."
+	End	
+	
+	MISSIONOBJ:RemixMap_JunYou05_OBJEC04
+		"Every time a barracks is destroyed, the enemy's attack time will be delayed by 30 seconds."
+	End	
+
+	HOTSPOT:RemixMap_JunYou05_HOTSPOT01
+		"Click this button to command the missile launch vehicle to the target location."
+	End	
+
+	HOTSPOT:RemixMap_JunYou05_HOTSPOT02
+		"Command missile launch vehicle."
+	End		
+	
+	SCRIPT:RemixMap_JunYou05_Countdown01
+		"Please set according to the picture."
+	End	
+
+	Name:RemixMissileVehicle
+		"Birch Forest"
+	End
+	
+	Desc:RemixMissileVehicle
+		"Super heavy long range strike vehicle."
+	End
+	
+	Type:RemixMissileVehicle
+		"Special Vehicle"
+	End
+	
+	
+// NewMapParadeInvasion
+	SCRIPT:RemixMap_SYO01_SCR01
+		"Game time:"
+	End
+
+// RemixJapanNijiaMacha
+	Name:JapanNijiaMacha
+		"TouKuii"
+	End
+	
+	Desc:JapanNijiaMacha
+		"The movement is very flexible, and the driver's identity is unknown.They usually only assist the commander for a short time,Used to accomplish tasks that cannot be accomplished."
+	End
+	
+	Type:JapanNijiaMacha
+		"Special Mecha"
+	End
+	
+	
+	Name:JNMChargeSpecialPower
+		"Iai Slash"
+	End
+	
+	Desc:JNMChargeSpecialPower
+		"High speed charge to the target, and cause a lot of damage to the target on the path."
+	End
+	
+
+	Name:JNMJumpSpecialPower
+		"Leap Attack"
+	End
+	
+	Desc:JNMJumpSpecialPower
+		"Jump to the target and attack."
+	End	
+	
+	
+	
+// RemixAlliedPowerPlantSP
+	Name:ButtonABPP_MoneyOn
+		"Transforming resources"
+	End
+	
+	Desc:ButtonABPP_MoneyOn
+		"To convert electricity into resources, up to eight power plants can be converted at the same time.The conversion of resources consumes 50% of electricity."
+	End
+	
+	Name:ButtonABPP_MoneyOff
+		"Stop transforming resources"
+	End
+	
+	Desc:ButtonABPP_MoneyOff
+		"Stop the transformation of resources and make every effort to generate electricity."
+	End
+
+// RemixMap1SY04
+	MISSIONOBJ:RemixMap_SY04_OBJEC01
+		"Destroy target buildings."
+	End	
+
+	MISSIONOBJ:RemixMap_SY04_OBJEC02
+		"Destroy the iron curtain."
+	End	
+	
+	MISSIONOBJ:RemixMap_SY04_OBJEC03
+		"Destroy the iron fortress."
+	End	
+	
+	MISSIONOBJ:RemixMap_SY04_OBJEC04
+		"Kill Natasha."
+	End	
+	
+	SCRIPT:RemixMap_SY04_SCR01
+		"The first elite military academy:"
+	End
+	
+	SCRIPT:RemixMap_SY04_SCR02
+		"The second elite military academy:"
+	End
+	
+	SCRIPT:RemixMap_SY04_SCR03
+		"The third elite military academy:"
+	End
+
+	
+// RemixBBmap13
+	SCRIPT:RemixMap_13_Countdown01
+		"The Data Will Lost In:"
+	End	
+	
+	SCRIPT:RemixMap_13_Countdown02
+		"The Enemy Start FULL Attacking In:"
+	End		
+	
+	SUBTITLE:RemixMap_13_SUB01
+		"[0.1:1.3]Our Radar Towers have been destroyed.[1.5:2.3]We've lost our battlefield control. Mission Failed."
+	End		
+
+	SUBTITLE:RemixMap_13_SUB02
+		"[0.1:1.3]The enemy transferred all the data.[1.5:2.3]We've lost our military operations and research capabilities. Mission Failed."
+	End		
+	
+// RemixCrusaders
+	Name:AlliedAntiVehicleVehicleTech1Cu
+		"Crusader Tank"
+	End
+	
+	Desc:AlliedAntiVehicleVehicleTech1Cu
+		"Sturdy combat tanks can be upgraded to get repair drones."
+	End
+	
+	Type:AlliedAntiVehicleVehicleTech1Cu
+		"Anti armor tank"
+	End
+	
+	Name:UpgradeAlliedCrusaderDrone
+		"Repair Drones Upgrade"
+	End
+	
+	Desc:UpgradeAlliedCrusaderDrone
+		"Purchase repair drone upgrade."
+	End
+	
+	UpgradeName:UpgradeAlliedCrusaderDrone
+		"Repair Drones Upgrade"
+	End	
+
+
+// RemixBBmap12
+	SCRIPT:RemixMap_12_Countdown01
+		"Enemy Apocalypse Tank unlock:"
+	End	
+
+	SCRIPT:RemixMap_12_Countdown02
+		"Challenge remaining time:"
+	End	
+	
+	SUBTITLE:RemixMap_12_SUB01
+		"Have I ever been defeated by a sinister imperial commander who selling their base for four barracks?Don't worry. Never again."
+	End	
+
+	SUBTITLE:RemixMap_12_SUB02
+		"You are not ashamed to lose to me. If you want to challenge again, you are always welcome."
+	End	
+	
+// RemixYurikoItem
+	Name:JapanCommandoTech1SP1UP
+		"1UP"
+	End
+	
+	Desc:JapanCommandoTech1SP1UP
+		"Maybe you can do it again."
+	End
+	
+	Type:JapanCommandoTech1SP1UP
+		"Special items"
+	End
+	
+	Name:JapanCommandoTech1SP_DNA
+		"DNA"
+	End
+	
+	Desc:JapanCommandoTech1SP_DNA
+		"Special items"
+	End
+	
+	Type:JapanCommandoTech1SP_DNA
+		"Can give Yuriko more powerful ability."
+	End
+
+	Name:JapanCommandoTech1SPHP
+		"Medkit"
+	End
+	
+	Desc:JapanCommandoTech1SPHP
+		"Restore health."
+	End
+	
+	Type:JapanCommandoTech1SPHP
+		"Medical Supplies"
+	End
+
+	Name:JapanCommandoTech1SP_Coin
+		"Coin"
+	End
+	
+	Desc:JapanCommandoTech1SP_Coin
+		"Money can solve many problems."
+	End
+	
+	Type:JapanCommandoTech1SP_Coin
+		"money"
+	End	
+
+	Name:JapanCommandoTech1SPMusic
+		"music"
+	End
+	
+	Desc:JapanCommandoTech1SPMusic
+		"Maybe you can listen to some other music."
+	End
+	
+	Type:JapanCommandoTech1SPMusic
+		"Special items"
+	End	
+	
+// RemixMap1SY01
+	MISSIONOBJ:RemixMap_SY01_OBJEC01
+		"Land, take this island."
+	End	
+
+	MISSIONOBJ:RemixMap_SY01_OBJEC02
+		"Destroy the power plant."
+	End	
+	
+	MISSIONOBJ:RemixMap_SY01_OBJEC03
+		"Destroy it! Don't let it go!"
+	End	
+
+	MISSIONOBJ:RemixMap_SY01_OBJEC04
+		"Rescue aircraft carrier."
+	End	
+	
+	MISSIONOBJ:RemixMap_SY01_OBJEC05
+		"Move forward carefully and avoid the Allied guards."
+	End		
+
+	MISSIONOBJ:RemixMap_SY01_OBJEC06
+		"Enter the Allied headquarters and secretly execute the Allied Commander."
+	End		
+
+	MISSIONOBJ:RemixMap_SY01_OBJEC07
+		"Destroy this house and lead the Allied troops away."
+	End			
+	
+	MISSIONOBJ:RemixMap_SY01_OBJEC08
+		"Destroy the power supply equipment and disable the defense facilities."
+	End	
+
+	MISSIONOBJ:RemixMap_SY01_OBJEC09
+		"Kill BOSS."
+	End	
+	
+	SCRIPT:RemixMap_SY01_SCR01
+		"Level one: What are they hiding?"
+	End	
+	
+	SCRIPT:RemixMap_SY01_SCR02
+		"Second level: Secret prison."
+	End		
+	
+	SCRIPT:RemixMap_SY01_SCR03
+		"It's said that the Allies built a huge prison on the top of the mountain."
+	End	
+
+	SCRIPT:RemixMap_SY01_SCR04
+		"Residents were dispersed and no one was allowed to approach."
+	End		
+	
+	SCRIPT:RemixMap_SY01_SCR05
+		"What do they want to hide?"
+	End			
+
+	SCRIPT:RemixMap_SY01_SCR06
+		"At present, the only help I can offer you is this, and you may have to rely on yourself next."
+	End	
+
+	SCRIPT:RemixMap_SY01_SCR07
+		"Yoriko:The soldiers on the front line died in the war, and these officers actually stayed here to enjoy life."
+	End	
+
+	SCRIPT:RemixMap_SY01_SCR08
+		"The Allies lost their commander-in-chief and were able to sneak into the power plant."
+	End	
+	
+	SCRIPT:RemixMap_SY01_SCR09
+		"Warning: future tank guard ahead, unable to move forward."
+	End		
+	
+	SCRIPT:RemixMap_SY01_SCR10
+		"Kill Boss!"
+	End			
+	
+	SCRIPT:RemixMap_SY01_Helper01
+		"Picking up this DNA will allow Yoriko to gain Psionic Shield."
+	End		
+	
+	SCRIPT:RemixMap_SY01_Helper03
+		"Picking up this DNA will allow Yoriko to gain Call Reinforcement."
+	End	
+
+	SCRIPT:RemixMap_SY01_Helper04
+		"Picking up this DNA will allow Yoriko to gain Psychic Domination."
+	End	
+	
+	SCRIPT:RemixMap_SY01_AutoSave
+		"REMIX BOSS Secret prison Autosave."
+	End		
+	
+	SCRIPT:RemixMap_SY02_Helper01
+		"An attack on a barrel can cause an explosion."
+	End		
+	
+	SCRIPT:RemixMap_SY02_Helper02
+		"An oil barrel explosion can trigger a chain explosion of nearby oil drums."
+	End		
+	
+	SCRIPT:RemixMap_SY02_Helper03
+		"Picking up this DNA will allow Yoriko to gain Psionic Shield."
+	End		
+
+	SCRIPT:RemixMap_SY02_Helper04
+		"Picking up this DNA will allow Yoriko to gain Psychic Domination."
+	End	
+
+	SCRIPT:RemixMap_SY02_Helper05
+		"Control them with Psychic dominance."
+	End		
+	
+	SCRIPT:RemixMap_SY02_Helper06
+		"Capture the building, expand the army and protect the base."
+	End			
+
+// JapanCommandoTech1SP
+	Name:PlayerPowerYurikoPsyonicBlast_EP1
+		"Psychokinetic Burst"
+	End
+
+	Type:PlayerPowerYurikoPsyonicBlast_EP1
+		"Clears Crowds"
+	End	
+	
+	Desc:PlayerPowerYurikoPsyonicBlast_EP1
+		"Disintegrates bodies and short-circuits machines in an explosion of raw psychokinetic energy."
+	End	
+
+	Name:PlayerPowerYurikoShieldRank1
+		"Psionic Shield"
+	End
+
+	Type:PlayerPowerYurikoShieldRank1
+		"Absorb Damage"
+	End	
+	
+	Desc:PlayerPowerYurikoShieldRank1
+		"Raises an impervious psionic barrier."
+	End	
+	
+	Name:PlayerPowerYurikoLureRank1
+		"Psychic Domination"
+	End
+
+	Type:PlayerPowerYurikoLureRank1
+		"Charms Enemy"
+	End	
+	
+	Desc:PlayerPowerYurikoLureRank1
+		"Turns a enemies into hardcore fans, sworn to serve and protect til death do them part."
+	End	
+
+	Name:PlayerPowerYurikoReinforcements
+		"Call Reinforcement"
+	End
+
+	Type:PlayerPowerYurikoReinforcements
+		"Infantry Reinforcement"
+	End	
+	
+	Desc:PlayerPowerYurikoReinforcements
+		"Who needs friends?"
+	End	
+
+
+// REMIXBoss
+	Name:ButtonRemixBoss01_TransformIn
+		"Drill In"
+	End
+	
+	Desc:ButtonRemixBoss01_TransformIn
+		"Go deep undergroun and not be harmed by any known weapon."
+	End
+	
+	Name:ButtonRemixBoss01_TransformOut
+		"Drill Out"
+	End
+	
+	Desc:ButtonRemixBoss01_TransformOut
+		"Get out of the ground and destroy everything."
+	End	
+
+	Name:REMIXBoss01
+		"BOSS"
+	End
+	
+	Desc:REMIXBoss01
+		"The RisingSun secretly developed the ultimate war machine with independent consciousness and the ability to destroy everything."
+	End
+	
+	Type:REMIXBoss01
+		"Unknown"
+	End
+	
+	Name:REMIXBoss02
+		"BOSS"
+	End
+	
+	Desc:REMIXBoss02
+		"The RisingSun secretly developed the ultimate war machine with independent consciousness and the ability to destroy everything."
+	End
+	
+	Type:REMIXBoss02
+		"Unknown"
+	End	
+
+	Name:REMIXBoss03
+		"BOSS"
+	End
+	
+	Desc:REMIXBoss03
+		"The RisingSun secretly developed the ultimate war machine with independent consciousness and the ability to destroy everything."
+	End
+	
+	Type:REMIXBoss03
+		"Unknown"
+	End
+	
+// REMIXBossBit
+	Name:ButtonRemixBoss01FloatGunTransformIn
+		"Drill In"
+	End
+	
+	Desc:ButtonRemixBoss01FloatGunTransformIn
+		"Go deep undergroun and not be harmed by any known weapon."
+	End
+	
+	Name:ButtonRemixBoss01FloatGunTransformOut
+		"Drill Out"
+	End
+	
+	Desc:ButtonRemixBoss01FloatGunTransformOut
+		"Get out of the ground."
+	End	
+
+	Name:REMIXBoss01FloatGun
+		"Drill Bit"
+	End
+	
+	Desc:REMIXBoss01FloatGun
+		"The attack weapon produced by B.O.S.S has strong destructive power."
+	End
+	
+	Type:REMIXBoss01FloatGun
+		"Attack Drone"
+	End	
+	
+// RemixMapSY02
+	MISSIONOBJ:RemixMap_SY02_OBJEC01
+		"Search for the hidden DNA sequence, in order to unlock the Domination skill."
+	End	
+
+	MISSIONOBJ:RemixMap_SY02_OBJEC02
+		"Use Domination on 5 Soviet Battle Engineers."
+	End	
+
+	MISSIONOBJ:RemixMap_SY02_OBJEC03
+		"There is an abandoned Soviet base in the west. Capture it with Engineers, buy some tiem for the reinforcements."
+	End	
+
+	MISSIONOBJ:RemixMap_SY02_OBJEC04
+		"Make sure at least 2 of battle engineer survives."
+	End	
+
+	MISSIONOBJ:RemixMap_SY02_OBJEC05
+		"Protect this base and wait for the reinforcements."
+	End	
+
+	MISSIONOBJ:RemixMap_SY02_OBJEC06
+		"Destroy the B.O.S.S."
+	End	
+
+	MISSIONOBJ:RemixMap_SY02_OBJEC07
+		"These Technology Suppressors will prevent our mechanical units from using their skills. Destroy them."
+	End	
+
+	SCRIPT:RemixMap_SY02_Countdown01
+		"Arrival time of support forces:"
+	End	
+
+	SCRIPT:RemixMap_SY02_Countdown02
+		"Yuriko is our key in this operation. Protect her at all costs."
+	End		
+
+	SCRIPT:RemixMap_SY02_Countdown03
+		"Approach with great caution, commander."
+	End		
+
+	SCRIPT:RemixMap_SY02_Countdown04
+		"My god, I have never seen such a powerful war gear - within 20 seconds, our Soviet allies have gone none-existance."
+	End		
+
+	SCRIPT:RemixMap_SY02_Countdown05
+		"It is said that there is one additional DNA sequence that will unlock the Shield skill."
+	End		
+
+	SCRIPT:RemixMap_SY02_Countdown06
+		"We haven't draw the attention of the Empire. Expend your forces as the Empire is fighting the Soviet, and fight your way to the B.O.S.S unit."
+	End		
+
+	SCRIPT:RemixMap_SY02_Countdown07
+		"Without the protection of the Suppressor, the B.O.S.S unit is trying to maneuver away from our attacks. Destroy it when the chance shows, commander!"
+	End	
+	
+	
+// RemixMap10
+	MISSIONOBJ:RemixMap_10_OBJEC01
+		"Destroy the supply port building for landing"
+	End	
+
+	MISSIONOBJ:RemixMap_10_OBJEC02
+		"Occupy Fengshan Military Academy"
+	End	
+	
+	MISSIONOBJ:RemixMap_10_OBJEC03
+		"Destroy Kaida cascades naval base"
+	End	
+
+	MISSIONOBJ:RemixMap_10_OBJEC04
+		"Approach enemy command post"
+	End	
+
+	MISSIONOBJ:RemixMap_10_OBJEC05
+		"Control of enemy commander"
+	End	
+	
+	SUBTITLE:RemixMap_10_SUB01
+		"[0.1:2.3]The empire of the Rising Sun is on the rise.[2.4:3.6]This is our first battle, let the East Federation feel our strength!"
+	End		
+
+	SUBTITLE:RemixMap_10_SUB02
+		"[0.3:2.4]Target:East's.[2.5:2.5]First of all, We need to cut off the union supply lines."
+	End	
+	
+	SUBTITLE:RemixMap_10_SUB03
+		"[0.2:2.1]Well done. The Emperor is pleased with your performance.[2.6:2.4]Now occupy East's Fengshan Military School and destroy Kaida cascades Naval Base."
+	End	
+	
+	SUBTITLE:RemixMap_10_SUB04
+		"[0.4:3.3]There are two aircraft carriers with the U.S. Seventh Fleet in the area.[3.8:1.2]Be careful."
+	End		
+	
+	SUBTITLE:RemixMap_10_SUB05
+		"The supreme Commander of the East's Theater of Operations is in this building right now. Don't let him go!"
+	End		
+		
+	SUBTITLE:RemixMap_10_SUB06
+		"Use the Rocket Angel skill to control him.If he dies, the mission fails."
+	End		
+
+	SUBTITLE:RemixMap_10_SUB07
+		"Commander,if you can infiltrate the enemy's power plant,I can get Skydog to clear a landing area for you."
+	End		
+	
+	SUBTITLE:RemixMap_10_Countdown01
+		"Enemies' Powering Restored In:"
+	End	
+	
+// RemixSurvivorPickWaterE
+	Name:RemixSurvivorPickWaterE
+		"DivingEquipment"
+	End
+	
+	Desc:RemixSurvivorPickWaterE
+		"DivingEquipment."
+	End
+	
+	Type:RemixSurvivorPickWaterE
+		"DivingEquipment"
+	End
+	
+// RemixSurvivorPickLamp
+	Name:RemixSurvivorPickLamp
+		"Light"
+	End
+	
+	Desc:RemixSurvivorPickLamp
+		"Light."
+	End
+	
+	Type:RemixSurvivorPickLamp
+		"Light"
+	End
+
+// RemixSurvivorPickWeaponAmmo
+	Name:RemixSurvivorPickWeaponAmmo
+		"Ammo"
+	End
+	
+	Desc:RemixSurvivorPickWeaponAmmo
+		"Ammo."
+	End
+	
+	Type:RemixSurvivorPickWeaponAmmo
+		"Ammo"
+	End
+	
+// RemixSurvivorPickWeapon1911
+	Name:RemixSurvivorPickWeapon1911
+		"Weapon"
+	End
+	
+	Desc:RemixSurvivorPickWeapon1911
+		"Weapon."
+	End
+	
+	Type:RemixSurvivorPickWeapon1911
+		"Weapon"
+	End
+
+// RemixSurvivorPickWeapon44
+	Name:RemixSurvivorPickWeapon44
+		"Weapon"
+	End
+	
+	Desc:RemixSurvivorPickWeapon44
+		"Weapon."
+	End
+	
+	Type:RemixSurvivorPickWeapon44
+		"Weapon"
+	End
+	
+// RemixSurvivorPickHelmet2
+	Name:RemixSurvivorPickHelmet2
+		"Helmet"
+	End
+	
+	Desc:RemixSurvivorPickHelmet2
+		"Helmet."
+	End
+	
+	Type:RemixSurvivorPickHelmet2
+		"Helmet"
+	End
+
+// RemixSurvivorPickHelmet1
+	Name:RemixSurvivorPickHelmet1
+		"Helmet"
+	End
+	
+	Desc:RemixSurvivorPickHelmet1
+		"Helmet."
+	End
+	
+	Type:RemixSurvivorPickHelmet1
+		"Helmet"
+	End
+
+// RemixSurvivor
+	Name:RemixSurvivor
+		"Survivor"
+	End
+	
+	Desc:RemixSurvivor
+		"Survivor."
+	End
+	
+	Type:RemixSurvivor
+		"Survivor"
+	End
+	
+	Name:AbilityRemixSurvivorSprint
+		"Run"
+	End
+	
+	Desc:AbilityRemixSurvivorSprint
+		"Run."
+	End
+
+// RemixGhoulSAVI
+	Name:Remix_GhoulMSAVI
+		"Ghoul"
+	End
+	
+	Desc:Remix_GhoulMSAVI
+		"Ghoul."
+	End
+	
+	Type:Remix_GhoulMSAVI
+		"Ghoul"
+	End
+
+
+// RemixGhoulSAII
+	Name:Remix_GhoulMSAII
+		"Ghoul"
+	End
+	
+	Desc:Remix_GhoulMSAII
+		"Ghoul."
+	End
+	
+	Type:Remix_GhoulMSAII
+		"Ghoul"
+	End
+
+// RemixGhoulAAII
+	Name:Remix_GhoulMAAII
+		"Ghoul"
+	End
+	
+	Desc:Remix_GhoulMAAII
+		"Ghoul."
+	End
+	
+	Type:Remix_GhoulMAAII
+		"Ghoul"
+	End
+
+// RemixGrenadier
+	Name:AlliedGrenadeInfantry
+		"Grenadier"
+	End
+	
+	Desc:AlliedGrenadeInfantry
+		"Experienced veterans, equipped with a grenade launcher."
+	End
+	
+	Type:AlliedGrenadeInfantry
+		"Special Weapons Support"
+	End
+	
+	Desc:AlliedGrenadeInfantrySP
+		"Experienced veterans, equipped with a grenade launcher and some other surprises according to their target."
+	End
+	
+	Type:AlliedGrenadeInfantrySP
+		"Special Weapons Support"
+	End	
+
+
+	Name:GrenadeLauncherSpecialPower
+		"flash bomb"
+	End
+
+	Desc:GrenadeLauncherSpecialPower
+		"Flash bombs can temporarily blind and incapacitate enemy infantry."
+	End
+	
+	Name:GrenadeLauncherSpecialPowerSP
+		"Counter Strike"
+	End
+
+	Desc:GrenadeLauncherSpecialPowerSP
+		"The grenadier launches a flash grenade/HE grenade/gas bomb/emp to the assigned target."
+	End	
+	
+	
+
+
+// RemixMAP09
+	SCRIPT:RemixMap_09_Countdown01
+		"First air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown02
+		"Second air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown03
+		"Thirdly air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown04
+		"Fourth air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown05
+		"Fifth air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown06
+		"Sixth air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown07
+		"Seventh air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown08
+		"Eighth air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown09
+		"Ninth air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown10
+		"Last air raid:"
+	End	
+
+	SCRIPT:RemixMap_09_Countdown11
+		"Average clearance time:"
+	End		
+	
+	SUBTITLE:RemixMap_09_SUB01
+		"This time, the Allies and the most powerful Soviet air force generals will work together to defeat the thieves of Future Tech!"
+	End	
+	
+	SUBTITLE:RemixMap_09_SUB02
+		"You have exceeded the average clearance time and the Future is disappointed with you and will fire you!"
+	End	
+	
+// RemixMAP08
+	SCRIPT:RemixMap_08_Countdown01
+		"Average clearance time:"
+	End	
+	
+	SUBTITLE:RemixMap_08_SUB01
+		"We're fighting over the ultimate use of the Titan. There's nothing wrong with you here. Don't provoke us."
+	End	
+	
+	SUBTITLE:RemixMap_08_SUB02
+		"We told you to stay out of our business. You brought this on yourself!"
+	End	
+
+	SUBTITLE:RemixMap_08_SUB03
+		"You have exceeded the average clearance time and the Future Tech is disappointed with you and will fire you."
+	End		
+	
+	
+	
+
+// RemixMAPBBA01
+	MISSIONOBJ:RemixMap07_OBJEC01
+		"Control the traintions Put Alliend soldiers on the train to Latent entering the empire's secret base"
+	End
+
+	MISSIONOBJ:RemixMap07_OBJEC02
+		"Take back Soviet aid tanks to Norway"
+	End
+
+	MISSIONOBJ:RemixMap07_OBJEC03
+		"Capture the tower and call the ion cannon"
+	End
+
+	MISSIONOBJ:RemixMap07_OBJEC04
+		"Destroy the empire's production buildings,The first airborne brigade in Oslo could support our field"
+	End
+
+	SCRIPT:RemixMap_07_Countdown01
+		"Train start off count down:"
+	End	
+	
+	SUBTITLE:RemixMap_07_SUB01
+		"[0.1:2.3]Us military base in Norway. [2.4:3.6]Location:Trondheim."
+	End
+
+	SUBTITLE:RemixMap_07_SUB02
+		"[0.3:2.4]The Empire has captured the center of Trondheim.[2.5:2.5]We don't know what the enemy wants."
+	End
+	
+	SUBTITLE:RemixMap_07_SUB03
+		"[0.2:2.1]Our base hit by unknown energy!![2.6:2.4]This is the only building we have left."
+	End
+
+	SUBTITLE:RemixMap_07_SUB04
+		"[0.4:3.3]Intelligence points out that the empire has built a super wave destruction device on the other side of the river. [3.8:1.2]Our base is destroyed and unable to cross the river."
+	End
+
+	SUBTITLE:RemixMap_07_SUB05
+		"Commander, it's up to you"
+	End
+
+	SUBTITLE:RemixMap_07_SUB06
+		"The orbital ion gun is crossing coordinates..."
+	End	
+	
+// RemixMAPCROSSFIRE
+	SCRIPT:RemixMap_06_Countdown01
+		"Kenji's army attack:"
+	End
+
+	SCRIPT:RemixMap_06_Countdown02
+		"Average clearance time:"
+	End
+	
+	MISSIONOBJ:RemixMap06_OBJEC01
+		"You have exceeded the average clearance time and the Future Tech is disappointed with you and will fire you"
+	End	
+
+// RemixMAPMAZE
+	SCRIPT:RemixMap_05_Countdown01
+		"Mobile maze start:"
+	End
+	
+	MISSIONOBJ:RemixMap05_OBJEC01
+		"Move to destination"
+	End	
+	
+// Remix_TrainFlatCannon	
+	Name:Remix_TrainFlatCannon
+		"Railway Gun"
+	End
+	
+	Type:Remix_TrainFlatCannon
+		"Artillery Vehicle"
+	End
+
+	Desc:Remix_TrainFlatCannon
+		"A huge artillery can attack targets from a very long distance."
+	End	
+
+// RemixTrainFreightcar	
+	Name:RemixTrainFreightcar
+		"Freight car"
+	End
+	
+	Type:RemixTrainFreightcar
+		"Transport Vehicle"
+	End
+
+	Desc:RemixTrainFreightcar
+		"A train that can carry a large number of troops and supplies."
+	End	
+
+// Remix_TrainBoxCar	
+	Name:Remix_TrainBoxCar
+		"Train Car"
+	End
+	
+	Type:Remix_TrainBoxCar
+		"Transport Vehicle"
+	End
+
+	Desc:Remix_TrainBoxCar
+		"A train that can carry a large number of troops and supplies."
+	End	
+
+// RemixTrainFlatCar	
+	Name:RemixTrainFlatCar
+		"Flat Car"
+	End
+	
+	Type:RemixTrainFlatCar
+		"Transport Vehicle"
+	End
+
+	Desc:RemixTrainFlatCar
+		"A train that can carry a large number of troops and supplies."
+	End	
+
+// RemixTrainEng	
+	Name:RemixTrainEng
+		"Steam Locomotive"
+	End
+	
+	Type:RemixTrainEng
+		"Transport Vehicle"
+	End
+
+	Desc:RemixTrainEng
+		"A train that can carry a large number of troops and supplies."
+	End	
+
+	
+// RemixRadarTower	
+	Name:RemixRadarTower
+		"Remix Com Tower"
+	End
+	
+	Type:RemixRadarTower
+		"Objective Structure"
+	End
+
+	Desc:RemixRadarTower
+		"Take this building,and we'll be able to use our satellite-guided wave destruction device for ion cannons."
+	End	
+
+
+
+// PsychicInhibitor	
+	Name:PsychicInhibitor
+		"Psychic Inhibitor"
+	End
+	
+	Type:PsychicInhibitor
+		"Special Structure"
+	End
+
+	Desc:PsychicInhibitor
+		"The Psychic Inhibitor prevents Yuriko from using her Psionic Talents."
+	End	
+	
+	Name:HealingStation
+		"Trauma Station"
+	End
+	
+	Type:HealingStation
+		"Special Structure"
+	End
+
+	Desc:HealingStation
+		"Trauma stations can heal infantry wounds."
+	End		
+
+// JapanInfiltrationInfantry
+	Name:NinjaLeapSpecialPower
+		"Leap"
+	End	
+	
+	Desc:NinjaLeapSpecialPower
+		"Jump to a specific location to climb over fences and terrain."
+	End
+
+
+// RemixMap_01
+	SCRIPT:RemixMap_01_Countdown01
+		"Time before the Emperor Battleship unlocks for the Empire:"
+	End
+	
+	MISSIONOBJ:RemixMap01_OBJEC01
+		"Destroy the target structures. The Nano Shield will be disarmed one target structure a time."
+	End	
+	
+	MISSIONOBJ:RemixMap01_OBJEC01_DESC
+		"Destroy the target structures. The Nano Shield will be disarmed one target structure a time."
+	End		
+	
+	MISSIONOBJ:RemixMap01_OBJEC02
+		"The Empire of the Rising Sun is secretly developing a mysterious weapon. Destroy it!"
+	End	
+	
+	MISSIONOBJ:RemixMap01_OBJEC02_DESC
+		"The Empire of the Rising Sun is secretly developing a mysterious weapon. Destroy it!"
+	End		
+
+// RemixMap_02
+	SCRIPT:RemixMap02_OBJEC01
+		"Destroy these Allies bases. Beware, the Allies Forces may make reprisals."
+	End
+	
+	MISSIONOBJ:RemixMap02_OBJEC02
+		"The Commanders of regional Allies Forces are borading on this Zeus Battleship Mk II. Destroy it."
+	End	
+	
+	MISSIONOBJ:RemixMap02_OBJEC03
+		"Incoming Zues Battleship Fleet. Destroy them, and show the Allies Forces the strength of our might."
+	End		
+	
+	SCRIPT:RemixMap_02_Countdown01
+		"Time before the Allies engages:"
+	End		
+
+// RemixMap_03
+	MISSIONOBJ:RemixMap03_OBJEC01
+		"Destroy these Soviet bases, and the Soviet forces will be vulnerable to our attacks!"
+	End
+	
+	MISSIONOBJ:RemixMap03_OBJEC02
+		"The Steel Fortresses are considered invulnerable. Destroy them, and prove to the Soviet their faith in this construction is feeble!"
+	End	
+	
+	MISSIONOBJ:RemixMap03_OBJEC03
+		"This great cannon is our last defence against the Soviet forces, we can not hold the line without it. Defend it at all costs!"
+	End		
+	
+	SCRIPT:RemixMap_03_Countdown01
+		"The Apocalypse's Arrival! :"
+	End	
+	
+	MISSIONOBJ:RemixMap03_OBJEC04
+		"These British turrets are not reliable, but they will provide some defence. Capture them if you can"
+	End		
+
+	MISSIONOBJ:RemixMap03_OBJEC05
+		"These modified Apocalypse Tanks are named with Houseman of the Apocalypse. Destroy them!"
+	End			
+
+// RemixMap_04
+	SCRIPT:RemixMap_04_Target01
+		"Protect that house,The one who survives the longest wins!"
+	End
+	
+	MISSIONOBJ:RemixMap04_OBJEC01
+		"Protect the house!"
+	End	
+	
+	MISSIONOBJ:RemixMap04_OBJEC01_DESC
+		"Protect the house!"
+	End		
+	
+	SCRIPT:RemixMap_04_Mapinfo
+		"In order to survive, people often do whatever they can.   by junyo"
+	End	
+	
+	SCRIPT:RemixMap_04_Countdown01
+		"Countdown to enemy arrival:"
+	End		
+
+// AlliedSupportAircraft	
+	Name:AlliedSupportAircraft
+		"Cryocopter"
+	End
+	
+	Type:AlliedSupportAircraft
+		"Special Weapons Support"
+	End
+
+	Desc:AlliedSupportAircraft
+		"High-tech helicopters that can quell dangerous situations by freezing hostiles."
+	End	
+
+
+// PlayerPowerSovietAirMarshal
+
+	Name:PlayerPowerSovietAirMarshal
+		"Air Marshal"
+	End	
+	
+	Desc:PlayerPowerSovietAirMarshal
+		"Active: Call in the MiG Fighter Squadron and attack enemy aircrafts along the way. \nPassive: Increase all aircrafts' speed and firepower."
+	End
+	
+	Type:PlayerPowerSovietAirMarshal
+		"Battlefield Support / Aircraft Upgrade"
+	End		
+	
+// SovietAirFieldTechStructure	
+	Name:SovietAirFieldTechStructure
+		"Institute of Aeronautics"
+	End
+	
+	Type:SovietAirFieldTechStructure
+		"Technology Structure"
+	End
+
+	Desc:SovietAirFieldTechStructure
+		"These structures can unlock more advanced aircraft."
+	End	
+
+// Remix_Car		
+	Name:Remix_Car
+		"Vehicle"
+	End
+	
+	Type:Remix_Car
+		"Civilian Vehicle"
+	End
+
+	Desc:Remix_Car
+		"Maybe faster than a tank."
+	End	
+
+// PlayerPowerSovietTeslaOverLoadAdv
+	Name:PlayerPowerSovietTeslaOverLoadAdv
+		"Tesla Overload"
+	End
+	
+	Type:PlayerPowerSovietTeslaOverLoadAdv
+		"Disruption / Temporary Enhancement"
+	End
+	
+	Desc:PlayerPowerSovietTeslaOverLoadAdv
+		"Active: An area is engulfed in magnetic energy, drawing all enemy vehicles to the centre of the area, overloading friendly Tesla units at the same time. \nPassive: Tesla weaponary are amplified with better combat effectiveness."
+	End
+	
+	Name:PlayerPowerSovietTeslaOverLoadAdvActive
+		"Magnetic Singularity"
+	End
+	
+	Type:PlayerPowerSovietTeslaOverLoadAdvActive
+		"Disruption / Temporary Enhancement"
+	End
+	
+	Desc:PlayerPowerSovietTeslaOverLoadAdvActive
+		"Active: An area is engulfed in magnetic energy, drawing all enemy vehicles to the centre of the area, overloading friendly Tesla units at the same time."
+	End	
+	
+	Type:PlayerPowerVacuumBomb
+		"Area Bombardment"
+	End
+	
+	Name:SuperweaponTimerOrbitalRefuse
+		"Orbital Drop"
+	End
+
+	Name:PlayerPowerTelekineticProjectorDevice
+		"Psionic Wave"
+	End
+	
+	Type:PlayerPowerTelekineticProjectorDevice
+		"Area Bombardment"
+	End	
+	
+	Name:SuperweaponNanoStorm
+		"Nano Storm"
+	End	
+	
+	Name:SuperweaponTimerTelekinetic
+		"Psionic Wave"
+	End		
+	
+	Type:PlayerPowerParticleCannon
+		"Area Bombardment"
+	End		
+	
+	Name:SuperweaponTimerIonCannon
+		"Ion Cannon"
+	End		
+
+// Archer Maiden
+	
+	Name:JapanArcherInfantry
+		"Archer Maiden"
+	End
+	
+	Desc:JapanArcherInfantry
+		"Rejected from the Rocket Angel ranks, these women sought to fight by more-traditional means."
+	End
+	
+	Type:JapanArcherInfantry
+		"Anti-Air / Anti-Surface Infantry"
+	End
+	
+	Name:ArcherArrowBarrageSpecialPower
+		"Barrage Shot"
+	End
+	
+	Desc:ArcherArrowBarrageSpecialPower
+		"The Archer maiden use specially-charged arrows that split up into a flurry of white-hot spikes, that deadly to clusters of enemy infantry."
+	End
+	
+	DialogEvent:MIIn_ArcherMaiden
+		"*Archer Maidens use their powered greatbows to strike enemy ground and air targets.  These bows can be extremely damaging in spite of being relatively slow on the draw.  The Maidens' special ability launches an energy arrow barrage that can strike multiple targets in an area."
+	End
+
+// AlliedBomberAircraft
+
+	Name:AlliedBomberAircraftReturnToAirfield
+		"Return to Base"
+	End
+
+	Desc:AlliedBomberAircraftReturnToAirfield
+		"Order Century Bomber return to base for repairs and restock."
+	End
+	
+// Centurion
+	
+	Name:Centurion
+		"Cannon Oni"
+	End
+	
+	Type:Centurion
+		"Anti-Air / Anti-Surface Robot"
+	End
+
+	Desc:Centurion
+		"Mecha with great mobility. With their Kinetic Gatling Gun they can suppress waves of foe."
+	End
+	
+	Name:CenturionMoto
+		"Cannon Oni"
+	End
+	
+	Type:CenturionMoto
+		"Anti-Air / Anti-Surface Robot"
+	End
+
+	Desc:CenturionMoto
+		"Mecha with great mobility. Their rocket launchers require a long reload time, but pack devastating force."
+	End
+	
+	Name:ButtonJCM_Transform
+		"Destroyer Launcher"
+	End
+	
+	Desc:ButtonJCM_Transform
+		"Equip the rocket launcher that can heavily damage enemy aircrafts."
+	End
+
+	Name:ButtonJCM_TransformOff
+		"Kinetic Gatling Gun"
+	End
+
+	Desc:ButtonJCM_TransformOff
+		"Equip the gatling gun that with a downside on accuracy but can suppress concentrated enemy force."
+	End		
+		
+
+
+
+// Soviet Unit
+// SovietHeavyAntiVehicleInfantry
+	
+	Name:ToggleSHAVIParalyzeWeapon
+		"EM Disruption Projector"
+	End
+	
+	Desc:ToggleSHAVIParalyzeWeapon
+		"Use electro-magnetic wave to paralyze enemy vehicles at greater range."
+	End
+
+	Name:SHAVIParalyzeWeaponOff
+		"Tesla Weapon"
+	End
+	
+	Desc:SHAVIParalyzeWeaponOff
+		"Use directed Tesla bursts to engage enemy ground forces."
+	End	
+	
+	
+// Desolator
+	
+	Name:SovietDesolatorInfantry
+		"Desolator Trooper"
+	End
+	
+	Desc:SovietDesolatorInfantry
+		"Thick chemical suits shield these sadists from the horrid poisons they use as weapons."
+	End
+	
+	Type:SovietDesolatorInfantry
+		"Advanced anti-infantry"
+	End
+	
+	Name:DesolatorWeaponMode
+		"Splattershot Mode"
+	End
+	
+	Desc:DesolatorWeaponMode
+		"The Desolator uses an all-new formula fired in balls that will poison and corrode armour, allowing the sprayed chemical to be used on it."
+	End
+	
+	Name:DesolatorWeaponModeOff
+		"Deathspray Mode"
+	End
+	
+	Desc:DesolatorWeaponModeOff
+		"The Desolator sprays a concoction that kills infantry directly, which can also clear garrisons (but not vehicles)."
+	End
+	
+	DialogEvent:MSIn_Desolator1
+		"*Desolator Troopers are heavy infantry who fight using deadly poisons stored in their chemical suits.  They can either spray their toxins on infantry or switch to their splattershot mode to launch explosive globs of corrosive acids against vehicles.  Their spray can also clear out enemy garrisons."
+	End
+
+// Mortar Cycle
+	
+	Name:SovietMortarCycle
+		"Mortar Cycle"
+	End
+	
+	Desc:SovietMortarCycle
+		"These souped-up bikes would be even faster if not for all the explosives they carry."
+	End
+	
+	Type:SovietMortarCycle
+		"Light Bombardment"
+	End
+	
+	Name:ToggleSovietMortarCycleMolotov
+		"Molotov Cocktail"
+	End
+	
+	Desc:ToggleSovietMortarCycleMolotov
+		"Switches to Molotov Cocktails, which are effective against stationary targets, and can flush out garrisoned infantry. They are also useful against structures."
+	End
+	
+	Name:ToggleSovietMortarCycleMortar
+		"Porta Mortar"
+	End
+	
+	Desc:ToggleSovietMortarCycleMortar
+		"The Mortar Cycle uses its collapsible long-range mortar to engage enemies."
+	End
+	
+	DialogEvent:MSIn_MortarCycle
+		"*Mortar Cycles are light artillery vehicles that excel at hit-and-run attacks versus enemy fortifications or slower forces.  They may quickly switch between using Molotov cocktails to burn their foes to a crisp, or raining down explosive shells with their mortar attack."
+	End
+
+// SovietScoutVehicle
+	
+	Name:ToggleSSVSpiderHole
+		"Burrow"
+	End
+	
+	Desc:ToggleSSVSpiderHole
+		"Dig into the ground, become invisible and allows movement at a reduced rate."
+	End
+
+	Name:ToggleSSVSpiderHoleOff
+		"Emerge"
+	End
+	
+	Desc:ToggleSSVSpiderHoleOff
+		"Climb back to surface, enable faster movement and attacking."
+	End	
+	
+	
+// Grinder
+	
+	Name:SovietGrinderVehicle
+		"Grinder"
+	End
+	
+	Desc:SovietGrinderVehicle
+		"Road rollers jury-rigged for war. Their gnashing teeth can grind anything on land or sea."
+	End
+	
+	Type:SovietGrinderVehicle
+		"Close-Combat Tank"
+	End
+	
+	Name:NitrousBoostSpecialPower
+		"Turbo Charge"
+	End
+	
+	Desc:NitrousBoostSpecialPower
+		"Rush enemy forces by temporary burst of speed."
+	End
+	
+	DialogEvent:MSIn_Grinder1
+		"*Grinders are heavily-armored amphibious vehicles that lack conventional weapons but can simply roll over most smaller targets.  They can tear apart larger targets almost as quickly.  Their special ability gives them a temporary burst of speed, allowing them to overrun faster foes."
+	End	
+	
+// Reaper
+	
+	Name:SovietHeavyWalkerVehicle
+		"Reaper"
+	End
+	
+	Desc:SovietHeavyWalkerVehicle
+		"Bigger, tougher relatives of the Sickle that can barely lift all their rockets and grenades."
+	End
+	
+	Type:SovietHeavyWalkerVehicle
+		"Anti-Surface / Anti-Air Walker"
+	End
+	
+	Name:SovietHeavyWalkerDeployedTurret
+		"Reaper Turret"
+	End
+	
+	Desc:SovietHeavyWalkerDeployedTurret
+		"Imobolized but entrenched, these failed prototypes can still defend themselves."
+	End
+	
+	Type:SovietHeavyWalkerDeployedTurret
+		"Advanced Base Defense"
+	End
+	
+	Name:LeapDeploySpecialPower
+		"Plant Mine"
+	End
+	
+	Desc:LeapDeploySpecialPower
+		"Laying deadly mag-mines in the designated area."
+	End
+	
+	DialogEvent:MSIn_Reaper1
+		"*Reapers are bigger, tougher predecessors of the Sickle.  They are equipped with multiple grenade and rocket launchers, and are effective against multiple smaller targets, including aircraft.  Their special ability is to jump, but their legs tend to break on impact.  As such, Reapers still serve well as fixed gun emplacements."
+	End
+	
+// SovietAntiVehicleVehicleTech3
+	Name:WheelBoomSpecialPower
+		"Iron Star"
+	End
+	
+	Desc:WheelBoomSpecialPower
+		"The Iron Star is developed to increse the already excessive firepower of the Apocalypse Tanks. When deployed, these target-seeking bomb will rush the enemy with extreme high speed."	
+	End
+
+	
+// SAVV4
+	Name:SAAV4
+		"Steel Fortress"
+	End
+	
+	Desc:SAAV4
+		"Steel Fortress is the ultimate war machine developed by Soviet scientists. These behemothes are able to crush even the strongest of targets, and can adapt to the underwater enviornment."
+	End
+	
+	Type:SAAV4
+		"Heavy Amphibious Tank"
+	End
+	
+	Name:ToggleSAVV4Hold_Down
+		"Fortify"
+	End
+	
+	Desc:ToggleSAVV4Hold_Down
+		"Deploy defensive shells to fortify at the current location."
+	End
+
+	Name:ToggleSAVV4Hold_UP
+		"Pack-up"
+	End
+	
+	Desc:ToggleSAVV4Hold_UP
+		"Recall the shells, freeing legs to enable movement."
+	End	
+	
+// SovietAntiStructureShip
+	
+	Name:ButtonSASSTransform
+		"Submerge"
+	End
+	
+	Desc:ButtonSASSTransform
+		"Recall the V4 rockets launching matrix and submerge below sea level."
+	End	
+	
+	Name:ButtonSASSTransformOff
+		"Emerge"
+	End
+	
+	Desc:ButtonSASSTransformOff
+		"Float back to the sea level to keep laying waste at the enemy."
+	End		
+	
+// SovietDesolaterBomber
+	
+	Name:SovietDesolaterBomber
+		"Badger Bomber"
+	End
+	
+	Desc:SovietDesolaterBomber
+		"Heavy-duty bombers that can cause a firestorm at enemy garisons. With proper upgrade can also equip chemical loads."
+	End	
+	
+	Type:SovietDesolaterBomber
+		"Heavy Bomber"
+	End	
+	
+	Name:SovietDesolaterBomberToggleWeaponTox
+		"Toxin Bomb"
+	End
+	
+	Desc:SovietDesolaterBomberToggleWeaponTox
+		"Change the bomb type to chemical loads, which is effective against infantry and will leave chemical substance behind."
+	End		
+	
+	Name:SovietDesolaterBomberToggleWeaponFire
+		"Incendiary Bomb"
+	End
+	
+	Desc:SovietDesolaterBomberToggleWeaponFire
+		"Switch back to incendiary bombs and drown the enemy in flames. Can be used to lit up the oil spill."
+	End	
+
+// SovietSurveyor
+	
+	Name:AbilityUnPackSovietSurveyor
+		"Unpack"
+	End
+	
+	Desc:AbilityUnPackSovietSurveyor
+		"Depoly the Surveyor into a scouting station, providing building coverage and stealth-detection."
+	End		
+	
+	Name:AbilityPackSovietSurveyor
+		"Pack"
+	End
+	
+	Desc:AbilityPackSovietSurveyor
+		"Pack back into a mobile transportation that can travel to different locations."
+	End		
+	
+// SovietTransportAircraft
+	
+	Name:SovietTransportAircraft
+		"Iron Wing"
+	End
+	
+	Desc:SovietTransportAircraft
+		"Enormous transport aircraft, able to carry a large amount of troops and can provide emergency repair to nearby vehicles."
+	End	
+	
+	Type:SovietTransportAircraft
+		"Transport Aircraft"
+	End		
+
+	
+// Japan Unit
+// JapanAntiInfantryInfantry
+
+	Name:JAIIBonzaion
+		"Beam Katana"
+	End	
+	
+	Desc:JAIIBonzaion
+		"Activate the beam katana and cut enemy infantry in half with higher speed."
+	End
+	
+	Name:JAIIBonzaionOff
+		"Kinetic Carbine"
+	End	
+	
+	Desc:JAIIBonzaionOff
+		"Switch back to the kinetic carbine to engage enemy from afar."
+	End
+
+// Nano Robot
+
+	Name:JapanNano
+		"Nano Robot"
+	End	
+	
+	Desc:JapanNano
+		"Formed by countless number of Nano Robots, they are capable of tearing enemy infantry in half or clear out enemy vehicle drivers. They can also boost Empirial units."
+	End
+	
+	Type:JapanNano
+		"Advanced Anti-Infantry / Anti-Vehicle / Unit Boost"
+	End
+
+
+	
+// JapanCommandoTech1
+	
+	Name:MindControlSpecialPower
+		"Mind Control"
+	End
+	
+	Desc:MindControlSpecialPower
+		"Yuriko wipes out the self-concious of nearby units. Useful when surrounded."
+	End
+	
+// JapanIzumi
+	
+	Name:JapanIzumi
+		"Izumi omega"
+	End
+	
+	Desc:JapanIzumi
+		"Her calm demeanor belies the fact that she has a powerful mind."
+	End
+		
+	
+// Steel Ronin
+	
+	Name:JapanSentinelVehicle
+		"Steel Ronin"
+	End
+	
+	Desc:JapanSentinelVehicle
+		"Sentinels as cold and heartless as their pilots, built to cut down enemy tank divisions."
+	End
+	
+	Type:JapanSentinelVehicle
+		"Anti-Vehicle"
+	End
+	
+	Name:LaserGlaiveBlastSpecialPower
+		"Leap Strike"
+	End
+	
+	Desc:LaserGlaiveBlastSpecialPower
+		"Leap fearlessly into the fray with a brutal strike."
+	End
+	
+	DialogEvent:MIIn_SteelRonin
+		"*The Steel Ronin are pilot-assisted robots built to withstand heavy fire in order to get within striking distance, where their polearms can slash through multiple targets in one stroke.  The Ronin's special ability sends a wave of energy coursing through the earth, damaging all in its path."
+	End	
+	
+
+	
+// Giga-Fortress
+	
+	Name:JapanFortressShip
+		"Giga-Fortress"
+	End
+	
+	Desc:JapanFortressShip
+		"Self-aware sea fortresses filled with unconscionable weapon systems and other dark secrets."
+	End
+	
+	Type:JapanFortressShip
+		"Anti-Surface / Heavy Bombardment / Anti-Air"
+	End
+	
+	Name:JapanFortressShip_Air
+		"Giga-Fortress"
+	End
+	
+	Desc:JapanFortressShip_Air
+		"Incredible, hopelessly destructive flying siege weapons--symbols of the Empire's defiance."
+	End
+	
+	Type:JapanFortressShip_Air
+		"Advanced Heavy Bombardment"
+	End
+	
+	Name:JapanFortressShipTransformAircraftMode
+		"Sky Fortress Mode"
+	End
+	
+	Desc:JapanFortressShipTransformAircraftMode
+		"The Giga Fortress attacks enemy vehicles and aircrafts alike with its God's Breath device."
+	End
+	
+	Name:JapanFortressShipTransformShipMode
+		"Sea Fortress Mode"
+	End
+	
+	Desc:JapanFortressShipTransformShipMode
+		"The Giga Fortress attacks enemy with its Shirada 350 mm cannon and anti aircraft missiles."
+	End
+	
+	DialogEvent:MIIn_GigaFortress
+		"*Giga-Fortresses are among the most powerful weapons the Empire has ever developed.  In their primary form, their multiple cannons and photon rocket launchers are enough to overwhelm entire naval strike groups.  They may also switch to a secondary form, a devastating long-range artillery platform that can fly wherever it pleases."
+	End
+	
+	
+	
+// Giga-Fortress Core
+	
+	Name:JapanFortressShipEgg
+		"Giga-Fortress Core"
+	End
+	
+	Desc:JapanFortressShipEgg
+		"Special drones that unfurl into the Giga-Fortress, a massive and heavily-armed warship."
+	End
+	
+	Type:JapanFortressShipEgg
+		"Portable Heavy Artillery Unit"
+	End
+	
+	Name:JapanFortressShipEggUnpackSpecialPower
+		"Unfurl"
+	End
+	
+	Desc:JapanFortressShipEggUnpackSpecialPower
+		"Initiates transformation sequence into the massive Giga-Fortress. Must be used in water."
+	End	
+
+// JapanBaseDefense
+	
+	Name:JBDPack
+		"Pack"
+	End
+	
+	Desc:JBDPack
+		"Package as a nano core and reselect the deployment location."
+	End
+
+	
+// Allied Unit
+
+// Cryo Legionnaire
+	
+	Name:AlliedLegionnaireInfantry
+		"Cryo Legionnaire"
+	End
+	
+	Desc:AlliedLegionnaireInfantry
+		"Ice-cold experimental soldiers boasting the latest powered armor and cryo weaponry."
+	End
+	
+	Type:AlliedLegionnaireInfantry
+		"Heavy assault infantry"
+	End
+	
+	Name:CryoLeapSpecialPower
+		"Boost Kick"
+	End
+	
+	Desc:CryoLeapSpecialPower
+		"Launches the Cyro Legionnaire into the air and then crashes down to the ground, which can be useful for shattering frozen targets or leap into or out of battle."
+	End
+	
+	Name:ButtonCryo_Transform
+		"Activate Booster Pack"
+	End
+	
+	Desc:ButtonCryo_Transform
+		"Activate the booster pack and fly into the air."
+	End	
+	
+	Name:ButtonCryo_TransformOff
+		"Deactivate Booster Pack"
+	End
+	
+	Desc:ButtonCryo_TransformOff
+		"Deactivate the booster pack and land back on the surface."
+	End		
+	
+	
+	Desc:PlayerPowerHighTechnology
+		"Upgrade the special abilities of Dogs, Guardians, Cryocopters, Legionnaires, and Carriers!"
+	End
+	
+	DialogEvent:MAIn_CryoLegionnaire
+		"*Cryo Legionnaires are heavy assault infantry whose ice cannons can freeze multiple assailants dead in their tracks in just a few seconds.  The Cryo Legionnaires' special ability is the boost kick, which they use to shatter frozen targets, or leap into or out of battle."
+	End
+
+	
+
+	
+	
+	
+
+	
+// AlliedCommandoTech1
+	Name:ButtonAlliedCommandoAir
+		"Activate Booster Pack"
+	End
+	
+	Desc:ButtonAlliedCommandoAir
+		"Activate the booster pack and fly into the air."
+	End	
+
+	Name:ButtonAlliedCommandoLand
+		"Deactivate Booster Pack"
+	End
+	
+	Desc:ButtonAlliedCommandoLand
+		"Deactivate the booster pack and land back on the surface."
+	End		
+	
+// Hurricane
+	
+	Name:Hurricane
+		"Hurricane"
+	End
+	
+	Desc:Hurricane
+		"Light aircraft, equipped with anti-infantry machine guns that can effectively mop infantry up. Invisibility allows it to surprise enemy forces or escape from pursuit."
+	End
+
+	Type:Hurricane
+		"Anti-infantry / Reconnaissance aircraft"
+	End	
+	
+	Name:AlliedHurricaneInvisibility
+		"Stealth Device"
+	End
+	
+	Desc:AlliedHurricaneInvisibility
+		"Activate the stealth device to make Hurricane disappear from enemy sights."
+	End		
+
+// AlliedFighterAircraft
+	Name:StratosphericFighterAircraftSpecialPower
+		"Strato Boost"
+	End
+	
+	Desc:StratosphericFighterAircraftSpecialPower
+		"Allows Apollos to shoot into the stratosphere and come screaming down at any location almost instantaneously."
+	End	
+
+// AlliedSupportAircraft
+	Name:SpecialPowerShrinkRay
+		"Quick Freezing Beam"
+	End
+	
+	DESCRIPTION:SpecialPowerShrinkRay
+		"Launch the frozen beam to slow down the target and enflict heavy freeze damage."
+	End	
+	
+// Paladin
+	
+	Name:Paladin
+		"Paladin"
+	End
+	
+	Desc:Paladin
+		"Advanced defense aircraft can intercept enemy missiles and suppress enemy firepower."
+	End
+
+	Type:Paladin
+		"Advanced-Supporting Aircraft"
+	End	
+	
+	Name:TogglePaladinPrimaryWeapon
+		"Interception mode"
+	End
+	
+	Desc:TogglePaladinPrimaryWeapon
+		"Power up intercepting laser systems to destroy enemy missiles."
+	End	
+
+	Name:TogglePaladinSecondaryWeapon
+		"Attack mode"
+	End
+	
+	Desc:TogglePaladinSecondaryWeapon
+		"Activate the weapon system to engage enemy ground / air targets."
+	End		
+
+// AlliedBomberAircraft
+	Name:StratosphericSpecialPower
+		"Strato Boost"
+	End
+	
+	Desc:StratosphericSpecialPower
+		"Allows Centry Bombers to shoot into the stratosphere and come screaming down at any location almost instantaneously."
+	End	
+	
+// Kodiak
+	
+	Name:Kodiak
+		"Zeus Battleship"
+	End
+	
+	Desc:Kodiak
+		"Zeus Battleship is an important tool for Future Tech to realize its huge plan. The company put it into use in the current state of conflict, just meant to test the performance of the product in the surface conflict."
+	End
+
+	Type:Kodiak
+		"Air Fortress"
+	End	
+	
+	
+// Titan
+
+	Name:Titan
+		"Titan"
+	End	
+	
+	Desc:Titan
+		"Stalwart battle machines that can effectively repel enemy armor and air units."
+	End
+	
+	Type:Titan
+		"Advanced Anti-Surface / Anti-Air"
+	End	
+	
+	Name:TitanRepair
+		"Emergeny Repair"
+	End	
+	
+	Desc:TitanRepair
+		"Initiates Emergency Repair function, during the repair period Titan is disabled."
+	End	
+	
+// Future Tank X-1
+	
+	Name:AlliedFutureTank
+		"Future Tank X-1"
+	End
+	
+	Desc:AlliedFutureTank
+		"Hulking unmanned war machines whose neutron scramblers can annihilate entire tank platoons."
+	End
+	
+	Type:AlliedFutureTank
+		"Advanced Anti-Surface Tank"
+	End
+	
+	Name:AlliedFutureTankLaserWeapon
+		"Riot Beam"
+	End
+	
+	Desc:AlliedFutureTankLaserWeapon
+		"The Future Tank launch a devastating and concentrated attack with far more power than any conventional round."
+	End
+	
+	DialogEvent:MAIn_FutureTank
+		"*Future Tank X-1s are heavily armored, computer-controlled combat vehicles that are virtually unmatched on the ground.  Their experimental cannons can easily cut through even the toughest armor, while their Riot Beam special weapon lets them turn the tables on enemies attacking in mass."
+	End	
+
+// Pacifier FAV
+	
+	Name:AlliedArtilleryVehicle
+		"Pacifier FAV"
+	End
+	
+	Desc:AlliedArtilleryVehicle
+		"Absolute hell rains down once these field artillery vehicles unpack their Grand Cannons."
+	End
+	
+	Type:AlliedArtilleryVehicle
+		"Advanced Heavy Bombardment"
+	End
+	
+	Name:ToggleAlliedArtillerySiegeWeapon
+		"Unpack Artillery"
+	End
+	
+	Desc:ToggleAlliedArtillerySiegeWeapon
+		"Plants the Pacifier into the ground so that it can use its long-range Grand Cannon."
+	End
+	
+	Name:ToggleAlliedArtilleryAutoCannon
+		"Pack Up Artillery"
+	End
+	
+	Desc:ToggleAlliedArtilleryAutoCannon
+		"Detaches from the ground, retracts the Grand Cannon, and readies two miniguns to engage enemy infantry or aircrafts."
+	End
+	
+	DialogEvent:MAIn_Pacifier
+		"*Pacifier Field Artillery Vehicles can neutralize enemy combatants from long range using their Grand Cannons.  They must deploy to a fixed position on land to initiate bombardment.  When not deployed, Pacifiers may cross land or sea and defend themselves with heavy machineguns."
+	End
+	
+// AlliedWall
+	Name:AbilityWallDown
+		"Close"
+	End
+	
+	Desc:AbilityWallDown
+		"Close the wall."
+	End		
+	
+	Name:AbilityWallUp
+		"Open"
+	End
+	
+	Desc:AbilityWallUp
+		"Open the wall."
+	End			
+	
+// Dog house
+	
+	Name:AlliedDogHouseobj
+		"Dog House"
+	End
+	
+	Desc:AlliedDogHouseobj
+		"Home of loyal partners - German Shepherds can be trained here."
+	End
+
+	Type:AlliedDogHouseobj
+		"Training Attack Dogs"
+	End
+	
+// OutPostUpg
+	
+	Name:AlliedOutPostUPG
+		"Supply Station"
+	End
+	
+	Desc:AlliedOutPostUPG
+		"Support nearby infantry with healing capabilites. You can gain anti-stealth sensors and defense missile matrix by upgrading."
+	End
+
+	Type:AlliedOutPostUPG
+		"Supply / Expansion Building"
+	End	
+	
+	Name:AbilityUnPackAlliedMinerUPG
+		"Unpacking"
+	End
+	
+	Desc:AbilityUnPackAlliedMinerUPG
+		"Start unpack into a supply station to support friendly troops."
+	End		
+// Soviet	
+// PlayerPowerDropBunker
+
+	Name:PlayerPowerDropBunker
+		"Orbital Bunker Drop"
+	End	
+	
+	Desc:PlayerPowerDropBunker
+		"Active: Drop a bunker at the select position from orbital. \nPassive: Bunkers now can self-repair and heal garrision troops inside."
+	End
+	
+	Type:PlayerPowerDropBunker
+		"Quick Depolyment / Building Upgrade"
+	End	
+
+// PlayerPowerSovietFlameFuel
+
+	Name:PlayerPowerSovietFlameFuel
+		"Pyromania"
+	End	
+	
+	Desc:PlayerPowerSovietFlameFuel
+		"Active: Dump oil spill in an area, the spill will slow all units' movement speed. \nPassive: fire-based weaponary can now ignite target and oil spill."
+	End
+	
+	Type:PlayerPowerSovietFlameFuel
+		"Area Denial / Area Control"
+	End		
+	
+// PlayerPowerMagneticSatelliteAdv
+
+	Name:PlayerPowerMagneticSatelliteAdv
+		"Magnetic Satellite"
+	End	
+	
+	Desc:PlayerPowerMagneticSatelliteAdv
+		"Active: A magnetic beam is concentrated from space, sucking certain sized vehicles into space within a moderate period of time."
+	End
+	
+	Type:PlayerPowerMagneticSatelliteAdv
+		"Enemy Disruption"
+	End			
+	
+// PlayerPowerDesolatorBomb_Adv
+
+	Name:PlayerPowerDesolatorBomb_Adv
+		"Desolator Airstrike"
+	End	
+	
+	Desc:PlayerPowerDesolatorBomb_Adv
+		"Active: Bombers are called in and covers target area with toxic waste. Toxin chemicals will attach to any unit crossing the area. \nPassive: Upgrade all chemical weaponary and allow Badger Bombers to loads chemical rounds."
+	End
+	
+	Type:PlayerPowerDesolatorBomb_Adv
+		"Area Denial / Toxicant Hell"
+	End			
+	
+// PlayerPowerOrbitalRefuse_Adv
+
+	Name:PlayerPowerOrbitalRefuse_Adv
+		"Orbital Downpour"
+	End	
+	
+	Desc:PlayerPowerOrbitalRefuse_Adv
+		"Active: A space station and many satellites are dropped from orbit, along with any space debris, including units obtained by the Magnetic Satellite. \nPassive: Increse Magnetic Satellite."
+	End
+	
+	Type:PlayerPowerOrbitalRefuse_Adv
+		"Area Explosion"
+	End			
+	
+// PlayerPowerSovietBattlefieldOfficer
+
+	Name:PlayerPowerSovietBattlefieldOfficer
+		"Field Promotion!"
+	End	
+	
+	Desc:PlayerPowerSovietBattlefieldOfficer
+		"Active: Select a unit to gain Heroic Veterancy. \nPassive: Increse all units' Veterancy gaining speed."
+	End
+	
+	Type:PlayerPowerSovietBattlefieldOfficer
+		"Unit Boost"
+	End		
+	
+// PlayerPowerProductionKickbacksAdv
+
+	Name:PlayerPowerProductionKickbacksAdv
+		"Cash Bounty"
+	End	
+	
+	Desc:PlayerPowerProductionKickbacksAdv
+		"Active: By selecting a certain area on the map, units within that area grant cash to the player if destroyed. \nPassive: Soviet units can earn cash bounty passivly when destroying enemy units."
+	End
+	
+	Type:PlayerPowerProductionKickbacksAdv
+		"Economic Upgrade"
+	End			
+	
+	
+
+// PlayerPowerMagneticSingularityAdv
+
+	Name:PlayerPowerMagneticSingularityAdv
+		"Magnetic Singularity"
+	End	
+	
+	Desc:PlayerPowerMagneticSingularityAdv
+		"Active: An area is engulfed in magnetic energy, drawing all enemy vehicles to the centre of the area. All infantry are killed."
+	End
+	
+	Type:PlayerPowerMagneticSingularityAdv
+		"Area Disruption"
+	End	
+
+// PlayerPowerSovietMassProduction
+
+	Name:PlayerPowerSovietMassProduction
+		"Mass Production"
+	End	
+	
+	Desc:PlayerPowerSovietMassProduction
+		"Active: Increases the production speed of barracks, military factories, shipyards, airfields in the zone you specify. \nPassive: Build units at a reduced cost, thanks to carefully-renegotiated defensive contracts!"
+	End
+	
+	Type:PlayerPowerSovietMassProduction
+		"Production Upgrade"
+	End	
+	
+	
+// PlayerPowerTerrorDroneEggsAdv
+
+	Name:PlayerPowerTerrorDroneEggsAdv
+		"Terror Drone Surprise"
+	End	
+	
+	Desc:PlayerPowerTerrorDroneEggsAdv
+		"Active: Orbit-drop a Terror Drone in the area. \nPassive: Gives a chance of a Terror Drone being created upon the destruction of a friendly unit. The Terror Drones can now inhibit the firing rate of vehicles when inside."
+	End
+	
+	Type:PlayerPowerTerrorDroneEggsAdv
+		"Battle Support / Unit Upgrade"
+	End			
+	
+// PlayerPowerSovietMineField
+
+	Name:PlayerPowerSovietMineField
+		"Danger Zone"
+	End	
+	
+	Desc:PlayerPowerSovietMineField
+		"Active: Place explosive mines/water mines in designed area. \nPassive: Increased damage from mines. The magnetic mine that Flak Trooper drops upon death has an unlimited shelf life."
+	End
+	
+	Type:PlayerPowerSovietMineField
+		"Area Denial"
+	End		
+	
+// PlayerPowerCrushPuppiesAdv
+
+	Name:PlayerPowerCrushPuppiesAdv
+		"Grinder Treads"
+	End	
+	
+	Desc:PlayerPowerCrushPuppiesAdv
+		"Active: Deploy 2 Apocalypse tank at the designated location. \nPassive: When a friendly unit runs over an enemy unit, the treads extract valuable resources and use them to increase the health of the parent vehicle. Also increases tanks and other vehicles' movement speed."
+	End
+	
+	Type:PlayerPowerCrushPuppiesAdv
+		"Fast Depolyment / Vehicle Upgrade"
+	End		
+
+
+
+// PlayerPowerSovietIronFortress
+
+	Name:PlayerPowerSovietIronFortress
+		"Steel Fortress"
+	End	
+	
+	Desc:PlayerPowerSovietIronFortress
+		"Active: Drop in a Steel Fortress at the selected position. \nPassive: Steel Fortress Construction Authorized."
+	End
+	
+	Type:PlayerPowerSovietIronFortress
+		"Battlefield Support / Technology Authorization"
+	End		
+	
+	UpgradeName:SovietIronFortressUpg
+		"Steel Fortress Authorization"
+	End		
+	
+	UpgradePrereq:SovietIronFortressUpg
+		"Once aquired the authorization, the Steel Fortress can be built from a Construction Station."
+	End	
+
+	TypeDescription:SovietIronFortressUpg
+		"Technology Authorization"
+	End	
+
+	Description:SovietIronFortressUpg
+		"Authorization to build Steel Fortress"
+	End		
+	
+// JapanProtocols
+// PlayerPowerPointDefenseDrones
+
+	Name:PlayerPowerPointDefenseDrones
+		"Nano Defense Shield"
+	End	
+	
+	Desc:PlayerPowerPointDefenseDrones
+		"Active: Deploy defensive nano robots onto units, granting them a 'shield' that protects them from enemy fire. \nPassive: Nano robots will appear if the shields are destroyed. Provides defense structures with a nanoshield."
+	End
+	
+	Type:PlayerPowerPointDefenseDrones
+		"Vehicle Protection / Defense Structure Upgrade"
+	End			
+	
+// PlayerPowerJapanAmbush
+
+	Name:PlayerPowerJapanAmbush
+		"Sleeper Ambush"
+	End	
+	
+	Desc:PlayerPowerJapanAmbush
+		"Active: Order well-rested Tankbusters to emerge from subterranean hiding precisely where needed!"
+	End
+	
+	Type:PlayerPowerJapanAmbush
+		"Surprise Deployment / Troop Upgrade"
+	End		
+	
+// PlayerPowerJapanNijiaMacha
+
+	Name:PlayerPowerJapanNijiaMacha
+		"Mecha leader"
+	End	
+	
+	Desc:PlayerPowerJapanNijiaMacha
+		"Active: Deploy the TouKuii at the specified location. \nPassive: Upgrade the mecha force."
+	End
+	
+	Type:PlayerPowerJapanNijiaMacha
+		"Surprise Deployment / Troop Upgrade"
+	End		
+	
+// PlayerPowerJapanAdvancedMissilePacks
+
+	Name:PlayerPowerJapanAdvancedMissilePacks
+		"Advanced Rocket Pods"	
+	End	
+	
+	Desc:PlayerPowerJapanAdvancedMissilePacks
+		"Active: Deploy a rocket pod drone at designated locations to provide fire support. \nPassive: Expands the Rocket Pods for Imperial units, allowing more rockets per salvo."
+	End
+	
+	Type:PlayerPowerJapanAdvancedMissilePacks
+		"Fire Support / Weaponary Upgrade"
+	End		
+	
+	Name:AdvancedMissilePod
+		"Rocket Flying Saucer"
+	End		
+	
+// PlayerPowerFinalSquadron_L3
+
+	Name:PlayerPowerFinalSquadron_L3
+		"Final Squadron"
+	End	
+	
+	Desc:PlayerPowerFinalSquadron_L3
+		"Active: Call in a torrent of Sunburst Drone Fighters to descend upon the target area as a climatic strike! \nPassive: All Imperial aircraft have a 100% chance of falling on enemy heads when destroyed."
+	End
+	
+	Type:PlayerPowerFinalSquadron_L3
+		"Swarm Bombardment"
+	End			
+	
+	
+// PlayerPowerJapanNanoStorm
+
+	Name:PlayerPowerJapanNanoStorm
+		"Nano Storm"
+	End	
+	
+	Desc:PlayerPowerJapanNanoStorm
+		"Active: Flood the designed area with nano robots! \nPassive: improve nano robots' movement speed and health."
+	End
+	
+	Type:PlayerPowerJapanNanoStorm
+		"Area Denial / Unit Upgrade"
+	End			
+	
+// PlayerPowerNanoInjection
+
+	Name:PlayerPowerNanoInjection
+		"Nano Injection"
+	End	
+	
+	Desc:PlayerPowerNanoInjection
+		"Active: Inject nano robots into the select infantry, upgrade its battle capabilites greatly. Nano robots will spawn after that infantry dies. \nPassive: Inject nano robots into all infantry units, upgrade its battle capabilites considerably."
+	End
+	
+	Type:PlayerPowerNanoInjection
+		"Infantry Boost / Infantry Upgrade"
+	End			
+	
+// PlayerPowerJapanEnhancedMiner
+
+	Name:PlayerPowerJapanEnhancedMiner
+		"Professional Minning"
+	End	
+	
+	Desc:PlayerPowerJapanEnhancedMiner
+		"Passive: Increase ore mining efficiency."
+	End
+	
+	Type:PlayerPowerJapanEnhancedMiner
+		"Economic Upgrade / Unit Discount"
+	End			
+	
+// PlayerPowerNanoRepair
+
+	Name:PlayerPowerNanoRepair
+		"Nano Repair"
+	End	
+	
+	Desc:PlayerPowerNanoRepair
+		"Active: Command the select vehicle to dessemble itself, repairing nearby friendly vehicles. \nPassive: Upgrade the armor of Emperial vehicles with nano robots, allowing them to self-repair."
+	End
+	
+	Type:PlayerPowerNanoRepair
+		"Battlefield Repair / Vehicles Upgrade"
+	End		
+	
+// PlayerPowerJapanEmperorsResolve_L3
+
+	Name:PlayerPowerJapanEmperorsResolve_L3
+		"Emperor King Oni"
+	End	
+	
+	Desc:PlayerPowerJapanEmperorsResolve_L3
+		"Active: Upgrade the selected King Oni to the Emperor King Oni, which can improve the combat capability of surrounding units."
+	End
+	
+	Type:PlayerPowerJapanEmperorsResolve_L3
+		"Promoting Unit"
+	End			
+	
+// PlayerPowerJapanRoboticAssembly
+
+	Name:PlayerPowerJapanRoboticAssembly
+		"Robotic Assembly"
+	End	
+	
+	Desc:PlayerPowerJapanRoboticAssembly
+		"Active: Create some nano robots from the Nanoswarm Facility. \nPassive: Bolsters all production structures with special nanomachines that reduce build time."
+	End
+	
+	Type:PlayerPowerJapanRoboticAssembly
+		"Unit Deployment / Production Upgrade"
+	End		
+	
+// PlayerPowerNanoExtract
+
+	Name:PlayerPowerNanoExtract
+		"Nano Dessembly"
+	End	
+	
+	Desc:PlayerPowerNanoExtract
+		"Active: Destroy select vehicle, draw nano robots from it! \nPassive: When your vehicles are destroyed, occasionally produces nano robots."
+	End
+	
+	Type:PlayerPowerNanoExtract
+		"Assault Troops / Vehicles Upgrade"
+	End		
+
+// PlayerPowerJapanEnhancedKamikaze
+
+	Name:PlayerPowerJapanEnhancedKamikaze
+		"Honorable Discharge"
+	End	
+	
+	Desc:PlayerPowerJapanEnhancedKamikaze
+		"Active: Order the designated vehicle prepare for a devastating kamikaze attack. \nPassive: Strap your forces with avenging explosives that detonate when critical damage is delt."
+	End
+	
+	Type:PlayerPowerJapanEnhancedKamikaze
+		"Explosive Charge / Self-Destruct Upgrade"
+	End			
+	
+// PlayerPowerJapanGirlPower
+
+	Name:PlayerPowerJapanGirlPower
+		"Omega Power"
+	End	
+	
+	Desc:PlayerPowerJapanGirlPower
+		"Active: Deploy Izumi's Clone at the select location. \nPassive: Upgrade Yurika's combat capabilities."
+	End
+	
+	Type:PlayerPowerJapanGirlPower
+		"Battlefield Assault / Commando Upgrade"
+	End			
+	
+// PlayerPowerJapanBalloonAttack_L3
+
+	Name:PlayerPowerJapanBalloonAttack_L3
+		"Balloon Bombs"
+	End	
+	
+	Desc:PlayerPowerJapanBalloonAttack_L3
+		"Active: Deliver a massive payload of slowly-falling balloon bombs onto your enemies."
+	End
+	
+	Type:PlayerPowerJapanBalloonAttack_L3
+		"Floating Bomb / Air Obstacle"
+	End		
+
+// PlayerPowerJapanNavalPower
+
+	Name:PlayerPowerJapanNavalPower
+		"Giga-Fortress Authorization"
+	End	
+	
+	Desc:PlayerPowerJapanNavalPower
+		"Active: Turn the designated unit into a Giga-Fortress. \nPassive: Giga-Fortress contraction authorizied."
+	End
+	
+	Type:PlayerPowerJapanNavalPower
+		"Battlefield Support / Technology Authorization"
+	End	
+
+	UpgradeName:JapanNavalPowerUpg
+		"Giga-Fortress Authorization"
+	End		
+	
+	UpgradePrereq:JapanNavalPowerUpg
+		"Once aquired the authorization, the Giga-Fortress can be built."
+	End	
+
+	TypeDescription:JapanNavalPowerUpg
+		"Technology Authorization"
+	End	
+
+	Description:JapanNavalPowerUpg
+		"Authorization to build Giga-Fortress"
+	End	
+	
+// Allied
+// PlayerPowerSatellite
+
+	Name:PlayerPowerSatellite
+		"Surveillance Sweep"
+	End	
+	
+	Desc:PlayerPowerSatellite
+		"Active: An area between two locations is revealed, useful for directing other support powers. \nPassive: Increases Hurricane's speed, visibility and provides some additional weaponary."
+	End
+	
+	Type:PlayerPowerSatellite
+		"Field Recon / Unit Upgrade"
+	End		
+
+	Name:PLAYERPOWERSATELLITESWEEP
+		"Surveillance Sweep"
+	End	
+	
+	Desc:PLAYERPOWERSATELLITESWEEP
+		"Active: An area between two locations is revealed, useful for directing other support powers. \nPassive: Increases Hurricane's speed, visibility and provides some additional weaponary."
+	End
+	
+	Type:PLAYERPOWERSATELLITESWEEP
+		"Field Recon / Unit Upgrade"
+	End		
+
+// PlayerPowerAlliedMilitarySupplies
+
+	Name:PlayerPowerAlliedMilitarySupplies
+		"Frontline Supply Depo"
+	End	
+	
+	Desc:PlayerPowerAlliedMilitarySupplies
+		"Active: Teleport a modified Prospector which can be expanded into a Supply Station. \nPassive: Increases the speed of aviation ammunition replenishment."
+	End
+	
+	Type:PlayerPowerAlliedMilitarySupplies
+		"Frontline Support / Units Upgrade"
+	End	
+	
+// PlayerPowerPrecisionStrike
+
+	Name:PlayerPowerPrecisionStrike
+		"Surgical Strike"
+	End	
+	
+	Desc:PlayerPowerPrecisionStrike
+		"Active: Call in an Artemis Precision Bomber to heavily damage the selected unit or structure. \nPassive: Upgrade the weaponary of Vindicators and Aircraft Carriers' Drones."
+	End
+	
+	Type:PlayerPowerPrecisionStrike
+		"Tactical Bombardment / Aircrafts Upgrade"
+	End		
+	
+// PlayerPowerAlliedPowerMoney
+
+	Name:PlayerPowerAlliedPowerMoney
+		"Power Convertion"
+	End	
+	
+	Desc:PlayerPowerAlliedPowerMoney
+		"Passive: Allow Power Plants to passivly generate income."
+	End
+	
+	Type:PlayerPowerAlliedPowerMoney
+		"Economic Upgrade"
+	End		
+
+// PlayerPowerChronoSwap
+
+	Name:PlayerPowerChronoSwap
+		"Chrono Swap"
+	End	
+	
+	Desc:PlayerPowerChronoSwap
+		"Active: Swaps the positions of two units, useful for bringing slow units to the front lines or other tactical opportunities."
+	End
+	
+	Type:PlayerPowerChronoSwap
+		"Battlefield Manipulation"
+	End		
+	
+// PlayerPowerChronoSwapNew
+
+	Name:PlayerPowerChronoSwapNew
+		"Chrono Swap"
+	End	
+	
+	Desc:PlayerPowerChronoSwapNew
+		"Active: Swaps the positions of two units, useful for bringing slow units to the front lines or other tactical opportunities."
+	End
+	
+	Type:PlayerPowerChronoSwapNew
+		"Battlefield Manipulation"
+	End		
+	
+// PlayerPowerTimeBombNew
+
+	Name:PlayerPowerTimeBombNew
+		"Time Bomb"
+	End	
+	
+	Desc:PlayerPowerTimeBombNew
+		"Active: A time bomb is chronoshifted into place, taking a short period to explode, dealing heavy damage."
+	End
+	
+	Type:PlayerPowerTimeBombNew
+		"Explosive Surprise"
+	End		
+	
+// PlayerPowerStratosphericBombing
+
+	Name:PlayerPowerStratosphericBombing
+		"Strato Bombing"
+	End	
+	
+	Desc:PlayerPowerStratosphericBombing
+		"Active: Call in Century Bombers Squadron to scorch the selected area. \nPassive: allow Apollo Fighters and Century Bombers to gain the ability 'Strato Boost'."
+	End
+	
+	Type:PlayerPowerStratosphericBombing
+		"Area Bombardment / Aircrafts Upgrade"
+	End			
+	
+// PlayerPowerAlliedPowerShield
+
+	Name:PlayerPowerAlliedPowerShield
+		"Energy Shield"
+	End	
+	
+	Desc:PlayerPowerAlliedPowerShield
+		"Active: Position a high-power energy shield at the selected area, protecting units inside. \nPassive: Improve the durability of the shields generated by Athena Cannons and Zeus Battleships."
+	End
+	
+	Type:PlayerPowerAlliedPowerShield
+		"Area Defence / Unit Upgrade"
+	End		
+	
+	
+// PlayerPowerAlliedAirborneForce
+
+	Name:PlayerPowerAlliedAirborneForce
+		"Air Assault"
+	End	
+	
+	Desc:PlayerPowerAlliedAirborneForce
+		"Active: Air drop Cryo Legionnaires in select area. \nPassive: Upgrade Cryo Legionnaires and Tanya with jetpacks."
+	End
+	
+	Type:PlayerPowerAlliedAirborneForce
+		"Assault Deployment / Unit Upgrade"
+	End	
+	
+// PlayerPowerCryoSatelliteLvl3
+
+	Name:PlayerPowerCryoSatelliteLvl3
+		"Cryogeddon"
+	End	
+	
+	Desc:PlayerPowerCryoSatelliteLvl3
+		"Active: A powerful freeze ray freezes most ground units so they can be shattered in a large area. Can freeze most structures. \nPassive: Upgrade freezing weaponary."
+	End
+	
+	Type:PlayerPowerCryoSatelliteLvl3
+		"Freezes Area / Unit Upgrade"
+	End		
+	
+// PlayerPowerChronoRiftLvl3
+
+	Name:PlayerPowerChronoRiftLvl3
+		"Chrono Fissure"
+	End	
+	
+	Desc:PlayerPowerChronoRiftLvl3
+		"Active: Make everything in a large area around this scientific anomaly vanish for a considerable amount of time."
+	End
+	
+	Type:PlayerPowerChronoRiftLvl3
+		"Banishes Targets"
+	End		
+	
+// PlayerPowerAlliedFutureTechnology
+
+	Name:PlayerPowerAlliedFutureTechnology
+		"Back to the Future"
+	End	
+	
+	Desc:PlayerPowerAlliedFutureTechnology
+		"Active: Teleport a Future Tank in the select area. \nPassive: Future tanks will be teleported to the rally point from the Armor Facility."
+	End
+	
+	Type:PlayerPowerAlliedFutureTechnology
+		"Battlefield Support / Unit Upgrade"
+	End		
+	
+// PlayerPowerIonCannon
+
+	Name:PlayerPowerIonCannon
+		"Ion Cannon"
+	End	
+	
+	Desc:PlayerPowerIonCannon
+		"Active: Bombard designated areas with ion cannons."
+	End
+	
+	Type:PlayerPowerIonCannon
+		"Area Damage"
+	End			
+	
+// PlayerPowerAlliedTimeMachine
+
+	Name:PlayerPowerAlliedTimeMachine
+		"Time Reverse"
+	End	
+	
+	Desc:PlayerPowerAlliedTimeMachine
+		"Active: Make any friendly unit or structure in the designated area automatically rewind to the state 5 seconds ago in case of serious injury."
+	End
+	
+	Type:PlayerPowerAlliedTimeMachine
+		"Second Wind"
+	End		
+
+// PlayerPowerZeusWarship
+
+	Name:PlayerPowerZeusWarship
+		"Zeus Battleship"
+	End	
+	
+	Desc:PlayerPowerZeusWarship
+		"Active: Teleport a Zeus Battleship to the designated point. \nPassive: Zeus Battleship Construction Authorized."
+	End
+	
+	Type:PlayerPowerZeusWarship
+		"Battlefield Support / Technology Authorization"
+	End			
+	
+	UpgradeName:ZeusWarshipUpg
+		"Zeus Battleship Authorization"
+	End		
+	
+	UpgradePrereq:ZeusWarshipUpg
+		"Once aquired the authorization, the Zeus Battleship can be built."
+	End	
+
+	TypeDescription:ZeusWarshipUpg
+		"Technology Authorization"
+	End	
+
+	Description:ZeusWarshipUpg
+		"Authorization to build Zeus Battleship"
+	End		
+	
+// GUI
+	
+	GUI:FullGameName
+		"Command & Conquer Red Alert 3: Remix"
+	End
+
+// Version
+	
+	Version:Format2
+		"Red Alert 3: Remix037"
+	End	
+	
+// Information
+
+	NAME:UNITINTRO
+		"REMIX"
+	End
+	
+	DESC:UNITINTRO
+		"Remix by KnightVVV"
+	End

@@ -1,0 +1,14 @@
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\tools\directxutilities\9.0c.2007.08\installed\dxsdk\utilities\bin\x86\fxc.exe
+/DEA_PLATFORM_WINDOWS /D_WW3D_ /D_WW3D_VERSION_=1  -I"c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders" -I"c:\bf_qabuild_ra3ep1_eala-build113\ra3\data\sagetypes\include\common\sagetypes"   /Tfx_2_0 /nologo "/Foc:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\compiled\objectsgenericlightmap.fxo"   "C:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\ObjectsGenericLightmap.fx"
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\objects.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\common.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\win32_macros.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\sas.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\data\sagetypes\include\common\sagetypes\globalparameters.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\data\sagetypes\include\common\sagetypes\registermap.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\gamma.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\ssao.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\shadowmap.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\shadowmap_win32.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\macrotexture.fxh
+c:\bf_qabuild_ra3ep1_eala-build113\ra3\run\shaders\skinning.fxh
