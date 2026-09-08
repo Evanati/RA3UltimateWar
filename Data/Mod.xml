@@ -20,5 +20,8 @@
 		<Include 
 			type="all" 
 			source="DATA:Allied/Structures/AlliedSuperWeaponAdvanced/ParticleAcceleratorFinalWeapon.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:Allied/Structures/AlliedOutPost/AlliedOutPost.xml"/>
     </Includes>
 </AssetDeclaration>
