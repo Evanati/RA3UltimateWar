@@ -19,6 +19,6 @@
 		<!-- Red Alert 3: Ultimate War specific includes -->
 		<Include 
 			type="all" 
-			source="DATA:Allied/Structures/AlliedSuperWeaponAdvanced/ParticleAcceleratorFinalWeapon.xml"/>		
+			source="DATA:Allied/Structures/AlliedSuperWeaponAdvanced/ParticleAcceleratorFinalWeapon.xml"/>
     </Includes>
 </AssetDeclaration>
