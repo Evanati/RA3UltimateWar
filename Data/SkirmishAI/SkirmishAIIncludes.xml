@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Tags></Tags>
+
+    <Includes>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/JapanCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/JapanCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/SovietCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/SovietCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/TargetingHeuristics/ClosestPriorityTech_AITargetingHeuristic.xml"/>
+    </Includes>
+</AssetDeclaration>

@@ -33,4 +33,3 @@ https://www.patreon.com/knightvvv
 - **Orbital Downpour (protocol):** Decreased all random debris damage by 50% (main debris damage unchanged) and increased reload time from 420 seconds to 510 seconds.
 - **Steel Fortress Authorization (protocol):** Increased build cost from 6000 to 7000 and decreased reload time from 420 seconds to 300 seconds. 
 - **Steel Fortress (unit):** Increased build time from 60 seconds to 120 seconds.
-
