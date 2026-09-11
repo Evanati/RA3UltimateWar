@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+    <Includes>
+    </Includes>
+
+    <AITargetingHeuristic
+		id="ClosestMoneyTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="SUPPLY_SOURCE"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="350.0"/>
+
+    <AITargetingHeuristic
+		id="ClosestVeterancyTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="GRANTS_VETERANCY"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="350.0"/>
+		
+   <AITargetingHeuristic
+		id="ClosestInfantryHealTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="CASTLE_KEEP"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="400.0"/>
+		
+	<AITargetingHeuristic
+		id="ClosestVehicleHealTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="CAVALRY"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="400.0"/>
+		
+	<AITargetingHeuristic
+		id="ClosestAircraftHealTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="SIEGE_TOWER"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="400.0"/>
+		
+	<AITargetingHeuristic
+		id="ClosestShipHealTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="MONSTER"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="400.0"/>
+		
+	<AITargetingHeuristic
+		id="ClosestDefenseTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="FS_BASE_DEFENSE"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="450.0"/>
+  
+	<AITargetingHeuristic
+		id="ClosestRadarTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="FS_RADAR"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="450.0"/>
+		
+	<AITargetingHeuristic
+		id="ClosestControlTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="CASTLE_CENTER"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="450.0"/>
+		
+	<AITargetingHeuristic
+		id="ClosestTechBuildingHeuristic"
+		HeuristicType="TechBuilding"
+		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY CASTLE_KEEP CAVALRY SIEGE_TOWER MONSTER FS_BASE_DEFENSE FS_RADAR CASTLE_CENTER"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="500.0"/>
+</AssetDeclaration>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AIStrategicStateDefinition
+    id="JapanCapturePriorityTech_BRUTALNEW"
+    MaxTargets="1">
+	
+    <Heuristic>
+      <IsBuildingHeuristic 
+		KindOf="FS_TECHNOLOGY SUPER_WEAPON" 
+		PassIfBuilding="false"/>
+      <EnemyNearbyHeuristic 
+		Distance="250.0" 
+		EnemyNearby="false"/>
+    </Heuristic>
+	
+    <TargetHeuristic 
+		TargetHeuristic="ClosestMoneyTechHeuristic" 
+		Priority="10"/>
+	<TargetHeuristic 
+		TargetHeuristic="ClosestVeterancyTechHeuristic" 
+		Priority="10"/>
+	<TargetHeuristic 
+		TargetHeuristic="ClosestShipHealTechHeuristic" 
+		Priority="10"/>
+	<Tactic 
+		id="Engineer" 
+		Tactic="Engineer" 
+		EndBehavior="DISBAND" 
+		DisbandAfterRetreatTeamSize="999"
+		Difficulty="EASY MEDIUM HARD BRUTAL"
+		Distance="400"
+		UpdateTime="1s"
+		Targetless="false"
+		EndIfStateTurnsOff="false"
+		UseTransports="true">
+		<TeamTemplate 
+			MinUnits="1" 
+			MaxUnits="5" 
+			MinPowerAdvantage="0.0"
+			RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
+			IncludeKindOf="CAN_ATTACK" 
+			ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
+			Priority="STANDARD" 
+			ReleaseType="RELEASE_TO_PRIORITY" 
+			AlwaysRecruit="false"
+			AllowRecruitUnitsInCombat="true"
+			RequireCanAttackTarget="false"
+			AllowedLocomotorTypes="LAND AMPHIBIOUS AIR"
+			DistanceSortPoint="TARGET_POINT"
+			MicroManager="CaptureAnythingMicroManager"
+			SortByDistance="true">
+			<CreateUnits 
+				UnitName="JapanEngineer" 
+				MinUnits="1" 
+				MaxUnits="1"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+</AssetDeclaration>

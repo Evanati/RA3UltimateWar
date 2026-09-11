@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- mod.xml is the central include for mod setup data -->
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Tags></Tags>
 
+	<!-- Mod.xml is the central include for mod setup data -->
     <Includes>
-        <!-- These includes need to be in all mod.xml files -->
+        <!-- RA3 Mod SDK includes -->
 		<Include 
 			type="reference" 
 			source="DATA:static.xml"/>
@@ -16,9 +16,18 @@
 			type="reference" 
 			source="DATA:audio.xml"/>
 			
-		<!-- Red Alert 3: Ultimate War specific includes -->
+		<!-- Red Alert 3: Ultimate War includes -->
 		<Include 
 			type="all" 
-			source="DATA:Allied/Structures/AlliedSuperWeaponAdvanced/ParticleAcceleratorFinalWeapon.xml"/>
+			source="DATA:RA3UltimateWar/Data/Allied/AlliedIncludes.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Civilian/CivilianIncludes.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Neutral/NeutralIncludes.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishAIIncludes.xml"/>
     </Includes>
 </AssetDeclaration>

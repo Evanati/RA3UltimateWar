@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Tags></Tags>
+
+    <Includes>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedOutPost_GameObject.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedSuperWeaponAdvanced_WeaponTemplate.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Allied/Units_Campaign/AlliedMarine1_GameObject.xml"/>
+    </Includes>
+</AssetDeclaration>
