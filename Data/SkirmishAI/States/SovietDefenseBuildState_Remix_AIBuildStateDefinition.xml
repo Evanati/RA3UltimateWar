@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBuildStateDefinition 
+		id="SovietDefenseBuildState_Remix_New">
+    
+		<Heuristic>
+			<ConstantHeuristic/>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="SovietBaseDefenseGround" 
+			Heuristic="BEST_UNIT_EXPECTED"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAir" 
+			Heuristic="BEST_UNIT_EXPECTED"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAdvanced" 
+			Heuristic="BEST_UNIT_EXPECTED"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

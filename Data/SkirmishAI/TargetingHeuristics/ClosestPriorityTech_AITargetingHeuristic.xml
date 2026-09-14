@@ -19,40 +19,40 @@
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="350.0"/>
 		
+	<AITargetingHeuristic
+		id="ClosestDefenseTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="FS_BASE_DEFENSE"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="350.0"/>
+		
    <AITargetingHeuristic
-		id="ClosestInfantryHealTechHeuristic"
+		id="ClosestHospitalTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CASTLE_KEEP"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="400.0"/>
 		
 	<AITargetingHeuristic
-		id="ClosestVehicleHealTechHeuristic"
+		id="ClosestGarageTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CAVALRY"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="400.0"/>
 		
 	<AITargetingHeuristic
-		id="ClosestAircraftHealTechHeuristic"
-		HeuristicType="TechBuilding"
-		VitalKindOf="SIEGE_TOWER"
-		SearchRange="9999.0"
-		MinDistanceFromEnemy="400.0"/>
-		
-	<AITargetingHeuristic
-		id="ClosestShipHealTechHeuristic"
+		id="ClosestShipYardTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="MONSTER"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="400.0"/>
 		
 	<AITargetingHeuristic
-		id="ClosestDefenseTechHeuristic"
+		id="ClosestAirportTechHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="FS_BASE_DEFENSE"
+		VitalKindOf="SIEGE_TOWER"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="450.0"/>
+		MinDistanceFromEnemy="400.0"/>
   
 	<AITargetingHeuristic
 		id="ClosestRadarTechHeuristic"

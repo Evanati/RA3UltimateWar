@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommand
+		id="Command_ConstructAlliedBaseDefenseMulti"
+		Type="CONSTRUCTION_YARD_CONSTRUCT">
+		<Object>AlliedBaseDefenseMulti</Object>
+	</LogicCommand>	
+</AssetDeclaration>

@@ -653,6 +653,40 @@
 		"Get rid of the Allied field commander"
 	End		
 	
+// AlliedBaseDefenseMulti
+	Name:AlliedBaseDefenseMulti
+		"Multigunner Turret"
+	End	
+	
+	Desc:AlliedBaseDefenseMulti
+		"All-purpose defense system whose weapon changes if an infantry unit is ordered inside."
+	End
+	
+	Type:AlliedBaseDefenseMulti
+		"Multirole Base Defense"
+	End	
+	
+// AlliedBaseDefense
+	Name:AlliedBaseDefense
+		"Missile-Torpedo Turret"
+	End	
+	
+	Desc:AlliedBaseDefense
+		"Naval defense system armed with missiles and torpedoes."
+	End
+	
+	Type:AlliedBaseDefense
+		"Specialized Naval Base Defense"
+	End	
+
+	Name:UpgradeAlliedBaseDefenseTech2
+		"Turret Upgrade"
+	End	
+	
+	DESCRIPTION:UpgradeAlliedBaseDefenseTech2
+		"Purchase upgrades for your turret to strengthen damage and defense."
+	End	
+	
 // PlayerPowerNanoSwarmHive
 
 	Desc:PlayerPowerNanoSwarmHive

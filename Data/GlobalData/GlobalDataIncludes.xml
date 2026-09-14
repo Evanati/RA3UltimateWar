@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Tags></Tags>
+
+    <Includes>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseMulti_LogicCommand.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedBaseDefenseMultiCommandSet_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedConstructionYardCommandSetBase_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedConstructionYardCommandSet_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedConstructionYardCommandSetLevel2_LogicCommandSet.xml"/>	
+    </Includes>
+</AssetDeclaration>

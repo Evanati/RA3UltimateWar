@@ -21,7 +21,7 @@
 		TargetHeuristic="ClosestVeterancyTechHeuristic" 
 		Priority="10"/>
 	<TargetHeuristic 
-		TargetHeuristic="ClosestShipHealTechHeuristic" 
+		TargetHeuristic="ClosestDefenseTechHeuristic" 
 		Priority="10"/>
 	<Tactic 
 		id="Engineer" 

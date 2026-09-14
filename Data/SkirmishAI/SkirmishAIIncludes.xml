@@ -24,6 +24,24 @@
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/SovietCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedDefenseBuildState_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedDefenseBuildState_Remix_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/JapanDefenseBuildState_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/JapanDefenseBuildState_Remix_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/SovietDefenseBuildState_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/SovietDefenseBuildState_Remix_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/TargetingHeuristics/ClosestPriorityTech_AITargetingHeuristic.xml"/>
     </Includes>
 </AssetDeclaration>

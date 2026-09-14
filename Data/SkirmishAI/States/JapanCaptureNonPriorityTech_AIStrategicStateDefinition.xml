@@ -15,26 +15,26 @@
     </Heuristic>
 	
 	<TargetHeuristic 
-		TargetHeuristic="ClosestVehicleHealTechHeuristic" 
-		Priority="10"/>
+		TargetHeuristic="ClosestShipYardTechHeuristic" 
+		Priority="5"/>
 	<TargetHeuristic 
-		TargetHeuristic="ClosestInfantryHealTechHeuristic" 
-		Priority="10"/>
+		TargetHeuristic="ClosestGarageTechHeuristic" 
+		Priority="4"/>
 	<TargetHeuristic 
-		TargetHeuristic="ClosestAircraftHealTechHeuristic" 
-		Priority="10"/>
+		TargetHeuristic="ClosestHospitalTechHeuristic" 
+		Priority="4"/>
+	<TargetHeuristic 
+		TargetHeuristic="ClosestAirportTechHeuristic" 
+		Priority="3"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestRadarTechHeuristic" 
-		Priority="10"/>
+		Priority="3"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestControlTechHeuristic" 
-		Priority="10"/>
-	<TargetHeuristic 
-		TargetHeuristic="ClosestDefenseTechHeuristic" 
-		Priority="10"/>
+		Priority="2"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestTechBuildingHeuristic" 
-		Priority="10"/>
+		Priority="1"/>
 	<Tactic 
 		id="Engineer" 
 		Tactic="Engineer" 

@@ -25,6 +25,9 @@
 			source="DATA:RA3UltimateWar/Data/Civilian/CivilianIncludes.xml"/>
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/GlobalDataIncludes.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/Neutral/NeutralIncludes.xml"/>
 		<Include 
 			type="all" 

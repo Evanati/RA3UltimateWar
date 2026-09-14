@@ -398,7 +398,8 @@ function OnAlliedInfantryFightingCreated(self)
 	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
 end
 
-function OnAlliedBaseDefenseCreated(self)
+function OnAlliedBaseDefenseMultiCreated(self)
+
 	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
@@ -418,6 +419,21 @@ function OnAlliedBaseDefenseCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
 	ObjectHideSubObjectPermanently( self, "Tanya", true )
+	
+end
+
+function OnAlliedBaseDefenseCreated(self)
+
+	ObjectHideSubObjectPermanently( self, "TURRET_Upg", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead01", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead02", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead03", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead04", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead05", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead06", true )
+	
+	ObjectGrantUpgrade(self,"Upgrade_AlliedBaseDefenseTech2")
+	
 end
 
 function OnAlliedAntiAirVehicleTech1Created(self)
