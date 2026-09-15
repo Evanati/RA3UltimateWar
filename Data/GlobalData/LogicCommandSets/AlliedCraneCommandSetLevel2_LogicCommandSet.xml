@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<LogicCommandSet
-		id="AlliedConstructionYardCommandSetLevel2">
+		id="AlliedCraneCommandSetLevel2">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
 		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>
@@ -10,7 +10,6 @@
 		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
 		<Cmd>Command_ConstructAlliedAirfield</Cmd>
 		<Cmd>Command_ConstructAlliedTechStructure</Cmd>
-		<Cmd>Command_ConstructAlliedCrane</Cmd>
 		<Cmd>Command_ConstructAlliedWall</Cmd>
 		<Cmd>Command_ConstructAlliedDogHouse</Cmd>
 		<Cmd>Command_ConstructAlliedBaseDefenseMGT</Cmd>
@@ -19,7 +18,6 @@
 		<Cmd>Command_ConstructAlliedWeatherControl</Cmd>
 		<Cmd>Command_ConstructAlliedSuperWeapon</Cmd>
 		<Cmd>Command_ConstructAlliedSuperWeaponAdvanced</Cmd>
-		<Cmd>Command_PackAlliedMCV</Cmd>
 		<Cmd>Command_PurchaseAlliedTech3</Cmd>
 	</LogicCommandSet>
 </AssetDeclaration>

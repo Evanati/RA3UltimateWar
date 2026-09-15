@@ -1,23 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Tags></Tags>
 	<Includes>
-		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" /> 
-
-		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
-		<Include type="all"	source="ART:ABBaseDefense.w3x" />				
-		<Include type="all"	source="ART:ABBaseDefense_BLD_SKN.w3x" />				
-		<Include type="all"	source="ART:ABBaseDefense_BLD_BLD.w3x" />
-		<Include type="all"	source="ART:ABBaseDefense_BLD_BLDW.w3x" />								
-		<Include type="all"	source="ART:ABBaseDefense_FX.w3x" />
-		<Include type="all"	source="ART:ABBaseDefense_Platform.w3x" />
-		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />										
-		<Include type="all"	source="DATA:GlobalData/GlobalDefines.xml" />
+		<Include type="all" source="DATA:SageXml/GlobalData/GlobalDefines.xml" />
+		<Include type="all"	source="ART:ab/ABBaseDefense.w3x" />				
+		<Include type="all"	source="ART:ab/ABBaseDefense_BLD_SKN.w3x" />				
+		<Include type="all"	source="ART:ab/ABBaseDefense_BLD_BLD.w3x" />
+		<Include type="all"	source="ART:ab/ABBaseDefense_BLD_BLDW.w3x" />								
+		<Include type="all"	source="ART:ab/ABBaseDefense_FX.w3x" />
+		<Include type="all"	source="ART:ab/ABBaseDefense_Platform.w3x" />
+		<Include type="all"	source="ART:ab/ABBaseDefense_Platform_BLD.w3x" />										
 		<!-- Base Object -->
-		<Include type="instance" source="DATA:BaseObjects/BaseStructure.xml" />
+		<Include type="instance" source="DATA:SageXml/BaseObjects/BaseStructure.xml" />
 	</Includes>
 	<GameObject
-		id="AlliedBaseDefenseMulti"
+		id="AlliedBaseDefenseMGT"
 		inheritFrom="BaseStructure"
 		SelectPortrait="Portrait_AlliedBaseDefense"
 		ButtonImage="Button_AlliedBaseDefense_on"
@@ -26,19 +24,19 @@
 		EditorSorting="STRUCTURE"		
 		BuildTime="20"
 		EnergyProduction="-25"
-		CommandSet="AlliedBaseDefenseMultiCommandSet"
+		CommandSet="AlliedBaseDefenseMGTCommandSet"
 		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +GARRISONABLE_UNTIL_DESTROYED +POWERED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
 		CampnessValue="=$CAMPNESS_DEFENSIVE_STRUCTURE"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="OTHER_STRUCTURE"
-		EditorName="AlliedBaseDefenseMulti"
+		EditorName="AlliedBaseDefenseMGT"
 		WeaponCategory="GUN"
-		TypeDescription="Type:AlliedBaseDefenseMulti"
-		Description="Desc:AlliedBaseDefenseMulti">
+		TypeDescription="Type:AlliedBaseDefenseMGT"
+		Description="Desc:AlliedBaseDefenseMGT">
 		<DisplayName
-			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlliedBaseDefenseMulti</DisplayName>
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlliedBaseDefenseMGT</DisplayName>
 		<GameDependency>
 			<RequiredObject>AlliedPowerPlant</RequiredObject>
 		</GameDependency>
@@ -583,7 +581,7 @@
 			
 			<LUAEventList
 				id="ModuleTag_LUAEventList"
-				EventListName="AlliedBaseDefenseMultiFunctions"
+				EventListName="AlliedBaseDefenseMGTFunctions"
 			/>
 						
 		</Behaviors>

@@ -6,7 +6,10 @@
     <Includes>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedBaseDefenseMulti_GameObject.xml"/>
+			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedBaseDefenseMGT_GameObject.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedBaseDefenseMTT_GameObject.xml"/>
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedOutPost_GameObject.xml"/>

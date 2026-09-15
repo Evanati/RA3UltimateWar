@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIPersonalityDefinition
+		id="6JapanFleetCommand"
+		PersonalityType="3JapanFleetCommand"
+		PersonalityUIName="Personality:Naomi"
+		SecondsTillTargetsExpire="5"
+		DesiredExcessPowerBuffer="100"
+		BaseCompactness="1"
+		DefaultThreatFindRadius="10000"
+		UnitBuilderCostEffectivenessWeight="1"
+		UnitBuilderMoneyVersusTimePreference="0.5"
+		UnitBuilderOverallOffensivePreference="100%"
+		UnitBuilderOverallDefensivePreference="25%"
+		UnitBuilderEnemyTowerWeight="100%"
+		UnitBuilderEnemyNearbyDistance="800"
+		UnitBuilderEnemyNearbyMultiplier="4"
+		BuildTechEfficiencyThreshold="1"
+		BuildTechMinPowerAdvantage="0.1"
+		BuildExtraFactoryMinTime="240s"
+		ResourceNodeSearchRadius="700"
+		ResourceNodeValueRemainingForExpansion="80000"
+		RefineryPlacementStartDistanceDelta="-30"
+		RefineryPlacementIncreaseTickAmount="30"
+		RefineryPlacementNumberOfIncreaseTicksBeforeGivingUp="15"
+		ReactiveDefenseRadius="1000"
+		RepairBuildingsAtDifficulty="MEDIUM HARD BRUTAL"
+		UsePlayerPowersAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleNoPowerAtDifficulty=""
+		EmergencyManagerHandleNoIncomeAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleNoConyardAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleUnderAttackAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleConyardInDangerAtDifficulty="MEDIUM HARD BRUTAL"
+		ConyardInDangerEmergencyUnderAttackTime="5s"
+		ConyardInDangerEmergencyHealthPercent="70%"
+		ConyardInDangerEmergencyEngineerDistance="175"
+		EnemySortingBrutalDifficulty="NearestFirst_BreakTies"
+		EnemySortingHardDifficulty="NearestFirst_BreakTies"
+		EnemySortingMediumDifficulty="Flat"
+		EnemySortingEasyDifficulty="StrongestFirst_AllowTies"
+		EnemyResortingTime="15s"
+		StructureSaveChanceEasy="0"
+		StructureSaveChanceMedium="0"
+		StructureSaveChanceHard="0"
+		BaseBuilderKeepUnderAttackFlagOnTime="4s"
+		BaseBuilderUpdateUnderAttackTime="0.2s"
+		BaseBuilderUpdateEnemiesInBaseTime="1s"
+		MinHarvesters="0"
+		MaxStrategicTargets="32"
+		AssaultBeaconRadius="250"
+		HoldObjectBeaconRadius="250"
+		HoldPositionBeaconRadius="250"
+		RedAlertPowerAdvantage="0.5"
+		RedAlertIncome="50"
+		RedAlertProductionBuildings="2"
+		RedAlertAttackTime="15s"
+		MaxWallDestroyTimeToCountAsGoThroughWalls="10s"
+		CommanderPortrait="Naomi"
+		SkirmishTimeTillGreeting="1.5s"
+		CoopMonitorUpdateTime="5s"
+		SkirmishPersonality="true"
+		CoopPersonality="true"
+		CleanupRefineries="true"
+		CanBuildInAlliedBuildRadii="false">
+		
+		<Side>Japan</Side>
+		
+		<ResourceMultiplierCheat
+			Percentage="100%"
+			Difficulty="EASY"/>
+		<ResourceMultiplierCheat
+			Percentage="200%"
+			Difficulty="MEDIUM"/>
+		<ResourceMultiplierCheat
+			Percentage="300%"
+			Difficulty="HARD"/>
+		<ResourceMultiplierCheat
+			Percentage="400%"
+			Difficulty="BRUTAL"/>
+			
+		<StrategicDirectiveFeedback
+			StrategicDirective="Normal"
+			Event="Begin"
+			FeedbackKey="PlanAttackBeaconPlaced"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Normal"
+			Event="Complete"
+			FeedbackKey="PlanAttackOrderComplete"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Normal"
+			Event="Cancel"
+			FeedbackKey="OrderCanceled"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Assault"
+			Event="Begin"
+			FeedbackKey="TakePositionBeaconPlaced"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Assault"
+			Event="Complete"
+			FeedbackKey="TakePositionOrderComplete"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Assault"
+			Event="Cancel"
+			FeedbackKey="OrderCanceled"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="HoldPosition"
+			Event="Begin"
+			FeedbackKey="StrikeTargetBeaconPlaced"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="HoldPosition"
+			Event="Complete"
+			FeedbackKey="StrikeTargetOrderComplete"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="HoldPosition"
+			Event="Cancel"
+			FeedbackKey="OrderCanceled"/>
+			
+		<SkirmishGameEventFeedback
+			Event="StartGame"
+			FeedbackKey="StartGame"/>
+		<SkirmishGameEventFeedback
+			Event="InTrouble"
+			FeedbackKey="InTrouble"/>
+		<SkirmishGameEventFeedback
+			Event="FirstSeen"
+			FeedbackKey="FirstSeen"/>
+		<SkirmishGameEventFeedback
+			Event="DefeatedLocalPlayer"
+			FeedbackKey="DefeatedLocalPlayer"/>
+		<SkirmishGameEventFeedback
+			Event="DefeatedByLocalPlayer"
+			FeedbackKey="DefeatedByLocalPlayer"/>
+		<SkirmishGameEventFeedback
+			Event="Lost"
+			FeedbackKey="Lost"/>
+			
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_PointDefenseDrones"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_NanoInjection"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_NanoExtract"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_Ambush"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_Enhanced_Miner"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_EnhancedKamikaze"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_AdvancedMissilePacks"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_NijiaMacha"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_Girl_Power"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_FinalSquadron_Rank3"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_EmperorsRage_Rank3"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_BalloonAttack_Rank3"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_Nano_Storm"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_T4Tower"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_NavalPower"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_PointDefenseDrones"
+			Weight="20%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_AdvancedMissilePacks"
+			Weight="40%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_FinalSquadron_Rank3"
+			Weight="50%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_NavalPower"
+			Weight="100%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Japan_T4Tower"
+			Weight="100%" />
+			
+		<OpeningMove
+			Name="JapanIsland_EASY"
+			Weight="100%"
+			Difficulty="EASY" />
+		<OpeningMove
+			Name="JapanIsland"
+			Weight="100%"
+			Difficulty="MEDIUM HARD" />
+		<OpeningMove
+			Name="JapanIsland_BRUTAL_New"
+			Weight="100%"
+			Difficulty="BRUTAL" />
+		
+		<StrategicState
+			id="ScoutAircraft"
+			State="ScoutAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="EngineerIdle"
+			State="EngineerIdle"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanEggUnpacker"
+			State="JapanEggUnpacker"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HarvesterController"
+			State="HarvesterController"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="BaseDefenseController"
+			State="BaseDefenseController"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Gather_Land"
+			State="CommandAssault_Gather_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Gather_Water"
+			State="CommandAssault_Gather_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Land"
+			State="CommandAssault_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Water"
+			State="CommandAssault_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_FighterAircraft"
+			State="CommandAssault_FighterAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_BomberAircraft"
+			State="CommandAssault_BomberAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_Land"
+			State="CommandHold_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_Water"
+			State="CommandHold_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_BomberAircraft"
+			State="CommandHold_BomberAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_FighterAircraft"
+			State="CommandHold_FighterAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="Command_StrikeTarget_Land"
+			State="Command_StrikeTarget_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="Command_StrikeTarget_Water"
+			State="Command_StrikeTarget_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="Command_StrikeTarget_BomberAircraft"
+			State="Command_StrikeTarget_BomberAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CaptureLandHusks"
+			State="CaptureLandHusks"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="AttachedBurstDroneRemoval"
+			State="AttachedBurstDroneRemoval"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanCaptureWaterHusks"
+			State="JapanCaptureWaterHusks"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="LandDefense"
+			State="LandDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="WaterDefense"
+			State="WaterDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="LandDefense_MEDIUM"
+			State="LandDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="WaterDefense_MEDIUM"
+			State="WaterDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="LandDefense_EASY"
+			State="LandDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="WaterDefense_EASY"
+			State="WaterDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="LandEmergencyDefense"
+			State="LandEmergencyDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="WaterEmergencyDefense"
+			State="WaterEmergencyDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="LandEmergencyDefense_MEDIUM"
+			State="LandEmergencyDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="WaterEmergencyDefense_MEDIUM"
+			State="WaterEmergencyDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="LandEmergencyDefense_EASY"
+			State="LandEmergencyDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="WaterEmergencyDefense_EASY"
+			State="WaterEmergencyDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="Cleanup"
+			State="Cleanup"
+			Difficulty="EASY MEDIUM HARD" />
+		<StrategicState
+			id="Cleanup_BRUTAL"
+			State="Cleanup_BRUTAL"
+			Difficulty="BRUTAL" />
+		<StrategicState
+			id="RetreatMCVToLand"
+			State="RetreatMCVToLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="RetreatMCVToWater"
+			State="RetreatMCVToWater"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="EscortMCV"
+			State="EscortMCV"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="BombardmentShipAttack"
+			State="BombardmentShipAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandoController"
+			State="CommandoController"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanStealthDetector_New"
+			State="JapanStealthDetector_New"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CratePickup"
+			State="CratePickup"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanMachaHarrassment"
+			State="JapanMachaHarrassment"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanTransportAttack"
+			State="JapanTransportAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanExpansion_BRUTALNEW"
+			State="JapanExpansion_BRUTALNEW"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanCaptureTech_EASY"
+			State="JapanCaptureTech_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="JapanCaptureTech_MEDIUM"
+			State="JapanCaptureTech_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="JapanCapturePriorityTech_HARD"
+			State="JapanCapturePriorityTech_HARD"
+			Difficulty="HARD" />
+		<StrategicState
+			id="JapanCaptureNonPriorityTech_HARD"
+			State="JapanCaptureNonPriorityTech_HARD"
+			Difficulty="HARD" />
+		<StrategicState
+			id="JapanCapturePriorityTech_BRUTALNEW"
+			State="JapanCapturePriorityTech_BRUTALNEW"
+			Difficulty="BRUTAL" />
+		<StrategicState
+			id="JapanCaptureNonPriorityTech_BRUTALNEW"
+			State="JapanCaptureNonPriorityTech_BRUTALNEW"
+			Difficulty="BRUTAL" />
+		<StrategicState
+			id="JapanCaptureVehicleHealTech"
+			State="JapanCaptureVehicleHealTech"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="FleetCommand_NavyHarrassment"
+			State="FleetCommand_NavyHarrassment"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="FleetCommand_NavyAttackNew"
+			State="FleetCommand_NavyAttackNew"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="FleetCommand_LandAttackNew"
+			State="FleetCommand_LandAttackNew"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="FleetCommand_RocketAngelSupport_New"
+			State="FleetCommand_RocketAngelSupport_New"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanFleetCommand_JapanFortressShipAttack"
+			State="JapanFleetCommand_JapanFortressShipAttack"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanFleetCommand_JapanBossBitAttack"
+			State="JapanFleetCommand_JapanBossBitAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanFleetCommand_JapanBossIzumiAttack"
+			State="JapanFleetCommand_JapanBossIzumiAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanFleetCommand_JapanBossAttack"
+			State="JapanFleetCommand_JapanBossAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="BalancedAttackGround_EASY"
+			State="BalancedAttackGround_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="BalancedAttackWater_EASY"
+			State="BalancedAttackWater_EASY"
+			Difficulty="EASY" />
+			
+		<BudgetState
+			id="OpeningMoveBudget_New"
+			State="OpeningMoveBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="CoopBudget_New"
+			State="CoopBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="DefenseBudget_New"
+			State="DefenseBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="HeavyDefenseBudget_New"
+			State="HeavyDefenseBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			
+		<BuildState
+			id="JapanDefenseBuildStateAmphibious"
+			State="JapanDefenseBuildStateAmphibious"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="JapanNeededUnits_Remix"
+			State="JapanNeededUnits_Remix"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="JapanNonPathDependentStructureBuildState"
+			State="JapanNonPathDependentStructureBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="JapanTechBuildState_RemixNew"
+			State="JapanTechBuildState_RemixNew"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="JapanLandUnitBuildState_Remix"
+			State="JapanLandUnitBuildState_Remix"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="JapanWaterUnitBuildState"
+			State="JapanWaterUnitBuildState"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="JapanAmphibiousUnitBuildState_Remix"
+			State="JapanAmphibiousUnitBuildState_Remix"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="JapanBarracksBuildState_RANDOM_Remix"
+			State="JapanBarracksBuildState_RANDOM_Remix"
+			Difficulty="EASY" />
+		<BuildState
+			id="JapanWarFactoryBuildState_RANDOM_Remix"
+			State="JapanWarFactoryBuildState_RANDOM_Remix"
+			Difficulty="EASY" />
+		<BuildState
+			id="JapanNavalYardBuildState_RANDOM_Remix"
+			State="JapanNavalYardBuildState_RANDOM_Remix"
+			Difficulty="EASY" />
+			
+		<SpecificUnitCap
+			Unit="JapanTechStructureEgg"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanRefineryEgg"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanBaseDefenseEgg"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanBaseDefenseAdvancedEgg"
+			Cap="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanAntiStructureShip"
+			Cap="1"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="JapanInfiltrationInfantry"
+			Cap="0"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="JapanCommandoTech1"
+			Cap="0"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="JapanScoutInfantry"
+			Cap="8"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanInfiltrationInfantry"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanLightTransportVehicle"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanAntiInfantryInfantry"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanAntiVehicleInfantry"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanAntiVehicleVehicleTech3"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanAntiStructureVehicle"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanNavyScoutShip"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanAntiVehicleShip"
+			Cap="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanAntiStructureShip"
+			Cap="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanBaseDefense"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanBaseDefenseAdvanced"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanBaseDefense"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="JapanBaseDefenseAdvanced"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			
+		<UnitModifier
+			Unit="JapanScoutInfantry"
+			OffensiveModifier="0.5"
+			DefensiveModifier="0.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiInfantryInfantry"
+			OffensiveModifier="1"
+			DefensiveModifier="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleInfantry"
+			OffensiveModifier="1"
+			DefensiveModifier="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanArcherInfantry"
+			OffensiveModifier="1.5"
+			DefensiveModifier="1.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleInfantryTech3"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanCommandoTech1"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiInfantryVehicle"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiAirVehicleTech1"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleVehicleTech1"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanSentinelVehicle"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="Centurion"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleVehicleTech3"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiStructureVehicle"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanFortressShipEgg"
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanScoutInfantry"
+			OffensiveModifier="0.5"
+			DefensiveModifier="0.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiInfantryInfantry"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleInfantry"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanArcherInfantry"
+			OffensiveModifier="2.5"
+			DefensiveModifier="2.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanInfiltrationInfantry"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleInfantryTech3"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanCommandoTech1"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiInfantryVehicle"
+			OffensiveModifier="20"
+			DefensiveModifier="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleVehicleTech1"
+			OffensiveModifier="15"
+			DefensiveModifier="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiAirVehicleTech1"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanSentinelVehicle"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="Centurion"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleVehicleTech3"
+			OffensiveModifier="25"
+			DefensiveModifier="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiStructureVehicle"
+			OffensiveModifier="25"
+			DefensiveModifier="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanNavyScoutShip"
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiAirShip"
+			OffensiveModifier="20"
+			DefensiveModifier="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiVehicleShip"
+			OffensiveModifier="25"
+			DefensiveModifier="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanAntiStructureShip"
+			OffensiveModifier="30"
+			DefensiveModifier="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="JapanFortressShipEgg"
+			OffensiveModifier="45"
+			DefensiveModifier="45"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			
+		<DefaultTacticHomeBaseCriteria
+			RequiredBaseTypes=""
+			ExcludedBaseTypes=""
+			PreferredBaseTypes=""
+			PreferredNotBaseTypes="CAPTURED"
+			SortOrder="PREFER_CLOSEST" />
+			
+		<CountAsStructureForBuildPurposesFilter
+			Rule="ANY"
+			Relationship=""
+			Alignment="NONE"
+			Include="STRUCTURE UNPACKS_INTO_BUILDING"
+			Exclude="">
+			
+			<ExcludeThing>AlliedMiner</ExcludeThing>
+			<ExcludeThing>SovietSurveyor</ExcludeThing>
+			<ExcludeThing>JapanRefineryEgg</ExcludeThing>
+			<ExcludeThing>JapanFortressShipEgg</ExcludeThing>
+		</CountAsStructureForBuildPurposesFilter>
+		
+		<InTroubleSkirmishFeedbackControl
+			OnlyIfLocalPlayerIs="ALLIES"
+			TimeoutAfterPlaying="600s"
+			TimeBetweenScans="5s"
+			TimeThatConditionsMustBeMet="10s"
+			NumberOfObjectsRecentlyLost="3"
+			TimeForNumberOfObjectLost="120s"
+			ObjectLostFilter="SkirmishAIInTroubleObjectList_ImportantStrctures"
+			MinPowerAdvantageEnemiesInMyBaseVsAllMyUnits="1.2" />
+			
+		<FeedbackEntry
+			FeedbackKey="PlanAttackBeaconPlaced"
+			EvaEvent="EmpireCoopNaomiPlanAttack"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="PlanAttackOrderComplete"
+			EvaEvent="EmpireCoopNaomiPlanAttackDone"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="TakePositionBeaconPlaced"
+			EvaEvent="EmpireCoopNaomiTakePos"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="TakePositionOrderComplete"
+			EvaEvent="EmpireCoopNaomiTakePosDone"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StrikeTargetBeaconPlaced"
+			EvaEvent="EmpireCoopNaomiStrikeThis"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StrikeTargetOrderComplete"
+			EvaEvent="EmpireCoopNaomiStrikeThisDone"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="OrderCanceled"
+			EvaEvent="EmpireCoopNaomiAutopilot"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StartGame"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNAGR1"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StartGame"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNAGR2"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StartGame"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNAGR3"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="InTrouble"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNAND1"
+			FeedbackTo="ALLIES"
+			Timeout="600s"/>
+		<FeedbackEntry
+			FeedbackKey="InTrouble"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNAND2"
+			FeedbackTo="ALLIES"
+			Timeout="600s"/>
+		<FeedbackEntry
+			FeedbackKey="InTrouble"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNAND3"
+			FeedbackTo="ALLIES"
+			Timeout="600s"/>
+		<FeedbackEntry
+			FeedbackKey="Lost"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNADE1"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="Lost"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNADE2"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="Lost"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNADE3"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="FirstSeen"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATG1"
+			FeedbackTo="ENEMIES"
+			Timeout="9999999s"/>
+		<FeedbackEntry
+			FeedbackKey="FirstSeen"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATG2"
+			FeedbackTo="ENEMIES"
+			Timeout="9999999s"/>
+		<FeedbackEntry
+			FeedbackKey="FirstSeen"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATG3"
+			FeedbackTo="ENEMIES"
+			Timeout="9999999s"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedByLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATD1"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedByLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATD2"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedByLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATD3"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATV1"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATV2"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="JNATV3"
+			FeedbackTo="ENEMIES"/>
+	</AIPersonalityDefinition>
+</AssetDeclaration>

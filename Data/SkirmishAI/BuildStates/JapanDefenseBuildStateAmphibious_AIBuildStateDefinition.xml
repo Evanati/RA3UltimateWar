@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<AIBuildStateDefinition 
-		id="JapanDefenseBuildState_Remix">
+		id="JapanDefenseBuildStateAmphibious">
 		
 		<Heuristic>
 			<ConstantHeuristic/>

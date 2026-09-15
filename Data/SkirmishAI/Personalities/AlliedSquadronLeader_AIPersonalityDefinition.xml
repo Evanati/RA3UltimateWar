@@ -2,9 +2,9 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<AIPersonalityDefinition
-		id="4AlliedBalanced"
-		PersonalityType="1AlliedBalanced"
-		PersonalityUIName="Personality:Warren"
+		id="5AlliedSquadronLeader"
+		PersonalityType="2AlliedSquadronLeader"
+		PersonalityUIName="Personality:Giles"
 		SecondsTillTargetsExpire="5"
 		DesiredExcessPowerBuffer="100"
 		BaseCompactness="0.75"
@@ -56,7 +56,7 @@
 		RedAlertProductionBuildings="2"
 		RedAlertAttackTime="15s"
 		MaxWallDestroyTimeToCountAsGoThroughWalls="10s"
-		CommanderPortrait="Warren"
+		CommanderPortrait="Giles"
 		SkirmishTimeTillGreeting="1.5s"
 		CoopMonitorUpdateTime="5s"
 		SkirmishPersonality="true"
@@ -137,103 +137,90 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Military_Supplies"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Money"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Shield"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Airborne_Force"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoRift_Rank3"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_FutureTechnology"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Ion_Cannon"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_T4Tower"
-			Weight="0%"/>
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="0%"/>
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Allied_SatelliteSweep"
+			Weight="20%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
-			Weight="30%"/>
+			Weight="30%" />
 		<PowerChoice
-			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
-			Weight="40%"/>
+			PlayerPower="PlayerTech_Allied_Airborne_Force"
+			Weight="40%" />
 		<PowerChoice
-			PlayerPower="PlayerTech_Allied_FutureTechnology"
-			Weight="50%"/>
-		<PowerChoice
-			PlayerPower="PlayerTech_Allied_Ion_Cannon"
-			Weight="100%"/>
+			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
+			Weight="50%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="100%"/>
+			Weight="100%" />
 			
 		<OpeningMove
-			Name="AlliedStandard_EASY"
+			Name="AlliedVindicatorRush_EASY"
 			Weight="100%"
-			Difficulty="EASY">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true"/>
-			</Heuristic>
-		</OpeningMove>
+			Difficulty="EASY" />
 		<OpeningMove
-			Name="AlliedIsland_EASY"
-			Weight="100%"
-			Difficulty="EASY">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false"/>
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedStandard"
+			Name="AlliedVindicatorRush"
 			Weight="100%"
 			Difficulty="MEDIUM HARD">
 			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true"/>
+				<ObjectOfTypeExistsHeuristic
+					Location="Water Land"
+					PassIfExists="false">
+					<ObjectFilter
+						Rule="ANY"
+						Relationship="ENEMIES"
+						Alignment="NONE"
+						Include=""
+						Exclude="">
+						<IncludeThing>JapanConstructionYard</IncludeThing>
+					</ObjectFilter>
+				</ObjectOfTypeExistsHeuristic>
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedBalanced_BRUTAL_New"
+			Name="AlliedSquadronLeader_BRUTAL_New"
 			Weight="100%"
 			Difficulty="MEDIUM HARD BRUTAL">
 			<Heuristic>
@@ -241,11 +228,11 @@
 					Surface="Land"
 					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true"/>
+					PathExists="true" />
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedIsland_New"
+			Name="AlliedSquadronLeader2_BRUTAL_New"
 			Weight="100%"
 			Difficulty="MEDIUM HARD BRUTAL">
 			<Heuristic>
@@ -253,331 +240,311 @@
 					Surface="Land"
 					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false"/>
+					PathExists="false" />
 			</Heuristic>
 		</OpeningMove>
 		
 		<StrategicState
 			id="ScoutAircraft"
 			State="ScoutAircraft"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="EngineerIdle"
 			State="EngineerIdle"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="JapanEggUnpacker"
 			State="JapanEggUnpacker"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HarvesterController"
 			State="HarvesterController"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="BaseDefenseController"
 			State="BaseDefenseController"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandAssault_Gather_Land"
 			State="CommandAssault_Gather_Land"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandAssault_Gather_Water"
 			State="CommandAssault_Gather_Water"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandAssault_Land"
 			State="CommandAssault_Land"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandAssault_Water"
 			State="CommandAssault_Water"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandAssault_FighterAircraft"
 			State="CommandAssault_FighterAircraft"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandAssault_BomberAircraft"
 			State="CommandAssault_BomberAircraft"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandHold_Land"
 			State="CommandHold_Land"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandHold_Water"
 			State="CommandHold_Water"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandHold_BomberAircraft"
 			State="CommandHold_BomberAircraft"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CommandHold_FighterAircraft"
 			State="CommandHold_FighterAircraft"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="Command_StrikeTarget_Land"
 			State="Command_StrikeTarget_Land"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="Command_StrikeTarget_Water"
 			State="Command_StrikeTarget_Water"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="Command_StrikeTarget_BomberAircraft"
 			State="Command_StrikeTarget_BomberAircraft"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CaptureLandHusks"
 			State="CaptureLandHusks"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AttachedBurstDroneRemoval"
 			State="AttachedBurstDroneRemoval"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedCaptureWaterHusks"
 			State="AlliedCaptureWaterHusks"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="LandDefense"
 			State="LandDefense"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="WaterDefense"
 			State="WaterDefense"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="LandDefense_MEDIUM"
 			State="LandDefense_MEDIUM"
-			Difficulty="MEDIUM"/>
+			Difficulty="MEDIUM" />
 		<StrategicState
 			id="WaterDefense_MEDIUM"
 			State="WaterDefense_MEDIUM"
-			Difficulty="MEDIUM"/>
+			Difficulty="MEDIUM" />
 		<StrategicState
 			id="LandDefense_EASY"
 			State="LandDefense_EASY"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<StrategicState
 			id="WaterDefense_EASY"
 			State="WaterDefense_EASY"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<StrategicState
 			id="LandEmergencyDefense"
 			State="LandEmergencyDefense"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="WaterEmergencyDefense"
 			State="WaterEmergencyDefense"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="LandEmergencyDefense_MEDIUM"
 			State="LandEmergencyDefense_MEDIUM"
-			Difficulty="MEDIUM"/>
+			Difficulty="MEDIUM" />
 		<StrategicState
 			id="WaterEmergencyDefense_MEDIUM"
 			State="WaterEmergencyDefense_MEDIUM"
-			Difficulty="MEDIUM"/>
+			Difficulty="MEDIUM" />
 		<StrategicState
 			id="LandEmergencyDefense_EASY"
 			State="LandEmergencyDefense_EASY"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<StrategicState
 			id="WaterEmergencyDefense_EASY"
 			State="WaterEmergencyDefense_EASY"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
+		<StrategicState
+			id="Cleanup"
+			State="Cleanup"
+			Difficulty="EASY MEDIUM HARD" />
 		<StrategicState
 			id="Cleanup_BRUTAL"
 			State="Cleanup_BRUTAL"
-			Difficulty="BRUTAL"/>
+			Difficulty="BRUTAL" />
 		<StrategicState
 			id="RetreatMCVToLand"
 			State="RetreatMCVToLand"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="RetreatMCVToWater"
 			State="RetreatMCVToWater"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="EscortMCV"
 			State="EscortMCV"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedMinerUpgExpansion_BRUTALNEW"
 			State="AlliedMinerUpgExpansion_BRUTALNEW"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CenturyBomberAttackNEW"
 			State="CenturyBomberAttackNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="BombardmentShipAttack"
 			State="BombardmentShipAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="TanyaController_NEW"
 			State="TanyaController_NEW"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedStealthDetector_New"
 			State="AlliedStealthDetector_New"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CratePickup"
 			State="CratePickup"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="FighterAircraftFlankAttack_New"
 			State="FighterAircraftFlankAttack_New"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="FighterAircraftEscort"
 			State="FighterAircraftEscort"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="FighterAircraft_MEDIUM"
 			State="FighterAircraft_MEDIUM"
-			Difficulty="EASY MEDIUM"/>
+			Difficulty="EASY MEDIUM" />
 		<StrategicState
 			id="VindicatorDefense"
 			State="VindicatorDefense"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="VindicatorAttack_New"
 			State="VindicatorAttack_New"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="VindicatorAttack_MEDIUM"
 			State="VindicatorAttack_MEDIUM"
-			Difficulty="MEDIUM"/>
+			Difficulty="MEDIUM" />
 		<StrategicState
 			id="VindicatorAttack_EASY"
 			State="VindicatorAttack_EASY"
-			Difficulty="EASY"/>
-		<StrategicState
-			id="KodiakAttack"
-			State="KodiakAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY" />
 		<StrategicState
 			id="HurricaneDefense"
 			State="HurricaneDefense"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HurricaneHarrassment"
 			State="HurricaneHarrassment"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="CenturyBomberAttack"
 			State="CenturyBomberAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedInfantryAttack"
 			State="AlliedInfantryAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedTransportAttackNew"
 			State="AlliedTransportAttackNew"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedExpansion_BRUTALNEW"
 			State="AlliedExpansion_BRUTALNEW"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedCaptureTech_EASY"
 			State="AlliedCaptureTech_EASY"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<StrategicState
 			id="AlliedCaptureTech_MEDIUM"
 			State="AlliedCaptureTech_MEDIUM"
-			Difficulty="MEDIUM"/>
+			Difficulty="MEDIUM" />
 		<StrategicState
 			id="AlliedCapturePriorityTech_HARD"
 			State="AlliedCapturePriorityTech_HARD"
-			Difficulty="HARD"/>
+			Difficulty="HARD" />
 		<StrategicState
 			id="AlliedCaptureNonPriorityTech_HARD"
 			State="AlliedCaptureNonPriorityTech_HARD"
-			Difficulty="HARD"/>
+			Difficulty="HARD" />
 		<StrategicState
 			id="AlliedCapturePriorityTech_BRUTALNEW"
 			State="AlliedCapturePriorityTech_BRUTALNEW"
-			Difficulty="BRUTAL"/>
+			Difficulty="BRUTAL" />
 		<StrategicState
 			id="AlliedCaptureNonPriorityTech_BRUTALNEW"
 			State="AlliedCaptureNonPriorityTech_BRUTALNEW"
-			Difficulty="BRUTAL"/>
+			Difficulty="BRUTAL" />
 		<StrategicState
 			id="AlliedCaptureVehicleHealTech"
 			State="AlliedCaptureVehicleHealTech"
-			Difficulty="HARD BRUTAL"/>
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
-			id="BalancedDefense"
-			State="BalancedDefense"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			id="SquardonLeader_Attack_LandNew"
+			State="SquardonLeader_Attack_LandNew"
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
-			id="BalancedCleanup"
-			State="BalancedCleanup"
-			Difficulty="EASY MEDIUM HARD"/>
+			id="SquardonLeader_Attack_Land_MEDIUM"
+			State="SquardonLeader_Attack_Land_MEDIUM"
+			Difficulty="MEDIUM" />
 		<StrategicState
-			id="AlliedScout"
-			State="AlliedScout"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			id="SquardonLeader_Attack_WaterNew"
+			State="SquardonLeader_Attack_WaterNew"
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
-			id="ACVHarrassmentNew"
-			State="ACVHarrassmentNew"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="BalancedAttackGroundNew"
-			State="BalancedAttackGroundNew"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="BalancedAttackWaterNew"
-			State="BalancedAttackWaterNew"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="BalancedAttackOverwhelmNew"
-			State="BalancedAttackOverwhelmNew"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="BalancedAttackGround_MEDIUM"
-			State="BalancedAttackGround_MEDIUM"
-			Difficulty="MEDIUM"/>
-		<StrategicState
-			id="BalancedAttackWater_MEDIUM"
-			State="BalancedAttackWater_MEDIUM"
-			Difficulty="MEDIUM"/>
-		<StrategicState
-			id="BalancedAttackOverwhelm_MEDIUM"
-			State="BalancedAttackOverwhelm_MEDIUM"
-			Difficulty="MEDIUM"/>
+			id="SquardonLeader_Attack_Water_MEDIUM"
+			State="SquardonLeader_Attack_Water_MEDIUM"
+			Difficulty="MEDIUM" />
 		<StrategicState
 			id="BalancedAttackGround_EASY"
 			State="BalancedAttackGround_EASY"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<StrategicState
 			id="BalancedAttackWater_EASY"
 			State="BalancedAttackWater_EASY"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
+		<StrategicState
+			id="SquardonLeader_KodiakAttack"
+			State="SquardonLeader_KodiakAttack"
+			Difficulty="HARD BRUTAL" />
 			
 		<BudgetState
 			id="OpeningMoveBudget_New"
 			State="OpeningMoveBudget_New"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
 			id="CoopBudget_New"
 			State="CoopBudget_New"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
 			id="DefenseBudget_New"
 			State="DefenseBudget_New"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
 			id="HeavyDefenseBudget_New"
 			State="HeavyDefenseBudget_New"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
 			id="AlliedDefenseBuildStateAmphibious"
@@ -590,418 +557,418 @@
 		<BuildState
 			id="AlliedNeededUnits_Remix"
 			State="AlliedNeededUnits_Remix"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedCraneBuildState_RemixNEW"
 			State="AlliedCraneBuildState_RemixNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedNavalYardBuildStateNEW"
 			State="AlliedNavalYardBuildStateNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedNonPathDependentStructureBuildState"
 			State="AlliedNonPathDependentStructureBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedTechBuildState_RemixNew"
 			State="AlliedTechBuildState_RemixNew"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedLandUnitBuildState_Remix"
 			State="AlliedLandUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedWaterUnitBuildState"
 			State="AlliedWaterUnitBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedAmphibiousUnitBuildState_Remix"
 			State="AlliedAmphibiousUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedAntiInfantryOnlyBuildState"
 			State="AlliedAntiInfantryOnlyBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedAntiAirOnlyBuildState"
 			State="AlliedAntiAirOnlyBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedAntiGroundAircraftBuildState_Remix"
 			State="AlliedAntiGroundAircraftBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedBarracksBuildState_RANDOM_Remix"
 			State="AlliedBarracksBuildState_RANDOM_Remix"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<BuildState
 			id="AlliedWarFactoryBuildState_RANDOM_Remix"
 			State="AlliedWarFactoryBuildState_RANDOM_Remix"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<BuildState
 			id="AlliedNavalYardBuildState_RANDOM"
 			State="AlliedNavalYardBuildState_RANDOM"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<BuildState
 			id="AlliedAirfieldBuildState_RANDOM_Remix"
 			State="AlliedAirfieldBuildState_RANDOM_Remix"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 			
 		<SpecificUnitCap
 			Unit="AlliedFighterAircraft"
 			Cap="0"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<SpecificUnitCap
 			Unit="AlliedAntiGroundAircraft"
 			Cap="1"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<SpecificUnitCap
 			Unit="AlliedSupportAircraft"
 			Cap="2"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<SpecificUnitCap
 			Unit="AlliedBomberAircraft"
 			Cap="1"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<SpecificUnitCap
 			Unit="AlliedAntiStructureShip"
 			Cap="1"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<SpecificUnitCap
 			Unit="AlliedCommandoTech1"
 			Cap="0"
-			Difficulty="EASY"/>
+			Difficulty="EASY" />
 		<SpecificUnitCap
 			Unit="AlliedFighterAircraft"
 			Cap="2"
-			Difficulty="MEDIUM"/>
+			Difficulty="MEDIUM" />
 		<SpecificUnitCap
 			Unit="AlliedScoutInfantry"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedSupportAircraft"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiInfantryInfantry"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedGrenadeInfantry"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiVehicleInfantry"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiVehicleVehicleTech1"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiAirVehicleTech1"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiVehicleVehicleTech3"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiStructureVehicle"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiNavalScout"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiAirShip"
 			Cap="15"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedAntiStructureShip"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="Paladin"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedArtilleryVehicle"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedBaseDefenseMGT"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedBaseDefenseMTT"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedBaseDefenseAdvanced"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<UnitModifier
 			Unit="AlliedScoutInfantry"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiInfantryInfantry"
 			OffensiveModifier="1"
 			DefensiveModifier="1"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedGrenadeInfantry"
 			OffensiveModifier="1"
 			DefensiveModifier="1"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiVehicleInfantry"
 			OffensiveModifier="1"
 			DefensiveModifier="1"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedLegionnaireInfantry"
 			OffensiveModifier="2"
 			DefensiveModifier="2"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedCommandoTech1"
 			OffensiveModifier="5"
 			DefensiveModifier="5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiInfantryVehicle_Ground"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiAirVehicleTech1"
 			OffensiveModifier="1"
 			DefensiveModifier="1"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiVehicleVehicleTech1"
 			OffensiveModifier="5"
 			DefensiveModifier="5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiVehicleVehicleTech3"
 			OffensiveModifier="8"
 			DefensiveModifier="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiStructureVehicle"
 			OffensiveModifier="8"
 			DefensiveModifier="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedArtilleryVehicle"
 			OffensiveModifier="8"
 			DefensiveModifier="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedFutureTank"
 			OffensiveModifier="8"
 			DefensiveModifier="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedFutureTankFTSeed"
 			OffensiveModifier="8"
 			DefensiveModifier="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Kodiak"
 			OffensiveModifier="15"
 			DefensiveModifier="15"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Titan"
 			OffensiveModifier="7"
 			DefensiveModifier="7"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiInfantryVehicle"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiAirShip"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedFighterAircraft"
 			OffensiveModifier="3"
 			DefensiveModifier="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedBomberAircraft"
 			OffensiveModifier="5"
 			DefensiveModifier="5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Paladin"
 			OffensiveModifier="3"
 			DefensiveModifier="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Hurricane"
 			OffensiveModifier="2"
 			DefensiveModifier="2"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedScoutInfantry"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiInfantryInfantry"
 			OffensiveModifier="2"
 			DefensiveModifier="2"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiVehicleInfantry"
-			OffensiveModifier="10"
-			DefensiveModifier="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<UnitModifier
-			Unit="AlliedLegionnaireInfantry"
-			OffensiveModifier="2"
-			DefensiveModifier="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="2.5"
+			DefensiveModifier="2.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedGrenadeInfantry"
-			OffensiveModifier="10"
-			DefensiveModifier="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="2.5"
+			DefensiveModifier="2.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
-			Unit="AlliedCommandoTech1"
-			OffensiveModifier="20"
-			DefensiveModifier="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Unit="AlliedLegionnaireInfantry"
+			OffensiveModifier="25"
+			DefensiveModifier="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedInfiltrationInfantry"
-			OffensiveModifier="10"
-			DefensiveModifier="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="1"
+			DefensiveModifier="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="AlliedCommandoTech1"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiInfantryVehicle_Ground"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiAirVehicleTech1"
-			OffensiveModifier="10"
-			DefensiveModifier="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiVehicleVehicleTech1"
-			OffensiveModifier="10"
-			DefensiveModifier="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Titan"
-			OffensiveModifier="25"
-			DefensiveModifier="25"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiVehicleVehicleTech3"
 			OffensiveModifier="20"
 			DefensiveModifier="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiStructureVehicle"
-			OffensiveModifier="5"
-			DefensiveModifier="5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="4"
+			DefensiveModifier="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedArtilleryVehicle"
-			OffensiveModifier="30"
-			DefensiveModifier="30"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="20"
+			DefensiveModifier="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedFutureTank"
 			OffensiveModifier="30"
 			DefensiveModifier="30"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedFutureTankFTSeed"
 			OffensiveModifier="30"
 			DefensiveModifier="30"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiGroundAircraft"
-			OffensiveModifier="4"
-			DefensiveModifier="4"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedFighterAircraft"
-			OffensiveModifier="4"
-			DefensiveModifier="4"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Hurricane"
-			OffensiveModifier="3"
-			DefensiveModifier="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="20"
+			DefensiveModifier="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedSupportAircraft"
 			OffensiveModifier="10"
 			DefensiveModifier="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Paladin"
-			OffensiveModifier="3"
-			DefensiveModifier="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="20"
+			DefensiveModifier="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedBomberAircraft"
-			OffensiveModifier="15"
-			DefensiveModifier="15"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="25"
+			DefensiveModifier="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="Kodiak"
-			OffensiveModifier="35"
-			DefensiveModifier="35"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="40"
+			DefensiveModifier="40"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiNavalScout"
 			OffensiveModifier="2"
 			DefensiveModifier="2"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiInfantryVehicle"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiAirShip"
-			OffensiveModifier="3"
-			DefensiveModifier="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiNavyShipTech1"
-			OffensiveModifier="15"
-			DefensiveModifier="15"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedAntiStructureShip"
-			OffensiveModifier="20"
-			DefensiveModifier="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			OffensiveModifier="15"
+			DefensiveModifier="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<DefaultTacticHomeBaseCriteria
 			RequiredBaseTypes=""
 			ExcludedBaseTypes=""
 			PreferredBaseTypes=""
 			PreferredNotBaseTypes="CAPTURED"
-			SortOrder="PREFER_CLOSEST"/>
+			SortOrder="PREFER_CLOSEST" />
 			
 		<CountAsStructureForBuildPurposesFilter
 			Rule="ANY"
@@ -1024,53 +991,53 @@
 			NumberOfObjectsRecentlyLost="3"
 			TimeForNumberOfObjectLost="120s"
 			ObjectLostFilter="SkirmishAIInTroubleObjectList_ImportantStrctures"
-			MinPowerAdvantageEnemiesInMyBaseVsAllMyUnits="1.2"/>
+			MinPowerAdvantageEnemiesInMyBaseVsAllMyUnits="1.2" />
 			
 		<FeedbackEntry
 			FeedbackKey="PlanAttackBeaconPlaced"
-			EvaEvent="AlliedCoopWarrenPlanAttack"
+			EvaEvent="AlliedCoopGilesPlanAttack"
 			Sound=""
 			Text=""
 			Video=""
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="PlanAttackOrderComplete"
-			EvaEvent="AlliedCoopWarrenPlanAttackDone"
+			EvaEvent="AlliedCoopGilesPlanAttackDone"
 			Sound=""
 			Text=""
 			Video=""
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="TakePositionBeaconPlaced"
-			EvaEvent="AlliedCoopWarrenTakePos"
+			EvaEvent="AlliedCoopGilesTakePos"
 			Sound=""
 			Text=""
 			Video=""
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="TakePositionOrderComplete"
-			EvaEvent="AlliedCoopWarrenTakePosDone"
+			EvaEvent="AlliedCoopGilesTakePosDone"
 			Sound=""
 			Text=""
 			Video=""
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="StrikeTargetBeaconPlaced"
-			EvaEvent="AlliedCoopWarrenStrikeThis"
+			EvaEvent="AlliedCoopGilesStrikeThis"
 			Sound=""
 			Text=""
 			Video=""
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="StrikeTargetOrderComplete"
-			EvaEvent="AlliedCoopWarrenStrikeThisDone"
+			EvaEvent="AlliedCoopGilesStrikeThisDone"
 			Sound=""
 			Text=""
 			Video=""
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="OrderCanceled"
-			EvaEvent="AlliedCoopWarrenAutopilot"
+			EvaEvent="AlliedCoopGilesAutopilot"
 			Sound=""
 			Text=""
 			Video=""
@@ -1080,28 +1047,28 @@
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWAGR1"
+			Video="AGIGR1"
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="StartGame"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWAGR2"
+			Video="AGIGR2"
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="StartGame"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWAGR3"
+			Video="AGIGR3"
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="InTrouble"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWAND1"
+			Video="AGIND1"
 			FeedbackTo="ALLIES"
 			Timeout="600s"/>
 		<FeedbackEntry
@@ -1109,7 +1076,7 @@
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWAND2"
+			Video="AGIND2"
 			FeedbackTo="ALLIES"
 			Timeout="600s"/>
 		<FeedbackEntry
@@ -1117,7 +1084,7 @@
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWAND3"
+			Video="AGIND3"
 			FeedbackTo="ALLIES"
 			Timeout="600s"/>
 		<FeedbackEntry
@@ -1125,28 +1092,28 @@
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWADE1"
+			Video="AGIDE1"
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="Lost"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWADE2"
+			Video="AGIDE2"
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="Lost"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWADE3"
+			Video="AGIDE3"
 			FeedbackTo="ALLIES"/>
 		<FeedbackEntry
 			FeedbackKey="FirstSeen"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATG1"
+			Video="AGITG1"
 			FeedbackTo="ENEMIES"
 			Timeout="9999999s"/>
 		<FeedbackEntry
@@ -1154,7 +1121,7 @@
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATG2"
+			Video="AGITG2"
 			FeedbackTo="ENEMIES"
 			Timeout="9999999s"/>
 		<FeedbackEntry
@@ -1162,7 +1129,7 @@
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATG3"
+			Video="AGITG3"
 			FeedbackTo="ENEMIES"
 			Timeout="9999999s"/>
 		<FeedbackEntry
@@ -1170,42 +1137,42 @@
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATD1"
+			Video="AGITD1"
 			FeedbackTo="ENEMIES"/>
 		<FeedbackEntry
 			FeedbackKey="DefeatedByLocalPlayer"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATD2"
+			Video="AGITD2"
 			FeedbackTo="ENEMIES"/>
 		<FeedbackEntry
 			FeedbackKey="DefeatedByLocalPlayer"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATD3"
+			Video="AGITD3"
 			FeedbackTo="ENEMIES"/>
 		<FeedbackEntry
 			FeedbackKey="DefeatedLocalPlayer"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATV1"
+			Video="AGITV1"
 			FeedbackTo="ENEMIES"/>
 		<FeedbackEntry
 			FeedbackKey="DefeatedLocalPlayer"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATV2"
+			Video="AGITV2"
 			FeedbackTo="ENEMIES"/>
 		<FeedbackEntry
 			FeedbackKey="DefeatedLocalPlayer"
 			EvaEvent=""
 			Sound=""
 			Text=""
-			Video="AWATV3"
+			Video="AGITV3"
 			FeedbackTo="ENEMIES"/>
 	</AIPersonalityDefinition>
 </AssetDeclaration>

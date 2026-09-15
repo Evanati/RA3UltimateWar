@@ -6,10 +6,13 @@
     <Includes>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseMulti_LogicCommand.xml"/>
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseMGT_LogicCommand.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedBaseDefenseMultiCommandSet_LogicCommandSet.xml"/>
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseMTT_LogicCommand.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedBaseDefenseMGTCommandSet_LogicCommandSet.xml"/>
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedConstructionYardCommandSetBase_LogicCommandSet.xml"/>
@@ -19,5 +22,14 @@
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedConstructionYardCommandSetLevel2_LogicCommandSet.xml"/>	
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedCraneCommandSetBase_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedCraneCommandSet_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedCraneCommandSetLevel2_LogicCommandSet.xml"/>	
     </Includes>
 </AssetDeclaration>

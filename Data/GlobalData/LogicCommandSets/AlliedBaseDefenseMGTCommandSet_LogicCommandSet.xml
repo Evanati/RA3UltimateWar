@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<LogicCommandSet
-		id="AlliedBaseDefenseMultiCommandSet">
+		id="AlliedBaseDefenseMGTCommandSet">
 		<Cmd>Command_AlliedBaseDefenseEvacuate</Cmd>
 	</LogicCommandSet>
 </AssetDeclaration>

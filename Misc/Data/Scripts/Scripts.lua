@@ -398,7 +398,7 @@ function OnAlliedInfantryFightingCreated(self)
 	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
 end
 
-function OnAlliedBaseDefenseMultiCreated(self)
+function OnAlliedBaseDefenseMGTCreated(self)
 
 	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
@@ -422,17 +422,12 @@ function OnAlliedBaseDefenseMultiCreated(self)
 	
 end
 
-function OnAlliedBaseDefenseCreated(self)
+function OnAlliedBaseDefenseMTTCreated(self)
 
-	ObjectHideSubObjectPermanently( self, "TURRET_Upg", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead01", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead02", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead03", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead04", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead05", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead06", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_MissileLauncher", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
 	
-	ObjectGrantUpgrade(self,"Upgrade_AlliedBaseDefenseTech2")
+	ObjectGrantUpgrade( self, "Upgrade_MissileLauncher" )
 	
 end
 

@@ -2,8 +2,8 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<LogicCommand
-		id="Command_ConstructAlliedBaseDefenseMulti"
+		id="Command_ConstructAlliedBaseDefenseMGT"
 		Type="CONSTRUCTION_YARD_CONSTRUCT">
-		<Object>AlliedBaseDefenseMulti</Object>
+		<Object>AlliedBaseDefenseMGT</Object>
 	</LogicCommand>	
 </AssetDeclaration>

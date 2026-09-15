@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <AIStrategicStateDefinition
-    id="JapanCaptureNonPriorityTech_BRUTALNEW"
+    id="AlliedCaptureNonPriorityTech_BRUTALNEW"
     MaxTargets="1">
 	
     <Heuristic>
@@ -15,22 +15,22 @@
     </Heuristic>
 	
 	<TargetHeuristic 
+		TargetHeuristic="ClosestAirportTechHeuristic" 
+		Priority="7"/>
+	<TargetHeuristic 
 		TargetHeuristic="ClosestShipYardTechHeuristic" 
-		Priority="5"/>
+		Priority="6"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestGarageTechHeuristic" 
-		Priority="4"/>
+		Priority="5"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestHospitalTechHeuristic" 
 		Priority="4"/>
 	<TargetHeuristic 
-		TargetHeuristic="ClosestAirportTechHeuristic" 
+		TargetHeuristic="ClosestControlTechHeuristic" 
 		Priority="3"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestRadarTechHeuristic" 
-		Priority="3"/>
-	<TargetHeuristic 
-		TargetHeuristic="ClosestControlTechHeuristic" 
 		Priority="2"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestTechBuildingHeuristic" 
@@ -63,7 +63,7 @@
 			MicroManager="CaptureAnythingMicroManager"
 			SortByDistance="true">
 			<CreateUnits 
-				UnitName="JapanEngineer" 
+				UnitName="AlliedEngineer" 
 				MinUnits="1" 
 				MaxUnits="1"/>
       </TeamTemplate>

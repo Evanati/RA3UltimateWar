@@ -522,13 +522,13 @@
     </Events>
 <!-- RA3 EVENTS - CnC3 BELOW -->
 	
-	<EventList Name="AlliedBaseDefenseMultiFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseMultiCreated" DebugSingleStep="false"/>	
+	<EventList Name="AlliedBaseDefenseMGTFunctions" Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseMGTCreated" DebugSingleStep="false"/>	
 		<EventHandler EventName="BuildingDone"	ScriptFunctionName="OnBCStealthDetect" DebugSingleStep="false"/>		
 	</EventList>
 	
-	<EventList Name="AlliedBaseDefenseFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseCreated" DebugSingleStep="false"/>	
+	<EventList Name="AlliedBaseDefenseMTTFunctions" Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseMTTCreated" DebugSingleStep="false"/>	
 		<EventHandler EventName="BuildingDone"	ScriptFunctionName="OnBCStealthDetect" DebugSingleStep="false"/>		
 	</EventList>
 

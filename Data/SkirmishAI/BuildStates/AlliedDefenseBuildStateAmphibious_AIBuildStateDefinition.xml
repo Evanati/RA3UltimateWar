@@ -9,7 +9,7 @@
 		</Heuristic>
 	
 		<BuildEntry
-			Build="AlliedBaseDefenseMulti"
+			Build="AlliedBaseDefenseMGT"
 			Heuristic="BEST_UNIT_EXPECTED"/>
 	
 		<BuildEntry

@@ -16,16 +16,16 @@
 	
 	<TargetHeuristic 
 		TargetHeuristic="ClosestGarageTechHeuristic" 
-		Priority="5"/>
+		Priority="7"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestAirportTechHeuristic" 
-		Priority="4"/>
+		Priority="6"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestShipYardTechHeuristic" 
-		Priority="4"/>
+		Priority="5"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestHospitalTechHeuristic" 
-		Priority="3"/>
+		Priority="4"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestRadarTechHeuristic" 
 		Priority="3"/>
