@@ -6,6 +6,9 @@
     <Includes>
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/AlliedBalanced_AIPersonalityDefinition.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedCapturePriorityTech_AIStrategicStateDefinition.xml"/>
 		<Include 
 			type="all" 
@@ -28,6 +31,12 @@
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedDefenseBuildState_Remix_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedDefenseBuildStateAmphibious_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedDefenseBuildStateWaterOnly_AIBuildStateDefinition.xml"/>
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/JapanDefenseBuildState_AIBuildStateDefinition.xml"/>

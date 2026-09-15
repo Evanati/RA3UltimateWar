@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBuildStateDefinition
+		id="AlliedDefenseBuildStateWaterOnly">
+	
+		<Heuristic>
+			<CanBuildBuildingsOnSurfaceHeuristic
+				Surfaces="WATER DEEP_WATER"
+				MinPlacementGridCells="0"
+				MaxPlacementGridCells="0"/>
+		</Heuristic>
+	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="BEST_UNIT_EXPECTED"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>
