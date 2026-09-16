@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<LogicCommandSet
-		id="AlliedCraneCommandSetBase">
+		id="AlliedNewCraneCommandSetBase">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
 		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>

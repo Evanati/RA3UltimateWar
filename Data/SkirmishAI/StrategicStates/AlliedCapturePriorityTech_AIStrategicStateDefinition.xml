@@ -16,13 +16,10 @@
 	
     <TargetHeuristic 
 		TargetHeuristic="ClosestMoneyTechHeuristic" 
-		Priority="10"/>
+		Priority="2"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestVeterancyTechHeuristic" 
-		Priority="10"/>
-	<TargetHeuristic 
-		TargetHeuristic="ClosestDefenseTechHeuristic" 
-		Priority="10"/>
+		Priority="1"/>
 	<Tactic 
 		id="Engineer" 
 		Tactic="Engineer" 

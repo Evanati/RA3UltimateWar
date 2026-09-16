@@ -15,6 +15,9 @@
     </Heuristic>
 	
 	<TargetHeuristic 
+		TargetHeuristic="ClosestDefenseTechHeuristic" 
+		Priority="8"/>
+	<TargetHeuristic 
 		TargetHeuristic="ClosestGarageTechHeuristic" 
 		Priority="7"/>
 	<TargetHeuristic 

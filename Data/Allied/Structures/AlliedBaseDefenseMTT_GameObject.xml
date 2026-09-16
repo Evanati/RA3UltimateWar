@@ -55,9 +55,8 @@
 			BaseBuildingLocation="DEFENSE" >
 			<ConstructionBaseSelectionCriteria
 				ExcludedBaseTypes="NO_BUILD_RADIUS"
-				PreferredNotBaseTypes="LAND_CENTERED"
-				PreferredBaseTypes="POINT_CENTERED ENEMIES_IN_BASE UNDER_ATTACK"
-				SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+				PreferredBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+				SortOrder="PREFER_MOST_RECENTLY_ATTACKED" />
 		</SkirmishAIInformation>
 		<Draws>
 			<!-- DRAW GUN -->

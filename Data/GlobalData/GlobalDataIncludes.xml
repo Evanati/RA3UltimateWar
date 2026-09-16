@@ -10,6 +10,7 @@
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseMTT_LogicCommand.xml"/>
+			
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedBaseDefenseMGTCommandSet_LogicCommandSet.xml"/>
@@ -31,5 +32,23 @@
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedCraneCommandSetLevel2_LogicCommandSet.xml"/>	
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/JapanNavalYardCommandSetBase_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/JapanNavalYardCommandSet_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/JapanNavalYardCommandSetTech2_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/JapanWarFactoryCommandSetBase_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/JapanWarFactoryCommandSet_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/JapanWarFactoryCommandSetTech2_LogicCommandSet.xml"/>
     </Includes>
 </AssetDeclaration>
