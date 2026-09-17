@@ -14,6 +14,7 @@
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:SageXml/BaseObjects/BaseStructure.xml" />
 	</Includes>
+	
 	<GameObject
 		id="AlliedBaseDefenseMGT"
 		inheritFrom="BaseStructure"

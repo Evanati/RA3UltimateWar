@@ -444,7 +444,7 @@ function OnAlliedBaseDefenseMTTCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
 	ObjectHideSubObjectPermanently( self, "Tanya", true )
 	
-	ObjectGrantUpgrade( self, "Upgrade_MissileLauncher" )
+	ObjectGrantUpgrade( self, "Uprade_IFV_MissleTrooper" )
 	
 end
 

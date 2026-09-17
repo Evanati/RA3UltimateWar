@@ -16,7 +16,10 @@
 	
 	<TargetHeuristic 
 		TargetHeuristic="ClosestDefenseTechHeuristic" 
-		Priority="8"/>
+		Priority="7"/>
+	<TargetHeuristic 
+		TargetHeuristic="ClosestVeterancyTechHeuristic" 
+		Priority="7"/>
 	<TargetHeuristic 
 		TargetHeuristic="ClosestAirportTechHeuristic" 
 		Priority="7"/>

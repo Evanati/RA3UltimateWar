@@ -5,9 +5,10 @@
 		id="AlliedDefenseBuildStateWaterOnly">
 	
 		<Heuristic>
-			<OpeningMoveHeuristic Complete="true"/>
+			<ConstantHeuristic
+				Weight="2.0" />
 			<CanBuildBuildingsOnSurfaceHeuristic
-					 Surfaces="WATER DEEP_WATER"/>
+				Surfaces="WATER DEEP_WATER"/>
 		</Heuristic>
 			
 		<BuildEntry

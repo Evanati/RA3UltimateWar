@@ -5,7 +5,8 @@
 		id="AlliedDefenseBuildStateAmphibious">
 	
 		<Heuristic>
-			<ConstantHeuristic/>
+			<ConstantHeuristic
+				Weight="1.0" />
 		</Heuristic>
 	
 		<BuildEntry

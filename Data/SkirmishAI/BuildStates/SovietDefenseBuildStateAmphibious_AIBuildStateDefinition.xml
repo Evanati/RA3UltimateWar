@@ -10,18 +10,18 @@
 		
 		<BuildEntry 
 			Build="SovietBaseDefenseGround" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAir" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAdvanced" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 		
 		<BuildEntry 
 			Build="SovietNewTower" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>
