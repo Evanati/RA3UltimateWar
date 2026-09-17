@@ -6,22 +6,64 @@
     <Includes>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/AlliedBalanced_AIPersonalityDefinition.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/AlliedCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/AlliedSpecialForces_AIPersonalityDefinition.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/JapanCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/AlliedSquadronLeader_AIPersonalityDefinition.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/JapanCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/JapanBalanced_AIPersonalityDefinition.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/SovietCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/JapanFleetCommand_AIPersonalityDefinition.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/States/SovietCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/JapanMechaWarfare_AIPersonalityDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/SovietAirMarshall_AIPersonalityDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/SovietBalanced_AIPersonalityDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/Personalities/SovietShockSpecialist_AIPersonalityDefinition.xml"/>
+			
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/JapanCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/JapanCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/SovietCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/SovietCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+			
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedDefenseBuildStateAmphibious_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedDefenseBuildStateWaterOnly_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/JapanDefenseBuildStateAmphibious_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/SovietDefenseBuildStateAmphibious_AIBuildStateDefinition.xml"/>
+			
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/TargetingHeuristics/ClosestPriorityTech_AITargetingHeuristic.xml"/>

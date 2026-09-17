@@ -316,7 +316,7 @@
 		<Nuggets>
 			<DamageNugget
 				Damage="210.0"
-				Radius="150.0"
+				Radius="50.0"
 				DamageType="EXPLOSIVE"
 				DeathType="EXPLODED"
 			/>

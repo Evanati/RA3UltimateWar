@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIPersonalityDefinition
+		id="4SovietBalanced"
+		PersonalityType="1SovietBalanced"
+		PersonalityUIName="Personality:Oleg"
+		SecondsTillTargetsExpire="5"
+		DesiredExcessPowerBuffer="100"
+		BaseCompactness="0.75"
+		DefaultThreatFindRadius="10000"
+		UnitBuilderCostEffectivenessWeight="1"
+		UnitBuilderMoneyVersusTimePreference="0.5"
+		UnitBuilderOverallOffensivePreference="100%"
+		UnitBuilderOverallDefensivePreference="25%"
+		UnitBuilderEnemyTowerWeight="100%"
+		UnitBuilderEnemyNearbyDistance="800"
+		UnitBuilderEnemyNearbyMultiplier="4"
+		BuildTechEfficiencyThreshold="1"
+		BuildTechMinPowerAdvantage="0.1"
+		BuildExtraFactoryMinTime="240s"
+		ResourceNodeSearchRadius="700"
+		ResourceNodeValueRemainingForExpansion="80000"
+		RefineryPlacementStartDistanceDelta="-30"
+		RefineryPlacementIncreaseTickAmount="30"
+		RefineryPlacementNumberOfIncreaseTicksBeforeGivingUp="15"
+		ReactiveDefenseRadius="1000"
+		RepairBuildingsAtDifficulty="MEDIUM HARD BRUTAL"
+		UsePlayerPowersAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleNoPowerAtDifficulty=""
+		EmergencyManagerHandleNoIncomeAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleNoConyardAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleUnderAttackAtDifficulty="EASY MEDIUM HARD BRUTAL"
+		EmergencyManagerHandleConyardInDangerAtDifficulty="MEDIUM HARD BRUTAL"
+		ConyardInDangerEmergencyUnderAttackTime="5s"
+		ConyardInDangerEmergencyHealthPercent="70%"
+		ConyardInDangerEmergencyEngineerDistance="175"
+		EnemySortingBrutalDifficulty="NearestFirst_BreakTies"
+		EnemySortingHardDifficulty="NearestFirst_BreakTies"
+		EnemySortingMediumDifficulty="Flat"
+		EnemySortingEasyDifficulty="StrongestFirst_AllowTies"
+		EnemyResortingTime="15s"
+		StructureSaveChanceEasy="0"
+		StructureSaveChanceMedium="0"
+		StructureSaveChanceHard="0"
+		BaseBuilderKeepUnderAttackFlagOnTime="4s"
+		BaseBuilderUpdateUnderAttackTime="0.2s"
+		BaseBuilderUpdateEnemiesInBaseTime="1s"
+		MinHarvesters="0"
+		MaxStrategicTargets="32"
+		AssaultBeaconRadius="250"
+		HoldObjectBeaconRadius="250"
+		HoldPositionBeaconRadius="250"
+		RedAlertPowerAdvantage="0.5"
+		RedAlertIncome="50"
+		RedAlertProductionBuildings="2"
+		RedAlertAttackTime="15s"
+		MaxWallDestroyTimeToCountAsGoThroughWalls="10s"
+		CommanderPortrait="Oleg"
+		SkirmishTimeTillGreeting="1.5s"
+		CoopMonitorUpdateTime="5s"
+		SkirmishPersonality="true"
+		CoopPersonality="true"
+		CleanupRefineries="false"
+		CanBuildInAlliedBuildRadii="false">
+		
+		<Side>Soviet</Side>
+		
+		<ResourceMultiplierCheat
+			Percentage="100%"
+			Difficulty="EASY"/>
+		<ResourceMultiplierCheat
+			Percentage="200%"
+			Difficulty="MEDIUM"/>
+		<ResourceMultiplierCheat
+			Percentage="300%"
+			Difficulty="HARD"/>
+		<ResourceMultiplierCheat
+			Percentage="400%"
+			Difficulty="BRUTAL"/>
+			
+		<StrategicDirectiveFeedback
+			StrategicDirective="Normal"
+			Event="Begin"
+			FeedbackKey="PlanAttackBeaconPlaced"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Normal"
+			Event="Complete"
+			FeedbackKey="PlanAttackOrderComplete"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Normal"
+			Event="Cancel"
+			FeedbackKey="OrderCanceled"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Assault"
+			Event="Begin"
+			FeedbackKey="TakePositionBeaconPlaced"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Assault"
+			Event="Complete"
+			FeedbackKey="TakePositionOrderComplete"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="Assault"
+			Event="Cancel"
+			FeedbackKey="OrderCanceled"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="HoldPosition"
+			Event="Begin"
+			FeedbackKey="StrikeTargetBeaconPlaced"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="HoldPosition"
+			Event="Complete"
+			FeedbackKey="StrikeTargetOrderComplete"/>
+		<StrategicDirectiveFeedback
+			StrategicDirective="HoldPosition"
+			Event="Cancel"
+			FeedbackKey="OrderCanceled"/>
+			
+		<SkirmishGameEventFeedback
+			Event="StartGame"
+			FeedbackKey="StartGame"/>
+		<SkirmishGameEventFeedback
+			Event="InTrouble"
+			FeedbackKey="InTrouble"/>
+		<SkirmishGameEventFeedback
+			Event="FirstSeen"
+			FeedbackKey="FirstSeen"/>
+		<SkirmishGameEventFeedback
+			Event="DefeatedLocalPlayer"
+			FeedbackKey="DefeatedLocalPlayer"/>
+		<SkirmishGameEventFeedback
+			Event="DefeatedByLocalPlayer"
+			FeedbackKey="DefeatedByLocalPlayer"/>
+		<SkirmishGameEventFeedback
+			Event="Lost"
+			FeedbackKey="Lost"/>
+			
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_DropBunker"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_Battlefield_Officer"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_Flame_Fuel"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_ProductionKickbacks"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_MineField"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_DesolatorBomb_Rank1"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_CrushPuppies"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_Tesla_OverLoad"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_ProductionBonus_Soviet"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_Air_Marshal"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_OrbitalRefuse_Rank3"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_T4Tower"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_IronFortress"
+			Weight="0%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_DropBunker"
+			Weight="20%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
+			Weight="20%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
+			Weight="40%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_OrbitalRefuse_Rank3"
+			Weight="100%" />
+		<PowerChoice
+			PlayerPower="PlayerTech_Soviet_IronFortress"
+			Weight="100%" />
+			
+		<OpeningMove
+			Name="SovietStandard_EASY"
+			Weight="100%"
+			Difficulty="EASY">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Land"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="true" />
+			</Heuristic>
+		</OpeningMove>
+		<OpeningMove
+			Name="SovietIsland_EASY"
+			Weight="100%"
+			Difficulty="EASY">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Land"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="false" />
+			</Heuristic>
+		</OpeningMove>
+		<OpeningMove
+			Name="SovietStandard"
+			Weight="100%"
+			Difficulty="MEDIUM HARD">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Land"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="true" />
+			</Heuristic>
+		</OpeningMove>
+		<OpeningMove
+			Name="SovietStandard_BRUTAL_New"
+			Weight="100%"
+			Difficulty="BRUTAL">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Land"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="true" />
+			</Heuristic>
+		</OpeningMove>
+		<OpeningMove
+			Name="SovietIsland_New"
+			Weight="100%"
+			Difficulty="MEDIUM HARD BRUTAL">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Land"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="false" />
+			</Heuristic>
+		</OpeningMove>
+		
+		<StrategicState
+			id="ScoutAircraft"
+			State="ScoutAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="EngineerIdle"
+			State="EngineerIdle"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanEggUnpacker"
+			State="JapanEggUnpacker"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HarvesterController"
+			State="HarvesterController"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="BaseDefenseController"
+			State="BaseDefenseController"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Gather_Land"
+			State="CommandAssault_Gather_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Gather_Water"
+			State="CommandAssault_Gather_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Land"
+			State="CommandAssault_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_Water"
+			State="CommandAssault_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_FighterAircraft"
+			State="CommandAssault_FighterAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandAssault_BomberAircraft"
+			State="CommandAssault_BomberAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_Land"
+			State="CommandHold_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_Water"
+			State="CommandHold_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_BomberAircraft"
+			State="CommandHold_BomberAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandHold_FighterAircraft"
+			State="CommandHold_FighterAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="Command_StrikeTarget_Land"
+			State="Command_StrikeTarget_Land"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="Command_StrikeTarget_Water"
+			State="Command_StrikeTarget_Water"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="Command_StrikeTarget_BomberAircraft"
+			State="Command_StrikeTarget_BomberAircraft"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CaptureLandHusks"
+			State="CaptureLandHusks"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="AttachedBurstDroneRemoval"
+			State="AttachedBurstDroneRemoval"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SovietCaptureWaterHusks"
+			State="SovietCaptureWaterHusks"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="LandDefense"
+			State="LandDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="WaterDefense"
+			State="WaterDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="LandDefense_MEDIUM"
+			State="LandDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="WaterDefense_MEDIUM"
+			State="WaterDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="LandDefense_EASY"
+			State="LandDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="WaterDefense_EASY"
+			State="WaterDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="LandEmergencyDefense"
+			State="LandEmergencyDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="WaterEmergencyDefense"
+			State="WaterEmergencyDefense"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="LandEmergencyDefense_MEDIUM"
+			State="LandEmergencyDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="WaterEmergencyDefense_MEDIUM"
+			State="WaterEmergencyDefense_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="LandEmergencyDefense_EASY"
+			State="LandEmergencyDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="WaterEmergencyDefense_EASY"
+			State="WaterEmergencyDefense_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="Cleanup_BRUTAL"
+			State="Cleanup_BRUTAL"
+			Difficulty="BRUTAL" />
+		<StrategicState
+			id="RetreatMCVToLand"
+			State="RetreatMCVToLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="RetreatMCVToWater"
+			State="RetreatMCVToWater"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="EscortMCV"
+			State="EscortMCV"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="BombardmentShipAttack"
+			State="BombardmentShipAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CommandoController"
+			State="CommandoController"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SovietStealthDetector_New"
+			State="SovietStealthDetector_New"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="CratePickup"
+			State="CratePickup"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SovietGrinderVehicleHarrassment"
+			State="SovietGrinderVehicleHarrassment"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="FighterAircraftFlankAttack_New"
+			State="FighterAircraftFlankAttack_New"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="FighterAircraftEscort"
+			State="FighterAircraftEscort"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="FighterAircraft_MEDIUM"
+			State="FighterAircraft_MEDIUM"
+			Difficulty="EASY MEDIUM" />
+		<StrategicState
+			id="TwinbladeHarrassment_EASY"
+			State="TwinbladeHarrassment_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="TwinbladeHarrassment_New"
+			State="TwinbladeHarrassment_New"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="KirovFlankAttack_New"
+			State="KirovFlankAttack_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="TerrorDroneHarrassment_New"
+			State="TerrorDroneHarrassment_New"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="TerrorDroneHarrassment_MEDIUM"
+			State="TerrorDroneHarrassment_MEDIUM"
+			Difficulty="EASY MEDIUM" />
+		<StrategicState
+			id="SAAV4Attack"
+			State="SAAV4Attack"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="SovietTransportAttack"
+			State="SovietTransportAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SovietAirTransportInfantryHarrassment"
+			State="SovietAirTransportInfantryHarrassment"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SovietExpansion_BRUTALNEW"
+			State="SovietExpansion_BRUTALNEW"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SovietCaptureTech_EASY"
+			State="SovietCaptureTech_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="SovietCaptureTech_MEDIUM"
+			State="SovietCaptureTech_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="SovietCapturePriorityTech_HARD"
+			State="SovietCapturePriorityTech_HARD"
+			Difficulty="HARD" />
+		<StrategicState
+			id="SovietCaptureNonPriorityTech_HARD"
+			State="SovietCaptureNonPriorityTech_HARD"
+			Difficulty="HARD" />
+		<StrategicState
+			id="SovietCapturePriorityTech_BRUTALNEW"
+			State="SovietCapturePriorityTech_BRUTALNEW"
+			Difficulty="BRUTAL" />
+		<StrategicState
+			id="SovietCaptureNonPriorityTech_BRUTALNEW"
+			State="SovietCaptureNonPriorityTech_BRUTALNEW"
+			Difficulty="BRUTAL" />
+		<StrategicState
+			id="SovietCaptureVehicleHealTech"
+			State="SovietCaptureVehicleHealTech"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="BalancedDefense"
+			State="BalancedDefense"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="BalancedCleanup"
+			State="BalancedCleanup"
+			Difficulty="EASY MEDIUM HARD" />
+		<StrategicState
+			id="SovietScout_New"
+			State="SovietScout_New"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="GrowingAttacks_LandNew"
+			State="GrowingAttacks_LandNew"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="GrowingAttacks_WaterNew"
+			State="GrowingAttacks_WaterNew"
+			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="GrowingAttacks_Land_MEDIUM"
+			State="GrowingAttacks_Land_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="GrowingAttacks_Water_MEDIUM"
+			State="GrowingAttacks_Water_MEDIUM"
+			Difficulty="MEDIUM" />
+		<StrategicState
+			id="BalancedAttackGround_EASY"
+			State="BalancedAttackGround_EASY"
+			Difficulty="EASY" />
+		<StrategicState
+			id="BalancedAttackWater_EASY"
+			State="BalancedAttackWater_EASY"
+			Difficulty="EASY" />
+			
+		<BudgetState
+			id="OpeningMoveBudget_New"
+			State="OpeningMoveBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="CoopBudget_New"
+			State="CoopBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="DefenseBudget_New"
+			State="DefenseBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="HeavyDefenseBudget_New"
+			State="HeavyDefenseBudget_New"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			
+		<BuildState
+			id="SovietDefenseBuildStateAmphibious"
+			State="SovietDefenseBuildStateAmphibious"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietNeededUnits_Remix"
+			State="SovietNeededUnits_Remix"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietCraneBuildStateNEW"
+			State="SovietCraneBuildStateNEW"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietNonPathDependentStructureBuildState"
+			State="SovietNonPathDependentStructureBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietTechBuildState_RemixNew"
+			State="SovietTechBuildState_RemixNew"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietLandUnitBuildState_Remix"
+			State="SovietLandUnitBuildState_Remix"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietWaterUnitBuildStateNEW"
+			State="SovietWaterUnitBuildStateNEW"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietAmphibiousUnitBuildState_Remix"
+			State="SovietAmphibiousUnitBuildState_Remix"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietAntiInfantryOnlyBuildState"
+			State="SovietAntiInfantryOnlyBuildState"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietAntiAirOnlyBuildState_New"
+			State="SovietAntiAirOnlyBuildState_New"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietAntiGroundAircraftBuildState_Remix"
+			State="SovietAntiGroundAircraftBuildState_Remix"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietBarracksBuildState_RANDOM_Remix"
+			State="SovietBarracksBuildState_RANDOM_Remix"
+			Difficulty="EASY" />
+		<BuildState
+			id="SovietWarFactoryBuildState_RANDOM_Remix"
+			State="SovietWarFactoryBuildState_RANDOM_Remix"
+			Difficulty="EASY" />
+		<BuildState
+			id="SovietNavalYardBuildState_RANDOM"
+			State="SovietNavalYardBuildState_RANDOM"
+			Difficulty="EASY" />
+			
+		<SpecificUnitCap
+			Unit="SovietSurveyor"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietFighterAircraft"
+			Cap="0"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="SovietAntiGroundAircraft"
+			Cap="1"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="SovietBomberAircraft"
+			Cap="1"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="SovietAntiStructureShip"
+			Cap="1"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="SovietCommandoTech1"
+			Cap="0"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="SovietScoutVehicle"
+			Cap="1"
+			Difficulty="EASY" />
+		<SpecificUnitCap
+			Unit="SovietFighterAircraft"
+			Cap="2"
+			Difficulty="MEDIUM" />
+		<SpecificUnitCap
+			Unit="SovietScoutInfantry"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SAAV4"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietScoutVehicle"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiAirShip"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiAirShip_Ground"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiInfantryInfantry"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiVehicleInfantry"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietHeavyAntiVehicleInfantry"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietHeavyWalkerVehicle"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiInfantryVehicle"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiVehicleVehicleTech1"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiStructureVehicle"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiVehicleVehicleTech3"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietGrinderVehicle"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietMortarcycle"
+			Cap="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiNavyShipTech2"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietAntiStructureShip"
+			Cap="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietBaseDefenseGround"
+			Cap="8"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietBaseDefenseAir"
+			Cap="8"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietBaseDefenseAdvanced"
+			Cap="8"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="SovietTransportAircraft"
+			Cap="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			
+		<UnitModifier
+			Unit="SovietScoutInfantry"
+			OffensiveModifier="0.5"
+			DefensiveModifier="0.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiInfantryInfantry"
+			OffensiveModifier="1"
+			DefensiveModifier="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleInfantry"
+			OffensiveModifier="1"
+			DefensiveModifier="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietHeavyAntiVehicleInfantry"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietMortarcycle"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietDesolatorInfantry"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietCommandoTech1"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiInfantryVehicle"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietHeavyWalkerVehicle"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiAirShip_Ground"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietScoutVehicle"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleVehicleTech1"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietGrinderVehicle"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleVehicleTech3"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiStructureVehicle"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleVehicleTech2"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiNavyShipTech1"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietFighterAircraft"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietBomberAircraft"
+			OffensiveModifier="4"
+			DefensiveModifier="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietDesolaterBomber"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SAAV4"
+			OffensiveModifier="15"
+			DefensiveModifier="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SAVV4Building"
+			OffensiveModifier="15"
+			DefensiveModifier="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietScoutInfantry"
+			OffensiveModifier="0.5"
+			DefensiveModifier="0.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiInfantryInfantry"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleInfantry"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietHeavyAntiVehicleInfantry"
+			OffensiveModifier="4"
+			DefensiveModifier="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietDesolatorInfantry"
+			OffensiveModifier="4"
+			DefensiveModifier="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietMortarcycle"
+			OffensiveModifier="25"
+			DefensiveModifier="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietCommandoTech1"
+			OffensiveModifier="35"
+			DefensiveModifier="35"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietScoutVehicle"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiAirShip_Ground"
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiInfantryVehicle"
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleVehicleTech1"
+			OffensiveModifier="15"
+			DefensiveModifier="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleVehicleTech2"
+			OffensiveModifier="2"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietHeavyWalkerVehicle"
+			OffensiveModifier="4"
+			DefensiveModifier="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietGrinderVehicle"
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiStructureVehicle"
+			OffensiveModifier="30"
+			DefensiveModifier="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiVehicleVehicleTech3"
+			OffensiveModifier="30"
+			DefensiveModifier="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SAAV4"
+			OffensiveModifier="45"
+			DefensiveModifier="45"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SAVV4Building"
+			OffensiveModifier="45"
+			DefensiveModifier="45"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiAirShip"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiNavyShipTech1"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiNavyShipTech2"
+			OffensiveModifier="20"
+			DefensiveModifier="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiStructureShip"
+			OffensiveModifier="30"
+			DefensiveModifier="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietFighterAircraft"
+			OffensiveModifier="2"
+			DefensiveModifier="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietAntiGroundAircraft"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietDesolaterBomber"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="SovietBomberAircraft"
+			OffensiveModifier="30"
+			DefensiveModifier="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			
+		<DefaultTacticHomeBaseCriteria
+			RequiredBaseTypes=""
+			ExcludedBaseTypes=""
+			PreferredBaseTypes=""
+			PreferredNotBaseTypes="CAPTURED"
+			SortOrder="PREFER_CLOSEST" />
+			
+		<CountAsStructureForBuildPurposesFilter
+			Rule="ANY"
+			Relationship=""
+			Alignment="NONE"
+			Include="STRUCTURE UNPACKS_INTO_BUILDING"
+			Exclude="">
+			
+			<ExcludeThing>AlliedMiner</ExcludeThing>
+			<ExcludeThing>SovietSurveyor</ExcludeThing>
+			<ExcludeThing>JapanRefineryEgg</ExcludeThing>
+			<ExcludeThing>JapanFortressShipEgg</ExcludeThing>
+		</CountAsStructureForBuildPurposesFilter>
+		
+		<InTroubleSkirmishFeedbackControl
+			OnlyIfLocalPlayerIs="ALLIES"
+			TimeoutAfterPlaying="600s"
+			TimeBetweenScans="5s"
+			TimeThatConditionsMustBeMet="10s"
+			NumberOfObjectsRecentlyLost="3"
+			TimeForNumberOfObjectLost="120s"
+			ObjectLostFilter="SkirmishAIInTroubleObjectList_ImportantStrctures"
+			MinPowerAdvantageEnemiesInMyBaseVsAllMyUnits="1.2" />
+			
+		<FeedbackEntry
+			FeedbackKey="PlanAttackBeaconPlaced"
+			EvaEvent="SovietCoopOlegPlanAttack"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="PlanAttackOrderComplete"
+			EvaEvent="SovietCoopOlegPlanAttackDone"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="TakePositionBeaconPlaced"
+			EvaEvent="SovietCoopOlegTakePos"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="TakePositionOrderComplete"
+			EvaEvent="SovietCoopOlegTakePosDone"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StrikeTargetBeaconPlaced"
+			EvaEvent="SovietCoopOlegStrikeThis"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StrikeTargetOrderComplete"
+			EvaEvent="SovietCoopOlegStrikeThisDone"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="OrderCanceled"
+			EvaEvent="SovietCoopOlegAutopilot"
+			Sound=""
+			Text=""
+			Video=""
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StartGame"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLGR1"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StartGame"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLGR2"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="StartGame"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLGR3"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="InTrouble"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLND1"
+			FeedbackTo="ALLIES"
+			Timeout="600s"/>
+		<FeedbackEntry
+			FeedbackKey="InTrouble"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLND2"
+			FeedbackTo="ALLIES"
+			Timeout="600s"/>
+		<FeedbackEntry
+			FeedbackKey="InTrouble"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLND3"
+			FeedbackTo="ALLIES"
+			Timeout="600s"/>
+		<FeedbackEntry
+			FeedbackKey="Lost"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLDE1"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="Lost"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLDE2"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="Lost"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLDE3"
+			FeedbackTo="ALLIES"/>
+		<FeedbackEntry
+			FeedbackKey="FirstSeen"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTG1"
+			FeedbackTo="ENEMIES"
+			Timeout="9999999s"/>
+		<FeedbackEntry
+			FeedbackKey="FirstSeen"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTG2"
+			FeedbackTo="ENEMIES"
+			Timeout="9999999s"/>
+		<FeedbackEntry
+			FeedbackKey="FirstSeen"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTG3"
+			FeedbackTo="ENEMIES"
+			Timeout="9999999s"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedByLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTD1"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedByLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTD2"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedByLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTD3"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTV1"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTV2"
+			FeedbackTo="ENEMIES"/>
+		<FeedbackEntry
+			FeedbackKey="DefeatedLocalPlayer"
+			EvaEvent=""
+			Sound=""
+			Text=""
+			Video="SOLTV3"
+			FeedbackTo="ENEMIES"/>
+	</AIPersonalityDefinition>
+</AssetDeclaration>

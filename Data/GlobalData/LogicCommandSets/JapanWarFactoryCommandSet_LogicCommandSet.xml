@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="JapanWarFactoryCommandSet">
+		<Cmd>Command_ConstructJapanLightTransportVehicle</Cmd>
+		<Cmd>Command_ConstructJapanAntiInfantryVehicle</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleVehicleTech1</Cmd>
+		<Cmd>Command_ConstructJapanSentinelVehicle</Cmd>
+		<Cmd>Command_ConstructJapanAntiAirVehicleTech1</Cmd>
+		<Cmd>Command_ConstructCenturion</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleVehicleTech3</Cmd>
+		<Cmd>Command_ConstructJapanAntiStructureVehicle</Cmd>
+		<Cmd>Command_ConstructJapanMiner</Cmd>
+		<Cmd>Command_ConstructJapanMCV</Cmd>
+		<Cmd>Command_PurchaseJapanWarFactoryTech2</Cmd>
+	</LogicCommandSet>
+</AssetDeclaration>

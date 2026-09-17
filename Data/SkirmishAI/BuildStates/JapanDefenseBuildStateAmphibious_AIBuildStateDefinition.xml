@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBuildStateDefinition 
+		id="JapanDefenseBuildStateAmphibious">
+		
+		<Heuristic>
+			<ConstantHeuristic/>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
+			Heuristic="BEST_UNIT_ACTUAL"/>
+			
+		<BuildEntry 
+			Build="JapanBaseDefenseAdvancedEgg" 
+			Heuristic="BEST_UNIT_ACTUAL"/>
+			
+		<BuildEntry 
+			Build="JapanNewTower" 
+			Heuristic="BEST_UNIT_ACTUAL"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

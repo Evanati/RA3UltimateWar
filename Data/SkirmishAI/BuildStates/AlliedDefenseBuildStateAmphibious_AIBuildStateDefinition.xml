@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBuildStateDefinition 
+		id="AlliedDefenseBuildStateAmphibious">
+	
+		<Heuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+	
+		<BuildEntry
+			Build="AlliedBaseDefenseMGT"
+			Heuristic="BEST_UNIT_EXPECTED"/>
+	
+		<BuildEntry
+			Build="AlliedBaseDefenseAdvanced"
+			Heuristic="BEST_UNIT_EXPECTED"/>
+	
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="BEST_UNIT_EXPECTED"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="JapanNavalYardCommandSetBase">
+		<Cmd>Command_ConstructJapanNavyScoutShip</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleVehicleTech1_Naval</Cmd>
+		<Cmd>Command_ConstructJapanAntiAirShip</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleShip</Cmd>
+		<Cmd>Command_ConstructJapanAntiStructureShip</Cmd>
+		<Cmd>Command_ConstructJapanFortressShipEgg</Cmd>
+		<Cmd>Command_ConstructJapanMiner_Naval</Cmd>
+		<Cmd>Command_ConstructJapanMCV_Naval</Cmd>
+	</LogicCommandSet>
+</AssetDeclaration>

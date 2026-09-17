@@ -398,7 +398,8 @@ function OnAlliedInfantryFightingCreated(self)
 	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
 end
 
-function OnAlliedBaseDefenseCreated(self)
+function OnAlliedBaseDefenseMGTCreated(self)
+
 	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
@@ -418,6 +419,33 @@ function OnAlliedBaseDefenseCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
 	ObjectHideSubObjectPermanently( self, "Tanya", true )
+	
+end
+
+function OnAlliedBaseDefenseMTTCreated(self)
+
+	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_GoldenGun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_MachineGun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_MissileLauncher", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Natasha_Sniper", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Star", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Plasma", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Shotgun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Speakers", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tanya_Pistols", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Tanya", true )
+	
+	ObjectGrantUpgrade( self, "Uprade_IFV_MissleTrooper" )
+	
 end
 
 function OnAlliedAntiAirVehicleTech1Created(self)

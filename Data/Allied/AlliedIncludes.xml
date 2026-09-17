@@ -6,10 +6,19 @@
     <Includes>
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedBaseDefenseMGT_GameObject.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedBaseDefenseMTT_GameObject.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedOutPost_GameObject.xml"/>
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/Allied/Structures/AlliedSuperWeaponAdvanced_WeaponTemplate.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/Allied/Units/AlliedAntiVehicleInfantry_GameObject.xml"/>
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/Allied/Units_Campaign/AlliedMarine1_GameObject.xml"/>
