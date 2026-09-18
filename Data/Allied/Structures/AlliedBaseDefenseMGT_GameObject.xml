@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Tags></Tags>
 	<Includes>
-		<Include type="all" source="DATA:SageXml/GlobalData/GlobalDefines.xml" />
-		<Include type="all"	source="ART:ab/ABBaseDefense.w3x" />				
-		<Include type="all"	source="ART:ab/ABBaseDefense_BLD_SKN.w3x" />				
-		<Include type="all"	source="ART:ab/ABBaseDefense_BLD_BLD.w3x" />
-		<Include type="all"	source="ART:ab/ABBaseDefense_BLD_BLDW.w3x" />								
-		<Include type="all"	source="ART:ab/ABBaseDefense_FX.w3x" />
-		<Include type="all"	source="ART:ab/ABBaseDefense_Platform.w3x" />
-		<Include type="all"	source="ART:ab/ABBaseDefense_Platform_BLD.w3x" />										
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" /> 
+
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
+		<Include type="all"	source="ART:ABBaseDefense.w3x" />				
+		<Include type="all"	source="ART:ABBaseDefense_BLD_SKN.w3x" />				
+		<Include type="all"	source="ART:ABBaseDefense_BLD_BLD.w3x" />
+		<Include type="all"	source="ART:ABBaseDefense_BLD_BLDW.w3x" />								
+		<Include type="all"	source="ART:ABBaseDefense_FX.w3x" />
+		<Include type="all"	source="ART:ABBaseDefense_Platform.w3x" />
+		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />										
+		<Include type="all"	source="DATA:GlobalData/GlobalDefines.xml" />
 		<!-- Base Object -->
-		<Include type="instance" source="DATA:SageXml/BaseObjects/BaseStructure.xml" />
+		<Include type="instance" source="DATA:BaseObjects/BaseStructure.xml" />
 	</Includes>
-	
 	<GameObject
 		id="AlliedBaseDefenseMGT"
 		inheritFrom="BaseStructure"
@@ -23,10 +24,10 @@
 		Side="Allies"
 		HealthBoxHeightOffset="20"
 		EditorSorting="STRUCTURE"		
-		BuildTime="20"
-		EnergyProduction="-25"
-		CommandSet="AlliedBaseDefenseMGTCommandSet"
-		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +GARRISONABLE_UNTIL_DESTROYED +POWERED"
+		BuildTime="15"
+		EnergyProduction="-20"
+		CommandSet=""
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +FS_FACTORY +GARRISONABLE_UNTIL_DESTROYED +POWERED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
 		CampnessValue="=$CAMPNESS_DEFENSIVE_STRUCTURE"
@@ -42,7 +43,7 @@
 			<RequiredObject>AlliedPowerPlant</RequiredObject>
 		</GameDependency>
 		<ObjectResourceInfo>
-			<BuildCost Account="=$ACCOUNT_ORE" Amount="800"/>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="600"/>
 		</ObjectResourceInfo>
 		<ArmorSet
 			Armor="AlliedPrimaryBaseDefenseArmor"
@@ -101,11 +102,11 @@
 					ParseCondStateType="PARSE_NORMAL"  
 					ConditionsYes="BUILD_PLACEMENT_CURSOR">
 					<Script>
+						CurDrawableHideSubObjectPermanently("Upgrade_Default_Missile")
 						CurDrawableHideSubObjectPermanently("Upgrade_Blaster_Rifles")
 						CurDrawableHideSubObjectPermanently("Upgrade_Engineer")
 						CurDrawableHideSubObjectPermanently("Upgrade_Flak")
 						CurDrawableHideSubObjectPermanently("Upgrade_GoldenGun")
-						CurDrawableHideSubObjectPermanently("Upgrade_MachineGun")
 						CurDrawableHideSubObjectPermanently("Upgrade_MissileLauncher")
 						CurDrawableHideSubObjectPermanently("Upgrade_Natasha_Sniper")
 						CurDrawableHideSubObjectPermanently("Upgrade_Ninja_Star")
@@ -146,32 +147,7 @@
 						AnimationName="ABBaseDefense_BLD_BLD"
 						AnimationMode="ONCE_BACKWARDS"
 						AnimationAbsoluteTime="2s"/>
-				</AnimationState>								
-<!--				
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="BUILD_PLACEMENT_CURSOR">
-
-					<Script>
-						CurDrawableHideSubObjectPermanently("MuzzleFlash_01")
-						CurDrawableHideSubObjectPermanently("MuzzleFlash_02")
-					</Script>
-				</AnimationState>
-
-
-
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Animation
-						AnimationName="GBWatchTwrGD3"
-						AnimationMode="ONCE" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="Des_Small"
-						FollowBone="false" />
-				</AnimationState>
--->				
+				</AnimationState>										
 			</ScriptedModelDraw>
 
 <!-- DRAW PLATFORM -->
@@ -191,9 +167,6 @@
 					<Model
 						Name="ABBaseDefense_Platform" />
 				</ModelConditionState>
-        
-        
-        
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="OVER_WATER STRUCTURE_UNPACKING">
@@ -357,104 +330,10 @@
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
 					AutoChooseWeapon="true">
 
-					<!-- Default unoccupied weapon -->
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="AlliedBaseDefenseRockets"
-						ForbiddenObjectStatus="CONTAINER_OCCUPIED"/>
-						
-					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						Template="AlliedBaseDefenseRockets_Aircraft"
-						ForbiddenObjectStatus="CONTAINER_OCCUPIED"/>
-					
-					<!-- SovietAntiVehicleInfantry -->
-					<Weapon
-						Template="ABD_SovietAntiVehicleFlakLauncher"
-						Upgrade="Uprade_IFV_FlakTrooper"
-						Ordering="PRIMARY_WEAPON"/>
-					
-					<!-- AlliedInfiltrationInfantry -->
-					<Weapon
-						Template="ABD_PistolWeapon"
-						Upgrade="Uprade_IFV_GoldenGun"
-						Ordering="PRIMARY_WEAPON"/>
-					
-					<!-- SovietAntiInfantryInfantry & JapanAntiInfantryInfantry-->
+					<!-- SovietAntiInfantryInfantry (default) -->
 					<Weapon
 						Template="ABD_MachineGun"
 						Upgrade="Uprade_IFV_MachineGun"
-						Ordering="PRIMARY_WEAPON"/>
-						
-				<!-- JapanAntiInfantryInfantry-->
-						
-					<Weapon
-						Template="ABD_JapanMachineGun"
-						Upgrade="Uprade_IFV_JapanMachineGun"
-						Ordering="SECONDARY_WEAPON"/>		
-					
-					<!-- AlliedAntiVehicleInfantry -->
-					<Weapon
-						Template="ABD_AlliedAntiVehicleInfantryMissileLauncher"
-						Upgrade="Uprade_IFV_MissleTrooper"
-						Ordering="PRIMARY_WEAPON"/>
-					
-					<!-- AlliedCommandoTech1 -->
-					<Weapon
-						Template="ABD_PistolWeapon"
-						Upgrade="Uprade_IFV_Pistol"
-						Ordering="PRIMARY_WEAPON"/>
-
-					<!-- JapanAntiVehicleInfantry -->
-					<Weapon
-						Template="ABD_JapanAntiVehicleInfantryPlasmaBazooka"
-						Upgrade="Uprade_IFV_PlasmaBazooka"
-						Ordering="PRIMARY_WEAPON"/>
-
-					<!-- JapanCommandoTech1 -->
-					<Weapon
-						Template="ABD_JapanCommandoTech1PsyonicCrush"
-						Upgrade="Uprade_IFV_PsyonicCrush"
-						Ordering="PRIMARY_WEAPON"/>
-                    <Weapon
-                       Template="ABD_JapanCommandoTech1PsyonicAntiAirCrush"
-                       Upgrade="Uprade_IFV_PsyonicCrush"
-                       Ordering="SECONDARY_WEAPON"/>
-
-					<!-- AlliedEngineer, SovietEngineer & JapanEngineer -->
-					<Weapon
-						Template="ABD_RepairWeapon"
-						Upgrade="Uprade_IFV_Repair"
-						Ordering="PRIMARY_WEAPON"/>
-
-					<!-- SovietScoutInfantry & AlliedScoutInfantry-->
-					<Weapon
-						Template="ABD_RoarWeapon"
-						Upgrade="Uprade_IFV_Roar"
-						Ordering="PRIMARY_WEAPON"/>
-
-					<!-- AlliedAntiInfantryInfantry -->
-					<Weapon
-						Template="ABD_ShotgunWeapon"
-						Upgrade="Uprade_IFV_Shotgun"
-						Ordering="PRIMARY_WEAPON"/>
-
-					<!-- JapanInfiltrationInfantry -->
-					<Weapon
-						Template="ABD_JapanInfiltrationShiruken"
-						Upgrade="Uprade_IFV_Shuriken"
-						Ordering="PRIMARY_WEAPON"/>
-
-					<!-- SovietCommando -->
-					<Weapon
-						Template="ABD_SovietCommandoSniperRifle"
-						Upgrade="Uprade_IFV_SovietCommando"
-						Ordering="PRIMARY_WEAPON"/>
-
-					<!-- SovietHeavyAntiVehicleInfantry -->
-					<Weapon
-						Template="ABD_SovietHeavyAntiVehicleInfantryTeslaGun"
-						Upgrade="Uprade_IFV_TeslaTrooper"
 						Ordering="PRIMARY_WEAPON"/>
 					
 					<TurretSettings
@@ -473,42 +352,51 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
-      
-			<!-- For the Plasma Bazooka -->			
-			<LaserState id="ModuleTag_LaserState" LaserId="1" />
-
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUp_Veteran"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUp_Elite"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUp_Heroic"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			
 			<StancesBehavior
 				id="ModuleTag_Stance"
 				StanceTemplate="OffensiveStructures" />
 			
-			<!-- For the machine gun -->			
-			<StatusBitsUpgrade
-				id="ModuleTag_VeterancyUpgrade"
-				StatusToSet="ENABLE_TRACER_DRAW">
-				<TriggeredBy>Uprade_IFV_MachineGun</TriggeredBy>
-				<TriggeredBy>Uprade_IFV_JapanMachineGun</TriggeredBy>
-			</StatusBitsUpgrade>
-
-      <!-- For the Allied IFV Auto Repair Allies -->
-      <StatusBitsUpgrade
-				id="ModuleTag_UpgradeWeapon"
-				StatusToSet="REPAIR_ALLIES_WHEN_IDLE">
-        <TriggeredBy>Uprade_IFV_Repair</TriggeredBy>
-      </StatusBitsUpgrade>
-      
-			<!-- For the Psyonic Chrush -->
-            <LiftObjectUpdate
-                id="ModuleTag_PsyonicCrushLiftUpdate"
-                CrusherModifiesVelocity="false"
-                LiftVelocity="4.0"
-                MaxElevationFromGround="200.0"
-                TimeIncrement="0.5s"
-                MaxTimeLifted="8.0s"
-                MaxStructureShakeVelocity="0.25"
-                AirplaneCrashWeapon="JapanCommandoTech1AirplaneCrashWeapon"
-				/>
 			<Physics
 				id="ModuleTag_Physics"/>
+				
 			<BuildingDestructionBehavior
 				id="ModuleTag_BuildingDestruction">
 				<DieMuxData
@@ -550,26 +438,6 @@
 			<StructureUnpackUpdate
 				id="ModuleTag_StructureUnpack"
 				UnpackTime="2.0s" />
-			<!-- Temp -->
-			<GarrisonContain
-				id="ModuleTag_Garrison"
-				ObjectStatusOfContained="ENCLOSED UNSELECTABLE NO_ATTACK"
-				ContainMax="1"
-				EnterSound="GenericBuilding_Garrison"
-				ExitSound="GenericBuilding_Ungarrison"
-				AllowEnemiesInside="false"
-				AllowAlliesInside="true"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="true"
-				PassDisabilityToRiders="true"
-				ShowPips="true"
-				KillPassengersOnDeath="true">
-				<PassengerFilter
-					Rule="ANY"
-					Include="INFANTRY" />
-				<DieMuxData
-					DeathTypes="ALL" />
-			</GarrisonContain>
 
 			<xi:include
 				href="DATA:Includes/GenericBuildingRepair.xml" />
@@ -600,7 +468,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="1000" />
+				MaxHealth="750" />
 		</Body>
 		<Geometry
 			IsSmall="false">
@@ -652,12 +520,7 @@
 				Sound="AudioEvent:ALL_TurretSelect"
 				AudioType="voiceSelect" />
 		</AudioArrayVoice>
-		<AudioArraySound>
-<!--
-			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
-			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
--->
-		</AudioArraySound>
+		
 		<VisionInfo
 			VisionRange="310"
 			ShroudClearingRange="500" />

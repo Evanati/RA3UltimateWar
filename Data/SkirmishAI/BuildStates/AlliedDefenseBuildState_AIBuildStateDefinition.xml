@@ -2,17 +2,20 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<AIBuildStateDefinition 
-		id="AlliedDefenseBuildStateAmphibious">
+		id="AlliedDefenseBuildState_RA3UW">
 	
 		<Heuristic>
-			<ConstantHeuristic
-				Weight="1.0" />
+			<ConstantHeuristic/>
 		</Heuristic>
-	
+		
 		<BuildEntry
 			Build="AlliedBaseDefenseMGT"
 			Heuristic="BEST_UNIT_ACTUAL"/>
 	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="BEST_UNIT_ACTUAL"/>
+
 		<BuildEntry
 			Build="AlliedBaseDefenseAdvanced"
 			Heuristic="BEST_UNIT_ACTUAL"/>

@@ -387,10 +387,6 @@
 			State="AlliedMinerUpgExpansion_BRUTALNEW"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="CenturyBomberAttackNEW"
-			State="CenturyBomberAttackNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<StrategicState
 			id="BombardmentShipAttack"
 			State="BombardmentShipAttack"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -449,7 +445,11 @@
 		<StrategicState
 			id="CenturyBomberAttack"
 			State="CenturyBomberAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedAirDrop"
+			State="AlliedAirDrop"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedInfantryAttack"
 			State="AlliedInfantryAttack"
@@ -537,12 +537,8 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="AlliedDefenseBuildStateAmphibious"
-			State="AlliedDefenseBuildStateAmphibious"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<BuildState
-			id="AlliedDefenseBuildStateWaterOnly"
-			State="AlliedDefenseBuildStateWaterOnly"
+			id="AlliedDefenseBuildState_RA3UW"
+			State="AlliedDefenseBuildState_RA3UW"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedNeededUnits_Remix"
@@ -563,7 +559,7 @@
 		<BuildState
 			id="AlliedTechBuildState_RemixNew"
 			State="AlliedTechBuildState_RemixNew"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="AlliedLandUnitBuildState_Remix"
 			State="AlliedLandUnitBuildState_Remix"
@@ -692,9 +688,9 @@
 		<SpecificUnitCap
 			Unit="AlliedBaseDefenseMGT"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
-			Unit="AlliedBaseDefenseMTT"
+			Unit="AlliedBaseDefense"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
@@ -970,7 +966,6 @@
 			<ExcludeThing>AlliedMiner</ExcludeThing>
 			<ExcludeThing>SovietSurveyor</ExcludeThing>
 			<ExcludeThing>JapanRefineryEgg</ExcludeThing>
-			<ExcludeThing>JapanFortressShipEgg</ExcludeThing>
 		</CountAsStructureForBuildPurposesFilter>
 		
 		<InTroubleSkirmishFeedbackControl

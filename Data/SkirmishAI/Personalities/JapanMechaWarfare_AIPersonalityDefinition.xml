@@ -521,8 +521,8 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="JapanDefenseBuildStateAmphibious"
-			State="JapanDefenseBuildStateAmphibious"
+			id="JapanDefenseBuildState_RA3UW"
+			State="JapanDefenseBuildState_RA3UW"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="JapanNeededUnits_Remix"
@@ -829,7 +829,6 @@
 			<ExcludeThing>AlliedMiner</ExcludeThing>
 			<ExcludeThing>SovietSurveyor</ExcludeThing>
 			<ExcludeThing>JapanRefineryEgg</ExcludeThing>
-			<ExcludeThing>JapanFortressShipEgg</ExcludeThing>
 		</CountAsStructureForBuildPurposesFilter>
 		
 		<InTroubleSkirmishFeedbackControl

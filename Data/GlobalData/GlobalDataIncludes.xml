@@ -3,17 +3,11 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Tags></Tags>
 
-    <Includes>
+    <Includes>	
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseMGT_LogicCommand.xml"/>
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseMTT_LogicCommand.xml"/>
-			
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedBaseDefenseMGTCommandSet_LogicCommandSet.xml"/>
+	
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedConstructionYardCommandSetBase_LogicCommandSet.xml"/>

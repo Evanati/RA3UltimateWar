@@ -655,37 +655,33 @@
 	
 // AlliedBaseDefenseMGT
 	Name:AlliedBaseDefenseMGT
-		"Multigunner Turret"
+		"Minigun Turret"
 	End	
-	
-	Desc:AlliedBaseDefenseMGT
-		"All-purpose defense system whose weapon changes if an infantry unit is ordered inside."
-	End
 	
 	Type:AlliedBaseDefenseMGT
-		"Multirole Base Defense"
-	End	
+		"Anti-Infantry Base Defense"
+	End		
 	
-// AlliedBaseDefenseMTT
-	Name:AlliedBaseDefenseMTT
-		"Missile-Torpedo Turret"
-	End	
-	
-	Desc:AlliedBaseDefenseMTT
-		"Naval defense system armed with missiles and torpedoes."
+	Desc:AlliedBaseDefenseMGT
+		"A specialized and effective anti-infantry defense system."
 	End
 	
-	Type:AlliedBaseDefenseMTT
-		"Specialized Naval Base Defense"
+// AlliedBaseDefense
+	Name:AlliedBaseDefense
+		"Missile Turret"
 	End	
+	
+	Desc:AlliedBaseDefense
+		"A comprehensive anti-stealth missile defense system that can be upgraded."
+	End
 
-	Name:UpgradeAlliedBaseDefenseMTTTech2
+	NAME:UpgradeAlliedBaseDefenseTech2
 		"Turret Upgrade"
 	End	
 	
-	Desc:UpgradeAlliedBaseDefenseMTTTech2
-		"Purchase upgrades for your turret to strengthen damage and defense."
-	End	
+	DESCRIPTION:UpgradeAlliedBaseDefenseTech2
+		"Purchase an upgrade for your turret to strengthen damage and defense."
+	End
 	
 // PlayerPowerNanoSwarmHive
 
