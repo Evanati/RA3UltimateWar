@@ -56,9 +56,9 @@
 			BaseBuildingLocation="DEFENSE" >
 			<ConstructionBaseSelectionCriteria
 				ExcludedBaseTypes="NO_BUILD_RADIUS"
-				PreferredNotBaseTypes="LAND_CENTERED"
-				PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
-				SortOrder="PREFER_NEWEST" />
+				PreferredNotBaseTypes="LAND_CENTERED MAIN_BASE"
+				PreferredBaseTypes="EXPANSION CAPTURED"
+				SortOrder="PREFER_SMALLEST" />
 		</SkirmishAIInformation>
 		<Draws>
 			<!-- DRAW GUN -->
@@ -140,8 +140,7 @@
 				</AnimationState>											
 			</ScriptedModelDraw>
 
-<!-- DRAW PLATFORM -->
-
+			<!-- DRAW PLATFORM -->
 			<ScriptedModelDraw
 				id="ModuleTag_Draw_Platform"
 				OkToChangeModelColor="true">
@@ -187,7 +186,7 @@
 					</Script>
 				</AnimationState>	
 				
-					<!-- BUILDUP ANIMATION -->
+				<!-- BUILDUP ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"  
 					ConditionsYes="STRUCTURE_UNPACKING OVER_WATER">
@@ -236,9 +235,8 @@
 				</AnimationState>		
 			</ScriptedModelDraw>
 
-<!-- DRAW PARTICLES -->
-
-      <ScriptedModelDraw
+		<!-- DRAW PARTICLES -->
+		<ScriptedModelDraw
 				id="ModuleTag_Draw_FX"
 				OkToChangeModelColor="true">
 				<ModelConditionState
@@ -272,6 +270,74 @@
 
 				</ModelConditionState>
 			</ScriptedModelDraw>
+			
+			<SpotlightDraw
+				id="ModuleTag_Draw_Spotlight"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				AttachToBoneInAnotherModule="Bone_ABBDSPOTLIGHT"
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false"
+				RefreshTime="2s"
+				SweepTime="1s">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					ConditionsYes=""
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="false">
+					<Model
+						Name=""
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNDERPOWERED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="false">
+					<Model
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="false">
+					<Model
+						ExtraMesh="false"/>
+				</ModelConditionState>
+			</SpotlightDraw>
 			
 			<LaserDraw
 				id="ModuleTag_LaserDraw"
@@ -352,6 +418,43 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUp_Veteran"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUp_Elite"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUp_Heroic"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
 
 			<StancesBehavior
 				id="ModuleTag_Stance"

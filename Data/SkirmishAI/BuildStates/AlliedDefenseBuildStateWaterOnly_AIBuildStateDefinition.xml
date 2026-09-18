@@ -6,13 +6,13 @@
 	
 		<Heuristic>
 			<ConstantHeuristic
-				Weight="2.0" />
+				Weight="1.0" />
 			<CanBuildBuildingsOnSurfaceHeuristic
 				Surfaces="WATER DEEP_WATER"/>
 		</Heuristic>
 			
 		<BuildEntry
 			Build="AlliedBaseDefenseMTT"
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

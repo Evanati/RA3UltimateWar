@@ -7,7 +7,7 @@
 		PersonalityUIName="Personality:Naomi"
 		SecondsTillTargetsExpire="5"
 		DesiredExcessPowerBuffer="100"
-		BaseCompactness="1"
+		BaseCompactness="0.95"
 		DefaultThreatFindRadius="10000"
 		UnitBuilderCostEffectivenessWeight="1"
 		UnitBuilderMoneyVersusTimePreference="0.5"
@@ -137,10 +137,10 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_PointDefenseDrones"
-			Weight="0%" />
+			Weight="10%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NanoInjection"
-			Weight="0%" />
+			Weight="20%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NanoExtract"
 			Weight="0%" />
@@ -149,51 +149,36 @@
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Enhanced_Miner"
-			Weight="0%" />
+			Weight="30%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_EnhancedKamikaze"
-			Weight="0%" />
+			Weight="40%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_AdvancedMissilePacks"
-			Weight="0%" />
+			Weight="60%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NijiaMacha"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Girl_Power"
-			Weight="0%" />
+			Weight="50%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_FinalSquadron_Rank3"
-			Weight="0%" />
+			Weight="80%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_EmperorsRage_Rank3"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_BalloonAttack_Rank3"
-			Weight="0%" />
+			Weight="70%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Nano_Storm"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_T4Tower"
-			Weight="0%" />
+			Weight="90%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NavalPower"
-			Weight="0%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Japan_PointDefenseDrones"
-			Weight="20%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Japan_AdvancedMissilePacks"
-			Weight="40%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Japan_FinalSquadron_Rank3"
-			Weight="50%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Japan_NavalPower"
-			Weight="100%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Japan_T4Tower"
 			Weight="100%" />
 			
 		<OpeningMove

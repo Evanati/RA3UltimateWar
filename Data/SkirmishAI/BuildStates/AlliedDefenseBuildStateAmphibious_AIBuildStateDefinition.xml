@@ -11,14 +11,14 @@
 	
 		<BuildEntry
 			Build="AlliedBaseDefenseMGT"
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 	
 		<BuildEntry
 			Build="AlliedBaseDefenseAdvanced"
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 	
 		<BuildEntry
 			Build="ABWeatherControl"
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="BEST_UNIT_ACTUAL"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>
