@@ -714,6 +714,10 @@
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
+			Unit="AlliedBaseDefenseRT"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
 			Unit="AlliedBaseDefenseMGT"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>

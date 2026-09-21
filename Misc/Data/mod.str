@@ -653,6 +653,19 @@
 		"Get rid of the Allied field commander"
 	End		
 	
+// AlliedBaseDefenseRT
+	Name:AlliedBaseDefenseRT
+		"Repair Turret"
+	End	
+	
+	Type:AlliedBaseDefenseRT
+		"Vehicle Repair Station"
+	End		
+	
+	Desc:AlliedBaseDefenseRT
+		"A specialized repair station with both direct and indirect repairing capabilities for anything mechanical."
+	End
+	
 // AlliedBaseDefenseMGT
 	Name:AlliedBaseDefenseMGT
 		"Minigun Turret"
@@ -663,7 +676,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseMGT
-		"A specialized and effective anti-infantry defense system."
+		"A specialized and highly lethal anti-infantry defense system."
 	End
 	
 // AlliedBaseDefense
@@ -672,7 +685,7 @@
 	End	
 	
 	Desc:AlliedBaseDefense
-		"A comprehensive anti-stealth missile defense system that can be upgraded."
+		"A comprehensive anti-stealth missile defense system. Includes torpedoes if built on water."
 	End
 
 	NAME:UpgradeAlliedBaseDefenseTech2
@@ -680,7 +693,16 @@
 	End	
 	
 	DESCRIPTION:UpgradeAlliedBaseDefenseTech2
-		"Purchase an upgrade for your turret to strengthen damage and defense."
+		"Purchase upgrades for your turret to strengthen damage and defense."
+	End
+	
+// AlliedBaseDefenseAdvanced
+	Name:AlliedBaseDefenseAdvanced
+		"Spectrum Tower"
+	End		
+	
+	Desc:AlliedBaseDefenseAdvanced
+		"High-tech security systems that use supercharged beams of light to stop enemy forces. Includes torpedoes if built on water."
 	End
 	
 // PlayerPowerNanoSwarmHive

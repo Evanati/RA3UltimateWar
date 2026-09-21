@@ -681,13 +681,17 @@
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
+			Unit="AlliedBaseDefenseRT"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
 			Unit="AlliedBaseDefenseMGT"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedBaseDefense"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedBaseDefenseAdvanced"
 			Cap="10"

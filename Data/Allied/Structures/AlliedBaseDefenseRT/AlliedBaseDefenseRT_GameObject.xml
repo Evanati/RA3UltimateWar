@@ -2,8 +2,6 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Tags></Tags>
 	<Includes>
-		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" /> 
-
 		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
 		<Include type="all"	source="ART:ABBaseDefense.w3x" />				
 		<Include type="all"	source="ART:ABBaseDefense_BLD_SKN.w3x" />				
@@ -11,45 +9,47 @@
 		<Include type="all"	source="ART:ABBaseDefense_BLD_BLDW.w3x" />								
 		<Include type="all"	source="ART:ABBaseDefense_FX.w3x" />
 		<Include type="all"	source="ART:ABBaseDefense_Platform.w3x" />
-		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />										
-		<Include type="all"	source="DATA:GlobalData/GlobalDefines.xml" />
+		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />		
+		<Include type="all" source="ART:FXInvisBone.w3x" />
+		<Include type="all" source="ART:Decal_Rig_CO.xml" />		
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseStructure.xml" />
 	</Includes>
 	<GameObject
-		id="AlliedBaseDefenseMGT"
+		id="AlliedBaseDefenseRT"
 		inheritFrom="BaseStructure"
-		SelectPortrait="Portrait_AlliedBaseDefense"
-		ButtonImage="Button_AlliedBaseDefense_on"
+		SelectPortrait="Portrait_AlliedBaseDefenseRT"
+		ButtonImage="Portrait_AlliedBaseDefenseRT"
 		Side="Allies"
 		HealthBoxHeightOffset="20"
 		EditorSorting="STRUCTURE"		
-		BuildTime="15"
-		EnergyProduction="-20"
+		BuildTime="25"
+		EnergyProduction="-30"
 		CommandSet=""
-		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +FS_FACTORY +GARRISONABLE_UNTIL_DESTROYED +POWERED"
+		KindOf="-NOT_AUTOACQUIRABLE +POWERED +COVER"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
-		CampnessValue="=$CAMPNESS_DEFENSIVE_STRUCTURE"
+		CampnessValue="3000"
+		CampnessValueRadius="200"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="OTHER_STRUCTURE"
-		EditorName="AlliedBaseDefenseMGT"
-		WeaponCategory="GUN"
-		TypeDescription="Type:AlliedBaseDefenseMGT"
-		Description="Desc:AlliedBaseDefenseMGT">
+		EditorName="AlliedBaseDefenseRT"
+		WeaponCategory="NONE"
+		TypeDescription="Type:AlliedBaseDefenseRT"
+		Description="Desc:AlliedBaseDefenseRT">
 		<DisplayName
-			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlliedBaseDefenseMGT</DisplayName>
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlliedBaseDefenseRT</DisplayName>
 		<GameDependency>
 			<RequiredObject>AlliedPowerPlant</RequiredObject>
 		</GameDependency>
 		<ObjectResourceInfo>
-			<BuildCost Account="=$ACCOUNT_ORE" Amount="600"/>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="1000"/>
 		</ObjectResourceInfo>
 		<ArmorSet
 			Armor="AlliedPrimaryBaseDefenseArmor"
 			DamageFX="FactionStructureDamageFX" />
 		<SkirmishAIInformation
-			BaseBuildingLocation="DEFENSE" >
+			BaseBuildingLocation="CENTER" >
 			<ConstructionBaseSelectionCriteria
 				ExcludedBaseTypes="NO_BUILD_RADIUS"
 				PreferredBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
@@ -60,7 +60,7 @@
 			<ScriptedModelDraw
 				id="ModuleTag_Draw_Gun"
 				OkToChangeModelColor="true"
-				ExtraPublicBone=" UPGRADE_DEFAULT_MISSILE BONE_CONTACT_POINT_01 BONE_CONTACT_POINT_02 BONE_CONTACT_POINT_03 BONE_CONTACT_POINT_04">
+				ExtraPublicBone="UPGRADE_DEFAULT_MISSILE BONE_CONTACT_POINT_01 BONE_CONTACT_POINT_02 BONE_CONTACT_POINT_03 BONE_CONTACT_POINT_04">
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT">
 					<Model
@@ -104,9 +104,9 @@
 					<Script>
 						CurDrawableHideSubObjectPermanently("Upgrade_Default_Missile")
 						CurDrawableHideSubObjectPermanently("Upgrade_Blaster_Rifles")
-						CurDrawableHideSubObjectPermanently("Upgrade_Engineer")
 						CurDrawableHideSubObjectPermanently("Upgrade_Flak")
 						CurDrawableHideSubObjectPermanently("Upgrade_GoldenGun")
+						CurDrawableHideSubObjectPermanently("Upgrade_MachineGun")
 						CurDrawableHideSubObjectPermanently("Upgrade_MissileLauncher")
 						CurDrawableHideSubObjectPermanently("Upgrade_Natasha_Sniper")
 						CurDrawableHideSubObjectPermanently("Upgrade_Ninja_Star")
@@ -128,7 +128,7 @@
 						AnimationName="ABBaseDefense_BLD_BLDW"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE"
-						AnimationAbsoluteTime="2s"/>
+						AnimationAbsoluteTime="0.2s"/>
 				</AnimationState>									
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -137,7 +137,7 @@
 						AnimationName="ABBaseDefense_BLD_BLD"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE"
-						AnimationAbsoluteTime="2s" />
+						AnimationAbsoluteTime="0.2s" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -282,44 +282,30 @@
 				</ModelConditionState>
 			</ScriptedModelDraw>
 			
-			<LaserDraw
-				id="ModuleTag_LaserDraw"
-				Texture1_UTile="1"
-				Texture1_VTile="1"
-				Texture1_UScrollRate="0"
-				Texture1_VScrollRate=".2"
-				Texture1_NumFrames="1"
-				Texture1_FrameRate="30"
-				Texture2_UTile="1"
-				Texture2_VTile=".3"
-				Texture2_UScrollRate="0"
-				Texture2_VScrollRate="1.4"
-				Texture2_NumFrames="1"
-				Texture2_FrameRate="30"
-				LaserWidth="8"
-				LaserStateID="1">
-				<FXShader
-					ShaderName="Laser.fx"
-					TechniqueIndex="0">
-					<Constants>
-						<Texture
-							Name="Texture1">
-							<Value>FXObeliskLaser</Value>
-						</Texture>
-						<Texture
-							Name="Texture2">
-							<Value>FXLaserOverlay</Value>
-						</Texture>
-						<Float Name="ColorEmissive">
-							<Value>5.000000</Value>
-							<Value>5.000000</Value>
-							<Value>2.000000</Value>
-						</Float>
-					</Constants>
-				</FXShader>
-			</LaserDraw>
-			
+			<ScriptedModelDraw
+				id="ModuleTag_RepairDecal"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED">
+					<Model Name="FXInvisBone" />
+					<ShadowInfo
+						Type="ADDITIVE_DECAL"
+						SizeX="150.0"
+						SizeY="150.0"
+						OverrideLODVisibility="true"
+						MaxHeight="200"
+						UseHouseColor="true"
+						Texture="Decal_Rig_CO"
+						LocalPlayerOnly="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
 		</Draws>
+		
 		<Behaviors>
 			<WeaponSetUpdate
 				id="ModuleTag_WeaponSetUpdate">
@@ -330,10 +316,10 @@
 					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
 					AutoChooseWeapon="true">
 
-					<!-- SovietAntiInfantryInfantry (default) -->
+					<!-- AlliedEngineer, SovietEngineer & JapanEngineer (default) -->
 					<Weapon
-						Template="ABD_MachineGun"
-						Upgrade="Uprade_IFV_MachineGun"
+						Template="ABD_RepairWeapon"
+						Upgrade="Uprade_IFV_Repair"
 						Ordering="PRIMARY_WEAPON"/>
 					
 					<TurretSettings
@@ -437,7 +423,22 @@
 			
 			<StructureUnpackUpdate
 				id="ModuleTag_StructureUnpack"
-				UnpackTime="2.0s" />
+				UnpackTime="0.2s" />
+				
+			<PassiveAreaEffectBehavior
+				id="ModuleTag_RepairTurretHeal"
+				EffectRadius="75"
+				HealingPercentPerSecond="2%"				
+				AffectWoundedOnly="true"
+				AffectUnderAttack="true"
+				DisabledTypesToProcess="HELD">
+				<AllowFilter
+					Rule="ANY"
+                    Relationship="ALLIES" 
+					Include="VEHICLE">
+					<ExcludeThing>SovietScoutVehicle</ExcludeThing>
+				</AllowFilter>
+			</PassiveAreaEffectBehavior>
 
 			<xi:include
 				href="DATA:Includes/GenericBuildingRepair.xml" />
@@ -450,10 +451,10 @@
 			
 			<LUAEventList
 				id="ModuleTag_LUAEventList"
-				EventListName="AlliedBaseDefenseMGTFunctions"
-			/>
-						
+				EventListName="AlliedBaseDefenseRTFunctions"
+			/>		
 		</Behaviors>
+		
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AI"
@@ -468,7 +469,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="750" />
+				MaxHealth="500" />
 		</Body>
 		<Geometry
 			IsSmall="false">

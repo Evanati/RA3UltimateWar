@@ -521,14 +521,19 @@
 <!--////////////////////////////////////////////////////////////-->
     </Events>
 <!-- RA3 EVENTS - CnC3 BELOW -->
+
+	<EventList Name="AlliedBaseDefenseRTFunctions" Inherit="BaseScriptFunctions">
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseRTCreated" DebugSingleStep="false"/>		
+	</EventList>
 	
 	<EventList Name="AlliedBaseDefenseMGTFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseMGTCreated" DebugSingleStep="false"/>		
 	</EventList>
 	
 	<EventList Name="AlliedBaseDefenseFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseCreated" DebugSingleStep="false"/>	
-		<EventHandler EventName="BuildingDone"	ScriptFunctionName="OnBCStealthDetect" DebugSingleStep="false"/>		
+		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBaseDefenseCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="BuildingDone"	ScriptFunctionName="OnBCStealthDetect" DebugSingleStep="false"/>
+		<EventHandler EventName="UNDERPOWERED"	ScriptFunctionName="OnAlliedBaseDefenseUnderpowered" DebugSingleStep="false"/>
 	</EventList>
 
 	<EventList Name="AlliedAntiAirVehicleTech1Functions" Inherit="BaseScriptFunctions">

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<UpgradeTemplate
+		id="Upgrade_AlliedBaseDefenseUpgraderAI"
+		DisplayName="UpgradeName:AlliedBaseDefenseTech2"
+		Description="UpgradeDesc:AlliedBaseDefenseTech2"
+		TypeDescription="UpgradeType:AlliedBaseDefenseTech2"
+		AcquireHint="UpgradePrereq:AlliedBaseDefenseTech2"
+		Type="OBJECT"
+		BuildTime="0s"
+		BuildCost="0"
+		GroupOrder="0"
+		Options="OBJECT_UPGRADE_PROJECTED"
+		IconImage="Button_UpgradeMortar">
+		
+		<GameDependency
+			ForbiddenModelConditions="UNDERPOWERED" />
+	</UpgradeTemplate>
+	
+</AssetDeclaration>
