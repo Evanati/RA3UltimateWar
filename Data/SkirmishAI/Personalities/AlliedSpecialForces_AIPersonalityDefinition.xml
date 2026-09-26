@@ -137,64 +137,49 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
-			Weight="0%" />
+			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Military_Supplies"
-			Weight="0%" />
+			Weight="10%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
-			Weight="0%" />
+			Weight="20%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
-			Weight="0%" />
+			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Money"
-			Weight="0%" />
+			Weight="40%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
-			Weight="0%" />
+			Weight="30%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
-			Weight="0%" />
+			Weight="50%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Shield"
-			Weight="0%" />
+			Weight="60%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Airborne_Force"
-			Weight="0%" />
+			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
-			Weight="0%" />
+			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoRift_Rank3"
-			Weight="0%" />
+			Weight="80%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_FutureTechnology"
-			Weight="0%" />
+			Weight="70%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Ion_Cannon"
-			Weight="0%" />
+			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_T4Tower"
-			Weight="0%" />
+			Weight="100%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="0%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Allied_ChronoSwap"
-			Weight="20%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Allied_TimeBomb"
-			Weight="30%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Allied_Power_Shield"
-			Weight="40%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Allied_T4Tower"
-			Weight="100%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="100%" />
+			Weight="90%"/>
 			
 		<OpeningMove
 			Name="AlliedStandard_EASY"
@@ -402,10 +387,6 @@
 			State="AlliedMinerUpgExpansion_BRUTALNEW"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="CenturyBomberAttackNEW"
-			State="CenturyBomberAttackNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<StrategicState
 			id="BombardmentShipAttack"
 			State="BombardmentShipAttack"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -464,7 +445,11 @@
 		<StrategicState
 			id="CenturyBomberAttack"
 			State="CenturyBomberAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedAirDrop"
+			State="AlliedAirDrop"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedInfantryAttack"
 			State="AlliedInfantryAttack"
@@ -552,12 +537,8 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="AlliedDefenseBuildStateAmphibious"
-			State="AlliedDefenseBuildStateAmphibious"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<BuildState
-			id="AlliedDefenseBuildStateWaterOnly"
-			State="AlliedDefenseBuildStateWaterOnly"
+			id="AlliedDefenseBuildState_RA3UW"
+			State="AlliedDefenseBuildState_RA3UW"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedNeededUnits_Remix"
@@ -578,7 +559,7 @@
 		<BuildState
 			id="AlliedTechBuildState_RemixNew"
 			State="AlliedTechBuildState_RemixNew"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="AlliedLandUnitBuildState_Remix"
 			State="AlliedLandUnitBuildState_Remix"
@@ -705,13 +686,17 @@
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
+			Unit="AlliedBaseDefenseRT"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
 			Unit="AlliedBaseDefenseMGT"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
-			Unit="AlliedBaseDefenseMTT"
+			Unit="AlliedBaseDefense"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedBaseDefenseAdvanced"
 			Cap="10"
@@ -985,7 +970,6 @@
 			<ExcludeThing>AlliedMiner</ExcludeThing>
 			<ExcludeThing>SovietSurveyor</ExcludeThing>
 			<ExcludeThing>JapanRefineryEgg</ExcludeThing>
-			<ExcludeThing>JapanFortressShipEgg</ExcludeThing>
 		</CountAsStructureForBuildPurposesFilter>
 		
 		<InTroubleSkirmishFeedbackControl

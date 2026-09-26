@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBuildStateDefinition 
+		id="AlliedDefenseBuildState_RA3UW">
+	
+		<Heuristic>
+			<ConstantHeuristic/>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseRT"
+			Heuristic="BEST_UNIT_EXPECTED"
+			PercentLow="5%"
+			PercentHigh="10%"/>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseMGT"
+			Heuristic="BEST_UNIT_EXPECTED"
+			PercentLow="15%"
+			PercentHigh="40%"/>
+	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="BEST_UNIT_EXPECTED"
+			PercentLow="50%"
+			PercentHigh="85%"/>
+
+		<BuildEntry
+			Build="AlliedBaseDefenseAdvanced"
+			Heuristic="BEST_UNIT_EXPECTED"
+			PercentLow="25%"
+			PercentHigh="50%"/>
+	
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="BEST_UNIT_EXPECTED"
+			PercentLow="0%"
+			PercentHigh="5%"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

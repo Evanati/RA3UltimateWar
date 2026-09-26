@@ -388,7 +388,6 @@ function OnSovietAntiVehicleVehicleTech1Created(self)
 	ObjectHideSubObjectPermanently( self, "SAVV1_ThrBarrleSkin", true )
 	ObjectHideSubObjectPermanently( self, "SAVV1_ThrTURRET_AddSkin", true )
 
-	
 end
 
 function OnAlliedInfantryFightingCreated(self)
@@ -398,8 +397,9 @@ function OnAlliedInfantryFightingCreated(self)
 	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
 end
 
-function OnAlliedBaseDefenseMGTCreated(self)
-
+function OnAlliedBaseDefenseRTCreated(self)
+	
+	ObjectHideSubObjectPermanently( self, "Upgrade_Default_Missile", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
@@ -419,11 +419,14 @@ function OnAlliedBaseDefenseMGTCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
 	ObjectHideSubObjectPermanently( self, "Tanya", true )
+	
+	ObjectGrantUpgrade( self, "Uprade_IFV_Repair" )
 	
 end
 
-function OnAlliedBaseDefenseMTTCreated(self)
-
+function OnAlliedBaseDefenseMGTCreated(self)
+	
+	ObjectHideSubObjectPermanently( self, "Upgrade_Default_Missile", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
@@ -444,7 +447,31 @@ function OnAlliedBaseDefenseMTTCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
 	ObjectHideSubObjectPermanently( self, "Tanya", true )
 	
-	ObjectGrantUpgrade( self, "Uprade_IFV_MissleTrooper" )
+	ObjectGrantUpgrade( self, "Uprade_IFV_MachineGun" )
+	
+end
+
+function OnAlliedBaseDefenseCreated(self)
+
+	ObjectHideSubObjectPermanently( self, "TURRET_Upg", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead01", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead02", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead03", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead04", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead05", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead06", true )
+	
+	if strfind(ObjectTeamName(self), "Skirmish") ~= nil then
+		ObjectGrantUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" )
+    end
+	
+end
+
+function OnAlliedBaseDefenseUnderpowered(self)
+	
+	if ObjectHasUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" ) == 1 then
+		ObjectRemoveUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" )
+    end
 	
 end
 

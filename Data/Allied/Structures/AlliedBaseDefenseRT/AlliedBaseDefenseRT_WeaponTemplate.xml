@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+    <WeaponTemplate
+		id="ABD_RepairWeapon"
+		FireFX="FX_None"
+		AttackRange="25"
+		RadiusDamageAffects="ALLIES"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		CanFireWhileMoving="true">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+            <DamageNugget
+				Damage="10.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="HEALING"
+				DamageFXType="SOVIET_REPAIR"
+				DeathType="NORMAL">
+                <SpecialObjectFilter
+					Rule="NONE"
+					Include="VEHICLE"
+                    StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
+            </DamageNugget>
+			<AttributeModifierNugget
+				AttributeModifierName="AttributeModifier_UnderRepair">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Include="VEHICLE"
+                    StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
+			</AttributeModifierNugget>
+				
+        </Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>

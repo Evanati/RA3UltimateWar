@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="ABD_MachineGun"		
+		AttackRange="300.0"
+		WeaponSpeed="999999.0"
+		FireSoundPerClip="SOV_Sickle_WeaponFireMS"
+		FireFX="FX_MuzzleSovietSickle"
+		FireVeteranFX="FX_MuzzleSovietSickle"
+		RadiusDamageAffects="ENEMIES"
+		ClipSize="5"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="false"
+		ReAcquireDetailType="PER_CLIP"	
+		ShouldPlayUnderAttackEvaEvent="true"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0s"
+			MaxSeconds="0s" />
+		<Nuggets>
+			<DamageNugget
+				id="DefaultDamageNugget"
+				DelayTimeSeconds="0.0s"
+				Damage="8.0"
+				DamageArc="360d"
+				DamageType="AUTO_CANNON"
+				DamageSubType="NORMAL"
+				DamageFXType="SOVIET_MACHINEGUN"
+				AcceptDamageAdd="true"
+				DrainLifeMultiplier="1"
+				DeathType="NORMAL" />
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>

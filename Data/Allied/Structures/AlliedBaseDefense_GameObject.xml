@@ -1,0 +1,1341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Tags></Tags>
+	
+	<Includes>
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" /> 	
+		<Include type="all" source="ART:ABBaseDefense.w3x" />		
+		<Include type="all"	source="ART:ABBaseDefense_BLD_SKN.w3x" />				
+		<Include type="all"	source="ART:ABBaseDefense_BLD_BLD.w3x" />
+		<Include type="all"	source="ART:ABBaseDefense_BLD_BLDW.w3x" />	
+		<Include type="all" source="ART:ABBaseDefense_FX.w3x" />		
+		<Include type="all"	source="ART:ABBaseDefense_Platform.w3x" />
+		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />	
+		<!-- Base Object -->
+		<Include type="instance" source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	
+	<GameObject
+		id="AlliedBaseDefense"
+		inheritFrom="BaseStructure"
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +COVER +HIDE_IF_FOGGED"
+		Description="Desc:AlliedBaseDefense"
+		TypeDescription="Type:AlliedBaseDefense"
+		RadarPriority="STRUCTURE"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="225d"
+		JustBuiltTime="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="Allies"
+		EditorName="AlliedBaseDefense"
+		EditorSorting="STRUCTURE"
+		BountyValue="0"
+		BuildTime="20"
+		EnergyProduction="-25"
+		EnergyBonus="0"
+		CommandSet="AlliedBaseDefenseCommandSet"
+		SelectPortrait="Portrait_AlliedBaseDefense"
+		ButtonImage="Button_AlliedBaseDefense_on"
+		VoicePriority="0"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CampnessValue="2000"
+		CampnessValueRadius="300"
+		Scale="1"
+		HealthBoxHeightOffset="20"
+		LiveCameraFXPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		StructureRubbleHeight="0"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="0"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="150"
+		VoiceMoveLandToWaterTimeout="5s"
+		VoiceMoveWaterToLandTimeout="5s"
+		VoiceSelectUnderFireTimeout="20s"
+		VoiceSelectUnderFireDamageTime="3s"
+		MaxDistanceForEngaged="150"
+		EngagedStateTimeout="30"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		FiringArc="360"
+		CamouflageDetectorLevel="1"
+		PathPriority="25"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		UnitCategory="STRUCTURE"
+		WeaponCategory="GUN"
+		HasFiredRecentlyTime="2s"
+		ReinvisibilityDelay="0.5s"
+		InvisibilityOpacityMin="0.4"
+		InvisibilityOpacityMax="0.9"
+		SubGroupPriority="500"
+		EvaEventSecondDamageFarFromFirstScanRange="200"
+		EvaEventSecondDamageFarFromFirstTimeoutMS="155">
+		
+		<DisplayName>Name:AlliedBaseDefense</DisplayName>
+		<GameDependency>
+			<RequiredObject>AlliedPowerPlant</RequiredObject>
+		</GameDependency>
+		<ObjectResourceInfo>
+			<BuildCost
+				Account="0"
+				Amount="800" />
+		</ObjectResourceInfo>
+		<ArmorSet
+			Armor="CryoBeamFrozenArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="SECONDARY_DAMAGE" />
+		<ArmorSet
+			Armor="AlliedPrimaryBaseDefenseArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<DisplayColor
+			R="0"
+			G="0"
+			B="0"
+			A="0" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="DEFENSE"
+			AdditionalRotation="0d"
+			BaseBuildingMaxNudges="3"
+			CrushSpeedBonus="0"
+			OutOfRangePenalty="1.3"
+			ConquerMetricsOverrideDamageType="UNDEFINED"
+			ConquerMetricsOverrideAntiMask="ANTI_GROUND ANTI_WATER"
+			ConquerMetricsDpsBonusAgainstDefenses="1"
+			NearResourceNodeType="ORE"
+			DodgeSafetyDistance="300"
+			BlockIfUnpackTargetBuildingCannotBeRebuilt="true"
+			UnitBuilderStandardCombatUnit="false"
+			TargetDuringCrush="false"
+			CanFireUpCliffs="false"
+			DoesSecondaryDamage="false">
+			<ConstructionBaseSelectionCriteria
+				ExcludedBaseTypes="MOST_RECENT_OF_TYPE"
+				PreferredBaseTypes="LAND_CENTERED UNDER_ATTACK"
+				SortOrder="PREFER_MOST_RECENTLY_ATTACKED" />
+		</SkirmishAIInformation>
+		
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_Gun"
+				InitialRecoilSpeed="0.75"
+				MaxRecoilDistance="7"
+				RecoilDamping="2"
+				RecoilSettleSpeed="1"
+				MinLODRequired="LOW"
+				ExtraPublicBone="BONE_CONTACT_POINT_01 BONE_CONTACT_POINT_02 BONE_CONTACT_POINT_03 BONE_CONTACT_POINT_04 BONE_ABBDBEACN BONE_ABBDSCAN BONE_ABBDSPOTLIGHT warhead01 warhead02 warhead03 upwarhead01 upwarhead02 upwarhead03 upwarhead04 upwarhead05 upwarhead06"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBDNEW_SKN"
+						ExtraMesh="false" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXBack" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXBackUp" />
+					<WeaponRecoilBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="warhead" />
+					<WeaponRecoilBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="upwarhead" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeapon" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponUp" />
+					<Turret
+						TurretNameKey="TURRET"
+						TurretArtAngle="0d"
+						TurretPitch="TURRET_PITCH"
+						TurretArtPitch="0d"
+						TurretID="1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBaseDefense_BLD_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBaseDefense_BLD_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SOLD"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBaseDefense_BLD_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Script>
+					    CurDrawableHideSubObjectPermanently("TURRET_Upg")
+						CurDrawableHideSubObjectPermanently("upwarhead01")
+						CurDrawableHideSubObjectPermanently("upwarhead02")
+						CurDrawableHideSubObjectPermanently("upwarhead03")
+						CurDrawableHideSubObjectPermanently("upwarhead04")
+						CurDrawableHideSubObjectPermanently("upwarhead05")
+						CurDrawableHideSubObjectPermanently("upwarhead06")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING OVER_WATER"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="ABBaseDefense_BLD_BLDW"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="2s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="ABBaseDefense_BLD_BLD"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="2s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SOLD"
+					Flags="START_FRAME_LAST"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="ABBaseDefense_BLD_BLD"
+						AnimationMode="ONCE_BACKWARDS"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="2s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_Torpedo"
+				InitialRecoilSpeed="10"
+				MaxRecoilDistance="5"
+				RecoilDamping="1"
+				RecoilSettleSpeed="0.3"
+				MinLODRequired="LOW"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="false">
+					<Model
+						Name="ABTORPEDO_SKN"
+						ExtraMesh="false" />
+					<WeaponFireFXBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_TORPEDOWEAPON_" />
+					<WeaponRecoilBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE_TORPEDOREC_" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_TORPEDOWEAPON_" />
+					<Turret
+						TurretNameKey="BONE_TORPEDO_TURRET"
+						TurretArtAngle="0d"
+						TurretPitch="BONE_TORPEDO_TURRETPITCH"
+						TurretArtPitch="0d"
+						TurretID="2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR"
+					RetainSubObjects="false">
+					<Model
+						Name="ABTORPEDO_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING OVER_WATER"
+					RetainSubObjects="false">
+					<Model
+						Name="ABTORPEDO_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SOLD OVER_WATER"
+					RetainSubObjects="false">
+					<Model
+						Name="ABTORPEDO_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Script> 
+						CurDrawableShowSubObjectPermanently("Bib")
+						CurDrawableHideSubObjectPermanently("Platform")
+						CurDrawableHideSubObjectPermanently("Platform_FX")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDO_01")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDO_03")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDO_02")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_PLANTFORMUNDER3")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_PLANTFORMUNDER2")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_PLANTFORM_AIX")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_PLANTFORMUNDER")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_PLANTFORMCENTER")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_PLANTFORM")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_ABTORPEDOTURRET")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX02")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX01")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING OVER_WATER"
+					Flags="START_FRAME_LAST"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="ABTORPEDO_BLD"
+						AnimationMode="ONCE_BACKWARDS"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+						CurDrawableHideSubObjectPermanently("Bib")
+						CurDrawableShowSubObjectPermanently("Platform")
+						CurDrawableShowSubObjectPermanently("Platform_FX")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_01")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_03")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_02")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER3")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER2")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORM_AIX")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMCENTER")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORM")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_ABTORPEDOTURRET")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX02")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX01")
+					</Script>
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="WaterBuildup_Froth_Tiny"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="WaterBuildup_Mist_Tiny"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_LightsW"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_FlashW"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_LightsW"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_FlashW"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Tiny"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SOLD OVER_WATER"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="ABTORPEDO_BLD"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="2s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script> 
+						CurDrawableHideSubObjectPermanently("Bib")
+						CurDrawableShowSubObjectPermanently("Platform")
+						CurDrawableShowSubObjectPermanently("Platform_FX")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_01")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_03")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_02")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER3")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER2")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORM_AIX")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMCENTER")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORM")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_ABTORPEDOTURRET")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX02")
+						CurDrawableHideSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX01")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="OVER_WATER"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Script>
+						CurDrawableShowSubObjectPermanently("Platform")
+						CurDrawableShowSubObjectPermanently("Platform_FX")
+						CurDrawableHideSubObjectPermanently("Bib")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_01")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_03")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDO_02")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER3")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER2")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORM_AIX")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMUNDER")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORMCENTER")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_PLANTFORM")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_ABTORPEDOTURRET")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX02")
+						CurDrawableShowSubObjectPermanently("NEWSKIN_TORPEDOLIGHTFX01")
+					</Script>
+				</AnimationState>
+			</ScriptedModelDraw>
+		
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_Platform"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBaseDefense_Platform"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SOLD"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBaseDefense_Platform_BLD"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBaseDefense_Platform_BLD"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="IRONCURTAIN"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBDFX"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FROZEN"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBDFX"
+						ExtraMesh="false" />
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="BuildingFrozenMistC10x10x10"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="false"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PARALYZED"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBDFX"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBDFX"
+						ExtraMesh="false" />
+					<ParticleSysBone
+						BoneName="FX_BONE01"
+						FXParticleSystemTemplate="VehicleDamaged_Small_Smoke"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="FX_BONE01"
+						FXParticleSystemTemplate="VehicleDamaged_Small_Fire"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED"
+					RetainSubObjects="false">
+					<Model
+						Name="ABBDFX"
+						ExtraMesh="false" />
+					<ParticleSysBone
+						BoneName="FX_BONE01"
+						FXParticleSystemTemplate="VehicleDamaged_Small_Smoke"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="FX_BONE01"
+						FXParticleSystemTemplate="Damaged_Sparks_Large"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_Scan"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				AttachToBoneInAnotherModule="Bone_ABBDscan"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					ConditionsYes=""
+					RetainSubObjects="false">
+					<Model
+						Name="ALLIEDOUTPOSTSPOT_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					ConditionsYes=""
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Script> 
+						CurDrawableHideSubObjectPermanently("FXSPOTLIGHTNEW")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED UNDERPOWERED"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Script> 
+						CurDrawableHideSubObjectPermanently("FXSPOTLIGHTNEW")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="ALLIEDOUTPOSTSPOT_SCAN"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="0.5"
+						AnimationSpeedFactorMax="0.5"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script> 
+						CurDrawableShowSubObjectPermanently("FXSPOTLIGHTNEW")
+					</Script>
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<SpotlightDraw
+				id="ModuleTag_Draw_Spotlight"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				AttachToBoneInAnotherModule="Bone_ABBDSPOTLIGHT"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false"
+				RefreshTime="2s"
+				SweepTime="1s">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="false">
+					<Model
+						Name="ALLIEDOUTPOSTSPOT_SKN.FXSPOTLIGHTNEW"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNDERPOWERED"
+					RetainSubObjects="false">
+					<Model
+						Name="ALLIEDOUTPOSTSPOT_SKN.FXSPOTLIGHTNEW"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR"
+					RetainSubObjects="false">
+					<Model
+						Name="ALLIEDOUTPOSTSPOT_SKN.FXSPOTLIGHTNEW"
+						ExtraMesh="false" />
+				</ModelConditionState>
+			</SpotlightDraw>
+		</Draws>
+		
+		<Behaviors>
+			<ObjectSMCHelper
+				id="ModuleTag_SMCHelper" />
+			<ObjectDefectionHelper
+				id="ModuleTag_DefectionHelper" />
+			<AttributeModifierPoolUpdate
+				id="ModuleTag_AttributeModifier_Pool" />
+		
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetector"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				DetectionRate="0.4s"
+				DetectionRange="300"
+				IRBeaconParticleSys="OutPostBeacon_yellow"
+				IRParticleSys="OutPostBeaconCircle"
+				IRBrightParticleSys="OutPostBeacon_Red"
+				IRGridParticleSys="OutPostBeacon_Blue"
+				IRParticleSysBone="Bone_ABBDBeacn"
+				RequiredUpgrade="Uprade_BuildingStealthDetect"
+				InitiallyDisabled="false"
+				CanDetectWhileGarrisoned="false"
+				CanDetectWhileContained="false" />
+				
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AutoChooseWeapon="true">
+
+					<!-- Missile Turret (missiles, default) -->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRockets"
+						ForbiddenObjectStatus="WEAPON_UPGRADED_02"/>
+					
+					<!-- Missile Turret (missiles, upgraded) -->
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"
+						Upgrade="Upgrade_AlliedBaseDefenseTech2"/>
+					
+					<TurretSettings
+						TurretTurnRate="360"
+						MinimumPitch="-30d"
+						AllowsPitch="true" 
+						TurretPitchRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="4.0s"
+						MinIdleScanAngle="30.0"
+						MaxIdleScanAngle="90.0"
+						ComeToHaltJiggle="3d">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true">
+						</TurretAITargetChooserData>
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<WeaponSlotTurret
+					ID="2"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AutoChooseWeapon="true">
+
+					<!-- Missile Turret (torpedoes, default) -->
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseTorpedoLauncher"
+						ObjectStatus="OVER_WATER"/>
+					
+					<TurretSettings
+						TurretTurnRate="360"
+						MinimumPitch="-30d"
+						AllowsPitch="true" 
+						TurretPitchRate="180" 
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="4.0s"
+						MinIdleScanAngle="30.0"
+						MaxIdleScanAngle="90.0"
+						ComeToHaltJiggle="3d">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true">
+						</TurretAITargetChooserData>
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_Upgrade_Veteran"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_Upgrade_Elite"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_Upgrade_Heroic"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<Physics
+				id="ModuleTag_Physics"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="1"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="1s"
+				ShockStunnedTimeHigh="1.5s"
+				ShockStandingTime="1.3s"
+				FirstHeight="1.3"
+				SecondHeight="0.33"
+				FirstPercentIndent="66%"
+				BounceDistance="1.3"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="0.33"
+				BounceFirstPercentIndent="66%"
+				BounceSecondPercentIndent="0%"
+				FirstPercentHeight="66%"
+				SecondPercentHeight="0%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="false"
+				AllowBouncing="false"
+				KillWhenRestingOnGround="false"
+				OrientToFlightPath="false"
+				IgnoreTerrainHeight="true" />
+				
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="OffensiveStructures" />
+			
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"
+				Type="UPGRADE"
+				MaxQueueEntries="1">
+			</ProductionUpdate>
+				
+			<ObjectCreationUpgrade
+				id="ModuleTag_ObjectCreationUpgrade"
+				Delay="1440"
+				GrantUpgrade="Upgrade_AlliedBaseDefenseTech2"
+				UseBuildingProduction="true">
+				
+				<TriggeredBy>Upgrade_AlliedBaseDefenseUpgraderAI</TriggeredBy>
+			</ObjectCreationUpgrade>
+			
+			<SubObjectsUpgrade
+				id="ModuleTag_SubObjectsUpgrade"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true">
+				<TriggeredBy>Upgrade_AlliedBaseDefenseTech2</TriggeredBy>
+				<Nugget
+					ShowSubObjects="TURRET_Upg upwarhead01 upwarhead02 upwarhead03 upwarhead04 upwarhead05 upwarhead06"
+					HideSubObjects="TURRET_Def warhead01 warhead02 warhead03"
+					FadeTime="0.5s"
+					WaitBeforeFadeTime="0s"
+					Upgrade="Upgrade_AlliedBaseDefenseTech2"
+					SkipFadeOnCreate="false"
+					HideSubObjectsOnRemove="false"
+					UnHideSubObjectsOnRemove="false">
+					<CustomAnimAndDuration
+						AnimState="USER_2"
+						Frames="0"
+						Trigger="0" />
+				</Nugget>
+			</SubObjectsUpgrade>
+			
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifier"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				AttributeModifier="AttributeModifer_AlliedBaseDefenseTech2">
+				<TriggeredBy>Upgrade_AlliedBaseDefenseTech2</TriggeredBy>
+			</AttributeModifierUpgrade>
+			
+			<BuildingDestructionBehavior
+				id="ModuleTag_BuildingDestructionBehavior"
+				AssociatedModule="ModuleTag_Draw_Gun"
+				MaxDebrisCloudsPerSecond="2"
+				FillerMesh="ABBDNEW_SKN.BASE">
+				<DieMuxData
+					ExemptStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL" />
+				<Item
+					BonePrefix="BONE_CONTACT_POINT_"
+					CreationObject="AlliedNewDebris"
+					FlingVelocity="50" />
+			</BuildingDestructionBehavior>
+			
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_NAD">
+				<DieMuxData
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="SUICIDED" />
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_SD">
+				<DieMuxData
+					ExemptStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="SUICIDED"/>
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_AD">
+				<DieMuxData
+					ExemptStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="SUICIDED" />
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_FAD">
+				<DieMuxData
+					RequiredStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"/>
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie_A">
+				<DieMuxData
+					ExemptStatus="OVER_WATER UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="SUICIDED" />
+			</CreateObjectDie>
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie_FA">
+				<DieMuxData
+					ExemptStatus="OVER_WATER"
+					RequiredStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie_WA">
+				<DieMuxData
+					ExemptStatus="UNDER_FROZEN"
+					RequiredStatus="OVER_WATER"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="SUICIDED" />
+			</CreateObjectDie>
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie_WFA">
+				<DieMuxData
+					RequiredStatus="OVER_WATER UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie_NS">
+				<DieMuxData
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="SUICIDED"/>
+			</CreateObjectDie>
+			
+			<DestroyDie
+				id="ModuleTag_DestroyDie_NA">
+				<DieMuxData
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL"
+					DeathTypesForbidden="SUICIDED" />
+			</DestroyDie>
+			<DestroyDie
+				id="ModuleTag_DestroyDie_FS">
+				<DieMuxData
+					RequiredStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="SUICIDED"/>
+			</DestroyDie>
+			
+			<StructureUnpackUpdate
+				id="ModuleTag_StructureUnpack"
+				UnpackTime="2.0s" />
+				
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />				
+				
+			<LUAEventList
+				id="ModuleTag_LUAEventList"
+				EventListName="AlliedBaseDefenseFunctions" />
+		</Behaviors>
+
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StateMachine="OffensiveStructureAIStateMachine">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"
+					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY">	
+				</UnitAITargetChooserData>	
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1000" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<PlacementShape
+				Type= "BOX"
+				MajorRadius = "15.0"
+				MinorRadius = "15.0"
+				Height = "3.0" >
+				<Offset
+					x = "0.0"
+					y = "0.0"
+					z = "0.0" />
+			</PlacementShape>
+			<Shape 
+				Type= "BOX"
+				MajorRadius = "4.02"
+				MinorRadius = "5.25141"
+				Height = "19.227"
+				ContactPointGeneration = "STRUCTURE" >
+				<Offset
+					x = "0.0"
+					y = "0.0"
+					z = "0.0" />
+			</Shape>
+			<Shape 
+				Type= "BOX"
+				MajorRadius = "8.93276"
+				MinorRadius = "8.02577"
+				Height = "7.9023"
+				ContactPointGeneration = "STRUCTURE" >
+				<Offset
+					x = "0.0"
+					y = "0.0"
+					z = "12.9889" />
+			</Shape>
+			<Shape
+				Type= "BOX"
+				MajorRadius = "7.5"
+				MinorRadius = "10.0"
+				Height = "6.09" >
+				<Offset
+					x = "0.0"
+					y = "0.0"
+					z = "0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:ALL_TurretSelect"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+<!--
+			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+-->
+		</AudioArraySound>
+		<VisionInfo
+			VisionRange="310"
+			ShroudClearingRange="500" />
+	</GameObject>
+</AssetDeclaration>

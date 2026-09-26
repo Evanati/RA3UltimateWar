@@ -2,23 +2,22 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<AIBuildStateDefinition 
-		id="AlliedDefenseBuildStateAmphibious">
-	
+		id="JapanDefenseBuildState_RA3UW">
+		
 		<Heuristic>
-			<ConstantHeuristic
-				Weight="1.0" />
+			<ConstantHeuristic/>
 		</Heuristic>
-	
-		<BuildEntry
-			Build="AlliedBaseDefenseMGT"
+		
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
 			Heuristic="BEST_UNIT_EXPECTED"/>
-	
-		<BuildEntry
-			Build="AlliedBaseDefenseAdvanced"
+			
+		<BuildEntry 
+			Build="JapanBaseDefenseAdvancedEgg" 
 			Heuristic="BEST_UNIT_EXPECTED"/>
-	
-		<BuildEntry
-			Build="ABWeatherControl"
+			
+		<BuildEntry 
+			Build="JapanNewTower" 
 			Heuristic="BEST_UNIT_EXPECTED"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

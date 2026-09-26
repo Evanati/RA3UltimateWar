@@ -7,7 +7,7 @@
 		PersonalityUIName="Personality:Oleg"
 		SecondsTillTargetsExpire="5"
 		DesiredExcessPowerBuffer="100"
-		BaseCompactness="0.75"
+		BaseCompactness="0.80"
 		DefaultThreatFindRadius="10000"
 		UnitBuilderCostEffectivenessWeight="1"
 		UnitBuilderMoneyVersusTimePreference="0.5"
@@ -140,61 +140,46 @@
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Battlefield_Officer"
-			Weight="0%" />
+			Weight="20%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
-			Weight="0%" />
+			Weight="10%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Flame_Fuel"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_ProductionKickbacks"
-			Weight="0%" />
+			Weight="40%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MineField"
-			Weight="0%" />
+			Weight="30%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_DesolatorBomb_Rank1"
-			Weight="0%" />
+			Weight="50%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_CrushPuppies"
-			Weight="0%" />
+			Weight="60%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Tesla_OverLoad"
-			Weight="0%" />
+			Weight="70%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_ProductionBonus_Soviet"
-			Weight="0%" />
+			Weight="80%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Air_Marshal"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_OrbitalRefuse_Rank3"
-			Weight="0%" />
+			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_T4Tower"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_IronFortress"
-			Weight="0%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Soviet_DropBunker"
-			Weight="20%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
-			Weight="20%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
-			Weight="40%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Soviet_OrbitalRefuse_Rank3"
-			Weight="100%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Soviet_IronFortress"
-			Weight="100%" />
+			Weight="90%" />
 			
 		<OpeningMove
 			Name="SovietStandard_EASY"
@@ -556,8 +541,8 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="SovietDefenseBuildStateAmphibious"
-			State="SovietDefenseBuildStateAmphibious"
+			id="SovietDefenseBuildState_RA3UW"
+			State="SovietDefenseBuildState_RA3UW"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="SovietNeededUnits_Remix"
@@ -987,7 +972,6 @@
 			<ExcludeThing>AlliedMiner</ExcludeThing>
 			<ExcludeThing>SovietSurveyor</ExcludeThing>
 			<ExcludeThing>JapanRefineryEgg</ExcludeThing>
-			<ExcludeThing>JapanFortressShipEgg</ExcludeThing>
 		</CountAsStructureForBuildPurposesFilter>
 		
 		<InTroubleSkirmishFeedbackControl

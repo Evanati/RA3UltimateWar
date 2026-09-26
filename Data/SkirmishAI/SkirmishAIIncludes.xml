@@ -53,16 +53,13 @@
 			
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedDefenseBuildStateAmphibious_AIBuildStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedDefenseBuildState_AIBuildStateDefinition.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedDefenseBuildStateWaterOnly_AIBuildStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/JapanDefenseBuildState_AIBuildStateDefinition.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/JapanDefenseBuildStateAmphibious_AIBuildStateDefinition.xml"/>
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/SovietDefenseBuildStateAmphibious_AIBuildStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/SovietDefenseBuildState_AIBuildStateDefinition.xml"/>
 			
 		<Include 
 			type="all" 

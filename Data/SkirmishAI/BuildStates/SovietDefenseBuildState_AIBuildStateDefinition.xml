@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<AIBuildStateDefinition 
-		id="SovietDefenseBuildStateAmphibious">
+		id="SovietDefenseBuildState_RA3UW">
     
 		<Heuristic>
 			<ConstantHeuristic/>
@@ -10,18 +10,18 @@
 		
 		<BuildEntry 
 			Build="SovietBaseDefenseGround" 
-			Heuristic="BEST_UNIT_ACTUAL"/>
+			Heuristic="BEST_UNIT_EXPECTED"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAir" 
-			Heuristic="BEST_UNIT_ACTUAL"/>
+			Heuristic="BEST_UNIT_EXPECTED"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAdvanced" 
-			Heuristic="BEST_UNIT_ACTUAL"/>
+			Heuristic="BEST_UNIT_EXPECTED"/>
 		
 		<BuildEntry 
 			Build="SovietNewTower" 
-			Heuristic="BEST_UNIT_ACTUAL"/>
+			Heuristic="BEST_UNIT_EXPECTED"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>
