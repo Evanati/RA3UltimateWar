@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  
+  <!-- Allied Build Time and Cost as of 05.02.08 -->
+  <!-- AlliedPowerPlant = 10  seconds Cost = 800  -->
+  <!-- AlliedBarracks   = 10  seconds Cost = 500  -->
+  <!-- AlliedRefinery   = 20 seconds Cost = 2000 -->
+  <!-- AlliedWarFactory = 20 seconds Cost = 2000 -->
+  <!-- AlliedNavalYard  = 20 seconds Cost = 2000 -->
+  <!-- AlliedTech2      = 15 seconds Cost = 1000 -->
+  <!-- AlliedAirfield   = 15 seconds Cost = 1000 -->
+  
+  <SkirmishOpeningMove
+    id="AlliedStandard"
+    Side="PlayerTemplate:Allies">
+    <Order Build="AlliedBarracks" />
+    <Order Time="10s" Account="PRODUCTION" Deposit="2000" />
+    <Order Build="AlliedPowerPlant" />
+    <Order Build="AlliedRefinery" />
+    <Order Build="AlliedRefinery" />
+    <Order Build="AlliedPowerPlant" />
+    <Order Build="AlliedWarFactory" />
+    <!--
+    <Order Time="90s" />
+    -->
+    <Order Build="AlliedAntiInfantryVehicle_Ground" />
+    <Order Build="AlliedAntiInfantryVehicle_Ground" />
+    <Order Build="AlliedAntiInfantryVehicle_Ground" />
+    <Order Time="120s" />
+  </SkirmishOpeningMove>
+  
+</AssetDeclaration>

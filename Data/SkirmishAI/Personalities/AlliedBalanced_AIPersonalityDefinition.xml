@@ -176,10 +176,10 @@
 			Weight="100%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_T4Tower"
-			Weight="90%"/>
+			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="0%"/>
+			Weight="90%"/>
 			
 		<OpeningMove
 			Name="AlliedStandard_EASY"

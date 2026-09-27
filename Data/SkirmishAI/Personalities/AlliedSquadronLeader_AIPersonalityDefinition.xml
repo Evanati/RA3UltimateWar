@@ -137,10 +137,10 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
-			Weight="10%"/>
+			Weight="20%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Military_Supplies"
-			Weight="20%"/>
+			Weight="10%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
 			Weight="0%"/>
