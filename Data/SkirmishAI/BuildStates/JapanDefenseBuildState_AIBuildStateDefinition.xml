@@ -11,18 +11,17 @@
 		<BuildEntry 
 			Build="JapanBaseDefenseEgg" 
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="60%"/>
+			PercentLow="30%"
+			PercentHigh="100%"/>
 			
 		<BuildEntry 
 			Build="JapanBaseDefenseAdvancedEgg" 
 			Heuristic="RANDOM_UNIT"
-			PercentLow="60%"
-			PercentHigh="95%"/>
+			PercentLow="0%"
+			PercentHigh="30%"/>
+			
 		<BuildEntry 
 			Build="JapanNewTower" 
-			Heuristic="RANDOM_UNIT"
-			PercentLow="95%"
-			PercentHigh="100%"/>
+			Heuristic="BEST_UNIT_EXPECTED"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

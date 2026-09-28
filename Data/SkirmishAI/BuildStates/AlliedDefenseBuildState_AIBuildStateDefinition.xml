@@ -11,31 +11,29 @@
 		<BuildEntry
 			Build="AlliedBaseDefenseRT"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="85%"
-			PercentHigh="95%"/>
+			PercentLow="0%"
+			PercentHigh="10%"/>
 		
 		<BuildEntry
 			Build="AlliedBaseDefenseMGT"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="70%"
-			PercentHigh="85%"/>
+			PercentLow="10%"
+			PercentHigh="25%"/>
 	
 		<BuildEntry
 			Build="AlliedBaseDefense"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="50%"/>
+			PercentLow="50%"
+			PercentHigh="100%"/>
 
 		<BuildEntry
 			Build="AlliedBaseDefenseAdvanced"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="50%"
-			PercentHigh="70%"/>
+			PercentLow="25%"
+			PercentHigh="50%"/>
 	
 		<BuildEntry
 			Build="ABWeatherControl"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="95%"
-			PercentHigh="100%"/>
+			Heuristic="BEST_UNIT_EXPECTED"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

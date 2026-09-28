@@ -182,7 +182,7 @@
 			Weight="90%"/>
 			
 		<OpeningMove
-			Name="AlliedStandard_EASY"
+			Name="AlliedSpecialForces_EASY"
 			Weight="100%"
 			Difficulty="EASY">
 			<Heuristic>
@@ -194,21 +194,9 @@
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedIsland_EASY"
+			Name="AlliedSpecialForces_MEDIUM"
 			Weight="100%"
-			Difficulty="EASY">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false" />
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedSpecialForces_BRUTAL_New"
-			Weight="100%"
-			Difficulty="MEDIUM HARD BRUTAL">
+			Difficulty="MEDIUM">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
@@ -218,15 +206,27 @@
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedIsland_New"
+			Name="AlliedSpecialForces_HARD"
 			Weight="100%"
-			Difficulty="MEDIUM HARD BRUTAL">
+			Difficulty="HARD">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
 					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false" />
+					PathExists="true" />
+			</Heuristic>
+		</OpeningMove>
+		<OpeningMove
+			Name="AlliedSpecialForces_BRUTAL"
+			Weight="100%"
+			Difficulty="BRUTAL">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Land"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="true" />
 			</Heuristic>
 		</OpeningMove>
 		
@@ -683,22 +683,6 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<SpecificUnitCap
 			Unit="AlliedArtilleryVehicle"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseRT"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseMGT"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefense"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseAdvanced"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			

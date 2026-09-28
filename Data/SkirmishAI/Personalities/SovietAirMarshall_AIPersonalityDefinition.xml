@@ -149,10 +149,10 @@
 			Weight="40%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_ProductionKickbacks"
-			Weight="0%" />
+			Weight="30%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MineField"
-			Weight="30%" />
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
 			Weight="60%" />

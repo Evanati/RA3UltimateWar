@@ -182,7 +182,7 @@
 			Weight="90%"/>
 			
 		<OpeningMove
-			Name="AlliedStandard_EASY"
+			Name="AlliedBalanced_EASY"
 			Weight="100%"
 			Difficulty="EASY">
 			<Heuristic>
@@ -194,21 +194,9 @@
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedIsland_EASY"
+			Name="AlliedBalanced_MEDIUM"
 			Weight="100%"
-			Difficulty="EASY">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false"/>
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedStandard"
-			Weight="100%"
-			Difficulty="MEDIUM HARD">
+			Difficulty="MEDIUM">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
@@ -218,9 +206,9 @@
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedBalanced_BRUTAL_New"
+			Name="AlliedBalanced_HARD"
 			Weight="100%"
-			Difficulty="MEDIUM HARD BRUTAL">
+			Difficulty="HARD">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
@@ -230,15 +218,15 @@
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedIsland_New"
+			Name="AlliedBalanced_BRUTAL"
 			Weight="100%"
-			Difficulty="MEDIUM HARD BRUTAL">
+			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
 					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false"/>
+					PathExists="true"/>
 			</Heuristic>
 		</OpeningMove>
 		
@@ -711,22 +699,6 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedArtilleryVehicle"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseRT"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseMGT"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefense"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseAdvanced"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			

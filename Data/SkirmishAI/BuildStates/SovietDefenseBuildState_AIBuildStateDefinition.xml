@@ -11,25 +11,23 @@
 		<BuildEntry 
 			Build="SovietBaseDefenseGround" 
 			Heuristic="RANDOM_UNIT"
-			PercentLow="80%"
-			PercentHigh="95%"/>
+			PercentLow="0%"
+			PercentHigh="15%"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAir" 
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="55%"/>
+			PercentLow="40%"
+			PercentHigh="100%"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAdvanced" 
 			Heuristic="RANDOM_UNIT"
-			PercentLow="55%"
-			PercentHigh="80%"/>
+			PercentLow="15%"
+			PercentHigh="40%"/>
 		
 		<BuildEntry 
 			Build="SovietNewTower" 
-			Heuristic="RANDOM_UNIT"
-			PercentLow="95%"
-			PercentHigh="100%"/>
+			Heuristic="BEST_UNIT_EXPECTED"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

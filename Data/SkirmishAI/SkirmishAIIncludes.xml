@@ -34,6 +34,16 @@
 			
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Allied/AlliedBalancedOpeningMoves_SkirmishOpeningMove.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Allied/AlliedSpecialForcesOpeningMoves_SkirmishOpeningMove.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Allied/AlliedSquadronLeaderOpeningMoves_SkirmishOpeningMove.xml"/>
+			
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCapturePriorityTech_AIStrategicStateDefinition.xml"/>
 		<Include 
 			type="all" 

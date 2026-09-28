@@ -176,10 +176,10 @@
 			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_T4Tower"
-			Weight="90%" />
+			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NavalPower"
-			Weight="0%" />
+			Weight="90%" />
 			
 		<OpeningMove
 			Name="JapanStandard_EASY"

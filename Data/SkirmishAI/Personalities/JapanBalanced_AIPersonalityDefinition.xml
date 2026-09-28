@@ -167,19 +167,19 @@
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_EmperorsRage_Rank3"
-			Weight="70%" />
-		<PowerChoice
-			PlayerPower="PlayerTech_Japan_BalloonAttack_Rank3"
 			Weight="80%" />
 		<PowerChoice
+			PlayerPower="PlayerTech_Japan_BalloonAttack_Rank3"
+			Weight="70%" />
+		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Nano_Storm"
-			Weight="100%" />
+			Weight="90%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_T4Tower"
-			Weight="0%" />
+			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NavalPower"
-			Weight="90%" />
+			Weight="0%" />
 			
 		<OpeningMove
 			Name="JapanStandard_EASY"
