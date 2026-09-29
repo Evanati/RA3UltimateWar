@@ -137,19 +137,19 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
-			Weight="20%"/>
+			Weight="100%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Military_Supplies"
-			Weight="10%"/>
+			Weight="50%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
-			Weight="40%"/>
+			Weight="100%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Money"
-			Weight="30%"/>
+			Weight="50%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
 			Weight="0%"/>
@@ -161,19 +161,19 @@
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Airborne_Force"
-			Weight="60%"/>
+			Weight="100%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
-			Weight="80%"/>
+			Weight="100%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoRift_Rank3"
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_FutureTechnology"
-			Weight="70%"/>
+			Weight="50%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Ion_Cannon"
-			Weight="90%"/>
+			Weight="50%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_T4Tower"
 			Weight="0%"/>
@@ -182,74 +182,39 @@
 			Weight="100%"/>
 			
 		<OpeningMove
-			Name="AlliedVindicatorRush_EASY"
-			Weight="100%"
-			Difficulty="EASY" />
-		<OpeningMove
-			Name="AlliedVindicatorRush"
-			Weight="100%"
-			Difficulty="MEDIUM HARD">
-			<Heuristic>
-				<ObjectOfTypeExistsHeuristic
-					Location="Water Land"
-					PassIfExists="false">
-					<ObjectFilter
-						Rule="ANY"
-						Relationship="ENEMIES"
-						Alignment="NONE"
-						Include=""
-						Exclude="">
-						<IncludeThing>JapanConstructionYard</IncludeThing>
-					</ObjectFilter>
-				</ObjectOfTypeExistsHeuristic>
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedSquadronLeader_EASY"
-			Weight="100%"
-			Difficulty="EASY">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true" />
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedSquadronLeader_MEDIUM"
-			Weight="100%"
-			Difficulty="MEDIUM">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true" />
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedSquadronLeader_HARD"
-			Weight="100%"
-			Difficulty="HARD">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true" />
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedSquadronLeader_BRUTAL"
+			Name="AlliedSquadronLeader_MainLand_Brutal"
 			Weight="100%"
 			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true" />
+					PathExists="true"/>
+			</Heuristic>
+		</OpeningMove>
+		<OpeningMove
+			Name="AlliedSquadronLeader_Island_Brutal"
+			Weight="100%"
+			Difficulty="BRUTAL">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Land"
+					ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="false"/>
+			</Heuristic>
+		</OpeningMove>
+		<OpeningMove
+			Name="AlliedSquadronLeader_Water_Brutal"
+			Weight="100%"
+			Difficulty="BRUTAL">
+			<Heuristic>
+				<PathToTargetHeuristic
+					Surface="Water"
+					ObjectTypeToUseForTest="AlliedScoutInfantry"
+					LocomotorConditionToUseForTest="NORMAL"
+					PathExists="true"/>
 			</Heuristic>
 		</OpeningMove>
 		
@@ -462,8 +427,8 @@
 			State="HurricaneHarrassment"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="CenturyBomberAttack"
-			State="CenturyBomberAttack"
+			id="CenturyBomberAttackNEW"
+			State="CenturyBomberAttackNEW"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedAirDrop"

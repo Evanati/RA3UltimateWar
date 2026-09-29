@@ -137,25 +137,25 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_PointDefenseDrones"
-			Weight="20%" />
+			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NanoInjection"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NanoExtract"
-			Weight="10%" />
+			Weight="50%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Ambush"
-			Weight="30%" />
+			Weight="50%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Enhanced_Miner"
-			Weight="40%" />
+			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_EnhancedKamikaze"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_AdvancedMissilePacks"
-			Weight="60%" />
+			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NijiaMacha"
 			Weight="50%" />
@@ -167,13 +167,13 @@
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_EmperorsRage_Rank3"
-			Weight="80%" />
+			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_BalloonAttack_Rank3"
-			Weight="70%" />
+			Weight="50%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Nano_Storm"
-			Weight="90%" />
+			Weight="50%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_T4Tower"
 			Weight="100%" />

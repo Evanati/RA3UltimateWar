@@ -13,85 +13,16 @@
 	<!-- AlliedTech2      = 15 seconds Cost = 1000 -->
 	<!-- AlliedAirfield   = 15 seconds Cost = 1000 -->
 	
-	<SkirmishOpeningMove
-		id="AlliedBalanced_EASY"
-		Side="PlayerTemplate:Allies">
-		
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="30s" Build="AlliedCrane" />
-		<Order Time="90s" Build="AlliedPowerPlant" />
-		<Order Time="90s" Build="AlliedRefinery" />
-		<Order Time="120s" Build="AlliedRefinery" />
-		<Order Time="150s" Build="AlliedPowerPlant" />
-		<Order Time="180s" Build="AlliedBarracks" />
-		<Order Time="180s" Build="AlliedWarFactory" />
-		<Order Time="210s" Build="AlliedPowerPlant" />
-		<Order Time="240s" Build="AlliedWarFactory" />
-		<Order Time="240s" Build="AlliedAirfield" />
-		<Order Time="300s" Build="AlliedPowerPlant" />
-		<Order Time="300s" Build="AlliedWarFactory" />
-		<Order Time="330s" Build="AlliedAirfield" />
-		<Order Time="360s" Build="AlliedPowerPlant" />
-		<Order Time="390s" Build="Upgrade_AlliedTech2" />
-		<Order Time="390s" Build="Upgrade_AlliedTech2" />
-		<Order Time="450s"/>
-	</SkirmishOpeningMove>
+	<!-- EASY -->
 	
-	<SkirmishOpeningMove
-		id="AlliedBalanced_MEDIUM"
-		Side="PlayerTemplate:Allies">
-		
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="20s" Build="AlliedCrane" />
-		<Order Time="60s" Build="AlliedPowerPlant" />
-		<Order Time="60s" Build="AlliedRefinery" />
-		<Order Time="80s" Build="AlliedRefinery" />
-		<Order Time="100s" Build="AlliedPowerPlant" />
-		<Order Time="120s" Build="AlliedBarracks" />
-		<Order Time="120s" Build="AlliedWarFactory" />
-		<Order Time="140s" Build="AlliedPowerPlant" />
-		<Order Time="160s" Build="AlliedWarFactory" />
-		<Order Time="160s" Build="AlliedAirfield" />
-		<Order Time="200s" Build="AlliedPowerPlant" />
-		<Order Time="200s" Build="AlliedWarFactory" />
-		<Order Time="220s" Build="AlliedAirfield" />
-		<Order Time="240s" Build="AlliedPowerPlant" />
-		<Order Time="260s" Build="Upgrade_AlliedTech2" />
-		<Order Time="260s" Build="Upgrade_AlliedTech2" />
-		<Order Time="300s"/>
-	</SkirmishOpeningMove>
+	<!-- MEDIUM -->
 	
-	<SkirmishOpeningMove
-		id="AlliedBalanced_HARD"
-		Side="PlayerTemplate:Allies">
-		
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="15s" Build="AlliedCrane" />
-		<Order Time="45s" Build="AlliedPowerPlant" />
-		<Order Time="45s" Build="AlliedRefinery" />
-		<Order Time="60s" Build="AlliedRefinery" />
-		<Order Time="75s" Build="AlliedPowerPlant" />
-		<Order Time="90s" Build="AlliedBarracks" />
-		<Order Time="90s" Build="AlliedWarFactory" />
-		<Order Time="105s" Build="AlliedPowerPlant" />
-		<Order Time="120s" Build="AlliedWarFactory" />
-		<Order Time="120s" Build="AlliedAirfield" />
-		<Order Time="150s" Build="AlliedPowerPlant" />
-		<Order Time="150s" Build="AlliedWarFactory" />
-		<Order Time="165s" Build="AlliedAirfield" />
-		<Order Time="180s" Build="AlliedPowerPlant" />
-		<Order Time="195s" Build="Upgrade_AlliedTech2" />
-		<Order Time="195s" Build="Upgrade_AlliedTech2" />
-		<Order Time="225s"/>
-	</SkirmishOpeningMove>
+	<!-- HARD -->
 	
+	<!-- BRUTAL -->
 	<SkirmishOpeningMove
-		id="AlliedBalanced_BRUTAL"
+		id="AlliedBalanced_MainLand_Brutal"
 		Side="PlayerTemplate:Allies">
-		
 		<Order Time="0s" Build="AlliedBarracks" />
 		<Order Time="0s" Build="AlliedDogHouse" />
 		<Order Time="10s" Build="AlliedCrane" />
@@ -104,12 +35,58 @@
 		<Order Time="70s" Build="AlliedPowerPlant" />
 		<Order Time="80s" Build="AlliedWarFactory" />
 		<Order Time="80s" Build="AlliedAirfield" />
-		<Order Time="100s" Build="AlliedPowerPlant" />
+		<Order Time="95s" Build="AlliedPowerPlant" />
 		<Order Time="100s" Build="AlliedWarFactory" />
-		<Order Time="110s" Build="AlliedAirfield" />
+		<Order Time="105s" Build="AlliedAirfield" />
 		<Order Time="120s" Build="AlliedPowerPlant" />
+		<Order Time="120s" Build="Upgrade_AlliedTech2" />
 		<Order Time="130s" Build="Upgrade_AlliedTech2" />
-		<Order Time="130s" Build="Upgrade_AlliedTech2" />
+		<Order Time="145s"/>
+	</SkirmishOpeningMove>
+	
+	<SkirmishOpeningMove
+		id="AlliedBalanced_Island_Brutal"
+		Side="PlayerTemplate:Allies">
+		<Order Time="0s" Build="AlliedBarracks" />
+		<Order Time="0s" Build="AlliedDogHouse" />
+		<Order Time="10s" Build="AlliedCrane" />
+		<Order Time="30s" Build="AlliedPowerPlant" />
+		<Order Time="30s" Build="AlliedRefinery" />
+		<Order Time="40s" Build="AlliedRefinery" />
+		<Order Time="50s" Build="AlliedPowerPlant" />
+		<Order Time="60s" Build="AlliedNavalYard" />
+		<Order Time="60s" Build="AlliedWarFactory" />
+		<Order Time="80s" Build="AlliedPowerPlant" />
+		<Order Time="80s" Build="AlliedNavalYard" />
+		<Order Time="90s" Build="AlliedAirfield" />
+		<Order Time="100s" Build="AlliedPowerPlant" />
+		<Order Time="105s" Build="AlliedWarFactory" />
+		<Order Time="110s" Build="AlliedAirfield" />
+		<Order Time="125s" Build="AlliedPowerPlant" />
+		<Order Time="125s" Build="Upgrade_AlliedTech2" />
+		<Order Time="135s" Build="Upgrade_AlliedTech2" />
 		<Order Time="150s"/>
+	</SkirmishOpeningMove>
+	
+	<SkirmishOpeningMove
+		id="AlliedBalanced_Water_Brutal"
+		Side="PlayerTemplate:Allies">
+		<Order Time="0s" Build="AlliedCrane" />
+		<Order Time="20s" Build="AlliedPowerPlant" />
+		<Order Time="20s" Build="AlliedRefinery" />
+		<Order Time="30s" Build="AlliedRefinery" />
+		<Order Time="40s" Build="AlliedPowerPlant" />
+		<Order Time="50s" Build="AlliedNavalYard" />
+		<Order Time="50s" Build="AlliedNavalYard" />
+		<Order Time="70s" Build="AlliedPowerPlant" />
+		<Order Time="70s" Build="AlliedAirfield" />
+		<Order Time="80s" Build="AlliedNavalYard" />
+		<Order Time="85s" Build="AlliedPowerPlant" />
+		<Order Time="95s" Build="AlliedAirfield" />
+		<Order Time="100s" Build="AlliedNavalYard" />
+		<Order Time="110s" Build="AlliedPowerPlant" />
+		<Order Time="120s" Build="Upgrade_AlliedTech2" />
+		<Order Time="120s" Build="Upgrade_AlliedTech2" />
+		<Order Time="135s"/>
 	</SkirmishOpeningMove>
 </AssetDeclaration>
