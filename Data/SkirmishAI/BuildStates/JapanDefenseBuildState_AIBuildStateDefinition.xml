@@ -10,14 +10,17 @@
 		
 		<BuildEntry 
 			Build="JapanBaseDefenseEgg" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
 			
 		<BuildEntry 
 			Build="JapanBaseDefenseAdvancedEgg" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="4.0"/>
 			
 		<BuildEntry 
 			Build="JapanNewTower" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

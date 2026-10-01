@@ -137,49 +137,49 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
-			Weight="100%"/>
+			Weight="150%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Military_Supplies"
-			Weight="50%"/>
+			Weight="100%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
-			Weight="100%"/>
+			Weight="300%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Money"
-			Weight="50%"/>
+			Weight="200%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
-			Weight="50%"/>
+			Weight="400%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Shield"
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Airborne_Force"
-			Weight="100%"/>
+			Weight="600%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
-			Weight="100%"/>
+			Weight="1200%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoRift_Rank3"
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_FutureTechnology"
-			Weight="50%"/>
+			Weight="800%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Ion_Cannon"
-			Weight="50%"/>
+			Weight="500000%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_T4Tower"
 			Weight="0%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="100%"/>
+			Weight="1000000%"/>
 			
 		<OpeningMove
 			Name="AlliedSquadronLeader_MainLand_Brutal"
@@ -188,7 +188,7 @@
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
-					ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
 					PathExists="true"/>
 			</Heuristic>
@@ -200,7 +200,7 @@
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
-					ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
+					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
 					PathExists="false"/>
 			</Heuristic>
@@ -212,7 +212,7 @@
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Water"
-					ObjectTypeToUseForTest="AlliedScoutInfantry"
+					ObjectTypeToUseForTest="SovietScoutInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
 					PathExists="true"/>
 			</Heuristic>
@@ -447,33 +447,17 @@
 			State="AlliedExpansion_BRUTALNEW"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="AlliedCaptureTech_EASY"
-			State="AlliedCaptureTech_EASY"
-			Difficulty="EASY" />
+			id="AlliedCaptureLowPriorityTech_Brutal"
+			State="AlliedCaptureLowPriorityTech_Brutal"
+			Difficulty="BRUTAL"/>
 		<StrategicState
-			id="AlliedCaptureTech_MEDIUM"
-			State="AlliedCaptureTech_MEDIUM"
-			Difficulty="MEDIUM" />
+			id="AlliedCaptureMediumPriorityTech_Brutal"
+			State="AlliedCaptureMediumPriorityTech_Brutal"
+			Difficulty="BRUTAL"/>
 		<StrategicState
-			id="AlliedCapturePriorityTech_HARD"
-			State="AlliedCapturePriorityTech_HARD"
-			Difficulty="HARD" />
-		<StrategicState
-			id="AlliedCaptureNonPriorityTech_HARD"
-			State="AlliedCaptureNonPriorityTech_HARD"
-			Difficulty="HARD" />
-		<StrategicState
-			id="AlliedCapturePriorityTech_BRUTALNEW"
-			State="AlliedCapturePriorityTech_BRUTALNEW"
-			Difficulty="BRUTAL" />
-		<StrategicState
-			id="AlliedCaptureNonPriorityTech_BRUTALNEW"
-			State="AlliedCaptureNonPriorityTech_BRUTALNEW"
-			Difficulty="BRUTAL" />
-		<StrategicState
-			id="AlliedCaptureVehicleHealTech"
-			State="AlliedCaptureVehicleHealTech"
-			Difficulty="HARD BRUTAL" />
+			id="AlliedCaptureHighPriorityTech_Brutal"
+			State="AlliedCaptureHighPriorityTech_Brutal"
+			Difficulty="BRUTAL"/>
 		<StrategicState
 			id="SquardonLeader_Attack_LandNew"
 			State="SquardonLeader_Attack_LandNew"
@@ -502,6 +486,10 @@
 			id="SquardonLeader_KodiakAttack"
 			State="SquardonLeader_KodiakAttack"
 			Difficulty="HARD BRUTAL" />
+		<StrategicState
+			id="AlliedNavalBase"
+			State="AlliedNavalBase"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<BudgetState
 			id="OpeningMoveBudget_New"

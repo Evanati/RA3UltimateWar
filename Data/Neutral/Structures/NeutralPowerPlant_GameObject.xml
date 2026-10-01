@@ -32,7 +32,7 @@
 		BuildPlacementTypeFlag="MAIN_STRUCTURE"
 		EditorName="NeutralPowerPlant"
 		Description="Desc:NeutralPowerPlant"
-		TypeDescription="Type:AlliedPowerPlant">
+		TypeDescription="Type:NeutralPowerPlant">
 		<DisplayName
 			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:NeutralPowerPlant</DisplayName>
 		<ObjectResourceInfo>

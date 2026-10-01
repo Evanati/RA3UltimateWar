@@ -137,37 +137,37 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_DropBunker"
-			Weight="50%" />
+			Weight="100%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Battlefield_Officer"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
-			Weight="100%" />
+			Weight="150%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Flame_Fuel"
-			Weight="50%" />
+			Weight="200%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_ProductionKickbacks"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MineField"
-			Weight="100%" />
+			Weight="300%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
-			Weight="50%" />
+			Weight="400%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_DesolatorBomb_Rank1"
-			Weight="100%" />
+			Weight="600%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_CrushPuppies"
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Tesla_OverLoad"
-			Weight="100%" />
+			Weight="1200%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_ProductionBonus_Soviet"
-			Weight="50%" />
+			Weight="800%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Air_Marshal"
 			Weight="0%" />
@@ -176,69 +176,45 @@
 			Weight="0%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_T4Tower"
-			Weight="100%" />
+			Weight="1000000%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_IronFortress"
-			Weight="50%" />
+			Weight="500000%" />
 			
 		<OpeningMove
-			Name="SovietStandard_EASY"
+			Name="SovietShockSpecialist_MainLand_Brutal"
 			Weight="100%"
-			Difficulty="EASY">
+			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
 					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true" />
+					PathExists="true"/>
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="SovietIsland_EASY"
+			Name="SovietShockSpecialist_Island_Brutal"
 			Weight="100%"
-			Difficulty="EASY">
+			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
 					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false" />
+					PathExists="false"/>
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="SovietTerrorDroneRush_New"
-			Weight="50%"
-			Difficulty="MEDIUM HARD BRUTAL">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true" />
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="SovietSickleRush_New"
-			Weight="50%"
-			Difficulty="MEDIUM HARD BRUTAL">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true" />
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="SovietIsland_New"
+			Name="SovietShockSpecialist_Water_Brutal"
 			Weight="100%"
-			Difficulty="MEDIUM HARD BRUTAL">
+			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					Surface="Water"
+					ObjectTypeToUseForTest="SovietScoutInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false" />
+					PathExists="true"/>
 			</Heuristic>
 		</OpeningMove>
 		
@@ -463,33 +439,17 @@
 			State="SovietExpansion_BRUTALNEW"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="SovietCaptureTech_EASY"
-			State="SovietCaptureTech_EASY"
-			Difficulty="EASY" />
+			id="SovietCaptureLowPriorityTech_Brutal"
+			State="SovietCaptureLowPriorityTech_Brutal"
+			Difficulty="BRUTAL"/>
 		<StrategicState
-			id="SovietCaptureTech_MEDIUM"
-			State="SovietCaptureTech_MEDIUM"
-			Difficulty="MEDIUM" />
+			id="SovietCaptureMediumPriorityTech_Brutal"
+			State="SovietCaptureMediumPriorityTech_Brutal"
+			Difficulty="BRUTAL"/>
 		<StrategicState
-			id="SovietCapturePriorityTech_HARD"
-			State="SovietCapturePriorityTech_HARD"
-			Difficulty="HARD" />
-		<StrategicState
-			id="SovietCaptureNonPriorityTech_HARD"
-			State="SovietCaptureNonPriorityTech_HARD"
-			Difficulty="HARD" />
-		<StrategicState
-			id="SovietCapturePriorityTech_BRUTALNEW"
-			State="SovietCapturePriorityTech_BRUTALNEW"
-			Difficulty="BRUTAL" />
-		<StrategicState
-			id="SovietCaptureNonPriorityTech_BRUTALNEW"
-			State="SovietCaptureNonPriorityTech_BRUTALNEW"
-			Difficulty="BRUTAL" />
-		<StrategicState
-			id="SovietCaptureVehicleHealTech"
-			State="SovietCaptureVehicleHealTech"
-			Difficulty="HARD BRUTAL" />
+			id="SovietCaptureHighPriorityTech_Brutal"
+			State="SovietCaptureHighPriorityTech_Brutal"
+			Difficulty="BRUTAL"/>
 		<StrategicState
 			id="SickleHarrassment_New"
 			State="SickleHarrassment_New"
@@ -526,6 +486,10 @@
 			id="BalancedAttackWater_EASY"
 			State="BalancedAttackWater_EASY"
 			Difficulty="EASY" />
+		<StrategicState
+			id="SovietNavalBase"
+			State="SovietNavalBase"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<BudgetState
 			id="OpeningMoveBudget_New"
@@ -556,6 +520,10 @@
 			id="SovietCraneBuildStateNEW"
 			State="SovietCraneBuildStateNEW"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BuildState
+			id="SovietNavalYardBuildStateNEW"
+			State="SovietNavalYardBuildStateNEW"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="SovietNonPathDependentStructureBuildState"
 			State="SovietNonPathDependentStructureBuildState"

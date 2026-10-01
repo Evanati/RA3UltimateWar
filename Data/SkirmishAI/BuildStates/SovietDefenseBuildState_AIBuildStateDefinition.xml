@@ -10,18 +10,22 @@
 		
 		<BuildEntry 
 			Build="SovietBaseDefenseGround" 
-			Heuristic="BEST_UNIT_ACTUAL"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAir" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAdvanced" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5"/>
 		
 		<BuildEntry 
 			Build="SovietNewTower" 
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

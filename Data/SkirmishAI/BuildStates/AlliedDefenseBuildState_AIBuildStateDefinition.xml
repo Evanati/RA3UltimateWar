@@ -10,22 +10,27 @@
 		
 		<BuildEntry
 			Build="AlliedBaseDefenseRT"
-			Heuristic="BEST_UNIT_ACTUAL"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
 		
 		<BuildEntry
 			Build="AlliedBaseDefenseMGT"
-			Heuristic="BEST_UNIT_ACTUAL"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
 	
 		<BuildEntry
 			Build="AlliedBaseDefense"
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
 
 		<BuildEntry
 			Build="AlliedBaseDefenseAdvanced"
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0"/>
 	
 		<BuildEntry
 			Build="ABWeatherControl"
-			Heuristic="BEST_UNIT_EXPECTED"/>
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

@@ -4,14 +4,14 @@
 	<Tags></Tags>
 	<Includes></Includes>
 	
-	<!-- AlliedPowerPlant = 10  seconds -->
-	<!-- AlliedBarracks   = 10  seconds -->
-	<!-- AlliedDogHouse   = 5  seconds -->
-	<!-- AlliedRefinery   = 20 seconds -->
-	<!-- AlliedWarFactory = 20 seconds -->
-	<!-- AlliedNavalYard  = 20 seconds -->
-	<!-- AlliedTech2      = 15 seconds -->
-	<!-- AlliedAirfield   = 15 seconds -->
+	<!-- JapanPowerPlantEgg = 4 seconds -->
+	<!-- JapanRefineryEgg   = 4 seconds -->
+	<!-- JapanBarracksEgg   = 4 seconds -->
+	<!-- JapanWarFactoryEgg = 4 seconds -->
+	<!-- JapanNavalYardEgg  = 4 seconds -->
+	<!-- Upgrade_JapanBarracksTech2  = 30 seconds -->
+	<!-- Upgrade_JapanWarFactoryTech2  = 30 seconds -->
+	<!-- Upgrade_JapanNavalYardTech2  = 30 seconds -->
 	
 	<!-- EASY -->
 	
@@ -21,32 +21,31 @@
 	
 	<!-- BRUTAL -->
 	<SkirmishOpeningMove
-		id="AlliedSpecialForces_MainLand_Brutal"
-		Side="PlayerTemplate:Allies">
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="10s" Build="AlliedCrane" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="60s" Build="AlliedBarracks" />
-		<Order Time="60s" Build="AlliedWarFactory" />
-		<Order Time="70s" Build="AlliedPowerPlant" />
-		<Order Time="80s" Build="AlliedAirfield" />
-		<Order Time="80s" Build="AlliedWarFactory" />
-		<Order Time="95s" Build="AlliedPowerPlant" />
-		<Order Time="100s" Build="AlliedAirfield" />
-		<Order Time="105s" Build="AlliedAirfield" />
-		<Order Time="115s" Build="AlliedPowerPlant" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="125s" Build="Upgrade_AlliedTech2" />
-		<Order Time="140s"/>
+		id="JapanFleetCommand_MainLand_Brutal"
+		Side="PlayerTemplate:Japan">
+		<Order Time="0s" Build="JapanPowerPlantEgg" />
+		<Order Time="4s" Build="JapanPowerPlantEgg" />
+		<Order Time="8s" Build="JapanBarracksEgg" />
+		<Order Time="23s" Build="JapanRefineryEgg" />
+		<Order Time="27s" Build="JapanRefineryEgg" />
+		<Order Time="57s" Build="JapanPowerPlantEgg" />
+		<Order Time="61s" Build="JapanNavalYardEgg" />
+		<Order Time="65s" Build="JapanWarFactoryEgg" />
+		<Order Time="85s" Build="JapanPowerPlantEgg" />
+		<Order Time="89s" Build="JapanNavalYardEgg" />
+		<Order Time="93s" Build="JapanWarFactoryEgg" />
+		<Order Time="113s" Build="JapanPowerPlantEgg" />
+		<Order Time="117s" Build="JapanNavalYardEgg" />
+		<Order Time="121s" Build="JapanNavalYardEgg" />
+		<Order Time="125s" Build="Upgrade_JapanWarFactoryTech2" />
+		<Order Time="125s" Build="Upgrade_JapanNavalYardTech2" />
+		<Order Time="125s" Build="Upgrade_JapanNavalYardTech2" />
+		<Order Time="155s"/>
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove
-		id="AlliedSpecialForces_Island_Brutal"
-		Side="PlayerTemplate:Allies">
+		id="JapanFleetCommand_Island_Brutal"
+		Side="PlayerTemplate:Japan">
 		<Order Time="0s" Build="AlliedBarracks" />
 		<Order Time="0s" Build="AlliedDogHouse" />
 		<Order Time="10s" Build="AlliedCrane" />
@@ -69,8 +68,8 @@
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove
-		id="AlliedSpecialForces_Water_Brutal"
-		Side="PlayerTemplate:Allies">
+		id="JapanFleetCommand_Water_Brutal"
+		Side="PlayerTemplate:Japan">
 		<Order Time="0s" Build="AlliedCrane" />
 		<Order Time="20s" Build="AlliedPowerPlant" />
 		<Order Time="20s" Build="AlliedPowerPlant" />

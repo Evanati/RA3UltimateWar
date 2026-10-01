@@ -994,11 +994,15 @@
 	
 //  NeutralPowerPlant
 	Name:NeutralPowerPlant
-		"Neutral Power Plant"
+		"Power Plant"
 	End
 	
 	Desc:NeutralPowerPlant
-		"Produces clean renewable energy."
+		"These structures safely use clean-burning, sustainable fuels to power civilian areas."
+	End
+	
+	Type:NeutralPowerPlant
+		"Civilian Power Structure"
 	End
 	
 // RemixAlliedPowerPlantSP
