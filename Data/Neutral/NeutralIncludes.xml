@@ -18,6 +18,9 @@
 			source="DATA:RA3UltimateWar/Data/Neutral/Structures/HospitalTechStructure_GameObject.xml"/>
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/Neutral/Structures/NeutralPowerPlant_GameObject.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/Neutral/Structures/ObservationPostTechStructure_GameObject.xml"/>
 		<Include 
 			type="all" 

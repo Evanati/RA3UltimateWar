@@ -992,7 +992,14 @@
 		"Jump to the target and attack."
 	End	
 	
+//  NeutralPowerPlant
+	Name:NeutralPowerPlant
+		"Neutral Power Plant"
+	End
 	
+	Desc:NeutralPowerPlant
+		"Produces clean renewable energy."
+	End
 	
 // RemixAlliedPowerPlantSP
 	Name:ButtonABPP_MoneyOn

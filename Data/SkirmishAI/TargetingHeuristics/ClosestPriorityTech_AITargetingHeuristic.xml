@@ -62,6 +62,13 @@
 		MinDistanceFromEnemy="450.0"/>
 		
 	<AITargetingHeuristic
+		id="ClosestPowerTechHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="FS_TECHNOLOGY"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="450.0"/>
+		
+	<AITargetingHeuristic
 		id="ClosestControlTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CASTLE_CENTER"
@@ -71,7 +78,7 @@
 	<AITargetingHeuristic
 		id="ClosestTechBuildingHeuristic"
 		HeuristicType="TechBuilding"
-		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE CASTLE_KEEP CAVALRY MONSTER SIEGE_TOWER FS_RADAR CASTLE_CENTER"
+		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE CASTLE_KEEP CAVALRY MONSTER SIEGE_TOWER FS_RADAR FS_TECHNOLOGY CASTLE_CENTER"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="500.0"/>
 </AssetDeclaration>
