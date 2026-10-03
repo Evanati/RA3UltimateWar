@@ -137,49 +137,49 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_DropBunker"
-			Weight="0%" />
+			Weight="1%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Battlefield_Officer"
-			Weight="150%" />
+			Weight="4%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
-			Weight="100%" />
+			Weight="2%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Flame_Fuel"
-			Weight="0%" />
+			Weight="8%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_ProductionKickbacks"
-			Weight="300%" />
+			Weight="16%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MineField"
-			Weight="200%" />
+			Weight="32%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
-			Weight="0%" />
+			Weight="128%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_DesolatorBomb_Rank1"
-			Weight="400%" />
+			Weight="64%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_CrushPuppies"
-			Weight="600%" />
+			Weight="256%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Tesla_OverLoad"
-			Weight="800%" />
+			Weight="512%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_ProductionBonus_Soviet"
-			Weight="1200%" />
+			Weight="2048%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Air_Marshal"
-			Weight="0%" />
+			Weight="1024%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_OrbitalRefuse_Rank3"
-			Weight="1000000%" />
+			Weight="8192%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_T4Tower"
-			Weight="0%" />
+			Weight="4096%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_IronFortress"
-			Weight="500000%" />
+			Weight="16384%" />
 			
 		<OpeningMove
 			Name="SovietBalanced_MainLand_Brutal"

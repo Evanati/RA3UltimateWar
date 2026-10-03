@@ -137,49 +137,49 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
-			Weight="150%"/>
+			Weight="4%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Military_Supplies"
-			Weight="0%"/>
+			Weight="1%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
-			Weight="100%"/>
+			Weight="2%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
-			Weight="200%"/>
+			Weight="16%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Money"
-			Weight="0%"/>
+			Weight="8%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
-			Weight="300%"/>
+			Weight="32%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
-			Weight="600%"/>
+			Weight="256%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Shield"
-			Weight="0%"/>
+			Weight="64%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Airborne_Force"
-			Weight="400%"/>
+			Weight="128%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
-			Weight="800%"/>
+			Weight="1024%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoRift_Rank3"
-			Weight="0%"/>
+			Weight="512%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_FutureTechnology"
-			Weight="1200%"/>
+			Weight="2048%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Ion_Cannon"
-			Weight="1000000%"/>
+			Weight="16384%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_T4Tower"
-			Weight="0%"/>
+			Weight="4096%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="500000%"/>
+			Weight="8192%"/>
 			
 		<OpeningMove
 			Name="AlliedBalanced_MainLand_Brutal"

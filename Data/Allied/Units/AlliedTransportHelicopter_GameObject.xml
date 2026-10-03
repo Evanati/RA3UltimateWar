@@ -11,30 +11,29 @@
 			source="DATA:BaseObjects/BaseVehicle.xml" />
 	</Includes>
 	<GameObject
-		id="AlliedMarine1"
+		id="AlliedTransportHelicopter"
 		inheritFrom="BaseVehicle"
 		SelectPortrait="Portrait_PresidentHeli"
 		ButtonImage="Button_PresidentHeli"
 		Side="Allies"
-		EditorSorting="CAMPAIGN_UNITS"
+		EditorSorting="UNITS"
 		TransportSlotCount="20"
-		BuildTime="24"
+		BuildTime="15"
 		CommandSet="SovietAntiGroundAircraftCommandSet"
-		KindOf="CAN_CAST_REFLECTIONS CAN_ATTACK SELECTABLE SCORE AIRCRAFT VEHICLE ASSAULT_AIRCRAFT LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_BE_FAVORITE_UNIT SCORE LIMITED_PRODUCTION_AIRCRAFT TRANSPORT"
+		KindOf="CAN_CAST_REFLECTIONS SELECTABLE SCORE AIRCRAFT VEHICLE LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_BE_FAVORITE_UNIT TRANSPORT"
 		RadarPriority="UNIT"
 		ThreatLevel="10"
 		ProductionQueueType="AIRCRAFT"
 		UnitCategory="AIRCRAFT"
-		WeaponCategory="MISSILE"
 		VoicePriority="148"
-		EditorName="AlliedMarine1"
-		Description="Desc:AlliedMarine1"
-		TypeDescription="Type:AlliedMarine1"
+		EditorName="AlliedTransportHelicopter"
+		Description="Desc:AlliedTransportHelicopter"
+		TypeDescription="Type:AlliedTransportHelicopter"
 		HealthBoxHeightOffset="30">
 		<DisplayName
-			xai:joinAction="Replace">Name:AlliedMarine1</DisplayName>
+			xai:joinAction="Replace">Name:AlliedTransportHelicopter</DisplayName>
 		<ObjectResourceInfo>
-			<BuildCost Account="=$ACCOUNT_ORE" Amount="1200"/>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="1000"/>
 		</ObjectResourceInfo>
 		<ArmorSet
 			Armor="AlliedAntiGroundAircraftArmor"
@@ -91,25 +90,10 @@
 					<Model
 						Name="NUMarine1" />
 				</ModelConditionState>
-
 			</ScriptedModelDraw>
-	
 		</Draws>
+		
 		<Behaviors>
-			<WeaponSetUpdate
-				id="ModuleTag_WeaponSetUpdate">
-				<WeaponSlotHardpoint
-					ID="1">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="AlliedAntiGroundAircraftMissilePodWeapon"
-						ForbiddenObjectStatus="WEAPON_UPGRADED_01"/>
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="AlliedAntiGroundAircraftMissilePodWeapon_AirPower"
-						ObjectStatus="WEAPON_UPGRADED_01"/>
-				</WeaponSlotHardpoint>
-			</WeaponSetUpdate>
 			<Physics
 				id="ModuleTag_Physics" 
 				GravityMultiplier="30" />
@@ -137,7 +121,7 @@
 				id="ModuleTag_Contain"
 				ObjectStatusOfContained="UNSELECTABLE NO_ATTACK"
 				ObjectStatusWhileContaining="CONTAINER_OCCUPIED"
-				ContainMax="5"
+				ContainMax="3"
 				AllowEnemiesInside="false"
 				AllowAlliesInside="true"
 				AllowNeutralInside="false"
@@ -162,21 +146,9 @@
 						Rule="NONE"
 						Include="INFANTRY" />
 				</PassengerData>
-				
-				<!--
-				<PassengerData
-					BonePrefix="SUANTIGROUNDAIRCRAFT"
-					MaxPassengers="1"
-					SlingUnderBone="true">
-					<Filter
-						Rule="NONE"
-						Include="VEHICLE" />
-				</PassengerData>
-				-->
-				
 			</TransportContain>
-
 		</Behaviors>
+		
 		<AI>
 			<JetAIUpdate
 				id="ModuleTag_AIUpdate"
@@ -186,11 +158,13 @@
 					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY"/>
 			</JetAIUpdate>
 		</AI>
+		
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
 				MaxHealth="600" />
 		</Body>
+		
 		<Geometry
 			IsSmall="false">
 			<Shape
@@ -209,22 +183,17 @@
 					z="0.0" />
 			</Shape>
 		</Geometry>
-<!--
-		<AudioArrayVoice>
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceAttack" AudioType="voiceAttack" />
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceCreate" AudioType="voiceCreated" />
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceMove" AudioType="voiceMove" />
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceSelect" AudioType="voiceSelect" />
-		</AudioArrayVoice>
--->
+
 		<AudioArraySound>
 			<AudioEntry Sound="A06_PresidentialHelicopter_MoveLoop" AudioType="soundAmbient" />
 			<AudioEntry Sound="A06_PresidentialHelicopter_MoveStart" AudioType="soundMoveStart" />
 		</AudioArraySound>
+		
 		<VisionInfo
 			VisionRange="300"
 			ShroudClearingRange="400" />
 	</GameObject>
+	
 	<ObjectCreationList
 		id="NUMarine1_Collapse_Die_OCL">
 		<CreateObject

@@ -10,6 +10,9 @@
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedBaseDefenseRT_LogicCommand.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommands/ConstructAlliedTransportHelicopter_LogicCommand.xml"/>
 	
 		<Include 
 			type="all" 

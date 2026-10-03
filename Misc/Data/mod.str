@@ -1004,6 +1004,19 @@
 	Type:NeutralPowerPlant
 		"Civilian Power Structure"
 	End
+
+//  AlliedTransportHelicopter
+	Name:AlliedTransportHelicopter
+		"Black Hawk"
+	End
+	
+	Desc:AlliedTransportHelicopter
+		"The Allies' go to transport helicopter for infantry units. Has no offensive capabilities."
+	End
+	
+	Type:AlliedTransportHelicopter
+		"Infantry Transport Helicopter"
+	End
 	
 // RemixAlliedPowerPlantSP
 	Name:ButtonABPP_MoneyOn
