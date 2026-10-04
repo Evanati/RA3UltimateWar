@@ -32,14 +32,14 @@
 		<Order Time="61s" Build="JapanBarracksEgg" />
 		<Order Time="65s" Build="JapanWarFactoryEgg" />
 		<Order Time="85s" Build="JapanPowerPlantEgg" />
-		<Order Time="89s" Build="JapanNavalYardEgg" />
-		<Order Time="93s" Build="JapanWarFactoryEgg" />
+		<Order Time="89s" Build="JapanBarracksEgg" />
+		<Order Time="93s" Build="JapanNavalYardEgg" />
 		<Order Time="113s" Build="JapanPowerPlantEgg" />
-		<Order Time="117s" Build="JapanNavalYardEgg" />
-		<Order Time="121s" Build="JapanWarFactoryEgg" />
+		<Order Time="117s" Build="JapanWarFactoryEgg" />
+		<Order Time="121s" Build="JapanNavalYardEgg" />
+		<Order Time="125s" Build="Upgrade_JapanBarracksTech2" />
 		<Order Time="125s" Build="Upgrade_JapanBarracksTech2" />
 		<Order Time="125s" Build="Upgrade_JapanWarFactoryTech2" />
-		<Order Time="125s" Build="Upgrade_JapanNavalYardTech2" />
 		<Order Time="155s"/>
 	</SkirmishOpeningMove>
 	

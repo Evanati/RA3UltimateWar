@@ -16,7 +16,7 @@
 		<BuildEntry 
 			Build="JapanBaseDefenseAdvancedEgg" 
 			Heuristic="FEWEST_UNIT"
-			CountModifier="4.0"/>
+			CountModifier="3.0"/>
 			
 		<BuildEntry 
 			Build="JapanNewTower" 

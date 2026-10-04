@@ -93,6 +93,12 @@
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedDefenseBuildState_AIBuildStateDefinition.xml"/>
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedAirfieldBuildStateRandom_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedAntiGroundAircraftBuildState_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/JapanDefenseBuildState_AIBuildStateDefinition.xml"/>
 		<Include 
 			type="all" 

@@ -146,13 +146,13 @@
 			Weight="4%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Flame_Fuel"
-			Weight="16%" />
+			Weight="16" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_ProductionKickbacks"
-			Weight="32%" />
+			Weight="8%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MineField"
-			Weight="8%" />
+			Weight="32%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
 			Weight="64%" />
@@ -176,10 +176,10 @@
 			Weight="4096%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_T4Tower"
-			Weight="8192%" />
+			Weight="16384%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_IronFortress"
-			Weight="16384%" />
+			Weight="8192%" />
 			
 		<OpeningMove
 			Name="SovietShockSpecialist_MainLand_Brutal"

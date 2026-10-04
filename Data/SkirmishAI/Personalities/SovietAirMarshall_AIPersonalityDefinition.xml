@@ -137,10 +137,10 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_DropBunker"
-			Weight="4%" />
+			Weight="2%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Battlefield_Officer"
-			Weight="2%" />
+			Weight="4%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
 			Weight="1%" />
@@ -149,10 +149,10 @@
 			Weight="32%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_ProductionKickbacks"
-			Weight="8%" />
+			Weight="16%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MineField"
-			Weight="16%" />
+			Weight="8%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
 			Weight="256%" />

@@ -149,10 +149,10 @@
 			Weight="32%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Money"
-			Weight="16%"/>
+			Weight="8%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
-			Weight="8%"/>
+			Weight="16%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
 			Weight="128%"/>
@@ -553,8 +553,8 @@
 			State="AlliedAntiAirOnlyBuildState"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
-			id="AlliedAntiGroundAircraftBuildState_Remix"
-			State="AlliedAntiGroundAircraftBuildState_Remix"
+			id="AlliedAntiGroundAircraftBuildState_RA3UW"
+			State="AlliedAntiGroundAircraftBuildState_RA3UW"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<BuildState
 			id="AlliedBarracksBuildState_RANDOM_Remix"
@@ -569,8 +569,8 @@
 			State="AlliedNavalYardBuildState_RANDOM"
 			Difficulty="EASY" />
 		<BuildState
-			id="AlliedAirfieldBuildState_RANDOM_Remix"
-			State="AlliedAirfieldBuildState_RANDOM_Remix"
+			id="AlliedAirfieldBuildStateRandom_RA3UW"
+			State="AlliedAirfieldBuildStateRandom_RA3UW"
 			Difficulty="EASY" />
 			
 		<SpecificUnitCap

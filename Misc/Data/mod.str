@@ -663,7 +663,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseRT
-		"A specialized repair station with both direct and indirect repairing capabilities for anything mechanical."
+		"A specialized repair station with direct/indirect repairing capabilities for anything mechanical."
 	End
 	
 // AlliedBaseDefenseMGT
@@ -685,7 +685,7 @@
 	End	
 	
 	Desc:AlliedBaseDefense
-		"A comprehensive anti-stealth missile defense system. Includes torpedoes if built on water."
+		"A comprehensive missile defense system. Includes torpedoes if built on water."
 	End
 
 	NAME:UpgradeAlliedBaseDefenseTech2
@@ -1007,15 +1007,15 @@
 
 //  AlliedTransportHelicopter
 	Name:AlliedTransportHelicopter
-		"Black Hawk"
+		"S-93K Patriot"
 	End
 	
 	Desc:AlliedTransportHelicopter
-		"The Allies' go to transport helicopter for infantry units. Has no offensive capabilities."
+		"The Allies' go-to infantry transport helicopter. Has limited offensive capabilities."
 	End
 	
 	Type:AlliedTransportHelicopter
-		"Infantry Transport Helicopter"
+		"Infantry Air Transport"
 	End
 	
 // RemixAlliedPowerPlantSP

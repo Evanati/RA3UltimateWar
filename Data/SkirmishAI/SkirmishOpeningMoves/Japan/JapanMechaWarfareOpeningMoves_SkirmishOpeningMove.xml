@@ -30,7 +30,7 @@
 		<Order Time="27s" Build="JapanRefineryEgg" />
 		<Order Time="57s" Build="JapanPowerPlantEgg" />
 		<Order Time="61s" Build="JapanWarFactoryEgg" />
-		<Order Time="65s" Build="JapanNavalYardEgg" />
+		<Order Time="65s" Build="JapanWarFactoryEgg" />
 		<Order Time="85s" Build="JapanPowerPlantEgg" />
 		<Order Time="89s" Build="JapanWarFactoryEgg" />
 		<Order Time="93s" Build="JapanNavalYardEgg" />

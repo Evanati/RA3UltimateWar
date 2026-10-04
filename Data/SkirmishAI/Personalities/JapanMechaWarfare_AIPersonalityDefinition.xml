@@ -146,10 +146,10 @@
 			Weight="4%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Ambush"
-			Weight="8%" />
+			Weight="16%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Enhanced_Miner"
-			Weight="16%" />
+			Weight="8%" />
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_EnhancedKamikaze"
 			Weight="32%" />

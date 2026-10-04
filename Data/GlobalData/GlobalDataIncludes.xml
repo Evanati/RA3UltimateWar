@@ -16,6 +16,12 @@
 	
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedAirfieldCommandSet/AlliedAirfieldCommandSet_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedAirfieldCommandSet/AlliedAirfieldCommandSetStrato_LogicCommandSet.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/GlobalData/LogicCommandSets/AlliedConstructionYardCommandSet/AlliedConstructionYardCommandSetBase_LogicCommandSet.xml"/>
 		<Include 
 			type="all" 
