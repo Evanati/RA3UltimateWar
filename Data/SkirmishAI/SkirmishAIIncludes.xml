@@ -34,32 +34,78 @@
 			
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Allied/AlliedBalancedOpeningMoves_SkirmishOpeningMove.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Allied/AlliedSpecialForcesOpeningMoves_SkirmishOpeningMove.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/JapanCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Allied/AlliedSquadronLeaderOpeningMoves_SkirmishOpeningMove.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/JapanCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Japan/JapanBalancedOpeningMoves_SkirmishOpeningMove.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/SovietCapturePriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Japan/JapanFleetCommandOpeningMoves_SkirmishOpeningMove.xml"/>
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/SovietCaptureNonPriorityTech_AIStrategicStateDefinition.xml"/>
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Japan/JapanMechaWarfareOpeningMoves_SkirmishOpeningMove.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Soviet/SovietBalancedOpeningMoves_SkirmishOpeningMove.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Soviet/SovietAirMarshallOpeningMoves_SkirmishOpeningMove.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishOpeningMoves/Soviet/SovietShockSpecialistOpeningMoves_SkirmishOpeningMove.xml"/>
+			
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCaptureHighPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCaptureMediumPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/AlliedCaptureLowPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/JapanCaptureHighPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/JapanCaptureMediumPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/JapanCaptureLowPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/SovietCaptureHighPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/SovietCaptureMediumPriorityTech_AIStrategicStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/StrategicStates/SovietCaptureLowPriorityTech_AIStrategicStateDefinition.xml"/>
 			
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedDefenseBuildState_AIBuildStateDefinition.xml"/>
 		<Include 
 			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedAirfieldBuildStateRandom_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/AlliedAntiGroundAircraftBuildState_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/JapanDefenseBuildState_AIBuildStateDefinition.xml"/>
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/SovietDefenseBuildState_AIBuildStateDefinition.xml"/>
+		<Include 
+			type="all" 
+			source="DATA:RA3UltimateWar/Data/SkirmishAI/BuildStates/SovietNavalYardBuildStateNEW_AIBuildStateDefinition.xml"/>
 			
 		<Include 
 			type="all" 

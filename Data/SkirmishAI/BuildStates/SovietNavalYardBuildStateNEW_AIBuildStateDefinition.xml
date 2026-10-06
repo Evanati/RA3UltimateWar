@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBuildStateDefinition
+		id="SovietNavalYardBuildStateNEW">
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<TimerHeuristic
+				StartTime="200s"
+				EndTime="-1s"
+				CountFrom="MAP_START" />
+			<IntervalHeuristic
+				IntervalTime="120s"
+				ActiveTime="30s"
+				CountFrom="MAP_START" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic
+				Distance="0"
+				MinEnemyValue="0"
+				EnemyNearby="false" />
+		</Heuristic>
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="CONSTANT"
+			PercentLow="0%"
+			PercentHigh="0%"
+			ExpectedEfficiencyWeight="0.4"
+			ActualEfficiencyWeight="0.6"
+			SampleSizeForFullWeight="10000"
+			MinTime="0s"
+			ForceTime="99999s"
+			BlockIfThingNearFactoryDistance="150"
+			CountModifier="1"
+			Score="5" />
+	</AIBuildStateDefinition>
+</AssetDeclaration>

@@ -26,7 +26,7 @@
 		BuildTime="25"
 		EnergyProduction="-30"
 		CommandSet=""
-		KindOf="-NOT_AUTOACQUIRABLE +POWERED +COVER"
+		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +POWERED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
 		CampnessValue="3000"

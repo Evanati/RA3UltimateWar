@@ -137,54 +137,54 @@
 			
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
-			Weight="20%"/>
+			Weight="4%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Military_Supplies"
-			Weight="0%"/>
+			Weight="1%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
-			Weight="10%"/>
+			Weight="2%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
-			Weight="30%"/>
+			Weight="16%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Money"
-			Weight="0%"/>
+			Weight="8%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
-			Weight="40%"/>
+			Weight="32%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
-			Weight="60%"/>
+			Weight="256%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Power_Shield"
-			Weight="0%"/>
+			Weight="64%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Airborne_Force"
-			Weight="50%"/>
+			Weight="128%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
-			Weight="70%"/>
+			Weight="1024%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoRift_Rank3"
-			Weight="0%"/>
+			Weight="512%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_FutureTechnology"
-			Weight="80%"/>
+			Weight="2048%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Ion_Cannon"
-			Weight="100%"/>
+			Weight="16384%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_T4Tower"
-			Weight="90%"/>
+			Weight="4096%"/>
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Zeus_Warship"
-			Weight="0%"/>
+			Weight="8192%"/>
 			
 		<OpeningMove
-			Name="AlliedStandard_EASY"
+			Name="AlliedBalanced_MainLand_Brutal"
 			Weight="100%"
-			Difficulty="EASY">
+			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
@@ -194,9 +194,9 @@
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedIsland_EASY"
+			Name="AlliedBalanced_Island_Brutal"
 			Weight="100%"
-			Difficulty="EASY">
+			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
 					Surface="Land"
@@ -206,39 +206,15 @@
 			</Heuristic>
 		</OpeningMove>
 		<OpeningMove
-			Name="AlliedStandard"
+			Name="AlliedBalanced_Water_Brutal"
 			Weight="100%"
-			Difficulty="MEDIUM HARD">
+			Difficulty="BRUTAL">
 			<Heuristic>
 				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+					Surface="Water"
+					ObjectTypeToUseForTest="SovietScoutInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
 					PathExists="true"/>
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedBalanced_BRUTAL_New"
-			Weight="100%"
-			Difficulty="MEDIUM HARD BRUTAL">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true"/>
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="AlliedIsland_New"
-			Weight="100%"
-			Difficulty="MEDIUM HARD BRUTAL">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false"/>
 			</Heuristic>
 		</OpeningMove>
 		
@@ -451,8 +427,8 @@
 			State="HurricaneHarrassment"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="CenturyBomberAttack"
-			State="CenturyBomberAttack"
+			id="CenturyBomberAttackNEW"
+			State="CenturyBomberAttackNEW"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedAirDrop"
@@ -471,33 +447,17 @@
 			State="AlliedExpansion_BRUTALNEW"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedCaptureTech_EASY"
-			State="AlliedCaptureTech_EASY"
-			Difficulty="EASY"/>
-		<StrategicState
-			id="AlliedCaptureTech_MEDIUM"
-			State="AlliedCaptureTech_MEDIUM"
-			Difficulty="MEDIUM"/>
-		<StrategicState
-			id="AlliedCapturePriorityTech_HARD"
-			State="AlliedCapturePriorityTech_HARD"
-			Difficulty="HARD"/>
-		<StrategicState
-			id="AlliedCaptureNonPriorityTech_HARD"
-			State="AlliedCaptureNonPriorityTech_HARD"
-			Difficulty="HARD"/>
-		<StrategicState
-			id="AlliedCapturePriorityTech_BRUTALNEW"
-			State="AlliedCapturePriorityTech_BRUTALNEW"
+			id="AlliedCaptureLowPriorityTech_Brutal"
+			State="AlliedCaptureLowPriorityTech_Brutal"
 			Difficulty="BRUTAL"/>
 		<StrategicState
-			id="AlliedCaptureNonPriorityTech_BRUTALNEW"
-			State="AlliedCaptureNonPriorityTech_BRUTALNEW"
+			id="AlliedCaptureMediumPriorityTech_Brutal"
+			State="AlliedCaptureMediumPriorityTech_Brutal"
 			Difficulty="BRUTAL"/>
 		<StrategicState
-			id="AlliedCaptureVehicleHealTech"
-			State="AlliedCaptureVehicleHealTech"
-			Difficulty="HARD BRUTAL"/>
+			id="AlliedCaptureHighPriorityTech_Brutal"
+			State="AlliedCaptureHighPriorityTech_Brutal"
+			Difficulty="BRUTAL"/>
 		<StrategicState
 			id="BalancedDefense"
 			State="BalancedDefense"
@@ -546,6 +506,10 @@
 			id="BalancedAttackWater_EASY"
 			State="BalancedAttackWater_EASY"
 			Difficulty="EASY"/>
+		<StrategicState
+			id="AlliedNavalBase"
+			State="AlliedNavalBase"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<BudgetState
 			id="OpeningMoveBudget_New"
@@ -609,8 +573,8 @@
 			State="AlliedAntiAirOnlyBuildState"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedAntiGroundAircraftBuildState_Remix"
-			State="AlliedAntiGroundAircraftBuildState_Remix"
+			id="AlliedAntiGroundAircraftBuildState_RA3UW"
+			State="AlliedAntiGroundAircraftBuildState_RA3UW"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="AlliedBarracksBuildState_RANDOM_Remix"
@@ -625,8 +589,8 @@
 			State="AlliedNavalYardBuildState_RANDOM"
 			Difficulty="EASY"/>
 		<BuildState
-			id="AlliedAirfieldBuildState_RANDOM_Remix"
-			State="AlliedAirfieldBuildState_RANDOM_Remix"
+			id="AlliedAirfieldBuildStateRandom_RA3UW"
+			State="AlliedAirfieldBuildStateRandom_RA3UW"
 			Difficulty="EASY"/>
 			
 		<SpecificUnitCap
@@ -711,22 +675,6 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedArtilleryVehicle"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseRT"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseMGT"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefense"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<SpecificUnitCap
-			Unit="AlliedBaseDefenseAdvanced"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			

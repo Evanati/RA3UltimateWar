@@ -35,9 +35,8 @@
 		<Include 
 			type="all" 
 			source="DATA:RA3UltimateWar/Data/Allied/Units/AlliedAntiVehicleInfantry_GameObject.xml"/>
-			
 		<Include 
 			type="all" 
-			source="DATA:RA3UltimateWar/Data/Allied/Units_Campaign/AlliedMarine1_GameObject.xml"/>
+			source="DATA:RA3UltimateWar/Data/Allied/Units/AlliedTransportHelicopter_GameObject.xml"/>
     </Includes>
 </AssetDeclaration>

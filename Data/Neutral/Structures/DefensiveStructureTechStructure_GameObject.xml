@@ -57,11 +57,46 @@
 					<WeaponLaunchBone
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="OBBOX01" />
+					<WeaponFireFXBone
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="OBBOX01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="flash" />
+					<WeaponLaunchBone
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="OBBOX01" />
+					<WeaponFireFXBone
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="OBBOX01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="flash" />
+					<WeaponLaunchBone
+						WeaponSlotType="TERTIARY_WEAPON"
+						BoneName="OBBOX01" />
+					<WeaponFireFXBone
+						WeaponSlotType="QUATERNARY_WEAPON"
+						BoneName="OBBOX01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="QUATERNARY_WEAPON"
+						BoneName="flash" />
+					<WeaponLaunchBone
+						WeaponSlotType="QUATERNARY_WEAPON"
+						BoneName="OBBOX01" />
+					<WeaponFireFXBone
+						WeaponSlotType="QUINARY_WEAPON"
+						BoneName="OBBOX01" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="QUINARY_WEAPON"
+						BoneName="flash" />
+					<WeaponLaunchBone
+						WeaponSlotType="QUINARY_WEAPON"
+						BoneName="OBBOX01" />
 					<Turret
 						TurretNameKey="TURRET"
 						TurretID="1" />
 				</ModelConditionState>
-
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT">
 					<!-- no anim -->
@@ -102,89 +137,11 @@
 				<DieMuxData
 					DeathTypes="ALL" />
 			</DestroyDie>
+			
 			<WeaponSetUpdate
 				id="ModuleTag_WeaponSetUpdate">		
-				<!--WeaponSlotTurret
+				<WeaponSlotTurret
 					ID="1">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="SovietAntiStructureVehicleV4Rocket"/>
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="100"
-						AllowsPitch="true"
-						MinimumPitch="-60d"
-						PitchHeight="90%"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s"
-						MinIdleScanAngle="0.0"
-						MaxIdleScanAngle="0.0">
-						<TurretAITargetChooserData
-							StartupDelay="1.0s"/>
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret
-					ID="2">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="SovietAntiStructureVehicleV4Rocket"/>
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="100"
-						AllowsPitch="true"
-						MinimumPitch="-60d"
-						PitchHeight="90%"
-						NaturalTurretAngle="90d"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s"
-						MinIdleScanAngle="0.0"
-						MaxIdleScanAngle="0.0">
-						<TurretAITargetChooserData
-							StartupDelay="1.0s"/>
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret
-					ID="3">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="SovietAntiStructureVehicleV4Rocket"/>
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="100"
-						AllowsPitch="true"
-						MinimumPitch="-60d"
-						PitchHeight="90%"
-						NaturalTurretAngle="180d"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s"
-						MinIdleScanAngle="0.0"
-						MaxIdleScanAngle="0.0">
-						<TurretAITargetChooserData
-							StartupDelay="1.0s"/>
-					</TurretSettings>
-				</WeaponSlotTurret>
-				<WeaponSlotTurret
-					ID="4">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="SovietAntiStructureVehicleV4Rocket"/>
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="100"
-						AllowsPitch="true"
-						MinimumPitch="-60d"
-						PitchHeight="90%"
-						NaturalTurretAngle="270d"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s"
-						MinIdleScanAngle="0.0"
-						MaxIdleScanAngle="0.0">
-						<TurretAITargetChooserData
-							StartupDelay="1.0s"/>
-					</TurretSettings>
-				</WeaponSlotTurret-->
-				<WeaponSlotTurret
-					ID="5">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="DefensiveTechStructureWeapon"/>
@@ -202,7 +159,91 @@
 							StartupDelay="1.0s"/>
 					</TurretSettings>
 				</WeaponSlotTurret>
+				
+				<WeaponSlotTurret
+					ID="2">
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						Template="AlliedBaseDefenseRockets_Aircraft"/>
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="100"
+						AllowsPitch="true"
+						MinimumPitch="-60d"
+						PitchHeight="90%"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="0.0">
+						<TurretAITargetChooserData
+							StartupDelay="1.0s"/>
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<WeaponSlotTurret
+					ID="3">
+					<Weapon
+						Ordering="TERTIARY_WEAPON"
+						Template="AlliedBaseDefenseRockets_Aircraft"/>
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="100"
+						AllowsPitch="true"
+						MinimumPitch="-60d"
+						PitchHeight="90%"
+						NaturalTurretAngle="90d"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="0.0">
+						<TurretAITargetChooserData
+							StartupDelay="1.0s"/>
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<WeaponSlotTurret
+					ID="4">
+					<Weapon
+						Ordering="QUATERNARY_WEAPON"
+						Template="AlliedBaseDefenseRockets_Aircraft"/>
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="100"
+						AllowsPitch="true"
+						MinimumPitch="-60d"
+						PitchHeight="90%"
+						NaturalTurretAngle="180d"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="0.0">
+						<TurretAITargetChooserData
+							StartupDelay="1.0s"/>
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<WeaponSlotTurret
+					ID="5">
+					<Weapon
+						Ordering="QUINARY_WEAPON"
+						Template="AlliedBaseDefenseRockets_Aircraft"/>
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="100"
+						AllowsPitch="true"
+						MinimumPitch="-60d"
+						PitchHeight="90%"
+						NaturalTurretAngle="270d"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="0.0">
+						<TurretAITargetChooserData
+							StartupDelay="1.0s"/>
+					</TurretSettings>
+				</WeaponSlotTurret>
 			</WeaponSetUpdate>
+			
 			<xi:include
 				href="DATA:Includes/GenericEngineerContain.xml" />
 			<xi:include
@@ -225,8 +266,8 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="3000.0"
-				InitialHealth="3000.0" />
+				MaxHealth="4500.0"
+				InitialHealth="4500.0" />
 		</Body>
 		<Geometry
 			IsSmall="false">

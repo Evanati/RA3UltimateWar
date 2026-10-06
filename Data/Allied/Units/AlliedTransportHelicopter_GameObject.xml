@@ -1,44 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xai="uri:ea.com:eala:asset:instance"  xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Tags></Tags>
+	
 	<Includes>
 		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
 		<Include type="instance" source="DATA:Neutral/Props/NUMarine1_Collapse.xml" />
-		<Include type="all" source="ART:NUMarine1.w3x" />
-		<Include type="all" source="ART:NUMarine1_D.xml" />		
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1.MARINE1.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1.OBBOX01.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1.OBBOX02.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1.ROTARS.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1_COL.NEWSKIN.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1_COL.OBBOX01.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1_COL.OBBOX02.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1_COL_HRC.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1_COL_CTR.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1_HRC.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMARINE1_CTR.w3x" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMarine1.xml" />		
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMarine1_D.xml" />
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMarine1_NRM.xml" />		
+		<Include type="all" source="DATA:RA3UltimateWar/Data/Art/W3D/AlliedTransportHelicopter/NUMarine1_SPM.xml" />				
 		<!-- Base Object -->
 		<Include
 			type="instance"
 			source="DATA:BaseObjects/BaseVehicle.xml" />
 	</Includes>
+	
 	<GameObject
-		id="AlliedMarine1"
+		id="AlliedTransportHelicopter"
 		inheritFrom="BaseVehicle"
 		SelectPortrait="Portrait_PresidentHeli"
 		ButtonImage="Button_PresidentHeli"
 		Side="Allies"
-		EditorSorting="CAMPAIGN_UNITS"
+		EditorSorting="UNIT"
 		TransportSlotCount="20"
-		BuildTime="24"
+		BuildTime="15"
 		CommandSet="SovietAntiGroundAircraftCommandSet"
-		KindOf="CAN_CAST_REFLECTIONS CAN_ATTACK SELECTABLE SCORE AIRCRAFT VEHICLE ASSAULT_AIRCRAFT LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_BE_FAVORITE_UNIT SCORE LIMITED_PRODUCTION_AIRCRAFT TRANSPORT"
+		KindOf="SELECTABLE PRELOAD CAN_ATTACK AIRCRAFT VEHICLE TRANSPORT SCORE LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_CAST_REFLECTIONS CAN_BE_FAVORITE_UNIT"
 		RadarPriority="UNIT"
 		ThreatLevel="10"
 		ProductionQueueType="AIRCRAFT"
 		UnitCategory="AIRCRAFT"
 		WeaponCategory="MISSILE"
 		VoicePriority="148"
-		EditorName="AlliedMarine1"
-		Description="Desc:AlliedMarine1"
-		TypeDescription="Type:AlliedMarine1"
+		EditorName="AlliedTransportHelicopter"
+		Description="Desc:AlliedTransportHelicopter"
+		TypeDescription="Type:AlliedTransportHelicopter"
 		HealthBoxHeightOffset="30">
+		
 		<DisplayName
-			xai:joinAction="Replace">Name:AlliedMarine1</DisplayName>
+			xai:joinAction="Replace">Name:AlliedTransportHelicopter</DisplayName>
+			
 		<ObjectResourceInfo>
-			<BuildCost Account="=$ACCOUNT_ORE" Amount="1200"/>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="1100"/>
 		</ObjectResourceInfo>
+		
 		<ArmorSet
 			Armor="AlliedAntiGroundAircraftArmor"
 			DamageFX="VehicleDamageFX" />
+			
 		<LocomotorSet
 			Locomotor="BasicHelicopterTaxiLocomotor"
 			Condition="TAXIING"
@@ -46,7 +67,7 @@
 		<LocomotorSet
 			Locomotor="AlliedSupportAircraftLocomotor"
 			Condition="NORMAL"
-			Speed="100.0" />
+			Speed="110.0" />
 
 		<!-- Need ConquerMetricsOverrideDefendingAntiMask or else the TAXIING locomotor will make the AI try to build anti-ground units against this -->
 		<SkirmishAIInformation
@@ -91,10 +112,9 @@
 					<Model
 						Name="NUMarine1" />
 				</ModelConditionState>
-
 			</ScriptedModelDraw>
-	
 		</Draws>
+		
 		<Behaviors>
 			<WeaponSetUpdate
 				id="ModuleTag_WeaponSetUpdate">
@@ -110,20 +130,24 @@
 						ObjectStatus="WEAPON_UPGRADED_01"/>
 				</WeaponSlotHardpoint>
 			</WeaponSetUpdate>
+			
 			<Physics
 				id="ModuleTag_Physics" 
 				GravityMultiplier="30" />
+				
 			<CreateObjectDie
 				id="ModuleTag_CreateObjectDie"
 				CreationList="NUMarine1_Collapse_Die_OCL">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</CreateObjectDie>
+			
 			<DestroyDie
 				id="ModuleTag_Die">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</DestroyDie>
+			
 			<FXListBehavior
 				id="ModuleTag_FXList">
 				<DieMuxData
@@ -150,12 +174,9 @@
 				ExtendedExitContainerChecks="true">
 				<PassengerFilter
 					Rule="ANY"
-					Include="INFANTRY VEHICLE"
-					Exclude="AIRCRAFT SHIP SUBMARINE"
+					Include="INFANTRY"
+					Exclude="AIRCRAFT VEHICLE SHIP SUBMARINE"
 					StatusBitFlagsExclude="AIRBORNE_TARGET">
-					<ExcludeThing>AlliedAntiNavyShipTech1</ExcludeThing>
-					<ExcludeThing>JapanAntiInfantryVehicle</ExcludeThing>
-					<ExcludeThing>JapanAntiAirVehicleTech1</ExcludeThing>
 				</PassengerFilter>
 				<DieMuxData
 					DeathTypes="ALL" />
@@ -165,35 +186,24 @@
 						Rule="NONE"
 						Include="INFANTRY" />
 				</PassengerData>
-				
-				<!--
-				<PassengerData
-					BonePrefix="SUANTIGROUNDAIRCRAFT"
-					MaxPassengers="1"
-					SlingUnderBone="true">
-					<Filter
-						Rule="NONE"
-						Include="VEHICLE" />
-				</PassengerData>
-				-->
-				
 			</TransportContain>
-
 		</Behaviors>
+		
 		<AI>
 			<JetAIUpdate
 				id="ModuleTag_AIUpdate"
 				AutoAcquireEnemiesWhenIdle="YES"
-				StateMachine="TransportHelicopterAIStateMachine">
-				<UnitAITargetChooserData 
-					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY"/>
+				StateMachine="HelicopterAIStateMachine">
+				<UnitAITargetChooserData />
 			</JetAIUpdate>
 		</AI>
+		
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="600" />
+				MaxHealth="650" />
 		</Body>
+		
 		<Geometry
 			IsSmall="false">
 			<Shape
@@ -212,22 +222,16 @@
 					z="0.0" />
 			</Shape>
 		</Geometry>
-<!--
-		<AudioArrayVoice>
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceAttack" AudioType="voiceAttack" />
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceCreate" AudioType="voiceCreated" />
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceMove" AudioType="voiceMove" />
-			<AudioEntry Sound="TEMP_RA2_AlliedAir_VoiceSelect" AudioType="voiceSelect" />
-		</AudioArrayVoice>
--->
+
 		<AudioArraySound>
-			<AudioEntry Sound="A06_PresidentialHelicopter_MoveLoop" AudioType="soundAmbient" />
 			<AudioEntry Sound="A06_PresidentialHelicopter_MoveStart" AudioType="soundMoveStart" />
 		</AudioArraySound>
+		
 		<VisionInfo
 			VisionRange="300"
 			ShroudClearingRange="400" />
 	</GameObject>
+	
 	<ObjectCreationList
 		id="NUMarine1_Collapse_Die_OCL">
 		<CreateObject

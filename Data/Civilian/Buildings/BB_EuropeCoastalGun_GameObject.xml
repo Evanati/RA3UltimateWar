@@ -14,14 +14,14 @@
 		inheritFrom="BaseTechStructure"
 		EditorName="BB_EuropeCoastalGun"	
 		EditorSorting="STRUCTURE"		
-		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS +NOT_SELLABLE"
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +NOT_SELLABLE"
 		Browser="REGION Brighton_Beach_BB STRUCTURE"
 		SelectPortrait="Portrait_EuropeCoastalGun"
 		ButtonImage="Button_EuropeCoastalGun"
 		Description="DESC:EuropeCoastalGun"
 		TypeDescription="TYPE:EuropeCoastalGun">
 		<DisplayName xai:joinAction="Replace">Name:EuropeCoastalGun</DisplayName> 
-		<ArmorSet
+    <ArmorSet
 			id="BB_EuropeCoastalGunArmor"
 			Armor="A01_CoastalGunArmor"
 			DamageFX="GenericStructureDamageFX" />
@@ -114,8 +114,13 @@
 					DeathTypes="ALL" />
 			</CreateObjectDie>
 
-		<xi:include href="DATA:Includes/GenericEngineerContain.xml" />
-		<xi:include	href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include 
+				href="DATA:Includes/GenericEngineerContain.xml" />
+			<xi:include	
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<LUAEventList
+				id="ModuleTag_LUAEventList"
+				EventListName="BuildingPowerFunctions"/>
 
 		<!-- civ buildings should have a CreateObjectDie to make a collapse version. -->
 		<DestroyDie
@@ -135,7 +140,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="10000"
+				MaxHealth="7000"
 				/>
 		</Body>
 		<Geometry
@@ -315,14 +320,11 @@
 		Flags="">
 		<Nuggets>
 			<DamageNugget
-				Damage="210.0"
-				Radius="50.0"
+				Damage="140.0"
+				Radius="100.0"
 				DamageType="EXPLOSIVE"
 				DeathType="EXPLODED"
 			/>
 		</Nuggets>
 	</WeaponTemplate>
-  
-  
-
 </AssetDeclaration>

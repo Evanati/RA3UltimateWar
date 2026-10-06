@@ -663,7 +663,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseRT
-		"A specialized repair station with both direct and indirect repairing capabilities for anything mechanical."
+		"A specialized repair station with direct/indirect repairing capabilities for anything mechanical."
 	End
 	
 // AlliedBaseDefenseMGT
@@ -685,7 +685,7 @@
 	End	
 	
 	Desc:AlliedBaseDefense
-		"A comprehensive anti-stealth missile defense system. Includes torpedoes if built on water."
+		"A comprehensive missile defense system. Includes torpedoes if built on water."
 	End
 
 	NAME:UpgradeAlliedBaseDefenseTech2
@@ -992,7 +992,31 @@
 		"Jump to the target and attack."
 	End	
 	
+//  NeutralPowerPlant
+	Name:NeutralPowerPlant
+		"Power Plant"
+	End
 	
+	Desc:NeutralPowerPlant
+		"These structures safely use clean-burning, sustainable fuels to power civilian areas."
+	End
+	
+	Type:NeutralPowerPlant
+		"Civilian Power Structure"
+	End
+
+//  AlliedTransportHelicopter
+	Name:AlliedTransportHelicopter
+		"S-93K Patriot"
+	End
+	
+	Desc:AlliedTransportHelicopter
+		"The Allies' go-to infantry transport helicopter. Has limited offensive capabilities."
+	End
+	
+	Type:AlliedTransportHelicopter
+		"Infantry Air Transport"
+	End
 	
 // RemixAlliedPowerPlantSP
 	Name:ButtonABPP_MoneyOn
