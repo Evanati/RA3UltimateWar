@@ -1,3 +1,7 @@
+//////////////////////////////////////
+///// Red Alert 3: Remix strings /////
+//////////////////////////////////////
+
 // ZP01MapSounds
 	HOTSPOT:ZP01_HOTSPOT_1_TITLE
 		"Getting off"
@@ -653,57 +657,7 @@
 		"Get rid of the Allied field commander"
 	End		
 	
-// AlliedBaseDefenseRT
-	Name:AlliedBaseDefenseRT
-		"Repair Turret"
-	End	
-	
-	Type:AlliedBaseDefenseRT
-		"Vehicle Repair Station"
-	End		
-	
-	Desc:AlliedBaseDefenseRT
-		"A specialized repair station with direct/indirect repairing capabilities for anything mechanical."
-	End
-	
-// AlliedBaseDefenseMGT
-	Name:AlliedBaseDefenseMGT
-		"Minigun Turret"
-	End	
-	
-	Type:AlliedBaseDefenseMGT
-		"Anti-Infantry Base Defense"
-	End		
-	
-	Desc:AlliedBaseDefenseMGT
-		"A specialized and highly lethal anti-infantry defense system."
-	End
-	
-// AlliedBaseDefense
-	Name:AlliedBaseDefense
-		"Missile Turret"
-	End	
-	
-	Desc:AlliedBaseDefense
-		"A comprehensive missile defense system. Includes torpedoes if built on water."
-	End
 
-	NAME:UpgradeAlliedBaseDefenseTech2
-		"Turret Upgrade"
-	End	
-	
-	DESCRIPTION:UpgradeAlliedBaseDefenseTech2
-		"Purchase upgrades for your turret to strengthen damage and defense."
-	End
-	
-// AlliedBaseDefenseAdvanced
-	Name:AlliedBaseDefenseAdvanced
-		"Spectrum Tower"
-	End		
-	
-	Desc:AlliedBaseDefenseAdvanced
-		"High-tech security systems that use supercharged beams of light to stop enemy forces. Includes torpedoes if built on water."
-	End
 	
 // PlayerPowerNanoSwarmHive
 
@@ -992,31 +946,7 @@
 		"Jump to the target and attack."
 	End	
 	
-//  NeutralPowerPlant
-	Name:NeutralPowerPlant
-		"Power Plant"
-	End
 	
-	Desc:NeutralPowerPlant
-		"These structures safely use clean-burning, sustainable fuels to power civilian areas."
-	End
-	
-	Type:NeutralPowerPlant
-		"Civilian Power Structure"
-	End
-
-//  AlliedTransportHelicopter
-	Name:AlliedTransportHelicopter
-		"S-93K Patriot"
-	End
-	
-	Desc:AlliedTransportHelicopter
-		"The Allies' go-to infantry transport helicopter. Has limited offensive capabilities."
-	End
-	
-	Type:AlliedTransportHelicopter
-		"Infantry Air Transport"
-	End
 	
 // RemixAlliedPowerPlantSP
 	Name:ButtonABPP_MoneyOn
@@ -3000,7 +2930,7 @@
 	End
 	
 	Desc:AlliedDogHouseobj
-		"Home of loyal partners - German Shepherds can be trained here."
+		"Loyal partner's home, German Shepherds can be trainned here."
 	End
 
 	Type:AlliedDogHouseobj
@@ -3752,4 +3682,86 @@
 	
 	DESC:UNITINTRO
 		"Remix by KnightVVV"
+	End
+	
+/////////////////////////////////////////////
+///// Red Alert 3: Ultimate War strings /////
+/////////////////////////////////////////////
+
+// AlliedBaseDefenseRT
+	Name:AlliedBaseDefenseRT
+		"Repair Turret"
+	End	
+	
+	Type:AlliedBaseDefenseRT
+		"Vehicle Repair Station"
+	End		
+	
+	Desc:AlliedBaseDefenseRT
+		"A specialized vehicle repair station with direct/indirect repairing capabilities."
+	End
+	
+// AlliedBaseDefenseMGT
+	Name:AlliedBaseDefenseMGT
+		"Minigun Turret"
+	End	
+	
+	Type:AlliedBaseDefenseMGT
+		"Anti-Infantry Base Defense"
+	End		
+	
+	Desc:AlliedBaseDefenseMGT
+		"A specialized and highly lethal anti-infantry defense system."
+	End
+	
+// AlliedBaseDefense
+	Name:AlliedBaseDefense
+		"Missile Turret"
+	End	
+	
+	Desc:AlliedBaseDefense
+		"A comprehensive missile defense system. Includes torpedoes if built on water."
+	End
+
+	Name:UpgradeAlliedBaseDefenseTech2
+		"Turret Upgrade"
+	End	
+	
+	Description:UpgradeAlliedBaseDefenseTech2
+		"Purchase upgrades for your turret to strengthen damage and defense."
+	End
+	
+// AlliedBaseDefenseAdvanced
+	Name:AlliedBaseDefenseAdvanced
+		"Spectrum Tower"
+	End		
+	
+	Desc:AlliedBaseDefenseAdvanced
+		"High-tech security systems that use supercharged beams of light to stop enemy forces. Includes torpedoes if built on water."
+	End
+	
+// AlliedTransportHelicopter
+	Name:AlliedTransportHelicopter
+		"S-93K Patriot"
+	End
+	
+	Desc:AlliedTransportHelicopter
+		"The Allies' go-to infantry transport helicopter. Spacious and durable, but has limited offensive capabilities."
+	End
+	
+	Type:AlliedTransportHelicopter
+		"Infantry Air Transport"
+	End
+	
+// NeutralPowerPlant
+	Name:NeutralPowerPlant
+		"Power Plant"
+	End
+	
+	Desc:NeutralPowerPlant
+		"These structures safely use clean-burning, sustainable fuels to power civilian areas."
+	End
+	
+	Type:NeutralPowerPlant
+		"Civilian Power Structure"
 	End

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<W3DCollisionBox id="NUMARINE1_COL.OBBOX01" JoypadPickingOnly="false">
-		<Center X="2.494008" Y="-0.050270" Z="6.294190"/>
-		<Extent X="14.563622" Y="5.072777" Z="6.294190"/>
-	</W3DCollisionBox>
-</AssetDeclaration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>
+		<!-- Structures -->
+		<Include type="all" source="DATA:Neutral/Structures/AirportTechStructure.GameObject.xml"/>
+		<Include type="all" source="DATA:Neutral/Structures/DefensiveStructureTechStructure.GameObject.xml"/>
+		<Include type="all" source="DATA:Neutral/Structures/GarageTechStructure.GameObject.xml"/>
+		<Include type="all" source="DATA:Neutral/Structures/HospitalTechStructure.GameObject.xml"/>
+		<Include type="all" source="DATA:Neutral/Structures/NeutralPowerPlant.GameObject.xml"/>
+		<Include type="all" source="DATA:Neutral/Structures/ObservationPostTechStructure.GameObject.xml"/>
+		<Include type="all" source="DATA:Neutral/Structures/ShipYardTechStructure.GameObject.xml"/>
+    </Includes>
+</AssetDeclaration>

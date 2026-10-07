@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>
+		<!-- Collision boxes -->
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/CollisionBoxes/AUALLIEDTRANSPORTHELICOPTER.OBBOX01.w3x" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/CollisionBoxes/AUALLIEDTRANSPORTHELICOPTER.OBBOX02.w3x" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/CollisionBoxes/AUALLIEDTRANSPORTHELICOPTER_COL.OBBOX01.w3x" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/CollisionBoxes/AUALLIEDTRANSPORTHELICOPTER_COL.OBBOX02.w3x" />
+		
+		<!-- Containers -->
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Containers/AUALLIEDTRANSPORTHELICOPTER_COL_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Containers/AUALLIEDTRANSPORTHELICOPTER_CTR.w3x" />
+		
+		<!-- Hierarchies -->
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Hierarchies/AUALLIEDTRANSPORTHELICOPTER_COL_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Hierarchies/AUALLIEDTRANSPORTHELICOPTER_HRC.w3x" />
+	
+		<!-- Meshes -->
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Meshes/AUALLIEDTRANSPORTHELICOPTER.ALLIEDTRANSPORTHELICOPTER.w3x" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Meshes/AUALLIEDTRANSPORTHELICOPTER.ROTARS.w3x" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Meshes/AUALLIEDTRANSPORTHELICOPTER_COL.NEWSKIN.w3x" />
+		
+		<!-- Textures -->
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Textures/AUAlliedTransportHelicopter.Texture.xml" />		
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Textures/AUAlliedTransportHelicopter_D.Texture.xml" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Textures/AuAlliedTransportHelicopter_NRM.Texture.xml" />		
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Textures/AuAlliedTransportHelicopter_SPM.Texture.xml" />	
+    </Includes>
+</AssetDeclaration>

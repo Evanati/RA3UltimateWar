@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>	
+		<!-- Logic commands -->
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseMGT.LogicCommand.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseRT.LogicCommand.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedTransportHelicopter.LogicCommand.xml"/>
+	
+		<!-- Logic command sets -->
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedAirfieldCommandSet.LogicCommandSet.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedConstructionYardCommandSet.LogicCommandSet.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedNewCraneCommandSet.LogicCommandSet.xml"/>	
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanNavalYardCommandSet.LogicCommandSet.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanWarFactoryCommandSet.LogicCommandSet.xml"/>
+			
+		<!-- Upgrade templates -->
+		<Include type="all" source="DATA:GlobalData/UpgradeTemplates/Upgrade_AlliedBaseDefenseUpgraderAI.UpgradeTemplate.xml"/>
+			
+		<!-- Weapon templates -->
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ABD_MachineGun.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ABD_RepairWeapon.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ParticleAcceleratorFinalWeapon.WeaponTemplate.xml"/>
+    </Includes>
+</AssetDeclaration>

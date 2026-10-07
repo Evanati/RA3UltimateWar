@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBuildStateDefinition 
+		id="AlliedAirfieldBuildStateRandom_RA3UW">
+	
+		<Heuristic>
+			<ConstantHeuristic/>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedTransportHelicopter"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedFighterAircraft"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedAntiGroundAircraft"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="Hurricane"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="Paladin"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedSupportAircraft"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedBomberAircraft"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedBomberAircraftStratoUpgrade"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="Kodiak"
+			Heuristic="RANDOM_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedAntiGroundAircraftBuildState_RA3UW">
+	
+		<Heuristic>
+			<ConstantHeuristic/>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="AlliedTransportHelicopter"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedAntiGroundAircraft"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="Hurricane"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="Paladin"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedSupportAircraft"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedBomberAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedBomberAircraftStratoUpgrade"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="Kodiak"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

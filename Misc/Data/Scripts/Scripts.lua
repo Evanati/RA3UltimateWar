@@ -1,7 +1,10 @@
+-------------------------------------
+----- Red Alert 3 lua functions -----
+-------------------------------------
+
 --- define lua functions 
 function NoOp(self, source)
 end
-
 
 function kill(self) -- Kill unit self.
 	ExecuteAction("NAMED_KILL", self);
@@ -160,7 +163,6 @@ function OnNODSecretShrinePowerRestored(self)
 	end
 end
 
-
 function OnAlliedAntiVehicleInfantryGenericEvent(self, data)
 	local str = tostring( data )
 
@@ -228,12 +230,6 @@ function onBuildingPowerRestored(self)
 	ObjectHideSubObjectPermanently( self, "GLOWS", false )
 end
 
-
-
-
-
-
-
 function OnGenericJapanBuildingCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_02", true )
 	ObjectHideSubObjectPermanently( self, "Upgrade_03", true )
@@ -283,7 +279,6 @@ function BecomeAfraidOfGateDamaged(self, other)
 	ObjectEnterCowerState(self,other)
 end
 
-
 function ChantForUnit(self) -- Used by units to broadcast the chant event to their own side.
 	ObjectBroadcastEventToAllies(self, "BeginChanting", 9999)
 end
@@ -304,6 +299,21 @@ end
 function OnRubbleDropshipCreated(self)
 	ObjectHideSubObjectPermanently( self, "Loadref", true )
 end
+
+function OnAlliedInfantryFightingCreated(self)
+	ObjectHideSubObjectPermanently( self, "NUBEAM", true )
+	ObjectHideSubObjectPermanently( self, "FLAMETANK", true )
+	ObjectHideSubObjectPermanently( self, "S_DETECTOR", true )
+	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
+end
+
+function OnJapanAntiStructureShipCreated(self)
+	ObjectHideSubObjectPermanently( self, "Upgrade_01", true )
+end
+
+--------------------------------------------
+----- Red Alert 3: Remix lua functions -----
+--------------------------------------------
 
 function OnSovietAntiVehicleVehicleTech1Created(self)
 	ObjectHideSubObjectPermanently( self, "T4_GRINDER_WHEEL_02", true )
@@ -387,91 +397,6 @@ function OnSovietAntiVehicleVehicleTech1Created(self)
 	ObjectHideSubObjectPermanently( self, "SAVV1_ThrTurret", true )	
 	ObjectHideSubObjectPermanently( self, "SAVV1_ThrBarrleSkin", true )
 	ObjectHideSubObjectPermanently( self, "SAVV1_ThrTURRET_AddSkin", true )
-
-end
-
-function OnAlliedInfantryFightingCreated(self)
-	ObjectHideSubObjectPermanently( self, "NUBEAM", true )
-	ObjectHideSubObjectPermanently( self, "FLAMETANK", true )
-	ObjectHideSubObjectPermanently( self, "S_DETECTOR", true )
-	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
-end
-
-function OnAlliedBaseDefenseRTCreated(self)
-	
-	ObjectHideSubObjectPermanently( self, "Upgrade_Default_Missile", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_GoldenGun", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_MachineGun", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_MissileLauncher", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Natasha_Sniper", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Star", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Plasma", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Shotgun", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Speakers", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Tanya_Pistols", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Tanya", true )
-	
-	ObjectGrantUpgrade( self, "Uprade_IFV_Repair" )
-	
-end
-
-function OnAlliedBaseDefenseMGTCreated(self)
-	
-	ObjectHideSubObjectPermanently( self, "Upgrade_Default_Missile", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_GoldenGun", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_MachineGun", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_MissileLauncher", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Natasha_Sniper", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Star", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Plasma", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Shotgun", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Speakers", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Tanya_Pistols", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
-	ObjectHideSubObjectPermanently( self, "Tanya", true )
-	
-	ObjectGrantUpgrade( self, "Uprade_IFV_MachineGun" )
-	
-end
-
-function OnAlliedBaseDefenseCreated(self)
-
-	ObjectHideSubObjectPermanently( self, "TURRET_Upg", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead01", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead02", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead03", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead04", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead05", true )
-	ObjectHideSubObjectPermanently( self, "upwarhead06", true )
-	
-	if strfind(ObjectTeamName(self), "Skirmish") ~= nil then
-		ObjectGrantUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" )
-    end
-	
-end
-
-function OnAlliedBaseDefenseUnderpowered(self)
-	
-	if ObjectHasUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" ) == 1 then
-		ObjectRemoveUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" )
-    end
 	
 end
 
@@ -544,17 +469,6 @@ function OnAlliedAntiAirVehicleTech1Created(self)
 	ObjectHideSubObjectPermanently( self, "16_AIGGUN", true )	
 	ObjectHideSubObjectPermanently( self, "16_AIGBASE", true )		
 	
-end
-
-function OnAlliedInfantryFightingCreated(self)
-	ObjectHideSubObjectPermanently( self, "NUBEAM", true )
-	ObjectHideSubObjectPermanently( self, "FLAMETANK", true )
-	ObjectHideSubObjectPermanently( self, "S_DETECTOR", true )
-	ObjectHideSubObjectPermanently( self, "S_GENERATOR", true )
-end
-
-function OnJapanAntiStructureShipCreated(self)
-	ObjectHideSubObjectPermanently( self, "Upgrade_01", true )
 end
 
 -- this function expects an eventType of 'onDisguiseAs' and checks for various assetIDs, hiding the appropriate subObjects
@@ -702,7 +616,6 @@ function OnJapanLightTransportVehicleGenericEvent(self, eventType, data)
 	end
 end
 
-
 function OnGenericConfig(self)
 	ObjectGrantUpgrade( self, "Upgrade_ConfigTrigger" )
 end
@@ -743,6 +656,7 @@ function OnJapanAntiVehicleVehicleTech3Created(self)
 	ObjectHideSubObjectPermanently( self, "MWR08", true )
 	ObjectHideSubObjectPermanently( self, "MWR09", true )		
 end
+
 function OnJapanAntiVehicleVehicleTech3RED(self)
 	ObjectHideSubObjectPermanently( self, "MISSILEPOD_L", false )
 	ObjectHideSubObjectPermanently( self, "MISSILECOVER_L", false )	
@@ -775,7 +689,6 @@ end
 function OnBalloonBombSwitchLocomotor(self)
     ObjectDoSpecialPower( self, "SpecialPower_BalloonSwitchLocomotor" )
 end
-
 
 function OnSovietAntiGroundAircraftCreated(self)
 
@@ -895,9 +808,6 @@ function OnSovietBomberAircraftCreated(self)
 	ObjectHideSubObjectPermanently( self, "BOMBS", true )		
 end
 
-
-
-
 function OnRemixBoss01Weapon01Launched(self)
 	ObjectHideSubObjectPermanently( self, "bitbase01", true )
 	ObjectHideSubObjectPermanently( self, "bit01", true )
@@ -999,7 +909,6 @@ function OnRemixBoss01Weapon03Launched(self)
 	ObjectHideSubObjectPermanently( self, "bitbodyfront03", true )
 	ExecuteAction("NAMED_STOP",self)
 end	
-
 
 function OnRemixBoss01Out(self)
 	ObjectHideSubObjectPermanently( self, "bitbase01", false )
@@ -1115,8 +1024,6 @@ function OnRemixBoss01Reset(self)
 	ExecuteAction("NAMED_STOP",self)
 end
 
-
-
 function Remix_Car06TanyaCreated(self)
 	ObjectHideSubObjectPermanently( self, "TANYA", true )
 	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")	
@@ -1142,7 +1049,6 @@ end
 function Remix_Car07YurikoUnLoaded(self)
 	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")	
 end
-
 
 function Remix_Car08NatashaCreated(self)
 	ObjectHideSubObjectPermanently( self, "NATASHA", true )
@@ -1190,7 +1096,6 @@ end
 function OnSCT1MotoGetHeroic(self)
 	ObjectCreateAndFireTempWeapon( self, "RemixSCT1MotoSynWeaponLv3" )	
 end
-
 
 function JUASSPJMagnetized(self)
 	ObjectHideSubObjectPermanently( self, "GROW", true )
@@ -1242,8 +1147,6 @@ function OnTitanCreated(self)
 	ObjectHideSubObjectPermanently( self, "weaponRec_l", true )
 end
 
-
-
 function OnSurvivorPick1911(self)
 	ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponUnAttach44" )
 end
@@ -1251,8 +1154,6 @@ end
 function OnSurvivorPick44(self)
 	ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponUnAttach1911" )
 end
-
-
 
 function OnSurvivorPickHelmet1(self)
 	ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponUnAttachHelmet2" )
@@ -1274,7 +1175,6 @@ function OnSurvivorCreated(self)
 	ObjectHideSubObjectPermanently( self, "WATERE", true )
 end
 
-
 function OnSurvivorPickAmmo1(self)
 	ObjectGrantUpgrade( self, "Uprade_SurvivorAmmo1" )
 end
@@ -1290,8 +1190,6 @@ end
 function OnSurvivorPickAmmo4(self)
 	ObjectGrantUpgrade( self, "Uprade_SurvivorAmmo4" )
 end
-
-
 
 function OnSurvivorReload1911(self)
 	if ObjectHasUpgrade( self, "Uprade_SurvivorAmmo4" ) == 1 then
@@ -1436,7 +1334,6 @@ function OnABPPToggleMoeny(self)
     ObjectCreateAndFireTempWeapon( self, "AlliedPowerMoneyWeapon" )		
 end
 
-
 function OnJapanNijiaMachaTimerStart(self)
     ExecuteAction("NAMED_USE_COMMANDBUTTON_ABILITY",self,"Command_JNMTimerUpgrade")	
 end
@@ -1448,8 +1345,6 @@ end
 function OnJapanIzumiTimerGo(self)
     ExecuteAction("NAMED_RECEIVE_UPGRADE",self,"Upgrade_JIzumiTimer")	
 end
-
-
 
 function OnJAVVT3RunningHitT1(self)
 	ObjectCreateAndFireTempWeapon( self, "JAVV3CollideWeaponT1" )
@@ -1578,7 +1473,6 @@ function OnAinmalPanic(self)
     ObjectDoSpecialPower( self, "SpecialPower_AnimalChangeLocomotor" )
 end
 
-
 function OnCivilianPanicEnd(self)
     ObjectDoSpecialPower( self, "SpecialPower_CivilianChangeLocomotor" )
 end
@@ -1700,4 +1594,78 @@ function OnSCT1MotoFROZEN(self)
     ExecuteAction("NAMED_USE_COMMANDBUTTON_ABILITY",self,"Command_Evacuate")
 	ObjectCreateAndFireTempWeapon( self, "SUSCT1MotoDeath_FrozenWeapon" )	
 	ExecuteAction("NAMED_STOP",self)
+end
+
+---------------------------------------------------
+----- Red Alert 3: Ultimate War lua functions -----
+---------------------------------------------------
+
+function OnAlliedBaseDefenseRTCreated(self)
+	
+	ObjectHideSubObjectPermanently( self, "Upgrade_Default_Missile", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_GoldenGun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_MachineGun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_MissileLauncher", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Natasha_Sniper", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Star", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Plasma", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Shotgun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Speakers", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tanya_Pistols", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Tanya", true )
+	
+	ObjectGrantUpgrade( self, "Uprade_IFV_Repair" )
+	
+end
+
+function OnAlliedBaseDefenseMGTCreated(self)
+	
+	ObjectHideSubObjectPermanently( self, "Upgrade_Default_Missile", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Blaster_Rifles", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Engineer", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Flak", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_GoldenGun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_MachineGun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_MissileLauncher", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Natasha_Sniper", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Star", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Ninja_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Plasma", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Psyonic_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Shotgun", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Speakers", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tanya_Pistols", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Tesla", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_Turret", true )
+	ObjectHideSubObjectPermanently( self, "Tanya", true )
+	
+	ObjectGrantUpgrade( self, "Uprade_IFV_MachineGun" )
+	
+end
+
+function OnAlliedBaseDefenseCreated(self)
+
+	ObjectHideSubObjectPermanently( self, "TURRET_Upg", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead01", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead02", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead03", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead04", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead05", true )
+	ObjectHideSubObjectPermanently( self, "upwarhead06", true )
+	
+	if strfind(ObjectTeamName(self), "Skirmish") ~= nil then
+		ObjectGrantUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" )
+    end
+	
 end

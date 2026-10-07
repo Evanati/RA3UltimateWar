@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>
+		<!-- Buildings -->
+		<Include type="all" source="DATA:Civilian/Buildings/BB_EuropeCoastalGun.GameObject.xml"/>
+		<Include type="all" source="DATA:Civilian/Buildings/GE_SwissBank.GameObject.xml"/>
+		<Include type="all" source="DATA:Civilian/Buildings/KR_ArtilleryDome.GameObject.xml"/>
+		<Include type="all" source="DATA:Civilian/Buildings/MR_RushmoreHeadControlCenter.GameObject.xml"/>
+    </Includes>
+</AssetDeclaration>
