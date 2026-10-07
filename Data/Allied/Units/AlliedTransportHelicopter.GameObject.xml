@@ -19,9 +19,9 @@
 		TransportSlotCount="20"
 		BuildTime="15"
 		CommandSet="SovietAntiGroundAircraftCommandSet"
-		KindOf="SELECTABLE PRELOAD CAN_ATTACK AIRCRAFT ASSAULT_AIRCRAFT TRANSPORT VEHICLE SCORE LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_CAST_REFLECTIONS CAN_BE_FAVORITE_UNIT"
+		KindOf="SELECTABLE PRELOAD CAN_ATTACK AIRCRAFT TRANSPORT VEHICLE LEAVE_PARKING_ON_BUILD_COMPLETE SCORE LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_CAST_REFLECTIONS CAN_BE_FAVORITE_UNIT"
 		RadarPriority="UNIT"
-		ThreatLevel="10"
+		ThreatLevel="7"
 		ProductionQueueType="AIRCRAFT"
 		UnitCategory="AIRCRAFT"
 		WeaponCategory="MISSILE"
@@ -64,6 +64,10 @@
 					ParseCondStateType="PARSE_DEFAULT">
 					<Model
 						Name="AUALLIEDTRANSPORTHELICOPTER_CTR" />
+					<Turret
+						TurretNameKey="Bone_Turret"
+						TurretPitch="Bone_turret_pitch"
+						TurretID="1" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -100,17 +104,26 @@
 		<Behaviors>
 			<WeaponSetUpdate
 				id="ModuleTag_WeaponSetUpdate">
-				<WeaponSlotHardpoint
+				<WeaponSlotTurret
 					ID="1">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="AlliedAntiGroundAircraftMissilePodWeapon"
-						ForbiddenObjectStatus="WEAPON_UPGRADED_01"/>
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="AlliedAntiGroundAircraftMissilePodWeapon_AirPower"
-						ObjectStatus="WEAPON_UPGRADED_01"/>
-				</WeaponSlotHardpoint>
+						Template="AlliedAntiGroundAircraftAutoCannon"/>
+					<TurretSettings
+						TurretTurnRate="360"
+						MinimumPitch="-60d"
+						AllowsPitch="true"
+						PitchHeight="10%"
+						TurretPitchRate="180"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="4.0s"
+						MinIdleScanAngle="30.0"
+						MaxIdleScanAngle="50.0">
+						<TurretAITargetChooserData
+							IdleScanDelay="=$FAST_IDLE_SCAN_DELAY"
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
 			</WeaponSetUpdate>
 			
 			<Physics
@@ -184,7 +197,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="650" />
+				MaxHealth="600" />
 		</Body>
 		
 		<Geometry

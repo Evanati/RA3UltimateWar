@@ -7,7 +7,7 @@
 		PersonalityUIName="Personality:Moskvin"
 		SecondsTillTargetsExpire="5"
 		DesiredExcessPowerBuffer="100"
-		BaseCompactness="0.75"
+		BaseCompactness="0.80"
 		DefaultThreatFindRadius="10000"
 		UnitBuilderCostEffectivenessWeight="1"
 		UnitBuilderMoneyVersusTimePreference="0.5"

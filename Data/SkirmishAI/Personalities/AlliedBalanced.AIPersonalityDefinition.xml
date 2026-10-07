@@ -677,6 +677,10 @@
 			Unit="AlliedArtilleryVehicle"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedTransportHelicopter"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<UnitModifier
 			Unit="AlliedScoutInfantry"
@@ -927,6 +931,11 @@
 			Unit="AlliedAntiStructureShip"
 			OffensiveModifier="20"
 			DefensiveModifier="20"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<UnitModifier
+			Unit="AlliedTransportHelicopter"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<DefaultTacticHomeBaseCriteria

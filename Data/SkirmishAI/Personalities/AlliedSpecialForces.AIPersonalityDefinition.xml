@@ -661,6 +661,10 @@
 			Unit="AlliedArtilleryVehicle"
 			Cap="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<SpecificUnitCap
+			Unit="AlliedTransportHelicopter"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<UnitModifier
 			Unit="AlliedScoutInfantry"
@@ -912,6 +916,11 @@
 			OffensiveModifier="30"
 			DefensiveModifier="30"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="AlliedTransportHelicopter"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<DefaultTacticHomeBaseCriteria
 			RequiredBaseTypes=""

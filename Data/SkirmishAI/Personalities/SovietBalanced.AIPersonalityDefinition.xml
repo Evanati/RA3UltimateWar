@@ -7,7 +7,7 @@
 		PersonalityUIName="Personality:Oleg"
 		SecondsTillTargetsExpire="5"
 		DesiredExcessPowerBuffer="100"
-		BaseCompactness="0.80"
+		BaseCompactness="0.85"
 		DefaultThreatFindRadius="10000"
 		UnitBuilderCostEffectivenessWeight="1"
 		UnitBuilderMoneyVersusTimePreference="0.5"

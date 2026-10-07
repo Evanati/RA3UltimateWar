@@ -7,7 +7,7 @@
 		PersonalityUIName="Personality:Zhana"
 		SecondsTillTargetsExpire="5"
 		DesiredExcessPowerBuffer="100"
-		BaseCompactness="0.85"
+		BaseCompactness="0.90"
 		DefaultThreatFindRadius="10000"
 		UnitBuilderCostEffectivenessWeight="1"
 		UnitBuilderMoneyVersusTimePreference="0.5"

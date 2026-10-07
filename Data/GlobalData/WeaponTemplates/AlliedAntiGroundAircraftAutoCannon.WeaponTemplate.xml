@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="AlliedAntiGroundAircraftAutoCannon"
+		FireFX="FX_MuzzleSovietSickle"
+		FireVeteranFX="FX_MuzzleSovietSickle"
+		FireSoundPerClip="SOV_Sickle_WeaponFireMS"
+		AttackRange="125.0"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
+		CanFireWhileMoving="true"
+		ClipSize="3"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		ReAcquireDetailType="PER_CLIP">
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<Nuggets>
+			<DamageNugget
+				Damage="8.0"
+				Radius="0.0"
+				DamageType="AUTO_CANNON"
+				DelayTimeSeconds="1.0s"
+				DamageFXType="SOVIET_MACHINEGUN"
+				DeathType="NORMAL"/>
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>
