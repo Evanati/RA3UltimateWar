@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>
+		<!-- Opening moves -->
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/AlliedBalanced.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/AlliedSpecialForces.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/AlliedSquadronLeader.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/JapanBalanced.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/JapanFleetCommand.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/JapanMechaWarfare.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/SovietAirMarshall.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/SovietBalanced.SkirmishOpeningMove.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/SovietShockSpecialist.SkirmishOpeningMove.xml"/>
+			
+		<!-- Personalities -->
+		<Include type="all" source="DATA:SkirmishAI/Personalities/AlliedBalanced.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/AlliedSpecialForces.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/AlliedSquadronLeader.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/JapanBalanced.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/JapanFleetCommand.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/JapanMechaWarfare.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/SovietAirMarshall.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/SovietBalanced.AIPersonalityDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/Personalities/SovietShockSpecialist.AIPersonalityDefinition.xml"/>
+			
+		<!-- States -->
+		<Include type="all" source="DATA:SkirmishAI/States/BuildStates/AlliedAirfieldBuildState_RA3UW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/BuildStates/AlliedDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/BuildStates/JapanDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/BuildStates/SovietDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/BuildStates/SovietNavalYardBuildStateNEW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/JapanCapturePriorityTech.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/SovietCapturePriorityTech.AIStrategicStateDefinition.xml"/>
+			
+		<!-- Targeting heuristics -->
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechHeuristic_AITargetingHeuristic.xml"/>
+    </Includes>
+</AssetDeclaration>

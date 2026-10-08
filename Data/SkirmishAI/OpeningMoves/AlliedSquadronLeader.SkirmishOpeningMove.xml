@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- AlliedPowerPlant = 10  seconds -->
+	<!-- AlliedBarracks   = 10  seconds -->
+	<!-- AlliedDogHouse   = 5  seconds -->
+	<!-- AlliedRefinery   = 20 seconds -->
+	<!-- AlliedWarFactory = 20 seconds -->
+	<!-- AlliedNavalYard  = 20 seconds -->
+	<!-- AlliedTech2      = 15 seconds -->
+	<!-- AlliedAirfield   = 15 seconds -->
+	
+	<!-- EASY -->
+	
+	<!-- MEDIUM -->
+	
+	<!-- HARD -->
+	
+	<!-- BRUTAL -->
+	<SkirmishOpeningMove
+		id="AlliedSquadronLeader_MainLand_BRUTAL"
+		Side="PlayerTemplate:Allies">
+		<Order Time="0s" Build="AlliedBarracks" />
+		<Order Time="0s" Build="AlliedDogHouse" />
+		<Order Time="10s" Build="AlliedCrane" />
+		<Order Time="30s" Build="AlliedPowerPlant" />
+		<Order Time="30s" Build="AlliedPowerPlant" />
+		<Order Time="40s" Build="AlliedRefinery" />
+		<Order Time="40s" Build="AlliedRefinery" />
+		<Order Time="60s" Build="AlliedAirfield" />
+		<Order Time="60s" Build="AlliedWarFactory" />
+		<Order Time="75s" Build="AlliedPowerPlant" />
+		<Order Time="80s" Build="AlliedAirfield" />
+		<Order Time="85s" Build="AlliedWarFactory" />
+		<Order Time="95s" Build="AlliedPowerPlant" />
+		<Order Time="105s" Build="AlliedAirfield" />
+		<Order Time="105s" Build="AlliedAirfield" />
+		<Order Time="120s" Build="AlliedPowerPlant" />
+		<Order Time="120s" Build="Upgrade_AlliedTech2" />
+		<Order Time="130s" Build="Upgrade_AlliedTech2" />
+		<Order Time="145s"/>
+	</SkirmishOpeningMove>
+	
+	<SkirmishOpeningMove
+		id="AlliedSquadronLeader_Island_BRUTAL"
+		Side="PlayerTemplate:Allies">
+		<Order Time="0s" Build="AlliedBarracks" />
+		<Order Time="0s" Build="AlliedDogHouse" />
+		<Order Time="10s" Build="AlliedCrane" />
+		<Order Time="30s" Build="AlliedPowerPlant" />
+		<Order Time="30s" Build="AlliedPowerPlant" />
+		<Order Time="40s" Build="AlliedRefinery" />
+		<Order Time="40s" Build="AlliedRefinery" />
+		<Order Time="60s" Build="AlliedAirfield" />
+		<Order Time="60s" Build="AlliedNavalYard" />
+		<Order Time="75s" Build="AlliedPowerPlant" />
+		<Order Time="80s" Build="AlliedAirfield" />
+		<Order Time="85s" Build="AlliedWarFactory" />
+		<Order Time="95s" Build="AlliedPowerPlant" />
+		<Order Time="105s" Build="AlliedAirfield" />
+		<Order Time="105s" Build="AlliedAirfield" />
+		<Order Time="120s" Build="AlliedPowerPlant" />
+		<Order Time="120s" Build="Upgrade_AlliedTech2" />
+		<Order Time="130s" Build="Upgrade_AlliedTech2" />
+		<Order Time="145s"/>
+	</SkirmishOpeningMove>
+	
+	<SkirmishOpeningMove
+		id="AlliedSquadronLeader_Water_BRUTAL"
+		Side="PlayerTemplate:Allies">
+		<Order Time="0s" Build="AlliedCrane" />
+		<Order Time="20s" Build="AlliedPowerPlant" />
+		<Order Time="20s" Build="AlliedPowerPlant" />
+		<Order Time="30s" Build="AlliedRefinery" />
+		<Order Time="30s" Build="AlliedRefinery" />
+		<Order Time="50s" Build="AlliedAirfield" />
+		<Order Time="50s" Build="AlliedNavalYard" />
+		<Order Time="65s" Build="AlliedPowerPlant" />
+		<Order Time="70s" Build="AlliedAirfield" />
+		<Order Time="75s" Build="AlliedNavalYard" />
+		<Order Time="85s" Build="AlliedPowerPlant" />
+		<Order Time="95s" Build="AlliedAirfield" />
+		<Order Time="95s" Build="AlliedAirfield" />
+		<Order Time="110s" Build="AlliedPowerPlant" />
+		<Order Time="110s" Build="Upgrade_AlliedTech2" />
+		<Order Time="120s" Build="Upgrade_AlliedTech2" />
+		<Order Time="135s"/>
+	</SkirmishOpeningMove>
+</AssetDeclaration>

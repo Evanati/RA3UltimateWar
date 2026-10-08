@@ -1,36 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Mod.xml is the central include for mod setup data -->
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <Tags></Tags>
-
-	<!-- Mod.xml is the central include for mod setup data -->
     <Includes>
         <!-- RA3 Mod SDK includes -->
-		<Include 
-			type="reference" 
-			source="DATA:static.xml"/>
-        <Include 
-			type="reference" 
-			source="DATA:global.xml"/>
-        <Include 
-			type="reference" 
-			source="DATA:audio.xml"/>
+		<Include type="reference" source="DATA:audio.xml"/>
+		<Include type="reference" source="DATA:global.xml"/>
+		<Include type="reference" source="DATA:static.xml"/>
 			
 		<!-- Red Alert 3: Ultimate War includes -->
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/Allied/AlliedIncludes.xml"/>
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/Civilian/CivilianIncludes.xml"/>
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/GlobalData/GlobalDataIncludes.xml"/>
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/Neutral/NeutralIncludes.xml"/>
-		<Include 
-			type="all" 
-			source="DATA:RA3UltimateWar/Data/SkirmishAI/SkirmishAIIncludes.xml"/>
+		<Include type="all" source="DATA:Allied/Allied_Includes.xml"/>
+		<Include type="all" source="DATA:Civilian/Civilian_Includes.xml"/>
+		<Include type="all" source="DATA:GlobalData/GlobalData_Includes.xml"/>
+		<Include type="all" source="DATA:Neutral/Neutral_Includes.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/SkirmishAI_Includes.xml"/>
     </Includes>
 </AssetDeclaration>

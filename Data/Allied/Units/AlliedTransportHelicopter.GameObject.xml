@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xai="uri:ea.com:eala:asset:instance"  xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Includes>
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/AlliedTransportHelicopter_Includes.xml" />		
+		<Include type="instance" source="DATA:Neutral/Props/NUMarine1_Collapse.xml" />
+		<!-- Base Object -->
+		<Include type="instance" source="DATA:BaseObjects/BaseVehicle.xml" />
+	</Includes>
+	
+	<GameObject
+		id="AlliedTransportHelicopter"
+		inheritFrom="BaseVehicle"
+		SelectPortrait="Portrait_PresidentHeli"
+		ButtonImage="Button_PresidentHeli"
+		Side="Allies"
+		EditorSorting="UNIT"
+		TransportSlotCount="20"
+		BuildTime="15"
+		CommandSet="SovietAntiGroundAircraftCommandSet"
+		KindOf="SELECTABLE PRELOAD CAN_ATTACK AIRCRAFT TRANSPORT VEHICLE LEAVE_PARKING_ON_BUILD_COMPLETE SCORE LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_CAST_REFLECTIONS CAN_BE_FAVORITE_UNIT"
+		RadarPriority="UNIT"
+		ThreatLevel="7"
+		ProductionQueueType="AIRCRAFT"
+		UnitCategory="AIRCRAFT"
+		WeaponCategory="MISSILE"
+		VoicePriority="148"
+		EditorName="AlliedTransportHelicopter"
+		Description="Desc:AlliedTransportHelicopter"
+		TypeDescription="Type:AlliedTransportHelicopter"
+		HealthBoxHeightOffset="30">
+		
+		<DisplayName
+			xai:joinAction="Replace">Name:AlliedTransportHelicopter</DisplayName>
+			
+		<ObjectResourceInfo>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="1100"/>
+		</ObjectResourceInfo>
+		
+		<ArmorSet
+			Armor="AlliedAntiGroundAircraftArmor"
+			DamageFX="VehicleDamageFX" />
+			
+		<LocomotorSet
+			Locomotor="BasicHelicopterTaxiLocomotor"
+			Condition="TAXIING"
+			Speed="10" />
+		<LocomotorSet
+			Locomotor="AlliedSupportAircraftLocomotor"
+			Condition="NORMAL"
+			Speed="110.0" />
+
+		<!-- Need ConquerMetricsOverrideDefendingAntiMask or else the TAXIING locomotor will make the AI try to build anti-ground units against this -->
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true"
+			ConquerMetricsOverrideDefendingAntiMask="ANTI_AIRBORNE_VEHICLE" />
+		
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="AUALLIEDTRANSPORTHELICOPTER_CTR" />
+					<Turret
+						TurretNameKey="Bone_Turret"
+						TurretPitch="Bone_turret_pitch"
+						TurretID="1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="AUALLIEDTRANSPORTHELICOPTER_CTR" />
+					<Texture
+						Original="AUAlliedTransportHelicopter"
+						New="AUAlliedTransportHelicopter_D" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="ChopperDamageFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="ChopperDamageSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="AUALLIEDTRANSPORTHELICOPTER_CTR" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="AUALLIEDTRANSPORTHELICOPTER_CTR" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		
+		<Behaviors>
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedAntiGroundAircraftAutoCannon"/>
+					<TurretSettings
+						TurretTurnRate="360"
+						MinimumPitch="-60d"
+						AllowsPitch="true"
+						PitchHeight="10%"
+						TurretPitchRate="180"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="4.0s"
+						MinIdleScanAngle="30.0"
+						MaxIdleScanAngle="50.0">
+						<TurretAITargetChooserData
+							IdleScanDelay="=$FAST_IDLE_SCAN_DELAY"
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			
+			<Physics
+				id="ModuleTag_Physics" 
+				GravityMultiplier="30" />
+				
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AUAlliedTransportHelicopter_Collapse_Die_OCL">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_AlliedAircraftDie" />
+			</FXListBehavior>
+			
+			<TransportContain
+				id="ModuleTag_Contain"
+				ObjectStatusOfContained="UNSELECTABLE NO_ATTACK"
+				ObjectStatusWhileContaining="CONTAINER_OCCUPIED CANNOT_LAND_AT_AIRFIELD"
+				ContainMax="5"
+				AllowEnemiesInside="false"
+				AllowAlliesInside="true"
+				AllowNeutralInside="false"
+				AllowOwnPlayerInsideOverride="true"
+				ShowPips="true"
+				EnterSound="VehicleEnter"
+				ExitSound="VehicleExit"
+				KillPassengersOnDeath="true"
+				ConditionForEntry="INVALID"
+				ExtendedExitContainerChecks="true">
+				<PassengerFilter
+					Rule="ANY"
+					Include="INFANTRY"
+					Exclude="AIRCRAFT VEHICLE SHIP SUBMARINE"
+					StatusBitFlagsExclude="AIRBORNE_TARGET">
+				</PassengerFilter>
+				<DieMuxData
+					DeathTypes="ALL" />
+				<PassengerData
+					BonePrefix="NONE">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</PassengerData>
+			</TransportContain>
+		</Behaviors>
+		
+		<AI>
+			<JetAIUpdate
+				id="ModuleTag_AIUpdate"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StateMachine="TransportHelicopterAIStateMachine">
+				<UnitAITargetChooserData 
+					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY"/>
+			</JetAIUpdate>
+		</AI>
+		
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="600" />
+		</Body>
+		
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="37.0"
+				MinorRadius="3.0"
+				Height="25.0"></Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="8.0"
+				MinorRadius="30.0"
+				Height="25.0">
+				<Offset
+					x="-7.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+
+		<AudioArraySound>
+			<AudioEntry Sound="A06_PresidentialHelicopter_MoveStart" AudioType="soundMoveStart" />
+		</AudioArraySound>
+		
+		<VisionInfo
+			VisionRange="300"
+			ShroudClearingRange="400" />
+	</GameObject>
+	
+	<ObjectCreationList
+		id="AUAlliedTransportHelicopter_Collapse_Die_OCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING RANDOM_FORCE"
+			Count="1"
+			MinForceMagnitude="1.0"
+			MaxForceMagnitude="2.0"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<CreateObject>NUMarine1_Collapse</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+</AssetDeclaration>
