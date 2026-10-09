@@ -25,7 +25,7 @@
 		EditorSorting="STRUCTURE"		
 		BuildTime="15"
 		EnergyProduction="-20"
-		CommandSet=""
+		CommandSet="EmptyCommandSet"
 		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"

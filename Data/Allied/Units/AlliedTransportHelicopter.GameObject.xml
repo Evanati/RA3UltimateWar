@@ -4,7 +4,7 @@
 	<Includes>
 		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" />
 		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/AlliedTransportHelicopter_Includes.xml" />		
-		<Include type="instance" source="DATA:Neutral/Props/NUMarine1_Collapse.xml" />
+		<Include type="instance" source="DATA:Allied/Props/AlliedTransportHelicopter_Collapse.xml" />
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseVehicle.xml" />
 	</Includes>
@@ -19,7 +19,7 @@
 		TransportSlotCount="20"
 		BuildTime="15"
 		CommandSet="SovietAntiGroundAircraftCommandSet"
-		KindOf="SELECTABLE PRELOAD CAN_ATTACK AIRCRAFT TRANSPORT VEHICLE LEAVE_PARKING_ON_BUILD_COMPLETE SCORE LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_CAST_REFLECTIONS CAN_BE_FAVORITE_UNIT"
+		KindOf="SELECTABLE PRELOAD CAN_ATTACK AIRCRAFT ASSAULT_AIRCRAFT TRANSPORT VEHICLE LEAVE_PARKING_ON_BUILD_COMPLETE PRODUCED_AT_HELIPAD SCORE LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_CAST_REFLECTIONS CAN_BE_FAVORITE_UNIT"
 		RadarPriority="UNIT"
 		ThreatLevel="7"
 		ProductionQueueType="AIRCRAFT"
@@ -132,7 +132,7 @@
 				
 			<CreateObjectDie
 				id="ModuleTag_CreateObjectDie"
-				CreationList="AUAlliedTransportHelicopter_Collapse_Die_OCL">
+				CreationList="AlliedTransportHelicopter_Collapse_Die_OCL">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</CreateObjectDie>
@@ -197,7 +197,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="600" />
+				MaxHealth="650" />
 		</Body>
 		
 		<Geometry
@@ -218,6 +218,20 @@
 					z="0.0" />
 			</Shape>
 		</Geometry>
+		
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior
+				id="ModuleTag_Flying">
+				<ModelConditionSound Sound="ALL_Cryocopter_TakeOff" RequiredFlags="CLIMBING" ExcludedFlags="DYING" />
+				<ModelConditionSound Sound="ALL_Cryocopter_Land" RequiredFlags="LANDING" ExcludedFlags="DYING" />
+				<ModelConditionSound Sound="ALL_Cryocopter_MoveLoop" RequiredFlags="FLYING MOVING" ExcludedFlags="DAMAGED REALLYDAMAGED DYING" />
+				<ModelConditionSound Sound="ALL_Cryocopter_MoveDamageLoop" RequiredFlags="FLYING MOVING DAMAGED" ExcludedFlags="REALLYDAMAGED DYING" />
+				<ModelConditionSound Sound="ALL_Cryocopter_MoveReallyDamageLoop" RequiredFlags="FLYING MOVING REALLYDAMAGED" ExcludedFlags="DAMAGED DYING" />
+				<ModelConditionSound Sound="ALL_Cryocopter_IdleLoop" RequiredFlags="FLYING" ExcludedFlags="DAMAGED REALLYDAMAGED MOVING DYING" />
+				<ModelConditionSound Sound="ALL_Cryocopter_IdleDamageLoop" RequiredFlags="FLYING DAMAGED" ExcludedFlags="REALLYDAMAGED MOVING DYING" />
+				<ModelConditionSound Sound="ALL_Cryocopter_IdleReallyDamageLoop" RequiredFlags="FLYING REALLYDAMAGED" ExcludedFlags="DAMAGED MOVING DYING" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
 
 		<AudioArraySound>
 			<AudioEntry Sound="A06_PresidentialHelicopter_MoveStart" AudioType="soundMoveStart" />
@@ -229,7 +243,7 @@
 	</GameObject>
 	
 	<ObjectCreationList
-		id="AUAlliedTransportHelicopter_Collapse_Die_OCL">
+		id="AlliedTransportHelicopter_Collapse_Die_OCL">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
 			Disposition="LIKE_EXISTING RANDOM_FORCE"
@@ -238,7 +252,7 @@
 			MaxForceMagnitude="2.0"
 			MinForcePitch="90d"
 			MaxForcePitch="75d">
-			<CreateObject>NUMarine1_Collapse</CreateObject>
+			<CreateObject>AlliedTransportHelicopter_Collapse</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
 </AssetDeclaration>

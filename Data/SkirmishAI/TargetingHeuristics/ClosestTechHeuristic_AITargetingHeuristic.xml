@@ -22,10 +22,10 @@
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="350.0"/>
 		
-   <AITargetingHeuristic
-		id="ClosestHospitalTechHeuristic"
+	<AITargetingHeuristic
+		id="ClosestAirportTechHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="CASTLE_KEEP"
+		VitalKindOf="SIEGE_TOWER"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="400.0"/>
 		
@@ -43,10 +43,10 @@
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="400.0"/>
 		
-	<AITargetingHeuristic
-		id="ClosestAirportTechHeuristic"
+   <AITargetingHeuristic
+		id="ClosestHospitalTechHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="SIEGE_TOWER"
+		VitalKindOf="CASTLE_KEEP"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="400.0"/>
   
@@ -74,7 +74,7 @@
 	<AITargetingHeuristic
 		id="ClosestTechBuildingHeuristic"
 		HeuristicType="TechBuilding"
-		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE CASTLE_KEEP CAVALRY MONSTER SIEGE_TOWER FS_RADAR FS_TECHNOLOGY CASTLE_CENTER"
+		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_TECHNOLOGY CASTLE_CENTER"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="500.0"/>
 </AssetDeclaration>

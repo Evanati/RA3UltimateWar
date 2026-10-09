@@ -355,7 +355,6 @@
 			
 			<StructureUnpackUpdate
 				id="StructureUnpackUpdate"
-				UnpackCompleteSound=""
 				UnpackTime="=$ALLIED_OUTPOST_LOCAL_UNPACK_TIME" />
 			<ProductionUpdate
 				id="ModuleTag_UpgradeProductionUpdate"

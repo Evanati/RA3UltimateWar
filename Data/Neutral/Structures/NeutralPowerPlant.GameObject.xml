@@ -273,8 +273,7 @@
 				OkToChangeModelColor="true"
 				ExtraPublicBone="FX_D2Fire01 FX_D1Fire01 FX_Steam02 FX_Steam01">
 				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="">
+					ParseCondStateType="PARSE_NORMAL">
 					<Model
 						Name="ABPowerPlant_particles" />
 					<ParticleSysBone

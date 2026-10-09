@@ -141,7 +141,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="7000"
+				MaxHealth="6000"
 				/>
 		</Body>
 		<Geometry
@@ -317,8 +317,7 @@
 		id="BB_EuropeCoastalGunWeaponWarhead"
 		ProjectileCollidesWith = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND"
-		Flags="">
+		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND">
 		<Nuggets>
 			<DamageNugget
 				Damage="140.0"

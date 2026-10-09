@@ -14,7 +14,7 @@
 	<GameObject
 		id="KR_ArtilleryDome"
 		inheritFrom="BaseTechStructure"		
-		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +POWERED +CAN_ATTACK +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS +SCORE +NOT_SELLABLE"
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS +SCORE +NOT_SELLABLE"
 		CommandSet="EmptyCommandSet"
 		EditorName="KR_ArtilleryDome"	
     	EditorSorting="STRUCTURE"
@@ -178,7 +178,7 @@
 		ReAcquireDetailType="PER_CLIP"
 		Flags="RELOAD_WHEN_ATTACK_STOPS"
 		ShotsPerBarrel="1"
-		AcceptableAimDelta="360d"
+		AcceptableAimDelta="180d"
 		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
 		<FiringDuration
@@ -206,8 +206,7 @@
 		id="KremlinArtilleryDomeMissleWarhead"
 		ProjectileCollidesWith = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND"
-		Flags="">
+		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND">
 		<Nuggets>
 			<DamageNugget
 				Damage="1000.0"
