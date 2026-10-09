@@ -20,14 +20,14 @@
 				DeathType="NORMAL">
                 <SpecialObjectFilter
 					Rule="NONE"
-					Include="VEHICLE"
+					Include="VEHICLE STRUCTURE"
                     StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
             </DamageNugget>
 			<AttributeModifierNugget
 				AttributeModifierName="AttributeModifier_UnderRepair">
 				<SpecialObjectFilter
 					Rule="NONE"
-					Include="VEHICLE"
+					Include="VEHICLE STRUCTURE"
                     StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
 			</AttributeModifierNugget>
 				

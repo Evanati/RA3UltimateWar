@@ -232,21 +232,25 @@
 			State="AlliedAirDrop"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedCaptureHighPriorityTech_BRUTAL"
-			State="AlliedCaptureHighPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="AlliedCaptureHighPriorityTech"
+			State="AlliedCaptureHighPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedCaptureLowPriorityTech_BRUTAL"
-			State="AlliedCaptureLowPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="AlliedCaptureLowPriorityTech"
+			State="AlliedCaptureLowPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedCaptureMediumPriorityTech_BRUTAL"
-			State="AlliedCaptureMediumPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="AlliedCaptureMediumPriorityTech"
+			State="AlliedCaptureMediumPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedCaptureWaterHusks"
 			State="AlliedCaptureWaterHusks"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedDefensiveGarrisons"
+			State="AlliedDefensiveGarrisons"
+			Difficulty="HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedExpansion_BRUTALNEW"
 			State="AlliedExpansion_BRUTALNEW"

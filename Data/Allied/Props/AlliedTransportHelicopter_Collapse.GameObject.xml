@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="us-ascii"?>
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
-	<Includes>
-		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Containers/AUALLIEDTRANSPORTHELICOPTER_COL_CTR.w3x" />
-		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/Textures/AUAlliedTransportHelicopter_D.Texture.xml" />			
+	<Includes>		
+		<Include type="all" source="ART:Allied/Units/AlliedTransportHelicopter/AlliedTransportHelicopter_Includes.xml" />	
 			<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseCollapsingObject.xml" />
 	</Includes>

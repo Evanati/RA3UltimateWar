@@ -24,7 +24,7 @@
 		<DisplayName xai:joinAction="Replace">Name:EuropeCoastalGun</DisplayName> 
     <ArmorSet
 			id="BB_EuropeCoastalGunArmor"
-			Armor="A01_CoastalGunArmor"
+			Armor="StructureArmor"
 			DamageFX="GenericStructureDamageFX" />
 		<Draws>
 			<ScriptedModelDraw
@@ -141,7 +141,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="6000"
+				MaxHealth="7000"
 				/>
 		</Body>
 		<Geometry
@@ -321,7 +321,7 @@
 		<Nuggets>
 			<DamageNugget
 				Damage="140.0"
-				Radius="100.0"
+				Radius="50.0"
 				DamageType="EXPLOSIVE"
 				DeathType="EXPLODED"
 			/>

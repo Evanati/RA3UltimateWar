@@ -36,8 +36,7 @@
 				Type= "BOX"
 				MajorRadius = "30"
 				MinorRadius = "30"
-				Height = "5"
-				ContactPointGeneration = "NONE" >
+				Height = "5">
 			</Shape>
 		</Geometry>
 	</GameObject>

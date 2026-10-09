@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AIStrategicStateDefinition
+		id="JapanDefensiveGarrisons"
+		MaxTargets="2">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true"/>
+			<EnemyNearbyHeuristic 
+				Distance="250.0" 
+				EnemyNearby="false"/>
+			<PathToTargetHeuristic 
+				PathExists="true" 
+				ObjectTypeToUseForTest="SovietAntiInfantryInfantry" 
+				LocomotorConditionToUseForTest="NORMAL" />
+		</Heuristic>
+		
+		<TargetHeuristic 
+			TargetHeuristic="ClosestCivilianGarrisonHeuristic" 
+			Priority="8"/>
+		<Tactic 
+			id="GarrisonNearbyCivilianBuildings" 
+			Tactic="GarrisonBuilding" 
+			EndBehavior="DISBAND" 
+			DisbandAfterRetreatTeamSize="999"
+			Difficulty="HARD BRUTAL"
+			Distance="400"
+			UpdateTime="1s"
+			Targetless="false"
+			EndIfStateTurnsOff="false"
+			UseTransports="true">
+			<TeamTemplate 
+				MinUnits="3" 
+				MaxUnits="5" 
+				MinPowerAdvantage="0.0"
+				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
+				IncludeKindOf="CAN_ATTACK" 
+				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
+				Priority="STANDARD" 
+				ReleaseType="RELEASE_TO_PRIORITY" 
+				AlwaysRecruit="false"
+				AllowRecruitUnitsInCombat="true"
+				RequireCanAttackTarget="false"
+				AllowedLocomotorTypes="LAND AMPHIBIOUS AIR"
+				DistanceSortPoint="TARGET_POINT"
+				MicroManager="StandardMicroManager"
+				SortByDistance="true">
+				<CreateUnits 
+					UnitName="JapanAntiVehicleInfantry" 
+					MinUnits="3" 
+					MaxUnits="5"/>
+				<CreateUnits 
+					UnitName="JapanAntiInfantryInfantry" 
+					MinUnits="0" 
+					MaxUnits="2"/>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+</AssetDeclaration>

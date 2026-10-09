@@ -339,21 +339,25 @@
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="JapanCaptureHighPriorityTech_BRUTAL"
-			State="JapanCaptureHighPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="JapanCaptureHighPriorityTech"
+			State="JapanCaptureHighPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="JapanCaptureLowPriorityTech_BRUTAL"
-			State="JapanCaptureLowPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="JapanCaptureLowPriorityTech"
+			State="JapanCaptureLowPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="JapanCaptureMediumPriorityTech_BRUTAL"
-			State="JapanCaptureMediumPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="JapanCaptureMediumPriorityTech"
+			State="JapanCaptureMediumPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="JapanCaptureWaterHusks"
 			State="JapanCaptureWaterHusks"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="JapanDefensiveGarrisons"
+			State="JapanDefensiveGarrisons"
+			Difficulty="HARD BRUTAL"/>
 		<StrategicState
 			id="JapanEggUnpacker"
 			State="JapanEggUnpacker"

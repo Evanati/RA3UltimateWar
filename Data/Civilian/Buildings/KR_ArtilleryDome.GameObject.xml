@@ -178,7 +178,7 @@
 		ReAcquireDetailType="PER_CLIP"
 		Flags="RELOAD_WHEN_ATTACK_STOPS"
 		ShotsPerBarrel="1"
-		AcceptableAimDelta="180d"
+		AcceptableAimDelta="360d"
 		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
 		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
 		<FiringDuration
@@ -204,8 +204,8 @@
 	<!-- Artillery Weapon Warhead -->
 	<WeaponTemplate
 		id="KremlinArtilleryDomeMissleWarhead"
-		ProjectileCollidesWith = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ProjectileCollidesWith ="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
 		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND">
 		<Nuggets>
 			<DamageNugget

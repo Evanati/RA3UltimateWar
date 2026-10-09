@@ -407,21 +407,25 @@
 			State="SovietAirTransportInfantryHarrassment"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="SovietCaptureHighPriorityTech_BRUTAL"
-			State="SovietCaptureHighPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="SovietCaptureHighPriorityTech"
+			State="SovietCaptureHighPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="SovietCaptureLowPriorityTech_BRUTAL"
-			State="SovietCaptureLowPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="SovietCaptureLowPriorityTech"
+			State="SovietCaptureLowPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="SovietCaptureMediumPriorityTech_BRUTAL"
-			State="SovietCaptureMediumPriorityTech_BRUTAL"
-			Difficulty="BRUTAL"/>
+			id="SovietCaptureMediumPriorityTech"
+			State="SovietCaptureMediumPriorityTech"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="SovietCaptureWaterHusks"
 			State="SovietCaptureWaterHusks"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SovietDefensiveGarrisons"
+			State="SovietDefensiveGarrisons"
+			Difficulty="HARD BRUTAL"/>
 		<StrategicState
 			id="SovietExpansion_BRUTALNEW"
 			State="SovietExpansion_BRUTALNEW"

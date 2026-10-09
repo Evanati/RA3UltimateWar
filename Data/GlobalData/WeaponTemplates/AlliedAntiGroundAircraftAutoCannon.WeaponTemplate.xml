@@ -3,36 +3,44 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<WeaponTemplate
 		id="AlliedAntiGroundAircraftAutoCannon"
-		FireSoundPerClip="ALL_ACVRiptide_MGFire"
-		FireFX="FX_MuzzleSovietSickle"
-		FireVeteranFX="FX_MuzzleSovietSickle"
+		FireSound="ALL_Apollo_WeaponFire"
+		FireFX="FX_Allied_FighterFire"
+		FireVeteranFX="FX_Allied_FighterFire_Vet"
 		AttackRange="150.0"
-		WeaponSpeed="999999.0"
+		AcceptableAimDelta="10d"
 		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
 		CanFireWhileMoving="true"
-		ClipSize="3"
+		ClipSize="15"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
 		ReAcquireDetailType="PER_CLIP">
+		
 		<FiringDuration
 			MinSeconds="0.2s"
 			MaxSeconds="0.2s" />
 		<ClipReloadTime
-			MinSeconds="0.5s"
-			MaxSeconds="0.5s" />
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+			
 		<Nuggets>
 			<DamageNugget
-				Damage="10.0"
-				Radius="0.0"
+				id="DefaultDamageNugget"
+				Damage="15.0"
 				DamageType="AUTO_CANNON"
-        DamageFXType="SOVIET_AK47" 
+				DelayTimeSeconds="0.5s"
+				DamageFXType="ALLIED_FIGHTER"
 				DeathType="NORMAL">
-		<DamageScalarDetails Scalar= "125%">
+				
+				<DamageScalarDetails Scalar= "125%">
 					<Filter
-					Rule="NONE">
+						Rule="NONE">
 						<IncludeThing>AlliedAntiInfantryInfantry</IncludeThing>
 					</Filter>		
-					</DamageScalarDetails>
-				</DamageNugget>
+				</DamageScalarDetails>
+			</DamageNugget>	
 		</Nuggets>
 	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiGroundAircraftAutoCannon_Veteran"
+		inheritFrom="AlliedAntiGroundAircraftAutoCannon"/>
 </AssetDeclaration>

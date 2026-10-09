@@ -26,10 +26,10 @@
 		BuildTime="25"
 		EnergyProduction="-30"
 		CommandSet="EmptyCommandSet"
-		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +POWERED"
+		KindOf="-NOT_AUTOACQUIRABLE +FS_WAR_FACTORY +POWERED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
-		CampnessValue="3000"
+		CampnessValue="1500"
 		CampnessValueRadius="200"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="OTHER_STRUCTURE"
@@ -428,15 +428,14 @@
 			<PassiveAreaEffectBehavior
 				id="ModuleTag_RepairTurretHeal"
 				EffectRadius="75"
-				HealingPercentPerSecond="2%"				
+				HealingPercentPerSecond="3%"				
 				AffectWoundedOnly="true"
 				AffectUnderAttack="true"
 				DisabledTypesToProcess="HELD">
 				<AllowFilter
 					Rule="ANY"
                     Relationship="ALLIES" 
-					Include="VEHICLE">
-					<ExcludeThing>SovietScoutVehicle</ExcludeThing>
+					Include="VEHICLE STRUCTURE">
 				</AllowFilter>
 			</PassiveAreaEffectBehavior>
 
@@ -459,9 +458,10 @@
 			<AIUpdate
 				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				StateMachine="OffensiveStructureAIStateMachine">
+				StateMachine="StructureAIStateMachine">
 				<UnitAITargetChooserData
-					CanPickDynamicTargets="false"
+					CanPickDynamicTargets="true"
+					RotateToTargetWhenAiming="true"
 					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY">	
 				</UnitAITargetChooserData>	
 			</AIUpdate>
