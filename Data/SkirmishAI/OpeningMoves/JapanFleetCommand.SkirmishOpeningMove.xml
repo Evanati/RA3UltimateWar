@@ -37,7 +37,6 @@
 		<Order Time="128s" Build="Upgrade_JapanWarFactoryTech2" />
 		<Order Time="128s" Build="Upgrade_JapanNavalYardTech2" />
 		<Order Time="128s" Build="Upgrade_JapanNavalYardTech2" />
-		<Order Time="158s"/>
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove

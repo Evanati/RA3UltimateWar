@@ -7,7 +7,7 @@
 		PersonalityUIName="Personality:Kenji"
 		SecondsTillTargetsExpire="5"
 		DesiredExcessPowerBuffer="100"
-		BaseCompactness="0.9"
+		BaseCompactness="0.95"
 		DefaultThreatFindRadius="10000"
 		UnitBuilderCostEffectivenessWeight="1"
 		UnitBuilderMoneyVersusTimePreference="0.5"

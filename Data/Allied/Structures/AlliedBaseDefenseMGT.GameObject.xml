@@ -26,7 +26,7 @@
 		BuildTime="15"
 		EnergyProduction="-20"
 		CommandSet="EmptyCommandSet"
-		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED"
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +COVER +HIDE_IF_FOGGED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
 		CampnessValue="=$CAMPNESS_DEFENSIVE_STRUCTURE"
@@ -399,7 +399,7 @@
 			
 			<StructureUnpackUpdate
 				id="ModuleTag_StructureUnpack"
-				UnpackTime="0.2s" />
+				UnpackTime="0.15s" />
 
 			<xi:include
 				href="DATA:Includes/GenericBuildingRepair.xml" />

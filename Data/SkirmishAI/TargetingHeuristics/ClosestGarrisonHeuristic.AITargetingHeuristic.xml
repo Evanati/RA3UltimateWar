@@ -11,8 +11,8 @@
 		MinDistanceFromEnemy="150.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE ENEMIES_IN_BASE"
-			PreferredBaseTypes="LAND_CENTERED EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			PreferredNotBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED NO_BUILD_RADIUS"
 			SortOrder="PREFER_NEWEST"/>
 	</AITargetingHeuristic>
 </AssetDeclaration>

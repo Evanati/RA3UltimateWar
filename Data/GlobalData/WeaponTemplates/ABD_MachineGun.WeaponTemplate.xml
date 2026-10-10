@@ -11,7 +11,7 @@
 		RadiusDamageAffects="ENEMIES"
 		ClipSize="5"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
-		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_STRUCTURE"
 		AcceptableAimDelta="10d"
 		CanFireWhileMoving="false"
 		ReAcquireDetailType="PER_CLIP"	

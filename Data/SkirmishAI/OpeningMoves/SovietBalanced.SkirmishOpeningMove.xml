@@ -36,7 +36,6 @@
 		<Order Time="100s" Build="SovietWarFactory" />
 		<Order Time="120s" Build="SovietAirfield" />
 		<Order Time="120s" Build="SovietAirfield" />
-		<Order Time="150s"/>
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove

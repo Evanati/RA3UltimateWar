@@ -7,10 +7,10 @@
 		FireFX="FX_Allied_FighterFire"
 		FireVeteranFX="FX_Allied_FighterFire_Vet"
 		AttackRange="150.0"
-		AcceptableAimDelta="10d"
+		AcceptableAimDelta="20d"
 		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
 		CanFireWhileMoving="true"
-		ClipSize="15"
+		ClipSize="10"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
 		ReAcquireDetailType="PER_CLIP">
 		
@@ -24,7 +24,7 @@
 		<Nuggets>
 			<DamageNugget
 				id="DefaultDamageNugget"
-				Damage="15.0"
+				Damage="20.0"
 				DamageType="AUTO_CANNON"
 				DelayTimeSeconds="0.5s"
 				DamageFXType="ALLIED_FIGHTER"
