@@ -25,12 +25,12 @@
 		EditorSorting="STRUCTURE"		
 		BuildTime="25"
 		EnergyProduction="-30"
-		CommandSet=""
-		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +POWERED"
+		CommandSet="EmptyCommandSet"
+		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +FS_TECHNOLOGY +FS_WAR_FACTORY +POWERED +COVER +HIDE_IF_FOGGED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
-		CampnessValue="3000"
-		CampnessValueRadius="200"
+		CampnessValue="1500"
+		CampnessValueRadius="75"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="OTHER_STRUCTURE"
 		EditorName="AlliedBaseDefenseRT"
@@ -52,7 +52,8 @@
 			BaseBuildingLocation="CENTER" >
 			<ConstructionBaseSelectionCriteria
 				ExcludedBaseTypes="NO_BUILD_RADIUS"
-				PreferredBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+				PreferredNotBaseTypes="ENEMIES_IN_BASE"
+				PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED UNDER_ATTACK"
 				SortOrder="PREFER_MOST_RECENTLY_ATTACKED" />
 		</SkirmishAIInformation>
 		<Draws>
@@ -281,29 +282,6 @@
 
 				</ModelConditionState>
 			</ScriptedModelDraw>
-			
-			<ScriptedModelDraw
-				id="ModuleTag_RepairDecal"
-				OkToChangeModelColor="true">
-				<ModelConditionState
-					ParseCondStateType="PARSE_DEFAULT">
-					<Model Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="SELECTED">
-					<Model Name="FXInvisBone" />
-					<ShadowInfo
-						Type="ADDITIVE_DECAL"
-						SizeX="150.0"
-						SizeY="150.0"
-						OverrideLODVisibility="true"
-						MaxHeight="200"
-						UseHouseColor="true"
-						Texture="Decal_Rig_CO"
-						LocalPlayerOnly="true" />
-				</ModelConditionState>
-			</ScriptedModelDraw>
 		</Draws>
 		
 		<Behaviors>
@@ -338,6 +316,13 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
+			
+			<!-- For the Allied Repair Turret Auto Repair Allies -->
+			<StatusBitsUpgrade
+					id="ModuleTag_UpgradeWeapon"
+					StatusToSet="REPAIR_ALLIES_WHEN_IDLE">
+					<TriggeredBy>Uprade_IFV_Repair</TriggeredBy>
+			</StatusBitsUpgrade>
 			
 			<LevelUpUpgrade
 				id="ModuleTag_LevelUp_Veteran"
@@ -423,22 +408,7 @@
 			
 			<StructureUnpackUpdate
 				id="ModuleTag_StructureUnpack"
-				UnpackTime="0.2s" />
-				
-			<PassiveAreaEffectBehavior
-				id="ModuleTag_RepairTurretHeal"
-				EffectRadius="75"
-				HealingPercentPerSecond="2%"				
-				AffectWoundedOnly="true"
-				AffectUnderAttack="true"
-				DisabledTypesToProcess="HELD">
-				<AllowFilter
-					Rule="ANY"
-                    Relationship="ALLIES" 
-					Include="VEHICLE">
-					<ExcludeThing>SovietScoutVehicle</ExcludeThing>
-				</AllowFilter>
-			</PassiveAreaEffectBehavior>
+				UnpackTime="0.15s" />
 
 			<xi:include
 				href="DATA:Includes/GenericBuildingRepair.xml" />
@@ -458,14 +428,16 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AI"
-				AutoAcquireEnemiesWhenIdle="YES"
+				AutoAcquireEnemiesWhenIdle="NO"
 				StateMachine="OffensiveStructureAIStateMachine">
 				<UnitAITargetChooserData
-					CanPickDynamicTargets="false"
+					CanPickDynamicTargets="true"
+					RotateToTargetWhenAiming="true"
 					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY">	
 				</UnitAITargetChooserData>	
 			</AIUpdate>
 		</AI>
+		
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"

@@ -20,25 +20,24 @@
 	<SkirmishOpeningMove
 		id="AlliedBalanced_MainLand_BRUTAL"
 		Side="PlayerTemplate:Allies">
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="10s" Build="AlliedCrane" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="60s" Build="AlliedBarracks" />
-		<Order Time="60s" Build="AlliedWarFactory" />
-		<Order Time="70s" Build="AlliedPowerPlant" />
-		<Order Time="80s" Build="AlliedWarFactory" />
-		<Order Time="80s" Build="AlliedAirfield" />
-		<Order Time="95s" Build="AlliedPowerPlant" />
-		<Order Time="100s" Build="AlliedWarFactory" />
-		<Order Time="105s" Build="AlliedAirfield" />
-		<Order Time="120s" Build="AlliedPowerPlant" />
+		<Order Time="0s" Build="AlliedBarracks" /> <!-- Power balance: 50/25 -->
+		<Order Time="0s" Build="AlliedDogHouse" /> <!-- Power balance: 50/25 -->
+		<Order Time="10s" Build="AlliedCrane" /> <!-- Power balance: 50/25 -->
+		<Order Time="30s" Build="AlliedPowerPlant" /> <!-- Power balance: 150/25 -->
+		<Order Time="30s" Build="AlliedPowerPlant" /> <!-- Power balance: 250/25 -->
+		<Order Time="40s" Build="AlliedRefinery" /> <!-- Power balance: 250/75 -->
+		<Order Time="40s" Build="AlliedRefinery" /> <!-- Power balance: 250/125 -->
+		<Order Time="60s" Build="AlliedBarracks" /> <!-- Power balance: 250/150 -->
+		<Order Time="60s" Build="AlliedWarFactory" /> <!-- Power balance: 250/200 -->
+		<Order Time="70s" Build="AlliedPowerPlant" /> <!-- Power balance: 350/200 -->
+		<Order Time="80s" Build="AlliedWarFactory" /> <!-- Power balance: 350/250 -->
+		<Order Time="80s" Build="AlliedAirfield" /> <!-- Power balance: 350/300 -->
+		<Order Time="95s" Build="AlliedPowerPlant" /> <!-- Power balance: 450/300 -->
+		<Order Time="100s" Build="AlliedWarFactory" /> <!-- Power balance: 450/350 -->
+		<Order Time="105s" Build="AlliedAirfield" /> <!-- Power balance: 450/400 -->
+		<Order Time="120s" Build="AlliedPowerPlant" /> <!-- Power balance: 550/400 -->
 		<Order Time="120s" Build="Upgrade_AlliedTech2" />
 		<Order Time="130s" Build="Upgrade_AlliedTech2" />
-		<Order Time="145s"/>
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove

@@ -2,6 +2,9 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Includes>
+		<!-- Props -->
+		<Include type="all" source="DATA:Allied/Props/AlliedTransportHelicopter_Collapse.GameObject.xml"/>
+		
 		<!-- Structures -->
 		<Include type="all" source="DATA:Allied/Structures/AlliedBaseDefense.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Structures/AlliedBaseDefenseMGT.GameObject.xml"/>

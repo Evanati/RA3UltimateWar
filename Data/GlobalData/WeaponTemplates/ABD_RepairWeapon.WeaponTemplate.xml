@@ -3,11 +3,14 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
     <WeaponTemplate
 		id="ABD_RepairWeapon"
-		FireFX="FX_None"
-		AttackRange="25"
+		AttackRange="50"
 		RadiusDamageAffects="ALLIES"
+		CanFireWhileMoving="true"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
-		CanFireWhileMoving="true">
+		FireFX="FX_AAAVT1_Engineer"
+		FireVeteranFX="FX_AAAVT1_Engineer"
+		FiringLoopSound="ALL_MultiGunnerIFV_EngineerRepairLoop"
+		FiringLoopSoundContinuesDuringReload="true">
 		<FiringDuration
 			MinSeconds="0.1s"
 			MaxSeconds="0.1s" />
@@ -30,7 +33,6 @@
 					Include="VEHICLE"
                     StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
 			</AttributeModifierNugget>
-				
         </Nuggets>
 	</WeaponTemplate>
 </AssetDeclaration>

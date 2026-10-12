@@ -14,7 +14,7 @@
 	<GameObject
 		id="KR_ArtilleryDome"
 		inheritFrom="BaseTechStructure"		
-		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +POWERED +CAN_ATTACK +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS +SCORE +NOT_SELLABLE"
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS +SCORE +NOT_SELLABLE"
 		CommandSet="EmptyCommandSet"
 		EditorName="KR_ArtilleryDome"	
     	EditorSorting="STRUCTURE"
@@ -204,10 +204,9 @@
 	<!-- Artillery Weapon Warhead -->
 	<WeaponTemplate
 		id="KremlinArtilleryDomeMissleWarhead"
-		ProjectileCollidesWith = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
-		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND"
-		Flags="">
+		ProjectileCollidesWith ="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND">
 		<Nuggets>
 			<DamageNugget
 				Damage="1000.0"

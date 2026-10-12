@@ -7,5 +7,6 @@
 		<Include type="all" source="DATA:Civilian/Buildings/GE_SwissBank.GameObject.xml"/>
 		<Include type="all" source="DATA:Civilian/Buildings/KR_ArtilleryDome.GameObject.xml"/>
 		<Include type="all" source="DATA:Civilian/Buildings/MR_RushmoreHeadControlCenter.GameObject.xml"/>
+		<Include type="all" source="DATA:Civilian/Buildings/SI_Helipad.GameObject.xml"/>
     </Includes>
 </AssetDeclaration>

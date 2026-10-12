@@ -24,7 +24,7 @@
 		<DisplayName xai:joinAction="Replace">Name:EuropeCoastalGun</DisplayName> 
     <ArmorSet
 			id="BB_EuropeCoastalGunArmor"
-			Armor="A01_CoastalGunArmor"
+			Armor="StructureArmor"
 			DamageFX="GenericStructureDamageFX" />
 		<Draws>
 			<ScriptedModelDraw
@@ -317,12 +317,11 @@
 		id="BB_EuropeCoastalGunWeaponWarhead"
 		ProjectileCollidesWith = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND"
-		Flags="">
+		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND">
 		<Nuggets>
 			<DamageNugget
 				Damage="140.0"
-				Radius="100.0"
+				Radius="50.0"
 				DamageType="EXPLOSIVE"
 				DeathType="EXPLODED"
 			/>

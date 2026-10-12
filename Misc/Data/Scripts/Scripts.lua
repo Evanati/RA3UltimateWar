@@ -1664,8 +1664,16 @@ function OnAlliedBaseDefenseCreated(self)
 	ObjectHideSubObjectPermanently( self, "upwarhead05", true )
 	ObjectHideSubObjectPermanently( self, "upwarhead06", true )
 	
-	if strfind(ObjectTeamName(self), "Skirmish") ~= nil then
+	local team = ObjectTeamName(self)
+	
+	if strfind(team, "Skirmish") ~= nil then
+	
+		local player = tostring(strsub(team, 1, 8))
+	
+		ExecuteAction("PLAYER_GIVE_MONEY", player, -400) -- credits spent on the upgrade
+	
 		ObjectGrantUpgrade( self, "Upgrade_AlliedBaseDefenseUpgraderAI" )
-    end
+		
+	end
 	
 end

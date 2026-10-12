@@ -31,10 +31,14 @@
 		<Include type="all" source="DATA:SkirmishAI/States/BuildStates/SovietDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/BuildStates/SovietNavalYardBuildStateNEW.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/JapanCapturePriorityTech.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/JapanDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/SovietCapturePriorityTech.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/StrategicStates/SovietDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 			
 		<!-- Targeting heuristics -->
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechHeuristic_AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestGarrisonHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechHeuristic.AITargetingHeuristic.xml"/>
     </Includes>
 </AssetDeclaration>

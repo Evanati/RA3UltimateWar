@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AITargetingHeuristic
+		id="ClosestCivilianGarrisonHeuristic"
+		HeuristicType="NeutralGarrison"
+		VitalKindOf="CIVILIAN_BUILDING GARRISON"
+		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_TECHNOLOGY CASTLE_CENTER"
+		Location="Land"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="150.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_NEWEST"/>
+	</AITargetingHeuristic>
+</AssetDeclaration>

@@ -25,19 +25,18 @@
 		<Order Time="8s" Build="JapanBarracksEgg" />
 		<Order Time="23s" Build="JapanRefineryEgg" />
 		<Order Time="27s" Build="JapanRefineryEgg" />
-		<Order Time="57s" Build="JapanPowerPlantEgg" />
-		<Order Time="61s" Build="JapanWarFactoryEgg" />
-		<Order Time="65s" Build="JapanWarFactoryEgg" />
-		<Order Time="85s" Build="JapanPowerPlantEgg" />
-		<Order Time="89s" Build="JapanWarFactoryEgg" />
-		<Order Time="93s" Build="JapanNavalYardEgg" />
-		<Order Time="113s" Build="JapanPowerPlantEgg" />
-		<Order Time="117s" Build="JapanWarFactoryEgg" />
-		<Order Time="121s" Build="JapanNavalYardEgg" />
-		<Order Time="125s" Build="Upgrade_JapanWarFactoryTech2" />
-		<Order Time="125s" Build="Upgrade_JapanWarFactoryTech2" />
-		<Order Time="125s" Build="Upgrade_JapanNavalYardTech2" />
-		<Order Time="155s"/>
+		<Order Time="60s" Build="JapanPowerPlantEgg" />
+		<Order Time="64s" Build="JapanWarFactoryEgg" />
+		<Order Time="68s" Build="JapanWarFactoryEgg" />
+		<Order Time="88s" Build="JapanPowerPlantEgg" />
+		<Order Time="92s" Build="JapanWarFactoryEgg" />
+		<Order Time="96s" Build="JapanNavalYardEgg" />
+		<Order Time="116s" Build="JapanPowerPlantEgg" />
+		<Order Time="120s" Build="JapanWarFactoryEgg" />
+		<Order Time="124s" Build="JapanNavalYardEgg" />
+		<Order Time="128s" Build="Upgrade_JapanWarFactoryTech2" />
+		<Order Time="128s" Build="Upgrade_JapanWarFactoryTech2" />
+		<Order Time="128s" Build="Upgrade_JapanNavalYardTech2" />
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove

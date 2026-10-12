@@ -3698,7 +3698,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseRT
-		"A specialized vehicle repair station with direct/indirect repairing capabilities."
+		"A specialized vehicle repair station with direct and indirect repairing capabilities."
 	End
 	
 // AlliedBaseDefenseMGT
@@ -3746,7 +3746,7 @@
 	End
 	
 	Desc:AlliedTransportHelicopter
-		"The Allies' go-to infantry transport helicopter. Spacious and durable, but has limited offensive capabilities."
+		"The Allies' go-to infantry transport helicopter. Spacious and quite durable, but has limited offensive capabilities."
 	End
 	
 	Type:AlliedTransportHelicopter
@@ -3759,7 +3759,7 @@
 	End
 	
 	Desc:NeutralPowerPlant
-		"These structures safely use clean-burning, sustainable fuels to power civilian areas."
+		"These structures safely use clean-burning, sustainable fuels to power civilian Western areas."
 	End
 	
 	Type:NeutralPowerPlant

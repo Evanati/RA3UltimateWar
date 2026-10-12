@@ -2,12 +2,10 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Includes>
-		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" /> 	
-		<Include type="all" source="ART:ABBaseDefense.w3x" />		
+		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" /> 			
 		<Include type="all"	source="ART:ABBaseDefense_BLD_SKN.w3x" />				
 		<Include type="all"	source="ART:ABBaseDefense_BLD_BLD.w3x" />
-		<Include type="all"	source="ART:ABBaseDefense_BLD_BLDW.w3x" />	
-		<Include type="all" source="ART:ABBaseDefense_FX.w3x" />		
+		<Include type="all"	source="ART:ABBaseDefense_BLD_BLDW.w3x" />		
 		<Include type="all"	source="ART:ABBaseDefense_Platform.w3x" />
 		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />	
 		<!-- Base Object -->
@@ -769,7 +767,6 @@
 				HighDetailOnly="false">
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT"
-					ConditionsYes=""
 					RetainSubObjects="false">
 					<Model
 						Name="ALLIEDOUTPOSTSPOT_SKN"
@@ -777,7 +774,6 @@
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
-					ConditionsYes=""
 					Flags="NONE"
 					FrameForPristineBonePositions="0"
 					ShareAnimation="false"
