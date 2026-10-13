@@ -6,75 +6,152 @@
 		HeuristicType="TechBuilding"
 		VitalKindOf="SUPPLY_SOURCE"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="350.0"/>
-
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+		
     <AITargetingHeuristic
 		id="ClosestVeterancyTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="GRANTS_VETERANCY"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="350.0"/>
+		MinDistanceFromEnemy="500.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
 		id="ClosestDefenseTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="FS_BASE_DEFENSE"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="350.0"/>
+		MinDistanceFromEnemy="550.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
 		id="ClosestAirportTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="SIEGE_TOWER"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="400.0"/>
+		MinDistanceFromEnemy="600.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
 		id="ClosestGarageTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CAVALRY"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="400.0"/>
+		MinDistanceFromEnemy="600.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
 		id="ClosestShipYardTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="MONSTER"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="400.0"/>
+		MinDistanceFromEnemy="600.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
    <AITargetingHeuristic
 		id="ClosestHospitalTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CASTLE_KEEP"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="400.0"/>
+		MinDistanceFromEnemy="600.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
   
 	<AITargetingHeuristic
 		id="ClosestRadarTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="FS_RADAR"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="450.0"/>
+		MinDistanceFromEnemy="650.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
 		id="ClosestPowerTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="FS_TECHNOLOGY"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="450.0"/>
+		MinDistanceFromEnemy="650.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
 		id="ClosestControlTechHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CASTLE_CENTER"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="450.0"/>
+		MinDistanceFromEnemy="650.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
 		id="ClosestTechBuildingHeuristic"
 		HeuristicType="TechBuilding"
 		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_TECHNOLOGY CASTLE_CENTER CIVILIAN_BUILDING GARRISON"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="500.0"/>
+		MinDistanceFromEnemy="700.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
 </AssetDeclaration>

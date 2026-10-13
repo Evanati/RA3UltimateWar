@@ -2,12 +2,9 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Includes>
-		<Include
-			type="instance"
-			source="DATA:BaseObjects/BaseRoadSegment.xml" />
-		<Include
-			type="all"
-			source="ART:SI_Helipad.W3X" />
+		<Include type="all" source="ART:SI_Helipad.W3X" />
+		<!-- Base Object -->
+		<Include type="instance" source="DATA:BaseObjects/BaseRoadSegment.xml" />
 	</Includes>
 	
 	<GameObject
@@ -36,7 +33,7 @@
 				Type= "BOX"
 				MajorRadius = "30"
 				MinorRadius = "30"
-				Height = "5">
+				Height = "0" >
 			</Shape>
 		</Geometry>
 	</GameObject>

@@ -33,7 +33,7 @@
 			UseTransports="true">
 			<TeamTemplate 
 				MinUnits="5" 
-				MaxUnits="10" 
+				MaxUnits="5" 
 				MinPowerAdvantage="0.0"
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
@@ -49,12 +49,12 @@
 				SortByDistance="true">
 				<CreateUnits 
 					UnitName="JapanAntiVehicleInfantry" 
-					MinUnits="3" 
-					MaxUnits="10"/>
+					MinUnits="4" 
+					MaxUnits="5"/>
 				<CreateUnits 
 					UnitName="JapanAntiInfantryInfantry" 
 					MinUnits="0" 
-					MaxUnits="3"/>
+					MaxUnits="1"/>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>

@@ -11,7 +11,7 @@
 		<BuildEntry
 			Build="AlliedBaseDefenseRT"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
+			CountModifier="2.5"/>
 		
 		<BuildEntry
 			Build="AlliedBaseDefenseMGT"
@@ -26,7 +26,7 @@
 		<BuildEntry
 			Build="AlliedBaseDefenseAdvanced"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="3.0"/>
+			CountModifier="3.5"/>
 	
 		<BuildEntry
 			Build="ABWeatherControl"

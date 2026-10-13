@@ -3,9 +3,9 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Includes>
 		<Include type="all"	source="ART:KR_ArtilleryDome.W3X" />
+		<Include type="all"	source="ART:EXSovietShell.w3x" />	
 		<Include type="instance" source="DATA:Civilian/Yucatan_YU/Props/YU_HotelDebris.xml" />
 		<Include type="instance" source="DATA:Civilian/Kremlin_KR/Props/KR_ArtilleryDome_Collapse.xml" />
-		<Include type="all"	source="ART:EXSovietShell.w3x" />	
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseTechStructure.xml" />
 	</Includes>
@@ -14,7 +14,7 @@
 	<GameObject
 		id="KR_ArtilleryDome"
 		inheritFrom="BaseTechStructure"		
-		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS +SCORE +NOT_SELLABLE"
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +NOT_SELLABLE +SCORE +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS"
 		CommandSet="EmptyCommandSet"
 		EditorName="KR_ArtilleryDome"	
     	EditorSorting="STRUCTURE"
@@ -52,6 +52,7 @@
 
 			</ScriptedModelDraw>
 		</Draws>
+		
 		<Behaviors>
 			<WeaponSetUpdate
 				id="ModuleTag_Weapon01SetUpdate">
@@ -76,10 +77,12 @@
 						</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
+			
 			<xi:include
 				href="DATA:Includes/GenericEngineerContain.xml" />
 			<xi:include
 				href="DATA:Includes/GenericBuildingRepair.xml" />
+			
 			<BuildingDestructionBehavior
 				id="ModuleTag_BuildingDestruction">
 				<DieMuxData
@@ -117,7 +120,7 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AI"
-				AutoAcquireEnemiesWhenIdle="NO"
+				AutoAcquireEnemiesWhenIdle="YES"
 				StateMachine="OffensiveStructureAIStateMachine">
 				<UnitAITargetChooserData
 					CanPickDynamicTargets="false"/>
@@ -126,7 +129,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="5000"
+				MaxHealth="6500"
 				/>
 		</Body>
 		<Geometry
@@ -163,7 +166,6 @@
 			ShroudClearingRange="800"/>
 	</GameObject>
 
-
 	<!-- Artillery Weapon -->
 	<WeaponTemplate
 		id="KremlinArtilleryDomeMissle"
@@ -186,40 +188,48 @@
 			MaxSeconds="1.0s" />
 		<ClipReloadTime
 			MinSeconds="5s"
-			MaxSeconds="5s"
-		/>
+			MaxSeconds="5s" />
 		<Nuggets>
 			<ProjectileNugget
 				ProjectileTemplate="KremlinArtilleryDomeMissleProjectile"
 				WarheadTemplate="KremlinArtilleryDomeMissleWarhead">
 			</ProjectileNugget>
+			
 			<SuppressionNugget
 				Radius="200.0"
 				Suppression="100"
-				DurationSeconds="5s"
-			/>
+				DurationSeconds="5s"/>
 		</Nuggets>
 	</WeaponTemplate>
 
 	<!-- Artillery Weapon Warhead -->
 	<WeaponTemplate
 		id="KremlinArtilleryDomeMissleWarhead"
-		ProjectileCollidesWith ="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
-		RadiusDamageAffects="ENEMIES NEUTRALS"
-		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND">
+		ProjectileCollidesWith = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND"
+		Flags="">
+		
 		<Nuggets>
 			<DamageNugget
 				Damage="1000.0"
-				DamageTaperOff="25"
 				Radius="200.0"
+				DamageTaperOff="25"
 				DamageType="EXPLOSIVE"
-				DeathType="NORMAL"
-			/>
-      <MetaImpactNugget
-          ShockWaveAmount="200.0"
-          ShockWaveRadius="200.0"
-          ShockWaveZMult="1.50" />
-    </Nuggets>
+				DeathType="NORMAL"> 
+				
+				<DamageScalarDetails Scalar= "50%">
+					<Filter
+						Rule="ALL"
+						Relationship="ALLIES" />
+				</DamageScalarDetails>	
+			</DamageNugget>
+			
+			<MetaImpactNugget
+				ShockWaveAmount="200.0"
+				ShockWaveRadius="200.0"
+				ShockWaveZMult="1.50" />
+		</Nuggets>
 	</WeaponTemplate>
 
 	<!-- Artillery Weapon Projectile -->
@@ -269,6 +279,12 @@
 				Type="SPHERE"
 				MajorRadius="0.8"></Shape>
 		</Geometry>
+		
+		<AudioArrayVoice>
+			<AudioEntry EvaEvent="BuildingCaptured" AudioType="voiceDefectingTowards" />
+			<AudioEntry Sound="BuildingRepaired" AudioType="voiceDefectingTowards" />
+		</AudioArrayVoice>
+		
 		<VisionInfo
 			VisionRange="0" />
 	</GameObject>

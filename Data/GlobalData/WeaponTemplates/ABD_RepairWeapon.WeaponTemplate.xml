@@ -8,9 +8,8 @@
 		CanFireWhileMoving="true"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
 		FireFX="FX_AAAVT1_Engineer"
-		FireVeteranFX="FX_AAAVT1_Engineer"
 		FiringLoopSound="ALL_MultiGunnerIFV_EngineerRepairLoop"
-		FiringLoopSoundContinuesDuringReload="true">
+		FiringLoopSoundContinuesDuringReload="true" >
 		<FiringDuration
 			MinSeconds="0.1s"
 			MaxSeconds="0.1s" />
@@ -22,16 +21,18 @@
 				DamageFXType="SOVIET_REPAIR"
 				DeathType="NORMAL">
                 <SpecialObjectFilter
-					Rule="NONE"
-					Include="VEHICLE"
-                    StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
+					Relationship="ALLIES"
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE"
+                    StatusBitFlagsExclude="HEALTH_PERCENT_100 AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
             </DamageNugget>
 			<AttributeModifierNugget
 				AttributeModifierName="AttributeModifier_UnderRepair">
 				<SpecialObjectFilter
-					Rule="NONE"
-					Include="VEHICLE"
-                    StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
+					Relationship="ALLIES"
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE"
+                    StatusBitFlagsExclude="HEALTH_PERCENT_100 AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
 			</AttributeModifierNugget>
         </Nuggets>
 	</WeaponTemplate>

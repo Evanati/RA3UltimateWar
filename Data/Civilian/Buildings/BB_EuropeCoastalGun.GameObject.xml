@@ -115,13 +115,8 @@
 					DeathTypes="ALL" />
 			</CreateObjectDie>
 
-			<xi:include 
-				href="DATA:Includes/GenericEngineerContain.xml" />
-			<xi:include	
-				href="DATA:Includes/GenericBuildingRepair.xml" />
-			<LUAEventList
-				id="ModuleTag_LUAEventList"
-				EventListName="BuildingPowerFunctions"/>
+		<xi:include href="DATA:Includes/GenericEngineerContain.xml" />
+		<xi:include	href="DATA:Includes/GenericBuildingRepair.xml" />
 
 		<!-- civ buildings should have a CreateObjectDie to make a collapse version. -->
 		<DestroyDie
@@ -130,18 +125,21 @@
 				DeathTypes="ALL" />
 		</DestroyDie>
 	</Behaviors>
+	
 	<AI>
 		<AIUpdate
 			id="ModuleTag_AI"
-			AutoAcquireEnemiesWhenIdle="NO"
-				StateMachine="OffensiveStructureAIStateMachine">
-        <UnitAITargetChooserData />
-			</AIUpdate>
-		</AI>
+			AutoAcquireEnemiesWhenIdle="YES"
+			StateMachine="OffensiveStructureAIStateMachine">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"/>
+		</AIUpdate>
+	</AI>
+	
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="7000"
+				MaxHealth="8000"
 				/>
 		</Body>
 		<Geometry
@@ -158,10 +156,13 @@
 					z = "0.0" />
 			</Shape>
 		</Geometry>
+		
 		<AudioArrayVoice>
-			<AudioEntry Sound="A01_CoastalGun_SelectMS" AudioType="voiceSelect" />
+			<AudioEntry EvaEvent="BuildingCaptured" AudioType="voiceDefectingTowards" />
 			<AudioEntry Sound="BuildingRepaired" AudioType="voiceDefectingTowards" />
+			<AudioEntry Sound="A01_CoastalGun_SelectMS" AudioType="voiceSelect" />
 		</AudioArrayVoice>
+		
 		<AudioArraySound>
 			<AudioEntry Sound="HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />
 			<AudioEntry Sound="HumanFaction_MediumBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
@@ -317,14 +318,14 @@
 		id="BB_EuropeCoastalGunWeaponWarhead"
 		ProjectileCollidesWith = "ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
-		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND">
+		RequiredAntiMask="ANTI_STRUCTURE ANTI_WATER ANTI_GROUND"
+		Flags="">
 		<Nuggets>
 			<DamageNugget
 				Damage="140.0"
-				Radius="50.0"
+				Radius="100.0"
 				DamageType="EXPLOSIVE"
-				DeathType="EXPLODED"
-			/>
+				DeathType="EXPLODED" />
 		</Nuggets>
 	</WeaponTemplate>
 </AssetDeclaration>

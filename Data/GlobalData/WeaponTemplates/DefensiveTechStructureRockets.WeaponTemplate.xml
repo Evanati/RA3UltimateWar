@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="DefensiveTechStructure_ScatterableWeapon">
+		<ScatterRadiusVsType
+			Radius="70.0"
+			RequiredModelConditions="SHRINK_EFFECT">
+			<Filter
+				Rule="ANY"
+				Include="INFANTRY AIRCRAFT VEHICLE HUGE_VEHICLE" />
+		</ScatterRadiusVsType>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="DefensiveTechStructureRockets"
+		inheritFrom="DefensiveTechStructure_ScatterableWeapon" 
+		AttackRange="300.0"
+		WeaponSpeed="300"
+		MinWeaponSpeed="300"
+		MaxWeaponSpeed="310"
+		FireSound="ALL_MultigunnerTurret_MissileFire"
+		FireFX="FX_None"
+		FireVeteranFX="FX_None"
+		AcceptableAimDelta="20d"
+		ClipSize="2"
+		AutoReloadsClip="AUTO"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		CanFireWhileMoving="true"
+		RequiredAntiMask="ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE">
+		<FiringDuration
+				MinSeconds=".25s"
+				MaxSeconds=".25s" />
+		<ClipReloadTime
+				MinSeconds="0.5s"
+				MaxSeconds="0.6s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlliedBaseDefenseGroundMissileProjectile"
+				WarheadTemplate="AlliedBaseDefenseMissilePodProjectileWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlliedAntiGroundAircraftMissileProjectile_Veteran"/>
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="10"
+				DurationSeconds="1.0s" />
+			<InformTargetNugget
+					 MaxTimeToImpactFudgeFactor="1.6" />
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>

@@ -26,11 +26,12 @@
 		BuildTime="25"
 		EnergyProduction="-30"
 		CommandSet="EmptyCommandSet"
-		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +FS_TECHNOLOGY +FS_WAR_FACTORY +POWERED +COVER +HIDE_IF_FOGGED"
+		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +FS_TECHNOLOGY +CAN_HEAL_ALLIES +POWERED +HIDE_IF_FOGGED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
 		CampnessValue="1500"
-		CampnessValueRadius="75"
+		CampnessValueRadius="50"
+		Scale="1.2"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="OTHER_STRUCTURE"
 		EditorName="AlliedBaseDefenseRT"
@@ -49,11 +50,11 @@
 			Armor="AlliedPrimaryBaseDefenseArmor"
 			DamageFX="FactionStructureDamageFX" />
 		<SkirmishAIInformation
-			BaseBuildingLocation="CENTER" >
+			BaseBuildingLocation="FRONT" >
 			<ConstructionBaseSelectionCriteria
 				ExcludedBaseTypes="NO_BUILD_RADIUS"
-				PreferredNotBaseTypes="ENEMIES_IN_BASE"
-				PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED UNDER_ATTACK"
+				PreferredNotBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+				PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
 				SortOrder="PREFER_MOST_RECENTLY_ATTACKED" />
 		</SkirmishAIInformation>
 		<Draws>
@@ -129,7 +130,7 @@
 						AnimationName="ABBaseDefense_BLD_BLDW"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE"
-						AnimationAbsoluteTime="0.2s"/>
+						AnimationAbsoluteTime="0.15s"/>
 				</AnimationState>									
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -138,7 +139,7 @@
 						AnimationName="ABBaseDefense_BLD_BLD"
 						AnimationBlendTime="0"
 						AnimationMode="ONCE"
-						AnimationAbsoluteTime="0.2s" />
+						AnimationAbsoluteTime="0.15s" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -147,7 +148,7 @@
 					<Animation
 						AnimationName="ABBaseDefense_BLD_BLD"
 						AnimationMode="ONCE_BACKWARDS"
-						AnimationAbsoluteTime="2s"/>
+						AnimationAbsoluteTime="0.15s"/>
 				</AnimationState>										
 			</ScriptedModelDraw>
 
@@ -225,7 +226,7 @@
 					<Animation
 						AnimationName="ABBaseDefense_Platform_BLD"
 						AnimationMode="ONCE_BACKWARDS"
-						AnimationAbsoluteTime="2s"/>
+						AnimationAbsoluteTime="0.15s"/>
 					<ParticleSysBone
 						BoneName="None"
 						FXParticleSystemTemplate="AlliedPowerPlantWaterBuildupFroth"
@@ -308,7 +309,7 @@
 						MinIdleScanTime="1.0s"
 						MaxIdleScanTime="4.0s"
 						MinIdleScanAngle="30.0"
-						MaxIdleScanAngle="50.0"
+						MaxIdleScanAngle="360.0"
 						ComeToHaltJiggle="3d">
 						<TurretAITargetChooserData
 							CanAcquireDynamicIfAssignedOutOfRange="true">
@@ -323,43 +324,6 @@
 					StatusToSet="REPAIR_ALLIES_WHEN_IDLE">
 					<TriggeredBy>Uprade_IFV_Repair</TriggeredBy>
 			</StatusBitsUpgrade>
-			
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Veteran"
-				RequiresAllTriggers="false"
-				RequiresAllConflictingTriggers="false"
-				Permanent="false"
-				WaypointMode="false"
-				WaypointModeTerminal="true"
-				LevelsToGain="1"
-				LevelCap="4"
-				DoFlash="true">
-				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
-			</LevelUpUpgrade>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Elite"
-				RequiresAllTriggers="false"
-				RequiresAllConflictingTriggers="false"
-				Permanent="false"
-				WaypointMode="false"
-				WaypointModeTerminal="true"
-				LevelsToGain="1"
-				LevelCap="4"
-				DoFlash="true">
-				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
-			</LevelUpUpgrade>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Heroic"
-				RequiresAllTriggers="false"
-				RequiresAllConflictingTriggers="false"
-				Permanent="false"
-				WaypointMode="false"
-				WaypointModeTerminal="true"
-				LevelsToGain="1"
-				LevelCap="4"
-				DoFlash="true">
-				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
-			</LevelUpUpgrade>
 			
 			<StancesBehavior
 				id="ModuleTag_Stance"
@@ -431,7 +395,7 @@
 				AutoAcquireEnemiesWhenIdle="NO"
 				StateMachine="OffensiveStructureAIStateMachine">
 				<UnitAITargetChooserData
-					CanPickDynamicTargets="true"
+					CanPickDynamicTargets="false"
 					RotateToTargetWhenAiming="true"
 					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY">	
 				</UnitAITargetChooserData>	
@@ -441,7 +405,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="500" />
+				MaxHealth="400" />
 		</Body>
 		<Geometry
 			IsSmall="false">
@@ -495,7 +459,7 @@
 		</AudioArrayVoice>
 		
 		<VisionInfo
-			VisionRange="310"
-			ShroudClearingRange="500" />
+			VisionRange="155"
+			ShroudClearingRange="250" />
 	</GameObject>
 </AssetDeclaration>

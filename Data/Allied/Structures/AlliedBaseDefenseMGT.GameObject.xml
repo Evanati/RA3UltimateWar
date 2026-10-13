@@ -430,7 +430,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="750" />
+				MaxHealth="700" />
 		</Body>
 		<Geometry
 			IsSmall="false">

@@ -14,6 +14,10 @@
 			<EnemyNearbyHeuristic 
 				Distance="250.0" 
 				EnemyNearby="false"/>
+			<PathToTargetHeuristic 
+				PathExists="true" 
+				ObjectTypeToUseForTest="JapanEngineer" 
+				LocomotorConditionToUseForTest="NORMAL" />
 		</Heuristic>
 		
 		<TargetHeuristic 
@@ -41,7 +45,7 @@
 			UseTransports="true">
 			<TeamTemplate 
 				MinUnits="1" 
-				MaxUnits="1" 
+				MaxUnits="5" 
 				MinPowerAdvantage="0.0"
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
@@ -76,6 +80,10 @@
 			<EnemyNearbyHeuristic 
 				Distance="250.0" 
 				EnemyNearby="false"/>
+			<PathToTargetHeuristic 
+				PathExists="true" 
+				ObjectTypeToUseForTest="JapanEngineer" 
+				LocomotorConditionToUseForTest="NORMAL" />
 		</Heuristic>
 		
 		<TargetHeuristic 
@@ -106,7 +114,7 @@
 			UseTransports="true">
 			<TeamTemplate 
 				MinUnits="1" 
-				MaxUnits="1" 
+				MaxUnits="5" 
 				MinPowerAdvantage="0.0"
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
@@ -141,6 +149,10 @@
 			<EnemyNearbyHeuristic 
 				Distance="250.0" 
 				EnemyNearby="false"/>
+			<PathToTargetHeuristic 
+				PathExists="true" 
+				ObjectTypeToUseForTest="JapanEngineer" 
+				LocomotorConditionToUseForTest="NORMAL" />
 		</Heuristic>
 		
 		<TargetHeuristic 
@@ -162,7 +174,7 @@
 			UseTransports="true">
 			<TeamTemplate 
 				MinUnits="1" 
-				MaxUnits="1" 
+				MaxUnits="5" 
 				MinPowerAdvantage="0.0"
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 

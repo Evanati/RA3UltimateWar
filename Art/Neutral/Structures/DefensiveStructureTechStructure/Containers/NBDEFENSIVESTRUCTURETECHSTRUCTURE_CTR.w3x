@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="NBDEFENSIVESTRUCTURETECHSTRUCTURE" Hierarchy="NBDefensiveStructureTechStructure">
+		<SubObject SubObjectID="OBBOX01" BoneIndex="11">
+			<RenderObject>
+				<CollisionBox>NBDEFENSIVESTRUCTURETECHSTRUCTURE.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="10">
+			<RenderObject>
+				<CollisionBox>NBDEFENSIVESTRUCTURETECHSTRUCTURE.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="9">
+			<RenderObject>
+				<CollisionBox>NBDEFENSIVESTRUCTURETECHSTRUCTURE.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN_FILL" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBDEFENSIVESTRUCTURETECHSTRUCTURE.NEWSKIN_FILL</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="NEWSKIN" BoneIndex="0">
+			<RenderObject>
+				<Mesh>NBDEFENSIVESTRUCTURETECHSTRUCTURE.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

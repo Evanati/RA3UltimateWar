@@ -3665,28 +3665,49 @@
 // GUI
 	
 	GUI:FullGameName
-		"Command & Conquer Red Alert 3: Remix"
+		"Command & Conquer Red Alert 3: Ultimate War"
 	End
 
 // Version
 	
 	Version:Format2
-		"Red Alert 3: Remix037"
+		"Red Alert 3: Ultimate War v0.5"
 	End	
 	
 // Information
 
 	NAME:UNITINTRO
-		"REMIX"
+		"ULTIMATE WAR"
 	End
 	
 	DESC:UNITINTRO
-		"Remix by KnightVVV"
+		"Ultimate War by Evanati. Credits go to KnightVVV for Remix base."
 	End
 	
 /////////////////////////////////////////////
 ///// Red Alert 3: Ultimate War strings /////
 /////////////////////////////////////////////
+
+// GUI
+	
+	GUI:FullGameName
+		"Command & Conquer Red Alert 3: Ultimate War"
+	End
+
+// Version
+	Version:Format2
+		"Red Alert 3: Ultimate War v0.5"
+	End	
+	
+// Information
+
+	NAME:UNITINTRO
+		"Red Alert 3: Ultimate War"
+	End
+	
+	DESC:UNITINTRO
+		"Ultimate War by Evanati. Credits go to KnightVVV for the Remix base."
+	End
 
 // AlliedBaseDefenseRT
 	Name:AlliedBaseDefenseRT
@@ -3698,7 +3719,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseRT
-		"A specialized vehicle repair station with direct and indirect repairing capabilities."
+		"A specialized repairing station for vehicles. Has state-of-the-art repairing capabilities but is quite fragile."
 	End
 	
 // AlliedBaseDefenseMGT
