@@ -6,6 +6,7 @@
 		<Include type="all" source="DATA:Allied/Props/AlliedTransportHelicopter_Collapse.GameObject.xml"/>
 		
 		<!-- Structures -->
+		<Include type="all" source="DATA:Allied/Structures/AlliedBarracks.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Structures/AlliedBaseDefense.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Structures/AlliedBaseDefenseMGT.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Structures/AlliedBaseDefenseRT.GameObject.xml"/>

@@ -44,58 +44,84 @@
 					<Model
 						Name="NBDefensiveStructureTechStructure" />
 					<WeaponFireFXBone
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
 						BoneName="TURRET_BONE_01" />
-						
-					<WeaponFireFXBone
-						WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="OBBOX01" />
 					<WeaponMuzzleFlash
-						WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="flash" />
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_01" />
 					<WeaponLaunchBone
-						WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="TURRET_BONE_02" />
-						
-					<WeaponFireFXBone
-						WeaponSlotType="TERTIARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="TERTIARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
-						WeaponSlotType="TERTIARY_WEAPON"
-						BoneName="TURRET_BONE_03" />
-						
-					<WeaponFireFXBone
-						WeaponSlotType="QUATERNARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="QUATERNARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
-						WeaponSlotType="QUATERNARY_WEAPON"
-						BoneName="TURRET_BONE_04" />
-						
-					<WeaponFireFXBone
-						WeaponSlotType="QUINARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="QUINARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
-						WeaponSlotType="QUINARY_WEAPON"
-						BoneName="TURRET_BONE_05" />
-						
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_01" />
 					<Turret
-						TurretNameKey="TURRET"
+						TurretNameKey="TURRET_BONE_01"
 						TurretID="1" />
+						
+					<WeaponFireFXBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_02" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_02" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_02" />
+					<Turret
+						TurretNameKey="TURRET_BONE_02"
+						TurretID="2" />
+						
+					<WeaponFireFXBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_03" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_03" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_03" />
+					<Turret
+						TurretNameKey="TURRET_BONE_03"
+						TurretID="3" />
+					
+					<WeaponFireFXBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_04" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_04" />
+					<WeaponLaunchBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_04" />
+					<Turret
+						TurretNameKey="TURRET_BONE_04"
+						TurretID="4" />	
+						
+					<WeaponFireFXBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_05" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_05" />
+					<WeaponLaunchBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_05" />
+					<Turret
+						TurretNameKey="TURRET_BONE_05"
+						TurretID="5" />
 				</ModelConditionState>
 
 				<AnimationState
@@ -163,14 +189,15 @@
 				<WeaponSlotTurret
 					ID="2">
 					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						Template="DefensiveTechStructureRockets"/>
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
 						AllowsPitch="true"
 						MinimumPitch="-60d"
 						PitchHeight="90%"
+						NaturalTurretAngle="0d"
 						MinIdleScanTime="1.0s"
 						MaxIdleScanTime="5.0s"
 						MinIdleScanAngle="0.0"
@@ -183,8 +210,8 @@
 				<WeaponSlotTurret
 					ID="3">
 					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						Template="DefensiveTechStructureRockets"/>
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -204,8 +231,8 @@
 				<WeaponSlotTurret
 					ID="4">
 					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						Template="DefensiveTechStructureRockets"/>
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -225,8 +252,8 @@
 				<WeaponSlotTurret
 					ID="5">
 					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						Template="DefensiveTechStructureRockets"/>
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"

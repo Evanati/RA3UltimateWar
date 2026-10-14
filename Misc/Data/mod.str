@@ -3660,28 +3660,6 @@
 
 	Description:ZeusWarshipUpg
 		"Authorization to build Zeus Battleship"
-	End		
-	
-// GUI
-	
-	GUI:FullGameName
-		"Command & Conquer Red Alert 3: Ultimate War"
-	End
-
-// Version
-	
-	Version:Format2
-		"Red Alert 3: Ultimate War v0.5"
-	End	
-	
-// Information
-
-	NAME:UNITINTRO
-		"ULTIMATE WAR"
-	End
-	
-	DESC:UNITINTRO
-		"Ultimate War by Evanati. Credits go to KnightVVV for Remix base."
 	End
 	
 /////////////////////////////////////////////
@@ -3689,24 +3667,22 @@
 /////////////////////////////////////////////
 
 // GUI
-	
 	GUI:FullGameName
 		"Command & Conquer Red Alert 3: Ultimate War"
 	End
 
 // Version
 	Version:Format2
-		"Red Alert 3: Ultimate War v0.5"
+		"RA3UW v0.6"
 	End	
 	
 // Information
-
 	NAME:UNITINTRO
-		"Red Alert 3: Ultimate War"
+		"Red Alert 3: Ultimate War (v0.6)"
 	End
 	
 	DESC:UNITINTRO
-		"Ultimate War by Evanati. Credits go to KnightVVV for the Remix base."
+		"Developed by Evanati using Remix as a base. Credits to KnightVVV for his incredible work developing Remix."
 	End
 
 // AlliedBaseDefenseRT
@@ -3719,7 +3695,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseRT
-		"A specialized repairing station for vehicles. Has state-of-the-art repairing capabilities but is quite fragile."
+		"A large specialized repairing station for vehicles. Has state-of-the-art repairing capabilities but is quite fragile."
 	End
 	
 // AlliedBaseDefenseMGT
@@ -3732,7 +3708,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseMGT
-		"A specialized and highly lethal anti-infantry defense system."
+		"A specialized and higly effective anti-infantry defense system."
 	End
 	
 // AlliedBaseDefense
@@ -3767,11 +3743,11 @@
 	End
 	
 	Desc:AlliedTransportHelicopter
-		"The Allies' go-to infantry transport helicopter. Spacious and quite durable, but has limited offensive capabilities."
+		"The Allies' go-to infantry transport helicopter. Spacious and fairly durable, but has limited offensive capabilities."
 	End
 	
 	Type:AlliedTransportHelicopter
-		"Infantry Air Transport"
+		"Anti-Infantry / Troop Carrier"
 	End
 	
 // NeutralPowerPlant

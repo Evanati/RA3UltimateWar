@@ -3,7 +3,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
     <WeaponTemplate
 		id="ABD_RepairWeapon"
-		AttackRange="50"
+		AttackRange="40"
 		RadiusDamageAffects="ALLIES"
 		CanFireWhileMoving="true"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
@@ -22,16 +22,16 @@
 				DeathType="NORMAL">
                 <SpecialObjectFilter
 					Relationship="ALLIES"
-					Rule="ANY"
-					Include="VEHICLE HUGE_VEHICLE"
+					Rule="NONE"
+					Include="VEHICLE"
                     StatusBitFlagsExclude="HEALTH_PERCENT_100 AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
             </DamageNugget>
 			<AttributeModifierNugget
 				AttributeModifierName="AttributeModifier_UnderRepair">
 				<SpecialObjectFilter
 					Relationship="ALLIES"
-					Rule="ANY"
-					Include="VEHICLE HUGE_VEHICLE"
+					Rule="NONE"
+					Include="VEHICLE"
                     StatusBitFlagsExclude="HEALTH_PERCENT_100 AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
 			</AttributeModifierNugget>
         </Nuggets>

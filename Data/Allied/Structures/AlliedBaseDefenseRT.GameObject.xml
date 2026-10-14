@@ -26,12 +26,12 @@
 		BuildTime="25"
 		EnergyProduction="-30"
 		CommandSet="EmptyCommandSet"
-		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +FS_TECHNOLOGY +CAN_HEAL_ALLIES +POWERED +HIDE_IF_FOGGED"
+		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +FS_WAR_FACTORY +FS_TECHNOLOGY +CAN_HEAL_ALLIES +POWERED +HIDE_IF_FOGGED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
 		CampnessValue="1500"
-		CampnessValueRadius="50"
-		Scale="1.2"
+		CampnessValueRadius="40"
+		Scale="1.25"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="OTHER_STRUCTURE"
 		EditorName="AlliedBaseDefenseRT"
@@ -312,6 +312,7 @@
 						MaxIdleScanAngle="360.0"
 						ComeToHaltJiggle="3d">
 						<TurretAITargetChooserData
+							ReacquireDelay="1.0s"
 							CanAcquireDynamicIfAssignedOutOfRange="true">
 					</TurretAITargetChooserData>
 					</TurretSettings>
@@ -405,7 +406,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="400" />
+				MaxHealth="500" />
 		</Body>
 		<Geometry
 			IsSmall="false">
