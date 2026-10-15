@@ -3660,33 +3660,30 @@
 
 	Description:ZeusWarshipUpg
 		"Authorization to build Zeus Battleship"
-	End		
-	
-// GUI
-	
-	GUI:FullGameName
-		"Command & Conquer Red Alert 3: Remix"
-	End
-
-// Version
-	
-	Version:Format2
-		"Red Alert 3: Remix037"
-	End	
-	
-// Information
-
-	NAME:UNITINTRO
-		"REMIX"
-	End
-	
-	DESC:UNITINTRO
-		"Remix by KnightVVV"
 	End
 	
 /////////////////////////////////////////////
 ///// Red Alert 3: Ultimate War strings /////
 /////////////////////////////////////////////
+
+// GUI
+	GUI:FullGameName
+		"Command & Conquer Red Alert 3: Ultimate War"
+	End
+
+// Version
+	Version:Format2
+		"RA3UW v0.6"
+	End	
+	
+// Information
+	NAME:UNITINTRO
+		"Red Alert 3: Ultimate War (v0.6)"
+	End
+	
+	DESC:UNITINTRO
+		"Developed by Evanati using Remix as a base. Credits to KnightVVV for his incredible work developing Remix."
+	End
 
 // AlliedBaseDefenseRT
 	Name:AlliedBaseDefenseRT
@@ -3698,7 +3695,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseRT
-		"A specialized vehicle repair station with direct and indirect repairing capabilities."
+		"A large specialized repairing station for vehicles. Has state-of-the-art repairing capabilities but is quite fragile."
 	End
 	
 // AlliedBaseDefenseMGT
@@ -3711,7 +3708,7 @@
 	End		
 	
 	Desc:AlliedBaseDefenseMGT
-		"A specialized and highly lethal anti-infantry defense system."
+		"A specialized and higly effective anti-infantry defense system."
 	End
 	
 // AlliedBaseDefense
@@ -3746,11 +3743,11 @@
 	End
 	
 	Desc:AlliedTransportHelicopter
-		"The Allies' go-to infantry transport helicopter. Spacious and quite durable, but has limited offensive capabilities."
+		"The Allies' go-to infantry transport helicopter. Spacious and fairly durable, but has limited offensive capabilities."
 	End
 	
 	Type:AlliedTransportHelicopter
-		"Infantry Air Transport"
+		"Anti-Infantry / Troop Carrier"
 	End
 	
 // NeutralPowerPlant

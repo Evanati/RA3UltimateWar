@@ -136,6 +136,7 @@
 		</Geometry>
 		<AudioArrayVoice>
 			<AudioEntry Sound="S04_SwissBankCaptureMS" AudioType="voiceDefectingTowards" />
+			<AudioEntry Sound="BuildingRepaired" AudioType="voiceDefectingTowards" />
 		</AudioArrayVoice>
 		<AudioArraySound>
 			<AudioEntry Sound="HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />

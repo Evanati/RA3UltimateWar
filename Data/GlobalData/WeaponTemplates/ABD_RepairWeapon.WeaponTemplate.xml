@@ -3,14 +3,13 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
     <WeaponTemplate
 		id="ABD_RepairWeapon"
-		AttackRange="50"
+		AttackRange="40"
 		RadiusDamageAffects="ALLIES"
 		CanFireWhileMoving="true"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
 		FireFX="FX_AAAVT1_Engineer"
-		FireVeteranFX="FX_AAAVT1_Engineer"
 		FiringLoopSound="ALL_MultiGunnerIFV_EngineerRepairLoop"
-		FiringLoopSoundContinuesDuringReload="true">
+		FiringLoopSoundContinuesDuringReload="true" >
 		<FiringDuration
 			MinSeconds="0.1s"
 			MaxSeconds="0.1s" />
@@ -22,16 +21,18 @@
 				DamageFXType="SOVIET_REPAIR"
 				DeathType="NORMAL">
                 <SpecialObjectFilter
+					Relationship="ALLIES"
 					Rule="NONE"
 					Include="VEHICLE"
-                    StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
+                    StatusBitFlagsExclude="HEALTH_PERCENT_100 AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
             </DamageNugget>
 			<AttributeModifierNugget
 				AttributeModifierName="AttributeModifier_UnderRepair">
 				<SpecialObjectFilter
+					Relationship="ALLIES"
 					Rule="NONE"
 					Include="VEHICLE"
-                    StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
+                    StatusBitFlagsExclude="HEALTH_PERCENT_100 AIRBORNE_TARGET SUBMERGED NOT_IN_WORLD"/>
 			</AttributeModifierNugget>
         </Nuggets>
 	</WeaponTemplate>

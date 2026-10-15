@@ -2,10 +2,11 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Includes>
-		<Include type="all" source="ART:NBDefensiveStructureTechStructure.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/DefensiveStructureTechStructure_Includes.xml" />	
+		<Include type="all" source="ART:ABBarracks_particles.w3x" />
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/DefensiveTechStructureRockets.WeaponTemplate.xml" />
 		<Include type="instance" source="DATA:Civilian/Yucatan_YU/Props/YU_HotelDebris.xml" />
 		<Include type="instance" source="DATA:Neutral/Props/NeutralDefensiveStructure_Collapse.xml" />
-		<Include type="all" source="ART:ABBarracks_particles.w3x" />
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseTechStructure.xml" />
 	</Includes>
@@ -18,7 +19,7 @@
 		Side="Neutral"
 		EditorSorting="STRUCTURE"
 		CommandSet="EmptyCommandSet"		
-		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS +NOT_SELLABLE"
+		KindOf="-NOT_AUTOACQUIRABLE +CAN_ATTACK +FS_BASE_DEFENSE +POWERED +NOT_SELLABLE +CAN_SEE_THROUGH_STRUCTURE +LINE_OF_SIGHT_IGNORES_BUILDINGS"
 		RadarPriority="STRUCTURE"
 		ProductionQueueType="MAIN_STRUCTURE"
 		EditorName="DefensiveStructureTechStructure"
@@ -36,60 +37,93 @@
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"
 				OkToChangeModelColor="true"
-				ExtraPublicBone="BoneFlag01 BONE_CONTACT_POINT_01 BONE_CONTACT_POINT_02 BONE_CONTACT_POINT_03 BONE_CONTACT_POINT_04 BONE_CONTACT_POINT_05 BONE_CONTACT_POINT_06 BONE_CONTACT_POINT_07 BONE_CONTACT_POINT_08 BONEGARRISON01 BONEGARRISON02 BONEGARRISON03 BONEGARRISON04 BONEGARRISON05 BONEGARRISON06 BONEGARRISON07 BONEGARRISON08 BONEGARRISON09 BONEGARRISON10 BONEGARRISON11 BONEGARRISON12">
+				ExtraPublicBone="BoneFlag01 BONE_CONTACT_POINT_01 BONE_CONTACT_POINT_02 BONE_CONTACT_POINT_03 BONE_CONTACT_POINT_04 BONE_CONTACT_POINT_05 BONE_CONTACT_POINT_06 BONE_CONTACT_POINT_07 BONE_CONTACT_POINT_08 BONEGARRISON01 BONEGARRISON02 BONEGARRISON03 
+								BONEGARRISON04 BONEGARRISON05 BONEGARRISON06 BONEGARRISON07 BONEGARRISON08 BONEGARRISON09 BONEGARRISON10 BONEGARRISON11 BONEGARRISON12 TURRET_BONE_01 TURRET_BONE_02 TURRET_BONE_03 TURRET_BONE_04 TURRET_BONE_05">
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT">
 					<Model
 						Name="NBDefensiveStructureTechStructure" />
 					<WeaponFireFXBone
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="OBBOX01" />
+						BoneName="TURRET_BONE_01" />
 					<WeaponMuzzleFlash
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="flash" />
+						BoneName="TURRET_BONE_01" />
 					<WeaponLaunchBone
+						WeaponSlotID="1"
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponFireFXBone
-						WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
-						WeaponSlotType="SECONDARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponFireFXBone
-						WeaponSlotType="TERTIARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="TERTIARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
-						WeaponSlotType="TERTIARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponFireFXBone
-						WeaponSlotType="QUATERNARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="QUATERNARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
-						WeaponSlotType="QUATERNARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponFireFXBone
-						WeaponSlotType="QUINARY_WEAPON"
-						BoneName="OBBOX01" />
-					<WeaponMuzzleFlash
-						WeaponSlotType="QUINARY_WEAPON"
-						BoneName="flash" />
-					<WeaponLaunchBone
-						WeaponSlotType="QUINARY_WEAPON"
-						BoneName="OBBOX01" />
+						BoneName="TURRET_BONE_01" />
 					<Turret
-						TurretNameKey="TURRET"
+						TurretNameKey="TURRET_BONE_01"
 						TurretID="1" />
+						
+					<WeaponFireFXBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_02" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_02" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_02" />
+					<Turret
+						TurretNameKey="TURRET_BONE_02"
+						TurretID="2" />
+						
+					<WeaponFireFXBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_03" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_03" />
+					<WeaponLaunchBone
+						WeaponSlotID="3"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_03" />
+					<Turret
+						TurretNameKey="TURRET_BONE_03"
+						TurretID="3" />
+					
+					<WeaponFireFXBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_04" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_04" />
+					<WeaponLaunchBone
+						WeaponSlotID="4"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_04" />
+					<Turret
+						TurretNameKey="TURRET_BONE_04"
+						TurretID="4" />	
+						
+					<WeaponFireFXBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_05" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_05" />
+					<WeaponLaunchBone
+						WeaponSlotID="5"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="TURRET_BONE_05" />
+					<Turret
+						TurretNameKey="TURRET_BONE_05"
+						TurretID="5" />
 				</ModelConditionState>
+
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT">
 					<!-- no anim -->
@@ -130,7 +164,6 @@
 				<DieMuxData
 					DeathTypes="ALL" />
 			</DestroyDie>
-			
 			<WeaponSetUpdate
 				id="ModuleTag_WeaponSetUpdate">		
 				<WeaponSlotTurret
@@ -138,26 +171,6 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="DefensiveTechStructureWeapon"/>
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="100"
-						AllowsPitch="true"
-						MinimumPitch="-60d"
-						PitchHeight="90%"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s"
-						MinIdleScanAngle="180.0"
-						MaxIdleScanAngle="720.0">
-						<TurretAITargetChooserData
-							StartupDelay="1.0s"/>
-					</TurretSettings>
-				</WeaponSlotTurret>
-				
-				<WeaponSlotTurret
-					ID="2">
-					<Weapon
-						Ordering="SECONDARY_WEAPON"
-						Template="AlliedBaseDefenseRockets_Aircraft"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -174,10 +187,31 @@
 				</WeaponSlotTurret>
 				
 				<WeaponSlotTurret
+					ID="2">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="100"
+						AllowsPitch="true"
+						MinimumPitch="-60d"
+						PitchHeight="90%"
+						NaturalTurretAngle="0d"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="0.0">
+						<TurretAITargetChooserData
+							StartupDelay="1.0s"/>
+					</TurretSettings>
+				</WeaponSlotTurret>
+				
+				<WeaponSlotTurret
 					ID="3">
 					<Weapon
-						Ordering="TERTIARY_WEAPON"
-						Template="AlliedBaseDefenseRockets_Aircraft"/>
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -197,8 +231,8 @@
 				<WeaponSlotTurret
 					ID="4">
 					<Weapon
-						Ordering="QUATERNARY_WEAPON"
-						Template="AlliedBaseDefenseRockets_Aircraft"/>
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -218,8 +252,8 @@
 				<WeaponSlotTurret
 					ID="5">
 					<Weapon
-						Ordering="QUINARY_WEAPON"
-						Template="AlliedBaseDefenseRockets_Aircraft"/>
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedBaseDefenseRocketsUpgrade"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -236,7 +270,6 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
-			
 			<xi:include
 				href="DATA:Includes/GenericEngineerContain.xml" />
 			<xi:include
@@ -259,8 +292,8 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="4500.0"
-				InitialHealth="4500.0" />
+				MaxHealth="5000.0"
+				InitialHealth="5000.0" />
 		</Body>
 		<Geometry
 			IsSmall="false">

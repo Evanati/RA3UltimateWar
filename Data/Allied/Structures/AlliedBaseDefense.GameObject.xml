@@ -117,8 +117,8 @@
 			CanFireUpCliffs="false"
 			DoesSecondaryDamage="false">
 			<ConstructionBaseSelectionCriteria
-				ExcludedBaseTypes="MOST_RECENT_OF_TYPE"
-				PreferredBaseTypes="LAND_CENTERED UNDER_ATTACK"
+				ExcludedBaseTypes="NO_BUILD_RADIUS"
+				PreferredBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
 				SortOrder="PREFER_MOST_RECENTLY_ATTACKED" />
 		</SkirmishAIInformation>
 		

@@ -25,6 +25,7 @@
 		ProductionQueueType="AIRCRAFT"
 		UnitCategory="AIRCRAFT"
 		WeaponCategory="MISSILE"
+		Scale="1.1"
 		VoicePriority="148"
 		EditorName="AlliedTransportHelicopter"
 		Description="Desc:AlliedTransportHelicopter"
@@ -49,7 +50,7 @@
 		<LocomotorSet
 			Locomotor="AlliedSupportAircraftLocomotor"
 			Condition="NORMAL"
-			Speed="110.0" />
+			Speed="125.0" />
 
 		<!-- Need ConquerMetricsOverrideDefendingAntiMask or else the TAXIING locomotor will make the AI try to build anti-ground units against this -->
 		<SkirmishAIInformation

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>
+		<!-- Collision boxes -->
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/CollisionBoxes/NBDEFENSIVESTRUCTURETECHSTRUCTURE_COL.OBBOX03.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/CollisionBoxes/NBDEFENSIVESTRUCTURETECHSTRUCTURE_COL.OBBOX02.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/CollisionBoxes/NBDEFENSIVESTRUCTURETECHSTRUCTURE_COL.OBBOX01.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/CollisionBoxes/NBDEFENSIVESTRUCTURETECHSTRUCTURE.OBBOX03.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/CollisionBoxes/NBDEFENSIVESTRUCTURETECHSTRUCTURE.OBBOX02.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/CollisionBoxes/NBDEFENSIVESTRUCTURETECHSTRUCTURE.OBBOX01.w3x" />
+		
+		<!-- Containers -->
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Containers/NBDEFENSIVESTRUCTURETECHSTRUCTURE_COL_CTR.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Containers/NBDEFENSIVESTRUCTURETECHSTRUCTURE_CTR.w3x" />
+		
+		<!-- Hierarchies -->
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Hierarchies/NBDEFENSIVESTRUCTURETECHSTRUCTURE_COL_HRC.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Hierarchies/NBDEFENSIVESTRUCTURETECHSTRUCTURE_HRC.w3x" />
+	
+		<!-- Meshes -->
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Meshes/NBDEFENSIVESTRUCTURETECHSTRUCTURE.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Meshes/NBDEFENSIVESTRUCTURETECHSTRUCTURE.NEWSKIN_FILL.w3x" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Meshes/NBDEFENSIVESTRUCTURETECHSTRUCTURE_COL.NEWSKIN.w3x" />
+		
+		<!-- Textures -->
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Textures/NBDefensiveStructureTechStructure.Texture.xml" />		
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Textures/NBDefensiveStructureTechStructure_NRM.Texture.xml" />
+		<Include type="all" source="ART:Neutral/Structures/DefensiveStructureTechStructure/Textures/NBDefensiveStructureTechStructure_SPM.Texture.xml" />		
+    </Includes>
+</AssetDeclaration>
