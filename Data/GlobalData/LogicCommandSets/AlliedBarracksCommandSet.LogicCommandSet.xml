@@ -3,6 +3,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<LogicCommandSet
 		id="AlliedBarracksCommandSet">
+		<Cmd>Command_ConstructAlliedScoutInfantry</Cmd>
 		<Cmd>Command_ConstructAlliedAntiInfantryInfantry</Cmd>
 		<Cmd>Command_ConstructAlliedSniperInfantry</Cmd>
 		<Cmd>Command_ConstructAlliedAntiVehicleInfantry</Cmd>
@@ -15,6 +16,7 @@
 	
 	<LogicCommandSet
 		id="AlliedBarracksCommandSetAirborneForceUPG">
+		<Cmd>Command_ConstructAlliedScoutInfantry</Cmd>
 		<Cmd>Command_ConstructAlliedAntiInfantryInfantry</Cmd>
 		<Cmd>Command_ConstructAlliedSniperInfantry</Cmd>
 		<Cmd>Command_ConstructAlliedAntiVehicleInfantry</Cmd>

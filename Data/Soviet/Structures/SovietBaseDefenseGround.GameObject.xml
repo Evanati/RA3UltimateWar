@@ -402,8 +402,8 @@
 			<TracerModelDraw
 				id="ModuleTag_TracerModelDraw"
 				MinLength="5.0"
-				MaxLength="6.0"
-				Width="2.5"
+				MaxLength="5.5"
+				Width="1.5"
 				MinSpeed="20"
 				MaxSpeed="25"
 				SweepSpeed="3.0"

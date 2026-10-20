@@ -104,9 +104,9 @@
 			<!-- DRAW TRACER BULLETS -->
 			<TracerModelDraw
 				id="ModuleTag_TracerModelDraw"
-				MinLength="7.5"
-				MaxLength="7.5"
-				Width="3.0"
+				MinLength="7.0"
+				MaxLength="7.0"
+				Width="2.5"
 				MinSpeed="10"
 				MaxSpeed="20"
 				SweepSpeed="1.0"

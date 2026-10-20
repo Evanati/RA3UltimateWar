@@ -4,8 +4,8 @@
 	<LogicCommandSet
 		id="AlliedConstructionYardCommandSetBase">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
-		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
 		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
 		<Cmd>Command_ConstructAlliedAirfield</Cmd>
@@ -26,8 +26,8 @@
 	<LogicCommandSet
 		id="AlliedConstructionYardCommandSet">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
-		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
 		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
 		<Cmd>Command_ConstructAlliedAirfield</Cmd>
@@ -49,8 +49,8 @@
 	<LogicCommandSet
 		id="AlliedConstructionYardCommandSetLevel2">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
-		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
 		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
 		<Cmd>Command_ConstructAlliedAirfield</Cmd>

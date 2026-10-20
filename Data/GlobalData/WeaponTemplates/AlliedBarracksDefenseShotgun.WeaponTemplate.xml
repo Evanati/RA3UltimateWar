@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-	<WeaponTemplate
-		id="AlliedBarracksDefenseShotgun"
+  <WeaponTemplate
+		id="AlliedBarracksDefenseShotgunLeft"
 		AttackRange="150.0"
 		MinTargetPitch="-15d"
 		MaxTargetPitch="15d"
@@ -12,13 +12,16 @@
 		RadiusDamageAffects="ENEMIES"
 		ClipSize="1"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
-		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_STRUCTURE"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
 		AcceptableAimDelta="1d"
 		CanFireWhileMoving="true"
 		DamageDealtAtSelfPosition="true"
 		ReAcquireDetailType="PER_CLIP"	
 		IgnoresContactPoints="true">
-
+		
+		<PreAttackDelay
+			MinSeconds="0.5s"
+			MaxSeconds="1.0s" />
 		<FiringDuration
 			MinSeconds="0.5s"
 			MaxSeconds="0.5s" />
@@ -32,8 +35,8 @@
 				Radius="155"
 				DamageTaperOff="25"
 				DelayTimeSeconds="0.0s"
-				DamageArc="2d"
-				DamageType="AUTO_CANNON"
+				DamageArc="5d"
+				DamageType="GUN"
 				DamageFXType="ALLIED_SHOTGUN"
 				DeathType="NORMAL"
 				PartitionFilterTestType="SPHERE"
@@ -46,5 +49,14 @@
 				ShockWaveArc="5d"
 				ForbiddenTargetModelCondition="STUNNED_FLAILING"/>
 		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="AlliedBarracksDefenseShotgunRight"
+		inheritFrom="AlliedBarracksDefenseShotgunLeft">
+		
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.5s" />
 	</WeaponTemplate>
 </AssetDeclaration>

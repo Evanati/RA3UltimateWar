@@ -4,8 +4,8 @@
 	<LogicCommandSet
 		id="AlliedNewCraneCommandSetBase">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
-		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
 		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
 		<Cmd>Command_ConstructAlliedAirfield</Cmd>
@@ -17,8 +17,8 @@
 	<LogicCommandSet
 		id="AlliedNewCraneCommandSet">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
-		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
 		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
 		<Cmd>Command_ConstructAlliedAirfield</Cmd>
@@ -31,8 +31,8 @@
 	<LogicCommandSet
 		id="AlliedNewCraneCommandSetLevel2">
 		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
-		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedBarracks</Cmd>
 		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
 		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
 		<Cmd>Command_ConstructAlliedAirfield</Cmd>

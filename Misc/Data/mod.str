@@ -2923,20 +2923,6 @@
 		"Open the wall."
 	End			
 	
-// Dog house
-	
-	Name:AlliedDogHouseobj
-		"Dog House"
-	End
-	
-	Desc:AlliedDogHouseobj
-		"Loyal partner's home, German Shepherds can be trainned here."
-	End
-
-	Type:AlliedDogHouseobj
-		"Training Attack Dogs"
-	End
-	
 // OutPostUpg
 	
 	Name:AlliedOutPostUPG
@@ -3682,7 +3668,34 @@
 	End
 	
 	DESC:UNITINTRO
-		"Developed by Evanati using Remix as a base. Credits to KnightVVV for his incredible work developing Remix."
+		"Developed by Evanati using Remix as a base. Credits to KnightVVV for his work developing Remix."
+	End
+	
+// AlliedDogHouse
+	Name:AlliedDogHouseobj
+		"Dog House"
+	End
+	
+	Desc:AlliedDogHouseobj
+		"Home of loyal and noble German Shepherds. Dogs trained here are tougher, faster, and more alert, than the ones trained at the barracks."
+	End
+
+	Type:AlliedDogHouseobj
+		"Training Attack Dogs"
+	End
+	
+// AlliedScoutInfantry
+	Desc:AlliedScoutInfantry
+		"Alert, well-trained German Shepherds. Have lethal bites and can sniff out enemy spies from afar."
+	End
+	
+// AlliedScoutInfantryDH
+	Name:AlliedScoutInfantryDH
+		"Special Attack Dog"
+	End
+	
+	Desc:AlliedScoutInfantryDH
+		"Extra tough, fast, and alert, well-trained German Shepherds. Have lethal bites and can sniff out enemy spies from afar."
 	End
 
 // AlliedBaseDefenseRT
@@ -3747,7 +3760,7 @@
 	End
 	
 	Type:AlliedTransportHelicopter
-		"Anti-Infantry / Troop Carrier"
+		"Troop Carrier / Anti-Infantry"
 	End
 	
 // NeutralPowerPlant
