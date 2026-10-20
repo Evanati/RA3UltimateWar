@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>
+		<!-- Animations-->
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Animations/ABBARRACKS_BLD_BLD.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Animations/ABBARRACKS_DOOR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Animations/ABBARRACKS_GAG.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Animations/ABBARRACKS_UPGRADE.w3x" />
+	
+		<!-- Collision boxes -->
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS.OBBOX01.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS.OBBOX02.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS.OBBOX03.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS_BLD_SKN.OBBOX01.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS_BLD_SKN.OBBOX02.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS_BLD_SKN.OBBOX03.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS_COL.OBBOX01.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/CollisionBoxes/ABBARRACKS_COL.OBBOX02.w3x" />
+		
+		<!-- Containers -->
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_BLD_SKN.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_COL_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_DOOR_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_GAG_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_GIB_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_LIGHTSA_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_PARTICLES_CTR.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Containers/ABBARRACKS_UPGRADE_CTR.w3x" />
+		
+		<!-- Hierarchies -->
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_BLD_SKL.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_COL_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_DOOR_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_GAG_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_GIB_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_LIGHTSA_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_PARTICLES_HRC.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Hierarchies/ABBARRACKS_UPGRADE_HRC.w3x" />
+	
+		<!-- Meshes -->
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS.NEWSKIN_FILL.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_BLD_SKN.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_COL.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_DOOR.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_GAG.ALLIED_INFANTRY01.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_GIB.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_LIGHTSA.FX_LIGHTS.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_LIGHTSA.FX_LIGHTSBUILDING.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_UPGRADE.FX_BONE_UPGRADE_DISH.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_UPGRADE.UPGRADE_01.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_UPGRADE.UPGRADE_02.w3x" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Meshes/ABBARRACKS_UPGRADE.UPGRADE_03.w3x" />
+		
+		<!-- Textures -->
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Textures/ABBarracks.Texture.xml" />		
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Textures/ABBarracks_NRM.Texture.xml" />
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Textures/ABBarracks_SPM.Texture.xml" />		
+		<Include type="all" source="ART:Allied/Structures/AlliedBarracks/Textures/ABBarracks_UPGRADE.Texture.xml" />	
+    </Includes>
+</AssetDeclaration>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="ABBARRACKS_GAG" Hierarchy="ABBARRACKS_GAG">
+		<SubObject SubObjectID="ALLIED_INFANTRY01" BoneIndex="0">
+			<RenderObject>
+				<Mesh>ABBARRACKS_GAG.ALLIED_INFANTRY01</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

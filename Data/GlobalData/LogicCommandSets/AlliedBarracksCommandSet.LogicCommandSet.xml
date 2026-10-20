@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="AlliedBarracksCommandSet">
+		<Cmd>Command_ConstructAlliedAntiInfantryInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedSniperInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedAntiVehicleInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedEngineer</Cmd>
+		<Cmd>Command_ConstructAlliedGrenadeInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedInfiltrationInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedLegionnaireInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedCommandoTech1</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="AlliedBarracksCommandSetAirborneForceUPG">
+		<Cmd>Command_ConstructAlliedAntiInfantryInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedSniperInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedAntiVehicleInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedEngineer</Cmd>
+		<Cmd>Command_ConstructAlliedGrenadeInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedInfiltrationInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedLegionnaireInfantryupg</Cmd>
+		<Cmd>Command_ConstructAlliedCommandoTech1</Cmd>
+	</LogicCommandSet>
+</AssetDeclaration>

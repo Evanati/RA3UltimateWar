@@ -149,8 +149,7 @@
 				</AnimationState>										
 			</ScriptedModelDraw>
 
-<!-- DRAW PLATFORM -->
-
+			<!-- DRAW PLATFORM -->
 			<ScriptedModelDraw
 				id="ModuleTag_Draw_Platform"
 				OkToChangeModelColor="true">
@@ -195,7 +194,7 @@
 					</Script>
 				</AnimationState>	
 				
-					<!-- BUILDUP ANIMATION -->
+				<!-- BUILDUP ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"  
 					ConditionsYes="STRUCTURE_UNPACKING OVER_WATER">
@@ -244,9 +243,8 @@
 				</AnimationState>		
 			</ScriptedModelDraw>
 
-<!-- DRAW PARTICLES -->
-
-      <ScriptedModelDraw
+			<!-- DRAW PARTICLES -->
+			<ScriptedModelDraw
 				id="ModuleTag_Draw_FX"
 				OkToChangeModelColor="true">
 				<ModelConditionState
@@ -280,6 +278,34 @@
 
 				</ModelConditionState>
 			</ScriptedModelDraw>
+			
+			<!-- DRAW TRACER BULLETS -->
+			<TracerModelDraw
+				id="ModuleTag_TracerModelDraw"
+				MinLength="5.5"
+				MaxLength="6.5"
+				Width="2.5"
+				MinSpeed="20"
+				MaxSpeed="25"
+				SweepSpeed="1.0"
+				SpreadAngle="7.0"
+				MinTracersPerFrame="0.2"
+				MaxTracersPerFrame="0.3"
+				FrameLifeTime="25"
+				WeaponSlotType="PRIMARY_WEAPON"
+				Texture="FXTracer"
+				UseAdditiveBlending="true">
+				<HeadColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+				<TailColor
+					r="1.0"
+					g="1.0"
+					b="1.0"
+					a="1.0" />
+			</TracerModelDraw>
 		</Draws>
 		
 		<Behaviors>

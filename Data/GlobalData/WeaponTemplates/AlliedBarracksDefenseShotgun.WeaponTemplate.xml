@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="AlliedBarracksDefenseShotgun"
+		AttackRange="150.0"
+		MinTargetPitch="-15d"
+		MaxTargetPitch="15d"
+		WeaponSpeed="750"
+		FireFX="FX_Allied_ShotgunFire"
+		FireSound="ALL_Peacekeeper_WeaponFire"
+		RadiusDamageAffects="ENEMIES"
+		ClipSize="1"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_STRUCTURE"
+		AcceptableAimDelta="1d"
+		CanFireWhileMoving="true"
+		DamageDealtAtSelfPosition="true"
+		ReAcquireDetailType="PER_CLIP"	
+		IgnoresContactPoints="true">
+
+		<FiringDuration
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<ClipReloadTime
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<Nuggets>
+			<DamageNugget
+				id="AlliedBarracksDefenseShotgunDamage"
+				Damage="40.0"
+				Radius="155"
+				DamageTaperOff="25"
+				DelayTimeSeconds="0.0s"
+				DamageArc="2d"
+				DamageType="AUTO_CANNON"
+				DamageFXType="ALLIED_SHOTGUN"
+				DeathType="NORMAL"
+				PartitionFilterTestType="SPHERE"
+				ForceFXPositionToVictim="true"/>
+			<MetaImpactNugget
+				ShockWaveAmount="50"
+				ShockWaveRadius="40.0"
+				ShockWaveTaperOff="1.0"
+				ShockWaveZMult="1.0"
+				ShockWaveArc="5d"
+				ForbiddenTargetModelCondition="STUNNED_FLAILING"/>
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>

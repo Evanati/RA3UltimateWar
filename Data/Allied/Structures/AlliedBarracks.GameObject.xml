@@ -4,14 +4,7 @@
 	<Includes>
 		<Include type="all" source="DATA:GlobalData/GlobalDefines.xml" /> 
 		<Include type="all"	source="ART:GBDugOut.w3x" />
-		<Include type="all"	source="ART:ABBarracks.w3x" /> 
-		<Include type="all" source="ART:ABBarracks_particles.w3x" />
-		<Include type="all"	source="ART:ABBarracks_GAG.w3x" />
-		<Include type="all"	source="ART:ABBarracks_DOOR.w3x" />
-		<Include type="all"	source="ART:ABBarracks_UPGRADE.w3x" />
-		<Include type="all"	source="ART:ABBarracks_BLD_SKN.w3x" />			
-		<Include type="all"	source="ART:ABBarracks_BLD_BLD.w3x" />	
-		<Include type="all"	source="ART:ABBarracks_LightsA.w3x" />	
+		<Include type="all"	source="ART:Allied/Structures/AlliedBarracks/AlliedBarracks_Includes.xml" /> 
 		<!-- Base Object -->
 		<Include type="instance"	source="DATA:BaseObjects/BaseStructure.xml" />
 	</Includes>
@@ -44,17 +37,16 @@
 			DamageFX="FactionStructureDamageFX" />
 		<SkirmishAIInformation
 			BaseBuildingLocation="FRONT">
-			<ConstructionBaseSelectionCriteria
-				ExcludedBaseTypes="NO_BUILD_RADIUS CAPTURED"
-				PreferredBaseTypes="MAIN_BASE"
-				SortOrder="PREFER_OLDEST" />
-		</SkirmishAIInformation>
-		
+      <ConstructionBaseSelectionCriteria
+        ExcludedBaseTypes="NO_BUILD_RADIUS CAPTURED"
+        PreferredBaseTypes="MAIN_BASE"
+        SortOrder="PREFER_OLDEST" />
+    </SkirmishAIInformation>
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"
 				OkToChangeModelColor="true"
-				ExtraPublicBone="BONE_CONTACT_POINT_01 BONE_CONTACT_POINT_02 BONE_CONTACT_POINT_03 BONE_CONTACT_POINT_04 BONE_CONTACT_POINT_05 BONE_CONTACT_POINT_06 BONE_CONTACT_POINT_07 BONE_CONTACT_POINT_08"
+				ExtraPublicBone="BONE_CONTACT_POINT_01 BONE_CONTACT_POINT_02 BONE_CONTACT_POINT_03 BONE_CONTACT_POINT_04 BONE_CONTACT_POINT_05 BONE_CONTACT_POINT_06 BONE_CONTACT_POINT_07 BONE_CONTACT_POINT_08 TURRET_BONE"
 				StaticModelLODMode="true">
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT">
@@ -62,15 +54,15 @@
 						Name="ABBarracks" />
 					<WeaponFireFXBone
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="BONE_CONTACT_POINT_01" />
+						BoneName="TURRET_BONE" />
 					<WeaponLaunchBone
 						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="BONE_CONTACT_POINT_01" />
+						BoneName="TURRET_BONE" />
 					<Turret
-						TurretNameKey="BONE_CONTACT_POINT_01"
+						TurretNameKey="TURRET_BONE"
 						TurretID="1" />
 				</ModelConditionState>
-       
+        
         <ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="BUILD_PLACEMENT_CURSOR">
@@ -221,40 +213,68 @@
 				</AnimationState>						
 			</ScriptedModelDraw>
 
-<!-- DRAW GAG -->
+			<!-- DRAW GAG -->
 			<ScriptedModelDraw
 				id="ModuleTag_Draw_GAG"
 				OkToChangeModelColor="true">
+			
+				<!-- Normal guard model -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT">
-					<Model
-						Name="ABBarracks_GAG" />
+					<Model Name="ABBarracks_GAG"/>
 				</ModelConditionState>
-        <ModelConditionState
+			
+				<!-- Hide guard during placement -->
+				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="BUILD_PLACEMENT_CURSOR">
-          <Model
-						Name="" />
-        </ModelConditionState>
-        <ModelConditionState
+					<Model
+						Name=""/>
+				</ModelConditionState>
+			
+				<!-- Hide guard during construction -->
+				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="STRUCTURE_UNPACKING">
 					<Model
-						Name="" />
+						Name=""/>
 				</ModelConditionState>
+			
+				<!-- Hide guard when sold -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SOLD">
 					<Model
-						Name="" />
-				</ModelConditionState>						
+						Name=""/>
+				</ModelConditionState>
+				
+				<!-- Hide guard during combat -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ENGAGED">
+					<Model 
+						Name=""/>
+				</ModelConditionState>
+			
+				<!-- Normal patrol animation -->
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="START_FRAME_FIRST">
 					<Animation
 						AnimationName="ABBarracks_GAG"
 						AnimationMode="LOOP"
-						AnimationBlendTime="0" />
+						AnimationBlendTime="0"/>
+				</AnimationState>
+				
+				<!-- Reset patrol animation during combat -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ENGAGED"
+					Flags="START_FRAME_FIRST">
+					<Animation
+						AnimationName="ABBarracks_GAG"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0"/>
 				</AnimationState>
 			</ScriptedModelDraw>
 			
@@ -318,7 +338,7 @@
 
 					<!-- AlliedAntiInfantryInfantry (default) -->
 					<Weapon
-						Template="ABD_Shotgun"
+						Template="AlliedBarracksDefenseShotgun"
 						Ordering="PRIMARY_WEAPON"/>
 					
 					<TurretSettings
@@ -337,7 +357,7 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
-			
+		
 			<Physics
 				id="ModuleTag_Physics"/>
 
@@ -450,7 +470,7 @@
 			<AIUpdate
 				id="ModuleTag_AI"
 				AutoAcquireEnemiesWhenIdle="YES"
-				StateMachine="StructureAIStateMachine">
+				StateMachine="OffensiveStructureAIStateMachine">
 				<UnitAITargetChooserData
 					CanPickDynamicTargets="false"
 					IdleScanDelay="=$FAST_IDLE_SCAN_DELAY">	
