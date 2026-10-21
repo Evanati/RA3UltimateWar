@@ -56,7 +56,7 @@
 		Side="Allies"
 		SubGroupPriority="315"
 		EditorSorting="UNIT"
-		BuildTime="2"
+		BuildTime="3"
 		CommandSet="AlliedScoutInfantryCommandSet"
 		KindOf="SELECTABLE CAN_ATTACK AMPHIBIOUS CAN_CAST_REFLECTIONS INFANTRY SCORE SKIRMISH_AI_DONT_GARRISON CANNOT_HIJACK NO_GARRISON"
 		ThreatLevel="10"
@@ -72,7 +72,7 @@
 		<DisplayName
 			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlliedScoutInfantryDH</DisplayName>
 		<ObjectResourceInfo>
-			<BuildCost Account="=$ACCOUNT_ORE" Amount="75"/>
+			<BuildCost Account="=$ACCOUNT_ORE" Amount="85"/>
 		</ObjectResourceInfo>
 		<ArmorSet
 			id="DefaultArmorSet"
