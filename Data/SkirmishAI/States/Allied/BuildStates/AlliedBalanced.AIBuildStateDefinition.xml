@@ -133,12 +133,12 @@
 		<BuildEntry
 			Build="AlliedScoutInfantryDH"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
+			CountModifier="1.0"/>
 		
 		<BuildEntry
 			Build="AlliedScoutInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			CountModifier="0.5"/>
 			
 		<BuildEntry
 			Build="AlliedAntiInfantryInfantry"
@@ -158,7 +158,7 @@
 		<BuildEntry
 			Build="AlliedEngineer"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			CountModifier="0.5"/>
 			
 		<BuildEntry
 			Build="AlliedGrenadeInfantry"
@@ -470,17 +470,17 @@
 		<BuildEntry
 			Build="AlliedBomberAircraft"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="7.0"/>
+			CountModifier="8.5"/>
 			
 		<BuildEntry
 			Build="AlliedBomberAircraftStratoUpgrade"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="8.0"/>
+			CountModifier="10.0"/>
 			
 		<BuildEntry
 			Build="Kodiak"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
+			CountModifier="7.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
@@ -587,7 +587,7 @@
 		<BuildEntry
 			Build="Hurricane"
 			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
+			CountModifier="0.0"/>
 			
 		<BuildEntry
 			Build="Paladin"
@@ -616,7 +616,7 @@
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedBalanceAntiAirAircraftBuildState">
+		id="AlliedBalancedAntiAirAircraftBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic

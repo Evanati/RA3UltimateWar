@@ -517,69 +517,125 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="AlliedAirfieldBuildStateRandom_RA3UW"
-			State="AlliedAirfieldBuildStateRandom_RA3UW"
-			Difficulty="EASY" />
+			id="AlliedCraneLandBuildState"
+			State="AlliedCraneLandBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedAmphibiousUnitBuildState_Remix"
-			State="AlliedAmphibiousUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="AlliedCraneWaterBuildState"
+			State="AlliedCraneWaterBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedAntiAirOnlyBuildState"
-			State="AlliedAntiAirOnlyBuildState"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="AlliedGeneralFactoryBuildState"
+			State="AlliedGeneralFactoryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedAntiGroundAircraftBuildState_RA3UW"
-			State="AlliedAntiGroundAircraftBuildState_RA3UW"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="AlliedMCVLandBuildState"
+			State="AlliedMCVLandBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedAntiInfantryOnlyBuildState"
-			State="AlliedAntiInfantryOnlyBuildState"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="AlliedMCVWaterBuildState"
+			State="AlliedMCVWaterBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedBarracksBuildState_RANDOM_Remix"
-			State="AlliedBarracksBuildState_RANDOM_Remix"
-			Difficulty="EASY" />
+			id="AlliedNavalYardFactoryBuildState"
+			State="AlliedNavalYardFactoryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedCraneBuildState_RemixNEW"
-			State="AlliedCraneBuildState_RemixNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			id="AlliedNeededAircraftsBuildState"
+			State="AlliedNeededAircraftsBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedDefenseBuildState_RA3UW"
-			State="AlliedDefenseBuildState_RA3UW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			id="AlliedNeededInfantryBuildState"
+			State="AlliedNeededInfantryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedLandUnitBuildState_Remix"
-			State="AlliedLandUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="AlliedNeededShipsBuildState"
+			State="AlliedNeededShipsBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedNavalYardBuildState_RANDOM"
-			State="AlliedNavalYardBuildState_RANDOM"
-			Difficulty="EASY" />
+			id="AlliedNeededStructuresBuildState"
+			State="AlliedNeededStructuresBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedNavalYardBuildStateNEW"
-			State="AlliedNavalYardBuildStateNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<BuildState
-			id="AlliedNeededUnits_Remix"
-			State="AlliedNeededUnits_Remix"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			id="AlliedNeededVehiclesBuildState"
+			State="AlliedNeededVehiclesBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="AlliedNonPathDependentStructureBuildState"
 			State="AlliedNonPathDependentStructureBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedTechBuildState_RemixNew"
-			State="AlliedTechBuildState_RemixNew"
+			id="AlliedResourceBuildState"
+			State="AlliedResourceBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesAircraftBuildState_FEWEST"
+			State="AlliedSpecialForcesAircraftBuildState_FEWEST"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedWarFactoryBuildState_RANDOM_Remix"
-			State="AlliedWarFactoryBuildState_RANDOM_Remix"
-			Difficulty="EASY" />
+			id="AlliedSpecialForcesAircraftBuildState_RANDOM"
+			State="AlliedSpecialForcesAircraftBuildState_RANDOM"
+			Difficulty="EASY"/>
 		<BuildState
-			id="AlliedWaterUnitBuildState"
-			State="AlliedWaterUnitBuildState"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="AlliedSpecialForcesAntiGroundAircraftBuildState"
+			State="AlliedSpecialForcesAntiGroundAircraftBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesAntiAirAircraftBuildState"
+			State="AlliedSpecialForcesAntiAirAircraftBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesDefenseBuildState"
+			State="AlliedSpecialForcesDefenseBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesGeneralFactoryBuildState"
+			State="AlliedSpecialForcesGeneralFactoryBuildState"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesInfantryBuildState_FEWEST"
+			State="AlliedSpecialForcesInfantryBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesInfantryBuildState_RANDOM"
+			State="AlliedSpecialForcesInfantryBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="AlliedSpecialForcesNavalYardFactoryBuildState"
+			State="AlliedSpecialForcesNavalYardFactoryBuildState"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesShipBuildState_FEWEST"
+			State="AlliedSpecialForcesShipBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesShipBuildState_RANDOM"
+			State="AlliedSpecialForcesShipBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="AlliedSpecialForcesVehicleBuildState_FEWEST"
+			State="AlliedSpecialForcesVehicleBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSpecialForcesVehicleBuildState_RANDOM"
+			State="AlliedSpecialForcesVehicleBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="AlliedTechStructureBuildState"
+			State="AlliedTechStructureBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedTechStructureBuildState_EASY"
+			State="AlliedTechStructureBuildState_EASY"
+			Difficulty="EASY"/>
+		<BuildState
+			id="AlliedTechUpgradeBuildState"
+			State="AlliedTechUpgradeBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedTechUpgradeBuildState_EASY"
+			State="AlliedTechUpgradeBuildState_EASY"
+			Difficulty="EASY"/>
 			
 		<SpecificUnitCap
 			Unit="AlliedAntiAirShip"

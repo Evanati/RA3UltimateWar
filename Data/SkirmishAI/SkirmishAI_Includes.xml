@@ -25,10 +25,10 @@
 		<Include type="all" source="DATA:SkirmishAI/Personalities/Soviet/SovietShockSpecialist.AIPersonalityDefinition.xml"/>
 			
 		<!-- States -->
-		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedAirfieldBuildState_RA3UW.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedBalanced.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedCommon.AIBuildStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSpecialForces.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSquadronLeader.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
