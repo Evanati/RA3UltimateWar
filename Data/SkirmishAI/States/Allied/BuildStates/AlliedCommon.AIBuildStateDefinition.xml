@@ -107,7 +107,7 @@
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedOutPost</IncludeThing>
+					<IncludeThing>AlliedOutpost</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<ObjectOfTypeExistsHeuristic
@@ -157,7 +157,7 @@
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedOutPost</IncludeThing>
+					<IncludeThing>AlliedOutpost</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<ObjectOfTypeExistsHeuristic

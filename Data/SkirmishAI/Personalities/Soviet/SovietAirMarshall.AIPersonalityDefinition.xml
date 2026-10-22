@@ -509,65 +509,117 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="SovietAmphibiousUnitBuildState_Remix"
-			State="SovietAmphibiousUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="SovietAirMarshallAircraftBuildState_FEWEST"
+			State="SovietAirMarshallAircraftBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietAntiAirOnlyBuildState_New"
-			State="SovietAntiAirOnlyBuildState_New"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="SovietAirMarshallAircraftBuildState_RANDOM"
+			State="SovietAirMarshallAircraftBuildState_RANDOM"
+			Difficulty="EASY"/>
 		<BuildState
-			id="SovietAntiGroundAircraftBuildState_Remix"
-			State="SovietAntiGroundAircraftBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="SovietAirMarshallAntiGroundAircraftBuildState"
+			State="SovietAirMarshallAntiGroundAircraftBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietAntiInfantryOnlyBuildState"
-			State="SovietAntiInfantryOnlyBuildState"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="SovietAirMarshallAntiAirAircraftBuildState"
+			State="SovietAirMarshallAntiAirAircraftBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietBarracksBuildState_RANDOM_Remix"
-			State="SovietBarracksBuildState_RANDOM_Remix"
-			Difficulty="EASY" />
-		<BuildState
-			id="SovietCraneBuildStateNEW"
-			State="SovietCraneBuildStateNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<BuildState
-			id="SovietDefenseBuildState_RA3UW"
-			State="SovietDefenseBuildState_RA3UW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<BuildState
-			id="SovietLandUnitBuildState_Remix"
-			State="SovietLandUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<BuildState
-			id="SovietNavalYardBuildState_RANDOM"
-			State="SovietNavalYardBuildState_RANDOM"
-			Difficulty="EASY" />
-		<BuildState
-			id="SovietNavalYardBuildStateNEW"
-			State="SovietNavalYardBuildStateNEW"
+			id="SovietAirMarshallDefenseBuildState"
+			State="SovietAirMarshallDefenseBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietNeededUnits_Remix"
-			State="SovietNeededUnits_Remix"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			id="SovietAirMarshallGeneralFactoryBuildState"
+			State="SovietAirMarshallGeneralFactoryBuildState"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="SovietAirMarshallInfantryBuildState_FEWEST"
+			State="SovietAirMarshallInfantryBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietAirMarshallInfantryBuildState_RANDOM"
+			State="SovietAirMarshallInfantryBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="SovietAirMarshallNavalYardFactoryBuildState"
+			State="SovietAirMarshallNavalYardFactoryBuildState"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="SovietAirMarshallShipBuildState_FEWEST"
+			State="SovietAirMarshallShipBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietAirMarshallShipBuildState_RANDOM"
+			State="SovietAirMarshallShipBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="SovietAirMarshallVehicleBuildState_FEWEST"
+			State="SovietAirMarshallVehicleBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietAirMarshallVehicleBuildState_RANDOM"
+			State="SovietAirMarshallVehicleBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="SovietCraneLandBuildState"
+			State="SovietCraneLandBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietCraneWaterBuildState"
+			State="SovietCraneWaterBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietGeneralFactoryBuildState"
+			State="SovietGeneralFactoryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietMCVLandBuildState"
+			State="SovietMCVLandBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietMCVWaterBuildState"
+			State="SovietMCVWaterBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietNavalYardFactoryBuildState"
+			State="SovietNavalYardFactoryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietNeededAircraftsBuildState"
+			State="SovietNeededAircraftsBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietNeededInfantryBuildState"
+			State="SovietNeededInfantryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietNeededShipsBuildState"
+			State="SovietNeededShipsBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietNeededStructuresBuildState"
+			State="SovietNeededStructuresBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietNeededVehiclesBuildState"
+			State="SovietNeededVehiclesBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="SovietNonPathDependentStructureBuildState"
 			State="SovietNonPathDependentStructureBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietTechBuildState_RemixNew"
-			State="SovietTechBuildState_RemixNew"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="SovietResourceBuildState"
+			State="SovietResourceBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietWarFactoryBuildState_RANDOM_Remix"
-			State="SovietWarFactoryBuildState_RANDOM_Remix"
-			Difficulty="EASY" />
+			id="SovietTechStructureBuildState"
+			State="SovietTechStructureBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietWaterUnitBuildStateNEW"
-			State="SovietWaterUnitBuildStateNEW"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="SovietTechStructureBuildState_EASY"
+			State="SovietTechStructureBuildState_EASY"
+			Difficulty="EASY"/>
 			
 		<SpecificUnitCap
 			Unit="SAAV4"

@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Factory construction -->
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistGeneralFactoryBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="CONSTANT"
+			CountModifier="3.0"/>
+
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="CONSTANT"
+			CountModifier="3.0"/>
+			
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="CONSTANT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="SovietShockSpecialistNavalYardFactoryBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<TimerHeuristic
+				StartTime="200s"
+				EndTime="-1s"
+				CountFrom="MAP_START" />
+			<IntervalHeuristic
+				IntervalTime="120s"
+				ActiveTime="30s"
+				CountFrom="MAP_START" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="400.0" 
+				EnemyNearby="false"/>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="CONSTANT"
+			CountModifier="2.0"
+			Score="1" />
+	</AIBuildStateDefinition>
+	
+	<!-- Defense construction -->
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistDefenseBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="SovietBaseDefenseGround" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAir" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="8.0"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAdvanced" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.5"/>
+		
+		<BuildEntry 
+			Build="SovietNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+	</AIBuildStateDefinition>
+	
+	<!-- Infantry production -->	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistInfantryBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+			
+		<BuildEntry
+			Build="SovietEngineer"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="SovietMortarcycle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="4.0"/>
+			
+		<BuildEntry
+			Build="SovietHeavyAntiVehicleInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
+			
+		<BuildEntry
+			Build="SovietDesolatorInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="6.5"/>
+			
+		<BuildEntry
+			Build="SovietCommandoTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistInfantryBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietEngineer"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietMortarcycle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietHeavyAntiVehicleInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietDesolatorInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietCommandoTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+	</AIBuildStateDefinition>
+	
+	<!-- Vehicle production -->
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistVehicleBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietWarFacory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietScoutVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="4.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiInfantryVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiAirShip_Ground"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech2"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
+			
+		<BuildEntry
+			Build="SovietHeavyWalkerVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="6.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="4.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech3"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.5"/>
+			
+		<BuildEntry 
+			Build="SAVV4Building" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="8.0"/>
+			
+		<BuildEntry 
+			Build="SAAV4" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="8.0"/>
+			
+		<BuildEntry
+			Build="SovietSurveyor"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistVehicleBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietWarFacory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietScoutVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiInfantryVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiAirShip_Ground"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech2"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietHeavyWalkerVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech3"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry 
+			Build="SAVV4Building" 
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry 
+			Build="SAAV4" 
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietSurveyor"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+	</AIBuildStateDefinition>
+	
+	<!-- Aircraft production -->
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAircraftBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0"/>
+			
+		<BuildEntry
+			Build="SovietTransportAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAircraftBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietTransportAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAntiGroundAircraftBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietTransportAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAntiAirAircraftBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<!-- Ship production -->
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistShipBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiAirShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech2"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5"/>
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiStructureShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="4.0"/>
+			
+		<BuildEntry
+			Build="SovietSurveyor_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistShipBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiAirShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech2"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietAntiStructureShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="SovietSurveyor_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+	</AIBuildStateDefinition>
+	
+	<!-- Mixed production -->
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAntiStructureUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAntiInfantryUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAntiVehicleUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAntiAircraftUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAntiShipUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistLandUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES"
+					Alignment="NONE"/>
+			</ObjectOfTypeExistsHeuristic>
+			<PathToTargetHeuristic
+				Surface="Land"
+				ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="true" />
+			<PathToTargetHeuristic
+				Surface="Water"
+				ObjectTypeToUseForTest="SovietAntiNavyShipTech1"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistWaterUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES"
+					Alignment="NONE"/>
+			</ObjectOfTypeExistsHeuristic>
+			<PathToTargetHeuristic
+				Surface="Water"
+				ObjectTypeToUseForTest="SovietAntiNavyShipTech1"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="true" />
+			<PathToTargetHeuristic
+				Surface="Land"
+				ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAmphibiousUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES"
+					Alignment="NONE"/>
+			</ObjectOfTypeExistsHeuristic>
+			<PathToTargetHeuristic
+				Surface="Land"
+				ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="true" />
+			<PathToTargetHeuristic
+				Surface="Water"
+				ObjectTypeToUseForTest="SovietAntiNavyShipTech1"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietShockSpecialistAirUnitsOnlyBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="ENEMIES"
+					Alignment="NONE"/>
+			</ObjectOfTypeExistsHeuristic>
+			<PathToTargetHeuristic
+				Surface="Land"
+				ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="false" />
+			<PathToTargetHeuristic
+				Surface="Water"
+				ObjectTypeToUseForTest="SovietAntiNavyShipTech1"
+				LocomotorConditionToUseForTest="NORMAL"
+				PathExists="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

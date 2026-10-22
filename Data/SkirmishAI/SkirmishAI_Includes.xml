@@ -34,8 +34,10 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/StrategicStates/JapanCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/StrategicStates/JapanDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietNavalYardBuildStateNEW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietAirMarshall.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietBalanced.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietCommon.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietShockSpecialist.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/StrategicStates/SovietCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/StrategicStates/SovietDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 			

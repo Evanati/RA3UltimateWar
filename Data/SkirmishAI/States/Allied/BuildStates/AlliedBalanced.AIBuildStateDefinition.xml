@@ -133,12 +133,12 @@
 		<BuildEntry
 			Build="AlliedScoutInfantryDH"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			CountModifier="0.5"/>
 		
 		<BuildEntry
 			Build="AlliedScoutInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="1.5"/>
 			
 		<BuildEntry
 			Build="AlliedAntiInfantryInfantry"
@@ -455,7 +455,7 @@
 		<BuildEntry
 			Build="Hurricane"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.0"/>
+			CountModifier="0.5"/>
 			
 		<BuildEntry
 			Build="Paladin"
@@ -465,7 +465,7 @@
 		<BuildEntry
 			Build="AlliedSupportAircraft"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="AlliedBomberAircraft"
@@ -587,7 +587,7 @@
 		<BuildEntry
 			Build="Hurricane"
 			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="0.0"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="Paladin"
