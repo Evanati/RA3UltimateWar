@@ -3,7 +3,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<!-- Factory construction -->
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesGeneralFactoryBuildState">
+		id="JapanFleetCommandFactoryBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic 
@@ -13,68 +13,24 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedDogHouse"
+			Build="JapanBarracks"
 			Heuristic="CONSTANT"
 			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedBarracks"
-			Heuristic="CONSTANT"
-			CountModifier="2.0"/>
 
 		<BuildEntry
-			Build="AlliedWarFactory"
+			Build="JapanWarFactory"
 			Heuristic="CONSTANT"
 			CountModifier="2.0"/>
 			
 		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanNavalYard"
 			Heuristic="CONSTANT"
-			CountModifier="3.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition
-		id="AlliedSpecialForcesNavalYardFactoryBuildState">
-		
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<TimerHeuristic
-				StartTime="200s"
-				EndTime="-1s"
-				CountFrom="MAP_START" />
-			<IntervalHeuristic
-				IntervalTime="120s"
-				ActiveTime="30s"
-				CountFrom="MAP_START" />
-			<IncomeAdvantageHeuristic
-				Value="0.1"
-				Above="true" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedNavalYard</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<EnemyNearbyHeuristic 
-				Distance="400.0" 
-				EnemyNearby="false"/>
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedNavalYard"
-			Heuristic="CONSTANT"
-			CountModifier="2.0"
-			Score="1" />
+			CountModifier="4.0"/>
 	</AIBuildStateDefinition>
 	
 	<!-- Defense construction -->
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesDefenseBuildState">
+		id="JapanFleetCommandDefenseBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -83,35 +39,25 @@
 				Weight="1.0" />
 		</Heuristic>
 		
-		<BuildEntry
-			Build="AlliedBaseDefenseRT"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="2.5"/>
-		
-		<BuildEntry
-			Build="AlliedBaseDefenseMGT"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="2.5"/>
-	
-		<BuildEntry
-			Build="AlliedBaseDefense"
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
 			Heuristic="FEWEST_UNIT"
 			CountModifier="10.0"/>
-
-		<BuildEntry
-			Build="AlliedBaseDefenseAdvanced"
+			
+		<BuildEntry 
+			Build="JapanBaseDefenseAdvancedEgg" 
 			Heuristic="FEWEST_UNIT"
-			CountModifier="3.0"/>
-	
-		<BuildEntry
-			Build="ABWeatherControl"
+			CountModifier="3.5"/>
+			
+		<BuildEntry 
+			Build="JapanNewTowerEgg" 
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
+			CountModifier="1.25"/>
 	</AIBuildStateDefinition>
 	
 	<!-- Infantry production -->	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesInfantryBuildState_FEWEST">
+		id="JapanFleetCommandInfantryBuildState_FEWEST">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -121,73 +67,53 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedDogHouse"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedScoutInfantryDH"
+			Build="JapanScoutInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
+			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedScoutInfantry"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
-			
-		<BuildEntry
-			Build="AlliedAntiInfantryInfantry"
+			Build="JapanAntiInfantryInfantry"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="2.5"/>
 			
 		<BuildEntry
-			Build="AlliedSniperInfantry"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="3.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiVehicleInfantry"
+			Build="JapanAntiVehicleInfantry"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="5.0"/>
 			
 		<BuildEntry
-			Build="AlliedEngineer"
+			Build="JapanEngineer"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="JapanArcherInfantry"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.5"/>
 			
 		<BuildEntry
-			Build="AlliedGrenadeInfantry"
+			Build="JapanInfiltrationInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="3.5"/>
+			CountModifier="0.5"/>
 			
 		<BuildEntry
-			Build="AlliedInfiltrationInfantry"
+			Build="JapanAntiVehicleInfantryTech3"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			CountModifier="2.0"/>
 			
 		<BuildEntry
-			Build="AlliedLegionnaireInfantry"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="6.0"/>
-			
-		<BuildEntry
-			Build="AlliedLegionnaireInfantryupg"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="7.0"/>
-			
-		<BuildEntry
-			Build="AlliedCommandoTech1"
+			Build="JapanCommandoTech1"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="10.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesInfantryBuildState_RANDOM">
+		id="JapanFleetCommandInfantryBuildState_RANDOM">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -197,77 +123,54 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedDogHouse"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanScoutInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedScoutInfantryDH"
+			Build="JapanAntiInfantryInfantry"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedScoutInfantry"
+			Build="JapanAntiVehicleInfantry"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedAntiInfantryInfantry"
+			Build="JapanEngineer"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedSniperInfantry"
+			Build="JapanArcherInfantry"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedAntiVehicleInfantry"
+			Build="JapanInfiltrationInfantry"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedEngineer"
+			Build="JapanAntiVehicleInfantryTech3"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedGrenadeInfantry"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedInfiltrationInfantry"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedLegionnaireInfantry"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedLegionnaireInfantryupg"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedCommandoTech1"
+			Build="JapanCommandoTech1"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
@@ -275,7 +178,7 @@
 	
 	<!-- Vehicle production -->
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesVehicleBuildState_FEWEST">
+		id="JapanFleetCommandVehicleBuildState_FEWEST">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -285,416 +188,58 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedWarFacory"
+			Build="JapanWarFacoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiInfantryVehicle_Ground"
+			Build="JapanLightTransportVehicle"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiAirVehicleTech1"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiVehicleVehicleTech1"
+			Build="JapanAntiInfantryVehicle"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="2.5"/>
 			
 		<BuildEntry
-			Build="Titan"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="3.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiStructureVehicle"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="6.5"/>
-			
-		<BuildEntry
-			Build="AlliedAntiVehicleVehicleTech3"
+			Build="JapanAntiVehicleVehicleTech1"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="5.0"/>
 			
 		<BuildEntry
-			Build="AlliedArtilleryVehicle"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
-			
-		<BuildEntry
-			Build="AlliedFutureTank"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="3.0"/>
-			
-		<BuildEntry
-			Build="AlliedFutureTankFTSeed"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="4.0"/>
-			
-		<BuildEntry
-			Build="AlliedMiner"
+			Build="JapanSentinelVehicle"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="0.5"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesVehicleBuildState_RANDOM">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedWarFacory"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAntiInfantryVehicle_Ground"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedAntiAirVehicleTech1"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedAntiVehicleVehicleTech1"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="Titan"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedAntiStructureVehicle"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedAntiVehicleVehicleTech3"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedArtilleryVehicle"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedFutureTank"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedFutureTankFTSeed"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedMiner"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-	</AIBuildStateDefinition>
-	
-	<!-- Aircraft production -->
-	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAircraftBuildState_FEWEST">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedTransportHelicopter"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="2.5"/>
-			
-		<BuildEntry
-			Build="AlliedAntiGroundAircraft"
+			Build="JapanAntiAirVehicleTech1"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="4.0"/>
 			
 		<BuildEntry
-			Build="AlliedFighterAircraft"
+			Build="Centurion"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="6.0"/>
+			CountModifier="0.5"/>
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="7.5"/>
-			
-		<BuildEntry
-			Build="Hurricane"
+			Build="JapanAntiVehicleVehicleTech3"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="2.0"/>
 			
 		<BuildEntry
-			Build="Paladin"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="5.0"/>
-			
-		<BuildEntry
-			Build="AlliedSupportAircraft"
+			Build="JapanAntiStructureVehicle"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="10.0"/>
 			
 		<BuildEntry
-			Build="AlliedBomberAircraft"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
-			
-		<BuildEntry
-			Build="Kodiak"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="8.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAircraftBuildState_RANDOM">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedTransportHelicopter"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedAntiGroundAircraft"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedFighterAircraft"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="Hurricane"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="Paladin"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedSupportAircraft"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedBomberAircraft"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="Kodiak"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAntiGroundAircraftBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedTransportHelicopter"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiGroundAircraft"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="Hurricane"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="Paladin"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedSupportAircraft"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedBomberAircraft"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="Kodiak"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAntiAirAircraftBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedFighterAircraft"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="Kodiak"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<!-- Ship production -->
-	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesShipBuildState_FEWEST">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedNavalYard"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAntiNavalScout"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="5.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiInfantryVehicle"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
-			
-		<BuildEntry
-			Build="AlliedAntiAirShip"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="6.5"/>
-			
-		<BuildEntry
-			Build="AlliedAntiNavyShipTech1"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiStructureShip"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="3.0"/>
-			
-		<BuildEntry
-			Build="AlliedMiner_Naval"
+			Build="JapanMiner"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="0.5"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesShipBuildState_RANDOM">
+		id="JapanFleetCommandVehicleBuildState_RANDOM">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -704,50 +249,250 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanWarFacoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiNavalScout"
+			Build="JapanLightTransportVehicle"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedAntiInfantryVehicle"
+			Build="JapanAntiInfantryVehicle"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedAntiAirShip"
+			Build="JapanAntiVehicleVehicleTech1"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedAntiNavyShipTech1"
+			Build="JapanSentinelVehicle"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedAntiStructureShip"
+			Build="JapanAntiAirVehicleTech1"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
 			
 		<BuildEntry
-			Build="AlliedMiner_Naval"
+			Build="Centurion"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
 			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech3"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanAntiStructureVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanMiner"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+	</AIBuildStateDefinition>
+	
+	<!-- Ship production -->
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandShipBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanNavalYardEgg"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="JapanNavyScoutShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="6.5"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="7.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="9.0"/>
+			
+		<BuildEntry
+			Build="JapanMiner_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandShipBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanNavalYardEgg"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="JapanNavyScoutShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+			
+		<BuildEntry
+			Build="JapanMiner_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="0%"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandAntiAirShipBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanNavalYardEgg"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandAntiWaterShipBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanNavalYardEgg"
+			Heuristic="FACTORY"
+			CountModifier="1.0"/>
+		
+		<BuildEntry
+			Build="JapanNavyScoutShip"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="BEST_UNIT_EXPECTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<!-- Mixed production -->
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAntiStructureUnitsOnlyBuildState">
+		id="JapanFleetCommandAntiStructureUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -757,33 +502,28 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedWarFactory"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiStructureVehicle"
+			Build="JapanAntiStructureVehicle"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAntiInfantryUnitsOnlyBuildState">
+		id="JapanFleetCommandAntiInfantryUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -793,33 +533,28 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedWarFactory"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiInfantryInfantry"
+			Build="JapanAntiInfantryInfantry"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAntiVehicleUnitsOnlyBuildState">
+		id="JapanFleetCommandAntiVehicleUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -829,33 +564,28 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedWarFactory"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiVehicleVehicleTech1"
+			Build="JapanAntiVehicleVehicleTech1"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAntiAircraftUnitsOnlyBuildState">
+		id="JapanFleetCommandAntiAircraftUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -865,33 +595,28 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedWarFactory"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiGroundAircraft"
+			Build="JapanAntiAirVehicleTech1"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAntiShipUnitsOnlyBuildState">
+		id="JapanFleetCommandAntiShipUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -901,33 +626,28 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedWarFactory"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiNavalScout"
+			Build="JapanNavyScoutShip"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesLandUnitsOnlyBuildState">
+		id="JapanFleetCommandLandUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -942,34 +662,34 @@
 			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic
 				Surface="Land"
-				ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
+				ObjectTypeToUseForTest="JapanSentinelVehicle"
 				LocomotorConditionToUseForTest="NORMAL"
 				PathExists="true" />
 			<PathToTargetHeuristic
 				Surface="Water"
-				ObjectTypeToUseForTest="AlliedAntiNavalScout"
+				ObjectTypeToUseForTest="JapanNavyScoutShip"
 				LocomotorConditionToUseForTest="NORMAL"
 				PathExists="false" />
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedWarFactory"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiInfantryInfantry"
+			Build="JapanSentinelVehicle"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesWaterUnitsOnlyBuildState">
+		id="JapanFleetCommandWaterUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -984,29 +704,29 @@
 			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic
 				Surface="Water"
-				ObjectTypeToUseForTest="AlliedAntiNavalScout"
+				ObjectTypeToUseForTest="JapanNavyScoutShip"
 				LocomotorConditionToUseForTest="NORMAL"
 				PathExists="true" />
 			<PathToTargetHeuristic
 				Surface="Land"
-				ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
+				ObjectTypeToUseForTest="JapanSentinelVehicle"
 				LocomotorConditionToUseForTest="NORMAL"
 				PathExists="false" />
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedAntiNavalScout"
+			Build="JapanNavyScoutShip"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAmphibiousUnitsOnlyBuildState">
+		id="JapanFleetCommandAmphibiousUnitsOnlyBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -1021,70 +741,33 @@
 			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic
 				Surface="Land"
-				ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
+				ObjectTypeToUseForTest="JapanSentinelVehicle"
 				LocomotorConditionToUseForTest="NORMAL"
 				PathExists="true" />
 			<PathToTargetHeuristic
 				Surface="Water"
-				ObjectTypeToUseForTest="AlliedAntiNavalScout"
+				ObjectTypeToUseForTest="JapanNavyScoutShip"
 				LocomotorConditionToUseForTest="NORMAL"
 				PathExists="true" />
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedWarFactory"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedNavalYard"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedScoutInfantry"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="AlliedSpecialForcesAirUnitsOnlyBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="ALL"
-					Relationship="ENEMIES"
-					Alignment="NONE"/>
-			</ObjectOfTypeExistsHeuristic>
-			<PathToTargetHeuristic
-				Surface="Land"
-				ObjectTypeToUseForTest="AlliedAntiInfantryInfantry"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="false" />
-			<PathToTargetHeuristic
-				Surface="Water"
-				ObjectTypeToUseForTest="AlliedAntiNavalScout"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="false" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedAntiGroundAircraft"
+			Build="JapanAntiInfantryInfantry"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>

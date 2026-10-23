@@ -25,11 +25,9 @@
 		<Order Time="0s" Build="SovietBarracks" />
 		<Order Time="10s" Build="SovietPowerPlant" />
 		
-		<!-- Rush units -->
+		<!-- Scout unit -->
 		<Order Time="10s" Build="SovietScoutInfantry" />
-		<Order Time="12s" Build="SovietScoutInfantry" />
-		<Order Time="14s" Build="SovietScoutInfantry" />
-		<!-- Rush units -->
+		<!-- Scout unit -->
 		
 		<Order Time="20s" Build="SovietCrane" />
 		<Order Time="40s" Build="SovietPowerPlant" />

@@ -6,7 +6,7 @@
 		FireSound="ALL_Apollo_WeaponFire"
 		FireFX="FX_Allied_FighterFire"
 		FireVeteranFX="FX_Allied_FighterFire_Vet"
-		AttackRange="150.0"
+		AttackRange="170.0"
 		AcceptableAimDelta="20d"
 		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
 		CanFireWhileMoving="true"
@@ -24,7 +24,7 @@
 		<Nuggets>
 			<DamageNugget
 				id="DefaultDamageNugget"
-				Damage="20.0"
+				Damage="18.0"
 				DamageType="AUTO_CANNON"
 				DelayTimeSeconds="0.5s"
 				DamageFXType="ALLIED_FIGHTER"

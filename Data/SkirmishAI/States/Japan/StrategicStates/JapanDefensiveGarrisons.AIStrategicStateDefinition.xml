@@ -52,6 +52,10 @@
 					MinUnits="4" 
 					MaxUnits="5"/>
 				<CreateUnits 
+					UnitName="JapanArcherInfantry" 
+					MinUnits="0" 
+					MaxUnits="1"/>
+				<CreateUnits 
 					UnitName="JapanAntiInfantryInfantry" 
 					MinUnits="0" 
 					MaxUnits="1"/>

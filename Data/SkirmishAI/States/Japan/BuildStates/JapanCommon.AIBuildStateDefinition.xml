@@ -3,7 +3,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<!-- Construction fundamentals -->
 	<AIBuildStateDefinition
-		id="AlliedMCVLandBuildState">
+		id="JapanMCVLandBuildState">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -15,9 +15,9 @@
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
-					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedMCV</IncludeThing>
-					<IncludeThing>AlliedMCV_Naval</IncludeThing>
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>JapanMCV_Naval</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<ObjectOfTypeExistsHeuristic
@@ -27,7 +27,7 @@
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
-					<IncludeThing>AlliedWarFactory</IncludeThing>
+					<IncludeThing>JapanWarFactory</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -36,14 +36,14 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedMCV"
+			Build="JapanMCV"
 			Heuristic="CONSTANT"
 			CountModifier="1.0"
 			Score="10" />
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition
-		id="AlliedMCVWaterBuildState">
+		id="JapanMCVWaterBuildState">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -55,9 +55,9 @@
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
-					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedMCV</IncludeThing>
-					<IncludeThing>AlliedMCV_Naval</IncludeThing>
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>JapanMCV_Naval</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<ObjectOfTypeExistsHeuristic
@@ -67,7 +67,7 @@
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
-					<IncludeThing>AlliedNavalYard</IncludeThing>
+					<IncludeThing>JapanNavalYard</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -76,115 +76,15 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedMCV_Naval"
+			Build="JapanMCV_Naval"
 			Heuristic="CONSTANT"
 			CountModifier="1.0"
 			Score="10" />
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition
-		id="AlliedCraneLandBuildState">
-		
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<TimerHeuristic
-				StartTime="200s"
-				EndTime="-1s"
-				CountFrom="MAP_START" />
-			<IntervalHeuristic
-				IntervalTime="73s"
-				ActiveTime="15s"
-				CountFrom="MAP_START" />
-			<IncomeAdvantageHeuristic
-				Value="0.1"
-				Above="true" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Land"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedOutpost</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedCrane</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<EnemyNearbyHeuristic 
-				Distance="500.0" 
-				EnemyNearby="false"/>
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedCrane"
-			Heuristic="CONSTANT"
-			CountModifier="1.0"
-			Score="5" />
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition
-		id="AlliedCraneWaterBuildState">
-		
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<TimerHeuristic
-				StartTime="200s"
-				EndTime="-1s"
-				CountFrom="MAP_START" />
-			<IntervalHeuristic
-				IntervalTime="73s"
-				ActiveTime="15s"
-				CountFrom="MAP_START" />
-			<IncomeAdvantageHeuristic
-				Value="0.1"
-				Above="true" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Water"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedOutpost</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedCrane</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<EnemyNearbyHeuristic 
-				Distance="500.0" 
-				EnemyNearby="false"/>
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedCrane"
-			Heuristic="CONSTANT"
-			CountModifier="1.0"
-			Score="5" />
 	</AIBuildStateDefinition>
 	
 	<!-- Infrastructure fundamentals -->
 	<AIBuildStateDefinition 
-		id="AlliedResourceBuildState">
+		id="JapanResourceBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic 
@@ -194,18 +94,18 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedPowerPlant"
+			Build="JapanPowerPlantEgg"
 			Heuristic="POWER"
 			CountModifier="1.0"/>
 	
 		<BuildEntry
-			Build="AlliedRefinery"
+			Build="JapanRefineryEgg"
 			Heuristic="REFINERY"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedGeneralFactoryBuildState">
+		id="JapanFactoryBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic 
@@ -215,67 +115,23 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedDogHouse"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedBarracks"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 
 		<BuildEntry
-			Build="AlliedWarFactory"
+			Build="JapanWarFactoryEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanNavalYardEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
-	<AIBuildStateDefinition
-		id="AlliedNavalYardFactoryBuildState">
-		
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<TimerHeuristic
-				StartTime="200s"
-				EndTime="-1s"
-				CountFrom="MAP_START" />
-			<IntervalHeuristic
-				IntervalTime="120s"
-				ActiveTime="30s"
-				CountFrom="MAP_START" />
-			<IncomeAdvantageHeuristic
-				Value="0.1"
-				Above="true" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedNavalYard</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<EnemyNearbyHeuristic 
-				Distance="400.0" 
-				EnemyNearby="false"/>
-		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedNavalYard"
-			Heuristic="FACTORY"
-			CountModifier="1.0"
-			Score="1" />
-	</AIBuildStateDefinition>
-	
 	<AIBuildStateDefinition 
-		id="AlliedNonPathDependentStructureBuildState">
+		id="JapanNonPathDependentStructureBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic 
@@ -285,29 +141,24 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedPowerPlant"
+			Build="JapanPowerPlantEgg"
 			Heuristic="POWER"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedRefinery"
+			Build="JapanRefineryEgg"
 			Heuristic="REFINERY"
 			CountModifier="1.0"/>
 
 		<BuildEntry
-			Build="AlliedBarracks"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedAirfield"
+			Build="JapanBarracksEgg"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<!-- Teching fundamentals -->
 	<AIBuildStateDefinition
-		id="AlliedTechStructureBuildState_EASY">
+		id="JapanTechStructureBuildState_EASY">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -324,40 +175,34 @@
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
 		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
-			Heuristic="TECH"
-			CountModifier="1.0"
-			MinTime="600s" />
 			
 		<BuildEntry
-			Build="AlliedTechStructure"
+			Build="JapanTechStructureEgg"
 			Heuristic="TECH"
 			CountModifier="1.0"
 			MinTime="900s" />
 			
 		<BuildEntry
-			Build="AlliedSuperWeapon"
+			Build="JapanSuperWeaponEgg"
 			Heuristic="TECH"
 			CountModifier="1.0"
 			MinTime="1200s" />
 			
 		<BuildEntry
-			Build="AlliedSuperWeaponAdvanced"
+			Build="JapanSuperWeaponAdvancedEgg"
 			Heuristic="TECH"
 			CountModifier="1.0"
 			MinTime="1800s" />
 			
 		<BuildEntry
-			Build="ABWeatherControl"
+			Build="JapanNewTowerEgg"
 			Heuristic="TECH"
 			CountModifier="1.0"
 			MinTime="2400s" />
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition
-		id="AlliedTechUpgradeBuildState_EASY">
+		id="JapanTechUpgradeBuildState_EASY">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -369,20 +214,44 @@
 		</Heuristic>
 			
 		<BuildEntry
-			Upgrade="Upgrade_AlliedTech2"
+			Upgrade="Upgrade_JapanBarracksTech2"
 			Heuristic="UPGRADE_TECH"
 			CountModifier="1.0"
 			MinTime="600s" />
 			
 		<BuildEntry
-			Upgrade="Upgrade_AlliedTech3"
+			Upgrade="Upgrade_JapanBarracksTech3"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="900s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech2"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="600s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech3"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="900s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech2"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="600s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech3"
 			Heuristic="UPGRADE_TECH"
 			CountModifier="1.0"
 			MinTime="900s" />
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition
-		id="AlliedTechStructureBuildState">
+		id="JapanTechStructureBuildState">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -399,40 +268,34 @@
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
 		</Heuristic>
-		
-		<BuildEntry
-			Build="AlliedAirfield"
-			Heuristic="TECH"
-			CountModifier="1.0"
-			MinTime="180s" />
 			
 		<BuildEntry
-			Build="AlliedTechStructure"
-			Heuristic="TECH"
-			CountModifier="1.0"
-			MinTime="180s" />
-			
-		<BuildEntry
-			Build="AlliedSuperWeapon"
+			Build="JapanTechStructureEgg"
 			Heuristic="TECH"
 			CountModifier="1.0"
 			MinTime="360s" />
 			
 		<BuildEntry
-			Build="AlliedSuperWeaponAdvanced"
+			Build="JapanSuperWeaponEgg"
 			Heuristic="TECH"
 			CountModifier="1.0"
 			MinTime="360s" />
 			
 		<BuildEntry
-			Build="ABWeatherControl"
+			Build="JapanSuperWeaponAdvancedEgg"
+			Heuristic="TECH"
+			CountModifier="1.0"
+			MinTime="360s" />
+			
+		<BuildEntry
+			Build="JapanNewTowerEgg"
 			Heuristic="TECH"
 			CountModifier="1.0"
 			MinTime="480s" />
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition
-		id="AlliedTechUpgradeBuildState">
+		id="JapanTechUpgradeBuildState">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -444,13 +307,37 @@
 		</Heuristic>
 			
 		<BuildEntry
-			Upgrade="Upgrade_AlliedTech2"
+			Upgrade="Upgrade_JapanBarracksTech2"
 			Heuristic="UPGRADE_TECH"
 			CountModifier="1.0"
 			MinTime="180s" />
 			
 		<BuildEntry
-			Upgrade="Upgrade_AlliedTech3"
+			Upgrade="Upgrade_JapanBarracksTech3"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="360s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech2"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="180s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech3"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="360s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech2"
+			Heuristic="UPGRADE_TECH"
+			CountModifier="1.0"
+			MinTime="180s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech3"
 			Heuristic="UPGRADE_TECH"
 			CountModifier="1.0"
 			MinTime="360s" />
@@ -458,7 +345,7 @@
 	
 	<!-- Needed structures/units -->
 	<AIBuildStateDefinition 
-		id="AlliedNeededStructuresBuildState">
+		id="JapanNeededStructuresBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -468,33 +355,23 @@
 		</Heuristic>
 			
 		<BuildEntry
-			Build="AlliedPowerPlant"
+			Build="JapanPowerPlantEgg"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedRefinery"
+			Build="JapanRefineryEgg"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedCrane"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedDogHouse"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="ABWeatherControl"
+			Build="JapanNewTowerEgg"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedNeededInfantryBuildState">
+		id="JapanNeededInfantryBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -504,63 +381,48 @@
 		</Heuristic>
 		
 		<BuildEntry
-			Build="AlliedScoutInfantryDH"
+			Build="JapanScoutInfantry"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 		
 		<BuildEntry
-			Build="AlliedScoutInfantry"
+			Build="JapanAntiInfantryInfantry"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiInfantryInfantry"
+			Build="JapanAntiVehicleInfantry"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedSniperInfantry"
+			Build="JapanEngineer"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiVehicleInfantry"
+			Build="JapanArcherInfantry"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedEngineer"
+			Build="JapanInfiltrationInfantry"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedGrenadeInfantry"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-
-		<BuildEntry
-			Build="AlliedInfiltrationInfantry"
+			Build="JapanAntiVehicleInfantryTech3"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedLegionnaireInfantry"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedLegionnaireInfantryupg"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedCommandoTech1"
+			Build="JapanCommandoTech1"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedNeededVehiclesBuildState">
+		id="JapanNeededVehiclesBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -570,63 +432,58 @@
 		</Heuristic>
 
 		<BuildEntry
-			Build="AlliedAntiInfantryVehicle_Ground"
+			Build="JapanLightTransportVehicle"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiAirVehicleTech1"
+			Build="JapanAntiInfantryVehicle"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiVehicleVehicleTech1"
+			Build="JapanAntiVehicleVehicleTech1"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="Titan"
+			Build="JapanSentinelVehicle"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiStructureVehicle"
+			Build="JapanAntiAirVehicleTech1"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiVehicleVehicleTech3"
+			Build="Centurion"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedArtilleryVehicle"
+			Build="JapanAntiVehicleVehicleTech3"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedFutureTank"
+			Build="JapanAntiStructureVehicle"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedFutureTankFTSeed"
+			Build="JapanMiner"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedMiner"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedMCV"
+			Build="JapanMCV"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="AlliedNeededAircraftsBuildState">
+		id="JapanNeededShipsBuildState">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -636,98 +493,42 @@
 		</Heuristic>
 
 		<BuildEntry
-			Build="AlliedTransportHelicopter"
+			Build="JapanNavyScoutShip"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedAntiGroundAircraft"
+			Build="JapanAntiVehicleVehicleTech1_Naval"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedFighterAircraft"
+			Build="JapanAntiAirShip"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
+			Build="JapanAntiVehicleShip"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="Hurricane"
+			Build="JapanAntiStructureShip"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="Paladin"
+			Build="JapanFortressShipEgg"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedSupportAircraft"
+			Build="JapanMiner_Naval"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedBomberAircraft"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="Kodiak"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="AlliedNeededShipsBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-
-		<BuildEntry
-			Build="AlliedAntiNavalScout"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiInfantryVehicle"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiAirShip"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiNavyShipTech1"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedAntiStructureShip"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedMiner_Naval"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="AlliedMCV_Naval"
+			Build="JapanMCV_Naval"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>

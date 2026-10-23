@@ -26,11 +26,9 @@
 		<Order Time="23s" Build="JapanRefineryEgg" />
 		<Order Time="27s" Build="JapanRefineryEgg" />
 		
-		<!-- Rush units -->
+		<!-- Scout unit -->
 		<Order Time="27s" Build="JapanScoutInfantry" />
-		<Order Time="32s" Build="JapanScoutInfantry" />
-		<Order Time="37s" Build="JapanScoutInfantry" />
-		<!-- Rush units -->
+		<!-- Scout unit -->
 		
 		<Order Time="60s" Build="JapanPowerPlantEgg" />
 		<Order Time="64s" Build="JapanNavalYardEgg" />

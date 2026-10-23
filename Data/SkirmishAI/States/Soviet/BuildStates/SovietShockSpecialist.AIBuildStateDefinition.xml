@@ -63,7 +63,7 @@
 		<BuildEntry
 			Build="SovietNavalYard"
 			Heuristic="CONSTANT"
-			CountModifier="2.0"
+			CountModifier="1.0"
 			Score="1" />
 	</AIBuildStateDefinition>
 	
@@ -81,17 +81,17 @@
 		<BuildEntry 
 			Build="SovietBaseDefenseGround" 
 			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
+			CountModifier="7.0"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAir" 
 			Heuristic="FEWEST_UNIT"
-			CountModifier="8.0"/>
+			CountModifier="10.0"/>
 			
 		<BuildEntry 
 			Build="SovietBaseDefenseAdvanced" 
 			Heuristic="FEWEST_UNIT"
-			CountModifier="3.5"/>
+			CountModifier="4.0"/>
 		
 		<BuildEntry 
 			Build="SovietNewTower" 
@@ -133,7 +133,7 @@
 		<BuildEntry
 			Build="SovietEngineer"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="SovietMortarcycle"
@@ -494,11 +494,6 @@
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="SovietFighterAircraft"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
 			Build="SovietDesolatorBomber"
 			Heuristic="BEST_UNIT_WEIGHTED"
 			CountModifier="1.0"/>
@@ -506,11 +501,6 @@
 		<BuildEntry
 			Build="SovietBomberAircraft"
 			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="SovietTransportAircraft"
-			Heuristic="BEST_UNIT_WEIGHTED"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	

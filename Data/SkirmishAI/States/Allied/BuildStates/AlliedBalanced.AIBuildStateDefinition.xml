@@ -158,7 +158,7 @@
 		<BuildEntry
 			Build="AlliedEngineer"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="AlliedGrenadeInfantry"
@@ -573,20 +573,10 @@
 			Build="AlliedAirfield"
 			Heuristic="FACTORY"
 			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="AlliedTransportHelicopter"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="AlliedAntiGroundAircraft"
 			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="Hurricane"
-			Heuristic="BEST_UNIT_WEIGHTED"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
@@ -596,17 +586,17 @@
 			
 		<BuildEntry
 			Build="AlliedSupportAircraft"
-			Heuristic="BEST_UNIT_EXPECTED"
+			Heuristic="BEST_UNIT_WEIGHTED"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="AlliedBomberAircraft"
-			Heuristic="BEST_UNIT_WEIGHTED"
+			Heuristic="BEST_UNIT_EXPECTED"
 			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="AlliedBomberAircraftStratoUpgrade"
-			Heuristic="BEST_UNIT_WEIGHTED"
+			Heuristic="BEST_UNIT_EXPECTED"
 			CountModifier="1.0"/>
 			
 		<BuildEntry

@@ -62,7 +62,7 @@
 		ThreatLevel="10"
 		WeaponCategory="GUN"
 		VoicePriority="1"
-		Scale="0.6"
+		Scale="0.65"
 		EditorName="AlliedScoutInfantryDH"
 		Description="Desc:AlliedScoutInfantryDH"
 		TypeDescription="Type:AlliedScoutInfantry"
@@ -81,7 +81,7 @@
 		<LocomotorSet
 			Locomotor="AlliedScoutInfantryLocomotor"
 			Condition="NORMAL"
-			Speed="104" />
+			Speed="106" />
 		<LocomotorSet
 			Locomotor="AlliedScoutInfantryLocomotorWater"
 			Condition="NORMAL"

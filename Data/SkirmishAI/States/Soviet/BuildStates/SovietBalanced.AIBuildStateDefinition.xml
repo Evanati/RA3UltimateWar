@@ -494,11 +494,6 @@
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="SovietFighterAircraft"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
 			Build="SovietDesolatorBomber"
 			Heuristic="BEST_UNIT_WEIGHTED"
 			CountModifier="1.0"/>
@@ -506,11 +501,6 @@
 		<BuildEntry
 			Build="SovietBomberAircraft"
 			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="SovietTransportAircraft"
-			Heuristic="BEST_UNIT_WEIGHTED"
 			CountModifier="1.0"/>
 	</AIBuildStateDefinition>
 	

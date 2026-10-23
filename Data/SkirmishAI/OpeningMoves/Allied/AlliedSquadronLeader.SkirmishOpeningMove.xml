@@ -24,11 +24,9 @@
 		<Order Time="0s" Build="AlliedBarracks" /> <!-- Power balance: 50/25 -->
 		<Order Time="10s" Build="AlliedCrane" /> <!-- Power balance: 50/25 -->
 		
-		<!-- Rush units -->
+		<!-- Scout unit -->
 		<Order Time="10s" Build="AlliedScoutInfantry" />
-		<Order Time="12s" Build="AlliedScoutInfantry" />
-		<Order Time="14s" Build="AlliedScoutInfantry" />
-		<!-- Rush units -->
+		<!-- Scout unit -->
 		
 		<Order Time="30s" Build="AlliedPowerPlant" /> <!-- Power balance: 150/25 -->
 		<Order Time="30s" Build="AlliedPowerPlant" /> <!-- Power balance: 250/25 -->

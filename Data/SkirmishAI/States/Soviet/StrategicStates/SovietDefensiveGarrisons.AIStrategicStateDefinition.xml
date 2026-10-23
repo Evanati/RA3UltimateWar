@@ -52,6 +52,14 @@
 					MinUnits="4" 
 					MaxUnits="5"/>
 				<CreateUnits 
+					UnitName="SovietHeavyAntiVehicleInfantry" 
+					MinUnits="0" 
+					MaxUnits="1"/>
+				<CreateUnits 
+					UnitName="SovietDesolatorInfantry" 
+					MinUnits="0" 
+					MaxUnits="1"/>
+				<CreateUnits 
 					UnitName="SovietAntiInfantryInfantry" 
 					MinUnits="0" 
 					MaxUnits="1"/>

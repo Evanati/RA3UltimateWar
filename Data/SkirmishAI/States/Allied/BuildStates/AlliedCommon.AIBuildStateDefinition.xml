@@ -483,11 +483,6 @@
 			CountModifier="1.0"/>
 			
 		<BuildEntry
-			Build="AlliedDogHouse"
-			Heuristic="NEEDED_UNIT"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
 			Build="ABWeatherControl"
 			Heuristic="NEEDED_UNIT"
 			CountModifier="1.0"/>

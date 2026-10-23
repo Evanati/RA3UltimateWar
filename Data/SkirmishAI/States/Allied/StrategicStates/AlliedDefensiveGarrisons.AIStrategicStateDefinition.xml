@@ -52,6 +52,10 @@
 					MinUnits="4" 
 					MaxUnits="5"/>
 				<CreateUnits 
+					UnitName="AlliedSniperInfantry" 
+					MinUnits="0" 
+					MaxUnits="1"/>
+				<CreateUnits 
 					UnitName="AlliedGrenadeInfantry" 
 					MinUnits="0" 
 					MaxUnits="1"/>

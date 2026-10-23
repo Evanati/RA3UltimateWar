@@ -473,45 +473,97 @@
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="JapanAmphibiousUnitBuildState_Remix"
-			State="JapanAmphibiousUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="JapanFleetCommandAntiAirShipBuildState"
+			State="JapanFleetCommandAntiAirShipBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanBarracksBuildState_RANDOM_Remix"
-			State="JapanBarracksBuildState_RANDOM_Remix"
-			Difficulty="EASY" />
+			id="JapanFleetCommandAntiWaterShipBuildState"
+			State="JapanFleetCommandAntiWaterShipBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanDefenseBuildState_RA3UW"
-			State="JapanDefenseBuildState_RA3UW"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			id="JapanFleetCommandDefenseBuildState"
+			State="JapanFleetCommandDefenseBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanLandUnitBuildState_Remix"
-			State="JapanLandUnitBuildState_Remix"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="JapanFleetCommandFactoryBuildState"
+			State="JapanFleetCommandFactoryBuildState"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
-			id="JapanNavalYardBuildState_RANDOM_Remix"
-			State="JapanNavalYardBuildState_RANDOM_Remix"
-			Difficulty="EASY" />
+			id="JapanFleetCommandInfantryBuildState_FEWEST"
+			State="JapanFleetCommandInfantryBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanNeededUnits_Remix"
-			State="JapanNeededUnits_Remix"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			id="JapanFleetCommandInfantryBuildState_RANDOM"
+			State="JapanFleetCommandInfantryBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="JapanFleetCommandShipBuildState_FEWEST"
+			State="JapanFleetCommandShipBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanFleetCommandShipBuildState_RANDOM"
+			State="JapanFleetCommandShipBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="JapanFleetCommandVehicleBuildState_FEWEST"
+			State="JapanFleetCommandVehicleBuildState_FEWEST"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanFleetCommandVehicleBuildState_RANDOM"
+			State="JapanFleetCommandVehicleBuildState_RANDOM"
+			Difficulty="EASY"/>
+		<BuildState
+			id="JapanFactoryBuildState"
+			State="JapanFactoryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanMCVLandBuildState"
+			State="JapanMCVLandBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanMCVWaterBuildState"
+			State="JapanMCVWaterBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanNeededInfantryBuildState"
+			State="JapanNeededInfantryBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanNeededShipsBuildState"
+			State="JapanNeededShipsBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanNeededStructuresBuildState"
+			State="JapanNeededStructuresBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanNeededVehiclesBuildState"
+			State="JapanNeededVehiclesBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="JapanNonPathDependentStructureBuildState"
 			State="JapanNonPathDependentStructureBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanTechBuildState_RemixNew"
-			State="JapanTechBuildState_RemixNew"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="JapanResourceBuildState"
+			State="JapanResourceBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanWarFactoryBuildState_RANDOM_Remix"
-			State="JapanWarFactoryBuildState_RANDOM_Remix"
-			Difficulty="EASY" />
+			id="JapanTechStructureBuildState"
+			State="JapanTechStructureBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanWaterUnitBuildState"
-			State="JapanWaterUnitBuildState"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="JapanTechStructureBuildState_EASY"
+			State="JapanTechStructureBuildState_EASY"
+			Difficulty="EASY"/>
+		<BuildState
+			id="JapanTechUpgradeBuildState"
+			State="JapanTechUpgradeBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanTechUpgradeBuildState_EASY"
+			State="JapanTechUpgradeBuildState_EASY"
+			Difficulty="EASY"/>
 			
 		<SpecificUnitCap
 			Unit="JapanAntiInfantryInfantry"

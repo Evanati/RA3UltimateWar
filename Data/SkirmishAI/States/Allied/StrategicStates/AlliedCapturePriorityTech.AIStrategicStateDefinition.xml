@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
-		id="AlliedCaptureLowPriorityTech"
+		id="AlliedCaptureHighPriorityTech"
 		MaxTargets="1">
 		
 		<Heuristic>
@@ -21,23 +21,17 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestPowerTechHeuristic" 
-			Priority="3"/>
+			TargetHeuristic="ClosestMoneyTechHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestControlTechHeuristic" 
-			Priority="2"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestRadarTechHeuristic" 
-			Priority="1"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestTechBuildingHeuristic" 
-			Priority="0"/>
+			TargetHeuristic="ClosestVeterancyTechHeuristic" 
+			Priority="9"/>
 		<Tactic 
 			id="Engineer" 
 			Tactic="Engineer" 
 			EndBehavior="DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
-			Difficulty="EASY MEDIUM HARD BRUTAL"
+			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="400"
 			UpdateTime="1s"
 			Targetless="false"
@@ -93,10 +87,10 @@
 			TargetHeuristic="ClosestAirportTechHeuristic" 
 			Priority="7"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestShipYardTechHeuristic" 
+			TargetHeuristic="ClosestGarageTechHeuristic" 
 			Priority="6"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestGarageTechHeuristic" 
+			TargetHeuristic="ClosestShipYardTechHeuristic" 
 			Priority="5"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestHospitalTechHeuristic" 
@@ -137,7 +131,7 @@
 	</AIStrategicStateDefinition>
 	
 	<AIStrategicStateDefinition
-		id="AlliedCaptureHighPriorityTech"
+		id="AlliedCaptureLowPriorityTech"
 		MaxTargets="1">
 		
 		<Heuristic>
@@ -156,17 +150,23 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestMoneyTechHeuristic" 
-			Priority="10"/>
+			TargetHeuristic="ClosestControlTechHeuristic" 
+			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestVeterancyTechHeuristic" 
-			Priority="9"/>
+			TargetHeuristic="ClosestRadarTechHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestPowerTechHeuristic" 
+			Priority="1"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestTechBuildingHeuristic" 
+			Priority="0"/>
 		<Tactic 
 			id="Engineer" 
 			Tactic="Engineer" 
 			EndBehavior="DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
-			Difficulty="MEDIUM HARD BRUTAL"
+			Difficulty="EASY MEDIUM HARD BRUTAL"
 			Distance="400"
 			UpdateTime="1s"
 			Targetless="false"

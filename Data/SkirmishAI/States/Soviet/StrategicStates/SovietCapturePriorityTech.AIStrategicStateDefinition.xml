@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
-		id="SovietCaptureLowPriorityTech"
+		id="SovietCaptureHighPriorityTech"
 		MaxTargets="1">
 		
 		<Heuristic>
@@ -21,23 +21,17 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestRadarTechHeuristic" 
-			Priority="3"/>
+			TargetHeuristic="ClosestMoneyTechHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestControlTechHeuristic" 
-			Priority="2"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestPowerTechHeuristic" 
-			Priority="1"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestTechBuildingHeuristic" 
-			Priority="0"/>
+			TargetHeuristic="ClosestVeterancyTechHeuristic" 
+			Priority="9"/>
 		<Tactic 
 			id="Engineer" 
 			Tactic="Engineer" 
 			EndBehavior="DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
-			Difficulty="EASY MEDIUM HARD BRUTAL"
+			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="400"
 			UpdateTime="1s"
 			Targetless="false"
@@ -135,9 +129,9 @@
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>
-  
-    <AIStrategicStateDefinition
-		id="SovietCaptureHighPriorityTech"
+	
+	<AIStrategicStateDefinition
+		id="SovietCaptureLowPriorityTech"
 		MaxTargets="1">
 		
 		<Heuristic>
@@ -156,17 +150,23 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestMoneyTechHeuristic" 
-			Priority="10"/>
+			TargetHeuristic="ClosestRadarTechHeuristic" 
+			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestVeterancyTechHeuristic" 
-			Priority="9"/>
+			TargetHeuristic="ClosestControlTechHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestPowerTechHeuristic" 
+			Priority="1"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestTechBuildingHeuristic" 
+			Priority="0"/>
 		<Tactic 
 			id="Engineer" 
 			Tactic="Engineer" 
 			EndBehavior="DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
-			Difficulty="MEDIUM HARD BRUTAL"
+			Difficulty="EASY MEDIUM HARD BRUTAL"
 			Distance="400"
 			UpdateTime="1s"
 			Targetless="false"

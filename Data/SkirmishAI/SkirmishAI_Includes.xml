@@ -31,7 +31,10 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSquadronLeader.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanDefenseBuildState_RA3UW.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanBalanced.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanCommon.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanFleetCommand.AIBuildStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanMechaWarfare.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/StrategicStates/JapanCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/StrategicStates/JapanDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietAirMarshall.AIBuildStateDefinition.xml"/>
