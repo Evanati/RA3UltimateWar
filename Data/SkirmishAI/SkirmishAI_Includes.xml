@@ -25,18 +25,21 @@
 		<Include type="all" source="DATA:SkirmishAI/Personalities/Soviet/SovietShockSpecialist.AIPersonalityDefinition.xml"/>
 			
 		<!-- States -->
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/BudgetStates/AlliedBudgets.AIBudgetStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedBalanced.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedCommon.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSpecialForces.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSquadronLeader.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Japan/BudgetStates/JapanBudgets.AIBudgetStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanBalanced.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanCommon.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanFleetCommand.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanMechaWarfare.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/StrategicStates/JapanCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/StrategicStates/JapanDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BudgetStates/SovietBudgets.AIBudgetStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietAirMarshall.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietBalanced.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietCommon.AIBuildStateDefinition.xml"/>
@@ -46,6 +49,6 @@
 			
 		<!-- Targeting heuristics -->
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestGarrisonHeuristic.AITargetingHeuristic.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechStructureHeuristic.AITargetingHeuristic.xml"/>
     </Includes>
 </AssetDeclaration>

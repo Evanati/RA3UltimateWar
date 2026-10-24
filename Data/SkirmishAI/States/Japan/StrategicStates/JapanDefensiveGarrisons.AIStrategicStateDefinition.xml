@@ -8,18 +8,32 @@
 		<Heuristic>
 			<OpeningMoveHeuristic 
 				Complete="true"/>
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="NEUTRAL"
+					Alignment="NONE"
+					Include="CIVILIAN_BUILDING GARRISON"
+					StatusBitFlagsExclude="REALLYDAMAGED">
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PathToTargetHeuristic 
+				PathExists="true" 
+				ObjectTypeToUseForTest="JapanSentinelVehicle" 
+				LocomotorConditionToUseForTest="NORMAL" />
 			<EnemyNearbyHeuristic 
 				Distance="250.0" 
 				EnemyNearby="false"/>
-			<PathToTargetHeuristic 
-				PathExists="true" 
-				ObjectTypeToUseForTest="JapanAntiInfantryInfantry" 
-				LocomotorConditionToUseForTest="NORMAL" />
 		</Heuristic>
 		
 		<TargetHeuristic 
 			TargetHeuristic="ClosestCivilianGarrisonHeuristic" 
-			Priority="8"/>
+			Priority="10"/>
 		<Tactic 
 			id="GarrisonNearbyCivilianBuildings" 
 			Tactic="GarrisonBuilding" 
@@ -39,7 +53,7 @@
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
 				Priority="STANDARD" 
-				ReleaseType="RELEASE_TO_PRIORITY" 
+				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="false"

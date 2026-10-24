@@ -2,9 +2,10 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <AITargetingHeuristic
-		id="ClosestMoneyTechHeuristic"
+		id="ClosestMoneyTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="SUPPLY_SOURCE"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="500.0">
 		
@@ -14,25 +15,12 @@
 			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
 			SortOrder="PREFER_CLOSEST"/>
 	</AITargetingHeuristic>
-		
-    <AITargetingHeuristic
-		id="ClosestVeterancyTechHeuristic"
-		HeuristicType="TechBuilding"
-		VitalKindOf="GRANTS_VETERANCY"
-		SearchRange="9999.0"
-		MinDistanceFromEnemy="500.0">
-				
-		<BaseSelection
-			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
-			PreferredNotBaseTypes="NO_BUILD_RADIUS"
-			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-		
+	
 	<AITargetingHeuristic
-		id="ClosestDefenseTechHeuristic"
+		id="ClosestDefenseTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="FS_BASE_DEFENSE"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="550.0">
 				
@@ -43,10 +31,26 @@
 			SortOrder="PREFER_CLOSEST"/>
 	</AITargetingHeuristic>
 		
+    <AITargetingHeuristic
+		id="ClosestVeterancyTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="GRANTS_VETERANCY"
+		Relationship="NEUTRAL ENEMIES"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="500.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+		
 	<AITargetingHeuristic
-		id="ClosestAirportTechHeuristic"
+		id="ClosestAircraftHealTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="SIEGE_TOWER"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="600.0">
 			
@@ -58,9 +62,10 @@
 	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
-		id="ClosestGarageTechHeuristic"
+		id="ClosestVehicleHealTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CAVALRY"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="600.0">
 				
@@ -72,9 +77,10 @@
 	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
-		id="ClosestShipYardTechHeuristic"
+		id="ClosestShipHealTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="MONSTER"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="600.0">
 		
@@ -86,9 +92,10 @@
 	</AITargetingHeuristic>
 		
    <AITargetingHeuristic
-		id="ClosestHospitalTechHeuristic"
+		id="ClosestInfantryHealTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CASTLE_KEEP"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="600.0">
 			
@@ -100,9 +107,10 @@
 	</AITargetingHeuristic>
   
 	<AITargetingHeuristic
-		id="ClosestRadarTechHeuristic"
+		id="ClosestRadarTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="FS_RADAR"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="650.0">
 			
@@ -114,9 +122,10 @@
 	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
-		id="ClosestPowerTechHeuristic"
+		id="ClosestPowerTechStructureHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="FS_TECHNOLOGY"
+		VitalKindOf="FS_POWER"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="650.0">
 			
@@ -128,9 +137,10 @@
 	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
-		id="ClosestControlTechHeuristic"
+		id="ClosestControlTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CASTLE_CENTER"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="650.0">
 				
@@ -142,9 +152,11 @@
 	</AITargetingHeuristic>
 		
 	<AITargetingHeuristic
-		id="ClosestTechBuildingHeuristic"
+		id="ClosestResidualTechStructureHeuristic"
 		HeuristicType="TechBuilding"
-		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_TECHNOLOGY CASTLE_CENTER CIVILIAN_BUILDING GARRISON"
+		VitalKindOf="FS_TECHNOLOGY"
+		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
+		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="700.0">
 				

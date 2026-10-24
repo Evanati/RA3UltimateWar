@@ -3,33 +3,45 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
 		id="AlliedCaptureHighPriorityTech"
+		MaxRunningCopies="1"
+		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic 
 				Complete="true"/>
 			<IsBuildingHeuristic 
-				KindOf="FS_TECHNOLOGY SUPER_WEAPON" 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
 				PassIfBuilding="false"/>
-			<EnemyNearbyHeuristic 
-				Distance="250.0" 
-				EnemyNearby="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="NEUTRAL"
+					Alignment="NONE"
+					Include="SUPPLY_SOURCE FS_BASE_DEFENSE">
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic 
 				PathExists="true" 
 				ObjectTypeToUseForTest="AlliedEngineer" 
 				LocomotorConditionToUseForTest="NORMAL" />
+			<EnemyNearbyHeuristic 
+				Distance="250.0" 
+				EnemyNearby="false"/>
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestMoneyTechHeuristic" 
+			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
 			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestVeterancyTechHeuristic" 
-			Priority="9"/>
+			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
+			Priority="10"/>
 		<Tactic 
 			id="Engineer" 
 			Tactic="Engineer" 
-			EndBehavior="DISBAND" 
+			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
 			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="400"
@@ -44,8 +56,8 @@
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
-				Priority="STANDARD" 
-				ReleaseType="RELEASE_TO_PRIORITY" 
+				Priority="HIGH" 
+				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="false"
@@ -63,42 +75,54 @@
 	
 	<AIStrategicStateDefinition
 		id="AlliedCaptureMediumPriorityTech"
+		MaxRunningCopies="1"
+		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic 
 				Complete="true"/>
 			<IsBuildingHeuristic 
-				KindOf="FS_TECHNOLOGY SUPER_WEAPON" 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
 				PassIfBuilding="false"/>
-			<EnemyNearbyHeuristic 
-				Distance="250.0" 
-				EnemyNearby="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="NEUTRAL"
+					Alignment="NONE"
+					Include="GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP">
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic 
 				PathExists="true" 
 				ObjectTypeToUseForTest="AlliedEngineer" 
 				LocomotorConditionToUseForTest="NORMAL" />
+			<EnemyNearbyHeuristic 
+				Distance="250.0" 
+				EnemyNearby="false"/>
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestDefenseTechHeuristic" 
+			TargetHeuristic="ClosestVeterancyTechStructureHeuristic" 
 			Priority="8"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestAirportTechHeuristic" 
+			TargetHeuristic="ClosestAircraftHealTechStructureHeuristic" 
+			Priority="8"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestVehicleHealTechStructureHeuristic" 
 			Priority="7"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestGarageTechHeuristic" 
+			TargetHeuristic="ClosestShipHealTechStructureHeuristic" 
 			Priority="6"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestShipYardTechHeuristic" 
+			TargetHeuristic="ClosestInfantryHealTechStructureHeuristic" 
 			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestHospitalTechHeuristic" 
-			Priority="4"/>
 		<Tactic 
 			id="Engineer" 
 			Tactic="Engineer" 
-			EndBehavior="DISBAND" 
+			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
 			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="400"
@@ -114,7 +138,7 @@
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
 				Priority="STANDARD" 
-				ReleaseType="RELEASE_TO_PRIORITY" 
+				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="false"
@@ -132,39 +156,51 @@
 	
 	<AIStrategicStateDefinition
 		id="AlliedCaptureLowPriorityTech"
+		MaxRunningCopies="1"
+		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
 		<Heuristic>
 			<OpeningMoveHeuristic 
 				Complete="true"/>
 			<IsBuildingHeuristic 
-				KindOf="FS_TECHNOLOGY SUPER_WEAPON" 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
 				PassIfBuilding="false"/>
-			<EnemyNearbyHeuristic 
-				Distance="250.0" 
-				EnemyNearby="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="NEUTRAL"
+					Alignment="NONE"
+					Include="FS_RADAR FS_POWER CASTLE_CENTER FS_TECHNOLOGY">
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic 
 				PathExists="true" 
 				ObjectTypeToUseForTest="AlliedEngineer" 
 				LocomotorConditionToUseForTest="NORMAL" />
+			<EnemyNearbyHeuristic 
+				Distance="250.0" 
+				EnemyNearby="false"/>
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestControlTechHeuristic" 
+			TargetHeuristic="ClosestControlTechStructureHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestRadarTechStructureHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestRadarTechHeuristic" 
+			TargetHeuristic="ClosestPowerTechStructureHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestPowerTechHeuristic" 
+			TargetHeuristic="ClosestResidualTechStructureHeuristic" 
 			Priority="1"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestTechBuildingHeuristic" 
-			Priority="0"/>
 		<Tactic 
 			id="Engineer" 
 			Tactic="Engineer" 
-			EndBehavior="DISBAND" 
+			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
 			Difficulty="EASY MEDIUM HARD BRUTAL"
 			Distance="400"
@@ -179,8 +215,8 @@
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
-				Priority="STANDARD" 
-				ReleaseType="RELEASE_TO_PRIORITY" 
+				Priority="LOW" 
+				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="false"

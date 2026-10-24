@@ -18,7 +18,7 @@
 		UnitBuilderEnemyNearbyMultiplier="4"
 		BuildTechEfficiencyThreshold="1"
 		BuildTechMinPowerAdvantage="0.1"
-		BuildExtraFactoryMinTime="240s"
+		BuildExtraFactoryMinTime="180s"
 		ResourceNodeSearchRadius="700"
 		ResourceNodeValueRemainingForExpansion="80000"
 		RefineryPlacementStartDistanceDelta="-30"
@@ -135,6 +135,7 @@
 			Event="Lost"
 			FeedbackKey="Lost"/>
 			
+		<!-- Tier 1 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_DropBunker"
 			Weight="1%" />
@@ -144,6 +145,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_TerrorDroneEggs"
 			Weight="4%" />
+		<!-- Tier 2 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Flame_Fuel"
 			Weight="16" />
@@ -153,6 +155,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MineField"
 			Weight="32%" />
+		<!-- Tier 3 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_MagneticSatellite_Rank_2"
 			Weight="64%" />
@@ -162,6 +165,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_CrushPuppies"
 			Weight="128%" />
+		<!-- Tier 4 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Tesla_OverLoad"
 			Weight="2048%" />
@@ -171,6 +175,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_Air_Marshal"
 			Weight="512%" />
+		<!-- Tier 5 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Soviet_OrbitalRefuse_Rank3"
 			Weight="4096%" />
@@ -413,7 +418,7 @@
 		<StrategicState
 			id="SovietCaptureHighPriorityTech"
 			State="SovietCaptureHighPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="SovietCaptureLowPriorityTech"
 			State="SovietCaptureLowPriorityTech"
@@ -421,7 +426,7 @@
 		<StrategicState
 			id="SovietCaptureMediumPriorityTech"
 			State="SovietCaptureMediumPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="SovietCaptureWaterHusks"
 			State="SovietCaptureWaterHusks"
@@ -496,30 +501,62 @@
 			Difficulty="MEDIUM" />
 			
 		<BudgetState
-			id="CoopBudget_New"
-			State="CoopBudget_New"
+			id="SovietCoOpBudget"
+			State="SovietCoOpBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="DefenseBudget_New"
-			State="DefenseBudget_New"
+			id="SovietDefenseBudget"
+			State="SovietDefenseBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="HeavyDefenseBudget_New"
-			State="HeavyDefenseBudget_New"
+			id="SovietHeavyDefenseBudget"
+			State="SovietHeavyDefenseBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="OpeningMoveBudget_New"
-			State="OpeningMoveBudget_New"
+			id="SovietHeavyOffenseBudget"
+			State="SovietHeavyDefenseBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="SovietOffenseBudget"
+			State="SovietDefenseBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="SovietOpeningMoveBudget"
+			State="SovietOpeningMoveBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="SovietStandardBudget"
+			State="SovietStandardBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="SovietTechingBudget"
+			State="SovietTechingBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="SovietCraneLandBuildState"
-			State="SovietCraneLandBuildState"
+			id="SovietCraneBuildState"
+			State="SovietCraneBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietCraneWaterBuildState"
-			State="SovietCraneWaterBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			id="SovietDefenseNormalBuildState"
+			State="SovietDefenseNormalBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="SovietDefenseGroundAttackBuildState"
+			State="SovietDefenseGroundAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="SovietDefenseNavalAttackBuildState"
+			State="SovietDefenseNavalAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="SovietDefenseAerialAttackBuildState"
+			State="SovietDefenseAerialAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="SovietDefenseMinimalBuildState"
+			State="SovietDefenseMinimalBuildState"
+			Difficulty="HARD BRUTAL"/>	
 		<BuildState
 			id="SovietGeneralFactoryBuildState"
 			State="SovietGeneralFactoryBuildState"
@@ -557,13 +594,21 @@
 			State="SovietNeededVehiclesBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="SovietNonPathDependentStructureBuildState"
-			State="SovietNonPathDependentStructureBuildState"
+			id="SovietPathIndependentStructureBuildState"
+			State="SovietPathIndependentStructureBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="SovietResourceBuildState"
 			State="SovietResourceBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietShockSpecialistAircraftBuildState_BEST_HEAVY"
+			State="SovietShockSpecialistAircraftBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="SovietShockSpecialistAircraftBuildState_BEST_LIGHT"
+			State="SovietShockSpecialistAircraftBuildState_BEST_LIGHT"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="SovietShockSpecialistAircraftBuildState_FEWEST"
 			State="SovietShockSpecialistAircraftBuildState_FEWEST"
@@ -573,20 +618,12 @@
 			State="SovietShockSpecialistAircraftBuildState_RANDOM"
 			Difficulty="EASY"/>
 		<BuildState
-			id="SovietShockSpecialistAntiGroundAircraftBuildState"
-			State="SovietShockSpecialistAntiGroundAircraftBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			id="SovietShockSpecialistInfantryBuildState_BEST_HEAVY"
+			State="SovietShockSpecialistInfantryBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
-			id="SovietShockSpecialistAntiAirAircraftBuildState"
-			State="SovietShockSpecialistAntiAirAircraftBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="SovietShockSpecialistDefenseBuildState"
-			State="SovietShockSpecialistDefenseBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="SovietShockSpecialistGeneralFactoryBuildState"
-			State="SovietShockSpecialistGeneralFactoryBuildState"
+			id="SovietShockSpecialistInfantryBuildState_BEST_LIGHT"
+			State="SovietShockSpecialistInfantryBuildState_BEST_LIGHT"
 			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="SovietShockSpecialistInfantryBuildState_FEWEST"
@@ -597,8 +634,12 @@
 			State="SovietShockSpecialistInfantryBuildState_RANDOM"
 			Difficulty="EASY"/>
 		<BuildState
-			id="SovietShockSpecialistNavalYardFactoryBuildState"
-			State="SovietShockSpecialistNavalYardFactoryBuildState"
+			id="SovietShockSpecialistShipBuildState_BEST_HEAVY"
+			State="SovietShockSpecialistShipBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="SovietShockSpecialistShipBuildState_BEST_LIGHT"
+			State="SovietShockSpecialistShipBuildState_BEST_LIGHT"
 			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="SovietShockSpecialistShipBuildState_FEWEST"
@@ -608,6 +649,18 @@
 			id="SovietShockSpecialistShipBuildState_RANDOM"
 			State="SovietShockSpecialistShipBuildState_RANDOM"
 			Difficulty="EASY"/>
+		<BuildState
+			id="SovietShockSpecialistTechStructureBuildState"
+			State="SovietShockSpecialistTechStructureBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietShockSpecialistVehicleBuildState_BEST_HEAVY"
+			State="SovietShockSpecialistVehicleBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="SovietShockSpecialistVehicleBuildState_BEST_LIGHT"
+			State="SovietShockSpecialistVehicleBuildState_BEST_LIGHT"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="SovietShockSpecialistVehicleBuildState_FEWEST"
 			State="SovietShockSpecialistVehicleBuildState_FEWEST"
@@ -619,128 +672,204 @@
 		<BuildState
 			id="SovietTechStructureBuildState"
 			State="SovietTechStructureBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="SovietTechStructureBuildState_EASY"
-			State="SovietTechStructureBuildState_EASY"
 			Difficulty="EASY"/>
 			
 		<SpecificUnitCap
 			Unit="SAAV4"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SAVV4Building"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietAirfield"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietAirFieldTechStructure"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiAirShip"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiAirShip_Ground"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiGroundAircraft"
-			Cap="1"
-			Difficulty="EASY" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiInfantryInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiInfantryVehicle"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietAntiNavyShipTech1"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiNavyShipTech2"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiStructureShip"
-			Cap="1"
-			Difficulty="EASY" />
-		<SpecificUnitCap
-			Unit="SovietAntiStructureShip"
-			Cap="6"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiStructureVehicle"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiVehicleInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiVehicleVehicleTech1"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietAntiVehicleVehicleTech2"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietAntiVehicleVehicleTech3"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietBarracks"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietBaseDefenseAdvanced"
-			Cap="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietBaseDefenseAir"
-			Cap="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietBaseDefenseGround"
-			Cap="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietBomberAircraft"
-			Cap="1"
-			Difficulty="EASY" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietCommandoTech1"
-			Cap="0"
-			Difficulty="EASY" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietCrane"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietDesolatorBomber"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietDesolatorInfantry"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietEngineer"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietFighterAircraft"
-			Cap="0"
-			Difficulty="EASY" />
-		<SpecificUnitCap
-			Unit="SovietFighterAircraft"
-			Cap="2"
-			Difficulty="MEDIUM" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietGrinderVehicle"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietGrinderVehicle_Naval"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietHeavyAntiVehicleInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietHeavyWalkerVehicle"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietMCV"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietMCV_Naval"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietMortarcycle"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietNavalYard"
+			Cap="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietNewTower"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietPowerPlant"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietPowerPlantAdvanced"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietRefinery"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietScoutInfantry"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietScoutVehicle"
-			Cap="1"
-			Difficulty="EASY" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
-			Unit="SovietScoutVehicle"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Unit="SovietSuperWeapon"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietSuperWeaponAdvanced"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietSurveyor"
-			Cap="1"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietSurveyor_Naval"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietTechStructure"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="SovietTransportAircraft"
-			Cap="4"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="SovietWarFactory"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<UnitModifier
 			Unit="SAAV4"

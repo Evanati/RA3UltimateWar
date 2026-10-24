@@ -1,58 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-	<!-- Factory construction -->
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandFactoryBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic 
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
+	<!-- Teching -->
+	<AIBuildStateDefinition
+		id="JapanFleetCommandTechStructureBuildState">
 		
-		<BuildEntry
-			Build="JapanBarracks"
-			Heuristic="CONSTANT"
-			CountModifier="1.0"/>
-
-		<BuildEntry
-			Build="JapanWarFactory"
-			Heuristic="CONSTANT"
-			CountModifier="2.0"/>
-			
-		<BuildEntry
-			Build="JapanNavalYard"
-			Heuristic="CONSTANT"
-			CountModifier="4.0"/>
-	</AIBuildStateDefinition>
-	
-	<!-- Defense construction -->
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandDefenseBuildState">
-	
 		<Heuristic>
 			<OpeningMoveHeuristic
 				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="1000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK ENGINEER INFILTRATOR">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+			
+		<BuildEntry
+			Build="JapanTechStructureEgg"
+			Heuristic="TECH"
+			MinTime="270s" />
+			
+		<BuildEntry
+			Build="JapanSuperWeaponEgg"
+			Heuristic="TECH"
+			MinTime="390s" />
+			
+		<BuildEntry
+			Build="JapanSuperWeaponAdvancedEgg"
+			Heuristic="TECH"
+			MinTime="360s" />
+			
+		<BuildEntry
+			Build="JapanNewTowerEgg"
+			Heuristic="TECH"
+			MinTime="450s" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="JapanFleetCommandTechUpgradeBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
 		</Heuristic>
 		
-		<BuildEntry 
-			Build="JapanBaseDefenseEgg" 
-			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="180s" />
 			
-		<BuildEntry 
-			Build="JapanBaseDefenseAdvancedEgg" 
-			Heuristic="FEWEST_UNIT"
-			CountModifier="3.5"/>
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="210s" />
 			
-		<BuildEntry 
-			Build="JapanNewTowerEgg" 
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.25"/>
+		<BuildEntry
+			Upgrade="Upgrade_JapanBarracksTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="240s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="330s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="360s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanBarracksTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="390s" />
 	</AIBuildStateDefinition>
 	
 	<!-- Infantry production -->	
@@ -62,54 +96,211 @@
 		<Heuristic>
 			<OpeningMoveHeuristic
 				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<ConstantHeuristic
 				Weight="1.0" />
 		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="JapanScoutInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			CountModifier="0.5"/>
 		
 		<BuildEntry
 			Build="JapanAntiInfantryInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="2.5"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="5.0"/>
+			CountModifier="2.5"/>
 			
 		<BuildEntry
 			Build="JapanEngineer"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="0.25"/>
 			
 		<BuildEntry
 			Build="JapanArcherInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.5"/>
+			CountModifier="0.75"/>
 			
 		<BuildEntry
 			Build="JapanInfiltrationInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="0.25"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleInfantryTech3"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="2.0"/>
+			CountModifier="0.75"/>
 			
 		<BuildEntry
 			Build="JapanCommandoTech1"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
+			CountModifier="4.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandInfantryBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="JapanScoutInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+		
+		<BuildEntry
+			Build="JapanAntiInfantryInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanEngineer"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanArcherInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanInfiltrationInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleInfantryTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanCommandoTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandInfantryBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="JapanScoutInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+		
+		<BuildEntry
+			Build="JapanAntiInfantryInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanEngineer"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanArcherInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanInfiltrationInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleInfantryTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanCommandoTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
@@ -118,62 +309,65 @@
 		<Heuristic>
 			<OpeningMoveHeuristic
 				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="JapanScoutInfantry"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentHigh="12.5%"/>
 		
 		<BuildEntry
 			Build="JapanAntiInfantryInfantry"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="12.5%"
+			PercentHigh="25%"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleInfantry"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="25%"
+			PercentHigh="37.5%"/>
 			
 		<BuildEntry
 			Build="JapanEngineer"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="37.5%"
+			PercentHigh="50%"/>
 			
 		<BuildEntry
 			Build="JapanArcherInfantry"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="50%"
+			PercentHigh="62.5%"/>
 			
 		<BuildEntry
 			Build="JapanInfiltrationInfantry"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="62.5%"
+			PercentHigh="75%"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleInfantryTech3"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="75%"
+			PercentHigh="87.5%"/>
 			
 		<BuildEntry
 			Build="JapanCommandoTech1"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="87.5%"
+			PercentHigh="100%"/>
 	</AIBuildStateDefinition>
 	
 	<!-- Vehicle production -->
@@ -183,59 +377,194 @@
 		<Heuristic>
 			<OpeningMoveHeuristic
 				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<ConstantHeuristic
 				Weight="1.0" />
 		</Heuristic>
 		
 		<BuildEntry
-			Build="JapanWarFacoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
 			Build="JapanLightTransportVehicle"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			CountModifier="0.5"/>
 			
 		<BuildEntry
 			Build="JapanAntiInfantryVehicle"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="2.5"/>
+			CountModifier="1.25"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleVehicleTech1"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="5.0"/>
-			
-		<BuildEntry
-			Build="JapanSentinelVehicle"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="2.0"/>
 			
 		<BuildEntry
 			Build="JapanAntiAirVehicleTech1"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="4.0"/>
-			
-		<BuildEntry
-			Build="Centurion"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="1.5"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleVehicleTech3"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="2.0"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="JapanAntiStructureVehicle"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
+			CountModifier="3.5"/>
 			
 		<BuildEntry
 			Build="JapanMiner"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="0.25"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandVehicleBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanLightTransportVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiInfantryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiAirVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiStructureVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanMiner"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandVehicleBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanLightTransportVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiInfantryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiAirVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiStructureVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanMiner"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
@@ -244,68 +573,59 @@
 		<Heuristic>
 			<OpeningMoveHeuristic
 				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanWarFacoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
 		
 		<BuildEntry
 			Build="JapanLightTransportVehicle"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentHigh="14.29%"/>
 			
 		<BuildEntry
 			Build="JapanAntiInfantryVehicle"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="14.29%"
+			PercentHigh="28.57%"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleVehicleTech1"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="JapanSentinelVehicle"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="28.57%"
+			PercentHigh="42.86%"/>
 			
 		<BuildEntry
 			Build="JapanAntiAirVehicleTech1"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="Centurion"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="42.86%"
+			PercentHigh="57.14%"/>
 			
 		<BuildEntry
 			Build="JapanAntiVehicleVehicleTech3"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="57.14%"
+			PercentHigh="71.43%"/>
 			
 		<BuildEntry
 			Build="JapanAntiStructureVehicle"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="71.43%"
+			PercentHigh="85.71%"/>
 			
 		<BuildEntry
 			Build="JapanMiner"
 			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
+			PercentLow="85.71%"
+			PercentHigh="100%"/>
 	</AIBuildStateDefinition>
 	
 	<!-- Ship production -->
@@ -315,381 +635,58 @@
 		<Heuristic>
 			<OpeningMoveHeuristic
 				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<ConstantHeuristic
 				Weight="1.0" />
 		</Heuristic>
 		
 		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
 			Build="JapanNavyScoutShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.75"/>
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="2.5"/>
 			
 		<BuildEntry
-			Build="JapanAntiVehicleVehicleTech1_Naval"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="5.0"/>
-			
-		<BuildEntry
-			Build="JapanAntiAirShip"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="6.5"/>
-			
-		<BuildEntry
-			Build="JapanAntiVehicleShip"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="7.0"/>
-			
-		<BuildEntry
-			Build="JapanAntiStructureShip"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="10.0"/>
-			
-		<BuildEntry
 			Build="JapanFortressShipEgg"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="9.0"/>
+			CountModifier="2.5"/>
 			
 		<BuildEntry
 			Build="JapanMiner_Naval"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="0.25"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="JapanFleetCommandShipBuildState_RANDOM">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanNavyScoutShip"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="JapanAntiVehicleVehicleTech1_Naval"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="JapanAntiAirShip"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="JapanAntiVehicleShip"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="JapanAntiStructureShip"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="JapanFortressShipEgg"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-			
-		<BuildEntry
-			Build="JapanMiner_Naval"
-			Heuristic="RANDOM_UNIT"
-			PercentLow="0%"
-			PercentHigh="0%"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandAntiAirShipBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanAntiAirShip"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanAntiVehicleShip"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanFortressShipEgg"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandAntiWaterShipBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanNavyScoutShip"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanAntiAirShip"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanAntiVehicleShip"
-			Heuristic="BEST_UNIT_EXPECTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanAntiStructureShip"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanFortressShipEgg"
-			Heuristic="BEST_UNIT_WEIGHTED"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<!-- Mixed production -->
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandAntiStructureUnitsOnlyBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanWarFactoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanAntiStructureVehicle"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandAntiInfantryUnitsOnlyBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanWarFactoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanAntiInfantryInfantry"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandAntiVehicleUnitsOnlyBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanWarFactoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanAntiVehicleVehicleTech1"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandAntiAircraftUnitsOnlyBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanWarFactoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanAntiAirVehicleTech1"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandAntiShipUnitsOnlyBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ConstantHeuristic
-				Weight="1.0" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanWarFactoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanNavyScoutShip"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandLandUnitsOnlyBuildState">
-	
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Land"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="ALL"
-					Relationship="ENEMIES"
-					Alignment="NONE"/>
-			</ObjectOfTypeExistsHeuristic>
-			<PathToTargetHeuristic
-				Surface="Land"
-				ObjectTypeToUseForTest="JapanSentinelVehicle"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="true" />
-			<PathToTargetHeuristic
-				Surface="Water"
-				ObjectTypeToUseForTest="JapanNavyScoutShip"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="false" />
-		</Heuristic>
-		
-		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-			
-		<BuildEntry
-			Build="JapanWarFactoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
-			Build="JapanSentinelVehicle"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
-	</AIBuildStateDefinition>
-	
-	<AIBuildStateDefinition 
-		id="JapanFleetCommandWaterUnitsOnlyBuildState">
+		id="JapanFleetCommandShipBuildState_BEST_LIGHT">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
@@ -698,77 +695,194 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ALL"
-					Relationship="ENEMIES"
-					Alignment="NONE"/>
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanNavalYard</IncludeThing>
+				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
-			<PathToTargetHeuristic
-				Surface="Water"
-				ObjectTypeToUseForTest="JapanNavyScoutShip"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="true" />
-			<PathToTargetHeuristic
-				Surface="Land"
-				ObjectTypeToUseForTest="JapanSentinelVehicle"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="false" />
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
 		</Heuristic>
 		
 		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
-		<BuildEntry
 			Build="JapanNavyScoutShip"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanMiner_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition 
-		id="JapanFleetCommandAmphibiousUnitsOnlyBuildState">
+		id="JapanFleetCommandShipBuildState_BEST_HEAVY">
 	
 		<Heuristic>
 			<OpeningMoveHeuristic
 				Complete="true" />
 			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
+				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ALL"
-					Relationship="ENEMIES"
-					Alignment="NONE"/>
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanNavalYard</IncludeThing>
+				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
-			<PathToTargetHeuristic
-				Surface="Land"
-				ObjectTypeToUseForTest="JapanSentinelVehicle"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="true" />
-			<PathToTargetHeuristic
-				Surface="Water"
-				ObjectTypeToUseForTest="JapanNavyScoutShip"
-				LocomotorConditionToUseForTest="NORMAL"
-				PathExists="true" />
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
 		</Heuristic>
 		
 		<BuildEntry
-			Build="JapanBarracksEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
+			Build="JapanNavyScoutShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="JapanMiner_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFleetCommandShipBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
 		
 		<BuildEntry
-			Build="JapanWarFactoryEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
+			Build="JapanNavyScoutShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="14.29%"/>
+			
 		<BuildEntry
-			Build="JapanNavalYardEgg"
-			Heuristic="FACTORY"
-			CountModifier="1.0"/>
-		
+			Build="JapanAntiVehicleVehicleTech1_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="14.29%"
+			PercentHigh="28.57%"/>
+			
 		<BuildEntry
-			Build="JapanAntiInfantryInfantry"
-			Heuristic="FEWEST_UNIT"
-			CountModifier="1.0"/>
+			Build="JapanAntiAirShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="28.57%"
+			PercentHigh="42.86%"/>
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="42.86%"
+			PercentHigh="57.14%"/>
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="57.14%"
+			PercentHigh="71.43%"/>
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="71.43%"
+			PercentHigh="85.71%"/>
+			
+		<BuildEntry
+			Build="JapanMiner_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="85.71%"
+			PercentHigh="100%"/>
 	</AIBuildStateDefinition>
 </AssetDeclaration>

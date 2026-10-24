@@ -18,7 +18,7 @@
 		UnitBuilderEnemyNearbyMultiplier="4"
 		BuildTechEfficiencyThreshold="1"
 		BuildTechMinPowerAdvantage="0.1"
-		BuildExtraFactoryMinTime="240s"
+		BuildExtraFactoryMinTime="180s"
 		ResourceNodeSearchRadius="700"
 		ResourceNodeValueRemainingForExpansion="80000"
 		RefineryPlacementStartDistanceDelta="-30"
@@ -135,6 +135,7 @@
 			Event="Lost"
 			FeedbackKey="Lost"/>
 			
+		<!-- Tier 1 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_PointDefenseDrones"
 			Weight="2%" />
@@ -144,6 +145,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_NanoExtract"
 			Weight="1%" />
+		<!-- Tier 2 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Ambush"
 			Weight="16%" />
@@ -153,6 +155,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_EnhancedKamikaze"
 			Weight="8%" />
+		<!-- Tier 3 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_AdvancedMissilePacks"
 			Weight="64%" />
@@ -162,6 +165,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Girl_Power"
 			Weight="256%" />
+		<!-- Tier 4 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_FinalSquadron_Rank3"
 			Weight="512%" />
@@ -171,6 +175,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_BalloonAttack_Rank3"
 			Weight="2048%" />
+		<!-- Tier 5 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Japan_Nano_Storm"
 			Weight="8192%" />
@@ -357,7 +362,7 @@
 		<StrategicState
 			id="JapanCaptureHighPriorityTech"
 			State="JapanCaptureHighPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="JapanCaptureLowPriorityTech"
 			State="JapanCaptureLowPriorityTech"
@@ -365,7 +370,7 @@
 		<StrategicState
 			id="JapanCaptureMediumPriorityTech"
 			State="JapanCaptureMediumPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="JapanCaptureWaterHusks"
 			State="JapanCaptureWaterHusks"
@@ -480,37 +485,45 @@
 			Difficulty="MEDIUM" />
 			
 		<BudgetState
-			id="CoopBudget_New"
-			State="CoopBudget_New"
+			id="JapanCoOpBudget"
+			State="JapanCoOpBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="DefenseBudget_New"
-			State="DefenseBudget_New"
+			id="JapanDefenseBudget"
+			State="JapanDefenseBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="HeavyDefenseBudget_New"
-			State="HeavyDefenseBudget_New"
+			id="JapanHeavyDefenseBudget"
+			State="JapanHeavyDefenseBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="OpeningMoveBudget_New"
-			State="OpeningMoveBudget_New"
+			id="JapanHeavyOffenseBudget"
+			State="JapanHeavyDefenseBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="JapanOffenseBudget"
+			State="JapanDefenseBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="JapanOpeningMoveBudget"
+			State="JapanOpeningMoveBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="JapanStandardBudget"
+			State="JapanStandardBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="JapanTechingBudget"
+			State="JapanTechingBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="JapanBalancedAntiAirShipBuildState"
-			State="JapanBalancedAntiAirShipBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			id="JapanBalancedInfantryBuildState_BEST_HEAVY"
+			State="JapanBalancedInfantryBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
-			id="JapanBalancedAntiWaterShipBuildState"
-			State="JapanBalancedAntiWaterShipBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="JapanBalancedDefenseBuildState"
-			State="JapanBalancedDefenseBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="JapanBalancedFactoryBuildState"
-			State="JapanBalancedFactoryBuildState"
+			id="JapanBalancedInfantryBuildState_BEST_LIGHT"
+			State="JapanBalancedInfantryBuildState_BEST_LIGHT"
 			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="JapanBalancedInfantryBuildState_FEWEST"
@@ -521,6 +534,14 @@
 			State="JapanBalancedInfantryBuildState_RANDOM"
 			Difficulty="EASY"/>
 		<BuildState
+			id="JapanBalancedShipBuildState_BEST_HEAVY"
+			State="JapanBalancedShipBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="JapanBalancedShipBuildState_BEST_LIGHT"
+			State="JapanBalancedShipBuildState_BEST_LIGHT"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
 			id="JapanBalancedShipBuildState_FEWEST"
 			State="JapanBalancedShipBuildState_FEWEST"
 			Difficulty="MEDIUM HARD BRUTAL"/>
@@ -529,6 +550,22 @@
 			State="JapanBalancedShipBuildState_RANDOM"
 			Difficulty="EASY"/>
 		<BuildState
+			id="JapanBalancedTechStructureBuildState"
+			State="JapanBalancedTechStructureBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanBalancedTechUpgradeBuildState"
+			State="JapanBalancedTechUpgradeBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="JapanBalancedVehicleBuildState_BEST_HEAVY"
+			State="JapanBalancedVehicleBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="JapanBalancedVehicleBuildState_BEST_LIGHT"
+			State="JapanBalancedVehicleBuildState_BEST_LIGHT"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
 			id="JapanBalancedVehicleBuildState_FEWEST"
 			State="JapanBalancedVehicleBuildState_FEWEST"
 			Difficulty="MEDIUM HARD BRUTAL"/>
@@ -536,6 +573,26 @@
 			id="JapanBalancedVehicleBuildState_RANDOM"
 			State="JapanBalancedVehicleBuildState_RANDOM"
 			Difficulty="EASY"/>
+		<BuildState
+			id="JapanDefenseNormalBuildState"
+			State="JapanDefenseNormalBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="JapanDefenseGroundAttackBuildState"
+			State="JapanDefenseGroundAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="JapanDefenseNavalAttackBuildState"
+			State="JapanDefenseNavalAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="JapanDefenseAerialAttackBuildState"
+			State="JapanDefenseAerialAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="JapanDefenseMinimalBuildState"
+			State="JapanDefenseMinimalBuildState"
+			Difficulty="HARD BRUTAL"/>	
 		<BuildState
 			id="JapanFactoryBuildState"
 			State="JapanFactoryBuildState"
@@ -565,8 +622,8 @@
 			State="JapanNeededVehiclesBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="JapanNonPathDependentStructureBuildState"
-			State="JapanNonPathDependentStructureBuildState"
+			id="JapanPathIndependentStructureBuildState"
+			State="JapanPathIndependentStructureBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="JapanResourceBuildState"
@@ -575,96 +632,164 @@
 		<BuildState
 			id="JapanTechStructureBuildState"
 			State="JapanTechStructureBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="JapanTechStructureBuildState_EASY"
-			State="JapanTechStructureBuildState_EASY"
 			Difficulty="EASY"/>
 		<BuildState
 			id="JapanTechUpgradeBuildState"
 			State="JapanTechUpgradeBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="JapanTechUpgradeBuildState_EASY"
-			State="JapanTechUpgradeBuildState_EASY"
 			Difficulty="EASY"/>
 			
 		<SpecificUnitCap
+			Unit="Centurion"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanAntiAirShip"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanAntiAirVehicleTech1"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
 			Unit="JapanAntiInfantryInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanAntiInfantryVehicle"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanAntiStructureShip"
-			Cap="1"
-			Difficulty="EASY" />
-		<SpecificUnitCap
-			Unit="JapanAntiStructureShip"
-			Cap="6"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanAntiStructureVehicle"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanAntiVehicleInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanAntiVehicleInfantryTech3"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanAntiVehicleShip"
-			Cap="15"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanAntiVehicleVehicleTech1"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanAntiVehicleVehicleTech1_Naval"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanAntiVehicleVehicleTech3"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
-			Unit="JapanBaseDefense"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Unit="JapanArcherInfantry"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
-			Unit="JapanBaseDefenseAdvanced"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Unit="JapanBarracksEgg"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanBaseDefenseAdvancedEgg"
-			Cap="2"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanBaseDefenseEgg"
-			Cap="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanCommandoTech1"
-			Cap="0"
-			Difficulty="EASY" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanEngineer"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanFortressShipEgg"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanInfiltrationInfantry"
-			Cap="0"
-			Difficulty="EASY" />
-		<SpecificUnitCap
-			Unit="JapanInfiltrationInfantry"
-			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanLightTransportVehicle"
-			Cap="3"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanMCV"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanMCV_Naval"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanMiner"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanMiner_Naval"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanNavalYardEgg"
+			Cap="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanNavyScoutShip"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanNewTower"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanNewTowerEgg"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanPowerPlantEgg"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanRefineryEgg"
-			Cap="1"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanScoutInfantry"
-			Cap="8"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanSentinelVehicle"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanSuperWeaponAdvancedEgg"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanSuperWeaponEgg"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="JapanTechStructureEgg"
-			Cap="1"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="JapanWarFactoryEgg"
+			Cap="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<UnitModifier
 			Unit="Centurion"

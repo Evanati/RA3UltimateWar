@@ -18,7 +18,7 @@
 		UnitBuilderEnemyNearbyMultiplier="4"
 		BuildTechEfficiencyThreshold="1"
 		BuildTechMinPowerAdvantage="0.1"
-		BuildExtraFactoryMinTime="240s"
+		BuildExtraFactoryMinTime="180s"
 		ResourceNodeSearchRadius="700"
 		ResourceNodeValueRemainingForExpansion="80000"
 		RefineryPlacementStartDistanceDelta="-30"
@@ -135,6 +135,7 @@
 			Event="Lost"
 			FeedbackKey="Lost"/>
 			
+		<!-- Tier 1 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_SatelliteSweep"
 			Weight="4%"/>
@@ -144,6 +145,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_ChronoSwap"
 			Weight="1%"/>
+		<!-- Tier 2 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_PrecisionStrike"
 			Weight="32%"/>
@@ -153,6 +155,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_TimeBomb"
 			Weight="16%"/>
+		<!-- Tier 3 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_CryoSatellite_Rank3"
 			Weight="128%"/>
@@ -162,6 +165,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Airborne_Force"
 			Weight="256%"/>
+		<!-- Tier 4 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Stratospheric_Bombing"
 			Weight="2048%"/>
@@ -171,6 +175,7 @@
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_FutureTechnology"
 			Weight="1024%"/>
+		<!-- Tier 5 -->
 		<PowerChoice
 			PlayerPower="PlayerTech_Allied_Ion_Cannon"
 			Weight="8192%"/>
@@ -225,7 +230,7 @@
 		<StrategicState
 			id="AlliedCaptureHighPriorityTech"
 			State="AlliedCaptureHighPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedCaptureLowPriorityTech"
 			State="AlliedCaptureLowPriorityTech"
@@ -233,7 +238,7 @@
 		<StrategicState
 			id="AlliedCaptureMediumPriorityTech"
 			State="AlliedCaptureMediumPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedCaptureWaterHusks"
 			State="AlliedCaptureWaterHusks"
@@ -496,30 +501,62 @@
 			Difficulty="MEDIUM" />
 			
 		<BudgetState
-			id="CoopBudget_New"
-			State="CoopBudget_New"
+			id="AlliedCoOpBudget"
+			State="AlliedCoOpBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="DefenseBudget_New"
-			State="DefenseBudget_New"
+			id="AlliedDefenseBudget"
+			State="AlliedDefenseBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="HeavyDefenseBudget_New"
-			State="HeavyDefenseBudget_New"
+			id="AlliedHeavyDefenseBudget"
+			State="AlliedHeavyDefenseBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<BudgetState
-			id="OpeningMoveBudget_New"
-			State="OpeningMoveBudget_New"
+			id="AlliedHeavyOffenseBudget"
+			State="AlliedHeavyDefenseBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="AlliedOffenseBudget"
+			State="AlliedDefenseBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="AlliedOpeningMoveBudget"
+			State="AlliedOpeningMoveBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="AlliedStandardBudget"
+			State="AlliedStandardBudget"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<BudgetState
+			id="AlliedTechingBudget"
+			State="AlliedTechingBudget"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 			
 		<BuildState
-			id="AlliedCraneLandBuildState"
-			State="AlliedCraneLandBuildState"
+			id="AlliedCraneBuildState"
+			State="AlliedCraneBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedCraneWaterBuildState"
-			State="AlliedCraneWaterBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			id="AlliedDefenseNormalBuildState"
+			State="AlliedDefenseNormalBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="AlliedDefenseGroundAttackBuildState"
+			State="AlliedDefenseGroundAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="AlliedDefenseNavalAttackBuildState"
+			State="AlliedDefenseNavalAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="AlliedDefenseAerialAttackBuildState"
+			State="AlliedDefenseAerialAttackBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>	
+		<BuildState
+			id="AlliedDefenseMinimalBuildState"
+			State="AlliedDefenseMinimalBuildState"
+			Difficulty="HARD BRUTAL"/>	
 		<BuildState
 			id="AlliedGeneralFactoryBuildState"
 			State="AlliedGeneralFactoryBuildState"
@@ -557,13 +594,21 @@
 			State="AlliedNeededVehiclesBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
-			id="AlliedNonPathDependentStructureBuildState"
-			State="AlliedNonPathDependentStructureBuildState"
+			id="AlliedPathIndependentStructureBuildState"
+			State="AlliedPathIndependentStructureBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="AlliedResourceBuildState"
 			State="AlliedResourceBuildState"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSquadronLeaderAircraftBuildState_BEST_HEAVY"
+			State="AlliedSquadronLeaderAircraftBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSquadronLeaderAircraftBuildState_BEST_LIGHT"
+			State="AlliedSquadronLeaderAircraftBuildState_BEST_LIGHT"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="AlliedSquadronLeaderAircraftBuildState_FEWEST"
 			State="AlliedSquadronLeaderAircraftBuildState_FEWEST"
@@ -573,20 +618,12 @@
 			State="AlliedSquadronLeaderAircraftBuildState_RANDOM"
 			Difficulty="EASY"/>
 		<BuildState
-			id="AlliedSquadronLeaderAntiGroundAircraftBuildState"
-			State="AlliedSquadronLeaderAntiGroundAircraftBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			id="AlliedSquadronLeaderInfantryBuildState_BEST_HEAVY"
+			State="AlliedSquadronLeaderInfantryBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
-			id="AlliedSquadronLeaderAntiAirAircraftBuildState"
-			State="AlliedSquadronLeaderAntiAirAircraftBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="AlliedSquadronLeaderDefenseBuildState"
-			State="AlliedSquadronLeaderDefenseBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="AlliedSquadronLeaderGeneralFactoryBuildState"
-			State="AlliedSquadronLeaderGeneralFactoryBuildState"
+			id="AlliedSquadronLeaderInfantryBuildState_BEST_LIGHT"
+			State="AlliedSquadronLeaderInfantryBuildState_BEST_LIGHT"
 			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="AlliedSquadronLeaderInfantryBuildState_FEWEST"
@@ -597,8 +634,12 @@
 			State="AlliedSquadronLeaderInfantryBuildState_RANDOM"
 			Difficulty="EASY"/>
 		<BuildState
-			id="AlliedSquadronLeaderNavalYardFactoryBuildState"
-			State="AlliedSquadronLeaderNavalYardFactoryBuildState"
+			id="AlliedSquadronLeaderShipBuildState_BEST_HEAVY"
+			State="AlliedSquadronLeaderShipBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSquadronLeaderShipBuildState_BEST_LIGHT"
+			State="AlliedSquadronLeaderShipBuildState_BEST_LIGHT"
 			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="AlliedSquadronLeaderShipBuildState_FEWEST"
@@ -608,6 +649,22 @@
 			id="AlliedSquadronLeaderShipBuildState_RANDOM"
 			State="AlliedSquadronLeaderShipBuildState_RANDOM"
 			Difficulty="EASY"/>
+		<BuildState
+			id="AlliedSquadronLeaderTechStructureBuildState"
+			State="AlliedSquadronLeaderTechStructureBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSquadronLeaderTechUpgradeBuildState"
+			State="AlliedSquadronLeaderTechUpgradeBuildState"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSquadronLeaderVehicleBuildState_BEST_HEAVY"
+			State="AlliedSquadronLeaderVehicleBuildState_BEST_HEAVY"
+			Difficulty="HARD BRUTAL"/>
+		<BuildState
+			id="AlliedSquadronLeaderVehicleBuildState_BEST_LIGHT"
+			State="AlliedSquadronLeaderVehicleBuildState_BEST_LIGHT"
+			Difficulty="HARD BRUTAL"/>
 		<BuildState
 			id="AlliedSquadronLeaderVehicleBuildState_FEWEST"
 			State="AlliedSquadronLeaderVehicleBuildState_FEWEST"
@@ -619,108 +676,344 @@
 		<BuildState
 			id="AlliedTechStructureBuildState"
 			State="AlliedTechStructureBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="AlliedTechStructureBuildState_EASY"
-			State="AlliedTechStructureBuildState_EASY"
 			Difficulty="EASY"/>
 		<BuildState
 			id="AlliedTechUpgradeBuildState"
 			State="AlliedTechUpgradeBuildState"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="AlliedTechUpgradeBuildState_EASY"
-			State="AlliedTechUpgradeBuildState_EASY"
 			Difficulty="EASY"/>
 			
 		<SpecificUnitCap
+			Unit="ABWeatherControl"
+			Cap="3"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedAirfield"
+			Cap="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
 			Unit="AlliedAntiAirShip"
 			Cap="15"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiAirVehicleTech1"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiGroundAircraft"
 			Cap="1"
-			Difficulty="EASY" />
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="AlliedAntiGroundAircraft"
+			Cap="4"
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="AlliedAntiGroundAircraft"
+			Cap="8"
+			Difficulty="HARD"/>
+		<SpecificUnitCap
+			Unit="AlliedAntiGroundAircraft"
+			Cap="16"
+			Difficulty="BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiInfantryInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedAntiInfantryVehicle"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedAntiInfantryVehicle_Ground"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiNavalScout"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedAntiNavyShipTech1"
+			Cap="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiStructureShip"
 			Cap="1"
-			Difficulty="EASY" />
+			Difficulty="EASY"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiStructureShip"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedAntiStructureVehicle"
+			Cap="5"
+			Difficulty="EASY"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiStructureVehicle"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiVehicleInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiVehicleVehicleTech1"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedAntiVehicleVehicleTech3"
 			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedArtilleryVehicle"
+			Cap="5"
+			Difficulty="EASY"/>
 		<SpecificUnitCap
 			Unit="AlliedArtilleryVehicle"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="AlliedArtilleryVehicle"
+			Cap="15"
+			Difficulty="HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedBarracks"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedBaseDefense"
+			Cap="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedBaseDefenseAdvanced"
+			Cap="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedBaseDefenseMGT"
+			Cap="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedBaseDefenseRT"
+			Cap="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedBomberAircraft"
 			Cap="1"
-			Difficulty="EASY" />
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="AlliedBomberAircraft"
+			Cap="4"
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="AlliedBomberAircraft"
+			Cap="8"
+			Difficulty="HARD"/>
+		<SpecificUnitCap
+			Unit="AlliedBomberAircraft"
+			Cap="16"
+			Difficulty="BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedBomberAircraftStratoUpgrade"
+			Cap="1"
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="AlliedBomberAircraftStratoUpgrade"
+			Cap="16"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedCommandoTech1"
 			Cap="0"
-			Difficulty="EASY" />
+			Difficulty="EASY"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraft"
-			Cap="0"
-			Difficulty="EASY" />
+			Unit="AlliedCommandoTech1"
+			Cap="1"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedCrane"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedDogHouse"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedEngineer"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedFighterAircraft"
 			Cap="2"
-			Difficulty="MEDIUM" />
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="AlliedFighterAircraft"
+			Cap="4"
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="AlliedFighterAircraft"
+			Cap="8"
+			Difficulty="HARD"/>
+		<SpecificUnitCap
+			Unit="AlliedFighterAircraft"
+			Cap="16"
+			Difficulty="BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedFighterAircraftStratoUpgrade"
+			Cap="2"
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="AlliedFighterAircraftStratoUpgrade"
+			Cap="4"
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="AlliedFighterAircraftStratoUpgrade"
+			Cap="8"
+			Difficulty="HARD"/>
+		<SpecificUnitCap
+			Unit="AlliedFighterAircraftStratoUpgrade"
+			Cap="16"
+			Difficulty="BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedFutureTank"
+			Cap="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedFutureTankFTSeed"
+			Cap="15"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedGrenadeInfantry"
-			Cap="20"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Cap="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedInfiltrationInfantry"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedLegionnaireInfantry"
+			Cap="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedLegionnaireInfantryupg"
+			Cap="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedMCV"
+			Cap="0"
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="AlliedMCV_Naval"
+			Cap="0"
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="AlliedMCV"
+			Cap="1"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedMCV_Naval"
+			Cap="1"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedMiner"
+			Cap="50"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedMiner_Naval"
+			Cap="50"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedNavalYard"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedPowerPlant"
+			Cap="100"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedRefinery"
+			Cap="50"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedScoutInfantry"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedScoutInfantryDH"
+			Cap="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedSniperInfantry"
+			Cap="30"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedSuperWeapon"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedSuperWeaponAdvanced"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedSupportAircraft"
-			Cap="2"
-			Difficulty="EASY" />
+			Cap="3"
+			Difficulty="EASY"/>
 		<SpecificUnitCap
 			Unit="AlliedSupportAircraft"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="AlliedTechStructure"
+			Cap="1"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
 			Unit="AlliedTransportHelicopter"
 			Cap="1"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
+			Unit="AlliedWarFactory"
+			Cap="2"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="Hurricane"
+			Cap="5"
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="Hurricane"
+			Cap="10"
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="Hurricane"
+			Cap="25"
+			Difficulty="HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="Kodiak"
+			Cap="0"
+			Difficulty="EASY"/>
+		<SpecificUnitCap
+			Unit="Kodiak"
+			Cap="2"
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="Kodiak"
+			Cap="5"
+			Difficulty="HARD"/>
+		<SpecificUnitCap
+			Unit="Kodiak"
+			Cap="10"
+			Difficulty="BRUTAL"/>
+		<SpecificUnitCap
+			Unit="Paladin"
+			Cap="5"
+			Difficulty="EASY"/>
+		<SpecificUnitCap
 			Unit="Paladin"
 			Cap="10"
-			Difficulty="EASY MEDIUM HARD BRUTAL" />
+			Difficulty="MEDIUM"/>
+		<SpecificUnitCap
+			Unit="Paladin"
+			Cap="20"
+			Difficulty="HARD BRUTAL"/>
+		<SpecificUnitCap
+			Unit="Titan"
+			Cap="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 			
 		<UnitModifier
 			Unit="AlliedAntiAirShip"

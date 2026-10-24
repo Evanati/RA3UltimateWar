@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBudgetStateDefinition
+		id="JapanOpeningMoveBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="false" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="0%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="0%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="100%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="0%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="0%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="JapanTechingBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="500"
+				EnemyNearby="false">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+					<IncludeThing>JapanPowerPlant</IncludeThing>
+					<IncludeThing>JapanRefinery</IncludeThing>
+					<IncludeThing>JapanBarracks</IncludeThing>
+					<IncludeThing>JapanWarFactory</IncludeThing>
+					<IncludeThing>JapanNavalYard</IncludeThing>
+					<IncludeThing>JapanTechStructure</IncludeThing>
+					<IncludeThing>JapanSuperWeapon</IncludeThing>
+					<IncludeThing>JapanSuperWeaponAdvanced</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="5%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="5%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="70%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="5%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="5%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="JapanStandardBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="5%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="5%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="70%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="10%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="JapanCoOpBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="5%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="0%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="65%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="20%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="JapanDefenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="400"
+				MinEnemyValue="3000"
+				EnemyNearby="true">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanRefinery</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="0.75" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="8%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="2%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="75%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="9%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="5%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="1%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="JapanHeavyDefenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="400"
+				MinEnemyValue="5000"
+				EnemyNearby="true">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanPowerPlant</IncludeThing>
+					<IncludeThing>JapanRefinery</IncludeThing>
+					<IncludeThing>JapanTechStructure</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="2"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="12%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="0%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="75%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="5%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="5%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="3%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="JapanOffenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="700"
+				EnemyNearby="false">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanBarracks</IncludeThing>
+					<IncludeThing>JapanWarFactory</IncludeThing>
+					<IncludeThing>JapanNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="0.75" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="2%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="3%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="75%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="10%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="JapanHeavyOffenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="1400"
+				EnemyNearby="false">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanBarracks</IncludeThing>
+					<IncludeThing>JapanWarFactory</IncludeThing>
+					<IncludeThing>JapanNavalYard</IncludeThing>
+					<IncludeThing>JapanTechStructure</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="2"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="true" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="1%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="2%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="83%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="5%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="9%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+</AssetDeclaration>
