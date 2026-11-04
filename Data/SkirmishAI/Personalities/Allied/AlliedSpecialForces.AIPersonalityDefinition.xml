@@ -380,8 +380,8 @@
 			State="FighterAircraft_MEDIUM"
 			Difficulty="EASY MEDIUM" />
 		<StrategicState
-			id="FighterAircraftEscort"
-			State="FighterAircraftEscort"
+			id="FighterAircraftEscortBomber"
+			State="FighterAircraftEscortBomber"
 			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="FighterAircraftFlankAttack_New"
@@ -436,12 +436,12 @@
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
-			id="RetreatMCVToLand"
-			State="RetreatMCVToLand"
+			id="RetreatMCVFromLandToWater"
+			State="RetreatMCVFromLandToWater"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="RetreatMCVToWater"
-			State="RetreatMCVToWater"
+			id="RetreatMCVFromWaterToLand"
+			State="RetreatMCVFromWaterToLand"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="ScoutAircraft"

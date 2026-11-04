@@ -190,7 +190,7 @@
 					ID="2">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="AlliedBaseDefenseRocketsUpgrade"/>
+						Template="DefensiveTechStructureRockets"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -211,7 +211,7 @@
 					ID="3">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="AlliedBaseDefenseRocketsUpgrade"/>
+						Template="DefensiveTechStructureRockets"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -232,7 +232,7 @@
 					ID="4">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="AlliedBaseDefenseRocketsUpgrade"/>
+						Template="DefensiveTechStructureRockets"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"
@@ -253,7 +253,7 @@
 					ID="5">
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="AlliedBaseDefenseRocketsUpgrade"/>
+						Template="DefensiveTechStructureRockets"/>
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="100"

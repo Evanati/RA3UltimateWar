@@ -15,39 +15,48 @@
 	<WeaponTemplate
 		id="DefensiveTechStructureRockets"
 		inheritFrom="DefensiveTechStructure_ScatterableWeapon" 
-		AttackRange="300.0"
+		AttackRange="350.0"
 		WeaponSpeed="300"
 		MinWeaponSpeed="300"
 		MaxWeaponSpeed="310"
 		FireSound="ALL_MultigunnerTurret_MissileFire"
-		FireFX="FX_None"
+		FireFX="FX_AlliedOutPostMissileFire"
 		FireVeteranFX="FX_None"
 		AcceptableAimDelta="20d"
-		ClipSize="2"
+		ClipSize="3"
 		AutoReloadsClip="AUTO"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
 		CanFireWhileMoving="true"
-		RequiredAntiMask="ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE">
+		RequiredAntiMask="ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%">
+		
 		<FiringDuration
-				MinSeconds=".25s"
-				MaxSeconds=".25s" />
+			MinSeconds="0.25s"
+			MaxSeconds="0.25s" />
 		<ClipReloadTime
-				MinSeconds="0.5s"
-				MaxSeconds="0.6s" />
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
 		<Nuggets>
 			<ProjectileNugget
-				ProjectileTemplate="AlliedBaseDefenseGroundMissileProjectile"
-				WarheadTemplate="AlliedBaseDefenseMissilePodProjectileWarhead">
-				<VeterancyProjectiles
-					VeterancyLevel="HEROIC"
-					ProjectileTemplate="AlliedAntiGroundAircraftMissileProjectile_Veteran"/>
-			</ProjectileNugget>
+				PartitionFilterTestType="EXTENTS_3D"
+				Radius="0"
+				ProjectileTemplate="AlliedBaseDefenseMissileProjectile"
+				WarheadTemplate="AlliedBaseDefenseMissilePodProjectileWarhead"
+				WeaponLaunchBoneSlotOverride="NO_WEAPON" />
 			<SuppressionNugget
-				Radius="20.0"
+				PartitionFilterTestType="EXTENTS_3D"
+				Radius="20"
 				Suppression="10"
-				DurationSeconds="1.0s" />
+				DurationSeconds="1s"
+				SuppressionTaperOff="-1"
+				SuppressionArc="360d"
+				SuppressionArcInverted="false" />
 			<InformTargetNugget
-					 MaxTimeToImpactFudgeFactor="1.6" />
+				PartitionFilterTestType="EXTENTS_3D"
+				Radius="0"
+				MinTimeToImpactFudgeFactor="0.85"
+				MaxTimeToImpactFudgeFactor="1.6" />
 		</Nuggets>
 	</WeaponTemplate>
 </AssetDeclaration>

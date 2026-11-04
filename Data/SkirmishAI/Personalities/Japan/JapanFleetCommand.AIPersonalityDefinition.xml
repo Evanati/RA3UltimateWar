@@ -432,12 +432,12 @@
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
-			id="RetreatMCVToLand"
-			State="RetreatMCVToLand"
+			id="RetreatMCVFromLandToWater"
+			State="RetreatMCVFromLandToWater"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="RetreatMCVToWater"
-			State="RetreatMCVToWater"
+			id="RetreatMCVFromWaterToLand"
+			State="RetreatMCVFromWaterToLand"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="ScoutAircraft"

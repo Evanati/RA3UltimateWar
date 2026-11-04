@@ -32,6 +32,8 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSquadronLeader.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/Escort.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/RetreatMCV.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BudgetStates/JapanBudgets.AIBudgetStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanBalanced.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanCommon.AIBuildStateDefinition.xml"/>
@@ -50,5 +52,7 @@
 		<!-- Targeting heuristics -->
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestGarrisonHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechStructureHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestExpansionPointHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestFriendlyStructureHeuristic.AITargetingHeuristic.xml"/>
     </Includes>
 </AssetDeclaration>
