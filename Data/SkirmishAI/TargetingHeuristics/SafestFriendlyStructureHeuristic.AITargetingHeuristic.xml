@@ -7,7 +7,7 @@
 		VitalKindOf="FS_FACTORY"
 		Relationship="SAME_PLAYER ALLIES"
 		Location="Land"
-		SearchRange="2500.0"
+		SearchRange="3000.0"
 		MinDistanceFromEnemy="1000.0">
 		
 		<BaseSelection
@@ -23,7 +23,7 @@
 		VitalKindOf="FS_FACTORY"
 		Relationship="SAME_PLAYER ALLIES"
 		Location="Water"
-		SearchRange="2500.0"
+		SearchRange="3000.0"
 		MinDistanceFromEnemy="1000.0">
 		
 		<BaseSelection
@@ -39,7 +39,7 @@
 		VitalKindOf="FS_FACTORY"
 		Relationship="SAME_PLAYER ALLIES"
 		Location="Land Water"
-		SearchRange="2500.0">
+		SearchRange="9999.0">
 		
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE"

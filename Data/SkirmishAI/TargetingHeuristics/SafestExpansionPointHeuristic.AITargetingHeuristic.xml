@@ -5,7 +5,7 @@
 		id="SafestExpansionPointLandHeuristic"
 		HeuristicType="Expansion"
 		Location="Land"
-		SearchRange="2500.0"
+		SearchRange="3000.0"
 		MinDistanceFromEnemy="1000.0">
 		
 		<BaseSelection
@@ -19,7 +19,7 @@
 		id="SafestExpansionPointWaterHeuristic"
 		HeuristicType="Expansion"
 		Location="Water"
-		SearchRange="2500.0"
+		SearchRange="3000.0"
 		MinDistanceFromEnemy="1000.0">
 		
 		<BaseSelection

@@ -42,10 +42,12 @@
 			
 		<Tactic 
 			id="MoveMCVInDangerFromWaterToLand" 
-			Tactic="SimpleExpansion" 
-			EndBehavior="DISBAND" 
+			Tactic="SimpleExpansion"		
+			EndBehavior="DISBAND"
+			EndIfStateTurnsOff="false"
+			Difficulty="EASY MEDIUM HARD BRUTAL"	
 			Distance="350"
-			UpdateTime="10s">
+			UpdateTime="1s">
 			<TeamTemplate 
 				MinUnits="1" 
 				MaxUnits="1"
@@ -107,9 +109,11 @@
 		<Tactic 
 			id="MoveMCVInDangerFromLandToWater" 
 			Tactic="SimpleExpansion" 
-			EndBehavior="DISBAND" 
+			EndBehavior="DISBAND"
+			EndIfStateTurnsOff="false"
+			Difficulty="EASY MEDIUM HARD BRUTAL"
 			Distance="350"
-			UpdateTime="10s">
+			UpdateTime="1s">
 			<TeamTemplate 
 				MinUnits="1" 
 				MaxUnits="1"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AITargetingHeuristic
+		id="ClosestFriendlyCommandoBomberAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="BOMBER_AIRCRAFT COMMANDO"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="2000.0">
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyNonCommandoBomberAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="BOMBER_AIRCRAFT"
+		ForbiddenKindOf="COMMANDO"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="2000.0">
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyTransportAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="AIRCRAFT TRANSPORT"
+		VitalObjectStatus="CONTAINER_OCCUPIED"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="2000.0">
+	</AITargetingHeuristic>
+</AssetDeclaration>

@@ -33,14 +33,14 @@
 		
 		<TargetHeuristic 
 			TargetHeuristic="ClosestCivilianGarrisonHeuristic" 
-			Priority="10"/>
+			Priority="1"/>
 		<Tactic 
-			id="GarrisonNearbyCivilianBuildings" 
+			id="JapanGarrisonNearbyCivilianBuildings" 
 			Tactic="GarrisonBuilding" 
 			EndBehavior="DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
 			Difficulty="HARD BRUTAL"
-			Distance="400"
+			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
 			EndIfStateTurnsOff="false"
@@ -63,7 +63,7 @@
 				SortByDistance="true">
 				<CreateUnits 
 					UnitName="JapanAntiVehicleInfantry" 
-					MinUnits="4" 
+					MinUnits="3" 
 					MaxUnits="5"/>
 				<CreateUnits 
 					UnitName="JapanArcherInfantry" 

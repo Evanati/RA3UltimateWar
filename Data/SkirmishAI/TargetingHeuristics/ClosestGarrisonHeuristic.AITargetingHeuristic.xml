@@ -10,7 +10,7 @@
 		Relationship="NEUTRAL"
 		Location="Land"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="350.0">
+		MinDistanceFromEnemy="300.0">
 		
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE"

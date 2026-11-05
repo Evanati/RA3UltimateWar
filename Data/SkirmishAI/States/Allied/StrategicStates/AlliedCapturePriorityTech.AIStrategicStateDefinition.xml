@@ -34,17 +34,17 @@
 		
 		<TargetHeuristic 
 			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
-			Priority="10"/>
+			Priority="9"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
-			Priority="10"/>
+			Priority="9"/>
 		<Tactic 
-			id="Engineer" 
+			id="AlliedCaptureHighPriorityTechWithEngineer" 
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
 			Difficulty="MEDIUM HARD BRUTAL"
-			Distance="400"
+			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
 			EndIfStateTurnsOff="false"
@@ -61,9 +61,9 @@
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="false"
-				AllowedLocomotorTypes="LAND AMPHIBIOUS AIR"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
 				DistanceSortPoint="TARGET_POINT"
-				MicroManager="CaptureAnythingMicroManager"
+				MicroManager="CaptureTechMicroManager"
 				SortByDistance="true">
 				<CreateUnits 
 					UnitName="AlliedEngineer" 
@@ -120,12 +120,12 @@
 			TargetHeuristic="ClosestInfantryHealTechStructureHeuristic" 
 			Priority="5"/>
 		<Tactic 
-			id="Engineer" 
+			id="AlliedCaptureMediumPriorityTechWithEngineer" 
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
 			Difficulty="MEDIUM HARD BRUTAL"
-			Distance="400"
+			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
 			EndIfStateTurnsOff="false"
@@ -142,9 +142,9 @@
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="false"
-				AllowedLocomotorTypes="LAND AMPHIBIOUS AIR"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
 				DistanceSortPoint="TARGET_POINT"
-				MicroManager="CaptureAnythingMicroManager"
+				MicroManager="CaptureTechMicroManager"
 				SortByDistance="true">
 				<CreateUnits 
 					UnitName="AlliedEngineer" 
@@ -198,12 +198,12 @@
 			TargetHeuristic="ClosestResidualTechStructureHeuristic" 
 			Priority="1"/>
 		<Tactic 
-			id="Engineer" 
+			id="AlliedCaptureLowPriorityTechWithEngineer" 
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			DisbandAfterRetreatTeamSize="999"
 			Difficulty="EASY MEDIUM HARD BRUTAL"
-			Distance="400"
+			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
 			EndIfStateTurnsOff="false"
@@ -220,9 +220,9 @@
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="false"
-				AllowedLocomotorTypes="LAND AMPHIBIOUS AIR"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
 				DistanceSortPoint="TARGET_POINT"
-				MicroManager="CaptureAnythingMicroManager"
+				MicroManager="CaptureTechMicroManager"
 				SortByDistance="true">
 				<CreateUnits 
 					UnitName="AlliedEngineer" 

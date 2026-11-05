@@ -2,10 +2,10 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
-		id="FighterAircraftEscortBomber"
-		MaxTargets="2"
+		id="HighValueAircraftFighterAircraftEscort"
 		MaxRunningCopies="0"
-		MaxInactiveCopies="0">
+		MaxInactiveCopies="0"
+		MaxTargets="2">
 		
 		<Heuristic>
 			<ObjectOfTypeExistsHeuristic
@@ -25,29 +25,35 @@
 		</Heuristic>
 		
 		<TargetHeuristic
-			TargetHeuristic="ClosestFriendlyBomberAircraftHeuristic"
-			Priority="10" />
+			TargetHeuristic="ClosestFriendlyCommandoBomberAircraftHeuristic"
+			Priority="3" />
+		<TargetHeuristic
+			TargetHeuristic="ClosestFriendlyNonCommandoBomberAircraftHeuristic"
+			Priority="2" />
+		<TargetHeuristic
+			TargetHeuristic="ClosestFriendlyTransportAircraftHeuristic"
+			Priority="1" />
 		<Tactic
-			id="EscortFriendlyBombersWithFighterAircrafts"
+			id="EscortHighValueAircraftWithFighterAircrafts"
 			Tactic="StaticDefense"
 			EndBehavior="DISBAND"
+			EndIfStateTurnsOff="true"
 			DisbandAfterRetreatTeamSize="0"
+			UseAestheticsManager="true"
 			AestheticsManagerPatrolIdleTime="10s"
 			AestheticsManagerMinDistanceFromHarvester="300"
 			Difficulty="HARD BRUTAL"
-			Distance="400"
+			Distance="1000"
 			CombatLeashSlack="1.5"
 			UpdateTime="1s"
 			Targetless="false"
-			EndIfStateTurnsOff="false"
-			UseAestheticsManager="true"
 			UseTransports="true">
 			<TeamTemplate
 				MinUnits="1"
-				MaxUnits="4"
+				MaxUnits="6"
 				IncludeKindOf="CAN_ATTACK AIRCRAFT"
 				ExcludeKindOf="HARVESTER IGNORES_SELECT_ALL"
-				Priority="HIGH"
+				Priority="STANDARD"
 				ReleaseType="RELEASE_TO_PRIORITY"
 				MicroManager="FearlessDefenseMicroManager"
 				AllowedLocomotorTypes="AIR"

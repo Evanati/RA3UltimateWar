@@ -32,7 +32,9 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSquadronLeader.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/Escort.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/DestroyEnemyHighValueAssets.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/HighValueUnitEscort.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/ProtectFriendlyHighValueAssets.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/RetreatMCV.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BudgetStates/JapanBudgets.AIBudgetStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanBalanced.AIBuildStateDefinition.xml"/>
@@ -50,6 +52,9 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/StrategicStates/SovietDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 			
 		<!-- Targeting heuristics -->
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestEnemyStructureHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestFriendlyStructureHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestFriendlyUnitHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestGarrisonHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechStructureHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestExpansionPointHeuristic.AITargetingHeuristic.xml"/>

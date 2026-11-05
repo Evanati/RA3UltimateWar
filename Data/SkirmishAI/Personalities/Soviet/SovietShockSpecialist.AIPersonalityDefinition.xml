@@ -32,9 +32,9 @@
 		EmergencyManagerHandleNoConyardAtDifficulty="EASY MEDIUM HARD BRUTAL"
 		EmergencyManagerHandleUnderAttackAtDifficulty="EASY MEDIUM HARD BRUTAL"
 		EmergencyManagerHandleConyardInDangerAtDifficulty="MEDIUM HARD BRUTAL"
-		ConyardInDangerEmergencyUnderAttackTime="5s"
+		ConyardInDangerEmergencyUnderAttackTime="3s"
 		ConyardInDangerEmergencyHealthPercent="50%"
-		ConyardInDangerEmergencyEngineerDistance="400"
+		ConyardInDangerEmergencyEngineerDistance="500"
 		EnemySortingBrutalDifficulty="NearestFirst_BreakTies"
 		EnemySortingHardDifficulty="NearestFirst_BreakTies"
 		EnemySortingMediumDifficulty="Flat"
@@ -316,6 +316,18 @@
 			State="CratePickup"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
+			id="DestroyImportantTechStructuresOwnedAlliedEnemy"
+			State="DestroyImportantTechStructuresOwnedAlliedEnemy"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
+			id="DestroyImportantTechStructuresOwnedJapanEnemy"
+			State="DestroyImportantTechStructuresOwnedJapanEnemy"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
+			id="DestroyImportantTechStructuresOwnedSovietEnemy"
+			State="DestroyImportantTechStructuresOwnedSovietEnemy"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
 			id="EngineerIdle"
 			State="EngineerIdle"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -328,10 +340,6 @@
 			State="FighterAircraft_MEDIUM"
 			Difficulty="EASY MEDIUM" />
 		<StrategicState
-			id="FighterAircraftEscortBomber"
-			State="FighterAircraftEscortBomber"
-			Difficulty="HARD BRUTAL" />
-		<StrategicState
 			id="FighterAircraftFlankAttack_New"
 			State="FighterAircraftFlankAttack_New"
 			Difficulty="HARD BRUTAL" />
@@ -339,6 +347,10 @@
 			id="HarvesterController"
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HighValueAircraftFighterAircraftEscort"
+			State="HighValueAircraftFighterAircraftEscort"
+			Difficulty="HARD BRUTAL" />
 		<StrategicState
 			id="JapanEggUnpacker"
 			State="JapanEggUnpacker"
@@ -371,6 +383,14 @@
 			id="LandEmergencyDefense_MEDIUM"
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
+		<StrategicState
+			id="ProtectFriendlyMoneyTechStructures"
+			State="ProtectFriendlyMoneyTechStructures"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="ProtectFriendlyNonMoneyTechStructures"
+			State="ProtectFriendlyNonMoneyTechStructures"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="RetreatMCVFromLandToWater"
 			State="RetreatMCVFromLandToWater"
