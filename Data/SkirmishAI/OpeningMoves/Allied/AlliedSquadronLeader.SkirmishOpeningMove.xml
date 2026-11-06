@@ -24,25 +24,36 @@
 		<Order Time="0s" Build="AlliedBarracks" /> <!-- Power balance: 50/25 -->
 		<Order Time="10s" Build="AlliedCrane" /> <!-- Power balance: 50/25 -->
 		
-		<!-- Scout unit -->
+		<!-- Scout units -->
 		<Order Time="10s" Build="AlliedScoutInfantry" />
-		<!-- Scout unit -->
+		<Order Time="12s" Build="AlliedScoutInfantry" />
+		<Order Time="14s" Build="AlliedScoutInfantry" />
+		<!-- Scout units -->
 		
 		<Order Time="30s" Build="AlliedPowerPlant" /> <!-- Power balance: 150/25 -->
 		<Order Time="30s" Build="AlliedPowerPlant" /> <!-- Power balance: 250/25 -->
 		<Order Time="40s" Build="AlliedRefinery" /> <!-- Power balance: 250/75 -->
 		<Order Time="40s" Build="AlliedRefinery" /> <!-- Power balance: 250/125 -->
-		<Order Time="60s" Build="AlliedAirfield" /> <!-- Power balance: 250/175 -->
-		<Order Time="60s" Build="AlliedWarFactory" /> <!-- Power balance: 250/225 -->
-		<Order Time="75s" Build="AlliedPowerPlant" /> <!-- Power balance: 350/225 -->
-		<Order Time="80s" Build="AlliedAirfield" /> <!-- Power balance: 350/275 -->
-		<Order Time="85s" Build="AlliedWarFactory" /> <!-- Power balance: 350/325 -->
-		<Order Time="95s" Build="AlliedPowerPlant" /> <!-- Power balance: 450/325 -->
-		<Order Time="105s" Build="AlliedAirfield" /> <!-- Power balance: 450/375 -->
-		<Order Time="105s" Build="AlliedAirfield" /> <!-- Power balance: 450/425 -->
-		<Order Time="120s" Build="AlliedPowerPlant" /> <!-- Power balance: 550/425 -->
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="130s" Build="Upgrade_AlliedTech2" />
+		
+		<!-- Rush units -->
+		<Order Time="60s" Build="AlliedAntiInfantryInfantry" />
+		<Order Time="65s" Build="AlliedAntiInfantryInfantry" />
+		<Order Time="70s" Build="AlliedAntiVehicleInfantry" />
+		<Order Time="75s" Build="AlliedAntiVehicleInfantry" />
+		<Order Time="80s" Build="AlliedSniperInfantry" />
+		<!-- Rush units -->
+		
+		<Order Time="80s" Build="AlliedAirfield" /> <!-- Power balance: 250/175 -->
+		<Order Time="80s" Build="AlliedWarFactory" /> <!-- Power balance: 250/225 -->
+		<Order Time="95s" Build="AlliedPowerPlant" /> <!-- Power balance: 350/225 -->
+		<Order Time="100s" Build="AlliedAirfield" /> <!-- Power balance: 350/275 -->
+		<Order Time="105s" Build="AlliedWarFactory" /> <!-- Power balance: 350/325 -->
+		<Order Time="115s" Build="AlliedPowerPlant" /> <!-- Power balance: 450/325 -->
+		<Order Time="125s" Build="AlliedAirfield" /> <!-- Power balance: 450/375 -->
+		<Order Time="125s" Build="AlliedAirfield" /> <!-- Power balance: 450/425 -->
+		<Order Time="140s" Build="AlliedPowerPlant" /> <!-- Power balance: 550/425 -->
+		<Order Time="140s" Build="Upgrade_AlliedTech2" />
+		<Order Time="150s" Build="Upgrade_AlliedTech2" />
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove

@@ -32,9 +32,9 @@
 		EmergencyManagerHandleNoConyardAtDifficulty="EASY MEDIUM HARD BRUTAL"
 		EmergencyManagerHandleUnderAttackAtDifficulty="EASY MEDIUM HARD BRUTAL"
 		EmergencyManagerHandleConyardInDangerAtDifficulty="MEDIUM HARD BRUTAL"
-		ConyardInDangerEmergencyUnderAttackTime="3s"
-		ConyardInDangerEmergencyHealthPercent="60%"
-		ConyardInDangerEmergencyEngineerDistance="500"
+		ConyardInDangerEmergencyUnderAttackTime="2s"
+		ConyardInDangerEmergencyHealthPercent="80%"
+		ConyardInDangerEmergencyEngineerDistance="300"
 		EnemySortingBrutalDifficulty="NearestFirst_BreakTies"
 		EnemySortingHardDifficulty="NearestFirst_BreakTies"
 		EnemySortingMediumDifficulty="Flat"
@@ -296,8 +296,8 @@
 			State="CaptureLandHusks"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="CenturyBomberAttackNEW"
-			State="CenturyBomberAttackNEW"
+			id="CenturyBomberAttack"
+			State="CenturyBomberAttack"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="Cleanup"
@@ -364,14 +364,6 @@
 			State="CratePickup"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="DestroyEnemyMoneyTechStructures"
-			State="DestroyEnemyMoneyTechStructures"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="DestroyEnemyNonMoneyTechStructures"
-			State="DestroyEnemyNonMoneyTechStructures"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
 			id="EngineerIdle"
 			State="EngineerIdle"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -392,9 +384,13 @@
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
+			id="HealMachinesByFriendlyRepairTurret"
+			State="HealMachinesByFriendlyRepairTurret"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
 			id="HighValueAircraftFighterAircraftEscort"
 			State="HighValueAircraftFighterAircraftEscort"
-			Difficulty="HARD BRUTAL" />
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HurricaneDefense"
 			State="HurricaneDefense"
@@ -431,14 +427,6 @@
 			id="LandEmergencyDefense_MEDIUM"
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
-		<StrategicState
-			id="ProtectFriendlyMoneyTechStructures"
-			State="ProtectFriendlyMoneyTechStructures"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<StrategicState
-			id="ProtectFriendlyNonMoneyTechStructures"
-			State="ProtectFriendlyNonMoneyTechStructures"
-			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="RetreatMCVFromLandToWater"
 			State="RetreatMCVFromLandToWater"

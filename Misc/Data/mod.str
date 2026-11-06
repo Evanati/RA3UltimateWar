@@ -265,35 +265,6 @@
 	DESC:SovietAntiInfantryInfantryMoto
 		"A tough and experienced Soviet resistance combatant. This skilled mechanic is ready to continue the fight even without his vehicle."
 	End		
-	
-// AlliedSniperInfantry		
-	Name:AlliedSniperInfantry
-		"Sniper"
-	End
-	
-	Type:AlliedSniperInfantry
-		"Anti-Infantry / Anti-Light Vehicle"
-	End
-
-	Desc:AlliedSniperInfantry
-		"Infantry that can strike targets with precision from a long distance."
-	End
-
-	Name:ToggleAUSniperGetDown
-		"Get down"
-	End
-
-	Desc:ToggleAUSniperGetDown
-		"Lie on the ground for more stable shooting accuracy."
-	End	
-	
-	Name:ToggleAUSniperGetUp
-		"stand up"
-	End
-
-	Desc:ToggleAUSniperGetUp
-		"Stand up and be ready to move quickly at any time."
-	End		
 
 // MS04SOVIETINTEL35	
 	DialogEvent:MS04_SOVIETINTEL35
@@ -3659,12 +3630,12 @@
 
 // Version
 	Version:Format2
-		"RA3UW v0.6"
+		"RA3UW v0.7"
 	End	
 	
 // Information
 	NAME:UNITINTRO
-		"Red Alert 3: Ultimate War (v0.6)"
+		"Red Alert 3: Ultimate War (v0.7)"
 	End
 	
 	DESC:UNITINTRO
@@ -3697,6 +3668,35 @@
 	Desc:AlliedScoutInfantryDH
 		"Extra tough, fast, and alert, well-trained German Shepherds. Have lethal bites and can sniff out enemy spies from afar."
 	End
+	
+// AlliedSniperInfantry		
+	Name:AlliedSniperInfantry
+		".50 Cal Sniper"
+	End
+	
+	Type:AlliedSniperInfantry
+		"Anti-Infantry / Anti-Light Armor"
+	End
+
+	Desc:AlliedSniperInfantry
+		"Sneaky and versatile infantry with .50 Cal sniper rifles. Able to strike both non-aerial and aerial targets from a long distance. Require targets to be steady."
+	End
+
+	Name:ToggleAUSniperGetDown
+		"Get down"
+	End
+
+	Desc:ToggleAUSniperGetDown
+		"Lie down to increase firing range and firing speed. Decreases mobility significantly."
+	End	
+	
+	Name:ToggleAUSniperGetUp
+		"Get up"
+	End
+
+	Desc:ToggleAUSniperGetUp
+		"Stand up to increase mobility significantly. Decreases firing range and firing speed."
+	End		
 
 // AlliedBaseDefenseRT
 	Name:AlliedBaseDefenseRT

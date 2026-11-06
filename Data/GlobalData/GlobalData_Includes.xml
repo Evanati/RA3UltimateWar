@@ -23,6 +23,7 @@
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ABD_RepairWeapon.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedAntiGroundAircraftAutoCannon.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedBarracksDefenseShotgun.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedSniperInfantryGun.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/DefensiveTechStructureRockets.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ParticleAcceleratorFinalWeapon.WeaponTemplate.xml"/>
     </Includes>

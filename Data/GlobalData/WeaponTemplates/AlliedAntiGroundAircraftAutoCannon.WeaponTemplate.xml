@@ -30,10 +30,16 @@
 				DamageFXType="ALLIED_FIGHTER"
 				DeathType="NORMAL">
 				
-				<DamageScalarDetails Scalar= "125%">
+				<DamageScalarDetails Scalar= "90%">
 					<Filter
-						Rule="NONE">
-						<IncludeThing>AlliedAntiInfantryInfantry</IncludeThing>
+						Rule="ANY"
+						Include="VEHICLE">
+					</Filter>		
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "75%">
+					<Filter
+						Rule="ANY"
+						Include="STRUCTURE">
 					</Filter>		
 				</DamageScalarDetails>
 			</DamageNugget>	

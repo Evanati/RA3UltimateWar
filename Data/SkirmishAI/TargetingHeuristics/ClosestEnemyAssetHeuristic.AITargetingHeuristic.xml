@@ -15,6 +15,19 @@
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
+		id="ClosestEnemyDefenseTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_BASE_DEFENSE NEUTRAL_TECH"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
 		id="ClosestEnemyVeterancyTechStructureHeuristic"
 		HeuristicType="EnemyStructure"
 		VitalKindOf="GRANTS_VETERANCY"

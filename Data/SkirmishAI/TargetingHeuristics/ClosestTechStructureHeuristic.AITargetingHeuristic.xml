@@ -20,7 +20,7 @@
 		id="ClosestDefenseTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="FS_BASE_DEFENSE"
-		Relationship="NEUTRAL ENEMIES"
+		Relationship="NEUTRAL"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="550.0">
 				
@@ -156,7 +156,7 @@
 		HeuristicType="TechBuilding"
 		VitalKindOf="FS_TECHNOLOGY"
 		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
-		Relationship="NEUTRAL ENEMIES"
+		Relationship="NEUTRAL"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="700.0">
 				

@@ -111,7 +111,7 @@
 		<BuildEntry
 			Build="AlliedSniperInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.75"/>
+			CountModifier="1.0"/>
 			
 		<BuildEntry
 			Build="AlliedAntiVehicleInfantry"
@@ -126,7 +126,7 @@
 		<BuildEntry
 			Build="AlliedGrenadeInfantry"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.75"/>
+			CountModifier="0.5"/>
 			
 		<BuildEntry
 			Build="AlliedInfiltrationInfantry"
@@ -1082,12 +1082,12 @@
 		<BuildEntry
 			Build="AlliedAntiNavalScout"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="1.75"/>
+			CountModifier="1.5"/>
 			
 		<BuildEntry
 			Build="AlliedAntiInfantryVehicle"
 			Heuristic="FEWEST_UNIT"
-			CountModifier="0.5"/>
+			CountModifier="0.75"/>
 			
 		<BuildEntry
 			Build="AlliedAntiAirShip"

@@ -25,22 +25,33 @@
 		<Order Time="0s" Build="SovietBarracks" />
 		<Order Time="10s" Build="SovietPowerPlant" />
 		
-		<!-- Scout unit -->
+		<!-- Scout units -->
 		<Order Time="10s" Build="SovietScoutInfantry" />
-		<!-- Scout unit -->
+		<Order Time="12s" Build="SovietScoutInfantry" />
+		<Order Time="14s" Build="SovietScoutInfantry" />
+		<!-- Scout units -->
 		
 		<Order Time="20s" Build="SovietCrane" />
 		<Order Time="40s" Build="SovietPowerPlant" />
 		<Order Time="40s" Build="SovietPowerPlant" />
 		<Order Time="50s" Build="SovietRefinery" />
 		<Order Time="50s" Build="SovietRefinery" />
-		<Order Time="70s" Build="SovietPowerPlantAdvanced" />
-		<Order Time="70s" Build="SovietBarracks" />
-		<Order Time="80s" Build="SovietWarFactory" />
-		<Order Time="100s" Build="SovietAirfield" />
-		<Order Time="100s" Build="SovietAirfield" />
-		<Order Time="130s" Build="SovietWarFactory" />
-		<Order Time="130s" Build="SovietAirfield" />
+		
+		<!-- Rush units -->
+		<Order Time="70s" Build="SovietAntiVehicleInfantry" />
+		<Order Time="75s" Build="SovietAntiVehicleInfantry" />
+		<Order Time="80s" Build="SovietAntiVehicleInfantry" />
+		<Order Time="85s" Build="SovietAntiVehicleInfantry" />
+		<Order Time="90s" Build="SovietAntiVehicleInfantry" />
+		<!-- Rush units -->
+		
+		<Order Time="90s" Build="SovietPowerPlantAdvanced" />
+		<Order Time="90s" Build="SovietBarracks" />
+		<Order Time="100s" Build="SovietWarFactory" />
+		<Order Time="120s" Build="SovietAirfield" />
+		<Order Time="120s" Build="SovietAirfield" />
+		<Order Time="150s" Build="SovietWarFactory" />
+		<Order Time="150s" Build="SovietAirfield" />
 	</SkirmishOpeningMove>
 	
 	<SkirmishOpeningMove

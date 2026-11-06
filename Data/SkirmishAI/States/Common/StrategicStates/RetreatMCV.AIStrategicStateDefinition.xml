@@ -22,24 +22,23 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointLandHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
 			Priority="6"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
+			TargetHeuristic="SafestExpansionPointLandHeuristic" 
 			Priority="5"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
+			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
+			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
 			Priority="1"/>
-			
 		<Tactic 
 			id="MoveMCVInDangerFromWaterToLand" 
 			Tactic="SimpleExpansion"		
@@ -56,6 +55,7 @@
 				Priority="HIGH" 
 				ReleaseType="RELEASE_TO_PRIORITY" 
 				AlwaysRecruit="true"
+				AllowRecruitUnitsInCombat="false"
 				MicroManager="FearlessDefenseMicroManager">
 				<ObjectFilter 
 					Rule="ANY">
@@ -88,24 +88,23 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
 			Priority="6"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
+			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
 			Priority="5"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointLandHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
+			TargetHeuristic="SafestExpansionPointLandHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
+			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
 			Priority="1"/>
-			
 		<Tactic 
 			id="MoveMCVInDangerFromLandToWater" 
 			Tactic="SimpleExpansion" 
@@ -122,6 +121,7 @@
 				Priority="HIGH" 
 				ReleaseType="RELEASE_TO_PRIORITY" 
 				AlwaysRecruit="true"
+				AllowRecruitUnitsInCombat="false"
 				MicroManager="FearlessDefenseMicroManager">
 				<ObjectFilter 
 					Rule="ANY">

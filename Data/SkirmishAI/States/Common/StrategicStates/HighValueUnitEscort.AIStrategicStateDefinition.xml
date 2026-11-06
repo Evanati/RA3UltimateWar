@@ -5,11 +5,11 @@
 		id="HighValueAircraftFighterAircraftEscort"
 		MaxRunningCopies="0"
 		MaxInactiveCopies="0"
-		MaxTargets="2">
+		MaxTargets="1">
 		
 		<Heuristic>
 			<ObjectOfTypeExistsHeuristic
-				Location="Water Land"
+				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="ANY"
@@ -20,7 +20,7 @@
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<StructureOrHarvesterUnderAttackHeuristic
-				TimeSinceAttacked="10s"
+				TimeSinceAttacked="5s"
 				UnderAttack="false" />
 		</Heuristic>
 		
@@ -37,13 +37,13 @@
 			id="EscortHighValueAircraftWithFighterAircrafts"
 			Tactic="StaticDefense"
 			EndBehavior="DISBAND"
-			EndIfStateTurnsOff="true"
+			EndIfStateTurnsOff="false"
 			DisbandAfterRetreatTeamSize="0"
 			UseAestheticsManager="true"
 			AestheticsManagerPatrolIdleTime="10s"
 			AestheticsManagerMinDistanceFromHarvester="300"
-			Difficulty="HARD BRUTAL"
-			Distance="1000"
+			Difficulty="MEDIUM HARD BRUTAL"
+			Distance="2000"
 			CombatLeashSlack="1.5"
 			UpdateTime="1s"
 			Targetless="false"
@@ -52,7 +52,7 @@
 				MinUnits="1"
 				MaxUnits="6"
 				IncludeKindOf="CAN_ATTACK AIRCRAFT"
-				ExcludeKindOf="HARVESTER IGNORES_SELECT_ALL"
+				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="STANDARD"
 				ReleaseType="RELEASE_TO_PRIORITY"
 				MicroManager="FearlessDefenseMicroManager"

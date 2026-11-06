@@ -9,8 +9,21 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyDefenseTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_BASE_DEFENSE NEUTRAL_TECH"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -22,8 +35,8 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -35,8 +48,8 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -48,8 +61,8 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -61,8 +74,8 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -74,8 +87,8 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -87,8 +100,8 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -100,8 +113,8 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -113,8 +126,49 @@
 		SearchRange="9999.0">
 		
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE EXPANSION"
-			PreferredBaseTypes="CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
 			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyRepairStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CAN_HEAL_ALLIES"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="1000.0"
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyCommandoBomberAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="BOMBER_AIRCRAFT COMMANDO"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="2000.0">
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyNonCommandoBomberAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="BOMBER_AIRCRAFT"
+		ForbiddenKindOf="COMMANDO"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="2000.0">
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyTransportAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="AIRCRAFT TRANSPORT"
+		VitalObjectStatus="CONTAINER_OCCUPIED"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="2000.0">
 	</AITargetingHeuristic>
 </AssetDeclaration>

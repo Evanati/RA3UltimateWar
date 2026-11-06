@@ -3,7 +3,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
 		id="AlliedCaptureHighPriorityTech"
-		MaxRunningCopies="1"
+		MaxRunningCopies="2"
 		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
@@ -34,34 +34,32 @@
 		
 		<TargetHeuristic 
 			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
-			Priority="9"/>
+			Priority="50"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
-			Priority="9"/>
+			Priority="50"/>
 		<Tactic 
 			id="AlliedCaptureHighPriorityTechWithEngineer" 
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
-			DisbandAfterRetreatTeamSize="999"
+			EndIfStateTurnsOff="false"
 			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
-			EndIfStateTurnsOff="false"
 			UseTransports="true">
 			<TeamTemplate 
 				MinUnits="1" 
 				MaxUnits="5" 
-				MinPowerAdvantage="0.0"
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
-				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
+				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="HIGH" 
 				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
-				AllowRecruitUnitsInCombat="true"
+				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
-				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS"
 				DistanceSortPoint="TARGET_POINT"
 				MicroManager="CaptureTechMicroManager"
 				SortByDistance="true">
@@ -75,7 +73,7 @@
 	
 	<AIStrategicStateDefinition
 		id="AlliedCaptureMediumPriorityTech"
-		MaxRunningCopies="1"
+		MaxRunningCopies="2"
 		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
@@ -106,43 +104,41 @@
 		
 		<TargetHeuristic 
 			TargetHeuristic="ClosestVeterancyTechStructureHeuristic" 
-			Priority="8"/>
+			Priority="4"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestAircraftHealTechStructureHeuristic" 
-			Priority="8"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestVehicleHealTechStructureHeuristic" 
-			Priority="7"/>
+			Priority="4"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestShipHealTechStructureHeuristic" 
-			Priority="6"/>
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestVehicleHealTechStructureHeuristic" 
+			Priority="2"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestInfantryHealTechStructureHeuristic" 
-			Priority="5"/>
+			Priority="1"/>
 		<Tactic 
 			id="AlliedCaptureMediumPriorityTechWithEngineer" 
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
-			DisbandAfterRetreatTeamSize="999"
+			EndIfStateTurnsOff="false"
 			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
-			EndIfStateTurnsOff="false"
 			UseTransports="true">
 			<TeamTemplate 
 				MinUnits="1" 
 				MaxUnits="5" 
-				MinPowerAdvantage="0.0"
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
-				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
+				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="STANDARD" 
 				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
-				AllowRecruitUnitsInCombat="true"
+				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
-				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS"
 				DistanceSortPoint="TARGET_POINT"
 				MicroManager="CaptureTechMicroManager"
 				SortByDistance="true">
@@ -156,7 +152,7 @@
 	
 	<AIStrategicStateDefinition
 		id="AlliedCaptureLowPriorityTech"
-		MaxRunningCopies="1"
+		MaxRunningCopies="2"
 		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
@@ -189,10 +185,10 @@
 			TargetHeuristic="ClosestControlTechStructureHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestRadarTechStructureHeuristic" 
+			TargetHeuristic="ClosestPowerTechStructureHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestPowerTechStructureHeuristic" 
+			TargetHeuristic="ClosestRadarTechStructureHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestResidualTechStructureHeuristic" 
@@ -201,26 +197,24 @@
 			id="AlliedCaptureLowPriorityTechWithEngineer" 
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
-			DisbandAfterRetreatTeamSize="999"
+			EndIfStateTurnsOff="false"
 			Difficulty="EASY MEDIUM HARD BRUTAL"
 			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
-			EndIfStateTurnsOff="false"
 			UseTransports="true">
 			<TeamTemplate 
 				MinUnits="1" 
 				MaxUnits="5" 
-				MinPowerAdvantage="0.0"
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
-				ExcludeKindOf="AIRCRAFT SIEGE_WEAPON IGNORES_SELECT_ALL HARVESTER"
+				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="LOW" 
 				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
-				AllowRecruitUnitsInCombat="true"
+				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
-				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS"
 				DistanceSortPoint="TARGET_POINT"
 				MicroManager="CaptureTechMicroManager"
 				SortByDistance="true">

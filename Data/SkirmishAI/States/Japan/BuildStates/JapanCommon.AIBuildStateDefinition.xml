@@ -7,7 +7,7 @@
 		
 		<Heuristic>
 			<IntervalHeuristic
-				IntervalTime="30s"
+				IntervalTime="20s"
 				ActiveTime="10s"
 				CountFrom="MAP_START" />
 			<IsBuildingHeuristic 
@@ -17,7 +17,7 @@
 				Location="Land Water"
 				PassIfExists="false">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanConstructionYard</IncludeThing>
@@ -51,7 +51,7 @@
 		
 		<Heuristic>
 			<IntervalHeuristic
-				IntervalTime="30s"
+				IntervalTime="20s"
 				ActiveTime="10s"
 				CountFrom="MAP_START" />
 			<IsBuildingHeuristic 
@@ -61,7 +61,7 @@
 				Location="Land Water"
 				PassIfExists="false">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanConstructionYard</IncludeThing>
