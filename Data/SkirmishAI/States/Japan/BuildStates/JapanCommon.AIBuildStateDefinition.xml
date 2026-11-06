@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Construction fundamentals -->
+	<AIBuildStateDefinition
+		id="JapanMCVLandBuildState">
+		
+		<Heuristic>
+			<IntervalHeuristic
+				IntervalTime="30s"
+				ActiveTime="10s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="MCV" 
+				PassIfBuilding="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>JapanMCV_Naval</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="700.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanMCV"
+			Heuristic="CONSTANT"
+			Score="10" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="JapanMCVWaterBuildState">
+		
+		<Heuristic>
+			<IntervalHeuristic
+				IntervalTime="30s"
+				ActiveTime="10s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="MCV" 
+				PassIfBuilding="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanConstructionYard</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>JapanMCV_Naval</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="700.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanMCV_Naval"
+			Heuristic="CONSTANT"
+			Score="7.5" />
+	</AIBuildStateDefinition>
+	
+	<!-- Infrastructure fundamentals -->
+	<AIBuildStateDefinition 
+		id="JapanResourceBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanPowerPlantEgg"
+			Heuristic="POWER" />
+	
+		<BuildEntry
+			Build="JapanRefineryEgg"
+			Heuristic="REFINERY" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanFactoryBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanBarracksEgg"
+			Heuristic="FACTORY" />
+
+		<BuildEntry
+			Build="JapanWarFactoryEgg"
+			Heuristic="FACTORY" />
+			
+		<BuildEntry
+			Build="JapanNavalYardEgg"
+			Heuristic="FACTORY" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanPathIndependentStructureBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanPowerPlantEgg"
+			Heuristic="POWER" />
+		
+		<BuildEntry
+			Build="JapanRefineryEgg"
+			Heuristic="REFINERY" />
+
+		<BuildEntry
+			Build="JapanBarracksEgg"
+			Heuristic="FACTORY" />
+	</AIBuildStateDefinition>
+	
+	<!-- Teching fundamentals -->
+	<AIBuildStateDefinition
+		id="JapanTechStructureBuildState"> <!-- EASY difficulty only -->
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="1000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK ENGINEER INFILTRATOR">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+			
+		<BuildEntry
+			Build="JapanTechStructureEgg"
+			Heuristic="TECH"
+			MinTime="900s" />
+			
+		<BuildEntry
+			Build="JapanSuperWeaponEgg"
+			Heuristic="TECH"
+			MinTime="1200s" />
+			
+		<BuildEntry
+			Build="JapanSuperWeaponAdvancedEgg"
+			Heuristic="TECH"
+			MinTime="1800s" />
+			
+		<BuildEntry
+			Build="JapanNewTowerEgg"
+			Heuristic="TECH"
+			MinTime="2400s" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="JapanTechUpgradeBuildState"> <!-- EASY difficulty only -->
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+		</Heuristic>
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanBarracksTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="600s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanBarracksTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="900s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="600s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanWarFactoryTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="900s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="600s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_JapanNavalYardTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="900s" />
+	</AIBuildStateDefinition>
+	
+	<!-- Needed structures/units -->
+	<AIBuildStateDefinition 
+		id="JapanNeededStructuresBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="JapanPowerPlantEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanRefineryEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanBarracksEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanWarFactoryEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanNavalYardEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanTechStructureEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanSuperWeaponEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanSuperWeaponAdvancedEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanBaseDefenseEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanBaseDefenseAdvancedEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanNewTowerEgg"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanNeededInfantryBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="JapanScoutInfantry"
+			Heuristic="NEEDED_UNIT" />
+		
+		<BuildEntry
+			Build="JapanAntiInfantryInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanEngineer"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanArcherInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanInfiltrationInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleInfantryTech3"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanCommandoTech1"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanNeededVehiclesBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="JapanLightTransportVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiInfantryVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanSentinelVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiAirVehicleTech1"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="Centurion"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech3"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiStructureVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanMiner"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanMCV"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanNeededShipsBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="JapanNavyScoutShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleVehicleTech1_Naval"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiAirShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiVehicleShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanAntiStructureShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanFortressShipEgg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanMiner_Naval"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="JapanMCV_Naval"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<!-- Defensive setups -->
+	<AIBuildStateDefinition 
+		id="JapanDefenseNormalBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<PowerAdvantageHeuristic
+				Value="2.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="7.25"/>
+			
+		<BuildEntry 
+			Build="JapanBaseDefenseAdvancedEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.25"/>
+			
+		<BuildEntry 
+			Build="JapanNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanDefenseGroundAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="INFANTRY VEHICLE AMPHIBIOUS"
+					Exclude="SHIP AIRCRAFT">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.5"/>
+			
+		<BuildEntry 
+			Build="JapanBaseDefenseAdvancedEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.75"/>
+			
+		<BuildEntry 
+			Build="JapanNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanDefenseNavalAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="SHIP AMPHIBIOUS">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="6.0"/>
+			
+		<BuildEntry 
+			Build="JapanBaseDefenseAdvancedEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0"/>
+			
+		<BuildEntry 
+			Build="JapanNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanDefenseAerialAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="AIRCRAFT">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="8.75"/>
+			
+		<BuildEntry 
+			Build="JapanNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.25"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="JapanDefenseMinimalBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<PowerAdvantageHeuristic
+				Value="2.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+			<EnemyNearbyHeuristic 
+				Distance="3000.0" 
+				EnemyNearby="false"
+				MinEnemyValue="0">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="JapanBaseDefenseEgg" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="10.0"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AIStrategicStateDefinition
+		id="RetreatMCVFromWaterToLand"
+		MaxRunningCopies="1"
+		MaxInactiveCopies="1"
+		MaxTargets="1">
+		
+		<Heuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<TargetHeuristic 
+			TargetHeuristic="SafestExpansionPointLandHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
+			Priority="1"/>
+			
+		<Tactic 
+			id="MoveMCVInDangerFromWaterToLand" 
+			Tactic="SimpleExpansion"		
+			EndBehavior="DISBAND"
+			EndIfStateTurnsOff="false"
+			Difficulty="EASY MEDIUM HARD BRUTAL"	
+			Distance="350"
+			UpdateTime="1s">
+			<TeamTemplate 
+				MinUnits="1" 
+				MaxUnits="1"
+				RegisteredObjectSet="MCVS"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
+				Priority="HIGH" 
+				ReleaseType="RELEASE_TO_PRIORITY" 
+				AlwaysRecruit="true"
+				MicroManager="FearlessDefenseMicroManager">
+				<ObjectFilter 
+					Rule="ANY">
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+	
+	<AIStrategicStateDefinition
+		id="RetreatMCVFromLandToWater"
+		MaxRunningCopies="1"
+		MaxInactiveCopies="1"
+		MaxTargets="1">
+		
+		<Heuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<TargetHeuristic 
+			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestExpansionPointLandHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
+			Priority="1"/>
+			
+		<Tactic 
+			id="MoveMCVInDangerFromLandToWater" 
+			Tactic="SimpleExpansion" 
+			EndBehavior="DISBAND"
+			EndIfStateTurnsOff="false"
+			Difficulty="EASY MEDIUM HARD BRUTAL"
+			Distance="350"
+			UpdateTime="1s">
+			<TeamTemplate 
+				MinUnits="1" 
+				MaxUnits="1"
+				RegisteredObjectSet="MCVS"
+				AllowedLocomotorTypes="LAND WATER AMPHIBIOUS AIR"
+				Priority="HIGH" 
+				ReleaseType="RELEASE_TO_PRIORITY" 
+				AlwaysRecruit="true"
+				MicroManager="FearlessDefenseMicroManager">
+				<ObjectFilter 
+					Rule="ANY">
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>JapanMCV</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+</AssetDeclaration>

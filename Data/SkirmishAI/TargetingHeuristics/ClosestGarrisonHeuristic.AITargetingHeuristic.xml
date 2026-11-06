@@ -5,10 +5,12 @@
 		id="ClosestCivilianGarrisonHeuristic"
 		HeuristicType="NeutralGarrison"
 		VitalKindOf="CIVILIAN_BUILDING GARRISON"
-		ForbiddenKindOf="SUPPLY_SOURCE GRANTS_VETERANCY FS_BASE_DEFENSE SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_TECHNOLOGY CASTLE_CENTER"
+		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER FS_TECHNOLOGY"
+		ForbiddenObjectStatus="REALLYDAMAGED"
+		Relationship="NEUTRAL"
 		Location="Land"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="350.0">
+		MinDistanceFromEnemy="300.0">
 		
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE"

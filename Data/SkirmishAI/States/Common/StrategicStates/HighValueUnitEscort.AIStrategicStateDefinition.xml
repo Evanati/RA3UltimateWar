@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AIStrategicStateDefinition
+		id="HighValueAircraftFighterAircraftEscort"
+		MaxRunningCopies="0"
+		MaxInactiveCopies="0"
+		MaxTargets="2">
+		
+		<Heuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedFighterAircraft</IncludeThing>
+					<IncludeThing>SovietFighterAircraft</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<StructureOrHarvesterUnderAttackHeuristic
+				TimeSinceAttacked="10s"
+				UnderAttack="false" />
+		</Heuristic>
+		
+		<TargetHeuristic
+			TargetHeuristic="ClosestFriendlyCommandoBomberAircraftHeuristic"
+			Priority="3" />
+		<TargetHeuristic
+			TargetHeuristic="ClosestFriendlyNonCommandoBomberAircraftHeuristic"
+			Priority="2" />
+		<TargetHeuristic
+			TargetHeuristic="ClosestFriendlyTransportAircraftHeuristic"
+			Priority="1" />
+		<Tactic
+			id="EscortHighValueAircraftWithFighterAircrafts"
+			Tactic="StaticDefense"
+			EndBehavior="DISBAND"
+			EndIfStateTurnsOff="true"
+			DisbandAfterRetreatTeamSize="0"
+			UseAestheticsManager="true"
+			AestheticsManagerPatrolIdleTime="10s"
+			AestheticsManagerMinDistanceFromHarvester="300"
+			Difficulty="HARD BRUTAL"
+			Distance="1000"
+			CombatLeashSlack="1.5"
+			UpdateTime="1s"
+			Targetless="false"
+			UseTransports="true">
+			<TeamTemplate
+				MinUnits="1"
+				MaxUnits="6"
+				IncludeKindOf="CAN_ATTACK AIRCRAFT"
+				ExcludeKindOf="HARVESTER IGNORES_SELECT_ALL"
+				Priority="STANDARD"
+				ReleaseType="RELEASE_TO_PRIORITY"
+				MicroManager="FearlessDefenseMicroManager"
+				AllowedLocomotorTypes="AIR"
+				DistanceSortPoint="TARGET_POINT"
+				RegisteredObjectSet="UNITS"
+				AlwaysRecruit="true"
+				AllowRecruitUnitsInCombat="false"
+				RequireCanAttackTarget="false"
+				SortByDistance="true"
+				IsBaseDefenseTeam="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedFighterAircraft</IncludeThing>
+					<IncludeThing>SovietFighterAircraft</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+</AssetDeclaration>

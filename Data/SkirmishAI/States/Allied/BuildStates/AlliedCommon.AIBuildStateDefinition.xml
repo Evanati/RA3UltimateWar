@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Construction fundamentals -->
+	<AIBuildStateDefinition
+		id="AlliedMCVLandBuildState">
+		
+		<Heuristic>
+			<IntervalHeuristic
+				IntervalTime="30s"
+				ActiveTime="10s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="MCV" 
+				PassIfBuilding="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedConstructionYard</IncludeThing>
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>AlliedMCV_Naval</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="700.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedMCV"
+			Heuristic="CONSTANT"
+			Score="10" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="AlliedMCVWaterBuildState">
+		
+		<Heuristic>
+			<IntervalHeuristic
+				IntervalTime="30s"
+				ActiveTime="10s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="MCV" 
+				PassIfBuilding="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedConstructionYard</IncludeThing>
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>AlliedMCV_Naval</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="700.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedMCV_Naval"
+			Heuristic="CONSTANT"
+			Score="7.5" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="AlliedCraneBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="73s"
+				ActiveTime="15s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="CRANE" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedCrane</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedCrane"
+			Heuristic="CONSTANT"
+			Score="5" />
+	</AIBuildStateDefinition>
+	
+	<!-- Infrastructure fundamentals -->
+	<AIBuildStateDefinition 
+		id="AlliedResourceBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedPowerPlant"
+			Heuristic="POWER" />
+	
+		<BuildEntry
+			Build="AlliedRefinery"
+			Heuristic="REFINERY" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedGeneralFactoryBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedDogHouse"
+			Heuristic="FACTORY" />
+		
+		<BuildEntry
+			Build="AlliedBarracks"
+			Heuristic="FACTORY" />
+
+		<BuildEntry
+			Build="AlliedWarFactory"
+			Heuristic="FACTORY" />
+			
+		<BuildEntry
+			Build="AlliedAirfield"
+			Heuristic="FACTORY" />
+			
+		<BuildEntry
+			Build="AlliedNavalYard"
+			Heuristic="FACTORY" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="AlliedNavalYardFactoryBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="120s"
+				ActiveTime="30s"
+				CountFrom="MAP_START" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="400.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedNavalYard"
+			Heuristic="CONSTANT"
+			Score="1" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedPathIndependentStructureBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedPowerPlant"
+			Heuristic="POWER" />
+		
+		<BuildEntry
+			Build="AlliedRefinery"
+			Heuristic="REFINERY" />
+		
+		<BuildEntry
+			Build="AlliedBarracks"
+			Heuristic="FACTORY" />
+			
+		<BuildEntry
+			Build="AlliedAirfield"
+			Heuristic="FACTORY" />
+	</AIBuildStateDefinition>
+	
+	<!-- Teching fundamentals -->
+	<AIBuildStateDefinition
+		id="AlliedTechStructureBuildState"> <!-- EASY difficulty only -->
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="1000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK ENGINEER INFILTRATOR">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAirfield"
+			Heuristic="TECH"
+			MinTime="600s" />
+			
+		<BuildEntry
+			Build="AlliedTechStructure"
+			Heuristic="TECH"
+			MinTime="900s" />
+			
+		<BuildEntry
+			Build="AlliedSuperWeapon"
+			Heuristic="TECH"
+			MinTime="1200s" />
+			
+		<BuildEntry
+			Build="AlliedSuperWeaponAdvanced"
+			Heuristic="TECH"
+			MinTime="1800s" />
+			
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="TECH"
+			MinTime="2400s" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="AlliedTechUpgradeBuildState"> <!-- EASY difficulty only -->
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+		</Heuristic>
+			
+		<BuildEntry
+			Upgrade="Upgrade_AlliedTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="600s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_AlliedTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="900s" />
+	</AIBuildStateDefinition>
+	
+	<!-- Needed structures/units -->
+	<AIBuildStateDefinition 
+		id="AlliedNeededStructuresBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="AlliedPowerPlant"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedRefinery"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedCrane"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedNeededInfantryBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedScoutInfantryDH"
+			Heuristic="NEEDED_UNIT" />
+		
+		<BuildEntry
+			Build="AlliedScoutInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedSniperInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedEngineer"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedGrenadeInfantry"
+			Heuristic="NEEDED_UNIT" />
+
+		<BuildEntry
+			Build="AlliedInfiltrationInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantryupg"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedCommandoTech1"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedNeededVehiclesBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle_Ground"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirVehicleTech1"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech1"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="Titan"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech3"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedArtilleryVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedFutureTank"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedFutureTankFTSeed"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedMiner"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedMCV"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedNeededAircraftsBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="AlliedTransportHelicopter"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiGroundAircraft"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraft"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraftStratoUpgrade"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="Hurricane"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="Paladin"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedSupportAircraft"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraft"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraftStratoUpgrade"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="Kodiak"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedNeededShipsBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="AlliedAntiNavalScout"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiNavyShipTech1"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedMiner_Naval"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="AlliedMCV_Naval"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<!-- Defensive setups -->
+	<AIBuildStateDefinition 
+		id="AlliedDefenseNormalBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<PowerAdvantageHeuristic
+				Value="2.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseRT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.25"/>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseMGT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.25"/>
+
+		<BuildEntry
+			Build="AlliedBaseDefenseAdvanced"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
+	
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedDefenseGroundAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="INFANTRY VEHICLE AMPHIBIOUS"
+					Exclude="SHIP AIRCRAFT">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseRT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseMGT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+
+		<BuildEntry
+			Build="AlliedBaseDefenseAdvanced"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.25"/>
+	
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedDefenseNavalAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="SHIP AMPHIBIOUS">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseRT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseMGT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.5"/>
+
+		<BuildEntry
+			Build="AlliedBaseDefenseAdvanced"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5"/>
+	
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedDefenseAerialAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="AIRCRAFT">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseRT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="8.0"/>
+	
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.25"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedDefenseMinimalBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<PowerAdvantageHeuristic
+				Value="2.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+			<EnemyNearbyHeuristic 
+				Distance="3000.0" 
+				EnemyNearby="false"
+				MinEnemyValue="0">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedBaseDefenseMGT"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5"/>
+	
+		<BuildEntry
+			Build="AlliedBaseDefense"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="7.5"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

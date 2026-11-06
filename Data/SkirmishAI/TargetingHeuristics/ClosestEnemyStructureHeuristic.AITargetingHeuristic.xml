@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AITargetingHeuristic
+		id="ClosestEnemyMoneyTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="SUPPLY_SOURCE"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyVeterancyTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="GRANTS_VETERANCY"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyAircraftHealTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="SIEGE_TOWER"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+    <AITargetingHeuristic
+		id="ClosestEnemyVehicleHealTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="CAVALRY"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyShipHealTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="MONSTER"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyInfantryHealTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="CASTLE_KEEP"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyRadarTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_RADAR"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyPowerTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_POWER"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyControlTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="CASTLE_CENTER"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+</AssetDeclaration>

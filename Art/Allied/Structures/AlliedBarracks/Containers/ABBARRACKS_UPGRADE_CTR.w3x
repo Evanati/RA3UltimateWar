@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="ABBARRACKS_UPGRADE" Hierarchy="ABBarracks_UPGRADE">
+		<SubObject SubObjectID="UPGRADE_03" BoneIndex="4">
+			<RenderObject>
+				<Mesh>ABBARRACKS_UPGRADE.UPGRADE_03</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UPGRADE_02" BoneIndex="3">
+			<RenderObject>
+				<Mesh>ABBARRACKS_UPGRADE.UPGRADE_02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="UPGRADE_01" BoneIndex="2">
+			<RenderObject>
+				<Mesh>ABBARRACKS_UPGRADE.UPGRADE_01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="FX_BONE_UPGRADE_DISH" BoneIndex="1">
+			<RenderObject>
+				<Mesh>ABBARRACKS_UPGRADE.FX_BONE_UPGRADE_DISH</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

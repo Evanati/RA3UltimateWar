@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AITargetingHeuristic
+		id="SafestFriendlyMainStructureLandHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_FACTORY"
+		Relationship="SAME_PLAYER ALLIES"
+		Location="Land"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="1000.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyMainStructureWaterHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_FACTORY"
+		Relationship="SAME_PLAYER ALLIES"
+		Location="Water"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="1000.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyMainStructureFallbackHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_FACTORY"
+		Relationship="SAME_PLAYER ALLIES"
+		Location="Land Water"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+</AssetDeclaration>

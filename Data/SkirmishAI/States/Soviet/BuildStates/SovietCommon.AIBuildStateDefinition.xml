@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Construction fundamentals -->
+	<AIBuildStateDefinition
+		id="SovietMCVLandBuildState">
+		
+		<Heuristic>
+			<IntervalHeuristic
+				IntervalTime="30s"
+				ActiveTime="10s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="MCV" 
+				PassIfBuilding="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+					<IncludeThing>SovietMCV_Naval</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="700.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietMCV"
+			Heuristic="CONSTANT"
+			Score="10" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="SovietMCVWaterBuildState">
+		
+		<Heuristic>
+			<IntervalHeuristic
+				IntervalTime="30s"
+				ActiveTime="10s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="MCV" 
+				PassIfBuilding="false"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+					<IncludeThing>SovietMCV_Naval</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="700.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietMCV_Naval"
+			Heuristic="CONSTANT"
+			Score="7.5" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="SovietCraneBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="73s"
+				ActiveTime="15s"
+				CountFrom="MAP_START" />
+			<IsBuildingHeuristic 
+				KindOf="CRANE" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietCrane</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietCrane"
+			Heuristic="CONSTANT"
+			Score="5" />
+	</AIBuildStateDefinition>
+	
+	<!-- Infrastructure fundamentals -->
+	<AIBuildStateDefinition 
+		id="SovietResourceBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietPowerPlant"
+			Heuristic="POWER" />
+			
+		<BuildEntry
+			Build="SovietPowerPlantAdvanced"
+			Heuristic="POWER" />
+	
+		<BuildEntry
+			Build="SovietRefinery"
+			Heuristic="REFINERY" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietGeneralFactoryBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY" />
+
+		<BuildEntry
+			Build="SovietWarFactory"
+			Heuristic="FACTORY" />
+			
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY" />
+			
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="FACTORY" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="SovietNavalYardFactoryBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="120s"
+				ActiveTime="30s"
+				CountFrom="MAP_START" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="400.0" 
+				EnemyNearby="false" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietNavalYard"
+			Heuristic="CONSTANT"
+			Score="1" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietPathIndependentStructureBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietPowerPlant"
+			Heuristic="POWER" />
+		
+		<BuildEntry
+			Build="SovietRefinery"
+			Heuristic="REFINERY" />
+
+		<BuildEntry
+			Build="SovietBarracks"
+			Heuristic="FACTORY" />
+			
+		<BuildEntry
+			Build="SovietAirfield"
+			Heuristic="FACTORY" />
+	</AIBuildStateDefinition>
+	
+	<!-- Teching fundamentals -->
+	<AIBuildStateDefinition
+		id="SovietTechStructureBuildState"> <!-- EASY difficulty only -->
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="1000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK ENGINEER INFILTRATOR">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietPowerPlantAdvanced"
+			Heuristic="TECH"
+			MinTime="600s" />
+		
+		<BuildEntry
+			Build="SovietAirFieldTechStructure"
+			Heuristic="TECH"
+			MinTime="1050s" />
+			
+		<BuildEntry
+			Build="SovietTechStructure"
+			Heuristic="TECH"
+			MinTime="1050s" />
+			
+		<BuildEntry
+			Build="SovietSuperWeapon"
+			Heuristic="TECH"
+			MinTime="1050s" />
+			
+		<BuildEntry
+			Build="SovietSuperWeaponAdvanced"
+			Heuristic="TECH"
+			MinTime="1800s" />
+			
+		<BuildEntry
+			Build="SovietNewTower"
+			Heuristic="TECH"
+			MinTime="2400s" />
+	</AIBuildStateDefinition>
+	
+	<!-- Needed structures/units -->
+	<AIBuildStateDefinition 
+		id="SovietNeededStructuresBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="SovietPowerPlant"
+			Heuristic="NEEDED_UNIT" />
+
+		<BuildEntry
+			Build="SovietRefinery"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietCrane"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietNeededInfantryBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietEngineer"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietMortarcycle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietHeavyAntiVehicleInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietDesolatorInfantry"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietCommandoTech1"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietNeededVehiclesBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="SovietScoutVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiInfantryVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiAirShip_Ground"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech2"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietHeavyWalkerVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech3"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SAVV4Building"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SAAV4"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietSurveyor"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietMCV"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietNeededAircraftsBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietTransportAircraft"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietNeededShipsBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+
+		<BuildEntry
+			Build="SovietAntiAirShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech2"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle_Naval"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureShip"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietSurveyor_Naval"
+			Heuristic="NEEDED_UNIT" />
+			
+		<BuildEntry
+			Build="SovietMCV_Naval"
+			Heuristic="NEEDED_UNIT" />
+	</AIBuildStateDefinition>
+	
+	<!-- Defensive setups -->
+	<AIBuildStateDefinition 
+		id="SovietDefenseNormalBuildState">
+    
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<PowerAdvantageHeuristic
+				Value="2.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="SovietBaseDefenseGround" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAir" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="6.0"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAdvanced" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+		
+		<BuildEntry 
+			Build="SovietNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietDefenseGroundAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="INFANTRY VEHICLE AMPHIBIOUS"
+					Exclude="SHIP AIRCRAFT">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="SovietBaseDefenseGround" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.5"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAdvanced" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.75"/>
+		
+		<BuildEntry 
+			Build="SovietNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietDefenseNavalAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="SHIP AMPHIBIOUS">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry 
+			Build="SovietBaseDefenseGround" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAdvanced" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="7.0"/>
+		
+		<BuildEntry 
+			Build="SovietNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietDefenseAerialAttackBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="true" 
+				MinEnemyValue="5000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="AIRCRAFT">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+			
+		<BuildEntry 
+			Build="SovietBaseDefenseAir" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="8.75"/>
+		
+		<BuildEntry 
+			Build="SovietNewTower" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.25"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietDefenseMinimalBuildState">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IsBuildingHeuristic 
+				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
+				PassIfBuilding="false"/>
+			<PowerAdvantageHeuristic
+				Value="2.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+			<EnemyNearbyHeuristic 
+				Distance="3000.0" 
+				EnemyNearby="false"
+				MinEnemyValue="0">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietBaseDefenseGround"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.75"/>
+	
+		<BuildEntry
+			Build="SovietBaseDefenseAir"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="7.25"/>
+	</AIBuildStateDefinition>
+</AssetDeclaration>

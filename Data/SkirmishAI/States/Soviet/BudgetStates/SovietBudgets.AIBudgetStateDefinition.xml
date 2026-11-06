@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AIBudgetStateDefinition
+		id="SovietOpeningMoveBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="false" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="0%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="0%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="100%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="0%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="0%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="SovietTechingBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="500"
+				EnemyNearby="false">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietPowerPlant</IncludeThing>
+					<IncludeThing>SovietPowerPlantAdvanced</IncludeThing>
+					<IncludeThing>SovietRefinery</IncludeThing>
+					<IncludeThing>SovietAirfield</IncludeThing>
+					<IncludeThing>SovietAirFieldTechStructure</IncludeThing>
+					<IncludeThing>SovietTechStructure</IncludeThing>
+					<IncludeThing>SovietSuperWeapon</IncludeThing>
+					<IncludeThing>SovietSuperWeaponAdvanced</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="5%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="5%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="70%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="5%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="5%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="SovietStandardBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="5%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="5%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="70%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="10%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="SovietCoOpBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="5%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="0%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="65%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="20%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="SovietDefenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="400"
+				MinEnemyValue="3000"
+				EnemyNearby="true">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietCrane</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietPowerPlant</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="0.75" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="8%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="2%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="75%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="9%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="5%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="1%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="SovietHeavyDefenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="400"
+				MinEnemyValue="5000"
+				EnemyNearby="true">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietCrane</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietPowerPlant</IncludeThing>
+					<IncludeThing>SovietPowerPlantAdvanced</IncludeThing>
+					<IncludeThing>SovietBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="2"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="true"
+				IncludeEnemyDefenses="false" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="12%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="0%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="75%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="5%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="5%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="3%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="SovietOffenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="700"
+				EnemyNearby="false">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietCrane</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietBarracks</IncludeThing>
+					<IncludeThing>SovietWarFactory</IncludeThing>
+					<IncludeThing>SovietAirfield</IncludeThing>
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="0.75" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="2%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="3%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="75%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="10%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="10%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+	
+	<AIBudgetStateDefinition
+		id="SovietHeavyOffenseBudget">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<EnemyNearbyHeuristic
+				Distance="1400"
+				EnemyNearby="false">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK INFILTRATOR ENGINEER" />
+			</EnemyNearbyHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietCrane</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ALL"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietBarracks</IncludeThing>
+					<IncludeThing>SovietWarFactory</IncludeThing>
+					<IncludeThing>SovietAirfield</IncludeThing>
+					<IncludeThing>SovietNavalYard</IncludeThing>
+					<IncludeThing>SovietAirFieldTechStructure</IncludeThing>
+					<IncludeThing>SovietTechStructure</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="2"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="true" />
+		</Heuristic>
+		
+		<Budget>
+			<AccountShare
+				Account="DEFENSE"
+				Percent="1%" />
+			<AccountShare
+				Account="INVESTMENT"
+				Percent="2%" />
+			<AccountShare
+				Account="PRODUCTION"
+				Percent="83%" />
+			<AccountShare
+				Account="SLUSH_FUND"
+				Percent="5%" />
+			<AccountShare
+				Account="SPECIAL_OPERATIONS"
+				Percent="9%" />
+			<AccountShare
+				Account="TECHNOLOGY"
+				Percent="0%" />
+		</Budget>
+	</AIBudgetStateDefinition>
+</AssetDeclaration>

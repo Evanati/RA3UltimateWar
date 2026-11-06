@@ -9,6 +9,7 @@
 	
 		<!-- Logic command sets -->
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedAirfieldCommandSet.LogicCommandSet.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedBarracksCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedConstructionYardCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedNewCraneCommandSet.LogicCommandSet.xml"/>	
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanNavalYardCommandSet.LogicCommandSet.xml"/>
@@ -21,6 +22,7 @@
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ABD_MachineGun.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ABD_RepairWeapon.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedAntiGroundAircraftAutoCannon.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedBarracksDefenseShotgun.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/DefensiveTechStructureRockets.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ParticleAcceleratorFinalWeapon.WeaponTemplate.xml"/>
     </Includes>

@@ -26,7 +26,7 @@
 		EnergyProduction="100"
 		EnergyBonus="10"
 		CommandSet="EmptyCommandSet"
-		KindOf="-NOT_AUTOACQUIRABLE +FS_TECHNOLOGY +NOT_SELLABLE"
+		KindOf="-NOT_AUTOACQUIRABLE +FS_POWER +NOT_SELLABLE"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="315d"
 		ProductionQueueType="MAIN_STRUCTURE"

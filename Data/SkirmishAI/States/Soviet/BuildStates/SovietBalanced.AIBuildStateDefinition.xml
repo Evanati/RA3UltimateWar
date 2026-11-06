@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Teching -->
+	<AIBuildStateDefinition
+		id="SovietBalancedTechStructureBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="1000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK ENGINEER INFILTRATOR">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietPowerPlantAdvanced"
+			Heuristic="TECH"
+			MinTime="180s" />
+			
+		<BuildEntry
+			Build="SovietTechStructure"
+			Heuristic="TECH"
+			MinTime="210s" />
+			
+		<BuildEntry
+			Build="SovietSuperWeapon"
+			Heuristic="TECH"
+			MinTime="210s" />
+			
+		<BuildEntry
+			Build="SovietAirFieldTechStructure"
+			Heuristic="TECH"
+			MinTime="270s" />
+			
+		<BuildEntry
+			Build="SovietSuperWeaponAdvanced"
+			Heuristic="TECH"
+			MinTime="360s" />
+			
+		<BuildEntry
+			Build="SovietNewTower"
+			Heuristic="TECH"
+			MinTime="480s" />
+	</AIBuildStateDefinition>
+	
+	<!-- Infantry production -->	
+	<AIBuildStateDefinition 
+		id="SovietBalancedInfantryBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0"/>
+			
+		<BuildEntry
+			Build="SovietEngineer"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+			
+		<BuildEntry
+			Build="SovietMortarcycle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="SovietHeavyAntiVehicleInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietDesolatorInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+			
+		<BuildEntry
+			Build="SovietCommandoTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedInfantryBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+		
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietEngineer"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietMortarcycle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietHeavyAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietDesolatorInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietCommandoTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedInfantryBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+		
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietEngineer"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietMortarcycle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietHeavyAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietDesolatorInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietCommandoTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedInfantryBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+			
+		<BuildEntry
+			Build="SovietScoutInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="12.5%" />
+		
+		<BuildEntry
+			Build="SovietAntiInfantryInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="12.5%"
+			PercentHigh="25%" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="25%"
+			PercentHigh="37.5%" />
+			
+		<BuildEntry
+			Build="SovietEngineer"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="37.5%"
+			PercentHigh="50%" />
+			
+		<BuildEntry
+			Build="SovietMortarcycle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="50%"
+			PercentHigh="62.5%" />
+			
+		<BuildEntry
+			Build="SovietHeavyAntiVehicleInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="62.5%"
+			PercentHigh="75%" />
+			
+		<BuildEntry
+			Build="SovietDesolatorInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="75%"
+			PercentHigh="87.5%" />
+			
+		<BuildEntry
+			Build="SovietCommandoTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="87.5%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+	
+	<!-- Vehicle production -->
+	<AIBuildStateDefinition 
+		id="SovietBalancedVehicleBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietScoutVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiInfantryVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+			
+		<BuildEntry
+			Build="SovietAntiAirShip_Ground"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.25"/>
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech2"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+			
+		<BuildEntry
+			Build="SovietHeavyWalkerVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.25"/>
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech3"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+			
+		<BuildEntry 
+			Build="SAVV4Building" 
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.75"/>
+			
+		<BuildEntry
+			Build="SovietSurveyor"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedVehicleBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietScoutVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiInfantryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiAirShip_Ground"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech2"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietHeavyWalkerVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SAVV4Building" 
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietSurveyor"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedVehicleBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietScoutVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiInfantryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiAirShip_Ground"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech2"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietHeavyWalkerVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SAVV4Building" 
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietSurveyor"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedVehicleBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietScoutVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="9.09%" />
+			
+		<BuildEntry
+			Build="SovietAntiInfantryVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="9.09%"
+			PercentHigh="18.18%" />
+			
+		<BuildEntry
+			Build="SovietAntiAirShip_Ground"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="18.18%"
+			PercentHigh="27.27%" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="27.27%"
+			PercentHigh="36.36%" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="36.36%"
+			PercentHigh="45.45%" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech2"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="45.45%"
+			PercentHigh="54.55%" />
+			
+		<BuildEntry
+			Build="SovietHeavyWalkerVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="54.55%"
+			PercentHigh="63.64%" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="63.64%"
+			PercentHigh="72.73%" />
+			
+		<BuildEntry
+			Build="SovietAntiVehicleVehicleTech3"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="72.73%"
+			PercentHigh="81.82%" />
+			
+		<BuildEntry
+			Build="SAVV4Building" 
+			Heuristic="RANDOM_UNIT"
+			PercentLow="81.82%"
+			PercentHigh="90.91%" />
+			
+		<BuildEntry
+			Build="SovietSurveyor"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="90.91%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+	
+	<!-- Aircraft production -->
+	<AIBuildStateDefinition 
+		id="SovietBalancedAircraftBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.25"/>
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.75"/>
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedAircraftBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedAircraftBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedAircraftBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiGroundAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="25%" />
+			
+		<BuildEntry
+			Build="SovietFighterAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="25%"
+			PercentHigh="50%" />
+			
+		<BuildEntry
+			Build="SovietDesolatorBomber"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="50%"
+			PercentHigh="75%" />
+			
+		<BuildEntry
+			Build="SovietBomberAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="75%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+	
+	<!-- Ship production -->
+	<AIBuildStateDefinition 
+		id="SovietBalancedShipBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiAirShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech2"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.5"/>
+			
+		<BuildEntry
+			Build="SovietAntiStructureShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="4.0"/>
+			
+		<BuildEntry
+			Build="SovietSurveyor_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedShipBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiAirShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech2"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietSurveyor_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedShipBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiAirShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech2"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="SovietSurveyor_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="SovietBalancedShipBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="SovietAntiAirShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="16.67%" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="16.67%"
+			PercentHigh="33.33%" />
+			
+		<BuildEntry
+			Build="SovietAntiNavyShipTech2"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="33.33%"
+			PercentHigh="50%" />
+			
+		<BuildEntry
+			Build="SovietGrinderVehicle_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="50%"
+			PercentHigh="66.67%" />
+			
+		<BuildEntry
+			Build="SovietAntiStructureShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="66.67%"
+			PercentHigh="83.33%" />
+			
+		<BuildEntry
+			Build="SovietSurveyor_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="83.33%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+</AssetDeclaration>

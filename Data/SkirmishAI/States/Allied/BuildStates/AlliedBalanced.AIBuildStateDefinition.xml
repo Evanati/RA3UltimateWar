@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Teching -->
+	<AIBuildStateDefinition
+		id="AlliedBalancedTechStructureBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false" 
+				MinEnemyValue="1000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Alignment="NONE"
+					Include="CAN_ATTACK ENGINEER INFILTRATOR">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAirfield"
+			Heuristic="TECH"
+			MinTime="180s" />
+			
+		<BuildEntry
+			Build="AlliedTechStructure"
+			Heuristic="TECH"
+			MinTime="180s" />
+			
+		<BuildEntry
+			Build="AlliedSuperWeaponAdvanced"
+			Heuristic="TECH"
+			MinTime="360s" />
+			
+		<BuildEntry
+			Build="AlliedSuperWeapon"
+			Heuristic="TECH"
+			MinTime="390s" />
+			
+		<BuildEntry
+			Build="ABWeatherControl"
+			Heuristic="TECH"
+			MinTime="480s" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition
+		id="AlliedBalancedTechUpgradeBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IntervalHeuristic
+				IntervalTime="60s"
+				ActiveTime="60s"
+				CountFrom="MAP_START" />
+		</Heuristic>
+			
+		<BuildEntry
+			Upgrade="Upgrade_AlliedTech2"
+			Heuristic="UPGRADE_TECH"
+			MinTime="180s" />
+			
+		<BuildEntry
+			Upgrade="Upgrade_AlliedTech3"
+			Heuristic="UPGRADE_TECH"
+			MinTime="360s" />
+	</AIBuildStateDefinition>
+	
+	<!-- Infantry production -->	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedInfantryBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+			
+		<BuildEntry
+			Build="AlliedScoutInfantryDH"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25" />
+		
+		<BuildEntry
+			Build="AlliedScoutInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75" />
+			
+		<BuildEntry
+			Build="AlliedSniperInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="3.0" />
+			
+		<BuildEntry
+			Build="AlliedEngineer"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25" />
+			
+		<BuildEntry
+			Build="AlliedGrenadeInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantry"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantryupg"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0" />
+			
+		<BuildEntry
+			Build="AlliedCommandoTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.25" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedInfantryBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedScoutInfantryDH"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+		
+		<BuildEntry
+			Build="AlliedScoutInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedSniperInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedEngineer"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedGrenadeInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantryupg"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedCommandoTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedInfantryBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedScoutInfantryDH"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+		
+		<BuildEntry
+			Build="AlliedScoutInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedSniperInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedEngineer"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedGrenadeInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantry"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantryupg"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedCommandoTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedInfantryBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedBarracks</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+			
+		<BuildEntry
+			Build="AlliedScoutInfantryDH"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="10%" />
+		
+		<BuildEntry
+			Build="AlliedScoutInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="10%"
+			PercentHigh="20%" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="20%"
+			PercentHigh="30%" />
+			
+		<BuildEntry
+			Build="AlliedSniperInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="30%"
+			PercentHigh="40%" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="40%"
+			PercentHigh="50%" />
+			
+		<BuildEntry
+			Build="AlliedEngineer"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="50%"
+			PercentHigh="60%" />
+			
+		<BuildEntry
+			Build="AlliedGrenadeInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="60%"
+			PercentHigh="70%" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantry"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="70%"
+			PercentHigh="80%" />
+			
+		<BuildEntry
+			Build="AlliedLegionnaireInfantryupg"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="80%"
+			PercentHigh="90%" />
+			
+		<BuildEntry
+			Build="AlliedCommandoTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="90%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+	
+	<!-- Vehicle production -->
+	<AIBuildStateDefinition 
+		id="AlliedBalancedVehicleBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle_Ground"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirVehicleTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5" />
+			
+		<BuildEntry
+			Build="Titan"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech3"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75" />
+			
+		<BuildEntry
+			Build="AlliedArtilleryVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0" />
+			
+		<BuildEntry
+			Build="AlliedFutureTank"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.75" />
+			
+		<BuildEntry
+			Build="AlliedFutureTankFTSeed"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5" />
+			
+		<BuildEntry
+			Build="AlliedMiner"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedVehicleBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle_Ground"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="Titan"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedArtilleryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFutureTank"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFutureTankFTSeed"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedMiner"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedVehicleBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle_Ground"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="Titan"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech3"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedArtilleryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFutureTank"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFutureTankFTSeed"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedMiner"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedVehicleBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle_Ground"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="10%" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirVehicleTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="10%"
+			PercentHigh="20%" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="20%"
+			PercentHigh="30%" />
+			
+		<BuildEntry
+			Build="Titan"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="30%"
+			PercentHigh="40%" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="40%"
+			PercentHigh="50%" />
+			
+		<BuildEntry
+			Build="AlliedAntiVehicleVehicleTech3"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="50%"
+			PercentHigh="60%" />
+			
+		<BuildEntry
+			Build="AlliedArtilleryVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="60%"
+			PercentHigh="70%" />
+			
+		<BuildEntry
+			Build="AlliedFutureTank"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="70%"
+			PercentHigh="80%" />
+			
+		<BuildEntry
+			Build="AlliedFutureTankFTSeed"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="80%"
+			PercentHigh="90%" />
+			
+		<BuildEntry
+			Build="AlliedMiner"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="90%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+	
+	<!-- Aircraft production -->
+	<AIBuildStateDefinition 
+		id="AlliedBalancedAircraftBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedTransportHelicopter"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+			
+		<BuildEntry
+			Build="AlliedAntiGroundAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="AlliedFighterAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.75"/>
+			
+		<BuildEntry
+			Build="AlliedFighterAircraftStratoUpgrade"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.0"/>
+			
+		<BuildEntry
+			Build="Paladin"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="AlliedSupportAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+			
+		<BuildEntry
+			Build="AlliedBomberAircraft"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.0"/>
+			
+		<BuildEntry
+			Build="AlliedBomberAircraftStratoUpgrade"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.5"/>
+			
+		<BuildEntry
+			Build="Kodiak"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.75"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedAircraftBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedTransportHelicopter"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiGroundAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraftStratoUpgrade"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="Paladin"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedSupportAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraftStratoUpgrade"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="Kodiak"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedAircraftBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedTransportHelicopter"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiGroundAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraftStratoUpgrade"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="Paladin"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedSupportAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraft"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraftStratoUpgrade"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="Kodiak"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedAircraftBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedTransportHelicopter"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="11.11%" />
+			
+		<BuildEntry
+			Build="AlliedAntiGroundAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="11.11%"
+			PercentHigh="22.22%" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="22.22%"
+			PercentHigh="33.33%" />
+			
+		<BuildEntry
+			Build="AlliedFighterAircraftStratoUpgrade"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="33.33%"
+			PercentHigh="44.44%" />
+			
+		<BuildEntry
+			Build="Paladin"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="44.44%"
+			PercentHigh="55.56%" />
+			
+		<BuildEntry
+			Build="AlliedSupportAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="55.56%"
+			PercentHigh="66.67%" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraft"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="66.67%"
+			PercentHigh="77.78%" />
+			
+		<BuildEntry
+			Build="AlliedBomberAircraftStratoUpgrade"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="77.78%"
+			PercentHigh="88.89%" />
+			
+		<BuildEntry
+			Build="Kodiak"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="88.89%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+	
+	<!-- Ship production -->
+	<AIBuildStateDefinition 
+		id="AlliedBalancedShipBuildState_FEWEST">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiNavalScout"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.5"/>
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+			
+		<BuildEntry
+			Build="AlliedAntiAirShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="1.25"/>
+			
+		<BuildEntry
+			Build="AlliedAntiNavyShipTech1"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="2.75"/>
+			
+		<BuildEntry
+			Build="AlliedAntiStructureShip"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="5.0"/>
+			
+		<BuildEntry
+			Build="AlliedMiner_Naval"
+			Heuristic="FEWEST_UNIT"
+			CountModifier="0.25"/>
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedShipBuildState_BEST_LIGHT">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="true"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="0.5" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiNavalScout"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiNavyShipTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedMiner_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedShipBuildState_BEST_HEAVY">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<PowerAdvantageHeuristic
+				Value="0.0"
+				OwnKindOf="CAN_ATTACK"
+				EnemyKindOf="CAN_ATTACK"
+				Above="false"
+				IncludeOwnDefenses="false"
+				IncludeEnemyDefenses="false" />
+			<ConstantHeuristic
+				Weight="1.0" />
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiNavalScout"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiNavyShipTech1"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureShip"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+			
+		<BuildEntry
+			Build="AlliedMiner_Naval"
+			Heuristic="BEST_UNIT_WEIGHTED"
+			ExpectedEfficiencyWeight="0.3"
+			ActualEfficiencyWeight="0.7" />
+	</AIBuildStateDefinition>
+	
+	<AIBuildStateDefinition 
+		id="AlliedBalancedShipBuildState_RANDOM">
+	
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+		</Heuristic>
+		
+		<BuildEntry
+			Build="AlliedAntiNavalScout"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="0%"
+			PercentHigh="16.67%" />
+			
+		<BuildEntry
+			Build="AlliedAntiInfantryVehicle"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="16.67%"
+			PercentHigh="33.33%" />
+			
+		<BuildEntry
+			Build="AlliedAntiAirShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="33.33%"
+			PercentHigh="50%" />
+			
+		<BuildEntry
+			Build="AlliedAntiNavyShipTech1"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="50%"
+			PercentHigh="66.67%" />
+			
+		<BuildEntry
+			Build="AlliedAntiStructureShip"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="66.67%"
+			PercentHigh="83.33%" />
+			
+		<BuildEntry
+			Build="AlliedMiner_Naval"
+			Heuristic="RANDOM_UNIT"
+			PercentLow="83.33%"
+			PercentHigh="100%" />
+	</AIBuildStateDefinition>
+</AssetDeclaration>
