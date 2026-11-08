@@ -1209,6 +1209,11 @@
 			DefensiveModifier="0.5"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
+			Unit="AlliedSniperInfantry"
+			OffensiveModifier="5"
+			DefensiveModifier="5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
 			Unit="AlliedSupportAircraft"
 			OffensiveModifier="2"
 			DefensiveModifier="2"

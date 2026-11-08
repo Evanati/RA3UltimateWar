@@ -34,10 +34,10 @@
 		
 		<TargetHeuristic 
 			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
-			Priority="50"/>
+			Priority="1"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
-			Priority="50"/>
+			Priority="1"/>
 		<Tactic 
 			id="AlliedCaptureHighPriorityTechWithEngineer" 
 			Tactic="Engineer" 
@@ -133,7 +133,7 @@
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
-				Priority="STANDARD" 
+				Priority="LOW" 
 				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="false"

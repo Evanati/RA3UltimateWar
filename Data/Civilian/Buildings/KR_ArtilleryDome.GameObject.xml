@@ -218,7 +218,7 @@
 				DamageType="EXPLOSIVE"
 				DeathType="NORMAL"> 
 				
-				<DamageScalarDetails Scalar= "50%">
+				<DamageScalarDetails Scalar= "30%">
 					<Filter
 						Rule="ALL"
 						Relationship="ALLIES" />
