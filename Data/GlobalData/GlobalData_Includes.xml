@@ -12,8 +12,11 @@
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedBarracksCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedConstructionYardCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedNewCraneCommandSet.LogicCommandSet.xml"/>	
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanConstructionYardCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanNavalYardCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanWarFactoryCommandSet.LogicCommandSet.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/SovietConstructionYardCommandSet.LogicCommandSet.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/SovietCraneCommandSet.LogicCommandSet.xml"/>
 			
 		<!-- Upgrade templates -->
 		<Include type="all" source="DATA:GlobalData/UpgradeTemplates/Upgrade_AlliedBaseDefenseUpgraderAI.UpgradeTemplate.xml"/>
