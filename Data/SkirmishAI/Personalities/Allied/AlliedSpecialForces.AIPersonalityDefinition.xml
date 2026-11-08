@@ -388,8 +388,12 @@
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="HealMachinesByFriendlyRepairTurret"
-			State="HealMachinesByFriendlyRepairTurret"
+			id="HealMachinesByFriendlyRepairTurretLand"
+			State="HealMachinesByFriendlyRepairTurretLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealMachinesByFriendlyRepairTurretWater"
+			State="HealMachinesByFriendlyRepairTurretWater"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HighValueAircraftFighterAircraftEscort"
@@ -577,6 +581,10 @@
 			id="AlliedMCVWaterBuildState"
 			State="AlliedMCVWaterBuildState"
 			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="AlliedNavalOutpostExpansionBaseBuildState"
+			State="AlliedNavalOutpostExpansionBaseBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="AlliedNavalYardFactoryBuildState"
 			State="AlliedNavalYardFactoryBuildState"

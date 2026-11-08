@@ -348,8 +348,12 @@
 			State="GrowingAttacks_Water_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
-			id="HealMachinesByFriendlyRepairTurret"
-			State="HealMachinesByFriendlyRepairTurret"
+			id="HealMachinesByFriendlyRepairTurretLand"
+			State="HealMachinesByFriendlyRepairTurretLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealMachinesByFriendlyRepairTurretWater"
+			State="HealMachinesByFriendlyRepairTurretWater"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HarvesterController"

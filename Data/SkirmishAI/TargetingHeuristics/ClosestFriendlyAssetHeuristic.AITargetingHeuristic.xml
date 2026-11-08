@@ -132,10 +132,27 @@
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
-		id="ClosestFriendlyRepairStructureHeuristic"
+		id="ClosestFriendlyRepairStructureLandHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="CAN_HEAL_ALLIES"
+		VitalKindOf="CAN_HEAL_ALLIES FS_TECHNOLOGY"
 		Relationship="SAME_PLAYER ALLIES"
+		Location="Land"
+		SearchRange="1000.0"
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyRepairStructureWaterHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CAN_HEAL_ALLIES FS_TECHNOLOGY"
+		Relationship="SAME_PLAYER ALLIES"
+		Location="Water"
 		SearchRange="1000.0"
 		MinDistanceFromEnemy="500.0">
 		

@@ -14,6 +14,16 @@
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
 				Location="Land Water"
 				PassIfExists="false">
 				<ObjectFilter
@@ -23,16 +33,6 @@
 					<IncludeThing>JapanConstructionYard</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>JapanMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
-				Location="Land"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>JapanWarFactory</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -58,6 +58,16 @@
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>JapanNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
 				Location="Land Water"
 				PassIfExists="false">
 				<ObjectFilter
@@ -67,16 +77,6 @@
 					<IncludeThing>JapanConstructionYard</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>JapanMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
-				Location="Water"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>JapanNavalYard</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 

@@ -19,7 +19,7 @@
 	<AITargetingHeuristic
 		id="ClosestDefenseTechStructureHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="FS_BASE_DEFENSE"
+		VitalKindOf="FS_BASE_DEFENSE FS_AIR_FIELD"
 		Relationship="NEUTRAL"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="550.0">

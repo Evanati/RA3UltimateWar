@@ -336,10 +336,6 @@
 			State="FighterAircraftFlankAttack_New"
 			Difficulty="HARD BRUTAL" />
 		<StrategicState
-			id="HealMachinesByFriendlyRepairTurret"
-			State="HealMachinesByFriendlyRepairTurret"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<StrategicState
 			id="GrowingAttacks_Land_MEDIUM"
 			State="GrowingAttacks_Land_MEDIUM"
 			Difficulty="MEDIUM" />
@@ -359,6 +355,14 @@
 			id="HarvesterController"
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealMachinesByFriendlyRepairTurretLand"
+			State="HealMachinesByFriendlyRepairTurretLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealMachinesByFriendlyRepairTurretWater"
+			State="HealMachinesByFriendlyRepairTurretWater"
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HighValueAircraftFighterAircraftEscort"
 			State="HighValueAircraftFighterAircraftEscort"
@@ -637,6 +641,10 @@
 			id="SovietMCVWaterBuildState"
 			State="SovietMCVWaterBuildState"
 			Difficulty="MEDIUM HARD BRUTAL"/>
+		<BuildState
+			id="SovietNavalOutpostExpansionBaseBuildState"
+			State="SovietNavalOutpostExpansionBaseBuildState"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="SovietNavalYardFactoryBuildState"
 			State="SovietNavalYardFactoryBuildState"

@@ -25,16 +25,16 @@
 			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
 			Priority="6"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointLandHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
 			Priority="5"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
+			TargetHeuristic="SafestExpansionPointLandHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
+			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
@@ -91,16 +91,16 @@
 			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
 			Priority="6"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
 			Priority="5"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
+			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestExpansionPointLandHeuristic" 
+			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
+			TargetHeuristic="SafestExpansionPointLandHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 

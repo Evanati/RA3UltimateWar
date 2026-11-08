@@ -13,8 +13,8 @@
 		
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE"
-			PreferredNotBaseTypes="CAPTURED UNDER_ATTACK"
-			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			PreferredNotBaseTypes="UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED NO_BUILD_RADIUS"
 			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -30,8 +30,8 @@
 		
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE"
-			PreferredNotBaseTypes="CAPTURED UNDER_ATTACK"
-			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			PreferredNotBaseTypes="UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED NO_BUILD_RADIUS"
 			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 	
@@ -46,8 +46,8 @@
 		
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE"
-			PreferredNotBaseTypes="CAPTURED UNDER_ATTACK"
-			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			PreferredNotBaseTypes="UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED NO_BUILD_RADIUS"
 			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
 	</AITargetingHeuristic>
 </AssetDeclaration>

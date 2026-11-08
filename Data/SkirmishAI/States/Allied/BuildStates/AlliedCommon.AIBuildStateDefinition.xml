@@ -14,6 +14,16 @@
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
 				Location="Land Water"
 				PassIfExists="false">
 				<ObjectFilter
@@ -23,16 +33,6 @@
 					<IncludeThing>AlliedConstructionYard</IncludeThing>
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>AlliedMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
-				Location="Land"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedWarFactory</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -58,6 +58,16 @@
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
 				Location="Land Water"
 				PassIfExists="false">
 				<ObjectFilter
@@ -67,16 +77,6 @@
 					<IncludeThing>AlliedConstructionYard</IncludeThing>
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>AlliedMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
-				Location="Water"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedNavalYard</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -110,7 +110,7 @@
 				Location="Land Water"
 				PassIfExists="false">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedCrane</IncludeThing>
@@ -207,6 +207,72 @@
 			Heuristic="CONSTANT"
 			Score="1" />
 	</AIBuildStateDefinition>
+	
+	<AIStrategicStateDefinition
+		id="AlliedNavalOutpostExpansionBaseBuildState">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true"/>
+			<CanBuildBuildingsOnSurfaceHeuristic
+				Surfaces="WATER DEEP_WATER"
+				MinPlacementGridCells="0"
+				MaxPlacementGridCells="0" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
+					<IncludeThing>AlliedOutpost</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="1000.0" 
+				EnemyNearby="false"/>
+		</Heuristic>
+
+		<TargetHeuristic 
+			TargetHeuristic="WaterExpansionHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="NearbyWaterPointHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="MediumDistanceWaterExpansionHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="MediumDistanceWaterPointHeuristic" 
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="DistantWaterExpansionHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="DistantWaterPointHeuristic" 
+			Priority="1" />
+		<Tactic 
+			id="AlliedEstablishNavalOutpostExpansionBase" 
+			Tactic="SimpleExpansion"
+			Distance="390">
+			<TeamTemplate 
+				MinUnits="1" 
+				MaxUnits="5" 
+				IncludeKindOf="CAN_ATTACK" 
+				ExcludeKindOf="SIEGE_WEAPON IGNORES_SELECT_ALL INFILTRATOR"
+				Priority="STANDARD" 
+				ReleaseType="NEVER_RELEASE" 
+				AlwaysRecruit="false"
+				AllowRecruitUnitsInCombat="false"
+				AllowedLocomotorTypes="AMPHIBIOUS WATER AIR"
+				MicroManager="DefenseMicroManager">
+				<CreateUnits 
+					MinUnits="1" 
+					MaxUnits="1"
+					UnitName="AlliedMiner" />
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
 	
 	<AIBuildStateDefinition 
 		id="AlliedPathIndependentStructureBuildState">
