@@ -20,8 +20,8 @@
 					Rule="ANY"
 					Relationship="NEUTRAL"
 					Alignment="NONE"
-					Include="CIVILIAN_BUILDING GARRISON"
-					StatusBitFlagsExclude="REALLYDAMAGED DAMAGED">
+					Include="GARRISON"
+					StatusBitFlagsExclude="REALLYDAMAGED DAMAGED CONTAINER_OCCUPIED">
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic 
@@ -60,7 +60,8 @@
 				AllowedLocomotorTypes="LAND AMPHIBIOUS AIR"
 				DistanceSortPoint="TARGET_POINT"
 				MicroManager="DefenseMicroManager"
-				SortByDistance="true">
+				SortByDistance="true"
+				IsBaseDefenseTeam="false">
 				<CreateUnits 
 					UnitName="AlliedAntiVehicleInfantry" 
 					MinUnits="3" 

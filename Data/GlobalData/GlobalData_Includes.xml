@@ -17,7 +17,10 @@
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanWarFactoryCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/SovietConstructionYardCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/SovietCraneCommandSet.LogicCommandSet.xml"/>
-			
+		
+		<!-- Special power templates -->
+		<Include type="all" source="DATA:GlobalData/SpecialPowerTemplates/SpecialPower_ToggleAUSniperGetDown.SpecialPowerTemplate.xml"/>
+		
 		<!-- Upgrade templates -->
 		<Include type="all" source="DATA:GlobalData/UpgradeTemplates/Upgrade_AlliedBaseDefenseUpgraderAI.UpgradeTemplate.xml"/>
 			

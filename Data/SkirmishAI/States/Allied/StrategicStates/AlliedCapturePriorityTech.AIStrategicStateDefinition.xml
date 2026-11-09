@@ -14,13 +14,13 @@
 				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
-				Location="Water Land"
+				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="NEUTRAL"
 					Alignment="NONE"
-					Include="SUPPLY_SOURCE FS_BASE_DEFENSE">
+					Include="SUPPLY_SOURCE">
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic 
@@ -35,15 +35,12 @@
 		<TargetHeuristic 
 			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
 			Priority="1"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
-			Priority="1"/>
 		<Tactic 
 			id="AlliedCaptureHighPriorityTechWithEngineer" 
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			EndIfStateTurnsOff="false"
-			Difficulty="MEDIUM HARD BRUTAL"
+			Difficulty="EASY MEDIUM HARD BRUTAL"
 			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
@@ -55,7 +52,7 @@
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="HIGH" 
-				ReleaseType="NEVER_RELEASE" 
+				ReleaseType="NEVER_RELEASE"
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
@@ -84,13 +81,13 @@
 				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
-				Location="Water Land"
+				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="NEUTRAL"
 					Alignment="NONE"
-					Include="GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP">
+					Include="FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP">
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic 
@@ -102,6 +99,9 @@
 				EnemyNearby="false"/>
 		</Heuristic>
 		
+		<TargetHeuristic 
+			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
+			Priority="4"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestVeterancyTechStructureHeuristic" 
 			Priority="4"/>
@@ -120,7 +120,7 @@
 		<Tactic 
 			id="AlliedCaptureMediumPriorityTechWithEngineer" 
 			Tactic="Engineer" 
-			EndBehavior="RETURN_HOME_AND_DISBAND" 
+			EndBehavior="RETURN_HOME_AND_DISBAND"
 			EndIfStateTurnsOff="false"
 			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="9999.0"
@@ -133,8 +133,8 @@
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
-				Priority="LOW" 
-				ReleaseType="NEVER_RELEASE" 
+				Priority="STANDARD" 
+				ReleaseType="RELEASE_TO_PRIORITY" 
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
@@ -163,13 +163,13 @@
 				KindOf="FS_FACTORY FS_TECHNOLOGY SUPER_WEAPON" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
-				Location="Water Land"
+				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="NEUTRAL"
 					Alignment="NONE"
-					Include="FS_RADAR FS_POWER CASTLE_CENTER FS_TECHNOLOGY">
+					Include="FS_RADAR FS_POWER CASTLE_CENTER NEUTRAL_TECH">
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<PathToTargetHeuristic 
@@ -198,7 +198,7 @@
 			Tactic="Engineer" 
 			EndBehavior="RETURN_HOME_AND_DISBAND" 
 			EndIfStateTurnsOff="false"
-			Difficulty="EASY MEDIUM HARD BRUTAL"
+			Difficulty="MEDIUM HARD BRUTAL"
 			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
@@ -210,7 +210,7 @@
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="LOW" 
-				ReleaseType="NEVER_RELEASE" 
+				ReleaseType="RELEASE_TO_PRIORITY"
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"

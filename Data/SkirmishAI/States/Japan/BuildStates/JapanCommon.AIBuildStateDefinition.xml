@@ -17,7 +17,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanWarFactory</IncludeThing>
@@ -61,7 +61,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanNavalYard</IncludeThing>

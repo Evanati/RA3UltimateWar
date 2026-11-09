@@ -348,25 +348,33 @@
 			State="GrowingAttacks_Water_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
-			id="HealMachinesByFriendlyRepairTurretLand"
-			State="HealMachinesByFriendlyRepairTurretLand"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<StrategicState
-			id="HealMachinesByFriendlyRepairTurretWater"
-			State="HealMachinesByFriendlyRepairTurretWater"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<StrategicState
 			id="HarvesterController"
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
+			id="HealDamagedVehicleByFriendlyRepairTurretLand"
+			State="HealDamagedVehicleByFriendlyRepairTurretLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealDamagedVehicleByFriendlyRepairTurretWater"
+			State="HealDamagedVehicleByFriendlyRepairTurretWater"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealReallyDamagedVehicleByFriendlyRepairTurretLand"
+			State="HealReallyDamagedVehicleByFriendlyRepairTurretLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealReallyDamagedVehicleByFriendlyRepairTurretWater"
+			State="HealReallyDamagedVehicleByFriendlyRepairTurretWater"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
 			id="JapanCaptureHighPriorityTech"
 			State="JapanCaptureHighPriorityTech"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="JapanCaptureLowPriorityTech"
 			State="JapanCaptureLowPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="JapanCaptureMediumPriorityTech"
 			State="JapanCaptureMediumPriorityTech"
@@ -432,13 +440,13 @@
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
-			id="RetreatMCVFromLandToWater"
-			State="RetreatMCVFromLandToWater"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="RetreatMCVOnLand"
+			State="RetreatMCVOnLand"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="RetreatMCVFromWaterToLand"
-			State="RetreatMCVFromWaterToLand"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="RetreatMCVOnWater"
+			State="RetreatMCVOnWater"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="ScoutAircraft"
 			State="ScoutAircraft"

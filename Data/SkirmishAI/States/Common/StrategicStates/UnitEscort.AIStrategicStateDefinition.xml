@@ -14,13 +14,14 @@
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Alignment="NONE"
+					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
 					<IncludeThing>AlliedFighterAircraft</IncludeThing>
 					<IncludeThing>SovietFighterAircraft</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<StructureOrHarvesterUnderAttackHeuristic
-				TimeSinceAttacked="5s"
+				TimeSinceAttacked="10s"
 				UnderAttack="false" />
 		</Heuristic>
 		
@@ -37,7 +38,7 @@
 			id="EscortHighValueAircraftWithFighterAircrafts"
 			Tactic="StaticDefense"
 			EndBehavior="DISBAND"
-			EndIfStateTurnsOff="false"
+			EndIfStateTurnsOff="true"
 			DisbandAfterRetreatTeamSize="0"
 			UseAestheticsManager="true"
 			AestheticsManagerPatrolIdleTime="10s"
@@ -65,9 +66,10 @@
 				SortByDistance="true"
 				IsBaseDefenseTeam="false">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Alignment="NONE"
+					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
 					<IncludeThing>AlliedFighterAircraft</IncludeThing>
 					<IncludeThing>SovietFighterAircraft</IncludeThing>
 				</ObjectFilter>

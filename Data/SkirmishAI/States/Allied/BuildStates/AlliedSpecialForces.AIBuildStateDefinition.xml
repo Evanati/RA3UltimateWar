@@ -88,7 +88,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedBarracks</IncludeThing>
@@ -159,7 +159,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedBarracks</IncludeThing>
@@ -247,7 +247,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedBarracks</IncludeThing>
@@ -335,7 +335,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedBarracks</IncludeThing>
@@ -415,7 +415,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedWarFactory</IncludeThing>
@@ -486,7 +486,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedWarFactory</IncludeThing>
@@ -574,7 +574,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedWarFactory</IncludeThing>
@@ -662,7 +662,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedWarFactory</IncludeThing>
@@ -742,7 +742,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedAirfield</IncludeThing>
@@ -813,7 +813,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedAirfield</IncludeThing>
@@ -901,7 +901,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedAirfield</IncludeThing>
@@ -989,7 +989,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedAirfield</IncludeThing>
@@ -1069,7 +1069,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedNavalYard</IncludeThing>
@@ -1120,7 +1120,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedNavalYard</IncludeThing>
@@ -1184,7 +1184,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedNavalYard</IncludeThing>
@@ -1248,7 +1248,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="NONE"
+					Rule="ANY"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedNavalYard</IncludeThing>

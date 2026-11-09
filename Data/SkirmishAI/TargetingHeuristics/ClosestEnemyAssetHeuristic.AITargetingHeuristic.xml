@@ -108,7 +108,7 @@
 	<AITargetingHeuristic
 		id="ClosestEnemyPowerTechStructureHeuristic"
 		HeuristicType="EnemyStructure"
-		VitalKindOf="FS_POWER"
+		VitalKindOf="FS_POWER NEUTRAL_TECH"
 		Relationship="ENEMIES"
 		SearchRange="9999.0">
 		
@@ -125,6 +125,20 @@
 		Relationship="ENEMIES"
 		SearchRange="9999.0">
 		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyResidualTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="NEUTRAL_TECH"
+		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
+		Relationship="ENEMIES"
+		SearchRange="9999.0">
+				
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
 			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"

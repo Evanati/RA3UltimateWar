@@ -19,10 +19,10 @@
 	<AITargetingHeuristic
 		id="ClosestDefenseTechStructureHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="FS_BASE_DEFENSE FS_AIR_FIELD"
+		VitalKindOf="FS_BASE_DEFENSE NEUTRAL_TECH"
 		Relationship="NEUTRAL"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="550.0">
+		MinDistanceFromEnemy="500.0">
 				
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
@@ -37,7 +37,7 @@
 		VitalKindOf="GRANTS_VETERANCY"
 		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
-		MinDistanceFromEnemy="500.0">
+		MinDistanceFromEnemy="550.0">
 				
 		<BaseSelection
 			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
@@ -124,7 +124,7 @@
 	<AITargetingHeuristic
 		id="ClosestPowerTechStructureHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="FS_POWER"
+		VitalKindOf="FS_POWER NEUTRAL_TECH"
 		Relationship="NEUTRAL ENEMIES"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="650.0">
@@ -140,7 +140,7 @@
 		id="ClosestControlTechStructureHeuristic"
 		HeuristicType="TechBuilding"
 		VitalKindOf="CASTLE_CENTER"
-		Relationship="NEUTRAL ENEMIES"
+		Relationship="NEUTRAL"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="650.0">
 				
@@ -154,7 +154,7 @@
 	<AITargetingHeuristic
 		id="ClosestResidualTechStructureHeuristic"
 		HeuristicType="TechBuilding"
-		VitalKindOf="FS_TECHNOLOGY"
+		VitalKindOf="NEUTRAL_TECH"
 		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
 		Relationship="NEUTRAL"
 		SearchRange="9999.0"

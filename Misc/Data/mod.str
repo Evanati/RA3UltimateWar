@@ -3679,7 +3679,7 @@
 	End
 
 	Desc:AlliedSniperInfantry
-		"Sneaky and versatile infantry with .50 Cal sniper rifles. Able to strike both non-aerial and aerial targets from a long distance. Require targets to be steady."
+		"Sneaky and versatile infantry with .50 Cal sniper rifles. Able to strike both non-aerial and aerial targets from a long distance. Requires targets to be steady."
 	End
 
 	Name:ToggleAUSniperGetDown
@@ -3687,7 +3687,7 @@
 	End
 
 	Desc:ToggleAUSniperGetDown
-		"Lie down to increase firing range and firing speed. Decreases mobility significantly."
+		"Lie down to increase firing range and firing speed at the cost of mobility."
 	End	
 	
 	Name:ToggleAUSniperGetUp
@@ -3695,7 +3695,7 @@
 	End
 
 	Desc:ToggleAUSniperGetUp
-		"Stand up to increase mobility significantly. Decreases firing range and firing speed."
+		"Stand up to increase mobility at the cost of firing range and firing speed."
 	End		
 
 // AlliedBaseDefenseRT

@@ -2,18 +2,19 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
-		id="RetreatMCVFromWaterToLand"
+		id="RetreatMCVOnLand"
 		MaxRunningCopies="1"
 		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
 		<Heuristic>
 			<ObjectOfTypeExistsHeuristic
-				Location="Water"
+				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="ANY"
-					Relationship="SAME_PLAYER">
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>
@@ -22,25 +23,43 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
-			Priority="6"/>
+			TargetHeuristic="SafestFriendlyCraneLandHeuristic" 
+			Priority="12"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
-			Priority="5"/>
+			TargetHeuristic="SafestFriendlyOutpostLandHeuristic" 
+			Priority="11"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
-			Priority="4"/>
+			TargetHeuristic="SafestFriendlyTechnologyLandHeuristic" 
+			Priority="10"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyFactoryLandHeuristic" 
+			Priority="9"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointLandHeuristic" 
-			Priority="3"/>
+			Priority="8"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyCraneWaterHeuristic" 
+			Priority="7"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyOutpostWaterHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyTechnologyWaterHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyFactoryWaterHeuristic" 
+			Priority="4"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyStructureFallbackHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
 			Priority="1"/>
 		<Tactic 
-			id="MoveMCVInDangerFromWaterToLand" 
+			id="MoveMCVInDangerToAnotherLocationOnLand" 
 			Tactic="SimpleExpansion"		
 			EndBehavior="DISBAND"
 			EndIfStateTurnsOff="false"
@@ -56,9 +75,12 @@
 				ReleaseType="RELEASE_TO_PRIORITY" 
 				AlwaysRecruit="true"
 				AllowRecruitUnitsInCombat="false"
-				MicroManager="FearlessDefenseMicroManager">
+				MicroManager="FearlessDefenseMicroManager"
+				IsBaseDefenseTeam="false">
 				<ObjectFilter 
-					Rule="ANY">
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>
@@ -68,18 +90,19 @@
 	</AIStrategicStateDefinition>
 	
 	<AIStrategicStateDefinition
-		id="RetreatMCVFromLandToWater"
+		id="RetreatMCVOnWater"
 		MaxRunningCopies="1"
 		MaxInactiveCopies="1"
 		MaxTargets="1">
 		
 		<Heuristic>
 			<ObjectOfTypeExistsHeuristic
-				Location="Land"
+				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="ANY"
-					Relationship="SAME_PLAYER">
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>
@@ -88,25 +111,43 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureWaterHeuristic" 
-			Priority="6"/>
+			TargetHeuristic="SafestFriendlyCraneWaterHeuristic" 
+			Priority="12"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureLandHeuristic" 
-			Priority="5"/>
+			TargetHeuristic="SafestFriendlyOutpostWaterHeuristic" 
+			Priority="11"/>
 		<TargetHeuristic 
-			TargetHeuristic="SafestFriendlyMainStructureFallbackHeuristic" 
-			Priority="4"/>
+			TargetHeuristic="SafestFriendlyTechnologyWaterHeuristic" 
+			Priority="10"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyFactoryWaterHeuristic" 
+			Priority="9"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointWaterHeuristic" 
-			Priority="3"/>
+			Priority="8"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyCraneLandHeuristic" 
+			Priority="7"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyOutpostLandHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyTechnologyLandHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyFactoryLandHeuristic" 
+			Priority="4"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointLandHeuristic" 
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestFriendlyStructureFallbackHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
 			TargetHeuristic="SafestExpansionPointFallbackHeuristic" 
 			Priority="1"/>
 		<Tactic 
-			id="MoveMCVInDangerFromLandToWater" 
+			id="MoveMCVInDangerToAnotherLocationOnWater" 
 			Tactic="SimpleExpansion" 
 			EndBehavior="DISBAND"
 			EndIfStateTurnsOff="false"
@@ -122,9 +163,12 @@
 				ReleaseType="RELEASE_TO_PRIORITY" 
 				AlwaysRecruit="true"
 				AllowRecruitUnitsInCombat="false"
-				MicroManager="FearlessDefenseMicroManager">
+				MicroManager="FearlessDefenseMicroManager"
+				IsBaseDefenseTeam="false">
 				<ObjectFilter 
-					Rule="ANY">
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>

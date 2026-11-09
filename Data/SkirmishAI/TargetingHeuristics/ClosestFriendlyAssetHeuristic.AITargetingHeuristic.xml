@@ -108,7 +108,7 @@
 	<AITargetingHeuristic
 		id="ClosestFriendlyPowerTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="FS_POWER"
+		VitalKindOf="FS_POWER NEUTRAL_TECH"
 		Relationship="SAME_PLAYER ALLIES"
 		SearchRange="9999.0">
 		
@@ -132,9 +132,23 @@
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
-		id="ClosestFriendlyRepairStructureLandHeuristic"
+		id="ClosestFriendlyResidualTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="NEUTRAL_TECH"
+		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
+		Relationship="SAME_PLAYER ALLIES"
+		SearchRange="9999.0">
+				
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyRepairTurretLandHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="CAN_HEAL_ALLIES FS_TECHNOLOGY"
+		VitalKindOf="FS_BASE_DEFENSE FS_TECHNOLOGY CAN_HEAL_ALLIES"
 		Relationship="SAME_PLAYER ALLIES"
 		Location="Land"
 		SearchRange="1000.0"
@@ -148,9 +162,9 @@
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
-		id="ClosestFriendlyRepairStructureWaterHeuristic"
+		id="ClosestFriendlyRepairTurretWaterHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="CAN_HEAL_ALLIES FS_TECHNOLOGY"
+		VitalKindOf="FS_BASE_DEFENSE FS_TECHNOLOGY CAN_HEAL_ALLIES"
 		Relationship="SAME_PLAYER ALLIES"
 		Location="Water"
 		SearchRange="1000.0"

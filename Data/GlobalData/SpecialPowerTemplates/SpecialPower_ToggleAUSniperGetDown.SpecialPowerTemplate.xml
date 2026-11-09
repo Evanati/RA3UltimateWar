@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<SpecialPowerTemplate
+		id="SpecialPower_ToggleAUSniperGetDown"
+		Flags="CAN_NOT_BE_SCRAMBLED"
+		ReloadTime="2s"
+		TargetType="OBJECT"
+		MinCastRange="450"
+		MaxCastRange="650"
+		WaypointModeTerminal="false" />
+</AssetDeclaration>

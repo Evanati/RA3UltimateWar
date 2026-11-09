@@ -368,12 +368,20 @@
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="HealMachinesByFriendlyRepairTurretLand"
-			State="HealMachinesByFriendlyRepairTurretLand"
+			id="HealDamagedVehicleByFriendlyRepairTurretLand"
+			State="HealDamagedVehicleByFriendlyRepairTurretLand"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="HealMachinesByFriendlyRepairTurretWater"
-			State="HealMachinesByFriendlyRepairTurretWater"
+			id="HealDamagedVehicleByFriendlyRepairTurretWater"
+			State="HealDamagedVehicleByFriendlyRepairTurretWater"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealReallyDamagedVehicleByFriendlyRepairTurretLand"
+			State="HealReallyDamagedVehicleByFriendlyRepairTurretLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="HealReallyDamagedVehicleByFriendlyRepairTurretWater"
+			State="HealReallyDamagedVehicleByFriendlyRepairTurretWater"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HighValueAircraftFighterAircraftEscort"
@@ -408,13 +416,13 @@
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
-			id="RetreatMCVFromLandToWater"
-			State="RetreatMCVFromLandToWater"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="RetreatMCVOnLand"
+			State="RetreatMCVOnLand"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="RetreatMCVFromWaterToLand"
-			State="RetreatMCVFromWaterToLand"
-			Difficulty="MEDIUM HARD BRUTAL" />
+			id="RetreatMCVOnWater"
+			State="RetreatMCVOnWater"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="SAAV4Attack"
 			State="SAAV4Attack"
@@ -430,11 +438,11 @@
 		<StrategicState
 			id="SovietCaptureHighPriorityTech"
 			State="SovietCaptureHighPriorityTech"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="SovietCaptureLowPriorityTech"
 			State="SovietCaptureLowPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="SovietCaptureMediumPriorityTech"
 			State="SovietCaptureMediumPriorityTech"
@@ -456,8 +464,8 @@
 			State="SovietGrinderVehicleHarrassment"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="SovietNavalBase"
-			State="SovietNavalBase"
+			id="SovietNavalOutpostExpansionBase"
+			State="SovietNavalOutpostExpansionBase"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="SovietStealthDetector_New"
@@ -641,14 +649,6 @@
 			id="SovietMCVWaterBuildState"
 			State="SovietMCVWaterBuildState"
 			Difficulty="MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="SovietNavalOutpostExpansionBaseBuildState"
-			State="SovietNavalOutpostExpansionBaseBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<BuildState
-			id="SovietNavalYardFactoryBuildState"
-			State="SovietNavalYardFactoryBuildState"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<BuildState
 			id="SovietNavalYardFactoryBuildState"
 			State="SovietNavalYardFactoryBuildState"
