@@ -1,0 +1,2621 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Includes>
+		<Include 
+			type="all" 
+			source="DATA:GlobalData/GlobalDefines.xml" /> 
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTBA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTBB.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTFA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTFB.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTKA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTKB.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTPA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTPB.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_DTSA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_GTPA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SATA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SDVA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SGTA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SIDA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SMVA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_CDTA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_CDTB.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_FLYA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_LNDA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SDIA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_MCNA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_MCNB.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_MCNC.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_MCND.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_CWRY.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_CWRZ.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_RNDA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SWMA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SWMB.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_SWMC.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_WADA.w3x" />
+		<Include
+			type="all"
+			source="ART:SUAntiInfantryInfantry_RNDB.w3x" />
+		<Include 
+			type="all"	
+			source="ART:NPSkeleton_SKN.w3x" />
+		<Include 
+			type="all"	
+			source="ART:NPSkeleton_DIEA.w3x" />
+		<Include 
+			type="all"	
+			source="ART:NPRadiation.w3x" />
+		<Include 
+			type="all"	
+			source="ART:NPRadiation_DIEA.w3x" />
+		<Include
+			type="all"
+			source="ART:FXTracerHeroic.xml" />
+		<Include
+			type="all"
+			source="ART:FXTracer.xml" />		
+			
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseInfantry.xml" />
+	</Includes>
+	
+	<GameObject
+		id="AlliedSniperInfantry"
+		KindOf="SELECTABLE CAN_ATTACK INFANTRY SNIPER TRANSFORMER AMPHIBIOUS SCORE CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS"
+		Browser="OPTIMIZED_PROPS UNIT"
+		Description="Desc:AlliedSniperInfantry"
+		DescriptionTransformed="Desc:AlliedSniperInfantry"
+		TypeDescription="Type:AlliedSniperInfantry"
+		TypeDescriptionTransformed="Type:AlliedSniperInfantry"
+		RadarPriority="NOT_ON_RADAR"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		JustBuiltTime="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="Allies"
+		EditorName="AlliedSniperInfantry"
+		EditorSorting="UNIT"
+		BountyValue="0"
+		BuildTime="5"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="AlliedSniperInfantryCommandSet"
+		SelectPortrait="Portrait_AuSniperStand"
+		SelectPortraitTransformed="Portrait_AuSniperProstrate"
+		ButtonImage="Button_AuSniperStand"
+		ButtonImageTransformed="Button_AuSniperProstrate"
+		VoicePriority="104"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="0.8"
+		HealthBoxHeightOffset="33"
+		LiveCameraFXPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		StructureRubbleHeight="0"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="0"
+		CommandPoints="1"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="150"
+		VoiceMoveLandToWaterTimeout="5s"
+		VoiceMoveWaterToLandTimeout="5s"
+		VoiceSelectUnderFireTimeout="10s"
+		VoiceSelectUnderFireDamageTime="3s"
+		MaxDistanceForEngaged="150"
+		EngagedStateTimeout="30"
+		ThreatLevel="10"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		FiringArc="360"
+		CamouflageDetectorLevel="1"
+		PathPriority="25"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="GUN"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon="AUSniperIcon"
+		ReinvisibilityDelay="0.5s"
+		InvisibilityOpacityMin="0.4"
+		InvisibilityOpacityMax="0.9"
+		SubGroupPriority="360"
+		EvaEventSecondDamageFarFromFirstScanRange="600"
+		EvaEventSecondDamageFarFromFirstTimeoutMS="155">
+		
+		<DisplayName>Name:AlliedSniperInfantry</DisplayName>
+		<DisplayNameTransformed>Name:AlliedSniperInfantry</DisplayNameTransformed>
+		
+		<ObjectResourceInfo>
+			<BuildCost
+				Account="=$ACCOUNT_ORE" 
+				Amount="280" />
+		</ObjectResourceInfo>
+		
+		<ArmorSet
+			Armor="AlliedAntiInfantryInfantryArmor"
+			DamageFX="InfantryDamageFX" />
+		<ArmorSet
+			Armor="CryoBeamFrozenArmor"
+			DamageFX="VehicleDamageFX"
+			Conditions="SECONDARY_DAMAGE" />
+			
+		<LocomotorSet
+			Locomotor="TestReactiveLocomotorHUMAN" 
+			Condition="NORMAL"
+			Speed="50" />
+		<LocomotorSet
+			Locomotor="HumanWaterLocomotor"
+			Condition="NORMAL"
+			Speed="50" />
+			
+		<DisplayColor
+			R="0"
+			G="0"
+			B="0"
+			A="0" />
+			
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+			
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_DrawBody"
+				InitialRecoilSpeed="0.1"
+				MaxRecoilDistance="0.1"
+				RecoilDamping="2"
+				RecoilSettleSpeed="3"
+				MinLODRequired="LOW"
+				ExtraPublicBone="AK47"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="false">
+					<Model
+						Name="ALLIEDSNIPERINFANTRY_SKN"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON"
+					RetainSubObjects="false">
+					<Model
+						Name=""
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_1"
+					RetainSubObjects="false">
+					<Model
+						Name="npskeleton_skn"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_3"
+					RetainSubObjects="false">
+					<Model
+						Name="ALLIEDSNIPERINFANTRY_SKN"
+						ExtraMesh="false" />
+					<Material
+						ShaderName="Infantry.fx"
+						TechniqueName="Default"
+						TechniqueIndex="0">
+						<Constants>
+							<Float
+								Name="ColorAmbient">
+								<Value>1</Value>
+								<Value>1</Value>
+								<Value>1</Value>
+							</Float>
+							<Float
+								Name="ColorDiffuse">
+								<Value>1</Value>
+								<Value>1</Value>
+								<Value>1</Value>
+							</Float>
+							<Float
+								Name="ColorSpecular">
+								<Value>0</Value>
+								<Value>0</Value>
+								<Value>0</Value>
+							</Float>
+							<Float
+								Name="Shininess">
+								<Value>1</Value>
+							</Float>
+							<Float
+								Name="ColorEmissive">
+								<Value>0</Value>
+								<Value>0</Value>
+								<Value>0</Value>
+							</Float>
+							<Texture
+								Name="Infantryburned">
+								<Value />
+							</Texture>
+							<Bool
+								Name="DepthWriteEnable">
+								<Value>true</Value>
+							</Bool>
+							<Bool
+								Name="AlphaTestEnable">
+								<Value>true</Value>
+							</Bool>
+							<Bool
+								Name="CullingEnable">
+								<Value>true</Value>
+							</Bool>
+							<Int
+								Name="BlendMode">
+								<Value>0</Value>
+							</Int>
+						</Constants>
+					</Material>
+					<ParticleSysBone
+						BoneName="HIPS"
+						FXParticleSystemTemplate="InfantryFireDeath_BodyFire"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="HIPS"
+						FXParticleSystemTemplate="InfantryFireDeath_BodySmoke"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="RightHand"
+						FXParticleSystemTemplate="InfantryFireDeath_HandFire"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="RightHand"
+						FXParticleSystemTemplate="InfantryFireDeath_HandSmoke"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="LeftHand"
+						FXParticleSystemTemplate="InfantryFireDeath_HandFire"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="LeftHand"
+						FXParticleSystemTemplate="InfantryFireDeath_HandSmoke"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_5"
+					RetainSubObjects="false">
+					<Model
+						Name="npradiation"
+						ExtraMesh="false" />
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="RadiationPuddle"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="RadiationSplash"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="RadiationLightSmall"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FRONTCRUSHED USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_cwry"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BACKCRUSHED USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_cwrz"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FRONTCRUSHED"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_cdta"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BACKCRUSHED"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_cdtb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STUNNED_FLAILING"
+					StateName="STATE_stunned_flailing"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_flya"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STUNNED_STANDING_UP"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_gtpa"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STUNNED"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_lnda"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING SPLATTED"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_lnda"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING OVER_WATER DEATH_5"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="npradiation_wdiea"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_5"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="npradiation_diea"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_4 USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtpb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_4"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtka"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtkb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_3"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtfa"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtfb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_2 USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtpa"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_2"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtpa"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtpb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING DEATH_1"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="npskeleton_diea"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<ParticleSysBone
+						BoneName="HIPS"
+						FXParticleSystemTemplate="Soviet_TeslaDeath_Spark"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING_WASMOVING USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_SCDIA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING_WASMOVING"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_rnda"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Animation
+						AnimationName="suantiinfantryinfantry_rndb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sdia"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtba"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtbb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					StateName="STATE_stunned_landing"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_dtsa"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6 AFFECTED_BY_EMP"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_mcnc"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Allied_DogStun01"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Allied_DogStunGlows01"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="AFFECTED_BY_EMP"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_cwrz"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Animation
+						AnimationName="suantiinfantryinfantry_cwry"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Allied_DogStun01"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Allied_DogStunGlows01"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="true"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3 USER_6"
+					StateName="STATE_StandToDown"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sdva"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="2s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3"
+					StateName="STATE_DownToStand"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sgta"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="2s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="LAUNCHED"
+					StateName="STATE_ParachuteLaunch"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_mcna"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PARACHUTING"
+					StateName="STATE_Parachuting"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_mcnc"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+                        Prev = CurDrawablePrevAnimationState()
+						
+                        if Prev == "STATE_ParachuteLaunch" then
+                            CurDrawableSetTransitionAnimState("TRANS_toParachuting")
+                        end
+                    </Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_toParachuting"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_mcnb"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_fromParachuting"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_mcnd"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING USER_6"
+					Flags="RANDOMSTART"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_smva"
+						AnimationMode="LOOP"
+						Distance="20"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6 EMOTION_CELEBRATING"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sata"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PREATTACK_A USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sata"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A USER_6"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sata"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ATTACKING USER_6"
+					StateName="STATE_SelectedPose"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sata"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED USER_6"
+					StateName="STATE_ShieldSelectedPose"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sida"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6"
+					StateName="STATE_ShieldBored"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sida"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_ShieldIdleToSelected"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_BATA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_ShieldSelectedToIdle"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_ABTA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					StateName="STATE_bored"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="true"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_BIDA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="100"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						
+						if Prev == "STATE_SelectedPose" then
+							CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						elseif Prev == "STATE_LandMove" then
+							CurDrawableSetTransitionAnimState("TRANS_RunToIdle")
+						elseif Prev == "STATE_Parachuting" then
+							CurDrawableSetTransitionAnimState("TRANS_fromParachuting")
+						elseif Prev == "STATE_stunned_flailing" then
+							CurDrawableSetTransitionAnimState("STATE_stunned_landing")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING OVER_WATER"
+					StateName="STATE_OverWater"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_swmb"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+                        Prev = CurDrawablePrevAnimationState()
+						
+                        if Prev ~= "STATE_OverWater" and Prev ~= "TRANS_ToWater" then
+                            CurDrawableSetTransitionAnimState("TRANS_ToWater")
+                        end
+                    </Script>
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="Water_Hit_For_Infantry_MoveRing"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="false"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ENGAGED OVER_WATER"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_sata"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="Water_Hit_For_Infantry_IdleRing"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="false"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="OVER_WATER"
+					StateName="STATE_OverWater"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_wada"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<ParticleSysBone
+						BoneName="None"
+						FXParticleSystemTemplate="Water_Hit_For_Infantry_IdleRing"
+						FXTrigger="NONE"
+						FXAction="NONE"
+						PersistID="0"
+						FollowBone="false"
+						OnlyIfOnWater="false"
+						OnlyIfOnLand="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					StateName="STATE_LandMove"
+					Flags="RANDOMSTART"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_RUNA"
+						AnimationMode="LOOP"
+						Distance="28"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+                        Prev = CurDrawablePrevAnimationState()
+						
+                        if Prev == "STATE_OverWater" or Prev == "TRANS_ToWater" then
+                            CurDrawableSetTransitionAnimState("TRANS_FromWater")
+                        end
+                    </Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PREATTACK_A"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_ATKA"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_ATKA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ATTACKING"
+					StateName="STATE_SelectedPose"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_AIDA"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					StateName="STATE_SelectedPose"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_AIDA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="10"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+                        Prev = CurDrawablePrevAnimationState()
+						
+                        if Prev == "STATE_bored" then
+                            CurDrawableSetTransitionAnimState("TRANS_IdleToSelected")
+                        elseif Prev == "STATE_Parachuting" then
+                            CurDrawableSetTransitionAnimState("TRANS_fromParachuting")
+                        end
+                    </Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IdleToSelected"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_BATA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1.5"
+						AnimationSpeedFactorMax="1.8"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_SelectedToIdle"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_ABTA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="15"
+						AnimationSpeedFactorMin="1.5"
+						AnimationSpeedFactorMax="1.8"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_ToWater"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_swma"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+                        CurDrawablePlaySound("SOV_Commando_WaterSplash")
+                    </Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_FromWater"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="suantiinfantryinfantry_swmc"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_RunToSelected"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_RTOA"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_RunToIdle"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="AUSNIPER_RTOB"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_DrawParachute"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="true"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="false">
+					<Model
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="LAUNCHED"
+					RetainSubObjects="false">
+					<Model
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PARACHUTING USER_8"
+					RetainSubObjects="false">
+					<Model
+						Name="npparachuteallied_skn"
+						ExtraMesh="false" />
+					<Texture
+						Original="npparachuteallied"
+						New="npparachutejapan" />
+					<Texture
+						Original="hc_npparachuteallied"
+						New="hc_npparachutejapan" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PARACHUTING USER_9"
+					RetainSubObjects="false">
+					<Model
+						Name="npparachuteallied_skn"
+						ExtraMesh="false" />
+					<Texture
+						Original="npparachuteallied"
+						New="npparachutesoviet" />
+					<Texture
+						Original="hc_npparachuteallied"
+						New="hc_npparachutesoviet" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PARACHUTING"
+					RetainSubObjects="false">
+					<Model
+						Name="npparachuteallied_skn"
+						ExtraMesh="false" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					StateName="STATE_Idle"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="LAUNCHED"
+					StateName="STATE_Launched"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PARACHUTING"
+					StateName="STATE_Parachuting"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="npparachute_fall"
+						AnimationMode="LOOP"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+					<Script>
+                        Prev = CurDrawablePrevAnimationState()
+						
+                        if Prev == "STATE_Launched" then
+                            CurDrawableSetTransitionAnimState("TRANS_toOpen")
+                        end
+                    </Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_toOpen"
+					Flags="NONE"
+					FrameForPristineBonePositions="0"
+					ShareAnimation="false"
+					AllowRepeatInRandomPick="false"
+					SimilarRestart="false">
+					<Animation
+						AnimationName="npparachute_open"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						AnimationAbsoluteTime="0s"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						AnimationMustCompleteBlend="false"
+						UseWeaponTiming="false" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_DrawGun"
+				InitialRecoilSpeed="2"
+				MaxRecoilDistance="3"
+				RecoilDamping="0.4"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				AttachToBoneInAnotherModule="AK47"
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				BirthFadeTime="0"
+				OkToChangeModelColor="false"
+				AnimationsRequirePower="true"
+				UseYAxisForTurretRotation="false"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				UseProducerTexture="false"
+				NoRotate="false"
+				UseFiringArcRotation="false"
+				Selectable="true"
+				RandomTextureFixedRandomIndex="false"
+				ParticleBonesCheckDrawable="false"
+				ShadowForceDisable="false"
+				SwitchModelLODMode="false"
+				StaticModelLODMode="false"
+				ShowShadowWhileContained="false"
+				MultiPlayerOnly="false"
+				AffectedByStealth="true"
+				InvertStealthOpacity="false"
+				HighDetailOnly="false">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="false">
+					<Model
+						Name="AUSNIPERWEAPONPOINT"
+						ExtraMesh="false" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="S_WEAPONA_FX" />
+					<WeaponRecoilBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="S_WEAPONA_FX" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="S_WEAPONA_FX" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="S_WEAPONA_FX" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		
+		<Behaviors>
+			<ObjectSMCHelper
+				id="ModuleTag_ObjectSMCHelper" />
+				
+			<ObjectDefectionHelper
+				id="ModuleTag_ObjectDectionHelper" />
+				
+			<AttributeModifierPoolUpdate
+				id="ModuleTag_AttributeModifierPoolUpdate" />
+				
+			<StancesBehavior
+				id="ModuleTag_StancesBehavior"
+				StanceTemplate="Generic" />
+				
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedSniperInfantryStand"
+						ForbiddenObjectStatus="GENERIC_TOGGLE_STATE"/>
+						
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedSniperInfantryCreep"
+						ObjectStatus="GENERIC_TOGGLE_STATE" />
+				</WeaponSlotHardpoint>			
+			</WeaponSetUpdate>
+			
+			<SuppressionUpdate
+				id="ModuleTag_SuppressionUpdate"
+				UpdateDelay="50s"
+				Suppressability="5"
+				SuppressionDuration="3s"
+				AttributeModifierSuppressed="modifier_test_suppression"
+				AttributeModifierForceMove="modifier_test_suppression_forcemove"
+				IgnoreSuppressionObjectStatus="SKIRMISH_AI_DO_NOT_TAKE IGNORING_POWER_DOWN EXCEEDED_PATH_NEIGHBOR_COUNT CANNOT_LAND_AT_AIRFIELD WALL_SEGMENT UNDER_RUSH_ATTACK EXPLOSIVES_ATTACHED SURFACED_IMMOBILE POINT_DEFENSE_DRONE_ATTACHED GRAPPLE_UPDATE_BEING_MOVED TARGETED_FOR_REPAIR IN_SPIDER_HOLE ANTI_GARRISON" />
+				
+			<Physics
+				id="ModuleTag_Physics"
+				MaxXRotationVelocity="360"
+				MaxYRotationVelocity="360"
+				MaxZRotationVelocity="1"
+				GravityMultiplier="1"
+				ShockStunnedTimeLow="1s"
+				ShockStunnedTimeHigh="1.5s"
+				ShockStandingTime="1.3s"
+				FirstHeight="1.3"
+				SecondHeight="0.33"
+				FirstPercentIndent="66%"
+				BounceDistance="1.3"
+				BounceFirstHeight="1.3"
+				BounceSecondHeight="0.33"
+				BounceFirstPercentIndent="66%"
+				BounceSecondPercentIndent="0%"
+				FirstPercentHeight="66%"
+				SecondPercentHeight="0%"
+				CurveFlattenMinDist="0"
+				TumbleRandomly="false"
+				AllowBouncing="false"
+				KillWhenRestingOnGround="false"
+				OrientToFlightPath="false"
+				IgnoreTerrainHeight="true" />
+				
+			<FreefallUpdate
+				id="ModuleTag_FreefallUpdate"
+				ModelConditionsToSet="SIEGE_CONTAIN"
+				InitialVelocity="1"
+				Acceleration="15"
+				TerminalVelocity="151.1354" />
+				
+			<SquishCollide
+				id="ModuleTag_SquishCollide"
+				CrushAnimTime="1s"
+				CrushKillDelay="0.5s"
+				UseDirectionCheck="true"
+				UseVehicleStyleCrush="false"
+				AllowAllyCrush="false" />
+				
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<AutoHealBehavior
+				id="ModuleTag_AutoHealBehavior"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				HealingAmount="1"
+				HealingDelay="0.5s"
+				StartHealingDelay="1s"
+				Radius="0"
+				RespawnMinimumDelay="0s"
+				InitiallyActive="false"
+				AffectsWholePlayer="false"
+				AffectsContained="false"
+				HealOnlyIfNotUnderAttack="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyOthers="false"
+				NonStackable="false"
+				RespawnNearbyHordeMembers="false">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>	
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_ModelConditionUpgrade_JapanFaction"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				AddConditionFlags="USER_8"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_JapanFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<ModelConditionUpgrade
+				id="ModuleTag_ModelConditionUpgrade_SovietFaction"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				AddConditionFlags="USER_9"
+				RemoveConditionFlags=""
+				AddTempConditionFlag="TOPPLED"
+				TempConditionTime="0s">
+				<TriggeredBy>Upgrade_SovietFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			
+			<SubObjectsUpgrade
+				id="ModuleTag_SubObjectsUpgrade"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true">
+				<CustomAnimAndDuration
+					AnimState="USER_1"
+					Frames="0"
+					Trigger="0" />
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+				<Nugget
+					FadeTime="0.5s"
+					WaitBeforeFadeTime="0s"
+					Upgrade="Upgrade_Veterancy_HEROIC"
+					SkipFadeOnCreate="false"
+					HideSubObjectsOnRemove="false"
+					UnHideSubObjectsOnRemove="false" />
+			</SubObjectsUpgrade>
+			
+			<SpecialPower
+				id="ModuleTag_ToggleAUSniperGetDown"
+				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
+				CanAffectObjectFilter="GenericSpecialPowerObjectFilter"
+				UpdateModuleStartsAttack="true" />
+			
+			<ToggleStatusSpecialAbilityUpdate
+				id="ModuleTag_ToggleAUSniperGetDownUpdate"
+				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
+				Options="RECONSTITUTE_STORED_COMMAND"
+				PackTime="2s"
+				TriggerAttributeModifier="AttributeModifier_AUSniperTransformation"
+				AttributeModifierDuration="2s">
+			
+				<!-- Standing -->
+				<ToggleState>
+					<SkirmishAiInfo
+						ToggleHint="TOGGLE_DEFAULT">
+						<StateWeapon
+							Weapon="AlliedSniperInfantryStand" />
+					</SkirmishAiInfo>
+				</ToggleState>
+			
+				<!-- Prone -->
+				<ToggleState
+					ObjectStatus="GENERIC_TOGGLE_STATE"
+					ModelConditions="USER_6"
+					AttributeModifier="AttributeModifier_AuSniperGetdown">
+			
+					<SkirmishAiInfo
+						ToggleHint="TOGGLE_WEAPON"
+						UseOnlyWhenPowerAdvantageIsBelow="2.0"
+						OnlyUseWhenHaveTarget="true"
+						NeverUseWhenClear="true"
+						NeverUseWhenTargetIsAnyKindOf="NO_GARRISON INFILTRATOR IGNORES_SELECT_ALL" 
+						NeverUseWhenCloserThanNUnitsFromTarget="200"
+						NeverUseWhenFurtherThanNUnitsFromTarget="600">
+						<StateWeapon
+							Weapon="AlliedSniperInfantryCreep" />
+					</SkirmishAiInfo>
+				</ToggleState>
+			</ToggleStatusSpecialAbilityUpdate>
+			
+			<RunOffMapBehavior
+				id="ModuleTag_RunOffMapBehavior"
+				RunOffMapWaypointName="RunOffMap"
+				RequiresSpecificTrigger="true"
+				DieOnMap="false"
+				FlyingOffMap="false" />
+			
+			<CrushDie
+				id="ModuleTag_CrushDie_Crushed"
+				TotalCrushSoundPercent="100%"
+				BackEndCrushSoundPercent="100%"
+				FrontEndCrushSoundPercent="100%">
+				<DieMuxData
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="CRUSHED" />
+			</CrushDie>
+			
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_Crushed">
+				<DieMuxData
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="CRUSHED" />
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			
+			<DestroyDie
+				id="ModuleTag_DestroyDie_Frozen">
+				<DieMuxData
+					RequiredStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL" />
+			</DestroyDie>
+			
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie_Frozen"
+				CreationList="InfantryShatterNewFrozen_OCL">
+				<DieMuxData
+					RequiredStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_Frozen">
+				<DieMuxData
+					RequiredStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			
+			<DestroyDie
+				id="ModuleTag_DestroyDie_Exploded">
+				<DieMuxData
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="EXPLODED" />
+			</DestroyDie>
+			
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie_Exploded"
+				CreationList="InfantryShatterNew_OCL">
+				<DieMuxData
+					ExemptStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="EXPLODED" />
+			</CreateObjectDie>
+			
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_Exploded">
+				<DieMuxData
+					ExemptStatus="UNDER_FROZEN"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="EXPLODED" />
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			
+			<DestroyDie
+				id="ModuleTag_DestroyDie_Slaughtered">
+				<DieMuxData
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="SLAUGHTERED" />
+			</DestroyDie>
+			
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_Slaughtered_Lifted">
+				<DieMuxData
+					RequiredStatus="LIFTED_INTO_AIR"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="SLAUGHTERED" />
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			
+			<FXListBehavior
+				id="ModuleTag_FXListBehavior_Slaughtered_NotLifted">
+				<DieMuxData
+					ExemptStatus="LIFTED_INTO_AIR"
+					DamageAmountRequired="-1"
+					MinKillerAngle="1d"
+					MaxKillerAngle="-1d"
+					DeathTypes="SLAUGHTERED" />
+				<Event
+					Index="onDeath"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="true"
+					ForceUseDoFXObj="false" />
+			</FXListBehavior>
+			
+			<SlowDeath
+				id="ModuleTag_AllDeath"
+				SinkDelay="7s"
+				SinkRate="2.4"
+				DestructionDelay="8.5s">
+				<Sound 
+					Type="INITIAL"
+					List="SOV_Conscript_VoiceDie" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="ELECTROCUTED LASERED BURNED STABBED IRRADIATED"/>
+			</SlowDeath>
+			
+			<SlowDeath
+				id="ModuleTag_TeslaDeath"
+				DeathFlags="DEATH_1"
+				SinkDelay="7s"
+				SinkRate="2.4"
+				DestructionDelay="8.5s">
+				<Sound
+					Type="INITIAL" 
+					List="electro_bonerattle_death" />
+                <DieMuxData
+					DeathTypes="ELECTROCUTED"
+					DeathTypesForbidden="LASERED BURNED STABBED IRRADIATED"/>
+			</SlowDeath>
+			
+			<SlowDeath
+				id="ModuleTag_LaserDeath"
+				DeathFlags="DEATH_2"
+				SinkDelay="7s"
+				SinkRate="2.4"
+				DestructionDelay="8.5s">
+				<Sound 
+					Type="INITIAL" 
+					List="SOV_Conscript_VoiceDie" />
+				<DieMuxData
+					DeathTypes="LASERED"
+					DeathTypesForbidden="ELECTROCUTED BURNED STABBED IRRADIATED"/>
+			</SlowDeath>
+			
+			<SlowDeath
+				id="ModuleTag_FireDeath"
+				DeathFlags="DEATH_3"
+				SinkDelay="7s"
+				SinkRate="2.4"
+				DestructionDelay="8.5s">
+				<Sound 
+					Type="INITIAL" 
+					List="SOV_Conscript_VoiceDieFire" />
+				<DieMuxData
+					DeathTypes="BURNED"
+					DeathTypesForbidden="ELECTROCUTED LASERED STABBED IRRADIATED"/>
+            </SlowDeath>
+			
+            <SlowDeath
+				id="ModuleTag_SwordDeath"
+				DeathFlags="DEATH_4"
+				SinkDelay="7s"
+				SinkRate="2.4"
+				DestructionDelay="8.5s">
+                <Sound 
+					Type="INITIAL" 
+					List="SOV_Conscript_VoiceDie" />
+				<DieMuxData
+					DeathTypes="STABBED"
+					DeathTypesForbidden="ELECTROCUTED LASERED BURNED IRRADIATED"/>
+			</SlowDeath>
+			
+			<SlowDeath
+				id="ModuleTag_RadiationDeath"
+				DeathFlags="DEATH_5"
+				SinkDelay="7s"
+				SinkRate="2.4"
+				DestructionDelay="8.5s">
+				<Sound
+					Type="INITIAL" 
+					List="SOV_Conscript_VoiceDie" />
+				<DieMuxData
+					DeathTypes="IRRADIATED"
+					DeathTypesForbidden="ELECTROCUTED LASERED BURNED STABBED"
+					ExemptStatus="OVER_WATER"/>
+			</SlowDeath>
+		</Behaviors>
+		
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				StateMachine="UnitAIStateMachine">
+				
+				<UnitAITargetChooserData
+					RotateToTargetWhenAiming="true" />
+			</AIUpdate>
+		</AI>
+		
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="130.0" />
+		</Body>
+		
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_YurikoVoiceDieFall">
+				<ModelConditionSound Sound="ALL_PeaceKeeper_VoiceDieYurikoFall" RequiredFlags="IMPENDING_DOOM" />
+			</ModelConditionAudioLoopClientBehavior>
+			
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_YurikoVoiceUp">
+				<ModelConditionSound Sound="ALL_PeaceKeeper_VoiceDieYurikoUp" RequiredFlags="STUNNED_FLAILING" />
+			</ModelConditionAudioLoopClientBehavior>
+			
+			<AnimationSoundClientBehavior
+				id="ModuleTag_AnimationSoundClientBehavior">
+				<Sound Sound="SOV_Bear_ParachuteOpen" Animation="SUAntiInfantryInfantry_MCNB" Frame="3" />
+				<Sound Sound="FootstepDirt" Animation="AUSNIPER_RUNA" Frame="1 14" />
+				
+				<!-- Death and bodyfall animations -->
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_CDTA" Frame="6" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_CDTB" Frame="6" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTBA" Frame="33" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTBB" Frame="59" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTFA" Frame="118" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTFB" Frame="31" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTKA" Frame="39" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTKB" Frame="45" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTPA" Frame="76" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTPB" Frame="84" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_DTSA" Frame="19" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_LNDA" Frame="6" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_MCND" Frame="4" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_RNDA" Frame="24" />
+				<Sound Sound="BodyfallGenericDirt" ExcludedMC="OVER_WATER" Animation="SUAntiInfantryInfantry_RNDB" Frame="33" />
+			</AnimationSoundClientBehavior>
+			
+			<ModelConditionSoundSelectorClientBehavior id="ModuleTag_FrozenSelectionSound">
+				<Override RequiredFlags="FROZEN">
+					<AudioArrayVoice>
+						<AudioEntry
+							Sound="unitselectfrozen"
+							AudioType="voiceSelect" />
+					</AudioArrayVoice>
+				</Override>
+			</ModelConditionSoundSelectorClientBehavior>
+		</ClientBehaviors>
+		
+		<Geometry
+			IsSmall="true">
+			<Shape 
+				Type="CYLINDER"
+				MajorRadius="5.0"
+				MinorRadius="5.0"
+				Height="15.0"
+				ContactPointGeneration="SQUAD_MEMBER">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		
+		<AudioArrayVoice>
+			<AudioEntry Sound="ALL_AuSniper_VoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="ALL_AuSniper_VoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="ALL_AuSniper_VoiceSpecial" AudioType="voiceGarrison" />
+			<AudioEntry Sound="ALL_AuSniper_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="ALL_AuSniper_VoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="ALL_AuSniper_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="ALL_AuSniper_VoiceSelect" AudioType="voiceSelect" />
+			<AudioEntry Sound="ALL_AuSniper_VoiceSelectUnderFire" AudioType="voiceSelectUnderFire" />
+		</AudioArrayVoice>
+		
+		<EvaEventArray>
+			<EvaEntry EvaEvent="UnitLost" EvaType="dieOwner" />
+			<EvaEntry EvaEvent="UnitConstructionStarted" EvaType="productionStarted" />
+			<EvaEntry EvaEvent="UnitUnderAttack" EvaType="damagedOwner" />
+			<EvaEntry EvaEvent="UnitUnderAttackFromShroudedUnit" EvaType="damagedFromShroudedSourceOwner" />
+			<EvaEntry EvaEvent="GenericUnitBeingBurned" EvaType="damagedByFireOwner" />
+			<EvaEntry EvaEvent="AllyUnitUnderAttack" EvaType="damagedAlly" />
+			<EvaEntry EvaEvent="UnitAmbushed" EvaType="ambushed" />
+			<EvaEntry EvaEvent="GenericEnemyUnitSighted" EvaType="enemyObjectSighted" />
+			<EvaEntry EvaEvent="EnemyStealthUnitDiscovered" EvaType="detectedEnemy" />
+			<EvaEntry EvaEvent="NewConstructionOptions" EvaType="availableForProduction" />
+			<EvaEntry EvaEvent="BuildOnHold" EvaType="buildOnHold" />
+			<EvaEntry EvaEvent="BuildCancelled" EvaType="buildCancelled" />
+			<EvaEntry EvaEvent="UnitPromoted" EvaType="promotedOwner" />
+		</EvaEventArray>
+		
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+			
+		<VisionInfo
+			VisionRange="450"
+			ShroudClearingRange="600" />
+	</GameObject>
+</AssetDeclaration>

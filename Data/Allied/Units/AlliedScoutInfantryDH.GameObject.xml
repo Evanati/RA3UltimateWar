@@ -81,7 +81,7 @@
 		<LocomotorSet
 			Locomotor="AlliedScoutInfantryLocomotor"
 			Condition="NORMAL"
-			Speed="106" />
+			Speed="110" />
 		<LocomotorSet
 			Locomotor="AlliedScoutInfantryLocomotorWater"
 			Condition="NORMAL"

@@ -15,6 +15,7 @@
 		<!-- Units -->
 		<Include type="all" source="DATA:Allied/Units/AlliedAntiVehicleInfantry.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Units/AlliedScoutInfantryDH.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedSniperInfantry.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Units/AlliedTransportHelicopter.GameObject.xml"/>
     </Includes>
 </AssetDeclaration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AttributeModifier
+		id="AttributeModifier_AuSniperGetdown"
+		Category="WEAPON"
+		Duration="0s"
+		StackingLimit="1">
+		
+		<Modifier 
+			Type="SPEED" 
+			Value="30%" />
+		<Modifier 
+			Type="ARMOR" 
+			Value="200%" />
+		<Modifier 
+			Type="SUPPRESSABILITY" 
+			Value="99999%" />
+		<Modifier 
+			Type="VISION"
+			Value="150%" />
+	</AttributeModifier>
+</AssetDeclaration>

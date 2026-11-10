@@ -35,6 +35,9 @@
 		<TargetHeuristic 
 			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
 			Priority="1"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
+			Priority="1"/>
 		<Tactic 
 			id="AlliedCaptureHighPriorityTechWithEngineer" 
 			Tactic="Engineer" 
@@ -99,9 +102,6 @@
 				EnemyNearby="false"/>
 		</Heuristic>
 		
-		<TargetHeuristic 
-			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
-			Priority="4"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestVeterancyTechStructureHeuristic" 
 			Priority="4"/>

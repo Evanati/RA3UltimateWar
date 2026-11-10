@@ -3,8 +3,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<WeaponTemplate
 		id="AlliedSniperInfantryStand"
-		AttackRange="450.0"
-		MinimumAttackRange="100"
+		AttackRange="400.0"
 		RequestAssistRange="200"
 		WeaponSpeed="999999"
 		HitPercentage="100%"
@@ -49,7 +48,7 @@
 			<LineDamageNugget
 				LineWidth="5.0"
 				UseDynamicLineLength="true"
-				Damage="2000.0"
+				Damage="3000.0"
 				DamageType="SNIPER"
 				DamageFXType="SOVIET_SNIPERRIFLE"
 				DeathType="NORMAL">
@@ -138,8 +137,7 @@
 	
 	<WeaponTemplate
 		id="AlliedSniperInfantryCreep"
-		AttackRange="650.0"
-		MinimumAttackRange="100"
+		AttackRange="600.0"
 		RequestAssistRange="200"
 		WeaponSpeed="999999"
 		HitPercentage="100%"
@@ -184,7 +182,7 @@
 			<LineDamageNugget
 				LineWidth="5.0"
 				UseDynamicLineLength="true"
-				Damage="2000.0"
+				Damage="3000.0"
 				DamageType="SNIPER"
 				DamageFXType="SOVIET_SNIPERRIFLE"
 				DeathType="NORMAL">

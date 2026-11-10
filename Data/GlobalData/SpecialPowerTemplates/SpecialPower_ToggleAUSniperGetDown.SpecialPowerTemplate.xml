@@ -4,9 +4,7 @@
 	<SpecialPowerTemplate
 		id="SpecialPower_ToggleAUSniperGetDown"
 		Flags="CAN_NOT_BE_SCRAMBLED"
+		TargetType="NONE"
 		ReloadTime="2s"
-		TargetType="OBJECT"
-		MinCastRange="450"
-		MaxCastRange="650"
 		WaypointModeTerminal="false" />
 </AssetDeclaration>

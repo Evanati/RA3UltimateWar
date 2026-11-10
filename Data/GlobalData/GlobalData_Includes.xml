@@ -2,10 +2,15 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Includes>	
+		<!-- Attribute modifiers -->
+		<Include type="all" source="DATA:GlobalData/AttributeModifiers/AttributeModifier_AuSniperGetdown.AttributeModifier.xml"/>
+	
 		<!-- Logic commands -->
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseMGT.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseRT.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedTransportHelicopter.LogicCommand.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ToggleAlliedEngineerHeal.LogicCommand.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ToggleAUSniperGetDownSpecialPower.LogicCommand.xml"/>
 	
 		<!-- Logic command sets -->
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedAirfieldCommandSet.LogicCommandSet.xml"/>
