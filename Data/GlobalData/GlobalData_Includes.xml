@@ -9,6 +9,7 @@
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseMGT.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseRT.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedTransportHelicopter.LogicCommand.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_PackSovietSurveyor.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ToggleAlliedEngineerHeal.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ToggleAUSniperGetDownSpecialPower.LogicCommand.xml"/>
 	
@@ -24,6 +25,7 @@
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/SovietCraneCommandSet.LogicCommandSet.xml"/>
 		
 		<!-- Special power templates -->
+		<Include type="all" source="DATA:GlobalData/SpecialPowerTemplates/SpecialPower_ToggleAlliedEngineerHeal.SpecialPowerTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/SpecialPowerTemplates/SpecialPower_ToggleAUSniperGetDown.SpecialPowerTemplate.xml"/>
 		
 		<!-- Upgrade templates -->

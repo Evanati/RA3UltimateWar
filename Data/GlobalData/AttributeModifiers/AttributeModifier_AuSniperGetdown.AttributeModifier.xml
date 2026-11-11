@@ -14,10 +14,13 @@
 			Type="ARMOR" 
 			Value="200%" />
 		<Modifier 
-			Type="SUPPRESSABILITY" 
-			Value="99999%" />
+			Type="VISION" 
+			Value="144%" />
 		<Modifier 
-			Type="VISION"
-			Value="150%" />
+			Type="SHROUD_CLEARING" 
+			Value="144%" />
+		<Modifier 
+			Type="SUPPRESSABILITY" 
+			Value="500%" />
 	</AttributeModifier>
 </AssetDeclaration>

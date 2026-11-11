@@ -2228,23 +2228,27 @@
 			<SpecialPower
 				id="ModuleTag_ToggleAUSniperGetDown"
 				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
-				CanAffectObjectFilter="GenericSpecialPowerObjectFilter"
 				UpdateModuleStartsAttack="true" />
 			
 			<ToggleStatusSpecialAbilityUpdate
 				id="ModuleTag_ToggleAUSniperGetDownUpdate"
-				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
 				Options="RECONSTITUTE_STORED_COMMAND"
-				PackTime="2s"
+				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
+				UnpackTime="2s" 
+				PackTime="2s" 
 				TriggerAttributeModifier="AttributeModifier_AUSniperTransformation"
 				AttributeModifierDuration="2s">
 			
 				<!-- Standing -->
 				<ToggleState>
 					<SkirmishAiInfo
-						ToggleHint="TOGGLE_DEFAULT">
+						ToggleHint="TOGGLE_SHORT_RANGE_WEAPON"
+						Location="Land"
+						NeverUseWhenFurtherThanNUnitsFromTarget="600">
 						<StateWeapon
-							Weapon="AlliedSniperInfantryStand" />
+							Weapon="AlliedSniperInfantryStand"
+							ToggleShortRangeTargetForcesTarget="true"
+							ToggleRangeHysteresis="50.0" />
 					</SkirmishAiInfo>
 				</ToggleState>
 			
@@ -2253,17 +2257,16 @@
 					ObjectStatus="GENERIC_TOGGLE_STATE"
 					ModelConditions="USER_6"
 					AttributeModifier="AttributeModifier_AuSniperGetdown">
-			
 					<SkirmishAiInfo
 						ToggleHint="TOGGLE_WEAPON"
-						UseOnlyWhenPowerAdvantageIsBelow="2.0"
+						Location="Land"
 						OnlyUseWhenHaveTarget="true"
-						NeverUseWhenClear="true"
-						NeverUseWhenTargetIsAnyKindOf="NO_GARRISON INFILTRATOR IGNORES_SELECT_ALL" 
-						NeverUseWhenCloserThanNUnitsFromTarget="200"
-						NeverUseWhenFurtherThanNUnitsFromTarget="600">
+						NeverUseWhenCloserThanNUnitsFromTarget="330"
+						NeverUseInState="RETREAT"
+						NeverUseDuringTask="DODGING">
 						<StateWeapon
-							Weapon="AlliedSniperInfantryCreep" />
+							Weapon="AlliedSniperInfantryCreep"
+							ToggleRangeHysteresis="50.0" />
 					</SkirmishAiInfo>
 				</ToggleState>
 			</ToggleStatusSpecialAbilityUpdate>
@@ -2520,7 +2523,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="130.0" />
+				MaxHealth="120.0" />
 		</Body>
 		
 		<ClientBehaviors>
@@ -2615,7 +2618,7 @@
 			Texture="ShadowI" />
 			
 		<VisionInfo
-			VisionRange="450"
-			ShroudClearingRange="600" />
+			VisionRange="625"
+			ShroudClearingRange="625" />
 	</GameObject>
 </AssetDeclaration>

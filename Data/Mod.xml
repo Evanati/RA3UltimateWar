@@ -10,10 +10,12 @@
 			
 		<!-- Red Alert 3: Ultimate War includes -->
 		<Include type="all" source="DATA:Allied/Allied_Includes.xml"/>
+		<Include type="all" source="DATA:BaseObjects/BaseObjects_Includes.xml"/>
 		<Include type="all" source="DATA:Civilian/Civilian_Includes.xml"/>
 		<Include type="all" source="DATA:GlobalData/GlobalData_Includes.xml"/>
 		<Include type="all" source="DATA:Neutral/Neutral_Includes.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/SkirmishAI_Includes.xml"/>
+		<Include type="all" source="DATA:Sounds/Sounds_Includes.xml"/>
 		<Include type="all" source="DATA:Soviet/Soviet_Includes.xml"/>
     </Includes>
 </AssetDeclaration>

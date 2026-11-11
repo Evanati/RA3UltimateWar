@@ -4,6 +4,7 @@
 	<SpecialPowerTemplate
 		id="SpecialPower_ToggleAUSniperGetDown"
 		Flags="CAN_NOT_BE_SCRAMBLED"
+		PreventConditions="AIRBORNE_TARGET OVER_WATER UNDER_FROZEN"
 		TargetType="NONE"
 		ReloadTime="2s"
 		WaypointModeTerminal="false" />

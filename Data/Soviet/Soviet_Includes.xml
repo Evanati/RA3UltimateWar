@@ -4,5 +4,6 @@
     <Includes>
 		<!-- Structures -->
 		<Include type="all" source="DATA:Soviet/Structures/SovietBaseDefenseGround.GameObject.xml"/>
+		<Include type="all" source="DATA:Soviet/Structures/SovietOutPost.GameObject.xml"/>
     </Includes>
 </AssetDeclaration>

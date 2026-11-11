@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Defines>
+		<Define name="WEAPON_FIRE" value="50" />
+		<Define name="WEAPON_IMPACT" value="60" />
+		<Define name="VEHICLE_DIE_EXPLOSION" value="110" />
+	</Defines>
+
+	<!-- Defaults for AudioEvents. Derive all other AudioEvents from this one -->
+	<AudioEvent 
+		id="BaseSoundEffect"
+		Volume="100"
+		MinVolume="0"
+		ShrunkenPitchModifier="2.0"
+		ShrunkenVolumeModifier="85"
+		Priority="NORMAL"
+		Limit="3"
+		MinRange="300"
+		MaxRange="1000"
+		PlayPercent="100"
+		Type="UI PLAYER"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent = "50"
+		ZoomedInOffscreenMinVolumePercent = "100"
+		ZoomedInOffscreenOcclusionPercent = "20">
+	</AudioEvent>
+</AssetDeclaration>

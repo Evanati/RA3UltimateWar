@@ -8,6 +8,9 @@
 		
 		<AISpecialPowerInfo
 			Heuristic="TOGGLE"
-			Manager="MICRO_MANAGER" />
+			Manager="MICRO_MANAGER"
+			Location="Land"
+			SearchRadius="900"
+			UseToCounterGarrison="true" />
 	</LogicCommand>
 </AssetDeclaration>

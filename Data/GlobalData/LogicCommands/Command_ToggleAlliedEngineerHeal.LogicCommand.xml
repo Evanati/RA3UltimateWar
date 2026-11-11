@@ -8,6 +8,17 @@
 		
 		<AISpecialPowerInfo
 			Heuristic="TOGGLE"
-			Manager="MICRO_MANAGER" />
+			Manager="MICRO_MANAGER"
+			Location="Land"
+			SearchRadius="50">
+			
+			<ObjectFilter
+				Rule="ANY"
+				Relationship="SAME_PLAYER ALLIES"
+				Alignment="NONE"
+				Include="INFANTRY"
+				StatusBitFlags="DAMAGED REALLYDAMAGED">
+			</ObjectFilter>
+		</AISpecialPowerInfo>
 	</LogicCommand>
 </AssetDeclaration>
