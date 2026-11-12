@@ -200,9 +200,10 @@
 		EditorSorting="UNIT"
 		HealthBoxHeightOffset="35"
 		BuildTime="10"
+		Scale="0.7"
 		CommandSet="AlliedEngineerCommandSet"
 		IsTrainable="true"
-		KindOf=" SELECTABLE CAN_CAST_REFLECTIONS INFANTRY SCORE CAN_CAPTURE SKIRMISH_AI_DONT_GARRISON ENGINEER CAN_CAPTURE CAN_BE_FAVORITE_UNIT AMPHIBIOUS IGNORES_SELECT_ALL CYCLE_SELECTION"
+		KindOf="SELECTABLE CAN_CAST_REFLECTIONS INFANTRY SCORE CAN_CAPTURE SKIRMISH_AI_DONT_GARRISON ENGINEER CAN_CAPTURE CAN_BE_FAVORITE_UNIT AMPHIBIOUS IGNORES_SELECT_ALL CYCLE_SELECTION"
 		ThreatLevel="10"
 		VoicePriority="68"
 		EditorName="AlliedEngineer"
@@ -229,7 +230,7 @@
 		<LocomotorSet
 			Locomotor="AlliedEngineerWaterLocomotor"
 			Condition="NORMAL"
-			Speed="40" />
+			Speed="55" />
 			
 		<Draws>
 			<ScriptedModelDraw
@@ -755,7 +756,7 @@
 					</Script>
 				</AnimationState>
 				
-<!--Heal Ability-->
+				<!--Heal Ability-->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DEPLOYED"
@@ -935,7 +936,6 @@
 				</AnimationState>
 			</ScriptedModelDraw>
 
-
 			<!-- include parachute draw module. -->
 			<xi:include
 				href="DATA:Includes/ParachuteDrawAllied.xml"
@@ -946,12 +946,20 @@
 				OkToChangeModelColor="true">
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT">
-					<Model Name="" />
+					<Model 
+						Name="" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="SELECTED DEPLOYED">
-					<Model Name="FXInvisBone" />
+					ConditionsYes="DEPLOYED">
+					<Model 
+						Name="AUHEALTHTENT_FX" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DEPLOYED SELECTED">
+					<Model 
+						Name="FXInvisBone" />
 					<ShadowInfo
 						Type="ADDITIVE_DECAL"
 						SizeX="=$ALLIED_HEALTH_TENT_RADIUS*2"
@@ -1122,6 +1130,7 @@
 				<AllowFilter
 					Rule="ANY"
                     Relationship="ALLIES" 
+					Alignment="NONE"
 					Include="INFANTRY">
 					<ExcludeThing>SovietScoutVehicle</ExcludeThing>
 				</AllowFilter>

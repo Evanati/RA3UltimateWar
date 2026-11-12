@@ -4,7 +4,15 @@
     <Includes>	
 		<!-- Attribute modifiers -->
 		<Include type="all" source="DATA:GlobalData/AttributeModifiers/AttributeModifier_AuSniperGetdown.AttributeModifier.xml"/>
+		
+		<!-- Experience level templates -->
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/AlliedBaseDefenseMGTExperienceLevels.ExperienceLevelTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/AlliedBaseDefenseRTExperienceLevels.ExperienceLevelTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/AlliedTransportHelicopterExperienceLevels.ExperienceLevelTemplate.xml"/>
 	
+		<!-- Locomotor templates -->
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanWaterNoToggledSpecialPowerLocomotor.LocomotorTemplate.xml"/>
+		
 		<!-- Logic commands -->
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseMGT.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseRT.LogicCommand.xml"/>

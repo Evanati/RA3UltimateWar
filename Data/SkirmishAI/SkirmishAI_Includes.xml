@@ -33,9 +33,10 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedNavalOutpostExpansionBase.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/HealVehicleByFriendlyRepairTurret.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/UnitEscort.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/HealInfantryByFriendlyFieldHospital.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/RepairVehicleByFriendlyRepairTurret.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/RetreatMCV.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/UnitEscort.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BudgetStates/JapanBudgets.AIBudgetStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanBalanced.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanCommon.AIBuildStateDefinition.xml"/>

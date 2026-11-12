@@ -10,16 +10,16 @@
 	<AudioEvent
 		id="ALL_50CalSniper_GunFire"
 		inheritFrom="BaseSoundEffect"
-		Volume="=$WEAPON_FIRE + 35"
-		VolumeShift="-15"
+		Volume="80"
+		VolumeShift="-5"
 		Limit="3"
 		Type="WORLD SHROUDED EVERYONE"
 		Control="INTERRUPT"
 		Priority="HIGH"
 		SubmixSlider="SOUNDFX">
 		<NonInterruptibleTime 
-			Low="0.0s" 
-			High="0.9s" />
+			Low="1.0s" 
+			High="1.0s" />
 		<PitchShift
 			Low="10"
 			High="25" />

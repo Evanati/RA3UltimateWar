@@ -178,6 +178,23 @@
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
+		id="ClosestFriendlyFieldHospitalHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="ENGINEER"
+		VitalObjectStatus="GENERIC_TOGGLE_STATE"
+		Relationship="SAME_PLAYER ALLIES"
+		Location="Land"
+		SearchRange="1000.0"
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
 		id="ClosestFriendlyCommandoBomberAircraftHeuristic"
 		HeuristicType="FriendlyUnit"
 		VitalKindOf="BOMBER_AIRCRAFT COMMANDO"

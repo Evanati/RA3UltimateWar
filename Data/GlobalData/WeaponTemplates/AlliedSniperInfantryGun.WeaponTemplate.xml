@@ -14,9 +14,10 @@
 		AllowAttackGarrisonedBldgs="true"
 		RevealShroudOnFire="true"
 		AimDirection="0d"
-		AcceptableAimDelta="3d"
+		AcceptableAimDelta="5d"
 		MaxTargetPitch="70d"
 		MinTargetPitch="-60d"
+		ShowsAmmoPips="true"
 		ClipSize="1"
 		InstantLoadClipOnActivate="true"
 		PreAttackType="PER_SHOT"
@@ -24,12 +25,12 @@
 		AutoReloadsClip="AUTO"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
 		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE ANTI_AIRBORNE_VEHICLE ANTI_STRUCTURE"
-		ProjectileCollidesWith="STRUCTURES"
+		ProjectileCollidesWith="STRUCTURES WALLS"
 		ForbiddenFiringObjectStatus="OVER_WATER"
 		CheckStatusFlagsInRangeChecks="true"
 		FireSound="ALL_50CalSniper_GunFire"
 		FireFX="FX_SUCO_Fire_Moto"
-		FireVeteranFX="FX_SovietSniperFireHeroic"
+		FireVeteranFX="FX_SUCO_Fire_Moto"
 		FiringLoopSoundContinuesDuringReload="true"
 		ShouldPlayUnderAttackEvaEvent="true"
 		ShouldPlayTargetDeadEvaEvent="true">
@@ -56,6 +57,7 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="INFANTRY"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
@@ -70,8 +72,9 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
-					Include="T1_UNIT"
-					Exclude="INFANTRY"
+					Alignment="NONE"
+					Include="VEHICLE"
+					Exclude="T2_UNIT T3_UNIT"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
 			
@@ -85,8 +88,8 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="T2_UNIT"
-					Exclude="INFANTRY"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
 		
@@ -100,8 +103,8 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="T3_UNIT"
-					Exclude="INFANTRY"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
 			
@@ -115,6 +118,7 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="STRUCTURE"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
@@ -134,9 +138,10 @@
 		AllowAttackGarrisonedBldgs="true"
 		RevealShroudOnFire="true"
 		AimDirection="0d"
-		AcceptableAimDelta="1d"
+		AcceptableAimDelta="2d"
 		MaxTargetPitch="30d"
 		MinTargetPitch="-20d"
+		ShowsAmmoPips="true"
 		ClipSize="1"
 		InstantLoadClipOnActivate="true"
 		PreAttackType="PER_SHOT"
@@ -144,12 +149,12 @@
 		AutoReloadsClip="AUTO"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
 		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE ANTI_AIRBORNE_VEHICLE ANTI_STRUCTURE"
-		ProjectileCollidesWith="STRUCTURES"
+		ProjectileCollidesWith="STRUCTURES WALLS"
 		ForbiddenFiringObjectStatus="OVER_WATER"
 		CheckStatusFlagsInRangeChecks="true"
 		FireSound="ALL_50CalSniper_GunFire"
 		FireFX="FX_SUCO_Fire_Moto"
-		FireVeteranFX="FX_SovietSniperFireHeroic"
+		FireVeteranFX="FX_SUCO_Fire_Moto"
 		FiringLoopSoundContinuesDuringReload="true"
 		ShouldPlayUnderAttackEvaEvent="true"
 		ShouldPlayTargetDeadEvaEvent="true">
@@ -176,6 +181,7 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="INFANTRY"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
@@ -190,8 +196,9 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
-					Include="T1_UNIT"
-					Exclude="INFANTRY"
+					Alignment="NONE"
+					Include="VEHICLE"
+					Exclude="T2_UNIT T3_UNIT"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
 			
@@ -205,8 +212,8 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="T2_UNIT"
-					Exclude="INFANTRY"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
 		
@@ -220,8 +227,8 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="T3_UNIT"
-					Exclude="INFANTRY"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>
 			
@@ -235,6 +242,7 @@
 				
 				<SpecialObjectFilter
 					Rule="ANY"
+					Alignment="NONE"
 					Include="STRUCTURE"
 					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN" />
 			</LineDamageNugget>

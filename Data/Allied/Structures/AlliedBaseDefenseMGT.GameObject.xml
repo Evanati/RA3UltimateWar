@@ -12,6 +12,7 @@
 		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />	
 		<Include type="all" source="ART:FXTracer.xml" />		
 		<Include type="all" source="ART:Allied/Structures/AlliedBaseDefenseMGT/AlliedBaseDefenseMGT_Includes.xml" />
+		
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseStructure.xml" />
 	</Includes>
@@ -343,7 +344,7 @@
 			</WeaponSetUpdate>
 			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Veteran"
+				id="ModuleTag_LevelUpUpgrade_Veteran"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"
@@ -354,8 +355,9 @@
 				DoFlash="true">
 				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
 			</LevelUpUpgrade>
+			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Elite"
+				id="ModuleTag_LevelUpUpgrade_Elite"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"
@@ -366,8 +368,9 @@
 				DoFlash="true">
 				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
 			</LevelUpUpgrade>
+			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Heroic"
+				id="ModuleTag_LevelUpUpgrade_Heroic"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"

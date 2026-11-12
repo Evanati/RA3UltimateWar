@@ -128,8 +128,8 @@
 	
 	<GameObject
 		id="AlliedSniperInfantry"
+		inheritFrom="BaseInfantry"
 		KindOf="SELECTABLE CAN_ATTACK INFANTRY SNIPER TRANSFORMER AMPHIBIOUS SCORE CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS"
-		Browser="OPTIMIZED_PROPS UNIT"
 		Description="Desc:AlliedSniperInfantry"
 		DescriptionTransformed="Desc:AlliedSniperInfantry"
 		TypeDescription="Type:AlliedSniperInfantry"
@@ -146,6 +146,7 @@
 		Side="Allies"
 		EditorName="AlliedSniperInfantry"
 		EditorSorting="UNIT"
+		Browser="UNIT"
 		BountyValue="0"
 		BuildTime="5"
 		EnergyProduction="0"
@@ -219,9 +220,9 @@
 			Condition="NORMAL"
 			Speed="50" />
 		<LocomotorSet
-			Locomotor="HumanWaterLocomotor"
+			Locomotor="HumanWaterNoToggledSpecialPowerLocomotor"
 			Condition="NORMAL"
-			Speed="50" />
+			Speed="40" />
 			
 		<DisplayColor
 			R="0"
@@ -2234,8 +2235,8 @@
 				id="ModuleTag_ToggleAUSniperGetDownUpdate"
 				Options="RECONSTITUTE_STORED_COMMAND"
 				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
-				UnpackTime="2s" 
-				PackTime="2s" 
+				UnpackTime="0s" 
+				PackTime="0s" 
 				TriggerAttributeModifier="AttributeModifier_AUSniperTransformation"
 				AttributeModifierDuration="2s">
 			
@@ -2247,7 +2248,6 @@
 						NeverUseWhenFurtherThanNUnitsFromTarget="600">
 						<StateWeapon
 							Weapon="AlliedSniperInfantryStand"
-							ToggleShortRangeTargetForcesTarget="true"
 							ToggleRangeHysteresis="50.0" />
 					</SkirmishAiInfo>
 				</ToggleState>
@@ -2261,6 +2261,7 @@
 						ToggleHint="TOGGLE_WEAPON"
 						Location="Land"
 						OnlyUseWhenHaveTarget="true"
+						NeverUseWhenTargetIsAnyKindOf="INFILTRATOR IGNORES_SELECT_ALL NO_GARRISON"
 						NeverUseWhenCloserThanNUnitsFromTarget="330"
 						NeverUseInState="RETREAT"
 						NeverUseDuringTask="DODGING">

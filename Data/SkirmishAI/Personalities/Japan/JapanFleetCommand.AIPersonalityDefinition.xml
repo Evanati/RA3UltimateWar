@@ -344,20 +344,8 @@
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="HealDamagedVehicleByFriendlyRepairTurretLand"
-			State="HealDamagedVehicleByFriendlyRepairTurretLand"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<StrategicState
-			id="HealDamagedVehicleByFriendlyRepairTurretWater"
-			State="HealDamagedVehicleByFriendlyRepairTurretWater"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<StrategicState
-			id="HealReallyDamagedVehicleByFriendlyRepairTurretLand"
-			State="HealReallyDamagedVehicleByFriendlyRepairTurretLand"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<StrategicState
-			id="HealReallyDamagedVehicleByFriendlyRepairTurretWater"
-			State="HealReallyDamagedVehicleByFriendlyRepairTurretWater"
+			id="HealInfantryByFriendlyFieldHospital"
+			State="HealInfantryByFriendlyFieldHospital"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="JapanCaptureHighPriorityTech"
@@ -448,6 +436,14 @@
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
+			id="RepairVehicleByFriendlyRepairTurretLand"
+			State="RepairVehicleByFriendlyRepairTurretLand"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="RepairVehicleByFriendlyRepairTurretWater"
+			State="RepairVehicleByFriendlyRepairTurretWater"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
 			id="RetreatMCVOnLand"
 			State="RetreatMCVOnLand"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -459,6 +455,10 @@
 			id="ScoutAircraft"
 			State="ScoutAircraft"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="SuddenTransportHarrassment"
+			State="SuddenTransportHarrassment"
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="WaterDefense"
 			State="WaterDefense"

@@ -12,7 +12,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>
@@ -78,7 +78,7 @@
 				MicroManager="FearlessDefenseMicroManager"
 				IsBaseDefenseTeam="false">
 				<ObjectFilter 
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>
@@ -100,7 +100,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>
@@ -166,7 +166,7 @@
 				MicroManager="FearlessDefenseMicroManager"
 				IsBaseDefenseTeam="false">
 				<ObjectFilter 
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedMCV</IncludeThing>

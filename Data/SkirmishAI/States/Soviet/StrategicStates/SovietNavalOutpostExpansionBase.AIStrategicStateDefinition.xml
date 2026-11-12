@@ -15,7 +15,7 @@
 				Location="Water"
 				PassIfExists="false">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietOutpost</IncludeThing>

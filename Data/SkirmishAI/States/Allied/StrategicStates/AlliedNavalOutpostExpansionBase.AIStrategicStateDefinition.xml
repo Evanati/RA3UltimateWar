@@ -15,10 +15,11 @@
 				Location="Water"
 				PassIfExists="false">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>AlliedOutpost</IncludeThing>
+					<IncludeThing>AlliedOutPostUPG</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 

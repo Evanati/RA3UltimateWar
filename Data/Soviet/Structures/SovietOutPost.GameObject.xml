@@ -217,13 +217,19 @@
 			
 			<StructureUnpackUpdate
 				id="StructureUnpackUpdate"
-				UnpackCompleteSound=""
 				UnpackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME" />
 			
+			<SpecialPower
+				id="ModuleTag_ReplaceSelfSpecialPower"
+				SpecialPowerTemplate="SpecialPower_PackReplaceSelf"
+				SetModelCondition="TOPPLED"
+				DisabledTypesToIgnore="HELD" />
+
 			<ReplaceSelfSpecialAbility
-				id="ModuleTag_ReplaceSelf"
+				id="ModuleTag_ReplaceSelfSpecialAbility"
 				Options="RECONSTITUTE_STORED_COMMAND"
 				SpecialPowerTemplate="SpecialPower_PackReplaceSelf"
+				ActiveModelCondition="TOPPLED"
 				PackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME"
 				NewObjectUnpackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME"
 				ReplaceOptions="DISABLE_DURING_REPLACE DISABLE_NEW_OBJECT_DURING_UNPACK">

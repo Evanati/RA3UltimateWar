@@ -10,7 +10,7 @@
 	<GameObject
 		id="SI_Helipad"
 		inheritFrom="BaseRoadSegment"
-		KindOf="+CLEARED_BY_BUILD"
+		KindOf="-NO_COLLIDE"
 		EditorName="SI_Helipad"
 		EditorSorting="OPTIMIZED_PROPS"
 		Browser="REGION SAKHALIN_ISLAND_SI OPTIMIZED_PROPS" >

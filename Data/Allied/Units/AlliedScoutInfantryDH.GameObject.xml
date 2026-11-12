@@ -85,7 +85,7 @@
 		<LocomotorSet
 			Locomotor="AlliedScoutInfantryLocomotorWater"
 			Condition="NORMAL"
-			Speed="78" />
+			Speed="75" />
 		<SkirmishAIInformation
 			UnitBuilderStandardCombatUnit="true" />
 		<Draws>
