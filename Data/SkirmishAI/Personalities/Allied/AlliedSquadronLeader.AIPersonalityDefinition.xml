@@ -296,9 +296,21 @@
 			State="CaptureLandHusks"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="CenturyBomberAttack"
-			State="CenturyBomberAttack"
+			id="AlliedCenturyBomberHeavyDefensiveAttack"
+			State="AlliedCenturyBomberHeavyDefensiveAttack"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedCenturyBomberHeavyOffensiveAttack"
+			State="AlliedCenturyBomberHeavyOffensiveAttack"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedCenturyBomberLightDefensiveAttack"
+			State="AlliedCenturyBomberLightDefensiveAttack"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedCenturyBomberLightOffensiveAttack"
+			State="AlliedCenturyBomberLightOffensiveAttack"
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="Cleanup"
 			State="Cleanup"

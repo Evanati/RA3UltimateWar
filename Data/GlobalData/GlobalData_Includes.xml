@@ -7,11 +7,16 @@
 		
 		<!-- Experience level templates -->
 		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/AlliedBaseDefenseMGTExperienceLevels.ExperienceLevelTemplate.xml"/>
-		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/AlliedBaseDefenseRTExperienceLevels.ExperienceLevelTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/AlliedBarracksExperienceLevels.ExperienceLevelTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/AlliedTransportHelicopterExperienceLevels.ExperienceLevelTemplate.xml"/>
-	
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/ArtilleryDomeExperienceLevels.ExperienceLevelTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/DefensiveStructureTechStructureExperienceLevels.ExperienceLevelTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/EuropeCoastalGunExperienceLevels.ExperienceLevelTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/FloatingFortressMainGunExperienceLevels.ExperienceLevelTemplate.xml"/>
+		
 		<!-- Locomotor templates -->
-		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanWaterNoToggledSpecialPowerLocomotor.LocomotorTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanReactiveAmphibiousLocomotor.LocomotorTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanReactiveGroundLocomotor.LocomotorTemplate.xml"/>
 		
 		<!-- Logic commands -->
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseMGT.LogicCommand.xml"/>

@@ -226,7 +226,7 @@
 		<LocomotorSet
 			Locomotor="TestReactiveLocomotorHUMAN"
 			Condition="NORMAL"
-			Speed="40" />
+			Speed="50" />
 		<LocomotorSet
 			Locomotor="AlliedEngineerWaterLocomotor"
 			Condition="NORMAL"

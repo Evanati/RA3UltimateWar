@@ -2,146 +2,173 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AITargetingHeuristic
-		id="ClosestEnemyMoneyTechStructureHeuristic"
+		id="ClosestEnemyBaseDefenseHeuristic"
 		HeuristicType="EnemyStructure"
-		VitalKindOf="SUPPLY_SOURCE"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
+		VitalKindOf="FS_BASE_DEFENSE"
+		RequireUniqueTarget="true"
+		SortType="Distance">
+	
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
-		id="ClosestEnemyDefenseTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="FS_BASE_DEFENSE NEUTRAL_TECH"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyVeterancyTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="GRANTS_VETERANCY"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyAircraftHealTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="SIEGE_TOWER"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-    <AITargetingHeuristic
-		id="ClosestEnemyVehicleHealTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="CAVALRY"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyShipHealTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="MONSTER"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyInfantryHealTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="CASTLE_KEEP"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyRadarTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="FS_RADAR"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyPowerTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="FS_POWER NEUTRAL_TECH"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyControlTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
-		VitalKindOf="CASTLE_CENTER"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-		
-		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
-	</AITargetingHeuristic>
-	
-	<AITargetingHeuristic
-		id="ClosestEnemyResidualTechStructureHeuristic"
+		id="ClosestEnemyTechStructureHeuristic"
 		HeuristicType="EnemyStructure"
 		VitalKindOf="NEUTRAL_TECH"
-		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
-		Relationship="ENEMIES"
-		SearchRange="9999.0">
-				
+		ForbiddenKindOf="FS_BASE_DEFENSE"
+		RequireUniqueTarget="true"
+		SortType="Distance">
+	
 		<BaseSelection
-			PreferredNotBaseTypes="MAIN_BASE"
-			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS UNDER_ATTACK"
-			SortOrder="PREFER_CLOSEST"/>
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyRefineryHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="REFINERY"
+		RequireUniqueTarget="true"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyPowerPlantHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_POWER"
+		RequireUniqueTarget="true"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyOutpostHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="OUTPOST"
+		RequireUniqueTarget="true"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemySuperWeaponHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="SUPER_WEAPON"
+		RequireUniqueTarget="false"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyTechnologyHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_TECHNOLOGY"
+		ForbiddenKindOf="FS_FACTORY"
+		RequireUniqueTarget="false"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+
+	<AITargetingHeuristic
+		id="ClosestEnemyConstructionYardHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="CONSTRUCTION_YARD"
+		RequireUniqueTarget="false"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyFactoryHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_FACTORY"
+		ForbiddenKindOf="CONSTRUCTION_YARD OUTPOST"
+		RequireUniqueTarget="true"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+
+	<AITargetingHeuristic
+		id="ClosestEnemyNonAerialCommandoHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="COMMANDO"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyHighValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="VEHICLE T3_UNIT"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyMediumValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="VEHICLE T2_UNIT"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyLowValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="VEHICLE"
+		ForbiddenKindOf="AIRCRAFT T2_UNIT T3_UNIT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="Distance">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
 	</AITargetingHeuristic>
 </AssetDeclaration>

@@ -78,6 +78,45 @@
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
 			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			
 			<xi:include
 				href="DATA:Includes/GenericEngineerContain.xml" />
 			<xi:include

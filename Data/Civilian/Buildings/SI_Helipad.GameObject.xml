@@ -3,6 +3,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Includes>
 		<Include type="all" source="ART:SI_Helipad.W3X" />
+		
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseRoadSegment.xml" />
 	</Includes>
@@ -10,7 +11,7 @@
 	<GameObject
 		id="SI_Helipad"
 		inheritFrom="BaseRoadSegment"
-		KindOf="-NO_COLLIDE"
+		KindOf="-NO_COLLIDE -INERT"
 		EditorName="SI_Helipad"
 		EditorSorting="OPTIMIZED_PROPS"
 		Browser="REGION SAKHALIN_ISLAND_SI OPTIMIZED_PROPS" >
@@ -33,7 +34,7 @@
 				Type= "BOX"
 				MajorRadius = "30"
 				MinorRadius = "30"
-				Height = "0" >
+				Height = "3" >
 			</Shape>
 		</Geometry>
 	</GameObject>

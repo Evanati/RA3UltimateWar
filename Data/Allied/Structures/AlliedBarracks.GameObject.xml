@@ -360,7 +360,52 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
-		
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<SpawnBehavior 
+				id="ModuleTag_SpawnBehavior"
+				PassExperienceToSpawned="true"> 
+				<SpawnTemplate>AlliedAntiInfantryInfantry</SpawnTemplate>
+			</SpawnBehavior> 
+			
 			<Physics
 				id="ModuleTag_Physics"/>
 
@@ -445,9 +490,9 @@
 			<xi:include
 				href="DATA:Includes/GenericEngineerContain.xml" />
 			<xi:include
-				href="DATA:Includes/GenericAlliedBuildingDestruction.xml" />
+				href="DATA:Includes/GenericAlliedBuildingDestructionNoSpawn.xml" />
 			<xi:include
-				href="DATA:Includes/GenericAlliedBuildingSuicide.xml" />
+				href="DATA:Includes/GenericAlliedBuildingSuicideNoSpawn.xml" />
 			<xi:include
 				href="DATA:Includes/InfiltratorContainInfantry.xml" />				
 			<StancesBehavior

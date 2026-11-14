@@ -717,6 +717,7 @@
 		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
 		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>		
 	</EventList>
+	
 	<EventList Name="GenericConfigFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="CustomState1" ScriptFunctionName="OnGenericConfig" DebugSingleStep="false"/>
 	</EventList>

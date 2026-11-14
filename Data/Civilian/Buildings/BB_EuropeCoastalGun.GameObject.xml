@@ -6,6 +6,7 @@
 		<Include type="all"	source="ART:EXSovietShell.W3X" />
 		<Include type="instance" source="DATA:Civilian/Yucatan_YU/Props/YU_HotelDebris.xml" />
 		<Include type="instance" source="DATA:Civilian/Brighton_Beach_BB/Props/BB_EuropeCoastalGun_Collapse.xml" />
+		
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseTechStructure.xml" />
 	</Includes>
@@ -212,6 +213,46 @@
 						MuzzleVelocity="50.0" />
         </Movement>
       </ProjectileUpdate>
+	  
+	  		<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				LevelsToGain="1"
+				LevelCap="4"
+				DoFlash="true">
+				<TriggeredBy>Upgrade_CreationVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+	  
       <DestroyDie
 				id="ModuleTag_Die">
         <DieMuxData

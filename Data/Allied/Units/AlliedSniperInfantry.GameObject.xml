@@ -129,7 +129,7 @@
 	<GameObject
 		id="AlliedSniperInfantry"
 		inheritFrom="BaseInfantry"
-		KindOf="SELECTABLE CAN_ATTACK INFANTRY SNIPER TRANSFORMER AMPHIBIOUS SCORE CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS"
+		KindOf="SELECTABLE CAN_ATTACK INFANTRY SNIPER TRANSFORMER SCORE CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS"
 		Description="Desc:AlliedSniperInfantry"
 		DescriptionTransformed="Desc:AlliedSniperInfantry"
 		TypeDescription="Type:AlliedSniperInfantry"
@@ -216,14 +216,20 @@
 			Conditions="SECONDARY_DAMAGE" />
 			
 		<LocomotorSet
-			Locomotor="TestReactiveLocomotorHUMAN" 
+			Locomotor="HumanReactiveGroundLocomotor" 
 			Condition="NORMAL"
 			Speed="50" />
 		<LocomotorSet
-			Locomotor="HumanWaterNoToggledSpecialPowerLocomotor"
+			Locomotor="HumanReactiveWaterLocomotor" 
 			Condition="NORMAL"
 			Speed="40" />
-			
+		<!-- To avoid prone on water -->
+		<LocomotorSet
+			Locomotor="HumanReactiveGroundLocomotor"
+			Condition="NORMAL_UPGRADED"
+			Speed="50" />
+		<!-- To avoid prone on water -->
+		
 		<DisplayColor
 			R="0"
 			G="0"
@@ -2227,13 +2233,13 @@
 			</SubObjectsUpgrade>
 			
 			<SpecialPower
-				id="ModuleTag_ToggleAUSniperGetDown"
+				id="ModuleTag_ToggleAUSniperGetDown_SpecialPower"
 				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
 				UpdateModuleStartsAttack="true" />
 			
 			<ToggleStatusSpecialAbilityUpdate
-				id="ModuleTag_ToggleAUSniperGetDownUpdate"
-				Options="RECONSTITUTE_STORED_COMMAND"
+				id="ModuleTag_ToggleAUSniperGetDown_ToggleStatusUpdate"
+				Options="RECONSTITUTE_STORED_COMMAND CHECK_PREVENT_CONDITIONS CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
 				UnpackTime="0s" 
 				PackTime="0s" 
@@ -2241,7 +2247,8 @@
 				AttributeModifierDuration="2s">
 			
 				<!-- Standing -->
-				<ToggleState>
+				<ToggleState
+					LocomotorSet="NORMAL">
 					<SkirmishAiInfo
 						ToggleHint="TOGGLE_SHORT_RANGE_WEAPON"
 						Location="Land"
@@ -2254,9 +2261,10 @@
 			
 				<!-- Prone -->
 				<ToggleState
+					AttributeModifier="AttributeModifier_AuSniperGetdown"
 					ObjectStatus="GENERIC_TOGGLE_STATE"
 					ModelConditions="USER_6"
-					AttributeModifier="AttributeModifier_AuSniperGetdown">
+					LocomotorSet="NORMAL_UPGRADED">
 					<SkirmishAiInfo
 						ToggleHint="TOGGLE_WEAPON"
 						Location="Land"

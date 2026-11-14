@@ -100,7 +100,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanBarracks</IncludeThing>
@@ -151,7 +151,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanBarracks</IncludeThing>
@@ -215,7 +215,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanBarracks</IncludeThing>
@@ -279,7 +279,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanBarracks</IncludeThing>
@@ -335,7 +335,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanWarFactory</IncludeThing>
@@ -396,7 +396,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanWarFactory</IncludeThing>
@@ -472,7 +472,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanWarFactory</IncludeThing>
@@ -548,7 +548,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanWarFactory</IncludeThing>
@@ -616,7 +616,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanNavalYard</IncludeThing>
@@ -672,7 +672,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanNavalYard</IncludeThing>
@@ -742,7 +742,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanNavalYard</IncludeThing>
@@ -812,7 +812,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>JapanNavalYard</IncludeThing>

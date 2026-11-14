@@ -67,7 +67,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietBarracks</IncludeThing>
@@ -128,7 +128,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietBarracks</IncludeThing>
@@ -204,7 +204,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietBarracks</IncludeThing>
@@ -280,7 +280,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietBarracks</IncludeThing>
@@ -348,7 +348,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietWarFactory</IncludeThing>
@@ -424,7 +424,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietWarFactory</IncludeThing>
@@ -518,7 +518,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietWarFactory</IncludeThing>
@@ -612,7 +612,7 @@
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietWarFactory</IncludeThing>
@@ -698,7 +698,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietAirfield</IncludeThing>
@@ -739,7 +739,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietAirfield</IncludeThing>
@@ -791,7 +791,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietAirfield</IncludeThing>
@@ -843,7 +843,7 @@
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietAirfield</IncludeThing>
@@ -887,7 +887,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietNavalYard</IncludeThing>
@@ -938,7 +938,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietNavalYard</IncludeThing>
@@ -1002,7 +1002,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietNavalYard</IncludeThing>
@@ -1066,7 +1066,7 @@
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
-					Rule="ANY"
+					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					Alignment="NONE">
 					<IncludeThing>SovietNavalYard</IncludeThing>

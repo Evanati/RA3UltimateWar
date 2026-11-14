@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AITargetingHeuristic
+		id="SafestToAirEnemyBaseDefenseHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_BASE_DEFENSE"
+		RequireUniqueTarget="true"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="NEUTRAL_TECH"
+		ForbiddenKindOf="FS_BASE_DEFENSE"
+		RequireUniqueTarget="true"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyRefineryHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="REFINERY"
+		RequireUniqueTarget="true"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyPowerPlantHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_POWER"
+		RequireUniqueTarget="true"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyOutpostHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="OUTPOST"
+		RequireUniqueTarget="true"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemySuperWeaponHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="SUPER_WEAPON"
+		RequireUniqueTarget="false"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyTechnologyHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_TECHNOLOGY"
+		ForbiddenKindOf="FS_FACTORY"
+		RequireUniqueTarget="false"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+
+	<AITargetingHeuristic
+		id="SafestToAirEnemyConstructionYardHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="CONSTRUCTION_YARD"
+		RequireUniqueTarget="false"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyFactoryHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_FACTORY"
+		ForbiddenKindOf="CONSTRUCTION_YARD OUTPOST"
+		RequireUniqueTarget="true"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredBaseTypes="NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+
+	<AITargetingHeuristic
+		id="SafestToAirEnemyNonAerialCommandoHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="COMMANDO"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyHighValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="VEHICLE T3_UNIT"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyMediumValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="VEHICLE T2_UNIT"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestToAirEnemyLowValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="VEHICLE"
+		ForbiddenKindOf="AIRCRAFT T2_UNIT T3_UNIT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED"
+		RequireUniqueTarget="false"
+		SortType="ThreatToAir">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+</AssetDeclaration>

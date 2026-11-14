@@ -417,7 +417,7 @@
 			<xi:include
 				href="DATA:Includes/GenericEngineerContain.xml" />
 			<xi:include
-				href="DATA:Includes/GenericAlliedBuildingDestruction.xml" />
+				href="DATA:Includes/GenericAlliedBuildingDestructionNoSpawn.xml" />
 			<xi:include
 				href="DATA:Includes/GenericAlliedBuildingSuicide.xml" />
 			<xi:include
