@@ -129,12 +129,12 @@
 	<GameObject
 		id="AlliedSniperInfantry"
 		inheritFrom="BaseInfantry"
-		KindOf="SELECTABLE CAN_ATTACK INFANTRY SNIPER TRANSFORMER SCORE CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS"
+		KindOf="SELECTABLE CAN_ATTACK INFANTRY SNIPER TRANSFORMER AMPHIBIOUS SCORE CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS"
 		Description="Desc:AlliedSniperInfantry"
 		DescriptionTransformed="Desc:AlliedSniperInfantry"
 		TypeDescription="Type:AlliedSniperInfantry"
 		TypeDescriptionTransformed="Type:AlliedSniperInfantry"
-		RadarPriority="NOT_ON_RADAR"
+		RadarPriority="UNIT"
 		FenceWidth="0"
 		FenceXOffset="0"
 		RemoveTerrainRadius="0"
@@ -223,12 +223,12 @@
 			Locomotor="HumanReactiveWaterLocomotor" 
 			Condition="NORMAL"
 			Speed="40" />
-		<!-- To avoid prone on water -->
+		<!-- Used to disable prone on water -->
 		<LocomotorSet
 			Locomotor="HumanReactiveGroundLocomotor"
 			Condition="NORMAL_UPGRADED"
 			Speed="50" />
-		<!-- To avoid prone on water -->
+		<!-- Used to disable prone on water -->
 		
 		<DisplayColor
 			R="0"
@@ -2239,7 +2239,7 @@
 			
 			<ToggleStatusSpecialAbilityUpdate
 				id="ModuleTag_ToggleAUSniperGetDown_ToggleStatusUpdate"
-				Options="RECONSTITUTE_STORED_COMMAND CHECK_PREVENT_CONDITIONS CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
+				Options="RECONSTITUTE_STORED_COMMAND"
 				SpecialPowerTemplate="SpecialPower_ToggleAUSniperGetDown"
 				UnpackTime="0s" 
 				PackTime="0s" 
@@ -2255,7 +2255,7 @@
 						NeverUseWhenFurtherThanNUnitsFromTarget="600">
 						<StateWeapon
 							Weapon="AlliedSniperInfantryStand"
-							ToggleRangeHysteresis="50.0" />
+							ToggleRangeHysteresis="25.0" />
 					</SkirmishAiInfo>
 				</ToggleState>
 			
@@ -2272,13 +2272,30 @@
 						NeverUseWhenTargetIsAnyKindOf="INFILTRATOR IGNORES_SELECT_ALL NO_GARRISON"
 						NeverUseWhenCloserThanNUnitsFromTarget="330"
 						NeverUseInState="RETREAT"
-						NeverUseDuringTask="DODGING">
+						NeverUseDuringTask="DODGING"
+						StealthOthersInvisibilityModuleId="ModuleTag_InvisibilityBroadcastUpdate">
 						<StateWeapon
 							Weapon="AlliedSniperInfantryCreep"
-							ToggleRangeHysteresis="50.0" />
+							ToggleRangeHysteresis="25.0" />
 					</SkirmishAiInfo>
 				</ToggleState>
 			</ToggleStatusSpecialAbilityUpdate>
+			
+			<InvisibilityBroadcastUpdate
+				id="ModuleTag_InvisibilityBroadcastUpdate"
+				BroadcastRange="9999.0"
+				UpdatePeriod="0.5s"
+				AffectsSelf="false" 
+				InvisibilityTemplate="AlliedSniperInfantryCamouflage">
+				<BroadcastObjectFilter
+					Rule="ANY"
+					Relationship="ALLIES ENEMIES"
+					Include="INFANTRY VEHICLE"
+					StatusBitFlagsExclude="AIRBORNE_TARGET BROADCASTING_INVISIBILITY IGNORING_STEALTH">
+				</BroadcastObjectFilter>
+				<ObjectStatusValidation
+					RequiredStatus="GENERIC_TOGGLE_STATE" />
+			</InvisibilityBroadcastUpdate>
 			
 			<RunOffMapBehavior
 				id="ModuleTag_RunOffMapBehavior"

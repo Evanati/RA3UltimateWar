@@ -9,7 +9,6 @@
 		<AISpecialPowerInfo
 			Heuristic="PACK"
 			Manager="MICRO_MANAGER"
-			Location="Land Water" 
-			HealthFraction="0.5" />
+			Location="Land Water" />
 	</LogicCommand>
 </AssetDeclaration>

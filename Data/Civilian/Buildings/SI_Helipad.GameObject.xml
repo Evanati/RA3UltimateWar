@@ -5,13 +5,13 @@
 		<Include type="all" source="ART:SI_Helipad.W3X" />
 		
 		<!-- Base Object -->
-		<Include type="instance" source="DATA:BaseObjects/BaseRoadSegment.xml" />
+		<Include type="instance" source="DATA:BaseObjects/BaseCivilianStructure.xml" />
 	</Includes>
 	
 	<GameObject
 		id="SI_Helipad"
-		inheritFrom="BaseRoadSegment"
-		KindOf="-NO_COLLIDE -INERT"
+		inheritFrom="BaseCivilianStructure"
+		KindOf="-SELECTABLE -CRUSHABLE_BUILDING -GARRISON -COVER -ALWAYS_VISIBLE_IN_RADAR"
 		EditorName="SI_Helipad"
 		EditorSorting="OPTIMIZED_PROPS"
 		Browser="REGION SAKHALIN_ISLAND_SI OPTIMIZED_PROPS" >

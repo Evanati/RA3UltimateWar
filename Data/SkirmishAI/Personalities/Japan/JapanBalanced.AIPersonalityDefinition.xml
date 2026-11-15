@@ -364,6 +364,10 @@
 			State="HealInfantryByFriendlyFieldHospital"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
+			id="HighValueAircraftFighterAircraftEscort"
+			State="HighValueAircraftFighterAircraftEscort"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
 			id="JapanCaptureHighPriorityTech"
 			State="JapanCaptureHighPriorityTech"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>

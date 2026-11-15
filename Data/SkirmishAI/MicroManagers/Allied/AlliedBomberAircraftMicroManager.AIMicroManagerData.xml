@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AIMicroManagerData
+		id="AlliedBomberAircraftOffensiveMicroManager"
+		UpdateTime="0.5s"
+		MaxTeamIdleTime="3s"
+		MaxTeamIdleDistanceChange="50.0" 
+		MaxUnitIdleTime="1s"
+		MaxUnitIdleDistanceChange="30.0"
+		EngageHostileTargets="false"
+		EngagePassiveTargets="false"
+		EngageTacticalTarget="false"
+		EnemySearchDistanceVisionMultiplier="2.75"
+		MinTimeToKeepTempVisionRangeBonus="10s"
+		UseGatherState="false"
+		GatherTempVisionRangeBonus="1.5"
+		CanUseSiegeState="true"
+		SiegeWeaponBuffer="1.5"
+		RetreatPowerAdvantage="1.0"
+		RetreatMinDistanceFromBase="1000.0"
+		RetreatMinDistanceToFallback="500.0"
+		RetreatTempVisionRangeBonus="1.5"
+		Crush="false"
+		EnterGarrisons="false"
+		PullbackInjured="true"
+		PullbackInjuredHealthPct="0.5"
+		MaxSecondaryDamageFraction="1.3"
+		ReverseMove="false"
+		UseSpecialPowers="true"
+		DodgeThreats="false"
+		DodgeThreatsReactionTimeMin="0.5s"
+		DodgeThreatsReactionTimeMax="0.5s"
+		MinDistanceFromBaseToIgnoreTargets="700">
+		<RetreatBaseCriteria
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+		<IgnoreTargets 
+			Rule="NONE"
+			Relationship="ENEMIES"
+            StatusBitFlags="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN">
+			<IncludeThing>AlliedAntiInfantryInfantry</IncludeThing>
+			<IncludeThing>AlliedScoutInfantry</IncludeThing>
+			<IncludeThing>SovietAntiInfantryInfantry</IncludeThing>
+			<IncludeThing>SovietScoutInfantry</IncludeThing>
+			<IncludeThing>JapanAntiInfantryInfantry</IncludeThing>
+		</IgnoreTargets>
+	</AIMicroManagerData>
+	
+	<AIMicroManagerData
+		id="AlliedBomberAircraftDefensiveMicroManager"
+		UpdateTime="0.5s"
+		MaxTeamIdleTime="3s"
+		MaxTeamIdleDistanceChange="50.0" 
+		MaxUnitIdleTime="1s"
+		MaxUnitIdleDistanceChange="30.0"
+		EngageHostileTargets="true"
+		EngagePassiveTargets="true"
+		EngageTacticalTarget="true"
+		EnemySearchDistanceVisionMultiplier="2.75"
+		MinTimeToKeepTempVisionRangeBonus="10s"
+		UseGatherState="false"
+		GatherTempVisionRangeBonus="1.5"
+		CanUseSiegeState="false"
+		SiegeWeaponBuffer="1.5"
+		RetreatPowerAdvantage="0.65"
+		RetreatMinDistanceFromBase="1000.0"
+		RetreatMinDistanceToFallback="300.0"
+		RetreatTempVisionRangeBonus="1.5"
+		Crush="false"
+		EnterGarrisons="false"
+		PullbackInjured="true"
+		PullbackInjuredHealthPct="0.4"
+		MaxSecondaryDamageFraction="1.3"
+		ReverseMove="false"
+		UseSpecialPowers="true"
+		DodgeThreats="false"
+		DodgeThreatsReactionTimeMin="0.5s"
+		DodgeThreatsReactionTimeMax="0.5s"
+		MinDistanceFromBaseToIgnoreTargets="700">
+		<RetreatBaseCriteria
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+		<IgnoreTargets 
+			Rule="NONE"
+			Relationship="ENEMIES"
+            StatusBitFlags="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN">
+			<IncludeThing>AlliedAntiInfantryInfantry</IncludeThing>
+			<IncludeThing>AlliedScoutInfantry</IncludeThing>
+			<IncludeThing>SovietAntiInfantryInfantry</IncludeThing>
+			<IncludeThing>SovietScoutInfantry</IncludeThing>
+			<IncludeThing>JapanAntiInfantryInfantry</IncludeThing>
+		</IgnoreTargets>
+	</AIMicroManagerData>
+</AssetDeclaration>

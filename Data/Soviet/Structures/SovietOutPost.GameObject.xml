@@ -220,15 +220,30 @@
 				UnpackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME" />
 			
 			<SpecialPower
-				id="ModuleTag_ReplaceSelfSpecialPower"
-				SpecialPowerTemplate="SpecialPower_PackReplaceSelf"
-				SetModelCondition="TOPPLED"
+				id="ModuleTag_SpecialPower"
+				SpecialPowerTemplate="SpecialPower_SurveyorPackReplaceSelf"
 				DisabledTypesToIgnore="HELD" />
+
+			<ToggleStatusSpecialAbilityUpdate
+				id="ModuleTag_ToggleStatusSpecialAbilityUpdate"
+				SpecialPowerTemplate="SpecialPower_SurveyorPackReplaceSelf"
+				UnpackTime="0s" 
+				PackTime="0s" 
+				DisabledTypesToProcess="HELD">
+				
+				<ToggleState
+					ModelConditions="TOPPLED"
+					DisabledType="HELD">
+					<SkirmishAiInfo
+						ToggleHint="TOGGLE_DEFENSE_SELF_ONLY"
+						Location="Land Water" />
+				</ToggleState>
+			</ToggleStatusSpecialAbilityUpdate>
 
 			<ReplaceSelfSpecialAbility
 				id="ModuleTag_ReplaceSelfSpecialAbility"
 				Options="RECONSTITUTE_STORED_COMMAND"
-				SpecialPowerTemplate="SpecialPower_PackReplaceSelf"
+				SpecialPowerTemplate="SpecialPower_SurveyorPackReplaceSelf"
 				ActiveModelCondition="TOPPLED"
 				PackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME"
 				NewObjectUnpackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME"

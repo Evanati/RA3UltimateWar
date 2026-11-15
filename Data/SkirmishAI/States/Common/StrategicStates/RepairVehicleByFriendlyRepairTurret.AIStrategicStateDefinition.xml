@@ -15,7 +15,7 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER ALLIES"
+					Relationship="ALLIES"
 					Alignment="NONE">
 					<IncludeThing>AlliedBaseDefenseRT</IncludeThing>
 				</ObjectFilter>
@@ -61,7 +61,7 @@
 				IncludeKindOf="VEHICLE" 
 				ExcludeKindOf="AIRCRAFT SHIP"
 				Priority="HIGH" 
-				ReleaseType="RELEASE_TO_PRIORITY" 
+				ReleaseType="ALWAYS_RELEASE" 
 				AlwaysRecruit="true"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
@@ -98,7 +98,7 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER ALLIES"
+					Relationship="ALLIES"
 					Alignment="NONE">
 					<IncludeThing>AlliedBaseDefenseRT</IncludeThing>
 				</ObjectFilter>
@@ -144,7 +144,7 @@
 				IncludeKindOf="AMPHIBIOUS SHIP" 
 				ExcludeKindOf="AIRCRAFT INFANTRY"
 				Priority="HIGH" 
-				ReleaseType="RELEASE_TO_PRIORITY" 
+				ReleaseType="ALWAYS_RELEASE" 
 				AlwaysRecruit="true"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"

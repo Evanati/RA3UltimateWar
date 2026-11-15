@@ -10,11 +10,12 @@
 			Heuristic="TOGGLE"
 			Manager="MICRO_MANAGER"
 			Location="Land"
-			SearchRadius="250.0">
+			Distance="50.0"
+			SearchRadius="100.0">
 			
 			<ObjectFilter
 				Rule="ANY"
-				Relationship="SAME_PLAYER ALLIES"
+				Relationship="ALLIES"
 				Alignment="NONE"
 				Include="INFANTRY"
 				StatusBitFlags="DAMAGED REALLYDAMAGED">

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LocomotorTemplate
+		id="HumanReactiveGroundLocomotor"
+		Surfaces="GROUND" 
+		TurnTimeSeconds="0.5s"
+		TurnTimeDamagedSeconds="0.5s"
+		FastTurnRadius="1.0"
+		SlowTurnRadius="1.0" 
+		AccelerationSeconds="0.0s"
+		BrakingSeconds="0s"
+		FormationPriority="NO_FORMATION"
+		MinTurnSpeed="0%"
+		BehaviorZ="NO_MOTIVE_FORCE"	
+		Appearance="TWO_LEGS" 
+		StickToGround="true"
+		AirborneTargetingHeight="30" />
+		
+	<LocomotorTemplate
+		id="HumanReactiveWaterLocomotor"
+		Surfaces="WATER DEEP_WATER" 
+		TurnTimeSeconds="0.5s" 
+		TurnTimeDamagedSeconds="0.5s" 
+		FastTurnRadius="6.0" 
+		SlowTurnRadius="1.0" 
+		AccelerationSeconds="0.17s"
+		FormationPriority="NO_FORMATION"
+		PreferredHeight="-1"
+		BrakingSeconds="0.17s"
+		MinTurnSpeed="0%"
+		BehaviorZ="SEA_LEVEL"	
+		Appearance="TWO_LEGS"
+		StickToGround="true"
+		ActiveModelConditions="OVER_WATER"
+        ActiveObjectStatus="WATER_LOCOMOTOR_ACTIVE OVER_WATER"
+		ForbiddenObjectStatus="GENERIC_TOGGLE_STATE" />
+</AssetDeclaration>

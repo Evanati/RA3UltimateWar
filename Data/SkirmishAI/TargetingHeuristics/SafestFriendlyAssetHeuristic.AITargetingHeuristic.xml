@@ -5,7 +5,7 @@
 		id="SafestFriendlyCraneLandHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CRANE"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Land"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -21,7 +21,7 @@
 		id="SafestFriendlyOutpostLandHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="OUTPOST"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Land"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -37,7 +37,7 @@
 		id="SafestFriendlyTechnologyLandHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_TECHNOLOGY"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Land"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -53,7 +53,8 @@
 		id="SafestFriendlyFactoryLandHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_FACTORY"
-		Relationship="SAME_PLAYER ALLIES"
+		ForbiddenKindOf="CONSTRUCTION_YARD"
+		Relationship="ALLIES"
 		Location="Land"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -69,7 +70,7 @@
 		id="SafestFriendlyCraneWaterHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CRANE"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Water"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -85,7 +86,7 @@
 		id="SafestFriendlyOutpostWaterHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="OUTPOST"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Water"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -101,7 +102,7 @@
 		id="SafestFriendlyTechnologyWaterHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_TECHNOLOGY"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Water"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -117,7 +118,8 @@
 		id="SafestFriendlyFactoryWaterHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_FACTORY"
-		Relationship="SAME_PLAYER ALLIES"
+		ForbiddenKindOf="CONSTRUCTION_YARD"
+		Relationship="ALLIES"
 		Location="Water"
 		SearchRange="3000.0"
 		MinDistanceFromEnemy="700.0">
@@ -133,7 +135,7 @@
 		id="SafestFriendlyStructureFallbackHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="STRUCTURE"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Land Water"
 		SearchRange="9999.0">
 		

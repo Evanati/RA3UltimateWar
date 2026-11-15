@@ -15,7 +15,7 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER ALLIES"
+					Relationship="ALLIES"
 					Alignment="NONE"
 					StatusBitFlags="GENERIC_TOGGLE_STATE">
 					<IncludeThing>AlliedEngineer</IncludeThing>
@@ -60,7 +60,7 @@
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="INFANTRY" 
 				Priority="HIGH" 
-				ReleaseType="RELEASE_TO_PRIORITY" 
+				ReleaseType="ALWAYS_RELEASE" 
 				AlwaysRecruit="true"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"

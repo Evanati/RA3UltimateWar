@@ -228,6 +228,22 @@
 			State="AlliedAirDrop"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
+			id="AlliedBomberAircraftHeavyDefensiveAttack"
+			State="AlliedBomberAircraftHeavyDefensiveAttack"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedBomberAircraftHeavyOffensiveAttack"
+			State="AlliedBomberAircraftHeavyOffensiveAttack"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedBomberAircraftLightDefensiveAttack"
+			State="AlliedBomberAircraftLightDefensiveAttack"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedBomberAircraftLightOffensiveAttack"
+			State="AlliedBomberAircraftLightOffensiveAttack"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<StrategicState
 			id="AlliedCaptureHighPriorityTech"
 			State="AlliedCaptureHighPriorityTech"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
@@ -299,22 +315,6 @@
 			id="CaptureLandHusks"
 			State="CaptureLandHusks"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<StrategicState
-			id="AlliedCenturyBomberHeavyDefensiveAttack"
-			State="AlliedCenturyBomberHeavyDefensiveAttack"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="AlliedCenturyBomberHeavyOffensiveAttack"
-			State="AlliedCenturyBomberHeavyOffensiveAttack"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="AlliedCenturyBomberLightDefensiveAttack"
-			State="AlliedCenturyBomberLightDefensiveAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<StrategicState
-			id="AlliedCenturyBomberLightOffensiveAttack"
-			State="AlliedCenturyBomberLightOffensiveAttack"
-			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="Cleanup"
 			State="Cleanup"

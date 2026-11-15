@@ -3,9 +3,9 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
 		id="HighValueAircraftFighterAircraftEscort"
-		MaxRunningCopies="0"
-		MaxInactiveCopies="0"
-		MaxTargets="1">
+		MaxRunningCopies="2"
+		MaxInactiveCopies="1"
+		MaxTargets="4">
 		
 		<Heuristic>
 			<ObjectOfTypeExistsHeuristic
@@ -13,11 +13,16 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
+					Relationship="ALLIES"
 					Alignment="NONE"
-					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
-					<IncludeThing>AlliedFighterAircraft</IncludeThing>
-					<IncludeThing>SovietFighterAircraft</IncludeThing>
+					StatusBitFlags="AIRBORNE_TARGET"
+					StatusBitFlagsExclude="REALLYDAMAGED">
+					<IncludeThing>AlliedBomberAircraft</IncludeThing>
+					<IncludeThing>AlliedTransportHelicopter</IncludeThing>
+					<IncludeThing>Kodiak</IncludeThing>
+					<IncludeThing>SovietBomberAircraft</IncludeThing>
+					<IncludeThing>SovietTransportAircraft</IncludeThing>
+					<IncludeThing>JapanFortressShip</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<StructureOrHarvesterUnderAttackHeuristic
@@ -32,14 +37,13 @@
 			TargetHeuristic="ClosestFriendlyNonCommandoBomberAircraftHeuristic"
 			Priority="2" />
 		<TargetHeuristic
-			TargetHeuristic="ClosestFriendlyTransportAircraftHeuristic"
+			TargetHeuristic="ClosestFriendlyOccupiedTransportAircraftHeuristic"
 			Priority="1" />
 		<Tactic
 			id="EscortHighValueAircraftWithFighterAircrafts"
 			Tactic="StaticDefense"
 			EndBehavior="DISBAND"
-			EndIfStateTurnsOff="true"
-			DisbandAfterRetreatTeamSize="0"
+			EndIfStateTurnsOff="false"
 			UseAestheticsManager="true"
 			AestheticsManagerPatrolIdleTime="10s"
 			AestheticsManagerMinDistanceFromHarvester="300"
@@ -48,31 +52,33 @@
 			CombatLeashSlack="1.5"
 			UpdateTime="1s"
 			Targetless="false"
-			UseTransports="true">
+			UseTransports="false">
 			<TeamTemplate
-				MinUnits="1"
-				MaxUnits="6"
-				IncludeKindOf="CAN_ATTACK AIRCRAFT"
-				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
-				Priority="STANDARD"
-				ReleaseType="RELEASE_TO_PRIORITY"
-				MicroManager="FearlessDefenseMicroManager"
+				MinUnits="1" 
+				MaxUnits="4" 
+				RegisteredObjectSet="AIRCRAFT"
+				IncludeKindOf="FIGHTER_AIRCRAFT" 
 				AllowedLocomotorTypes="AIR"
-				DistanceSortPoint="TARGET_POINT"
-				RegisteredObjectSet="UNITS"
-				AlwaysRecruit="true"
+				Priority="HIGH"
+				ReleaseType="ALWAYS_RELEASE"
+				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
-				SortByDistance="true"
-				IsBaseDefenseTeam="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE"
-					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
-					<IncludeThing>AlliedFighterAircraft</IncludeThing>
-					<IncludeThing>SovietFighterAircraft</IncludeThing>
-				</ObjectFilter>
+				SortByDistance="true"				
+				DistanceSortPoint="TARGET_POINT"
+				MicroManager="DefenseMicroManager">
+				<CreateUnits 
+					UnitName="AlliedFighterAircraft" 
+					MinUnits="0" 
+					MaxUnits="4"/>
+				<CreateUnits 
+					UnitName="SovietFighterAircraft" 
+					MinUnits="0" 
+					MaxUnits="4"/>
+				<CreateUnits 
+					UnitName="JapanAntiInfantryVehicle" 
+					MinUnits="0" 
+					MaxUnits="4"/>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>

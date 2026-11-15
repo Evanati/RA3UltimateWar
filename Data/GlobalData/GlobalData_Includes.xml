@@ -14,9 +14,11 @@
 		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/EuropeCoastalGunExperienceLevels.ExperienceLevelTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/FloatingFortressMainGunExperienceLevels.ExperienceLevelTemplate.xml"/>
 		
+		<!-- Invisibility templates -->
+		<Include type="all" source="DATA:GlobalData/InvisibilityTemplates/AlliedSniperInfantryCamouflage.InvisibilityTemplate.xml"/>
+		
 		<!-- Locomotor templates -->
-		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanReactiveAmphibiousLocomotor.LocomotorTemplate.xml"/>
-		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanReactiveGroundLocomotor.LocomotorTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanReactiveLocomotor.LocomotorTemplate.xml"/>
 		
 		<!-- Logic commands -->
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseMGT.LogicCommand.xml"/>
@@ -38,6 +40,7 @@
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/SovietCraneCommandSet.LogicCommandSet.xml"/>
 		
 		<!-- Special power templates -->
+		<Include type="all" source="DATA:GlobalData/SpecialPowerTemplates/SpecialPower_SurveyorPackReplaceSelf.SpecialPowerTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/SpecialPowerTemplates/SpecialPower_ToggleAlliedEngineerHeal.SpecialPowerTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/SpecialPowerTemplates/SpecialPower_ToggleAUSniperGetDown.SpecialPowerTemplate.xml"/>
 		

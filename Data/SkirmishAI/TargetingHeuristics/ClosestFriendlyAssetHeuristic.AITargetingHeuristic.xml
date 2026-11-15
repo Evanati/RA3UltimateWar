@@ -5,7 +5,7 @@
 		id="ClosestFriendlyMoneyTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="SUPPLY_SOURCE"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -18,7 +18,7 @@
 		id="ClosestFriendlyDefenseTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_BASE_DEFENSE NEUTRAL_TECH"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -31,7 +31,7 @@
 		id="ClosestFriendlyVeterancyTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="GRANTS_VETERANCY"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -44,7 +44,7 @@
 		id="ClosestFriendlyAircraftHealTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="SIEGE_TOWER"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -57,7 +57,7 @@
 		id="ClosestFriendlyVehicleHealTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CAVALRY"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -70,7 +70,7 @@
 		id="ClosestFriendlyShipHealTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="MONSTER"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -83,7 +83,7 @@
 		id="ClosestFriendlyInfantryHealTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CASTLE_KEEP"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -96,7 +96,7 @@
 		id="ClosestFriendlyRadarTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_RADAR"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -109,7 +109,7 @@
 		id="ClosestFriendlyPowerTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_POWER NEUTRAL_TECH"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -122,7 +122,7 @@
 		id="ClosestFriendlyControlTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CASTLE_CENTER"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -136,7 +136,7 @@
 		HeuristicType="EnemyStructure"
 		VitalKindOf="NEUTRAL_TECH"
 		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		SearchRange="9999.0">
 				
 		<BaseSelection
@@ -149,7 +149,7 @@
 		id="ClosestFriendlyRepairTurretLandHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_BASE_DEFENSE FS_TECHNOLOGY CAN_HEAL_ALLIES"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Land"
 		SearchRange="1000.0"
 		MinDistanceFromEnemy="500.0">
@@ -165,7 +165,7 @@
 		id="ClosestFriendlyRepairTurretWaterHeuristic"
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_BASE_DEFENSE FS_TECHNOLOGY CAN_HEAL_ALLIES"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Water"
 		SearchRange="1000.0"
 		MinDistanceFromEnemy="500.0">
@@ -182,7 +182,7 @@
 		HeuristicType="FriendlyUnit"
 		VitalKindOf="ENGINEER"
 		VitalObjectStatus="GENERIC_TOGGLE_STATE"
-		Relationship="SAME_PLAYER ALLIES"
+		Relationship="ALLIES"
 		Location="Land"
 		SearchRange="1000.0"
 		MinDistanceFromEnemy="500.0">
@@ -198,7 +198,9 @@
 		id="ClosestFriendlyCommandoBomberAircraftHeuristic"
 		HeuristicType="FriendlyUnit"
 		VitalKindOf="BOMBER_AIRCRAFT COMMANDO"
-		Relationship="SAME_PLAYER ALLIES"
+		VitalObjectStatus="AIRBORNE_TARGET"
+		ForbiddenObjectStatus="REALLYDAMAGED"
+		Relationship="ALLIES"
 		SearchRange="2000.0">
 	</AITargetingHeuristic>
 	
@@ -207,16 +209,19 @@
 		HeuristicType="FriendlyUnit"
 		VitalKindOf="BOMBER_AIRCRAFT"
 		ForbiddenKindOf="COMMANDO"
-		Relationship="SAME_PLAYER ALLIES"
+		VitalObjectStatus="AIRBORNE_TARGET"
+		ForbiddenObjectStatus="DAMAGED REALLYDAMAGED"
+		Relationship="ALLIES"
 		SearchRange="2000.0">
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
-		id="ClosestFriendlyTransportAircraftHeuristic"
+		id="ClosestFriendlyOccupiedTransportAircraftHeuristic"
 		HeuristicType="FriendlyUnit"
 		VitalKindOf="AIRCRAFT TRANSPORT"
-		VitalObjectStatus="CONTAINER_OCCUPIED"
-		Relationship="SAME_PLAYER ALLIES"
+		VitalObjectStatus="AIRBORNE_TARGET CONTAINER_OCCUPIED"
+		ForbiddenObjectStatus="DAMAGED REALLYDAMAGED"
+		Relationship="ALLIES"
 		SearchRange="2000.0">
 	</AITargetingHeuristic>
 </AssetDeclaration>

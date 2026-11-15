@@ -2,6 +2,9 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Includes>
+		<!-- Micro managers -->
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftMicroManager.AIMicroManagerData.xml"/>
+	
 		<!-- Opening moves -->
 		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/Allied/AlliedBalanced.SkirmishOpeningMove.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/Allied/AlliedSpecialForces.SkirmishOpeningMove.xml"/>
@@ -31,7 +34,7 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSpecialForces.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSquadronLeader.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCenturyBomberAttack.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedBomberAircraftAttacks.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedNavalOutpostExpansionBase.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/HealInfantryByFriendlyFieldHospital.AIStrategicStateDefinition.xml"/>
