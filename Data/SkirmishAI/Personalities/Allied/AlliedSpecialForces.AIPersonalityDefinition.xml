@@ -228,21 +228,13 @@
 			State="AlliedAirDrop"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedBomberAircraftHeavyDefensiveAttack"
-			State="AlliedBomberAircraftHeavyDefensiveAttack"
+			id="AlliedBomberAircraftDefensiveAttack"
+			State="AlliedBomberAircraftDefensiveAttack"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedBomberAircraftHeavyOffensiveAttack"
-			State="AlliedBomberAircraftHeavyOffensiveAttack"
+			id="AlliedBomberAircraftOffensiveAttack"
+			State="AlliedBomberAircraftOffensiveAttack"
 			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="AlliedBomberAircraftLightDefensiveAttack"
-			State="AlliedBomberAircraftLightDefensiveAttack"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
-		<StrategicState
-			id="AlliedBomberAircraftLightOffensiveAttack"
-			State="AlliedBomberAircraftLightOffensiveAttack"
-			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedCaptureHighPriorityTech"
 			State="AlliedCaptureHighPriorityTech"

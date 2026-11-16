@@ -8,15 +8,27 @@
 		MaxTargets="4">
 		
 		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<ObjectOfTypeExistsHeuristic
 				Location="Land Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
 					Relationship="ALLIES"
-					Alignment="NONE"
-					StatusBitFlags="AIRBORNE_TARGET"
-					StatusBitFlagsExclude="REALLYDAMAGED">
+					StatusBitFlags="AIRBORNE_TARGET">
 					<IncludeThing>AlliedBomberAircraft</IncludeThing>
 					<IncludeThing>AlliedTransportHelicopter</IncludeThing>
 					<IncludeThing>Kodiak</IncludeThing>
@@ -25,9 +37,17 @@
 					<IncludeThing>JapanFortressShip</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
-			<StructureOrHarvesterUnderAttackHeuristic
-				TimeSinceAttacked="10s"
-				UnderAttack="false" />
+			<EnemyNearbyHeuristic 
+				Distance="2500.0" 
+				EnemyNearby="false"
+				MinEnemyValue="10000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Include="AIRCRAFT"
+					StatusBitFlagsExclude="UNATTACKABLE UNDER_IRON_CURTAIN">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
 		</Heuristic>
 		
 		<TargetHeuristic
@@ -42,14 +62,10 @@
 		<Tactic
 			id="EscortHighValueAircraftWithFighterAircrafts"
 			Tactic="StaticDefense"
-			EndBehavior="DISBAND"
+			EndBehavior="RETURN_HOME_AND_DISBAND"
 			EndIfStateTurnsOff="false"
-			UseAestheticsManager="true"
-			AestheticsManagerPatrolIdleTime="10s"
-			AestheticsManagerMinDistanceFromHarvester="300"
 			Difficulty="MEDIUM HARD BRUTAL"
-			Distance="2000"
-			CombatLeashSlack="1.5"
+			Distance="9999.0"
 			UpdateTime="1s"
 			Targetless="false"
 			UseTransports="false">
@@ -60,13 +76,13 @@
 				IncludeKindOf="FIGHTER_AIRCRAFT" 
 				AllowedLocomotorTypes="AIR"
 				Priority="HIGH"
-				ReleaseType="ALWAYS_RELEASE"
+				ReleaseType="NEVER_RELEASE"
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="false"
 				RequireCanAttackTarget="false"
 				SortByDistance="true"				
 				DistanceSortPoint="TARGET_POINT"
-				MicroManager="DefenseMicroManager">
+				MicroManager="FearlessDefenseMicroManager">
 				<CreateUnits 
 					UnitName="AlliedFighterAircraft" 
 					MinUnits="0" 

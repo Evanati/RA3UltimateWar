@@ -52,7 +52,7 @@
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="CAN_ATTACK" 
 				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
-				Priority="STANDARD" 
+				Priority="HIGH" 
 				ReleaseType="NEVER_RELEASE" 
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"

@@ -8,7 +8,7 @@
 		CamouflageLevel="3"
 		RequiredStatus="GENERIC_TOGGLE_STATE"
 		ForbiddenConditions="GARRISONED"
-		HintDetectableStates="IS_FIRING_WEAPON GROUND_LOCOMOTOR_ACTIVE LIFTED_INTO_AIR UNDER_FROZEN"
+		HintDetectableStates="IS_FIRING_WEAPON LIFTED_INTO_AIR UNDER_FROZEN"
 		EnteringStealthFX="FX_None"
 		LeavingStealthFX="FX_None" />
 </AssetDeclaration>

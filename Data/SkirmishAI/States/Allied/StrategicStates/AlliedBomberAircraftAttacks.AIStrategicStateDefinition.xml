@@ -2,134 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIStrategicStateDefinition
-		id="AlliedBomberAircraftLightOffensiveAttack"
-		MaxRunningCopies="4"
-		MaxInactiveCopies="1"
-		MaxTargets="1">
-		
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<IncomeAdvantageHeuristic
-				Value="0.1"
-				Above="false" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
-					<IncludeThing>AlliedBomberAircraft</IncludeThing>
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<EnemyNearbyHeuristic 
-				Distance="2500.0" 
-				EnemyNearby="false"
-				MinEnemyValue="5000">
-				<EnemyFilter
-					Rule="ANY"
-					Relationship="ENEMIES"
-					Include="CAN_ATTACK"
-					Exclude="AIRCRAFT"
-					StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN">
-				</EnemyFilter>
-			</EnemyNearbyHeuristic>
-		</Heuristic>
-		
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyTechStructureHeuristic" 
-			Priority="10"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyRefineryHeuristic" 
-			Priority="9"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyPowerPlantHeuristic" 
-			Priority="9"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyOutpostHeuristic" 
-			Priority="9"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyMCVExpansionUnitHeuristic" 
-			Priority="8"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyNonMCVExpansionUnitHeuristic" 
-			Priority="8"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemySuperWeaponHeuristic" 
-			Priority="7"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyUltimateDefenseWeaponHeuristic" 
-			Priority="7"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyTechnologyHeuristic" 
-			Priority="7"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyConstructionYardHeuristic" 
-			Priority="6"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyFactoryHeuristic" 
-			Priority="6"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyBaseDefenseHeuristic" 
-			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyCivilianGarrisonHeuristic" 
-			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyNonAerialCommandoHeuristic" 
-			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyHighValueNonAerialVehicleHeuristic" 
-			Priority="4"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyMediumValueNonAerialVehicleHeuristic" 
-			Priority="3"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyLowValueNonAerialVehicleHeuristic" 
-			Priority="2"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyInfantryHeuristic" 
-			Priority="1"/>
-		<Tactic 
-			id="AlliedBomberAircraftLightOffensiveBombardmentAttack" 
-			Tactic="SimpleAttack" 
-			EndBehavior="RETURN_HOME_AND_DISBAND"
-			EndIfStateTurnsOff="false"
-			Difficulty="MEDIUM HARD BRUTAL"
-			Distance="9999.0"
-			UpdateTime="1s"
-			Targetless="false"
-			UseTransports="false">
-			<TeamTemplate 
-				MinUnits="1" 
-				MaxUnits="1" 
-				RegisteredObjectSet="AIRCRAFT"
-				IncludeKindOf="BOMBER_AIRCRAFT" 
-				AllowedLocomotorTypes="AIR"
-				Priority="STANDARD"
-				ReleaseType="RELEASE_TO_PRIORITY"
-				AlwaysRecruit="false"
-				AllowRecruitUnitsInCombat="true"
-				RequireCanAttackTarget="true"
-				SortByDistance="true"				
-				DistanceSortPoint="TARGET_POINT"
-				MicroManager="AlliedBomberAircraftOffensiveMicroManager">
-				<CreateUnits 
-					UnitName="AlliedBomberAircraft" 
-					MinUnits="0" 
-					MaxUnits="1"/>
-				<CreateUnits 
-					UnitName="AlliedBomberAircraftStratoUpgrade" 
-					MinUnits="0" 
-					MaxUnits="1"/>
-			</TeamTemplate>
-		</Tactic>
-	</AIStrategicStateDefinition>
-	
-	<AIStrategicStateDefinition
-		id="AlliedBomberAircraftHeavyOffensiveAttack"
+		id="AlliedBomberAircraftOffensiveAttack"
 		MaxRunningCopies="4"
 		MaxInactiveCopies="1"
 		MaxTargets="2">
@@ -145,16 +18,14 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
-					<IncludeThing>AlliedBomberAircraft</IncludeThing>
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedAirfield</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
 				Distance="2500.0" 
 				EnemyNearby="false"
-				MinEnemyValue="5000">
+				MinEnemyValue="10000">
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
@@ -167,60 +38,42 @@
 		
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyTechStructureHeuristic" 
-			Priority="10"/>
+			Priority="7"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyRefineryHeuristic" 
-			Priority="9"/>
+			Priority="6"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyPowerPlantHeuristic" 
-			Priority="9"/>
+			Priority="6"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyOutpostHeuristic" 
-			Priority="9"/>
+			Priority="6"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyMCVExpansionUnitHeuristic" 
-			Priority="8"/>
+			Priority="5"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyNonMCVExpansionUnitHeuristic" 
-			Priority="8"/>
+			Priority="5"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemySuperWeaponHeuristic" 
-			Priority="7"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyUltimateDefenseWeaponHeuristic" 
-			Priority="7"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyTechnologyHeuristic" 
-			Priority="7"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyConstructionYardHeuristic" 
-			Priority="6"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyFactoryHeuristic" 
-			Priority="6"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyBaseDefenseHeuristic" 
-			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyCivilianGarrisonHeuristic" 
-			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyNonAerialCommandoHeuristic" 
-			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyHighValueNonAerialVehicleHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyMediumValueNonAerialVehicleHeuristic" 
+			TargetHeuristic="ClosestEnemyUltimateDefenseWeaponHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyTechnologyHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyLowValueNonAerialVehicleHeuristic" 
+			TargetHeuristic="ClosestEnemyConstructionYardHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyInfantryHeuristic" 
+			TargetHeuristic="ClosestEnemyFactoryHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyCivilianGarrisonHeuristic" 
 			Priority="1"/>
 		<Tactic 
-			id="AlliedBomberAircraftHeavyOffensiveBombardmentAttack" 
+			id="AlliedBomberAircraftOffensiveBombardmentAttack" 
 			Tactic="SimpleAttack" 
 			EndBehavior="RETURN_HOME_AND_DISBAND"
 			EndIfStateTurnsOff="false"
@@ -236,7 +89,7 @@
 				IncludeKindOf="BOMBER_AIRCRAFT" 
 				AllowedLocomotorTypes="AIR"
 				Priority="HIGH"
-				ReleaseType="ALWAYS_RELEASE"
+				ReleaseType="NEVER_RELEASE"
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="true"
@@ -256,104 +109,7 @@
 	</AIStrategicStateDefinition>
 	
 	<AIStrategicStateDefinition
-		id="AlliedBomberAircraftLightDefensiveAttack"
-		MaxRunningCopies="4"
-		MaxInactiveCopies="1"
-		MaxTargets="1">
-		
-		<Heuristic>
-			<OpeningMoveHeuristic
-				Complete="true" />
-			<IncomeAdvantageHeuristic
-				Value="0.1"
-				Above="false" />
-			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="true">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					StatusBitFlagsExclude="REALLYDAMAGED">
-					<IncludeThing>AlliedBomberAircraft</IncludeThing>
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<EnemyNearbyHeuristic 
-				Distance="2500.0" 
-				EnemyNearby="true"
-				MinEnemyValue="5000">
-				<EnemyFilter
-					Rule="ANY"
-					Relationship="ENEMIES"
-					Include="CAN_ATTACK"
-					Exclude="AIRCRAFT"
-					StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN">
-				</EnemyFilter>
-			</EnemyNearbyHeuristic>
-		</Heuristic>
-		
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyNonAerialCommandoHeuristic" 
-			Priority="6"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyHighValueNonAerialVehicleHeuristic" 
-			Priority="5"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyMediumValueNonAerialVehicleHeuristic" 
-			Priority="4"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyUltimateDefenseWeaponHeuristic" 
-			Priority="3"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyBaseDefenseHeuristic" 
-			Priority="3"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyCivilianGarrisonHeuristic" 
-			Priority="3"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyLowValueNonAerialVehicleHeuristic" 
-			Priority="2"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyInfantryHeuristic" 
-			Priority="1"/>
-		<Tactic 
-			id="AlliedBomberAircraftLightDefensiveBombardmentAttack" 
-			Tactic="SimpleAttack" 
-			EndBehavior="RETURN_HOME_AND_DISBAND"
-			EndIfStateTurnsOff="false"
-			Difficulty="EASY MEDIUM HARD BRUTAL"
-			Distance="9999.0"
-			UpdateTime="1s"
-			Targetless="false"
-			UseTransports="false">
-			<TeamTemplate 
-				MinUnits="1" 
-				MaxUnits="1" 
-				RegisteredObjectSet="AIRCRAFT"
-				IncludeKindOf="BOMBER_AIRCRAFT" 
-				AllowedLocomotorTypes="AIR"
-				Priority="STANDARD" 
-				ReleaseType="RELEASE_TO_PRIORITY"
-				AlwaysRecruit="false"
-				AllowRecruitUnitsInCombat="true"
-				RequireCanAttackTarget="true"
-				SortByDistance="true"				
-				DistanceSortPoint="TARGET_POINT"
-				MicroManager="AlliedBomberAircraftDefensiveMicroManager">
-				<CreateUnits 
-					UnitName="AlliedBomberAircraft" 
-					MinUnits="0" 
-					MaxUnits="1"/>
-				<CreateUnits 
-					UnitName="AlliedBomberAircraftStratoUpgrade" 
-					MinUnits="0" 
-					MaxUnits="1"/>
-			</TeamTemplate>
-		</Tactic>
-	</AIStrategicStateDefinition>
-	
-	<AIStrategicStateDefinition
-		id="AlliedBomberAircraftHeavyDefensiveAttack"
+		id="AlliedBomberAircraftDefensiveAttack"
 		MaxRunningCopies="4"
 		MaxInactiveCopies="1"
 		MaxTargets="2">
@@ -369,16 +125,14 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					StatusBitFlagsExclude="REALLYDAMAGED">
-					<IncludeThing>AlliedBomberAircraft</IncludeThing>
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedAirfield</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
 				Distance="2500.0" 
 				EnemyNearby="true"
-				MinEnemyValue="5000">
+				MinEnemyValue="10000">
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
@@ -394,16 +148,13 @@
 			Priority="6"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyHighValueNonAerialVehicleHeuristic" 
-			Priority="5"/>
+			Priority="6"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyMediumValueNonAerialVehicleHeuristic" 
-			Priority="4"/>
+			Priority="5"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyUltimateDefenseWeaponHeuristic" 
-			Priority="3"/>
-		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyBaseDefenseHeuristic" 
-			Priority="3"/>
+			Priority="4"/>
 		<TargetHeuristic 
 			TargetHeuristic="ClosestEnemyCivilianGarrisonHeuristic" 
 			Priority="3"/>
@@ -414,7 +165,7 @@
 			TargetHeuristic="ClosestEnemyInfantryHeuristic" 
 			Priority="1"/>
 		<Tactic 
-			id="AlliedBomberAircraftHeavyDefensiveBombardmentAttack" 
+			id="AlliedBomberAircraftDefensiveBombardmentAttack" 
 			Tactic="SimpleAttack" 
 			EndBehavior="RETURN_HOME_AND_DISBAND"
 			EndIfStateTurnsOff="false"
@@ -430,7 +181,7 @@
 				IncludeKindOf="BOMBER_AIRCRAFT" 
 				AllowedLocomotorTypes="AIR"
 				Priority="HIGH" 
-				ReleaseType="ALWAYS_RELEASE"
+				ReleaseType="NEVER_RELEASE"
 				AlwaysRecruit="false"
 				AllowRecruitUnitsInCombat="true"
 				RequireCanAttackTarget="true"

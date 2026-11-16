@@ -59,7 +59,7 @@
 				MaxUnits="1" 
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
 				IncludeKindOf="INFANTRY" 
-				Priority="HIGH" 
+				Priority="STANDARD" 
 				ReleaseType="ALWAYS_RELEASE" 
 				AlwaysRecruit="true"
 				AllowRecruitUnitsInCombat="false"

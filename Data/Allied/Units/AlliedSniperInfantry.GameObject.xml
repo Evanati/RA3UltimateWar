@@ -2283,15 +2283,15 @@
 			
 			<InvisibilityBroadcastUpdate
 				id="ModuleTag_InvisibilityBroadcastUpdate"
-				BroadcastRange="9999.0"
-				UpdatePeriod="0.5s"
-				AffectsSelf="false" 
+				BroadcastRange="10.0"
+				UpdatePeriod="1.0s"
+				AffectsSelf="true" 
 				InvisibilityTemplate="AlliedSniperInfantryCamouflage">
 				<BroadcastObjectFilter
-					Rule="ANY"
-					Relationship="ALLIES ENEMIES"
-					Include="INFANTRY VEHICLE"
-					StatusBitFlagsExclude="AIRBORNE_TARGET BROADCASTING_INVISIBILITY IGNORING_STEALTH">
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					StatusBitFlags="GENERIC_TOGGLE_STATE">
+					<IncludeThing>AlliedSniperInfantry</IncludeThing>
 				</BroadcastObjectFilter>
 				<ObjectStatusValidation
 					RequiredStatus="GENERIC_TOGGLE_STATE" />

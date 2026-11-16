@@ -197,11 +197,12 @@
 	<AITargetingHeuristic
 		id="ClosestFriendlyCommandoBomberAircraftHeuristic"
 		HeuristicType="FriendlyUnit"
-		VitalKindOf="BOMBER_AIRCRAFT COMMANDO"
+		VitalKindOf="COMMANDO"
+		ForbiddenKindOf="INFANTRY"
 		VitalObjectStatus="AIRBORNE_TARGET"
-		ForbiddenObjectStatus="REALLYDAMAGED"
 		Relationship="ALLIES"
-		SearchRange="2000.0">
+		RequireUniqueTarget="false"
+		SortType="Distance">
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
@@ -210,18 +211,18 @@
 		VitalKindOf="BOMBER_AIRCRAFT"
 		ForbiddenKindOf="COMMANDO"
 		VitalObjectStatus="AIRBORNE_TARGET"
-		ForbiddenObjectStatus="DAMAGED REALLYDAMAGED"
 		Relationship="ALLIES"
-		SearchRange="2000.0">
+		RequireUniqueTarget="false"
+		SortType="Distance">
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
 		id="ClosestFriendlyOccupiedTransportAircraftHeuristic"
 		HeuristicType="FriendlyUnit"
-		VitalKindOf="AIRCRAFT TRANSPORT"
+		VitalKindOf="TRANSPORT"
 		VitalObjectStatus="AIRBORNE_TARGET CONTAINER_OCCUPIED"
-		ForbiddenObjectStatus="DAMAGED REALLYDAMAGED"
 		Relationship="ALLIES"
-		SearchRange="2000.0">
+		RequireUniqueTarget="false"
+		SortType="Distance">
 	</AITargetingHeuristic>
 </AssetDeclaration>
