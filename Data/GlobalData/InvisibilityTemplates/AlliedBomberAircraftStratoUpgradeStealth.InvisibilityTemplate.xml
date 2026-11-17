@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<InvisibilityTemplate
+		id="AlliedBomberAircraftStratoUpgradeStealth"
+		Options="UNTOGGLE_HIDDEN_WHEN_LEAVING_STEALTH DISCONTINUE_WHEN_REVEALED"
+		InvisibilityType="STEALTH"
+		RequiredStatus="WEAPON_UPGRADED_02"
+		ForbiddenStatus="IS_FIRING_WEAPON DAMAGED REALLYDAMAGED PARKED_AT_AIRFIELD"
+		EnteringStealthFX="FX_None"
+		LeavingStealthFX="FX_None" />
+</AssetDeclaration>

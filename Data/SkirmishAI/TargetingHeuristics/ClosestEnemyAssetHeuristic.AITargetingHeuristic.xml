@@ -7,8 +7,9 @@
 		VitalKindOf="NEUTRAL_TECH"
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
-		RequireUniqueTarget="true"
-		SortType="Distance">
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -23,7 +24,8 @@
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -38,7 +40,8 @@
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -53,7 +56,8 @@
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -68,7 +72,8 @@
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -84,7 +89,8 @@
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -100,7 +106,8 @@
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -115,7 +122,8 @@
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -130,8 +138,9 @@
 		ForbiddenKindOf="CONSTRUCTION_YARD OUTPOST"
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
-		RequireUniqueTarget="true"
-		SortType="Distance">
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -146,8 +155,9 @@
 		ForbiddenKindOf="NEUTRAL_TECH REVEAL_TO_ALL"
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
-		RequireUniqueTarget="true"
-		SortType="Distance">
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -157,12 +167,13 @@
 	
 	<AITargetingHeuristic
 		id="ClosestEnemyCivilianGarrisonHeuristic"
-		HeuristicType="EnemyStructure"
+		HeuristicType="EnemyGarrison"
 		VitalKindOf="GARRISON"
 		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="MAIN_BASE"
@@ -177,7 +188,8 @@
 		ForbiddenObjectStatus="AIRBORNE_TARGET UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
@@ -193,7 +205,8 @@
 		ForbiddenObjectStatus="AIRBORNE_TARGET UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
@@ -209,7 +222,8 @@
 		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
@@ -224,8 +238,9 @@
 		ForbiddenKindOf="AIRCRAFT"
 		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
-		RequireUniqueTarget="true"
-		SortType="Distance">
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
@@ -241,7 +256,8 @@
 		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
@@ -257,7 +273,8 @@
 		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
@@ -273,7 +290,8 @@
 		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
 		Relationship="ENEMIES"
 		RequireUniqueTarget="true"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="9999.0">
 	
 		<BaseSelection
 			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"

@@ -19,7 +19,6 @@
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="NEUTRAL"
-					Alignment="NONE"
 					Include="GARRISON"
 					StatusBitFlagsExclude="REALLYDAMAGED DAMAGED CONTAINER_OCCUPIED">
 				</ObjectFilter>
@@ -50,7 +49,7 @@
 				MinUnits="3" 
 				MaxUnits="5" 
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
-				IncludeKindOf="CAN_ATTACK" 
+				IncludeKindOf="INFANTRY" 
 				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="HIGH" 
 				ReleaseType="NEVER_RELEASE" 
@@ -78,6 +77,14 @@
 					UnitName="AlliedAntiInfantryInfantry" 
 					MinUnits="0" 
 					MaxUnits="2"/>
+				<ObjectFilter 
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedAntiVehicleInfantry</IncludeThing>
+					<IncludeThing>AlliedSniperInfantry</IncludeThing>
+					<IncludeThing>AlliedGrenadeInfantry</IncludeThing>
+					<IncludeThing>AlliedAntiInfantryInfantry</IncludeThing>
+				</ObjectFilter>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>

@@ -240,6 +240,14 @@
 			State="AlliedBomberAircraftOffensiveAttack"
 			Difficulty="HARD BRUTAL"/>
 		<StrategicState
+			id="AlliedBomberAircraftStratoUpgradeDefensiveAttack"
+			State="AlliedBomberAircraftStratoUpgradeDefensiveAttack"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedBomberAircraftStratoUpgradeOffensiveAttack"
+			State="AlliedBomberAircraftStratoUpgradeOffensiveAttack"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
 			id="AlliedCaptureHighPriorityTech"
 			State="AlliedCaptureHighPriorityTech"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
@@ -1172,6 +1180,16 @@
 			DefensiveModifier="15"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<UnitModifier
+			Unit="AlliedBomberAircraftStratoUpgrade"
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="AlliedBomberAircraftStratoUpgrade"
+			OffensiveModifier="25"
+			DefensiveModifier="25"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
 			Unit="AlliedCommandoTech1"
 			OffensiveModifier="5"
 			DefensiveModifier="5"
@@ -1190,6 +1208,16 @@
 			Unit="AlliedFighterAircraft"
 			OffensiveModifier="4"
 			DefensiveModifier="4"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<UnitModifier
+			Unit="AlliedFighterAircraftStratoUpgrade"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+		<UnitModifier
+			Unit="AlliedFighterAircraftStratoUpgrade"
+			OffensiveModifier="8"
+			DefensiveModifier="8"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<UnitModifier
 			Unit="AlliedFutureTank"

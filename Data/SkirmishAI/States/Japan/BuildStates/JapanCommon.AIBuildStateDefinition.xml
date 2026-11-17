@@ -18,8 +18,7 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>JapanWarFactory</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
@@ -28,8 +27,7 @@
 				PassIfExists="false">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>JapanConstructionYard</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>JapanMCV_Naval</IncludeThing>
@@ -62,8 +60,7 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>JapanNavalYard</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
@@ -72,8 +69,7 @@
 				PassIfExists="false">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>JapanConstructionYard</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>JapanMCV_Naval</IncludeThing>
@@ -168,7 +164,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK ENGINEER INFILTRATOR">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -447,7 +442,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK INFILTRATOR ENGINEER">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -488,7 +482,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="INFANTRY VEHICLE AMPHIBIOUS"
 					Exclude="SHIP AIRCRAFT">
 				</EnemyFilter>
@@ -530,7 +523,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="SHIP AMPHIBIOUS">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -571,7 +563,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="AIRCRAFT">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -611,7 +602,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK INFILTRATOR ENGINEER">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>

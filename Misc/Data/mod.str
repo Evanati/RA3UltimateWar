@@ -2116,16 +2116,6 @@
 	DialogEvent:MIIn_ArcherMaiden
 		"*Archer Maidens use their powered greatbows to strike enemy ground and air targets.  These bows can be extremely damaging in spite of being relatively slow on the draw.  The Maidens' special ability launches an energy arrow barrage that can strike multiple targets in an area."
 	End
-
-// AlliedBomberAircraft
-
-	Name:AlliedBomberAircraftReturnToAirfield
-		"Return to Base"
-	End
-
-	Desc:AlliedBomberAircraftReturnToAirfield
-		"Order Century Bomber return to base for repairs and restock."
-	End
 	
 // Centurion
 	
@@ -3749,6 +3739,20 @@
 	Desc:AlliedBaseDefenseAdvanced
 		"High-tech security systems that use supercharged beams of light to stop enemy forces. Includes torpedoes if built on water."
 	End
+	
+// AlliedBomberAircraftStealth
+	Name:AlliedBomberAircraftStealth
+		"Stealth Century Bomber"
+	End
+	
+	Type:AlliedBomberAircraftStealth
+		"Anti-Structure / Troop Carrier"
+	End		
+	
+	Desc:AlliedBomberAircraftStealth
+		"Bruh."
+	End	
+	
 	
 // AlliedTransportHelicopter
 	Name:AlliedTransportHelicopter

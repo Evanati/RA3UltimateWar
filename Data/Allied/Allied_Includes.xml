@@ -14,6 +14,8 @@
 		
 		<!-- Units -->
 		<Include type="all" source="DATA:Allied/Units/AlliedAntiVehicleInfantry.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedBomberAircraft.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedBomberAircraftStratoUpgrade.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Units/AlliedEngineer.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Units/AlliedScoutInfantryDH.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Units/AlliedSniperInfantry.GameObject.xml"/>

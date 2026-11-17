@@ -25,7 +25,7 @@
 	</Includes>
 	
 	<Defines>
-		<Define name="SOVIET_OUTPOST_LOCAL_UNPACK_TIME" value="5s" />
+		<Define name="SOVIET_OUTPOST_LOCAL_PACK_TIME" value="3s" />
 	</Defines>
 	
 	<GameObject
@@ -217,7 +217,7 @@
 			
 			<StructureUnpackUpdate
 				id="StructureUnpackUpdate"
-				UnpackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME" />
+				UnpackTime="=$SOVIET_OUTPOST_LOCAL_PACK_TIME" />
 			
 			<SpecialPower
 				id="ModuleTag_SpecialPower"
@@ -230,6 +230,14 @@
 				UnpackTime="0s" 
 				PackTime="0s" 
 				DisabledTypesToProcess="HELD">
+				
+				<ToggleState>
+					<SkirmishAiInfo
+						ToggleHint="TOGGLE_TRANSFORM"
+						Location="Land Water"
+						NeverUseInState="RETREAT"
+						NeverUseDuringTask="DODGING ACTIVATING_SPECIAL_POWER CONTROLLED_BY_SPECIAL_POWER DEPLOYING"	/>
+				</ToggleState>
 				
 				<ToggleState
 					ModelConditions="TOPPLED"
@@ -245,8 +253,8 @@
 				Options="RECONSTITUTE_STORED_COMMAND"
 				SpecialPowerTemplate="SpecialPower_SurveyorPackReplaceSelf"
 				ActiveModelCondition="TOPPLED"
-				PackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME"
-				NewObjectUnpackTime="=$SOVIET_OUTPOST_LOCAL_UNPACK_TIME"
+				PackTime="=$SOVIET_OUTPOST_LOCAL_PACK_TIME"
+				NewObjectUnpackTime="=$SOVIET_OUTPOST_LOCAL_PACK_TIME"
 				ReplaceOptions="DISABLE_DURING_REPLACE DISABLE_NEW_OBJECT_DURING_UNPACK">
 				<ReplacementTemplate>SovietSurveyor</ReplacementTemplate>
 			</ReplaceSelfSpecialAbility>

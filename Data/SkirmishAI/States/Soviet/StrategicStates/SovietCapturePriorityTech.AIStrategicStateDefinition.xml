@@ -33,10 +33,10 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
+			TargetHeuristic="SafestMoneyTechStructureHeuristic" 
 			Priority="1"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
+			TargetHeuristic="SafestDefenseTechStructureHeuristic" 
 			Priority="1"/>
 		<Tactic 
 			id="SovietCaptureHighPriorityTechWithEngineer" 
@@ -103,19 +103,19 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestVeterancyTechStructureHeuristic" 
+			TargetHeuristic="SafestVeterancyTechStructureHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestVehicleHealTechStructureHeuristic" 
+			TargetHeuristic="SafestVehicleHealTechStructureHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestAircraftHealTechStructureHeuristic" 
+			TargetHeuristic="SafestAircraftHealTechStructureHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestShipHealTechStructureHeuristic" 
+			TargetHeuristic="SafestShipHealTechStructureHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestInfantryHealTechStructureHeuristic" 
+			TargetHeuristic="SafestInfantryHealTechStructureHeuristic" 
 			Priority="1"/>
 		<Tactic 
 			id="SovietCaptureMediumPriorityTechWithEngineer" 
@@ -182,16 +182,16 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestRadarTechStructureHeuristic" 
+			TargetHeuristic="SafestRadarTechStructureHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestControlTechStructureHeuristic" 
+			TargetHeuristic="SafestControlTechStructureHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestPowerTechStructureHeuristic" 
+			TargetHeuristic="SafestPowerTechStructureHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestResidualTechStructureHeuristic" 
+			TargetHeuristic="SafestResidualTechStructureHeuristic" 
 			Priority="1"/>
 		<Tactic 
 			id="SovietCaptureLowPriorityTechWithEngineer" 

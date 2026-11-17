@@ -6,6 +6,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="SUPPLY_SOURCE"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -17,8 +19,11 @@
 	<AITargetingHeuristic
 		id="ClosestFriendlyDefenseTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="FS_BASE_DEFENSE NEUTRAL_TECH"
+		VitalKindOf="FS_BASE_DEFENSE"
+		ForbiddenKindOf="COVER"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -32,6 +37,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="GRANTS_VETERANCY"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -45,6 +52,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="SIEGE_TOWER"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -58,6 +67,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CAVALRY"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -71,6 +82,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="MONSTER"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -84,6 +97,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CASTLE_KEEP"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -97,6 +112,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="FS_RADAR"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -108,8 +125,11 @@
 	<AITargetingHeuristic
 		id="ClosestFriendlyPowerTechStructureHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="FS_POWER NEUTRAL_TECH"
+		VitalKindOf="FS_POWER"
+		ForbiddenKindOf="COVER"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -123,6 +143,8 @@
 		HeuristicType="FriendlyStructure"
 		VitalKindOf="CASTLE_CENTER"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 		
 		<BaseSelection
@@ -133,10 +155,12 @@
 	
 	<AITargetingHeuristic
 		id="ClosestFriendlyResidualTechStructureHeuristic"
-		HeuristicType="EnemyStructure"
+		HeuristicType="FriendlyStructure"
 		VitalKindOf="NEUTRAL_TECH"
 		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
 		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0">
 				
 		<BaseSelection
@@ -148,9 +172,12 @@
 	<AITargetingHeuristic
 		id="ClosestFriendlyRepairTurretLandHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="FS_BASE_DEFENSE FS_TECHNOLOGY CAN_HEAL_ALLIES"
+		VitalKindOf="CAN_HEAL_ALLIES"
+		ForbiddenKindOf="INFANTRY"
 		Relationship="ALLIES"
 		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="1000.0"
 		MinDistanceFromEnemy="500.0">
 		
@@ -164,9 +191,12 @@
 	<AITargetingHeuristic
 		id="ClosestFriendlyRepairTurretWaterHeuristic"
 		HeuristicType="FriendlyStructure"
-		VitalKindOf="FS_BASE_DEFENSE FS_TECHNOLOGY CAN_HEAL_ALLIES"
+		VitalKindOf="CAN_HEAL_ALLIES"
+		ForbiddenKindOf="INFANTRY"
 		Relationship="ALLIES"
 		Location="Water"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="1000.0"
 		MinDistanceFromEnemy="500.0">
 		
@@ -180,10 +210,13 @@
 	<AITargetingHeuristic
 		id="ClosestFriendlyFieldHospitalHeuristic"
 		HeuristicType="FriendlyUnit"
-		VitalKindOf="ENGINEER"
+		VitalKindOf="CAN_HEAL_ALLIES"
+		ForbiddenKindOf="VEHICLE"
 		VitalObjectStatus="GENERIC_TOGGLE_STATE"
 		Relationship="ALLIES"
 		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="1000.0"
 		MinDistanceFromEnemy="500.0">
 		
@@ -202,7 +235,8 @@
 		VitalObjectStatus="AIRBORNE_TARGET"
 		Relationship="ALLIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="2500.0">
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
@@ -213,7 +247,8 @@
 		VitalObjectStatus="AIRBORNE_TARGET"
 		Relationship="ALLIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="2500.0">
 	</AITargetingHeuristic>
 	
 	<AITargetingHeuristic
@@ -223,6 +258,7 @@
 		VitalObjectStatus="AIRBORNE_TARGET CONTAINER_OCCUPIED"
 		Relationship="ALLIES"
 		RequireUniqueTarget="false"
-		SortType="Distance">
+		SortType="Distance"
+		SearchRange="2500.0">
 	</AITargetingHeuristic>
 </AssetDeclaration>

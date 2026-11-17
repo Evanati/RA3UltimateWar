@@ -4,6 +4,7 @@
     <Includes>
 		<!-- Micro managers -->
 		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftMicroManager.AIMicroManagerData.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftStratoUpgradeMicroManager.AIMicroManagerData.xml"/>
 	
 		<!-- Opening moves -->
 		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/Allied/AlliedBalanced.SkirmishOpeningMove.xml"/>
@@ -61,9 +62,9 @@
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestEnemyAssetHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestFriendlyAssetHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestGarrisonHeuristic.AITargetingHeuristic.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechStructureHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestExpansionPointHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestFriendlyAssetHeuristic.AITargetingHeuristic.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestToAirEnemyAssetHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestEnemyAssetHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestTechStructureHeuristic.AITargetingHeuristic.xml"/>
     </Includes>
 </AssetDeclaration>

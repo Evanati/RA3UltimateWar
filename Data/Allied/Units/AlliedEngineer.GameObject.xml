@@ -203,7 +203,7 @@
 		Scale="0.7"
 		CommandSet="AlliedEngineerCommandSet"
 		IsTrainable="true"
-		KindOf="SELECTABLE CAN_CAST_REFLECTIONS INFANTRY SCORE CAN_CAPTURE SKIRMISH_AI_DONT_GARRISON ENGINEER CAN_CAPTURE CAN_BE_FAVORITE_UNIT AMPHIBIOUS IGNORES_SELECT_ALL CYCLE_SELECTION"
+		KindOf="SELECTABLE INFANTRY ENGINEER CAN_CAPTURE CAN_HEAL_ALLIES AMPHIBIOUS SCORE SKIRMISH_AI_DONT_GARRISON CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS IGNORES_SELECT_ALL CYCLE_SELECTION"
 		ThreatLevel="10"
 		VoicePriority="68"
 		EditorName="AlliedEngineer"
@@ -226,7 +226,7 @@
 		<LocomotorSet
 			Locomotor="TestReactiveLocomotorHUMAN"
 			Condition="NORMAL"
-			Speed="47" />
+			Speed="45" />
 		<LocomotorSet
 			Locomotor="AlliedEngineerWaterLocomotor"
 			Condition="NORMAL"

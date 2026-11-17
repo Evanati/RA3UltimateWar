@@ -20,6 +20,8 @@
 					Rule="NONE"
 					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedAirfield</IncludeThing>
+					<IncludeThing>SovietAirfield</IncludeThing>
+					<IncludeThing>JapanNavalYard</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<ObjectOfTypeExistsHeuristic
@@ -30,17 +32,18 @@
 					Relationship="ALLIES"
 					StatusBitFlags="AIRBORNE_TARGET">
 					<IncludeThing>AlliedBomberAircraft</IncludeThing>
+					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
 					<IncludeThing>AlliedTransportHelicopter</IncludeThing>
 					<IncludeThing>Kodiak</IncludeThing>
+					<IncludeThing>JapanFortressShip</IncludeThing>
 					<IncludeThing>SovietBomberAircraft</IncludeThing>
 					<IncludeThing>SovietTransportAircraft</IncludeThing>
-					<IncludeThing>JapanFortressShip</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
 				Distance="2500.0" 
 				EnemyNearby="false"
-				MinEnemyValue="10000">
+				MinEnemyValue="5000">
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
@@ -82,19 +85,32 @@
 				RequireCanAttackTarget="false"
 				SortByDistance="true"				
 				DistanceSortPoint="TARGET_POINT"
-				MicroManager="FearlessDefenseMicroManager">
+				MicroManager="DefenseMicroManager">
 				<CreateUnits 
 					UnitName="AlliedFighterAircraft" 
 					MinUnits="0" 
 					MaxUnits="4"/>
 				<CreateUnits 
-					UnitName="SovietFighterAircraft" 
+					UnitName="AlliedFighterAircraftStratoUpgrade" 
 					MinUnits="0" 
 					MaxUnits="4"/>
 				<CreateUnits 
 					UnitName="JapanAntiInfantryVehicle" 
 					MinUnits="0" 
 					MaxUnits="4"/>
+				<CreateUnits 
+					UnitName="SovietFighterAircraft" 
+					MinUnits="0" 
+					MaxUnits="4"/>
+				<ObjectFilter 
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
+					<IncludeThing>AlliedFighterAircraft</IncludeThing>
+					<IncludeThing>AlliedFighterAircraftStratoUpgrade</IncludeThing>
+					<IncludeThing>JapanAntiInfantryVehicle</IncludeThing>
+					<IncludeThing>SovietFighterAircraft</IncludeThing>
+				</ObjectFilter>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>

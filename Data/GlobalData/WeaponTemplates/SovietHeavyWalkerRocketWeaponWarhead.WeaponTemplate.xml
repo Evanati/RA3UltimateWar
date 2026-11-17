@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="SovietHeavyWalkerRocketWeaponWarhead"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE"
+		ProjectileCollidesWith="ENEMIES NEUTRAL STRUCTURES WALLS" >
+		<Nuggets>
+			<DamageNugget
+				id="SovietHeavyWalkerRocketWeaponDamageNugget"
+				PartitionFilterTestType="EXTENTS_3D"
+				Radius="20"
+				MinRadius="0"
+				Damage="18"
+				DamageTaperOff="9"
+				DamageArc="360d"
+				DamageMaxHeight="-1"
+				DamageMaxHeightAboveTerrain="-1"
+				FlankingBonus="0"
+				FlankedScalar="1"
+				DelayTimeSeconds="0s"
+				DamageType="ROCKET"
+				DeathType="EXPLODED"
+				DamageFXType="ALLIED_MISSILE"
+				DamageSubType="NORMAL"
+				DrainLifeMultiplier="1"
+				DamageSpeed="0"
+				InvalidTargetStatus="INSIDE_GARRISON UNATTACKABLE UNDER_IRON_CURTAIN"
+				DamageArcInverted="false"
+				AcceptDamageAdd="true"
+				OnlyKillOwnerWhenTriggered="false"
+				DrainLife="false"
+				NotifyOwnerOnVictimDeath="false"
+				NotifyObserversOnPreDamageEffectPosition="false"
+				ForceFXPositionToVictim="false"
+				RadiusAffectsBridges="false">
+				<DamageScalarDetails
+					Scalar="100%">
+					<Filter
+						Rule="NONE"
+						Relationship="ALLIES ENEMIES NEUTRAL">
+						<IncludeThing>AlliedAntiGroundAircraft</IncludeThing>
+						<IncludeThing>AlliedSupportAircraft</IncludeThing>
+						<IncludeThing>Paladin</IncludeThing>
+						<IncludeThing>JapanAntiAirVehicleTech1</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails
+					Scalar="125%">
+					<Filter
+						Rule="NONE"
+						Relationship="ALLIES ENEMIES NEUTRAL">
+						<IncludeThing>AlliedBomberAircraft</IncludeThing>
+						<IncludeThing>AlliedBomberAircraftStealth</IncludeThing>
+						<IncludeThing>SovietBomberAircraft</IncludeThing>
+						<IncludeThing>SovietDesolaterBomber</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+				<DamageScalarDetails
+					Scalar="150%">
+					<Filter
+						Rule="NONE"
+						Relationship="ALLIES ENEMIES NEUTRAL">
+						<IncludeThing>Kodiak</IncludeThing>
+						<IncludeThing>JapanFortressShip</IncludeThing>
+						<IncludeThing>JapanFortressShipSp</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>

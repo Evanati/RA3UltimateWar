@@ -22,6 +22,15 @@
 					<IncludeThing>AlliedAirfield</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
 				Distance="2500.0" 
 				EnemyNearby="false"
@@ -37,41 +46,41 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyTechStructureHeuristic" 
-			Priority="7"/>
+			TargetHeuristic="SafestToAirEnemyTechStructureHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyRefineryHeuristic" 
-			Priority="6"/>
+			TargetHeuristic="SafestToAirEnemyRefineryHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyPowerPlantHeuristic" 
-			Priority="6"/>
+			TargetHeuristic="SafestToAirEnemyPowerPlantHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyOutpostHeuristic" 
-			Priority="6"/>
+			TargetHeuristic="SafestToAirEnemyOutpostHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyMCVExpansionUnitHeuristic" 
-			Priority="5"/>
+			TargetHeuristic="SafestToAirEnemyMCVExpansionUnitHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyNonMCVExpansionUnitHeuristic" 
-			Priority="5"/>
+			TargetHeuristic="SafestToAirEnemyNonMCVExpansionUnitHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemySuperWeaponHeuristic" 
-			Priority="4"/>
+			TargetHeuristic="SafestToAirEnemySuperWeaponHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyUltimateDefenseWeaponHeuristic" 
-			Priority="4"/>
+			TargetHeuristic="SafestToAirEnemyUltimateDefenseWeaponHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyTechnologyHeuristic" 
-			Priority="3"/>
+			TargetHeuristic="SafestToAirEnemyTechnologyHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyConstructionYardHeuristic" 
-			Priority="2"/>
+			TargetHeuristic="SafestToAirEnemyConstructionYardHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyFactoryHeuristic" 
-			Priority="2"/>
+			TargetHeuristic="SafestToAirEnemyFactoryHeuristic" 
+			Priority="10"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestEnemyCivilianGarrisonHeuristic" 
-			Priority="1"/>
+			TargetHeuristic="SafestToAirEnemyCivilianGarrisonHeuristic" 
+			Priority="10"/>
 		<Tactic 
 			id="AlliedBomberAircraftOffensiveBombardmentAttack" 
 			Tactic="SimpleAttack" 
@@ -100,10 +109,12 @@
 					UnitName="AlliedBomberAircraft" 
 					MinUnits="0" 
 					MaxUnits="2"/>
-				<CreateUnits 
-					UnitName="AlliedBomberAircraftStratoUpgrade" 
-					MinUnits="0" 
-					MaxUnits="2"/>
+				<ObjectFilter 
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
+					<IncludeThing>AlliedBomberAircraft</IncludeThing>
+				</ObjectFilter>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>
@@ -127,6 +138,15 @@
 					Rule="NONE"
 					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -192,10 +212,215 @@
 					UnitName="AlliedBomberAircraft" 
 					MinUnits="0" 
 					MaxUnits="2"/>
+				<ObjectFilter 
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					StatusBitFlagsExclude="REALLYDAMAGED">
+					<IncludeThing>AlliedBomberAircraft</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+	
+	<AIStrategicStateDefinition
+		id="AlliedBomberAircraftStratoUpgradeOffensiveAttack"
+		MaxRunningCopies="4"
+		MaxInactiveCopies="1"
+		MaxTargets="2">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="2500.0" 
+				EnemyNearby="false"
+				MinEnemyValue="10000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Include="CAN_ATTACK"
+					Exclude="AIRCRAFT"
+					StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyTechStructureHeuristic" 
+			Priority="7"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyRefineryHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyPowerPlantHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyOutpostHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyMCVExpansionUnitHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyNonMCVExpansionUnitHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemySuperWeaponHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyUltimateDefenseWeaponHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyTechnologyHeuristic" 
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyConstructionYardHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyFactoryHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="SafestToAirEnemyCivilianGarrisonHeuristic" 
+			Priority="1"/>
+		<Tactic 
+			id="AlliedBomberAircraftStratoUpgradeOffensiveBombardmentAttack" 
+			Tactic="SimpleAttack" 
+			EndBehavior="RETURN_HOME_AND_DISBAND"
+			EndIfStateTurnsOff="false"
+			Difficulty="HARD BRUTAL"
+			Distance="9999.0"
+			UpdateTime="1s"
+			Targetless="false"
+			UseTransports="false">
+			<TeamTemplate 
+				MinUnits="1" 
+				MaxUnits="2" 
+				RegisteredObjectSet="AIRCRAFT"
+				IncludeKindOf="BOMBER_AIRCRAFT" 
+				AllowedLocomotorTypes="AIR"
+				Priority="HIGH"
+				ReleaseType="NEVER_RELEASE"
+				AlwaysRecruit="false"
+				AllowRecruitUnitsInCombat="true"
+				RequireCanAttackTarget="true"
+				SortByDistance="true"				
+				DistanceSortPoint="TARGET_POINT"
+				MicroManager="AlliedBomberAircraftStratoUpgradeOffensiveMicroManager">
 				<CreateUnits 
 					UnitName="AlliedBomberAircraftStratoUpgrade" 
 					MinUnits="0" 
 					MaxUnits="2"/>
+				<ObjectFilter 
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
+					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+	
+	<AIStrategicStateDefinition
+		id="AlliedBomberAircraftStratoUpgradeDefensiveAttack"
+		MaxRunningCopies="4"
+		MaxInactiveCopies="1"
+		MaxTargets="2">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
+			<IncomeAdvantageHeuristic
+				Value="0.1"
+				Above="true" />
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedAirfield</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="2500.0" 
+				EnemyNearby="true"
+				MinEnemyValue="10000">
+				<EnemyFilter
+					Rule="ANY"
+					Relationship="ENEMIES"
+					Include="CAN_ATTACK"
+					Exclude="AIRCRAFT"
+					StatusBitFlagsExclude="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN">
+				</EnemyFilter>
+			</EnemyNearbyHeuristic>
+		</Heuristic>
+		
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyNonAerialCommandoHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyHighValueNonAerialVehicleHeuristic" 
+			Priority="6"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyMediumValueNonAerialVehicleHeuristic" 
+			Priority="5"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyUltimateDefenseWeaponHeuristic" 
+			Priority="4"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyCivilianGarrisonHeuristic" 
+			Priority="3"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyLowValueNonAerialVehicleHeuristic" 
+			Priority="2"/>
+		<TargetHeuristic 
+			TargetHeuristic="ClosestEnemyInfantryHeuristic" 
+			Priority="1"/>
+		<Tactic 
+			id="AlliedBomberAircraftStratoUpgradeDefensiveBombardmentAttack" 
+			Tactic="SimpleAttack" 
+			EndBehavior="RETURN_HOME_AND_DISBAND"
+			EndIfStateTurnsOff="false"
+			Difficulty="MEDIUM HARD BRUTAL"
+			Distance="9999.0"
+			UpdateTime="1s"
+			Targetless="false"
+			UseTransports="false">
+			<TeamTemplate 
+				MinUnits="1" 
+				MaxUnits="2" 
+				RegisteredObjectSet="AIRCRAFT"
+				IncludeKindOf="BOMBER_AIRCRAFT" 
+				AllowedLocomotorTypes="AIR"
+				Priority="HIGH" 
+				ReleaseType="NEVER_RELEASE"
+				AlwaysRecruit="false"
+				AllowRecruitUnitsInCombat="true"
+				RequireCanAttackTarget="true"
+				SortByDistance="true"				
+				DistanceSortPoint="TARGET_POINT"
+				MicroManager="AlliedBomberAircraftStratoUpgradeDefensiveMicroManager">
+				<CreateUnits 
+					UnitName="AlliedBomberAircraftStratoUpgrade" 
+					MinUnits="0" 
+					MaxUnits="2"/>
+				<ObjectFilter 
+					Rule="NONE"
+					Relationship="SAME_PLAYER"
+					StatusBitFlagsExclude="REALLYDAMAGED">
+					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+				</ObjectFilter>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>

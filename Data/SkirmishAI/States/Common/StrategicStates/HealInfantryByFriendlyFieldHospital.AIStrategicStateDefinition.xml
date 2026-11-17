@@ -16,7 +16,6 @@
 				<ObjectFilter
 					Rule="NONE"
 					Relationship="ALLIES"
-					Alignment="NONE"
 					StatusBitFlags="GENERIC_TOGGLE_STATE">
 					<IncludeThing>AlliedEngineer</IncludeThing>
 				</ObjectFilter>
@@ -27,7 +26,6 @@
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="SAME_PLAYER"
-					Alignment="NONE"
 					Include="INFANTRY"
 					StatusBitFlags="DAMAGED REALLYDAMAGED">
 					<ExcludeThing>SovietScoutVehicle</ExcludeThing>
@@ -52,7 +50,7 @@
 			Targetless="false"
 			UseTransports="false"
 			UseAestheticsManager="true"
-			AestheticsManagerPatrolIdleTime="20s"
+			AestheticsManagerPatrolIdleTime="10s"
 			AestheticsManagerMinDistanceFromHarvester="40.0">
 			<TeamTemplate 
 				MinUnits="1" 
@@ -73,7 +71,6 @@
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="SAME_PLAYER"
-					Alignment="NONE"
 					Include="INFANTRY"
 					StatusBitFlags="DAMAGED REALLYDAMAGED">
 					<ExcludeThing>SovietScoutVehicle</ExcludeThing>

@@ -19,8 +19,7 @@
 				<ObjectFilter
 					Rule="ANY"
 					Relationship="NEUTRAL"
-					Alignment="NONE"
-					Include="CIVILIAN_BUILDING"
+					Include="GARRISON"
 					StatusBitFlagsExclude="REALLYDAMAGED DAMAGED CONTAINER_OCCUPIED">
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
@@ -50,7 +49,7 @@
 				MinUnits="3" 
 				MaxUnits="5" 
 				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
-				IncludeKindOf="CAN_ATTACK" 
+				IncludeKindOf="INFANTRY" 
 				ExcludeKindOf="IGNORES_SELECT_ALL INFILTRATOR"
 				Priority="HIGH" 
 				ReleaseType="NEVER_RELEASE" 
@@ -74,6 +73,13 @@
 					UnitName="JapanAntiInfantryInfantry" 
 					MinUnits="0" 
 					MaxUnits="2"/>
+				<ObjectFilter 
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>JapanAntiVehicleInfantry</IncludeThing>
+					<IncludeThing>JapanArcherInfantry</IncludeThing>
+					<IncludeThing>JapanAntiInfantryInfantry</IncludeThing>
+				</ObjectFilter>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>

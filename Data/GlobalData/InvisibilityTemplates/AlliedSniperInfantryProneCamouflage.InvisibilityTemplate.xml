@@ -2,8 +2,8 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<InvisibilityTemplate
-		id="AlliedSniperInfantryCamouflage"
-		Options="ALLOW_NEAR_TREES DISCONTINUE_WHEN_REVEALED UNTOGGLE_HIDDEN_WHEN_LEAVING_STEALTH DETECTED_BY_FRIENDLIES"
+		id="AlliedSniperInfantryProneCamouflage"
+		Options="UNTOGGLE_HIDDEN_WHEN_LEAVING_STEALTH DISCONTINUE_WHEN_REVEALED ALLOW_NEAR_TREES"
 		InvisibilityType="CAMOUFLAGE"
 		CamouflageLevel="3"
 		RequiredStatus="GENERIC_TOGGLE_STATE"

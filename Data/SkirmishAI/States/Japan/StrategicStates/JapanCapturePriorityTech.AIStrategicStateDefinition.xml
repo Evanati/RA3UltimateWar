@@ -33,10 +33,10 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestMoneyTechStructureHeuristic" 
+			TargetHeuristic="SafestMoneyTechStructureHeuristic" 
 			Priority="1"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestDefenseTechStructureHeuristic" 
+			TargetHeuristic="SafestDefenseTechStructureHeuristic" 
 			Priority="1"/>
 		<Tactic 
 			id="JapanCaptureHighPriorityTechWithEngineer" 
@@ -103,19 +103,19 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestVeterancyTechStructureHeuristic" 
+			TargetHeuristic="SafestVeterancyTechStructureHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestShipHealTechStructureHeuristic" 
+			TargetHeuristic="SafestShipHealTechStructureHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestVehicleHealTechStructureHeuristic" 
+			TargetHeuristic="SafestVehicleHealTechStructureHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestInfantryHealTechStructureHeuristic" 
+			TargetHeuristic="SafestInfantryHealTechStructureHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestAircraftHealTechStructureHeuristic" 
+			TargetHeuristic="SafestAircraftHealTechStructureHeuristic" 
 			Priority="1"/>
 		<Tactic 
 			id="JapanCaptureMediumPriorityTechWithEngineer" 
@@ -182,16 +182,16 @@
 		</Heuristic>
 		
 		<TargetHeuristic 
-			TargetHeuristic="ClosestPowerTechStructureHeuristic" 
+			TargetHeuristic="SafestPowerTechStructureHeuristic" 
 			Priority="4"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestRadarTechStructureHeuristic" 
+			TargetHeuristic="SafestRadarTechStructureHeuristic" 
 			Priority="3"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestControlTechStructureHeuristic" 
+			TargetHeuristic="SafestControlTechStructureHeuristic" 
 			Priority="2"/>
 		<TargetHeuristic 
-			TargetHeuristic="ClosestResidualTechStructureHeuristic" 
+			TargetHeuristic="SafestResidualTechStructureHeuristic" 
 			Priority="1"/>
 		<Tactic 
 			id="JapanCaptureLowPriorityTechWithEngineer" 

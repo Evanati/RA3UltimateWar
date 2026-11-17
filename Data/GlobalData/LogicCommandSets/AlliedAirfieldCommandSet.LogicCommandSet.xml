@@ -22,7 +22,7 @@
 		<Cmd>Command_ConstructHurricane</Cmd>
 		<Cmd>Command_ConstructPaladin</Cmd>
 		<Cmd>Command_ConstructAlliedSupportAircraft</Cmd>
-		<Cmd>Command_ConstructAlliedBomberAircraftStrato</Cmd>
+		<Cmd>Command_ConstructAlliedBomberAircraftStratoUpgrade</Cmd>
 		<Cmd>Command_ConstructKodiak</Cmd>
 		<Cmd>Command_AlliedRecallAllAircraft</Cmd>
 	</LogicCommandSet>

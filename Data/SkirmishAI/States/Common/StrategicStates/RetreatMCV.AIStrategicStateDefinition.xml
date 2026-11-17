@@ -13,8 +13,7 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>
@@ -79,8 +78,7 @@
 				IsBaseDefenseTeam="false">
 				<ObjectFilter 
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>
@@ -101,8 +99,7 @@
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>
@@ -167,8 +164,7 @@
 				IsBaseDefenseTeam="false">
 				<ObjectFilter 
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedMCV</IncludeThing>
 					<IncludeThing>JapanMCV</IncludeThing>
 					<IncludeThing>SovietMCV</IncludeThing>

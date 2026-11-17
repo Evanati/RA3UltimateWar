@@ -2286,7 +2286,7 @@
 				BroadcastRange="10.0"
 				UpdatePeriod="1.0s"
 				AffectsSelf="true" 
-				InvisibilityTemplate="AlliedSniperInfantryCamouflage">
+				InvisibilityTemplate="AlliedSniperInfantryProneCamouflage">
 				<BroadcastObjectFilter
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
