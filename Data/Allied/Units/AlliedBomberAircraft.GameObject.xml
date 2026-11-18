@@ -21,25 +21,26 @@
 	<GameObject
 		id="AlliedBomberAircraft"
 		inheritFrom="BaseVehicle"
+		KindOf="SELECTABLE CAN_ATTACK VEHICLE AIRCRAFT BOMBER_AIRCRAFT TRANSPORT T3_UNIT SCORE LIMITED_PRODUCTION_AIRCRAFT AIRCRAFT_TRANSPORT_ONLY_GARRISONABLE_WHILE_PARKED LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_BE_FAVORITE_UNIT CAN_CAST_REFLECTIONS"
+		CommandSet="AlliedBomberAircraftCommandSet"
 		SelectPortrait="Portrait_AlliedBomberAircraft"
 		ButtonImage="Button_AlliedBomberAircraft_on"
 		Side="Allies"
-		SubGroupPriority="730" 
-		EditorSorting="UNIT"
-		BuildTime="20"
-		CommandSet="AlliedBomberAircraftCommandSet"
-		KindOf="CAN_CAST_REFLECTIONS CAN_ATTACK SELECTABLE SCORE AIRCRAFT VEHICLE BOMBER_AIRCRAFT LINE_OF_SIGHT_IGNORES_BUILDINGS T3_UNIT CAN_BE_FAVORITE_UNIT AIRCRAFT_TRANSPORT_ONLY_GARRISONABLE_WHILE_PARKED LIMITED_PRODUCTION_AIRCRAFT TRANSPORT"
-		RadarPriority="UNIT"
-		ThreatLevel="10"
 		ProductionQueueType="AIRCRAFT"
+		SubGroupPriority="730"
+		VoicePriority="148"
+		RadarPriority="UNIT"
+		BuildTime="20"
+		ThreatLevel="10"
 		UnitCategory="AIRCRAFT"
 		WeaponCategory="MISSILE"
-		VoicePriority="148"
+		EditorSorting="UNIT"
 		EditorName="AlliedBomberAircraft"
 		Description="Desc:AlliedBomberAircraft"
 		TypeDescription="Type:AlliedBomberAircraft"
 		HealthBoxHeightOffset="20"
 		UnitIntro="Allied_CenturyBomber_UnitIntro">
+		
 		<DisplayName xai:joinAction="Replace">Name:AlliedBomberAircraft</DisplayName>
 		
 		<GameDependency>
@@ -52,28 +53,27 @@
 		
 		<ArmorSet
 			Armor="CryoBeamFrozenArmor"
-			DamageFX="VehicleDamageFX"
-			Conditions="SECONDARY_DAMAGE" />
+			Conditions="SECONDARY_DAMAGE"
+			DamageFX="VehicleDamageFX" />
 		<ArmorSet
 			Armor="ShrinkRayEffectArmor"
-			DamageFX="VehicleDamageFX"
-			Conditions="SHRINK_EFFECT" />
+			Conditions="SHRINK_EFFECT"
+			DamageFX="VehicleDamageFX" />
 		<ArmorSet
 			Armor="AlliedBomberAircraftArmor"
 			DamageFX="AircraftDamageFX" />
 			
 		<LocomotorSet
-			id="AlliedBomberAircraftLocomotor"
+			id="AlliedBomberAircraftLocomotor_Normal"
 			Locomotor="AlliedBomberAircraftLocomotor"
 			Condition="NORMAL"
 			Speed="150" />
+		<!-- Need ConquerMetricsOverrideDefendingAntiMask or else the TAXIING locomotor will make the AI try to build anti-ground units against this -->
 		<LocomotorSet
-			id="AlliedBomberAircraftTaxiLocomotor"
+			id="AlliedBomberAircraftLocomotor_Taxiing"
 			Locomotor="BasicHelicopterTaxiLocomotor"
 			Condition="TAXIING"
 			Speed="30" />
-			
-		<!-- Need ConquerMetricsOverrideDefendingAntiMask or else the TAXIING locomotor will make the AI try to build anti-ground units against this -->
 		
 		<SkirmishAIInformation
 			UnitBuilderStandardCombatUnit="true"
@@ -93,7 +93,7 @@
 						BoneName="FX_WEAPON_01" />
 				</ModelConditionState>
 
-	<!-- UPGRADED MODEL -->
+				<!-- UPGRADED MODEL -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FORMATION_PREVIEW USER_2">
@@ -114,6 +114,7 @@
 						FXParticleSystemTemplate="AircraftDamageSmoke"
 						FollowBone="true"/>
 				</ModelConditionState>
+				
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED USER_2">
@@ -135,6 +136,7 @@
 						FXParticleSystemTemplate="AircraftDamageFire"
 						FollowBone="true" />
 				</ModelConditionState>
+				
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_2">
@@ -144,7 +146,8 @@
 						Original="AUBomberAircraft"
 						New="AUBomberAircraft_02" />							
 				</ModelConditionState>
-	<!-- UPGRADED MODEL -->
+				
+				<!-- UPGRADED MODEL -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FORMATION_PREVIEW">
@@ -162,6 +165,7 @@
 						FXParticleSystemTemplate="AircraftDamageSmoke"
 						FollowBone="true"/>
 				</ModelConditionState>
+				
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED">
@@ -183,6 +187,7 @@
 						FXParticleSystemTemplate="AircraftDamageFire"
 						FollowBone="true" />
 				</ModelConditionState>
+				
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT">
 					<Animation
@@ -190,6 +195,7 @@
 						AnimationMode="LOOP"
 						AnimationBlendTime="30" />
 				</AnimationState>
+				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="CLIMBING">
@@ -198,6 +204,7 @@
 						AnimationMode="LOOP"
 						AnimationBlendTime="30" />
 				</AnimationState>
+				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RAPPELLING">
@@ -206,6 +213,7 @@
 						AnimationMode="LOOP"
 						AnimationBlendTime="30" />
 				</AnimationState>
+				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FLYING">
@@ -214,8 +222,8 @@
 						AnimationMode="LOOP"
 						AnimationBlendTime="30" />
 				</AnimationState>
-
 			</ScriptedModelDraw>
+			
 			<ScriptedModelDraw
 				id="ModuleTag_FX">
 				<ModelConditionState
@@ -248,39 +256,14 @@
 						Template="AlliedBomberAircraftBombWeapon_AirPower"
 						ObjectStatus="WEAPON_UPGRADED_01"/>
 				</WeaponSlotHardpoint>
-			</WeaponSetUpdate>			
+			</WeaponSetUpdate>	
+			
 			<Physics
 				id="ModuleTag_Physics"/>
-			<CreateObjectDie
-				id="ModuleTag_CreateObjectDie"
-				CreationList="AUBomberAircraft_Dying_OCL">
-				<DieMuxData
-					DeathTypes="ALL"
-					ExemptStatus="PARKED_AT_AIRFIELD"/>
-			</CreateObjectDie>
-			<CreateObjectDie
-				id="ModuleTag_CreateObjectDieAtAirfield"
-				CreationList="AUBomberAircraft_Die_OCL">
-				<DieMuxData
-					DeathTypes="ALL"
-					RequiredStatus="PARKED_AT_AIRFIELD"/>
-			</CreateObjectDie>
+			
 			<DynamicsUpdate
 				id="ModuleTag_DefaultDynamicsUpdate"
 				xai:joinAction="Remove" />
-			<DestroyDie
-				id="ModuleTag_Die">
-				<DieMuxData
-					DeathTypes="ALL" />
-			</DestroyDie>
-			<FXListBehavior
-				id="ModuleTag_FXList">
-				<DieMuxData
-					DeathTypes="ALL" />
-				<Event
-					Index="onDeath"
-					FX="FX_ALL_CenturyBomberDie" />
-			</FXListBehavior>
 			
 			<TransportContain
 				id="ModuleTag_Contain"
@@ -321,6 +304,39 @@
 				TimePerPassenger=".25s"
 				Radius="0"
 				Options="RECONSTITUTE_STORED_COMMAND DO_NOT_DO_AI_SPECIAL_POWER"/>
+				
+			<TechUpgradeReceiver
+				id="ModuleTag_TechUpgradeReceiver"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				Radius="10"
+				DistanceType="CIRCULAR"
+				FXLineBoneName="fx_bone_upgrade_dish"
+				RadarRotateSpeed="5.729578d"
+				RadarRotateOffset="0d">
+				<TriggeredBy>Upgrade_StratoFighter</TriggeredBy>
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>StratosphericUpgradeSeed</IncludeThing>
+				</ObjectFilter>
+			</TechUpgradeReceiver>
+			
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelfUpgrade"
+				Options="COPY_TARGET_OBJECT IGNORE_TERRAIN_RESTRICTIONS COPY_UPGRADES"
+				RequiresAllTriggers="false"
+				RequiresAllConflictingTriggers="false"
+				Permanent="false"
+				WaypointMode="false"
+				WaypointModeTerminal="true"
+				NewObjectUnpackTime="0s">
+				<TriggeredBy>Upgrade_StratoFighter</TriggeredBy>
+				<ReplacementTemplate>AlliedBomberAircraftStealth</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
 			
 			<AttributeModifierUpgrade
 				id="ModuleTag_AlliedMilitarySupplies_AttributeModifier"
@@ -343,6 +359,37 @@
 				StatusToSet="WEAPON_UPGRADED_01">
 				<TriggeredBy>Upgrade_AlliedMilitarySupplies</TriggeredBy>
 			</StatusBitsUpgrade>
+			
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AUBomberAircraft_Dying_OCL">
+				<DieMuxData
+					DeathTypes="ALL"
+					ExemptStatus="PARKED_AT_AIRFIELD"/>
+			</CreateObjectDie>
+			
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDieAtAirfield"
+				CreationList="AUBomberAircraft_Die_OCL">
+				<DieMuxData
+					DeathTypes="ALL"
+					RequiredStatus="PARKED_AT_AIRFIELD"/>
+			</CreateObjectDie>
+						
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_ALL_CenturyBomberDie" />
+			</FXListBehavior>
 		</Behaviors>
 		
 		<AI>

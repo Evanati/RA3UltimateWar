@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<InvisibilityTemplate
+		id="AlliedFighterAircraftNonDamagedStealth"
+		Options="DISCONTINUE_WHEN_REVEALED"
+		InvisibilityType="STEALTH"
+		ForbiddenStatus="REALLYDAMAGED TARGETED_FOR_REPAIR PARKED_AT_AIRFIELD"
+		NoStealthForAttackWindow="10s"
+		EnteringStealthFX="FX_None"
+		LeavingStealthFX="FX_None" />
+</AssetDeclaration>

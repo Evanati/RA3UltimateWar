@@ -18,11 +18,11 @@
 		id="AlliedAirfieldCommandSetStrato">
 		<Cmd>Command_ConstructAlliedTransportHelicopter</Cmd>
 		<Cmd>Command_ConstructAlliedAntiGroundAircraft</Cmd>
-		<Cmd>Command_ConstructAlliedFighterAircraftStrato</Cmd>
+		<Cmd>Command_ConstructAlliedFighterAircraftStealth</Cmd>
 		<Cmd>Command_ConstructHurricane</Cmd>
 		<Cmd>Command_ConstructPaladin</Cmd>
 		<Cmd>Command_ConstructAlliedSupportAircraft</Cmd>
-		<Cmd>Command_ConstructAlliedBomberAircraftStratoUpgrade</Cmd>
+		<Cmd>Command_ConstructAlliedBomberAircraftStealth</Cmd>
 		<Cmd>Command_ConstructKodiak</Cmd>
 		<Cmd>Command_AlliedRecallAllAircraft</Cmd>
 	</LogicCommandSet>

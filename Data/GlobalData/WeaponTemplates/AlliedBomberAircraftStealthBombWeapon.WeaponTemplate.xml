@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="AlliedBomberAircraftStealthBombWeapon"
+		AttackRange="50.0"
+		ContinueAttackRange="50.0"
+		ScaleAttackRangeByAmmoRemaining="true"
+		AcceptableAimDelta="180d"
+		FinishAttackOnceStarted="true"
+		Flags="FORCE_EMPTY_ENTIRE_CLIP" 
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
+		ProjectileCollidesWith="STRUCTURES"
+		RadiusDamageAffects="ENEMIES"
+		CanFireWhileMoving="true"
+		ClipSize="6"
+		AutoReloadsClip="RETURN_TO_BASE"
+		FireSound="SOV_Kirov_BombDrop">
+		
+		<FiringDuration
+			MinSeconds=".25s"
+			MaxSeconds=".25s" />
+		<ClipReloadTime
+			MinSeconds="15.0s"
+			MaxSeconds="15.0s" />
+			
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="AlliedBomberAircraftBombProjectile"
+				WarheadTemplate="AlliedBomberAircraftStealthBombWarhead">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="AlliedBomberAircraftBombProjectile_Vet"/>
+			</ProjectileNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedBomberAircraftStealthBombWeapon_AirPower"
+		inheritFrom="AlliedBomberAircraftStealthBombWeapon"
+		Flags="+SYNC_AMMO_ON_ACTIVATE"
+		ClipSize="9">
+		
+		<ClipReloadTime
+			MinSeconds="10s"
+			MaxSeconds="10s" />
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedBomberAircraftStealthBombWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
+        Flags="NOT_ATTRACTED_BY_MAGNETS">
+		
+		<Nuggets>
+			<DamageNugget
+				id="AlliedBomberAircraftStealthDamageNugget"
+				Radius="30.0"
+				Damage="250.0"
+				DamageTaperOff="250"
+				DamageType="EXPLOSIVE"
+				DamageSubType="NORMAL"
+				DamageFXType="ALLIED_BOMB"
+				DeathType="NORMAL"> 
+				<DamageScalarDetails 
+					Scalar= "50%">
+					<Filter
+						Rule="ALL"
+						Relationship="ALLIES" />
+				</DamageScalarDetails>	
+				
+				<DamageScalarDetails 
+					Scalar= "125%">
+					<Filter
+						Rule="ANY"
+						Relationship="ENEMIES"
+						Include="SUPER_WEAPON" />
+				</DamageScalarDetails>	
+				
+				<DamageScalarDetails 
+					Scalar= "150%">
+					<Filter
+						Rule="ANY"
+						Relationship="ENEMIES"
+						Include="FS_BASE_DEFENSE" />
+				</DamageScalarDetails>	
+			</DamageNugget>
+			
+			<MetaImpactNugget
+				id="AlliedBomberAircraftStealthMetaImpactNugget"
+				PartitionFilterTestType="EXTENTS_3D"
+				ForbiddenTargetObjectStatus="LEECHED_TARGET_ACTIVE"
+				ForbiddenTargetModelCondition="STUNNED_FLAILING"
+				Radius="0"
+				CyclonicFactor="0"
+				Suppression="0"
+				FlipDirection="false"
+				OnlyWhenJustDied="false"
+				ShockWaveAmount="59"
+				ShockWaveRadius="50"
+				ShockWaveArc="360d"
+				ShockWaveTaperOff="1"
+				ShockWaveSpeed="0"
+				ShockWaveZMult="0.2"
+				ShockwaveDelaySeconds="0s"
+				ShockWaveClearWaveMult="1"
+				ShockWaveClearFlingHeight="15"
+				ShockWaveArcInverted="false"
+				ShockWaveClearRadius="true"
+				InvertShockWave="false"	/>
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>

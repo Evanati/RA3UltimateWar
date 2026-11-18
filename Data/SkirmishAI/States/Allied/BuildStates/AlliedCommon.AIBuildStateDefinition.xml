@@ -451,7 +451,7 @@
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
+			Build="AlliedFighterAircraftStealth"
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry
@@ -471,7 +471,7 @@
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
+			Build="AlliedBomberAircraftStealth"
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry

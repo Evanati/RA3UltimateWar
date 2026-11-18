@@ -15,17 +15,23 @@
 		<Include type="all" source="DATA:GlobalData/ExperienceLevelTemplates/FloatingFortressMainGunExperienceLevels.ExperienceLevelTemplate.xml"/>
 		
 		<!-- Invisibility templates -->
+		<Include type="all" source="DATA:GlobalData/InvisibilityTemplates/AlliedBomberAircraftNonDamagedStealth.InvisibilityTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/InvisibilityTemplates/AlliedFighterAircraftNonDamagedStealth.InvisibilityTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/InvisibilityTemplates/AlliedSniperInfantryProneCamouflage.InvisibilityTemplate.xml"/>
-		<Include type="all" source="DATA:GlobalData/InvisibilityTemplates/AlliedBomberAircraftStratoUpgradeStealth.InvisibilityTemplate.xml"/>
 		
 		<!-- Locomotor templates -->
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/AlliedBomberAircraftLocomotor.LocomotorTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/AlliedBomberAircraftStealthLocomotor.LocomotorTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/AlliedFighterAircraftLocomotor.LocomotorTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/AlliedFighterAircraftStealthLocomotor.LocomotorTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/HumanReactiveLocomotor.LocomotorTemplate.xml"/>
-		<Include type="all" source="DATA:GlobalData/LocomotorTemplates/AlliedBomberAircraftStratoUpgradeLocomotor.LocomotorTemplate.xml"/>
 		
 		<!-- Logic commands -->
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_AlliedBomberAircraftStealthReturnToAirfield.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseMGT.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBaseDefenseRT.LogicCommand.xml"/>
-		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBomberAircraftStratoUpgrade.LogicCommand.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedBomberAircraftStealth.LogicCommand.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedFighterAircraftStealth.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ConstructAlliedTransportHelicopter.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_PackSovietSurveyor.LogicCommand.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommands/Command_ToggleAlliedEngineerHeal.LogicCommand.xml"/>
@@ -35,6 +41,7 @@
 		<!-- Logic command sets -->
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedAirfieldCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedBarracksCommandSet.LogicCommandSet.xml"/>
+		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedBomberAircraftStealthCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedConstructionYardCommandSet.LogicCommandSet.xml"/>
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/AlliedNewCraneCommandSet.LogicCommandSet.xml"/>	
 		<Include type="all" source="DATA:GlobalData/LogicCommandSets/JapanConstructionYardCommandSet.LogicCommandSet.xml"/>
@@ -56,6 +63,10 @@
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ABD_RepairWeapon.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedAntiGroundAircraftAutoCannon.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedBarracksDefenseShotgun.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedBomberAircraftBombWeapon.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedBomberAircraftStealthBombWeapon.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedFighterAircraftCannonWeapon.WeaponTemplate.xml"/>
+		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedFighterAircraftStealthCannonWeapon.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/AlliedSniperInfantryGun.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/DefensiveTechStructureRockets.WeaponTemplate.xml"/>
 		<Include type="all" source="DATA:GlobalData/WeaponTemplates/ParticleAcceleratorFinalWeapon.WeaponTemplate.xml"/>

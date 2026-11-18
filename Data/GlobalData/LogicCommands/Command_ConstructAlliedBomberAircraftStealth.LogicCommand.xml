@@ -2,8 +2,8 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 	<LogicCommand
-		id="Command_ConstructAlliedBomberAircraftStratoUpgrade"
+		id="Command_ConstructAlliedBomberAircraftStealth"
 		Type="UNIT_BUILD">
-		<Object>AlliedBomberAircraftStratoUpgrade</Object>
+		<Object>AlliedBomberAircraftStealth</Object>
 	</LogicCommand>	
 </AssetDeclaration>

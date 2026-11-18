@@ -4,7 +4,9 @@
     <Includes>
 		<!-- Micro managers -->
 		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftMicroManager.AIMicroManagerData.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftStratoUpgradeMicroManager.AIMicroManagerData.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftStealthMicroManager.AIMicroManagerData.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedFighterAircraftMicroManager.AIMicroManagerData.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedFighterAircraftStealthMicroManager.AIMicroManagerData.xml"/>
 	
 		<!-- Opening moves -->
 		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/Allied/AlliedBalanced.SkirmishOpeningMove.xml"/>
@@ -37,6 +39,7 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedBomberAircraftAttacks.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedUnitEscort.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedNavalOutpostExpansionBase.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/HealInfantryByFriendlyFieldHospital.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/RepairVehicleByFriendlyRepairTurret.AIStrategicStateDefinition.xml"/>

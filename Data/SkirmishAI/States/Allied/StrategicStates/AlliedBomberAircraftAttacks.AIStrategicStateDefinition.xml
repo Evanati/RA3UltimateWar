@@ -28,7 +28,7 @@
 				<ObjectFilter
 					Rule="NONE"
 					Relationship="SAME_PLAYER">
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+					<IncludeThing>AlliedBomberAircraftStealth</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -146,7 +146,7 @@
 				<ObjectFilter
 					Rule="NONE"
 					Relationship="SAME_PLAYER">
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+					<IncludeThing>AlliedBomberAircraftStealth</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -223,7 +223,7 @@
 	</AIStrategicStateDefinition>
 	
 	<AIStrategicStateDefinition
-		id="AlliedBomberAircraftStratoUpgradeOffensiveAttack"
+		id="AlliedBomberAircraftStealthOffensiveAttack"
 		MaxRunningCopies="4"
 		MaxInactiveCopies="1"
 		MaxTargets="2">
@@ -294,7 +294,7 @@
 			TargetHeuristic="SafestToAirEnemyCivilianGarrisonHeuristic" 
 			Priority="1"/>
 		<Tactic 
-			id="AlliedBomberAircraftStratoUpgradeOffensiveBombardmentAttack" 
+			id="AlliedBomberAircraftStealthOffensiveBombardmentAttack" 
 			Tactic="SimpleAttack" 
 			EndBehavior="RETURN_HOME_AND_DISBAND"
 			EndIfStateTurnsOff="false"
@@ -316,23 +316,23 @@
 				RequireCanAttackTarget="true"
 				SortByDistance="true"				
 				DistanceSortPoint="TARGET_POINT"
-				MicroManager="AlliedBomberAircraftStratoUpgradeOffensiveMicroManager">
+				MicroManager="AlliedBomberAircraftStealthOffensiveMicroManager">
 				<CreateUnits 
-					UnitName="AlliedBomberAircraftStratoUpgrade" 
+					UnitName="AlliedBomberAircraftStealth" 
 					MinUnits="0" 
 					MaxUnits="2"/>
 				<ObjectFilter 
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+					<IncludeThing>AlliedBomberAircraftStealth</IncludeThing>
 				</ObjectFilter>
 			</TeamTemplate>
 		</Tactic>
 	</AIStrategicStateDefinition>
 	
 	<AIStrategicStateDefinition
-		id="AlliedBomberAircraftStratoUpgradeDefensiveAttack"
+		id="AlliedBomberAircraftStealthDefensiveAttack"
 		MaxRunningCopies="4"
 		MaxInactiveCopies="1"
 		MaxTargets="2">
@@ -388,7 +388,7 @@
 			TargetHeuristic="ClosestEnemyInfantryHeuristic" 
 			Priority="1"/>
 		<Tactic 
-			id="AlliedBomberAircraftStratoUpgradeDefensiveBombardmentAttack" 
+			id="AlliedBomberAircraftStealthDefensiveBombardmentAttack" 
 			Tactic="SimpleAttack" 
 			EndBehavior="RETURN_HOME_AND_DISBAND"
 			EndIfStateTurnsOff="false"
@@ -410,16 +410,16 @@
 				RequireCanAttackTarget="true"
 				SortByDistance="true"				
 				DistanceSortPoint="TARGET_POINT"
-				MicroManager="AlliedBomberAircraftStratoUpgradeDefensiveMicroManager">
+				MicroManager="AlliedBomberAircraftStealthDefensiveMicroManager">
 				<CreateUnits 
-					UnitName="AlliedBomberAircraftStratoUpgrade" 
+					UnitName="AlliedBomberAircraftStealth" 
 					MinUnits="0" 
 					MaxUnits="2"/>
 				<ObjectFilter 
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					StatusBitFlagsExclude="REALLYDAMAGED">
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+					<IncludeThing>AlliedBomberAircraftStealth</IncludeThing>
 				</ObjectFilter>
 			</TeamTemplate>
 		</Tactic>

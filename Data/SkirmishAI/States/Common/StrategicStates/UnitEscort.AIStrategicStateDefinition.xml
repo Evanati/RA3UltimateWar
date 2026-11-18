@@ -19,9 +19,8 @@
 				<ObjectFilter
 					Rule="NONE"
 					Relationship="SAME_PLAYER">
-					<IncludeThing>AlliedAirfield</IncludeThing>
-					<IncludeThing>SovietAirfield</IncludeThing>
 					<IncludeThing>JapanNavalYard</IncludeThing>
+					<IncludeThing>SovietAirfield</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<ObjectOfTypeExistsHeuristic
@@ -32,7 +31,7 @@
 					Relationship="ALLIES"
 					StatusBitFlags="AIRBORNE_TARGET">
 					<IncludeThing>AlliedBomberAircraft</IncludeThing>
-					<IncludeThing>AlliedBomberAircraftStratoUpgrade</IncludeThing>
+					<IncludeThing>AlliedBomberAircraftStealth</IncludeThing>
 					<IncludeThing>AlliedTransportHelicopter</IncludeThing>
 					<IncludeThing>Kodiak</IncludeThing>
 					<IncludeThing>JapanFortressShip</IncludeThing>
@@ -87,14 +86,6 @@
 				DistanceSortPoint="TARGET_POINT"
 				MicroManager="DefenseMicroManager">
 				<CreateUnits 
-					UnitName="AlliedFighterAircraft" 
-					MinUnits="0" 
-					MaxUnits="4"/>
-				<CreateUnits 
-					UnitName="AlliedFighterAircraftStratoUpgrade" 
-					MinUnits="0" 
-					MaxUnits="4"/>
-				<CreateUnits 
 					UnitName="JapanAntiInfantryVehicle" 
 					MinUnits="0" 
 					MaxUnits="4"/>
@@ -106,8 +97,6 @@
 					Rule="NONE"
 					Relationship="SAME_PLAYER"
 					StatusBitFlagsExclude="DAMAGED REALLYDAMAGED">
-					<IncludeThing>AlliedFighterAircraft</IncludeThing>
-					<IncludeThing>AlliedFighterAircraftStratoUpgrade</IncludeThing>
 					<IncludeThing>JapanAntiInfantryVehicle</IncludeThing>
 					<IncludeThing>SovietFighterAircraft</IncludeThing>
 				</ObjectFilter>

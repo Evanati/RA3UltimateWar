@@ -2,11 +2,11 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<AIMicroManagerData
-		id="AlliedBomberAircraftStratoUpgradeOffensiveMicroManager"
+		id="AlliedBomberAircraftStealthOffensiveMicroManager"
 		UpdateTime="0.5s"
-		MaxTeamIdleTime="3s"
+		MaxTeamIdleTime="15s"
 		MaxTeamIdleDistanceChange="50.0" 
-		MaxUnitIdleTime="1s"
+		MaxUnitIdleTime="10s"
 		MaxUnitIdleDistanceChange="30.0"
 		EngageHostileTargets="false"
 		EngagePassiveTargets="false"
@@ -15,9 +15,9 @@
 		MinTimeToKeepTempVisionRangeBonus="10s"
 		UseGatherState="false"
 		GatherTempVisionRangeBonus="1.5"
-		CanUseSiegeState="false"
+		CanUseSiegeState="true"
 		SiegeWeaponBuffer="1.5"
-		RetreatPowerAdvantage="0.0"
+		RetreatPowerAdvantage="0.1"
 		RetreatMinDistanceFromBase="1000.0"
 		RetreatMinDistanceToFallback="500.0"
 		RetreatTempVisionRangeBonus="1.5"
@@ -43,11 +43,11 @@
 	</AIMicroManagerData>
 	
 	<AIMicroManagerData
-		id="AlliedBomberAircraftStratoUpgradeDefensiveMicroManager"
+		id="AlliedBomberAircraftStealthDefensiveMicroManager"
 		UpdateTime="0.5s"
-		MaxTeamIdleTime="3s"
+		MaxTeamIdleTime="15s"
 		MaxTeamIdleDistanceChange="50.0" 
-		MaxUnitIdleTime="1s"
+		MaxUnitIdleTime="10s"
 		MaxUnitIdleDistanceChange="30.0"
 		EngageHostileTargets="false"
 		EngagePassiveTargets="false"
@@ -56,7 +56,7 @@
 		MinTimeToKeepTempVisionRangeBonus="10s"
 		UseGatherState="false"
 		GatherTempVisionRangeBonus="1.5"
-		CanUseSiegeState="false"
+		CanUseSiegeState="true"
 		SiegeWeaponBuffer="1.5"
 		RetreatPowerAdvantage="0.0"
 		RetreatMinDistanceFromBase="1000.0"

@@ -31,10 +31,10 @@
 		<Geometry
 			IsSmall="false">
 			<Shape 
-				Type= "BOX"
-				MajorRadius = "30"
-				MinorRadius = "30"
-				Height = "3" >
+				Type="BOX"
+				MajorRadius="50"
+				MinorRadius="50"
+				Height="3" >
 			</Shape>
 		</Geometry>
 	</GameObject>

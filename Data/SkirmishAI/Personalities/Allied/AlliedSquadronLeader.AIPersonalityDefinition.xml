@@ -236,12 +236,12 @@
 			State="AlliedBomberAircraftOffensiveAttack"
 			Difficulty="HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedBomberAircraftStratoUpgradeDefensiveAttack"
-			State="AlliedBomberAircraftStratoUpgradeDefensiveAttack"
+			id="AlliedBomberAircraftStealthDefensiveAttack"
+			State="AlliedBomberAircraftStealthDefensiveAttack"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
-			id="AlliedBomberAircraftStratoUpgradeOffensiveAttack"
-			State="AlliedBomberAircraftStratoUpgradeOffensiveAttack"
+			id="AlliedBomberAircraftStealthOffensiveAttack"
+			State="AlliedBomberAircraftStealthOffensiveAttack"
 			Difficulty="HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedCaptureHighPriorityTech"
@@ -266,6 +266,14 @@
 		<StrategicState
 			id="AlliedExpansion_BRUTALNEW"
 			State="AlliedExpansion_BRUTALNEW"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="AlliedHighValueAircraftFighterAircraftEscort"
+			State="AlliedHighValueAircraftFighterAircraftEscort"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="AlliedHighValueAircraftStealthFighterAircraftEscort"
+			State="AlliedHighValueAircraftStealthFighterAircraftEscort"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="AlliedInfantryAttack"
@@ -398,10 +406,6 @@
 		<StrategicState
 			id="HealInfantryByFriendlyFieldHospital"
 			State="HealInfantryByFriendlyFieldHospital"
-			Difficulty="MEDIUM HARD BRUTAL" />
-		<StrategicState
-			id="HighValueAircraftFighterAircraftEscort"
-			State="HighValueAircraftFighterAircraftEscort"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HurricaneDefense"
@@ -835,11 +839,11 @@
 			Cap="16"
 			Difficulty="BRUTAL"/>
 		<SpecificUnitCap
-			Unit="AlliedBomberAircraftStratoUpgrade"
+			Unit="AlliedBomberAircraftStealth"
 			Cap="1"
 			Difficulty="EASY"/>
 		<SpecificUnitCap
-			Unit="AlliedBomberAircraftStratoUpgrade"
+			Unit="AlliedBomberAircraftStealth"
 			Cap="16"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
@@ -879,19 +883,19 @@
 			Cap="16"
 			Difficulty="BRUTAL"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="2"
 			Difficulty="EASY"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="4"
 			Difficulty="MEDIUM"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="8"
 			Difficulty="HARD"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="16"
 			Difficulty="BRUTAL"/>
 		<SpecificUnitCap
@@ -1160,12 +1164,12 @@
 			DefensiveModifier="25"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
-			Unit="AlliedBomberAircraftStratoUpgrade"
+			Unit="AlliedBomberAircraftStealth"
 			OffensiveModifier="10"
 			DefensiveModifier="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
-			Unit="AlliedBomberAircraftStratoUpgrade"
+			Unit="AlliedBomberAircraftStealth"
 			OffensiveModifier="35"
 			DefensiveModifier="35"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -1185,12 +1189,12 @@
 			DefensiveModifier="10"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			OffensiveModifier="6"
 			DefensiveModifier="6"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			OffensiveModifier="20"
 			DefensiveModifier="20"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />

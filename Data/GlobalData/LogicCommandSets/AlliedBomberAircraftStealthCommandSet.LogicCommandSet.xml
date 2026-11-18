@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="AlliedBomberAircraftStealthCommandSet">
+		<Cmd>Command_AlliedBomberAircraftStealthReturnToAirfield</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+</AssetDeclaration>
