@@ -178,6 +178,11 @@ function OnAlliedBarracksCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_03", true )
 end
 
+function OnAlliedConstructionYardCreated(self)
+	ObjectHideSubObjectPermanently( self, "Upgrade_02", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_03", true )
+end
+
 function onCreatedControlPointFunctions(self)
 	ObjectHideSubObjectPermanently( self, "TB_CP_ALN", true )
 	ObjectHideSubObjectPermanently( self, "TB_CP_GDI", true )
@@ -803,271 +808,6 @@ function OnSovietBomberAircraftCreated(self)
 	ObjectHideSubObjectPermanently( self, "BOMBS", true )		
 end
 
-function OnRemixBoss01Weapon01Launched(self)
-	ObjectHideSubObjectPermanently( self, "bitbase01", true )
-	ObjectHideSubObjectPermanently( self, "bit01", true )
-	ObjectHideSubObjectPermanently( self, "bitbarrle01", true )
-	ObjectHideSubObjectPermanently( self, "bitbody01", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor01", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor02", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor03", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor04", true )		
-	ObjectHideSubObjectPermanently( self, "bitarmor05", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor06", true )
-	ObjectHideSubObjectPermanently( self, "bitbodyback", true )
-	ObjectHideSubObjectPermanently( self, "bitback01", true )
-	ObjectHideSubObjectPermanently( self, "bitback01a", true )
-	ObjectHideSubObjectPermanently( self, "bitback01b", true )	
-	ObjectHideSubObjectPermanently( self, "bitback02", true )
-	ObjectHideSubObjectPermanently( self, "bitback02a", true )
-	ObjectHideSubObjectPermanently( self, "bitback02b", true )	
-	ObjectHideSubObjectPermanently( self, "bitback03", true )
-	ObjectHideSubObjectPermanently( self, "bitback03a", true )
-	ObjectHideSubObjectPermanently( self, "bitback03b", true )	
-	ObjectHideSubObjectPermanently( self, "bitback04", true )
-	ObjectHideSubObjectPermanently( self, "bitback04a", true )
-	ObjectHideSubObjectPermanently( self, "bitback04b", true )	
-	ObjectHideSubObjectPermanently( self, "bitback05", true )
-	ObjectHideSubObjectPermanently( self, "bitback05a", true )
-	ObjectHideSubObjectPermanently( self, "bitback05b", true )							
-	ObjectHideSubObjectPermanently( self, "bitback06", true )
-	ObjectHideSubObjectPermanently( self, "bitback06a", true )
-	ObjectHideSubObjectPermanently( self, "bitback06b", true )	
-	ObjectHideSubObjectPermanently( self, "bitbodyfront01", true )	
-	ExecuteAction("NAMED_STOP",self)	
-end
-
-function OnRemixBoss01Weapon02Launched(self)
-	ObjectHideSubObjectPermanently( self, "bitbase04", true )
-	ObjectHideSubObjectPermanently( self, "bit02", true )
-	ObjectHideSubObjectPermanently( self, "bitbarrle02", true )
-	ObjectHideSubObjectPermanently( self, "bitbody02", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor19", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor20", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor21", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor22", true )		
-	ObjectHideSubObjectPermanently( self, "bitarmor23", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor24", true )
-	ObjectHideSubObjectPermanently( self, "bitbodyback03", true )
-	ObjectHideSubObjectPermanently( self, "bitback19", true )
-	ObjectHideSubObjectPermanently( self, "bitback02a03", true )
-	ObjectHideSubObjectPermanently( self, "bitback02b03", true )	
-	ObjectHideSubObjectPermanently( self, "bitback20", true )
-	ObjectHideSubObjectPermanently( self, "bitback03a03", true )
-	ObjectHideSubObjectPermanently( self, "bitback03b03", true )	
-	ObjectHideSubObjectPermanently( self, "bitback21", true )
-	ObjectHideSubObjectPermanently( self, "bitback04a03", true )
-	ObjectHideSubObjectPermanently( self, "bitback04b03", true )	
-	ObjectHideSubObjectPermanently( self, "bitback22", true )
-	ObjectHideSubObjectPermanently( self, "bitback01a03", true )
-	ObjectHideSubObjectPermanently( self, "bitback01b03", true )	
-	ObjectHideSubObjectPermanently( self, "bitback23", true )
-	ObjectHideSubObjectPermanently( self, "bitback05a03", true )
-	ObjectHideSubObjectPermanently( self, "bitback05b03", true )							
-	ObjectHideSubObjectPermanently( self, "bitback24", true )
-	ObjectHideSubObjectPermanently( self, "bitback06a03", true )
-	ObjectHideSubObjectPermanently( self, "bitback06b03", true )	
-	ObjectHideSubObjectPermanently( self, "bitbodyfront02", true )	
-	ExecuteAction("NAMED_STOP",self)	
-end
-
-function OnRemixBoss01Weapon03Launched(self)
-	ObjectHideSubObjectPermanently( self, "bitbase05", true )
-	ObjectHideSubObjectPermanently( self, "bit05", true )
-	ObjectHideSubObjectPermanently( self, "bitbarrle05", true )
-	ObjectHideSubObjectPermanently( self, "bitbody05", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor25", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor26", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor27", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor28", true )		
-	ObjectHideSubObjectPermanently( self, "bitarmor29", true )
-	ObjectHideSubObjectPermanently( self, "bitarmor30", true )
-	ObjectHideSubObjectPermanently( self, "bitbodyback04", true )
-	ObjectHideSubObjectPermanently( self, "bitback25", true )
-	ObjectHideSubObjectPermanently( self, "bitback03a04", true )
-	ObjectHideSubObjectPermanently( self, "bitback03b04", true )	
-	ObjectHideSubObjectPermanently( self, "bitback26", true )
-	ObjectHideSubObjectPermanently( self, "bitback04b04", true )
-	ObjectHideSubObjectPermanently( self, "bitback04a04", true )	
-	ObjectHideSubObjectPermanently( self, "bitback27", true )
-	ObjectHideSubObjectPermanently( self, "bitback05a04", true )
-	ObjectHideSubObjectPermanently( self, "bitback05b04", true )	
-	ObjectHideSubObjectPermanently( self, "bitback28", true )
-	ObjectHideSubObjectPermanently( self, "bitback01a04", true )
-	ObjectHideSubObjectPermanently( self, "bitback01b04", true )	
-	ObjectHideSubObjectPermanently( self, "bitback29", true )
-	ObjectHideSubObjectPermanently( self, "bitback02a04", true )
-	ObjectHideSubObjectPermanently( self, "bitback02b04", true )		
-	ObjectHideSubObjectPermanently( self, "bitback30", true )
-	ObjectHideSubObjectPermanently( self, "bitback06a04", true )
-	ObjectHideSubObjectPermanently( self, "bitback06b04", true )	
-	ObjectHideSubObjectPermanently( self, "bitbodyfront03", true )
-	ExecuteAction("NAMED_STOP",self)
-end	
-
-function OnRemixBoss01Out(self)
-	ObjectHideSubObjectPermanently( self, "bitbase01", false )
-	ObjectHideSubObjectPermanently( self, "bit01", false )
-	ObjectHideSubObjectPermanently( self, "bitbarrle01", false )
-	ObjectHideSubObjectPermanently( self, "bitbody01", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor01", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor02", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor03", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor04", false )		
-	ObjectHideSubObjectPermanently( self, "bitarmor05", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor06", false )
-	ObjectHideSubObjectPermanently( self, "bitbodyback", false )
-	ObjectHideSubObjectPermanently( self, "bitback01", false )
-	ObjectHideSubObjectPermanently( self, "bitback01a", false )
-	ObjectHideSubObjectPermanently( self, "bitback01b", false )	
-	ObjectHideSubObjectPermanently( self, "bitback02", false )
-	ObjectHideSubObjectPermanently( self, "bitback02a", false )
-	ObjectHideSubObjectPermanently( self, "bitback02b", false )	
-	ObjectHideSubObjectPermanently( self, "bitback03", false )
-	ObjectHideSubObjectPermanently( self, "bitback03a", false )
-	ObjectHideSubObjectPermanently( self, "bitback03b", false )	
-	ObjectHideSubObjectPermanently( self, "bitback04", false )
-	ObjectHideSubObjectPermanently( self, "bitback04a", false )
-	ObjectHideSubObjectPermanently( self, "bitback04b", false )	
-	ObjectHideSubObjectPermanently( self, "bitback05", false )
-	ObjectHideSubObjectPermanently( self, "bitback05a", false )
-	ObjectHideSubObjectPermanently( self, "bitback05b", false )							
-	ObjectHideSubObjectPermanently( self, "bitback06", false )
-	ObjectHideSubObjectPermanently( self, "bitback06a", false )
-	ObjectHideSubObjectPermanently( self, "bitback06b", false )	
-	ObjectHideSubObjectPermanently( self, "bitbodyfront01", false )
-	ObjectHideSubObjectPermanently( self, "bitbase04", false )
-	ObjectHideSubObjectPermanently( self, "bit02", false )
-	ObjectHideSubObjectPermanently( self, "bitbarrle02", false )
-	ObjectHideSubObjectPermanently( self, "bitbody02", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor19", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor20", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor21", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor22", false )		
-	ObjectHideSubObjectPermanently( self, "bitarmor23", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor24", false )
-	ObjectHideSubObjectPermanently( self, "bitbodyback03", false )
-	ObjectHideSubObjectPermanently( self, "bitback19", false )
-	ObjectHideSubObjectPermanently( self, "bitback02a03", false )
-	ObjectHideSubObjectPermanently( self, "bitback02b03", false )	
-	ObjectHideSubObjectPermanently( self, "bitback20", false )
-	ObjectHideSubObjectPermanently( self, "bitback03a03", false )
-	ObjectHideSubObjectPermanently( self, "bitback03b03", false )	
-	ObjectHideSubObjectPermanently( self, "bitback21", false )
-	ObjectHideSubObjectPermanently( self, "bitback04a03", false )
-	ObjectHideSubObjectPermanently( self, "bitback04b03", false )	
-	ObjectHideSubObjectPermanently( self, "bitback22", false )
-	ObjectHideSubObjectPermanently( self, "bitback01a03", false )
-	ObjectHideSubObjectPermanently( self, "bitback01b03", false )	
-	ObjectHideSubObjectPermanently( self, "bitback23", false )
-	ObjectHideSubObjectPermanently( self, "bitback05a03", false )
-	ObjectHideSubObjectPermanently( self, "bitback05b03", false )							
-	ObjectHideSubObjectPermanently( self, "bitback24", false )
-	ObjectHideSubObjectPermanently( self, "bitback06a03", false )
-	ObjectHideSubObjectPermanently( self, "bitback06b03", false )	
-	ObjectHideSubObjectPermanently( self, "bitbodyfront02", false )	
-	ObjectHideSubObjectPermanently( self, "bitbase05", false )
-	ObjectHideSubObjectPermanently( self, "bit05", false )
-	ObjectHideSubObjectPermanently( self, "bitbarrle05", false )
-	ObjectHideSubObjectPermanently( self, "bitbody05", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor25", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor26", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor27", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor28", false )		
-	ObjectHideSubObjectPermanently( self, "bitarmor29", false )
-	ObjectHideSubObjectPermanently( self, "bitarmor30", false )
-	ObjectHideSubObjectPermanently( self, "bitbodyback04", false )
-	ObjectHideSubObjectPermanently( self, "bitback25", false )
-	ObjectHideSubObjectPermanently( self, "bitback03a04", false )
-	ObjectHideSubObjectPermanently( self, "bitback03b04", false )	
-	ObjectHideSubObjectPermanently( self, "bitback26", false )
-	ObjectHideSubObjectPermanently( self, "bitback04b04", false )
-	ObjectHideSubObjectPermanently( self, "bitback04a04", false )	
-	ObjectHideSubObjectPermanently( self, "bitback27", false )
-	ObjectHideSubObjectPermanently( self, "bitback05a04", false )
-	ObjectHideSubObjectPermanently( self, "bitback05b04", false )	
-	ObjectHideSubObjectPermanently( self, "bitback28", false )
-	ObjectHideSubObjectPermanently( self, "bitback01a04", false )
-	ObjectHideSubObjectPermanently( self, "bitback01b04", false )	
-	ObjectHideSubObjectPermanently( self, "bitback29", false )
-	ObjectHideSubObjectPermanently( self, "bitback02a04", false )
-	ObjectHideSubObjectPermanently( self, "bitback02b04", false )		
-	ObjectHideSubObjectPermanently( self, "bitback30", false )
-	ObjectHideSubObjectPermanently( self, "bitback06a04", false )
-	ObjectHideSubObjectPermanently( self, "bitback06b04", false )	
-	ObjectHideSubObjectPermanently( self, "bitbodyfront03", false )
-end
-
-function OnRemixBoss01NoAmo(self)
-    ObjectDoSpecialPower( self, "SpecialPower_RemixBoss01_Transform" )
-end
-
-function RemixBoss01OrbCreated(self)
-	ObjectHideSubObjectPermanently( self, "SPHERE03", true )
-	ObjectHideSubObjectPermanently( self, "SPHERE02", true )
-end
-
-function OnRemixBossDamaged(self)
-	ObjectCreateAndFireTempWeapon( self, "RemixBossDamagedBuffWeapon" )
-end
-
-function OnRemixBossReallyDamaged(self)
-	ObjectCreateAndFireTempWeapon( self, "RemixBossReallyDamagedBuffWeapon" )
-end
-
-function OnRemixBoss01Reset(self)
-	ExecuteAction("NAMED_STOP",self)
-end
-
-function Remix_Car06TanyaCreated(self)
-	ObjectHideSubObjectPermanently( self, "TANYA", true )
-	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")	
-end
-
-function Remix_Car06TanyaLoaded(self)
-	ObjectRemoveUpgrade(self,"Uprade_RemixCarNoDriver")	
-end
-
-function Remix_Car06TanyaUnLoaded(self)
-	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")	
-end
-
-function Remix_Car07YurikoCreated(self)
-	ObjectHideSubObjectPermanently( self, "YURIKO", true )
-	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")	
-end
-
-function Remix_Car07YurikoLoaded(self)
-	ObjectRemoveUpgrade(self,"Uprade_RemixCarNoDriver")	
-end
-
-function Remix_Car07YurikoUnLoaded(self)
-	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")	
-end
-
-function Remix_Car08NatashaCreated(self)
-	ObjectHideSubObjectPermanently( self, "NATASHA", true )
-	ObjectHideSubObjectPermanently( self, "GUN", true )
-	ObjectHideSubObjectPermanently( self, "GLASS", true )	
-	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")	
-end
-
-function Remix_Car08NatashaLoaded(self)
-	ObjectRemoveUpgrade(self,"Uprade_RemixCarNoDriver")	
-    ObjectCreateAndFireTempWeapon( self, "CommandoRaderMarkerWeapon" )	
-end
-
-function Remix_08NatashaUnLoaded(self)
-	ObjectRemoveUpgrade(self,"Upgrade_Veterancy_VETERAN")	
-	ObjectRemoveUpgrade(self,"Upgrade_Veterancy_ELITE")	
-	ObjectRemoveUpgrade(self,"Upgrade_Veterancy_HEROIC")	
-	ObjectRemoveUpgrade(self,"Upgrade_CreationVeterancy_VETERAN")	
-	ObjectRemoveUpgrade(self,"Upgrade_CreationVeterancy_ELITE")	
-	ObjectRemoveUpgrade(self,"Upgrade_CreationVeterancy_HEROIC")		
-	ExecuteAction("UNIT_GIVE_EXPERIENCE_LEVEL",self,"SovietNatashaMotoExperienceLevel_1")
-	ObjectGrantUpgrade(self,"Uprade_RemixCarNoDriver")
-end
-
 function Remix_GetLvUpVeteran(self)
 	ExecuteAction("UNIT_GIVE_EXPERIENCE_LEVEL",self,"SovietNatashaMotoExperienceLevel_2")	
 end
@@ -1112,18 +852,6 @@ function OnAlliedAIIRCReallyDamaged(self)
     ObjectDoSpecialPower( self, "SpecialPower_ToggleRiotShield" )
 end
 
-function OnRemixGhoulDamaged(self)
-    ObjectCreateAndFireTempWeapon( self, "Remix_GhoulDamageWeapon" )
-end
-
-function OnRemixGhoulReallyDamaged(self)
-    ObjectCreateAndFireTempWeapon( self, "Remix_GhoulReallyDamageWeapon" )
-end
-
-function OnRemixGhoulEnraged(self)
-    ObjectCreateAndFireTempWeapon( self, "Remix_GhoulEnragedWeapon" )
-end
-
 function OnJPTransFormationTakeOff(self)
     ObjectCreateAndFireTempWeapon( self, "JPTransformationRefreshTargetWeapon" )
 end
@@ -1140,149 +868,6 @@ function OnTitanCreated(self)
 	ObjectHideSubObjectPermanently( self, "weaponbak_ltop", true )
 	ObjectHideSubObjectPermanently( self, "weaponbak_l", true )
 	ObjectHideSubObjectPermanently( self, "weaponRec_l", true )
-end
-
-function OnSurvivorPick1911(self)
-	ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponUnAttach44" )
-end
-
-function OnSurvivorPick44(self)
-	ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponUnAttach1911" )
-end
-
-function OnSurvivorPickHelmet1(self)
-	ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponUnAttachHelmet2" )
-end
-
-function OnSurvivorPickHelmet2(self)
-	ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponUnAttachHelmet1" )
-end
-
-function OnSurvivorPickWaterUpgrade(self)
-    ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorToggleWaterLocomotor" )
-end
-
-function OnSurvivorPickWaterUpgradeRemove(self)
-    ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorToggleWaterLocomotor" )
-end
-
-function OnSurvivorCreated(self)
-	ObjectHideSubObjectPermanently( self, "WATERE", true )
-end
-
-function OnSurvivorPickAmmo1(self)
-	ObjectGrantUpgrade( self, "Uprade_SurvivorAmmo1" )
-end
-
-function OnSurvivorPickAmmo2(self)
-	ObjectGrantUpgrade( self, "Uprade_SurvivorAmmo2" )
-end
-
-function OnSurvivorPickAmmo3(self)
-	ObjectGrantUpgrade( self, "Uprade_SurvivorAmmo3" )
-end
-
-function OnSurvivorPickAmmo4(self)
-	ObjectGrantUpgrade( self, "Uprade_SurvivorAmmo4" )
-end
-
-function OnSurvivorReload1911(self)
-	if ObjectHasUpgrade( self, "Uprade_SurvivorAmmo4" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon4" )
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo4" ) 
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon1911" )		
-	elseif 	ObjectHasUpgrade( self, "Uprade_SurvivorAmmo3" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon3" )
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo3" )
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )	
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon1911" )				
-	elseif 	ObjectHasUpgrade( self, "Uprade_SurvivorAmmo2" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon2" )
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo2" )
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )	
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon1911" )				
-	elseif 	ObjectHasUpgrade( self, "Uprade_SurvivorAmmo1" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon1" )	
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo1" )
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )	
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon1911" )				
-	end		
-end
-
-function OnSurvivorReload44(self)
-	if ObjectHasUpgrade( self, "Uprade_SurvivorAmmo4" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon4" )
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo4" ) 
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon44" )				
-	elseif 	ObjectHasUpgrade( self, "Uprade_SurvivorAmmo3" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon3" )
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo3" )
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )	
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon44" )			
-	elseif 	ObjectHasUpgrade( self, "Uprade_SurvivorAmmo2" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon2" )
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo2" )
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )	
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon44" )			
-	elseif 	ObjectHasUpgrade( self, "Uprade_SurvivorAmmo1" ) == 1 then
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorRemoveAmmoShowtipWeapon1" )	
-		ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmo1" )
-		ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorReloadWeapon" )
-		ObjectCreateAndFireTempWeapon( self, "RemixSurvivorReloadHoldWeapon44" )			
-	end		
-end
-
-function OnSurvivorFiringA(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixSurvivorAmmoCountAttachWeapon1911" )
-end
-
-function OnSurvivorFiringB(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixSurvivorAmmoCountAttachWeapon44" )
-end
-
-function OnSurvivorPickFourLeaf(self)
-	ObjectGrantUpgrade( self, "Uprade_SurvivorFourLeaf" )
-end
-
-function OnAmmoCounterCal1911(self)
-    ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorAmmoCount1911" )
-    ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponFireSound1911" )	
-end
-
-function OnAmmoCounterCal44(self)
-    ObjectDoSpecialPower( self, "SpecialPower_RemixSurvivorAmmoCount44" )
-    ObjectCreateAndFireTempWeapon( self, "RemixSurvivorWeaponFireSound44" )		
-end
-
-function OnAmmoCounterReload(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixSurvivorAmmoCountAttachReloadingCallWeapon" )
-end
-
-function OnSurvivorAmmoCounterReset(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixSurvivorInitAttachCounterWeapon" )
-end
-
-function OnRemixSurvivorAmmoShowTipSwithCreated(self)
-	ObjectHideSubObjectPermanently( self, "Ammo19111", true )
-	ObjectHideSubObjectPermanently( self, "Ammo19112", true )
-	ObjectHideSubObjectPermanently( self, "Ammo19113", true )
-	ObjectHideSubObjectPermanently( self, "Ammo19114", true )
-	ObjectHideSubObjectPermanently( self, "Ammo441", true )
-	ObjectHideSubObjectPermanently( self, "Ammo442", true )
-	ObjectHideSubObjectPermanently( self, "Ammo443", true )
-	ObjectHideSubObjectPermanently( self, "Ammo444", true )
-end
-
-function OnAmmoShowTipSwith1911(self)
-    ObjectGrantUpgrade( self, "Uprade_SurvivorAmmoShowTip1911" )
-	ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmoShowTip44" )	
-end
-
-function OnAmmoShowTipSwith44(self)
-    ObjectGrantUpgrade( self, "Uprade_SurvivorAmmoShowTip44" )
-	ObjectRemoveUpgrade( self, "Uprade_SurvivorAmmoShowTip1911" )	
 end
 
 function OnSovietWarningBeaconCreated(self)
@@ -1357,10 +942,6 @@ function OnJAVVT3RunningHitT4(self)
 	ObjectCreateAndFireTempWeapon( self, "JAVV3CollideWeaponSTRUCTURE" )
 end
 
-function OnRemixMissileVehicleDropCover(self)
-	ObjectCreateAndFireTempWeapon( self, "RemixMissileVehicleDropCoverWeapon" )
-end
-
 function OnABAirfieldUpgA1(self)
 	ObjectGrantUpgrade( self, "ABAirFieldUpgradeComA1" )
 end
@@ -1375,79 +956,6 @@ function OnABAirfieldUpgA3(self)
 	ObjectGrantUpgrade( self, "ABAirFieldUpgradeComA3" )
 end
 
-function OnRZSUHAVIHit(self)
-    ObjectCreateAndFireTempWeapon( self, "RZSUHAVIArmorDamageChooseWeapon" )		
-end
-
-function OnRZSUHAVIHit1(self)
-    ObjectCreateAndFireTempWeapon( self, "RZSUHAVIHitWeapon1" )		
-end
-
-function OnRZSUHAVIHit2(self)
-    ObjectCreateAndFireTempWeapon( self, "RZSUHAVIHitWeapon2" )		
-end
-
-function OnRZSUHAVIHit3(self)
-    ObjectCreateAndFireTempWeapon( self, "RZSUHAVIHitWeapon3" )		
-end
-
-function OnRZSUHAVIArmmorOff(self)
-    ObjectDoSpecialPower( self, "SpecialPower_RZSUHAVIArmChangeWeapon" )
-end
-
-function OnHeadShotChance1(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixGhoulHeadShotChooseWeapon1" )
-end
-
-function OnHeadShotChance2(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixGhoulHeadShotChooseWeapon2" )
-end
-
-function OnHeadShotChance3(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixGhoulHeadShotChooseWeapon3" )
-end
-
-function OnSUAVIHeadShotChance(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixGhoulSUAVIHeadShotChooseWeapon" )
-end
-
-function OnSUAVIHeadShotChanceCrawl(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixGhoulSUAVIHeadShotChooseWeaponCrawl" )
-end
-
-function OnSUAVIHatoff(self)
-	ObjectGrantUpgrade( self, "Upgrade_RZSUAVIHatOff" )
-end
-
-function OnAUAIIHatRemove(self)
-    ObjectDoSpecialPower( self, "SpecialPower_RemixZombiesAAIIArmorLow" )
-	ObjectGrantUpgrade( self, "Upgrade_RZAUAIIHatOff" )	
-end
-
-function OnAUAIIHeadShotChance(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixGhoulAUAIIHeadShotChooseWeapon" )
-end
-
-function OnAUAIIHeadShotChanceCrawl(self)
-    ObjectCreateAndFireTempWeapon( self, "RemixGhoulAUAIIHeadShotChooseWeaponCrawl" )
-end
-
-function OnSUHAVIArmOff1(self)
-	ObjectGrantUpgrade( self, "Upgrade_RZSUHAVIShouderOff" )
-end
-
-function OnSUHAVIArmOff2(self)
-	ObjectGrantUpgrade( self, "Upgrade_RZSUHAVIHelmetOff" )
-end
-
-function OnSUHAVIArmOff3(self)
-	ObjectGrantUpgrade( self, "Upgrade_RZSUHAVIChestOff" )
-end
-
-function OnSUHAVIArmOff4(self)
-	ObjectGrantUpgrade( self, "Upgrade_RZSUHAVIChestFOff" )
-end
-
 function OnSAVV4Block(self)
     ObjectCreateAndFireTempWeapon( self, "SAVV4BlockWeapon" )
 end
@@ -1460,28 +968,8 @@ function OnABAUnPowered(self)
 	ExecuteAction("NAMED_STOP",self)
 end
 
-function OnPanicEnd(self)
-    ObjectDoSpecialPower( self, "SpecialPower_AnimalChangeLocomotor" )
-end
-
-function OnAinmalPanic(self)
-    ObjectDoSpecialPower( self, "SpecialPower_AnimalChangeLocomotor" )
-end
-
-function OnCivilianPanicEnd(self)
-    ObjectDoSpecialPower( self, "SpecialPower_CivilianChangeLocomotor" )
-end
-
-function OnCivilianPanic(self)
-    ObjectDoSpecialPower( self, "SpecialPower_CivilianChangeLocomotor" )
-end
-
 function OnBCStealthDetect(self)
 	ObjectGrantUpgrade(self,"Uprade_BuildingStealthDetect")	
-end
-
-function OnSharkEnraged(self)
-	ObjectCreateAndFireTempWeapon( self, "RESharkSpeedWeapon" )
 end
 
 function OnRepairDroneMoving(self)
@@ -1594,23 +1082,6 @@ end
 ---------------------------------------------------
 ----- Red Alert 3: Ultimate War lua functions -----
 ---------------------------------------------------
-
-function OnAlliedConstructionYardCreated(self)
-
-	ObjectHideSubObjectPermanently( self, "Upgrade_02", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_03", true )
-	
-	local team = ObjectTeamName(self)
-	
-	if strfind(team, "Skirmish") ~= nil then
-	
-		local player = tostring(strsub(team, 1, 8))
-	
-		ExecuteAction("PLAYER_AI_CHANGEWALLBUILDER", player, "true") -- allow AI to build walls
-		
-	end
-	
-end
 
 function OnAlliedBaseDefenseRTCreated(self)
 	
