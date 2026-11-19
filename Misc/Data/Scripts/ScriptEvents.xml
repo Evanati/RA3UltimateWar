@@ -106,24 +106,10 @@
 			<Conditions>+USER_3</Conditions>
 		</ModelConditionEvent>
 		
-		<ModelConditionEvent Name="RemixBoss01_User4">
-			<Conditions>+USER_4</Conditions>
-		</ModelConditionEvent>	
-		<ModelConditionEvent Name="RemixBoss01_User5">
-			<Conditions>+USER_5</Conditions>
 		</ModelConditionEvent>	
 		<ModelConditionEvent Name="RemixBoss01_User6">
 			<Conditions>+USER_6</Conditions>
-		</ModelConditionEvent>			
-		<ModelConditionEvent Name="RemixBoss01_Out">
-			<Conditions>+USER_1 -USER_3</Conditions>
-		</ModelConditionEvent>		
-		<ModelConditionEvent Name="RemixBoss01_In">
-			<Conditions>-USER_7 -USER_8 -SPECIAL_WEAPON_SIX</Conditions>
-		</ModelConditionEvent>	
-		<ModelConditionEvent Name="RemixBoss_Dodge">
-			<Conditions>-USER_1 +EMOTION_ALERT</Conditions>
-		</ModelConditionEvent>	
+		</ModelConditionEvent>				
 
 		<ModelConditionEvent Name="USING_WEAPON_A">
 			<Conditions>+USING_WEAPON_A</Conditions>
@@ -134,15 +120,7 @@
 		
 		<ModelConditionEvent Name="BuildingDone">
 			<Conditions>-STRUCTURE_UNPACKING</Conditions>
-		</ModelConditionEvent>			
-		
-		<ObjectStatusEvent Name="RemixBoss01_Reset">
-			<Conditions>-NO_ATTACK</Conditions>
-		</ObjectStatusEvent>		
-		
-		<ObjectStatusEvent Name="RemixBoss01_Reset2">
-			<Conditions>+PLAYER_POWER_4</Conditions>
-		</ObjectStatusEvent>		
+		</ModelConditionEvent>				
 		
 		<ModelConditionEvent Name="AttackingHealthy">
 			<Conditions>+ATTACKING</Conditions>
@@ -206,14 +184,6 @@
 		<ModelConditionEvent Name="HitLevel3">
 			<Conditions>+HIT_LEVEL_3</Conditions>
 		</ModelConditionEvent>				
-
-		<ModelConditionEvent Name="RemixJNM_TimerStart">
-			<Conditions>+USER_2</Conditions>
-		</ModelConditionEvent>
-
-		<ModelConditionEvent Name="RemixMissileVehicleDropCover">
-			<Conditions>+UNPACKING -USER_1</Conditions>
-		</ModelConditionEvent>	
 
 		<ModelConditionEvent Name="PASSENGER">
 			<Conditions>+PASSENGER</Conditions>
@@ -318,67 +288,6 @@
 		<ObjectStatusEvent Name="SCT1GetMotoLv03">
 			<Conditions>+WEAPON_UPGRADED_03</Conditions>
 		</ObjectStatusEvent>					
-				
-		<ObjectStatusEvent Name="RemixSurvivor1911">
-			<Conditions>+WEAPON_UPGRADED_01</Conditions>
-		</ObjectStatusEvent>			
-
-		<ObjectStatusEvent Name="RemixSurvivor44">
-			<Conditions>+WEAPON_UPGRADED_02</Conditions>
-		</ObjectStatusEvent>	
-
-		<ObjectStatusEvent Name="RemixSurvivorHelmet1">
-			<Conditions>+PLAYER_POWER_2</Conditions>
-		</ObjectStatusEvent>			
-
-		<ObjectStatusEvent Name="RemixSurvivorHelmet2">
-			<Conditions>+PLAYER_POWER_3</Conditions>
-		</ObjectStatusEvent>			
-
-		<ObjectStatusEvent Name="RemixSurvivorWaterUpgrade">
-			<Conditions>+PLAYER_POWER_4</Conditions>
-		</ObjectStatusEvent>			
-		
-		<ObjectStatusEvent Name="RemixSurvivorWaterUpgradeRemove">
-			<Conditions>-PLAYER_POWER_4</Conditions>
-		</ObjectStatusEvent>	
-				
-		<ObjectStatusEvent Name="RemixSurvivorAmmoPick1">
-			<Conditions>+TAGGED</Conditions>
-		</ObjectStatusEvent>
-		<ObjectStatusEvent Name="RemixSurvivorAmmoPick2">
-			<Conditions>+VEHICLE_ATTACHED</Conditions>
-		</ObjectStatusEvent>
-		<ObjectStatusEvent Name="RemixSurvivorAmmoPick3">
-			<Conditions>+EXPLOSIVES_ATTACHED</Conditions>
-		</ObjectStatusEvent>
-		<ObjectStatusEvent Name="RemixSurvivorAmmoPick4">
-			<Conditions>+POINT_DEFENSE_DRONE_ATTACHED</Conditions>
-		</ObjectStatusEvent>	
-
-		<ObjectStatusEvent Name="RemixSurvivorReload1911">
-			<Conditions>+TAGGED +CONTAINER_OCCUPIED -WEAPON_UPGRADED_02</Conditions>
-		</ObjectStatusEvent>		
-		
-		<ObjectStatusEvent Name="RemixSurvivorReload44">
-			<Conditions>+TAGGED +RIDER_IS_PILOT -WEAPON_UPGRADED_01</Conditions>
-		</ObjectStatusEvent>		
-
-		<ModelConditionEvent Name="RemixSurvivorFiringA">
-			<Conditions>-FIRING_A</Conditions>
-		</ModelConditionEvent>	
-
-		<ModelConditionEvent Name="RemixSurvivorFiringB">
-			<Conditions>-FIRING_B</Conditions>
-		</ModelConditionEvent>		
-
-		<ModelConditionEvent Name="RemixSurvivorPickFourLeaf">
-			<Conditions>+POST_COLLAPSE</Conditions>
-		</ModelConditionEvent>	
-		
-		<ModelConditionEvent Name="RemixInsideGarrison">
-			<Conditions>+INSIDE_GARRISON</Conditions>
-		</ModelConditionEvent>	
 		
 		<ModelConditionEvent Name="RemixRepairDroneMoving">
 			<Conditions>+MOVING</Conditions>
@@ -391,46 +300,6 @@
 		<ModelConditionEvent Name="RemixRepairDroneRepair">
 			<Conditions>-ATTACHED</Conditions>
 		</ModelConditionEvent>			
-		
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterCal1911">
-			<Conditions>+PLAYER_POWER_5</Conditions>
-		</ObjectStatusEvent>	
-		
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterCal44">
-			<Conditions>+OVERCHARGING_WEAPON</Conditions>
-		</ObjectStatusEvent>	
-	
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterReload1911">
-			<Conditions>-CHARGING_WEAPON</Conditions>
-		</ObjectStatusEvent>
-
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterReload44">
-			<Conditions>-CHARGING_WEAPON</Conditions>
-		</ObjectStatusEvent>
-
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterReset4">
-			<Conditions>-ADVANCED_MISSILE_PACKS</Conditions>
-		</ObjectStatusEvent>	
-		
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterReset3">
-			<Conditions>-EXPLOSIVES_DETONATING</Conditions>
-		</ObjectStatusEvent>		
-		
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterReset2">
-			<Conditions>-CARRYING_FLAG</Conditions>
-		</ObjectStatusEvent>	
-		
-		<ObjectStatusEvent Name="RemixSurvivorAmmoCounterReset1">
-			<Conditions>-GENERIC_TOGGLE_STATE</Conditions>
-		</ObjectStatusEvent>			
-		
-		<ObjectStatusEvent Name="RemixSurvivorAmmoShowTipSwith1911">
-			<Conditions>+WEAPON_UPGRADED_01</Conditions>
-		</ObjectStatusEvent>	
-
-		<ObjectStatusEvent Name="RemixSurvivorAmmoShowTipSwith44">
-			<Conditions>+WEAPON_UPGRADED_02</Conditions>
-		</ObjectStatusEvent>	
 
 		<ObjectStatusEvent Name="RemixNanoFinish">
 			<Conditions>+ATTACHED</Conditions>
@@ -470,31 +339,7 @@
 
 		<ObjectStatusEvent Name="ABAirfieldUpgA3">
 			<Conditions>+PLAYER_POWER_1 +PLAYER_POWER_2</Conditions>
-		</ObjectStatusEvent>	
-
-		<ModelConditionEvent Name="RZSUHAVIHit">
-			<Conditions>+HIT_REACTION</Conditions>
-		</ModelConditionEvent>	
-		
-		<ObjectStatusEvent Name="RZSUHAVIArmmorOff">
-			<Conditions>+PLAYER_POWER_1 +PLAYER_POWER_2 +PLAYER_POWER_3 +PLAYER_POWER_4</Conditions>
-		</ObjectStatusEvent>	
-		
-		<ModelConditionEvent Name="RZUSER1">
-			<Conditions>+USER_1</Conditions>
-		</ModelConditionEvent>		
-		
-		<ModelConditionEvent Name="RZUSER2">
-			<Conditions>+USER_2</Conditions>
-		</ModelConditionEvent>		
-
-		<ModelConditionEvent Name="RZUSER3">
-			<Conditions>+USER_3</Conditions>
-		</ModelConditionEvent>		
-
-		<ModelConditionEvent Name="RZUSER4">
-			<Conditions>+USER_4</Conditions>
-		</ModelConditionEvent>		
+		</ObjectStatusEvent>		
 
 		<ModelConditionEvent Name="UNDERPOWERED">
 			<Conditions>+UNDERPOWERED</Conditions>
@@ -820,36 +665,6 @@
 	<EventList Name="SovietBomberAircraftFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="SovietCashBack"	ScriptFunctionName="OnSovietCashUpgrade" DebugSingleStep="false"/>
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnSovietBomberAircraftCreated" DebugSingleStep="false"/>		
-	</EventList>
-
-	<EventList Name="RemixBoss01Functions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="RemixBoss01_User4"	ScriptFunctionName="OnRemixBoss01Weapon01Launched" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixBoss01_User5"	ScriptFunctionName="OnRemixBoss01Weapon02Launched" DebugSingleStep="false"/>		
-		<EventHandler EventName="RemixBoss01_User6"	ScriptFunctionName="OnRemixBoss01Weapon03Launched" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixBoss01_Out"	ScriptFunctionName="OnRemixBoss01Out" DebugSingleStep="false"/>		
-		<EventHandler EventName="RemixBoss01_In"	ScriptFunctionName="OnRemixBoss01NoAmo" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixBoss_Dodge"	ScriptFunctionName="OnRemixBoss01NoAmo" DebugSingleStep="false"/>		
-		<EventHandler EventName="Damaged"	ScriptFunctionName="OnRemixBossDamaged" DebugSingleStep="false"/>	
-		<EventHandler EventName="ReallyDamaged"	ScriptFunctionName="OnRemixBossReallyDamaged" DebugSingleStep="false"/>	
-		<EventHandler EventName="RemixBoss01_Reset"	ScriptFunctionName="OnRemixBoss01Reset" DebugSingleStep="false"/>		
-		
-		<EventHandler EventName="RemixBoss01_Reset2"	ScriptFunctionName="OnRemixBoss01Reset" DebugSingleStep="false"/>		
-	</EventList>	
-	
-	<EventList Name="RemixBoss01OrbFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="RemixBoss01OrbCreated" DebugSingleStep="false"/>	
-	</EventList>		
-	
-	<EventList Name="Remix_Car06TanyaFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="Remix_Car06TanyaCreated" DebugSingleStep="false"/>
-		<EventHandler EventName="LOADED"	ScriptFunctionName="Remix_Car06TanyaLoaded" DebugSingleStep="false"/>		
-		<EventHandler EventName="UNLOADED"	ScriptFunctionName="Remix_Car06TanyaUnLoaded" DebugSingleStep="false"/>		
-	</EventList>	
-	
-	<EventList Name="Remix_Car07YurikoFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="Remix_Car07YurikoCreated" DebugSingleStep="false"/>
-		<EventHandler EventName="LOADED"	ScriptFunctionName="Remix_Car07YurikoLoaded" DebugSingleStep="false"/>		
-		<EventHandler EventName="UNLOADED"	ScriptFunctionName="Remix_Car07YurikoUnLoaded" DebugSingleStep="false"/>	
 	</EventList>	
 	
 	<EventList Name="JUASSPJFunctions" Inherit="BaseScriptFunctions">
@@ -901,57 +716,7 @@
 	
 	<EventList Name="TitanFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnTitanCreated" DebugSingleStep="false"/>		
-	</EventList>	
-
-	<EventList Name="RemixSurvivorFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnSurvivorCreated" DebugSingleStep="false"/>	
-	
-		<EventHandler EventName="RemixSurvivor1911"	ScriptFunctionName="OnSurvivorPick1911" DebugSingleStep="false"/>	
-		<EventHandler EventName="RemixSurvivor44"	ScriptFunctionName="OnSurvivorPick44" DebugSingleStep="false"/>		
-		
-		<EventHandler EventName="RemixSurvivorHelmet1"	ScriptFunctionName="OnSurvivorPickHelmet1" DebugSingleStep="false"/>	
-		<EventHandler EventName="RemixSurvivorHelmet2"	ScriptFunctionName="OnSurvivorPickHelmet2" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixSurvivorWaterUpgrade"	ScriptFunctionName="OnSurvivorPickWaterUpgrade" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixSurvivorWaterUpgradeRemove"	ScriptFunctionName="OnSurvivorPickWaterUpgradeRemove" DebugSingleStep="false"/>	
-		
-		<EventHandler EventName="RemixSurvivorAmmoPick1"	ScriptFunctionName="OnSurvivorPickAmmo1" DebugSingleStep="false"/>			
-		<EventHandler EventName="RemixSurvivorAmmoPick2"	ScriptFunctionName="OnSurvivorPickAmmo2" DebugSingleStep="false"/>	
-		<EventHandler EventName="RemixSurvivorAmmoPick3"	ScriptFunctionName="OnSurvivorPickAmmo3" DebugSingleStep="false"/>	
-		<EventHandler EventName="RemixSurvivorAmmoPick4"	ScriptFunctionName="OnSurvivorPickAmmo4" DebugSingleStep="false"/>		
-	
-		<EventHandler EventName="RemixSurvivorReload1911"	ScriptFunctionName="OnSurvivorReload1911" DebugSingleStep="false"/>	
-		<EventHandler EventName="RemixSurvivorReload44"	ScriptFunctionName="OnSurvivorReload44" DebugSingleStep="false"/>			
-		
-		<EventHandler EventName="RemixSurvivorFiringA"	ScriptFunctionName="OnSurvivorFiringA" DebugSingleStep="false"/>			
-		<EventHandler EventName="RemixSurvivorFiringB"	ScriptFunctionName="OnSurvivorFiringB" DebugSingleStep="false"/>
-
-		<EventHandler EventName="RemixSurvivorPickFourLeaf"	ScriptFunctionName="OnSurvivorPickFourLeaf" DebugSingleStep="false"/>		
-		
-		<EventHandler EventName="RemixSurvivorAmmoCounterReset4"	ScriptFunctionName="OnSurvivorAmmoCounterReset" DebugSingleStep="false"/>			
-		
-		<EventHandler EventName="RemixSurvivorAmmoCounterReset3"	ScriptFunctionName="OnSurvivorAmmoCounterReset" DebugSingleStep="false"/>	
-
-		<EventHandler EventName="RemixSurvivorAmmoCounterReset2"	ScriptFunctionName="OnSurvivorAmmoCounterReset" DebugSingleStep="false"/>			
-		
-		<EventHandler EventName="RemixSurvivorAmmoCounterReset1"	ScriptFunctionName="OnSurvivorAmmoCounterReset" DebugSingleStep="false"/>				
-	</EventList>
-	
-
-	<EventList Name="SurvivorAttachAmmoCount1911Functions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="RemixSurvivorAmmoCounterCal1911"	ScriptFunctionName="OnAmmoCounterCal1911" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixSurvivorAmmoCounterReload1911"	ScriptFunctionName="OnAmmoCounterReload" DebugSingleStep="false"/>		
-	</EventList>	
-	
-	<EventList Name="SurvivorAttachAmmoCount44Functions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="RemixSurvivorAmmoCounterCal44"	ScriptFunctionName="OnAmmoCounterCal44" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixSurvivorAmmoCounterReload44"	ScriptFunctionName="OnAmmoCounterReload" DebugSingleStep="false"/>				
-	</EventList>
-
-	<EventList Name="SurvivorAttachAmmoShowTipFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnRemixSurvivorAmmoShowTipSwithCreated" DebugSingleStep="false"/>	
-		<EventHandler EventName="RemixSurvivorAmmoShowTipSwith1911"	ScriptFunctionName="OnAmmoShowTipSwith1911" DebugSingleStep="false"/>
-		<EventHandler EventName="RemixSurvivorAmmoShowTipSwith44"	ScriptFunctionName="OnAmmoShowTipSwith44" DebugSingleStep="false"/>				
-	</EventList>	
+	</EventList>		
 
 	<EventList Name="SovietWarningBeaconFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnSovietWarningBeaconCreated" DebugSingleStep="false"/>		
@@ -979,81 +744,12 @@
 		<EventHandler EventName="ABPPToggleMoeny"	ScriptFunctionName="OnABPPToggleMoeny" DebugSingleStep="false"/>
 	</EventList>	
 
-	<EventList Name="RemixMissileVehicleFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="RemixMissileVehicleDropCover"	ScriptFunctionName="OnRemixMissileVehicleDropCover" DebugSingleStep="false"/>
-	</EventList>	
-
 	<EventList Name="AlliedAirfieldFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnAlliedBarracksCreated" DebugSingleStep="false"/>	
 		<EventHandler EventName="ABAirfieldUpgA1"	ScriptFunctionName="OnABAirfieldUpgA1" DebugSingleStep="false"/>	
 		<EventHandler EventName="ABAirfieldUpgA2"	ScriptFunctionName="OnABAirfieldUpgA2" DebugSingleStep="false"/>	
 		<EventHandler EventName="ABAirfieldUpgA3"	ScriptFunctionName="OnABAirfieldUpgA3" DebugSingleStep="false"/>	
-	</EventList>
-
-	<EventList Name="RemixGhoulFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="Damaged"	ScriptFunctionName="OnRemixGhoulDamaged" DebugSingleStep="false"/>		
-		<EventHandler EventName="ReallyDamaged"	ScriptFunctionName="OnRemixGhoulReallyDamaged" DebugSingleStep="false"/>
-		<EventHandler EventName="AttackingHealthy"	ScriptFunctionName="OnRemixGhoulEnraged" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnHeadShotChance1" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnHeadShotChance2" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnHeadShotChance3" DebugSingleStep="false"/>		
-	</EventList>	
-
-	<EventList Name="RemixGhoulHeadshotFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnHeadShotChance1" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnHeadShotChance2" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnHeadShotChance3" DebugSingleStep="false"/>					
-	</EventList>	
-	
-	<EventList Name="RemixGhoulSUAVIFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="Damaged"	ScriptFunctionName="OnRemixGhoulDamaged" DebugSingleStep="false"/>		
-		<EventHandler EventName="ReallyDamaged"	ScriptFunctionName="OnRemixGhoulReallyDamaged" DebugSingleStep="false"/>
-		<EventHandler EventName="AttackingHealthy"	ScriptFunctionName="OnRemixGhoulEnraged" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnSUAVIHeadShotChance" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnSUAVIHeadShotChance" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnSUAVIHeadShotChance" DebugSingleStep="false"/>		
-		<EventHandler EventName="RZUSER1"	ScriptFunctionName="OnSUAVIHatoff" DebugSingleStep="false"/>			
 	</EventList>		
-	
-	<EventList Name="RemixGhoulSUAVICrawlFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnSUAVIHeadShotChanceCrawl" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnSUAVIHeadShotChanceCrawl" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnSUAVIHeadShotChanceCrawl" DebugSingleStep="false"/>		
-		<EventHandler EventName="RZUSER1"	ScriptFunctionName="OnSUAVIHatoff" DebugSingleStep="false"/>		
-	</EventList>	
-	
-	<EventList Name="RemixGhoulAUAIIFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="RZUSER1"	ScriptFunctionName="OnAUAIIHatRemove" DebugSingleStep="false"/>	
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnAUAIIHeadShotChance" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnAUAIIHeadShotChance" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnAUAIIHeadShotChance" DebugSingleStep="false"/>				
-	</EventList>	
-
-	<EventList Name="RemixGhoulAUAIICrawlFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="RZUSER1"	ScriptFunctionName="OnAUAIIHatRemove" DebugSingleStep="false"/>	
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnAUAIIHeadShotChanceCrawl" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnAUAIIHeadShotChanceCrawl" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnAUAIIHeadShotChanceCrawl" DebugSingleStep="false"/>				
-	</EventList>		
-	
-	<EventList Name="RemixGhoulJUAIIFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="AttackingHealthy"	ScriptFunctionName="OnRemixGhoulEnraged" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnHeadShotChance1" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnHeadShotChance2" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnHeadShotChance3" DebugSingleStep="false"/>		
-	</EventList>	
-	
-	<EventList Name="RZSUHAVIFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="RZSUHAVIHit"	ScriptFunctionName="OnRZSUHAVIHit" DebugSingleStep="false"/>	
-		<EventHandler EventName="HitLevel1"	ScriptFunctionName="OnRZSUHAVIHit1" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel2"	ScriptFunctionName="OnRZSUHAVIHit2" DebugSingleStep="false"/>
-		<EventHandler EventName="HitLevel3"	ScriptFunctionName="OnRZSUHAVIHit3" DebugSingleStep="false"/>
-		<EventHandler EventName="RZSUHAVIArmmorOff"	ScriptFunctionName="OnRZSUHAVIArmmorOff" DebugSingleStep="false"/>
-		<EventHandler EventName="RZUSER1"	ScriptFunctionName="OnSUHAVIArmOff1" DebugSingleStep="false"/>	
-		<EventHandler EventName="RZUSER2"	ScriptFunctionName="OnSUHAVIArmOff2" DebugSingleStep="false"/>	
-		<EventHandler EventName="RZUSER3"	ScriptFunctionName="OnSUHAVIArmOff3" DebugSingleStep="false"/>	
-		<EventHandler EventName="RZUSER4"	ScriptFunctionName="OnSUHAVIArmOff4" DebugSingleStep="false"/>			
-	</EventList>	
 	
 	<EventList Name="AlliedArtilleryVehicleFunctions" Inherit="BaseScriptFunctions">		
 		<EventHandler EventName="DeployUnitBlockBuildingOn"	ScriptFunctionName="OnAlliedArtilleryVehicleBlock" DebugSingleStep="false"/>
@@ -1062,25 +758,10 @@
 	<EventList Name="AlliedBaseDefenseAdvancedFunctions" Inherit="BaseScriptFunctions">		
 		<EventHandler EventName="UNDERPOWERED"	ScriptFunctionName="OnABAUnPowered" DebugSingleStep="false"/>
 		<EventHandler EventName="BuildingDone"	ScriptFunctionName="OnBCStealthDetect" DebugSingleStep="false"/>		
-	</EventList>	
-
-	<EventList Name="REMIXAnimalsFunctions" Inherit="BaseScriptFunctions">		
-		<EventHandler EventName="LOCOMOTOR_PANIC"	ScriptFunctionName="OnAinmalPanic" DebugSingleStep="false"/>
-		<EventHandler EventName="LOCOMOTOR_AMPANICEND"	ScriptFunctionName="OnPanicEnd" DebugSingleStep="false"/>
-	</EventList>	
-
-	<EventList Name="REMIXCivilianFunctions" Inherit="BaseScriptFunctions">		
-		<EventHandler EventName="LOCOMOTOR_PANIC"	ScriptFunctionName="OnCivilianPanic" DebugSingleStep="false"/>
-		<EventHandler EventName="LOCOMOTOR_AMPANICEND"	ScriptFunctionName="OnCivilianPanicEnd" DebugSingleStep="false"/>
-	</EventList>		
+	</EventList>			
 	
 	<EventList Name="BuildingCompleteFunctions" Inherit="BaseScriptFunctions">		
 		<EventHandler EventName="BuildingDone"	ScriptFunctionName="OnBCStealthDetect" DebugSingleStep="false"/>
-	</EventList>	
-	
-	<EventList Name="REMIXSharkFunctions" Inherit="BaseScriptFunctions">		
-		<EventHandler EventName="USING_WEAPON_A"	ScriptFunctionName="OnSharkEnraged" DebugSingleStep="false"/>
-		<EventHandler EventName="USING_WEAPON_B"	ScriptFunctionName="OnSharkEnraged" DebugSingleStep="false"/>		
 	</EventList>		
 
 	<EventList Name="RepairDroneFunctions" Inherit="BaseScriptFunctions">		
@@ -1136,21 +817,6 @@
 		<EventHandler EventName="SCT1GetMotoLv02"	ScriptFunctionName="OnSCT1GetMotoLv2" DebugSingleStep="false"/>	
 		<EventHandler EventName="SCT1GetMotoLv03"	ScriptFunctionName="OnSCT1GetMotoLv3" DebugSingleStep="false"/>		
 	</EventList>
-	
-	<EventList Name="Remix_Car08NatashaFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="Remix_Car08NatashaCreated" DebugSingleStep="false"/>
-		<EventHandler EventName="LOADED"	ScriptFunctionName="Remix_Car08NatashaLoaded" DebugSingleStep="false"/>		
-		<EventHandler EventName="UNLOADED"	ScriptFunctionName="Remix_08NatashaUnLoaded" DebugSingleStep="false"/>	
-		<EventHandler EventName="LVGetVeteran"	ScriptFunctionName="Remix_GetLvUpVeteran" DebugSingleStep="false"/>		
-		<EventHandler EventName="LVGetElite"	ScriptFunctionName="Remix_GetLvUpElite" DebugSingleStep="false"/>	
-		<EventHandler EventName="LVGetHero"	ScriptFunctionName="Remix_GetLvUpHeroic" DebugSingleStep="false"/>			
-		<EventHandler EventName="GiveSCT1Lv01"	ScriptFunctionName="OnSCT1MotoGetVeteran" DebugSingleStep="false"/>		
-		<EventHandler EventName="GiveSCT1Lv02"	ScriptFunctionName="OnSCT1MotoGetElite" DebugSingleStep="false"/>	
-		<EventHandler EventName="GiveSCT1Lv03"	ScriptFunctionName="OnSCT1MotoGetHeroic" DebugSingleStep="false"/>			
-		<EventHandler EventName="USER_9"	ScriptFunctionName="OnSCT1MotoEvacuate" DebugSingleStep="false"/>
-		<EventHandler EventName="IRONCURTAIN"	ScriptFunctionName="OnSCT1IRONCURTAIN" DebugSingleStep="false"/>	
-		<EventHandler EventName="SCT1MotoFROZEN"	ScriptFunctionName="OnSCT1MotoFROZEN" DebugSingleStep="false"/>
-	</EventList>	
 	
 	<EventList Name="CivPDParachuteSuMotoFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="PARACHUTINGLAND"	ScriptFunctionName="kill" DebugSingleStep="false"/>		
