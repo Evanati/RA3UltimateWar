@@ -4,11 +4,13 @@
     <AITargetingHeuristic
 		id="ClosestCivilianGarrisonHeuristic"
 		HeuristicType="NeutralGarrison"
-		VitalKindOf="CIVILIAN_BUILDING GARRISON"
+		VitalKindOf="GARRISON"
 		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER FS_TECHNOLOGY"
-		ForbiddenObjectStatus="REALLYDAMAGED"
+		ForbiddenObjectStatus="DAMAGED REALLYDAMAGED"
 		Relationship="NEUTRAL"
 		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="Distance"
 		SearchRange="9999.0"
 		MinDistanceFromEnemy="300.0">
 		

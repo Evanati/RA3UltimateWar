@@ -156,7 +156,7 @@
 			</WeaponSetUpdate>
 			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Veteran"
+				id="ModuleTag_LevelUpUpgrade_Veteran"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"
@@ -167,8 +167,9 @@
 				DoFlash="true">
 				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
 			</LevelUpUpgrade>
+			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Elite"
+				id="ModuleTag_LevelUpUpgrade_Elite"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"
@@ -179,8 +180,9 @@
 				DoFlash="true">
 				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
 			</LevelUpUpgrade>
+			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Heroic"
+				id="ModuleTag_LevelUpUpgrade_Heroic"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"

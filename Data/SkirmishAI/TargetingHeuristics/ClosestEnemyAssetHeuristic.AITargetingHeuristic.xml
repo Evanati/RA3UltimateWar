@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AITargetingHeuristic
+		id="ClosestEnemyTechStructureHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="NEUTRAL_TECH"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyRefineryHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="REFINERY"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyPowerPlantHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_POWER"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyOutpostHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="OUTPOST"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemySuperWeaponHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="SUPER_WEAPON"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyUltimateDefenseWeaponHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="REVEAL_TO_ALL"
+		ForbiddenKindOf="SUPER_WEAPON"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyTechnologyHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_TECHNOLOGY"
+		ForbiddenKindOf="FS_FACTORY"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+
+	<AITargetingHeuristic
+		id="ClosestEnemyConstructionYardHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="CONSTRUCTION_YARD"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyFactoryHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_FACTORY"
+		ForbiddenKindOf="CONSTRUCTION_YARD OUTPOST"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyBaseDefenseHeuristic"
+		HeuristicType="EnemyStructure"
+		VitalKindOf="FS_BASE_DEFENSE"
+		ForbiddenKindOf="NEUTRAL_TECH REVEAL_TO_ALL"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyCivilianGarrisonHeuristic"
+		HeuristicType="EnemyGarrison"
+		VitalKindOf="GARRISON"
+		ForbiddenObjectStatus="UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+
+	<AITargetingHeuristic
+		id="ClosestEnemyMCVExpansionUnitHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="MCV"
+		ForbiddenObjectStatus="AIRBORNE_TARGET UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyNonMCVExpansionUnitHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="EXPANSION_UNIT"
+		ForbiddenKindOf="MCV"
+		ForbiddenObjectStatus="AIRBORNE_TARGET UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyNonAerialCommandoHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="COMMANDO"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyHighValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="T3_UNIT"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyMediumValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="T2_UNIT"
+		ForbiddenKindOf="AIRCRAFT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyLowValueNonAerialVehicleHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="VEHICLE"
+		ForbiddenKindOf="AIRCRAFT T2_UNIT T3_UNIT"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestEnemyInfantryHeuristic"
+		HeuristicType="EnemyUnit"
+		VitalKindOf="INFANTRY"
+		ForbiddenKindOf="COMMANDO INFILTRATOR IGNORES_SELECT_ALL"
+		ForbiddenObjectStatus="AIRBORNE_TARGET SUBMERGED UNATTACKABLE UNDER_IRON_CURTAIN"
+		Relationship="ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0">
+	
+		<BaseSelection
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST" />
+	</AITargetingHeuristic>
+</AssetDeclaration>

@@ -2,6 +2,12 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Includes>
+		<!-- Micro managers -->
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftMicroManager.AIMicroManagerData.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedBomberAircraftStealthMicroManager.AIMicroManagerData.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedFighterAircraftMicroManager.AIMicroManagerData.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/MicroManagers/Allied/AlliedFighterAircraftStealthMicroManager.AIMicroManagerData.xml"/>
+	
 		<!-- Opening moves -->
 		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/Allied/AlliedBalanced.SkirmishOpeningMove.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/OpeningMoves/Allied/AlliedSpecialForces.SkirmishOpeningMove.xml"/>
@@ -31,11 +37,14 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSpecialForces.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/BuildStates/AlliedSquadronLeader.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedCapturePriorityTech.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedBomberAircraftAttacks.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/DestroyEnemyHighValueAssets.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/HighValueUnitEscort.AIStrategicStateDefinition.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/ProtectFriendlyHighValueAssets.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedUnitEscort.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Allied/StrategicStates/AlliedNavalOutpostExpansionBase.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/HealInfantryByFriendlyFieldHospital.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/RepairVehicleByFriendlyRepairTurret.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/RetreatMCV.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Common/StrategicStates/UnitEscort.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BudgetStates/JapanBudgets.AIBudgetStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanBalanced.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Japan/BuildStates/JapanCommon.AIBuildStateDefinition.xml"/>
@@ -50,14 +59,15 @@
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/BuildStates/SovietShockSpecialist.AIBuildStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/StrategicStates/SovietCapturePriorityTech.AIStrategicStateDefinition.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/States/Soviet/StrategicStates/SovietDefensiveGarrisons.AIStrategicStateDefinition.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/States/Soviet/StrategicStates/SovietNavalOutpostExpansionBase.AIStrategicStateDefinition.xml"/>
 			
 		<!-- Targeting heuristics -->
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestEnemyStructureHeuristic.AITargetingHeuristic.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestFriendlyStructureHeuristic.AITargetingHeuristic.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestFriendlyUnitHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestEnemyAssetHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestFriendlyAssetHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestGarrisonHeuristic.AITargetingHeuristic.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/ClosestTechStructureHeuristic.AITargetingHeuristic.xml"/>
 		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestExpansionPointHeuristic.AITargetingHeuristic.xml"/>
-		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestFriendlyStructureHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestFriendlyAssetHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestEnemyAssetHeuristic.AITargetingHeuristic.xml"/>
+		<Include type="all" source="DATA:SkirmishAI/TargetingHeuristics/SafestTechStructureHeuristic.AITargetingHeuristic.xml"/>
     </Includes>
 </AssetDeclaration>

@@ -265,35 +265,6 @@
 	DESC:SovietAntiInfantryInfantryMoto
 		"A tough and experienced Soviet resistance combatant. This skilled mechanic is ready to continue the fight even without his vehicle."
 	End		
-	
-// AlliedSniperInfantry		
-	Name:AlliedSniperInfantry
-		"Sniper"
-	End
-	
-	Type:AlliedSniperInfantry
-		"Anti-Infantry / Anti-Light Vehicle"
-	End
-
-	Desc:AlliedSniperInfantry
-		"Infantry that can strike targets with precision from a long distance."
-	End
-
-	Name:ToggleAUSniperGetDown
-		"Get down"
-	End
-
-	Desc:ToggleAUSniperGetDown
-		"Lie on the ground for more stable shooting accuracy."
-	End	
-	
-	Name:ToggleAUSniperGetUp
-		"stand up"
-	End
-
-	Desc:ToggleAUSniperGetUp
-		"Stand up and be ready to move quickly at any time."
-	End		
 
 // MS04SOVIETINTEL35	
 	DialogEvent:MS04_SOVIETINTEL35
@@ -2145,16 +2116,6 @@
 	DialogEvent:MIIn_ArcherMaiden
 		"*Archer Maidens use their powered greatbows to strike enemy ground and air targets.  These bows can be extremely damaging in spite of being relatively slow on the draw.  The Maidens' special ability launches an energy arrow barrage that can strike multiple targets in an area."
 	End
-
-// AlliedBomberAircraft
-
-	Name:AlliedBomberAircraftReturnToAirfield
-		"Return to Base"
-	End
-
-	Desc:AlliedBomberAircraftReturnToAirfield
-		"Order Century Bomber return to base for repairs and restock."
-	End
 	
 // Centurion
 	
@@ -2752,15 +2713,6 @@
 		"Activate the stealth device to make Hurricane disappear from enemy sights."
 	End		
 
-// AlliedFighterAircraft
-	Name:StratosphericFighterAircraftSpecialPower
-		"Strato Boost"
-	End
-	
-	Desc:StratosphericFighterAircraftSpecialPower
-		"Allows Apollos to shoot into the stratosphere and come screaming down at any location almost instantaneously."
-	End	
-
 // AlliedSupportAircraft
 	Name:SpecialPowerShrinkRay
 		"Quick Freezing Beam"
@@ -2799,15 +2751,6 @@
 	Desc:TogglePaladinSecondaryWeapon
 		"Activate the weapon system to engage enemy ground / air targets."
 	End		
-
-// AlliedBomberAircraft
-	Name:StratosphericSpecialPower
-		"Strato Boost"
-	End
-	
-	Desc:StratosphericSpecialPower
-		"Allows Centry Bombers to shoot into the stratosphere and come screaming down at any location almost instantaneously."
-	End	
 	
 // Kodiak
 	
@@ -3512,7 +3455,7 @@
 	End	
 	
 	Desc:PlayerPowerStratosphericBombing
-		"Active: Call in Century Bombers Squadron to scorch the selected area. \nPassive: allow Apollo Fighters and Century Bombers to gain the ability 'Strato Boost'."
+		"Active: Call in Century Bombers Squadron to scorch the selected area. \nPassive: allow Apollo Fighters and Century Bombers to gain stealth."
 	End
 	
 	Type:PlayerPowerStratosphericBombing
@@ -3659,12 +3602,12 @@
 
 // Version
 	Version:Format2
-		"RA3UW v0.6"
+		"RA3UW v0.7"
 	End	
 	
 // Information
 	NAME:UNITINTRO
-		"Red Alert 3: Ultimate War (v0.6)"
+		"Red Alert 3: Ultimate War (v0.7)"
 	End
 	
 	DESC:UNITINTRO
@@ -3682,21 +3625,7 @@
 
 	Type:AlliedDogHouseobj
 		"Training Attack Dogs"
-	End
-	
-// AlliedScoutInfantry
-	Desc:AlliedScoutInfantry
-		"Alert, well-trained German Shepherds. Have lethal bites and can sniff out enemy spies from afar."
-	End
-	
-// AlliedScoutInfantryDH
-	Name:AlliedScoutInfantryDH
-		"Special Attack Dog"
-	End
-	
-	Desc:AlliedScoutInfantryDH
-		"Extra tough, fast, and alert, well-trained German Shepherds. Have lethal bites and can sniff out enemy spies from afar."
-	End
+	End	
 
 // AlliedBaseDefenseRT
 	Name:AlliedBaseDefenseRT
@@ -3750,9 +3679,91 @@
 		"High-tech security systems that use supercharged beams of light to stop enemy forces. Includes torpedoes if built on water."
 	End
 	
+// AlliedScoutInfantry
+	Desc:AlliedScoutInfantry
+		"Alert, well-trained German Shepherds. Have lethal bites and can sniff out enemy spies from afar."
+	End
+	
+// AlliedScoutInfantryDH
+	Name:AlliedScoutInfantryDH
+		"Special Attack Dog"
+	End
+	
+	Desc:AlliedScoutInfantryDH
+		"Extra tough, fast, and alert, well-trained German Shepherds. Have lethal bites and can sniff out enemy spies from afar."
+	End
+	
+// AlliedSniperInfantry		
+	Name:AlliedSniperInfantry
+		".50 Cal Sniper"
+	End
+	
+	Type:AlliedSniperInfantry
+		"Anti-Infantry / Anti-Light Armor"
+	End
+
+	Desc:AlliedSniperInfantry
+		"Sneaky and versatile infantry with .50 Cal sniper rifles. Able to strike both non-aerial and aerial targets from a long distance. Requires targets to be steady."
+	End
+
+	Name:ToggleAUSniperGetDown
+		"Get down"
+	End
+
+	Desc:ToggleAUSniperGetDown
+		"Lie down to increase firing range and firing speed at the cost of mobility."
+	End	
+	
+	Name:ToggleAUSniperGetUp
+		"Get up"
+	End
+
+	Desc:ToggleAUSniperGetUp
+		"Stand up to increase mobility at the cost of firing range and firing speed."
+	End	
+	
+// AlliedBomberAircraft
+	Name:AlliedBomberAircraft
+		"Century Bomber"
+	End
+	
+	Type:AlliedBomberAircraft
+		"Heavy Bomber / Troop Carrier"
+	End		
+	
+	Desc:AlliedBomberAircraft
+		"Stately, well-armored planes that can carpet-bomb enemy bases before sending in paratroopers."
+	End	
+	
+// AlliedBomberAircraftStealth
+	Name:AlliedBomberAircraftStealth
+		"Century Bomber SB-A51"
+	End
+	
+	Type:AlliedBomberAircraftStealth
+		"Stealthed Heavy Bomber"
+	End		
+	
+	Desc:AlliedBomberAircraftStealth
+		"The Allies' latest version of the Century Bomber. Stealthed, fast, and well-armored, these stately planes can carpet-bomb enemy bases with few repercussions."
+	End	
+	
+// AlliedFighterAircraftStealth
+	Name:AlliedFighterAircraftStealth
+		"Apollo Fighter SF-A51"
+	End
+	
+	Type:AlliedFighterAircraftStealth
+		"Stealthed Anti-Air Jet"
+	End		
+	
+	Desc:AlliedFighterAircraftStealth
+		"The Allies' latest version of the Apollo Fighter. Stealthed, and ultrafast, air-superiority jets whose rapid-fire weapons can cut almost any hostile aicraft to ribbons."
+	End	
+	
 // AlliedTransportHelicopter
 	Name:AlliedTransportHelicopter
-		"S-93K Patriot"
+		"T-93K Patriot"
 	End
 	
 	Desc:AlliedTransportHelicopter

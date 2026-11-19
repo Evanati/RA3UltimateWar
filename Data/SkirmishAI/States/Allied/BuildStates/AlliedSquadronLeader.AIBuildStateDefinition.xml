@@ -745,7 +745,7 @@
 			CountModifier="0.75"/>
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
+			Build="AlliedFighterAircraftStealth"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.0"/>
 			
@@ -770,7 +770,7 @@
 			CountModifier="1.5"/>
 			
 		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
+			Build="AlliedBomberAircraftStealth"
 			Heuristic="FEWEST_UNIT"
 			CountModifier="1.5"/>
 			
@@ -826,7 +826,7 @@
 			ActualEfficiencyWeight="0.7" />
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
+			Build="AlliedFighterAircraftStealth"
 			Heuristic="BEST_UNIT_WEIGHTED"
 			ExpectedEfficiencyWeight="0.3"
 			ActualEfficiencyWeight="0.7" />
@@ -856,7 +856,7 @@
 			ActualEfficiencyWeight="0.7" />
 			
 		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
+			Build="AlliedBomberAircraftStealth"
 			Heuristic="BEST_UNIT_WEIGHTED"
 			ExpectedEfficiencyWeight="0.3"
 			ActualEfficiencyWeight="0.7" />
@@ -914,7 +914,7 @@
 			ActualEfficiencyWeight="0.7" />
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
+			Build="AlliedFighterAircraftStealth"
 			Heuristic="BEST_UNIT_WEIGHTED"
 			ExpectedEfficiencyWeight="0.3"
 			ActualEfficiencyWeight="0.7" />
@@ -944,7 +944,7 @@
 			ActualEfficiencyWeight="0.7" />
 			
 		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
+			Build="AlliedBomberAircraftStealth"
 			Heuristic="BEST_UNIT_WEIGHTED"
 			ExpectedEfficiencyWeight="0.3"
 			ActualEfficiencyWeight="0.7" />
@@ -993,7 +993,7 @@
 			PercentHigh="30%" />
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
+			Build="AlliedFighterAircraftStealth"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="30%"
 			PercentHigh="40%" />
@@ -1023,7 +1023,7 @@
 			PercentHigh="80%" />
 			
 		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
+			Build="AlliedBomberAircraftStealth"
 			Heuristic="RANDOM_UNIT"
 			PercentLow="80%"
 			PercentHigh="90%" />

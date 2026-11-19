@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="JapanConstructionYardCommandSet">
+		<Cmd>Command_ConstructJapanPowerPlantEgg</Cmd>
+		<Cmd>Command_ConstructJapanRefineryEgg</Cmd>
+		<Cmd>Command_ConstructJapanBarracksEgg</Cmd>
+		<Cmd>Command_ConstructJapanWarFactoryEgg</Cmd>
+		<Cmd>Command_ConstructJapanNavalYardEgg</Cmd>
+		<Cmd>Command_ConstructJapanTechStructureEgg</Cmd>
+		<Cmd>Command_ConstructJapanWall</Cmd>
+		<Cmd>Command_ConstructJapanBaseDefenseEgg</Cmd>
+		<Cmd>Command_ConstructJapanBaseDefenseAdvancedEgg</Cmd>
+		<Cmd>Command_ConstructJapanNewTowerEgg</Cmd>
+		<Cmd>Command_ConstructJapanSuperWeaponEgg</Cmd>
+		<Cmd>Command_ConstructJapanSuperWeaponAdvancedEgg</Cmd>
+		<Cmd>Command_PackJapanMCV</Cmd>
+	</LogicCommandSet>
+</AssetDeclaration>

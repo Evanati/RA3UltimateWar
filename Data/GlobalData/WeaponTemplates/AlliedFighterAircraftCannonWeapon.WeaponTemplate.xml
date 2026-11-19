@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="AlliedFighterAircraftCannonWeapon"
+		AttackRange="200.0"
+		MinimumAttackRange="10"
+		AcceptableAimDelta="10d"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE"
+		ProjectileCollidesWith="STRUCTURES"
+		RadiusDamageAffects="ENEMIES"
+		CanFireWhileMoving="true"
+		ClipSize="100"
+		AutoReloadsClip="RETURN_TO_BASE"
+		InstantLoadClipOnActivate="true" 
+		PreAttackType="PER_CLIP"
+		ReAcquireDetailType="PER_CLIP"
+		FireSound="ALL_Apollo_WeaponFire"
+		FireFX="FX_Allied_FighterFire"
+		FireVeteranFX="FX_Allied_FighterFire_Vet">
+		
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="10s"
+			MaxSeconds="10s" />
+			
+		<Nuggets>
+			<DamageNugget
+				id="AlliedFighterAircraftDamageNugget"
+				Damage="20.0"
+				DamageType="AUTO_CANNON"
+				DamageSubType="NORMAL"
+				DamageFXType="ALLIED_FIGHTER"
+				DeathType="NORMAL"
+				DelayTimeSeconds="0.1s">
+				<DamageScalarDetails 
+					Scalar="50%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlliedFighterAircraft</IncludeThing>
+						<IncludeThing>AlliedFighterAircraftStealth</IncludeThing>
+						<IncludeThing>SovietFighterAircraft</IncludeThing>
+					</Filter>		
+				</DamageScalarDetails>
+				
+				<DamageScalarDetails 
+					Scalar="100%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>Hurricane</IncludeThing>
+						<IncludeThing>JapanAntiAirShip</IncludeThing>
+						<IncludeThing>JapanAntiInfantryVehicle</IncludeThing>
+					</Filter>		
+				</DamageScalarDetails>
+				
+				<DamageScalarDetails 
+					Scalar="125%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>AlliedBomberAircraft</IncludeThing>
+						<IncludeThing>AlliedBomberAircraftStealth</IncludeThing>
+						<IncludeThing>SovietBomberAircraft</IncludeThing>
+						<IncludeThing>SovietDesolatorBomber</IncludeThing>
+					</Filter>		
+				</DamageScalarDetails>
+				
+				<DamageScalarDetails 
+					Scalar="150%">
+					<Filter
+						Rule="NONE">
+						<IncludeThing>Kodiak</IncludeThing>
+						<IncludeThing>JapanFortressShip</IncludeThing>
+						<IncludeThing>JapanFortressShipSP</IncludeThing>
+					</Filter>		
+				</DamageScalarDetails>
+			</DamageNugget>	
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedFighterAircraftCannonWeapon_Veteran"
+		inheritFrom="AlliedFighterAircraftCannonWeapon"
+		Flags="+SYNC_AMMO_ON_ACTIVATE"
+		ClipSize="200">
+		
+		<ClipReloadTime
+			MinSeconds="5s"
+			MaxSeconds="5s" />
+	</WeaponTemplate>
+</AssetDeclaration>

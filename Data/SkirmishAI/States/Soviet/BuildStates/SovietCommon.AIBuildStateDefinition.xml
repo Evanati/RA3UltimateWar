@@ -7,32 +7,30 @@
 		
 		<Heuristic>
 			<IntervalHeuristic
-				IntervalTime="30s"
+				IntervalTime="20s"
 				ActiveTime="10s"
 				CountFrom="MAP_START" />
 			<IsBuildingHeuristic 
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>SovietConstructionYard</IncludeThing>
-					<IncludeThing>SovietMCV</IncludeThing>
-					<IncludeThing>SovietMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>SovietWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+					<IncludeThing>SovietMCV_Naval</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -51,32 +49,30 @@
 		
 		<Heuristic>
 			<IntervalHeuristic
-				IntervalTime="30s"
+				IntervalTime="20s"
 				ActiveTime="10s"
 				CountFrom="MAP_START" />
 			<IsBuildingHeuristic 
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>SovietConstructionYard</IncludeThing>
-					<IncludeThing>SovietMCV</IncludeThing>
-					<IncludeThing>SovietMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>SovietNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>SovietConstructionYard</IncludeThing>
+					<IncludeThing>SovietMCV</IncludeThing>
+					<IncludeThing>SovietMCV_Naval</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -111,8 +107,7 @@
 				PassIfExists="false">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>SovietCrane</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
@@ -192,8 +187,7 @@
 				PassIfExists="false">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>SovietNavalYard</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
@@ -251,7 +245,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK ENGINEER INFILTRATOR">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -502,7 +495,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK INFILTRATOR ENGINEER">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -548,7 +540,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="INFANTRY VEHICLE AMPHIBIOUS"
 					Exclude="SHIP AIRCRAFT">
 				</EnemyFilter>
@@ -590,7 +581,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="SHIP AMPHIBIOUS">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -631,7 +621,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="AIRCRAFT">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -671,7 +660,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK INFILTRATOR ENGINEER">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>

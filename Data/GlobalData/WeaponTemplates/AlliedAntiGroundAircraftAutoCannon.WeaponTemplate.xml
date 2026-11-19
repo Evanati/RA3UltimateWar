@@ -7,7 +7,7 @@
 		FireFX="FX_Allied_FighterFire"
 		FireVeteranFX="FX_Allied_FighterFire_Vet"
 		AttackRange="170.0"
-		AcceptableAimDelta="20d"
+		AcceptableAimDelta="12d"
 		RequiredAntiMask="ANTI_GROUND ANTI_STRUCTURE ANTI_WATER"
 		CanFireWhileMoving="true"
 		ClipSize="10"
@@ -30,10 +30,16 @@
 				DamageFXType="ALLIED_FIGHTER"
 				DeathType="NORMAL">
 				
-				<DamageScalarDetails Scalar= "125%">
+				<DamageScalarDetails Scalar= "90%">
 					<Filter
-						Rule="NONE">
-						<IncludeThing>AlliedAntiInfantryInfantry</IncludeThing>
+						Rule="ANY"
+						Include="VEHICLE">
+					</Filter>		
+				</DamageScalarDetails>
+				<DamageScalarDetails Scalar= "75%">
+					<Filter
+						Rule="ANY"
+						Include="STRUCTURE">
 					</Filter>		
 				</DamageScalarDetails>
 			</DamageNugget>	

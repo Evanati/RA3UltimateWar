@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<SpecialPowerTemplate
+		id="SpecialPower_ToggleAUSniperGetDown"
+		Flags="CAN_NOT_BE_SCRAMBLED"
+		PreventConditions="AIRBORNE_TARGET OVER_WATER UNDER_FROZEN"
+		TargetType="NONE"
+		ReloadTime="2s"
+		WaypointModeTerminal="false" />
+</AssetDeclaration>

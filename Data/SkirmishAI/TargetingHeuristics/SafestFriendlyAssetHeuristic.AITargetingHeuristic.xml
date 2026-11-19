@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AITargetingHeuristic
+		id="SafestFriendlyCraneLandHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CRANE"
+		Relationship="ALLIES"
+		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="ThreatToGround"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyOutpostLandHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="OUTPOST"
+		Relationship="ALLIES"
+		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="ThreatToGround"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyTechnologyLandHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_TECHNOLOGY"
+		Relationship="ALLIES"
+		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="ThreatToGround"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyFactoryLandHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_FACTORY"
+		ForbiddenKindOf="CONSTRUCTION_YARD"
+		Relationship="ALLIES"
+		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="ThreatToGround"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+    <AITargetingHeuristic
+		id="SafestFriendlyCraneWaterHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CRANE"
+		Relationship="ALLIES"
+		Location="Water"
+		RequireUniqueTarget="false"
+		SortType="ThreatToWater"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyOutpostWaterHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="OUTPOST"
+		Relationship="ALLIES"
+		Location="Water"
+		RequireUniqueTarget="false"
+		SortType="ThreatToWater"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyTechnologyWaterHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_TECHNOLOGY"
+		Relationship="ALLIES"
+		Location="Water"
+		RequireUniqueTarget="false"
+		SortType="ThreatToWater"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyFactoryWaterHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_FACTORY"
+		ForbiddenKindOf="CONSTRUCTION_YARD"
+		Relationship="ALLIES"
+		Location="Water"
+		RequireUniqueTarget="false"
+		SortType="ThreatToWater"
+		SearchRange="3000.0"
+		MinDistanceFromEnemy="700.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestFriendlyStructureFallbackHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="STRUCTURE"
+		Relationship="ALLIES"
+		Location="Land Water"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE"
+			PreferredNotBaseTypes="CAPTURED UNDER_ATTACK"
+			PreferredBaseTypes="MAIN_BASE EXPANSION NO_BUILD_RADIUS"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+</AssetDeclaration>

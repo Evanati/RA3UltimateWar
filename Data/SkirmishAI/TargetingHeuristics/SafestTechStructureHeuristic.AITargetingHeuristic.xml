@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <AITargetingHeuristic
+		id="SafestMoneyTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="SUPPLY_SOURCE"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="SafestDefenseTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="FS_BASE_DEFENSE"
+		ForbiddenKindOf="COVER"
+		Relationship="NEUTRAL"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="500.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+    <AITargetingHeuristic
+		id="SafestVeterancyTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="GRANTS_VETERANCY"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="550.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+	<AITargetingHeuristic
+		id="SafestAircraftHealTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="SIEGE_TOWER"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="600.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+	<AITargetingHeuristic
+		id="SafestVehicleHealTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="CAVALRY"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="600.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+	<AITargetingHeuristic
+		id="SafestShipHealTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="MONSTER"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToWater"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="600.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+   <AITargetingHeuristic
+		id="SafestInfantryHealTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="CASTLE_KEEP"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="600.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+  
+	<AITargetingHeuristic
+		id="SafestRadarTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="FS_RADAR"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="650.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+	<AITargetingHeuristic
+		id="SafestPowerTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="FS_POWER"
+		ForbiddenKindOf="COVER"
+		Relationship="NEUTRAL ENEMIES"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="650.0">
+			
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+	<AITargetingHeuristic
+		id="SafestControlTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="CASTLE_CENTER"
+		Relationship="NEUTRAL"
+		RequireUniqueTarget="true"
+		SortType="ThreatToGround"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="650.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+		
+	<AITargetingHeuristic
+		id="SafestResidualTechStructureHeuristic"
+		HeuristicType="TechBuilding"
+		VitalKindOf="NEUTRAL_TECH"
+		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
+		Relationship="NEUTRAL"
+		RequireUniqueTarget="true"
+		SortType="Distance"
+		SearchRange="9999.0"
+		MinDistanceFromEnemy="700.0">
+				
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION CAPTURED"
+			SortOrder="PREFER_LEAST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+</AssetDeclaration>

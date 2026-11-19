@@ -11,12 +11,11 @@
 		RadiusDamageAffects="ENEMIES"
 		ClipSize="5"
 		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
-		RequiredAntiMask="ANTI_GROUND ANTI_WATER ANTI_STRUCTURE"
+		RequiredAntiMask="ANTI_GROUND ANTI_LIFTED_GROUND_UNIT ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE ANTI_WATER ANTI_STRUCTURE"
 		AcceptableAimDelta="10d"
 		CanFireWhileMoving="false"
 		ReAcquireDetailType="PER_CLIP"	
-		ShouldPlayUnderAttackEvaEvent="true"
-		>
+		ShouldPlayUnderAttackEvaEvent="true">
 		<FiringDuration
 			MinSeconds="0.1s"
 			MaxSeconds="0.1s" />

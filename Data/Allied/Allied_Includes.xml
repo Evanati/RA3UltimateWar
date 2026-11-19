@@ -14,7 +14,13 @@
 		
 		<!-- Units -->
 		<Include type="all" source="DATA:Allied/Units/AlliedAntiVehicleInfantry.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedBomberAircraft.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedBomberAircraftStealth.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedEngineer.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedFighterAircraft.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedFighterAircraftStealth.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Units/AlliedScoutInfantryDH.GameObject.xml"/>
+		<Include type="all" source="DATA:Allied/Units/AlliedSniperInfantry.GameObject.xml"/>
 		<Include type="all" source="DATA:Allied/Units/AlliedTransportHelicopter.GameObject.xml"/>
     </Includes>
 </AssetDeclaration>

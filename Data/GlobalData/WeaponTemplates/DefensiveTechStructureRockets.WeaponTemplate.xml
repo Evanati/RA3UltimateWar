@@ -4,7 +4,7 @@
 	<WeaponTemplate
 		id="DefensiveTechStructure_ScatterableWeapon">
 		<ScatterRadiusVsType
-			Radius="70.0"
+			Radius="112.0"
 			RequiredModelConditions="SHRINK_EFFECT">
 			<Filter
 				Rule="ANY"
@@ -16,6 +16,8 @@
 		id="DefensiveTechStructureRockets"
 		inheritFrom="DefensiveTechStructure_ScatterableWeapon" 
 		AttackRange="350.0"
+		HitPercentage="100%"
+		HitPassengerPercentage="100%"
 		WeaponSpeed="300"
 		MinWeaponSpeed="300"
 		MaxWeaponSpeed="310"
@@ -25,11 +27,9 @@
 		AcceptableAimDelta="20d"
 		ClipSize="3"
 		AutoReloadsClip="AUTO"
-		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
 		CanFireWhileMoving="true"
-		RequiredAntiMask="ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE"
-		HitPercentage="100%"
-		HitPassengerPercentage="100%">
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT"
+		RequiredAntiMask="ANTI_AIRBORNE_INFANTRY ANTI_AIRBORNE_VEHICLE">
 		
 		<FiringDuration
 			MinSeconds="0.25s"
@@ -41,13 +41,13 @@
 			<ProjectileNugget
 				PartitionFilterTestType="EXTENTS_3D"
 				Radius="0"
-				ProjectileTemplate="AlliedBaseDefenseMissileProjectile"
-				WarheadTemplate="AlliedBaseDefenseMissilePodProjectileWarhead"
+				ProjectileTemplate="AlliedTitanMissileGAProjectile"
+				WarheadTemplate="DefensiveTechStructureMissilePodProjectileWarhead"
 				WeaponLaunchBoneSlotOverride="NO_WEAPON" />
 			<SuppressionNugget
 				PartitionFilterTestType="EXTENTS_3D"
-				Radius="20"
-				Suppression="10"
+				Radius="32"
+				Suppression="16"
 				DurationSeconds="1s"
 				SuppressionTaperOff="-1"
 				SuppressionArc="360d"
@@ -57,6 +57,57 @@
 				Radius="0"
 				MinTimeToImpactFudgeFactor="0.85"
 				MaxTimeToImpactFudgeFactor="1.6" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="DefensiveTechStructureMissilePodProjectileWarhead"
+		ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY">
+		
+		<Nuggets>
+			<DamageNugget
+				id="DefenstiveTechStructureDefaultDamageNugget"
+				Damage="80.0"
+				Radius="16.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="ROCKET"
+				DamageFXType="ALLIED_MISSILE"
+				DeathType="EXPLODED">	
+
+				<DamageScalarDetails
+					Scalar= "400%">
+					<Filter 
+						Rule="ANY"
+						Include="INFANTRY"
+						StatusBitFlags="PARACHUTING AIRBORNE_TARGET" />
+				</DamageScalarDetails>
+				
+				<DamageScalarDetails
+					Scalar="95%">
+					<Filter 
+						Rule="NONE"
+						Include="T2_UNIT"
+						Exclude="INFANTRY" 
+						StatusBitFlags="AIRBORNE_TARGET" />
+				</DamageScalarDetails>
+				
+				<DamageScalarDetails
+					Scalar="90%">
+					<Filter 
+						Rule="NONE"
+						Include="T3_UNIT" 
+						Exclude="INFANTRY" 
+						StatusBitFlags="AIRBORNE_TARGET" />
+				</DamageScalarDetails>
+			</DamageNugget>
+			
+			<SuppressionNugget
+				Radius="16.0"
+				Suppression="40"
+				DurationSeconds="5s" />
 		</Nuggets>
 	</WeaponTemplate>
 </AssetDeclaration>

@@ -32,9 +32,9 @@
 		EmergencyManagerHandleNoConyardAtDifficulty="EASY MEDIUM HARD BRUTAL"
 		EmergencyManagerHandleUnderAttackAtDifficulty="EASY MEDIUM HARD BRUTAL"
 		EmergencyManagerHandleConyardInDangerAtDifficulty="MEDIUM HARD BRUTAL"
-		ConyardInDangerEmergencyUnderAttackTime="3s"
-		ConyardInDangerEmergencyHealthPercent="60%"
-		ConyardInDangerEmergencyEngineerDistance="500"
+		ConyardInDangerEmergencyUnderAttackTime="2s"
+		ConyardInDangerEmergencyHealthPercent="80%"
+		ConyardInDangerEmergencyEngineerDistance="300"
 		EnemySortingBrutalDifficulty="NearestFirst_BreakTies"
 		EnemySortingHardDifficulty="NearestFirst_BreakTies"
 		EnemySortingMediumDifficulty="Flat"
@@ -228,13 +228,29 @@
 			State="AlliedAirDrop"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
+			id="AlliedBomberAircraftDefensiveAttack"
+			State="AlliedBomberAircraftDefensiveAttack"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedBomberAircraftOffensiveAttack"
+			State="AlliedBomberAircraftOffensiveAttack"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedBomberAircraftStealthDefensiveAttack"
+			State="AlliedBomberAircraftStealthDefensiveAttack"
+			Difficulty="MEDIUM HARD BRUTAL"/>
+		<StrategicState
+			id="AlliedBomberAircraftStealthOffensiveAttack"
+			State="AlliedBomberAircraftStealthOffensiveAttack"
+			Difficulty="HARD BRUTAL"/>
+		<StrategicState
 			id="AlliedCaptureHighPriorityTech"
 			State="AlliedCaptureHighPriorityTech"
-			Difficulty="MEDIUM HARD BRUTAL"/>
+			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedCaptureLowPriorityTech"
 			State="AlliedCaptureLowPriorityTech"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
+			Difficulty="MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedCaptureMediumPriorityTech"
 			State="AlliedCaptureMediumPriorityTech"
@@ -252,6 +268,14 @@
 			State="AlliedExpansion_BRUTALNEW"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
+			id="AlliedHighValueAircraftFighterAircraftEscort"
+			State="AlliedHighValueAircraftFighterAircraftEscort"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="AlliedHighValueAircraftStealthFighterAircraftEscort"
+			State="AlliedHighValueAircraftStealthFighterAircraftEscort"
+			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
 			id="AlliedInfantryAttack"
 			State="AlliedInfantryAttack"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -260,8 +284,8 @@
 			State="AlliedMinerUpgExpansion_BRUTALNEW"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="AlliedNavalBase"
-			State="AlliedNavalBase"
+			id="AlliedNavalOutpostExpansionBase"
+			State="AlliedNavalOutpostExpansionBase"
 			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="AlliedStealthDetector_New"
@@ -295,10 +319,6 @@
 			id="CaptureLandHusks"
 			State="CaptureLandHusks"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
-		<StrategicState
-			id="CenturyBomberAttackNEW"
-			State="CenturyBomberAttackNEW"
-			Difficulty="EASY MEDIUM HARD BRUTAL"/>
 		<StrategicState
 			id="Cleanup"
 			State="Cleanup"
@@ -364,14 +384,6 @@
 			State="CratePickup"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="DestroyEnemyMoneyTechStructures"
-			State="DestroyEnemyMoneyTechStructures"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
-			id="DestroyEnemyNonMoneyTechStructures"
-			State="DestroyEnemyNonMoneyTechStructures"
-			Difficulty="HARD BRUTAL"/>
-		<StrategicState
 			id="EngineerIdle"
 			State="EngineerIdle"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
@@ -392,9 +404,9 @@
 			State="HarvesterController"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="HighValueAircraftFighterAircraftEscort"
-			State="HighValueAircraftFighterAircraftEscort"
-			Difficulty="HARD BRUTAL" />
+			id="HealInfantryByFriendlyFieldHospital"
+			State="HealInfantryByFriendlyFieldHospital"
+			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="HurricaneDefense"
 			State="HurricaneDefense"
@@ -432,21 +444,21 @@
 			State="LandEmergencyDefense_MEDIUM"
 			Difficulty="MEDIUM" />
 		<StrategicState
-			id="ProtectFriendlyMoneyTechStructures"
-			State="ProtectFriendlyMoneyTechStructures"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<StrategicState
-			id="ProtectFriendlyNonMoneyTechStructures"
-			State="ProtectFriendlyNonMoneyTechStructures"
-			Difficulty="MEDIUM HARD BRUTAL"/>
-		<StrategicState
-			id="RetreatMCVFromLandToWater"
-			State="RetreatMCVFromLandToWater"
+			id="RepairVehicleByFriendlyRepairTurretLand"
+			State="RepairVehicleByFriendlyRepairTurretLand"
 			Difficulty="MEDIUM HARD BRUTAL" />
 		<StrategicState
-			id="RetreatMCVFromWaterToLand"
-			State="RetreatMCVFromWaterToLand"
+			id="RepairVehicleByFriendlyRepairTurretWater"
+			State="RepairVehicleByFriendlyRepairTurretWater"
 			Difficulty="MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="RetreatMCVOnLand"
+			State="RetreatMCVOnLand"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<StrategicState
+			id="RetreatMCVOnWater"
+			State="RetreatMCVOnWater"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<StrategicState
 			id="ScoutAircraft"
 			State="ScoutAircraft"
@@ -827,11 +839,11 @@
 			Cap="16"
 			Difficulty="BRUTAL"/>
 		<SpecificUnitCap
-			Unit="AlliedBomberAircraftStratoUpgrade"
+			Unit="AlliedBomberAircraftStealth"
 			Cap="1"
 			Difficulty="EASY"/>
 		<SpecificUnitCap
-			Unit="AlliedBomberAircraftStratoUpgrade"
+			Unit="AlliedBomberAircraftStealth"
 			Cap="16"
 			Difficulty="MEDIUM HARD BRUTAL"/>
 		<SpecificUnitCap
@@ -871,19 +883,19 @@
 			Cap="16"
 			Difficulty="BRUTAL"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="2"
 			Difficulty="EASY"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="4"
 			Difficulty="MEDIUM"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="8"
 			Difficulty="HARD"/>
 		<SpecificUnitCap
-			Unit="AlliedFighterAircraftStratoUpgrade"
+			Unit="AlliedFighterAircraftStealth"
 			Cap="16"
 			Difficulty="BRUTAL"/>
 		<SpecificUnitCap
@@ -1152,6 +1164,16 @@
 			DefensiveModifier="25"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
+			Unit="AlliedBomberAircraftStealth"
+			OffensiveModifier="10"
+			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="AlliedBomberAircraftStealth"
+			OffensiveModifier="35"
+			DefensiveModifier="35"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
 			Unit="AlliedCommandoTech1"
 			OffensiveModifier="5"
 			DefensiveModifier="5"
@@ -1165,6 +1187,16 @@
 			Unit="AlliedFighterAircraft"
 			OffensiveModifier="10"
 			DefensiveModifier="10"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="AlliedFighterAircraftStealth"
+			OffensiveModifier="6"
+			DefensiveModifier="6"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="AlliedFighterAircraftStealth"
+			OffensiveModifier="20"
+			DefensiveModifier="20"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedFutureTank"
@@ -1215,6 +1247,11 @@
 			Unit="AlliedScoutInfantry"
 			OffensiveModifier="0.5"
 			DefensiveModifier="0.5"
+			Difficulty="EASY MEDIUM HARD BRUTAL" />
+		<UnitModifier
+			Unit="AlliedSniperInfantry"
+			OffensiveModifier="3"
+			DefensiveModifier="3"
 			Difficulty="EASY MEDIUM HARD BRUTAL" />
 		<UnitModifier
 			Unit="AlliedSupportAircraft"

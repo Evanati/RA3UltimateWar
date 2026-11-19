@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<SpecialPowerTemplate
+		id="SpecialPower_SurveyorPackReplaceSelf"		
+		Flags="CAN_NOT_BE_SCRAMBLED" 
+		PreventConditions="SOLD BOOBY_TRAPPED IS_BEING_DRAGGED"
+		TargetType="NONE"
+		ReloadTime="5s"
+		WaypointModeTerminal="false">
+		<GameDependency
+			ForbiddenModelConditions="UNPACKING" />
+	</SpecialPowerTemplate>
+</AssetDeclaration>

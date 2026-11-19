@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AITargetingHeuristic
+		id="ClosestFriendlyMoneyTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="SUPPLY_SOURCE"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyDefenseTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_BASE_DEFENSE"
+		ForbiddenKindOf="COVER"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyVeterancyTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="GRANTS_VETERANCY"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyAircraftHealTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="SIEGE_TOWER"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+    <AITargetingHeuristic
+		id="ClosestFriendlyVehicleHealTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CAVALRY"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyShipHealTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="MONSTER"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyInfantryHealTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CASTLE_KEEP"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyRadarTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_RADAR"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyPowerTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="FS_POWER"
+		ForbiddenKindOf="COVER"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyControlTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CASTLE_CENTER"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+		
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyResidualTechStructureHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="NEUTRAL_TECH"
+		ForbiddenKindOf="SUPPLY_SOURCE FS_BASE_DEFENSE GRANTS_VETERANCY SIEGE_TOWER CAVALRY MONSTER CASTLE_KEEP FS_RADAR FS_POWER CASTLE_CENTER"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="9999.0">
+				
+		<BaseSelection
+			PreferredNotBaseTypes="MAIN_BASE"
+			PreferredBaseTypes="EXPANSION CAPTURED NO_BUILD_RADIUS ENEMIES_IN_BASE UNDER_ATTACK"
+			SortOrder="PREFER_MOST_RECENTLY_ATTACKED"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyRepairTurretLandHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CAN_HEAL_ALLIES"
+		ForbiddenKindOf="INFANTRY"
+		Relationship="ALLIES"
+		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="1000.0"
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyRepairTurretWaterHeuristic"
+		HeuristicType="FriendlyStructure"
+		VitalKindOf="CAN_HEAL_ALLIES"
+		ForbiddenKindOf="INFANTRY"
+		Relationship="ALLIES"
+		Location="Water"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="1000.0"
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyFieldHospitalHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="CAN_HEAL_ALLIES"
+		ForbiddenKindOf="VEHICLE"
+		VitalObjectStatus="GENERIC_TOGGLE_STATE"
+		Relationship="ALLIES"
+		Location="Land"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="1000.0"
+		MinDistanceFromEnemy="500.0">
+		
+		<BaseSelection
+			ExcludedBaseTypes="ENEMIES_IN_BASE UNDER_ATTACK"
+			PreferredNotBaseTypes="CAPTURED NO_BUILD_RADIUS"
+			PreferredBaseTypes="MAIN_BASE EXPANSION"
+			SortOrder="PREFER_CLOSEST"/>
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyCommandoBomberAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="COMMANDO"
+		ForbiddenKindOf="INFANTRY"
+		VitalObjectStatus="AIRBORNE_TARGET"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="2500.0">
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyNonCommandoBomberAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="BOMBER_AIRCRAFT"
+		ForbiddenKindOf="COMMANDO"
+		VitalObjectStatus="AIRBORNE_TARGET"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="2500.0">
+	</AITargetingHeuristic>
+	
+	<AITargetingHeuristic
+		id="ClosestFriendlyOccupiedTransportAircraftHeuristic"
+		HeuristicType="FriendlyUnit"
+		VitalKindOf="TRANSPORT"
+		VitalObjectStatus="AIRBORNE_TARGET CONTAINER_OCCUPIED"
+		Relationship="ALLIES"
+		RequireUniqueTarget="false"
+		SortType="Distance"
+		SearchRange="2500.0">
+	</AITargetingHeuristic>
+</AssetDeclaration>

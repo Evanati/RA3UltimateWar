@@ -178,11 +178,6 @@ function OnAlliedBarracksCreated(self)
 	ObjectHideSubObjectPermanently( self, "Upgrade_03", true )
 end
 
-function OnAlliedConstructionYardCreated(self)
-	ObjectHideSubObjectPermanently( self, "Upgrade_02", true )
-	ObjectHideSubObjectPermanently( self, "Upgrade_03", true )
-end
-
 function onCreatedControlPointFunctions(self)
 	ObjectHideSubObjectPermanently( self, "TB_CP_ALN", true )
 	ObjectHideSubObjectPermanently( self, "TB_CP_GDI", true )
@@ -1599,6 +1594,23 @@ end
 ---------------------------------------------------
 ----- Red Alert 3: Ultimate War lua functions -----
 ---------------------------------------------------
+
+function OnAlliedConstructionYardCreated(self)
+
+	ObjectHideSubObjectPermanently( self, "Upgrade_02", true )
+	ObjectHideSubObjectPermanently( self, "Upgrade_03", true )
+	
+	local team = ObjectTeamName(self)
+	
+	if strfind(team, "Skirmish") ~= nil then
+	
+		local player = tostring(strsub(team, 1, 8))
+	
+		ExecuteAction("PLAYER_AI_CHANGEWALLBUILDER", player, "true") -- allow AI to build walls
+		
+	end
+	
+end
 
 function OnAlliedBaseDefenseRTCreated(self)
 	

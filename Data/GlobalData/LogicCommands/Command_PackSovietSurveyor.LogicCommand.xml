@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommand
+		id="Command_PackSovietSurveyor"
+		Type="SPECIAL_POWER">
+		<SpecialPower>SpecialPower_SurveyorPackReplaceSelf</SpecialPower>
+		
+		<AISpecialPowerInfo
+			Heuristic="PACK"
+			Manager="TACTIC"
+			Location="Land Water"
+			NextLogicCommand="Command_UnpackSovietSurveyor" />
+	</LogicCommand>
+</AssetDeclaration>

@@ -9,8 +9,10 @@
 		<Include type="all"	source="ART:ABBaseDefense_BLD_BLDW.w3x" />								
 		<Include type="all"	source="ART:ABBaseDefense_FX.w3x" />
 		<Include type="all"	source="ART:ABBaseDefense_Platform.w3x" />
-		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />		
-		<Include type="all" source="ART:Allied/Structures/AlliedBaseDefenseMGT/AlliedBaseDefenseMGT_Includes.xml" />		
+		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />	
+		<Include type="all" source="ART:FXTracer.xml" />		
+		<Include type="all" source="ART:Allied/Structures/AlliedBaseDefenseMGT/AlliedBaseDefenseMGT_Includes.xml" />
+		
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseStructure.xml" />
 	</Includes>
@@ -282,15 +284,15 @@
 			<!-- DRAW TRACER BULLETS -->
 			<TracerModelDraw
 				id="ModuleTag_TracerModelDraw"
-				MinLength="5.5"
+				MinLength="3.5"
 				MaxLength="6.0"
-				Width="2.0"
+				Width="1.0"
 				MinSpeed="20"
 				MaxSpeed="25"
 				SweepSpeed="1.0"
 				SpreadAngle="7.0"
-				MinTracersPerFrame="0.2"
-				MaxTracersPerFrame="0.3"
+				MinTracersPerFrame="0.5"
+				MaxTracersPerFrame="0.5"
 				FrameLifeTime="25"
 				WeaponSlotType="PRIMARY_WEAPON"
 				Texture="FXTracer"
@@ -342,7 +344,7 @@
 			</WeaponSetUpdate>
 			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Veteran"
+				id="ModuleTag_LevelUpUpgrade_Veteran"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"
@@ -353,8 +355,9 @@
 				DoFlash="true">
 				<TriggeredBy>Upgrade_CreationVeterancy_VETERAN</TriggeredBy>
 			</LevelUpUpgrade>
+			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Elite"
+				id="ModuleTag_LevelUpUpgrade_Elite"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"
@@ -365,8 +368,9 @@
 				DoFlash="true">
 				<TriggeredBy>Upgrade_CreationVeterancy_ELITE</TriggeredBy>
 			</LevelUpUpgrade>
+			
 			<LevelUpUpgrade
-				id="ModuleTag_LevelUp_Heroic"
+				id="ModuleTag_LevelUpUpgrade_Heroic"
 				RequiresAllTriggers="false"
 				RequiresAllConflictingTriggers="false"
 				Permanent="false"

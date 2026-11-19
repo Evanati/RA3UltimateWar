@@ -10,7 +10,8 @@
 		<Include type="all"	source="ART:ABBaseDefense_FX.w3x" />
 		<Include type="all"	source="ART:ABBaseDefense_Platform.w3x" />
 		<Include type="all"	source="ART:ABBaseDefense_Platform_BLD.w3x" />
-		<Include type="all" source="ART:Allied/Structures/AlliedBaseDefenseRT/AlliedBaseDefenseRT_Includes.xml" />		
+		<Include type="all" source="ART:Allied/Structures/AlliedBaseDefenseRT/AlliedBaseDefenseRT_Includes.xml" />
+		
 		<!-- Base Object -->
 		<Include type="instance" source="DATA:BaseObjects/BaseStructure.xml" />
 	</Includes>
@@ -26,7 +27,7 @@
 		BuildTime="25"
 		EnergyProduction="-30"
 		CommandSet="EmptyCommandSet"
-		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +FS_WAR_FACTORY +FS_TECHNOLOGY +CAN_HEAL_ALLIES +POWERED +HIDE_IF_FOGGED"
+		KindOf="-NOT_AUTOACQUIRABLE +FS_BASE_DEFENSE +FS_TECHNOLOGY +POWERED +CAN_HEAL_ALLIES +COVER +HIDE_IF_FOGGED"
 		RadarPriority="STRUCTURE"
 		PlacementViewAngle="225d"
 		CampnessValue="1500"

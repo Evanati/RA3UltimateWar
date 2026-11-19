@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Includes>	
+		<Include type="all" source="AUDIO:Allied/Units/AlliedSniperInfantry/AlliedSniperInfantry_Includes.xml"/>
+		<!-- Base Object -->
+		<Include type="instance" source="DATA:BaseObjects/AudioEvents/BaseSoundEffect.AudioEvent.xml"/>
+    </Includes>
+	
+	<AudioEvent
+		id="ALL_50CalSniper_GunFire"
+		inheritFrom="BaseSoundEffect"
+		Volume="80"
+		VolumeShift="-5"
+		Limit="3"
+		Type="WORLD SHROUDED EVERYONE"
+		Control="INTERRUPT"
+		Priority="HIGH"
+		SubmixSlider="SOUNDFX">
+		<NonInterruptibleTime 
+			Low="1.0s" 
+			High="1.0s" />
+		<PitchShift
+			Low="10"
+			High="25" />
+			
+		<Sound>Lynx_AMR_Firing</Sound>
+	</AudioEvent>
+</AssetDeclaration>

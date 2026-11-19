@@ -2,7 +2,7 @@
 
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
   <WeaponTemplate
-		id="AlliedBarracksDefenseShotgunLeft"
+		id="AlliedBarracksDefenseShotgun"
 		AttackRange="150.0"
 		MinTargetPitch="-15d"
 		MaxTargetPitch="15d"
@@ -49,14 +49,5 @@
 				ShockWaveArc="5d"
 				ForbiddenTargetModelCondition="STUNNED_FLAILING"/>
 		</Nuggets>
-	</WeaponTemplate>
-	
-	<WeaponTemplate
-		id="AlliedBarracksDefenseShotgunRight"
-		inheritFrom="AlliedBarracksDefenseShotgunLeft">
-		
-		<PreAttackDelay
-			MinSeconds="1.0s"
-			MaxSeconds="1.5s" />
 	</WeaponTemplate>
 </AssetDeclaration>

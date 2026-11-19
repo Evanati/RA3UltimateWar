@@ -3,14 +3,15 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Includes>
 		<Include type="all" source="ART:SI_Helipad.W3X" />
+		
 		<!-- Base Object -->
-		<Include type="instance" source="DATA:BaseObjects/BaseRoadSegment.xml" />
+		<Include type="instance" source="DATA:BaseObjects/BaseCivilianStructure.xml" />
 	</Includes>
 	
 	<GameObject
 		id="SI_Helipad"
-		inheritFrom="BaseRoadSegment"
-		KindOf="+CLEARED_BY_BUILD"
+		inheritFrom="BaseCivilianStructure"
+		KindOf="-SELECTABLE -CRUSHABLE_BUILDING -GARRISON -COVER -ALWAYS_VISIBLE_IN_RADAR"
 		EditorName="SI_Helipad"
 		EditorSorting="OPTIMIZED_PROPS"
 		Browser="REGION SAKHALIN_ISLAND_SI OPTIMIZED_PROPS" >
@@ -30,10 +31,10 @@
 		<Geometry
 			IsSmall="false">
 			<Shape 
-				Type= "BOX"
-				MajorRadius = "30"
-				MinorRadius = "30"
-				Height = "0" >
+				Type="BOX"
+				MajorRadius="50"
+				MinorRadius="50"
+				Height="3" >
 			</Shape>
 		</Geometry>
 	</GameObject>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AudioFile 
+		id="Lynx_AMR_Firing" 
+		File="AUDIO:Allied\Units\AlliedSniperInfantry\Sounds\Lynx_AMR_Firing.wav" 
+		GUIPreset="Default" />
+</AssetDeclaration>

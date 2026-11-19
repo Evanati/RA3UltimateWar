@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommand
+		id="Command_AlliedBomberAircraftStealthReturnToAirfield"
+		Type="SPECIAL_POWER">
+		<SpecialPower>SpecialPowerReturnToProducer</SpecialPower>
+		
+		<AISpecialPowerInfo
+			Heuristic="SPEED_BOOST"
+			Manager="MICRO_MANAGER"
+			Location="Land Water"
+			UseInMicroManagerState="RETREAT"
+			UseWhenOutOfAmmo="true"
+			UseNearTacticalTarget="false"
+			NeverUseWhileRetreating="false"
+			NeverUseWhilePullingBack="false"
+			RequireKillTargets="true"
+			MinKillValue="0"
+			MinTargetsHit="1"
+			MinEnemiesNearby="1">
+		</AISpecialPowerInfo>
+	</LogicCommand>
+</AssetDeclaration>

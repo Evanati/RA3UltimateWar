@@ -7,32 +7,30 @@
 		
 		<Heuristic>
 			<IntervalHeuristic
-				IntervalTime="30s"
+				IntervalTime="20s"
 				ActiveTime="10s"
 				CountFrom="MAP_START" />
 			<IsBuildingHeuristic 
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedMCV</IncludeThing>
-					<IncludeThing>AlliedMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
 				Location="Land"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedWarFactory</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedConstructionYard</IncludeThing>
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>AlliedMCV_Naval</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -51,32 +49,30 @@
 		
 		<Heuristic>
 			<IntervalHeuristic
-				IntervalTime="30s"
+				IntervalTime="20s"
 				ActiveTime="10s"
 				CountFrom="MAP_START" />
 			<IsBuildingHeuristic 
 				KindOf="MCV" 
 				PassIfBuilding="false"/>
 			<ObjectOfTypeExistsHeuristic
-				Location="Land Water"
-				PassIfExists="false">
-				<ObjectFilter
-					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
-					<IncludeThing>AlliedConstructionYard</IncludeThing>
-					<IncludeThing>AlliedMCV</IncludeThing>
-					<IncludeThing>AlliedMCV_Naval</IncludeThing>
-				</ObjectFilter>
-			</ObjectOfTypeExistsHeuristic>
-			<ObjectOfTypeExistsHeuristic
 				Location="Water"
 				PassIfExists="true">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedNavalYard</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land Water"
+				PassIfExists="false">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="SAME_PLAYER">
+					<IncludeThing>AlliedConstructionYard</IncludeThing>
+					<IncludeThing>AlliedMCV</IncludeThing>
+					<IncludeThing>AlliedMCV_Naval</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
 			<EnemyNearbyHeuristic 
@@ -111,8 +107,7 @@
 				PassIfExists="false">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedCrane</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
@@ -192,8 +187,7 @@
 				PassIfExists="false">
 				<ObjectFilter
 					Rule="NONE"
-					Relationship="SAME_PLAYER"
-					Alignment="NONE">
+					Relationship="SAME_PLAYER">
 					<IncludeThing>AlliedNavalYard</IncludeThing>
 				</ObjectFilter>
 			</ObjectOfTypeExistsHeuristic>
@@ -254,7 +248,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK ENGINEER INFILTRATOR">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -458,7 +451,7 @@
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry
-			Build="AlliedFighterAircraftStratoUpgrade"
+			Build="AlliedFighterAircraftStealth"
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry
@@ -478,7 +471,7 @@
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry
-			Build="AlliedBomberAircraftStratoUpgrade"
+			Build="AlliedBomberAircraftStealth"
 			Heuristic="NEEDED_UNIT" />
 			
 		<BuildEntry
@@ -547,7 +540,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK INFILTRATOR ENGINEER">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -598,7 +590,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="INFANTRY VEHICLE AMPHIBIOUS"
 					Exclude="SHIP AIRCRAFT">
 				</EnemyFilter>
@@ -650,7 +641,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="SHIP AMPHIBIOUS">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -701,7 +691,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="AIRCRAFT">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>
@@ -746,7 +735,6 @@
 				<EnemyFilter
 					Rule="ANY"
 					Relationship="ENEMIES"
-					Alignment="NONE"
 					Include="CAN_ATTACK INFILTRATOR ENGINEER">
 				</EnemyFilter>
 			</EnemyNearbyHeuristic>

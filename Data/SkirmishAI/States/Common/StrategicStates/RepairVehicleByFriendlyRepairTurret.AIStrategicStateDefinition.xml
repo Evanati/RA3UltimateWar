@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AIStrategicStateDefinition
+		id="RepairVehicleByFriendlyRepairTurretLand"
+		MaxRunningCopies="10"
+		MaxInactiveCopies="1"
+		MaxTargets="1">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>AlliedBaseDefenseRT</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Land"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Include="VEHICLE"
+					Exclude="AIRCRAFT SHIP"
+					StatusBitFlags="DAMAGED REALLYDAMAGED">
+					<IncludeThing>SovietScoutVehicle</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false"/>
+		</Heuristic>
+		
+		<TargetHeuristic 
+			TargetHeuristic="ClosestFriendlyRepairTurretLandHeuristic" 
+			Priority="1"/>
+		<Tactic 
+			id="RepairVehiclesByFriendlyAlliedRepairTurretsOnLand" 
+			Tactic="StaticDefense" 
+			EndBehavior="DISBAND" 
+			EndIfStateTurnsOff="true"
+			Difficulty="MEDIUM HARD BRUTAL"
+			Distance="500.0"
+			UpdateTime="1s"
+			Targetless="false"
+			UseTransports="false"
+			UseAestheticsManager="true"
+			AestheticsManagerPatrolIdleTime="20s"
+			AestheticsManagerMinDistanceFromHarvester="40.0">
+			<TeamTemplate 
+				MinUnits="1" 
+				MaxUnits="1" 
+				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
+				IncludeKindOf="VEHICLE" 
+				ExcludeKindOf="AIRCRAFT SHIP"
+				Priority="STANDARD" 
+				ReleaseType="ALWAYS_RELEASE" 
+				AlwaysRecruit="true"
+				AllowRecruitUnitsInCombat="false"
+				RequireCanAttackTarget="false"
+				AllowedLocomotorTypes="LAND AMPHIBIOUS"
+				DistanceSortPoint="TARGET_POINT"
+				MicroManager="DefenseMicroManager"
+				IsBaseDefenseTeam="true"
+				BaseDefenseMaxDistance="20.0"
+				SortByDistance="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Include="VEHICLE"
+					Exclude="AIRCRAFT SHIP"
+					StatusBitFlags="DAMAGED REALLYDAMAGED">
+					<IncludeThing>SovietScoutVehicle</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+	
+	<AIStrategicStateDefinition
+		id="RepairVehicleByFriendlyRepairTurretWater"
+		MaxRunningCopies="10"
+		MaxInactiveCopies="1"
+		MaxTargets="1">
+		
+		<Heuristic>
+			<OpeningMoveHeuristic 
+				Complete="true"/>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>AlliedBaseDefenseRT</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<ObjectOfTypeExistsHeuristic
+				Location="Water"
+				PassIfExists="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Include="AMPHIBIOUS SHIP"
+					Exclude="AIRCRAFT INFANTRY"
+					StatusBitFlags="DAMAGED REALLYDAMAGED">
+					<IncludeThing>SovietScoutVehicle</IncludeThing>
+				</ObjectFilter>
+			</ObjectOfTypeExistsHeuristic>
+			<EnemyNearbyHeuristic 
+				Distance="500.0" 
+				EnemyNearby="false"/>
+		</Heuristic>
+		
+		<TargetHeuristic 
+			TargetHeuristic="ClosestFriendlyRepairTurretWaterHeuristic" 
+			Priority="1"/>
+		<Tactic 
+			id="RepairVehiclesByFriendlyAlliedRepairTurretsOnWater" 
+			Tactic="StaticDefense" 
+			EndBehavior="DISBAND" 
+			EndIfStateTurnsOff="true"
+			Difficulty="MEDIUM HARD BRUTAL"
+			Distance="500.0"
+			UpdateTime="1s"
+			Targetless="false"
+			UseTransports="false"
+			UseAestheticsManager="true"
+			AestheticsManagerPatrolIdleTime="20s"
+			AestheticsManagerMinDistanceFromHarvester="40.0">
+			<TeamTemplate 
+				MinUnits="1" 
+				MaxUnits="1" 
+				RegisteredObjectSet="SKIRMISH_AI_NORMAL_COMBAT_UNITS"
+				IncludeKindOf="AMPHIBIOUS SHIP" 
+				ExcludeKindOf="AIRCRAFT INFANTRY"
+				Priority="STANDARD" 
+				ReleaseType="ALWAYS_RELEASE" 
+				AlwaysRecruit="true"
+				AllowRecruitUnitsInCombat="false"
+				RequireCanAttackTarget="false"
+				AllowedLocomotorTypes="AMPHIBIOUS WATER"
+				DistanceSortPoint="TARGET_POINT"
+				MicroManager="DefenseMicroManager"
+				IsBaseDefenseTeam="true"
+				BaseDefenseMaxDistance="20.0"
+				SortByDistance="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Include="AMPHIBIOUS SHIP"
+					Exclude="AIRCRAFT INFANTRY"
+					StatusBitFlags="DAMAGED REALLYDAMAGED">
+					<IncludeThing>SovietScoutVehicle</IncludeThing>
+				</ObjectFilter>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+</AssetDeclaration>
