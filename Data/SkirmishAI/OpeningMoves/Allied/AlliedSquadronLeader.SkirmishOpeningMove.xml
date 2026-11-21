@@ -39,66 +39,18 @@
 		<Order Time="60s" Build="AlliedAntiInfantryInfantry" />
 		<Order Time="65s" Build="AlliedAntiInfantryInfantry" />
 		<Order Time="70s" Build="AlliedAntiVehicleInfantry" />
-		<Order Time="75s" Build="AlliedAntiVehicleInfantry" />
-		<Order Time="80s" Build="AlliedSniperInfantry" />
 		<!-- Rush units -->
 		
-		<Order Time="80s" Build="AlliedAirfield" /> <!-- Power balance: 250/175 -->
-		<Order Time="80s" Build="AlliedWarFactory" /> <!-- Power balance: 250/225 -->
-		<Order Time="95s" Build="AlliedPowerPlant" /> <!-- Power balance: 350/225 -->
-		<Order Time="100s" Build="AlliedAirfield" /> <!-- Power balance: 350/275 -->
-		<Order Time="105s" Build="AlliedWarFactory" /> <!-- Power balance: 350/325 -->
-		<Order Time="115s" Build="AlliedPowerPlant" /> <!-- Power balance: 450/325 -->
-		<Order Time="125s" Build="AlliedAirfield" /> <!-- Power balance: 450/375 -->
-		<Order Time="125s" Build="AlliedAirfield" /> <!-- Power balance: 450/425 -->
-		<Order Time="140s" Build="AlliedPowerPlant" /> <!-- Power balance: 550/425 -->
-		<Order Time="140s" Build="Upgrade_AlliedTech2" />
-		<Order Time="150s" Build="Upgrade_AlliedTech2" />
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="AlliedSquadronLeader_Island_BRUTAL"
-		Side="PlayerTemplate:Allies">
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="10s" Build="AlliedCrane" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="60s" Build="AlliedAirfield" />
-		<Order Time="60s" Build="AlliedNavalYard" />
-		<Order Time="75s" Build="AlliedPowerPlant" />
-		<Order Time="80s" Build="AlliedAirfield" />
-		<Order Time="85s" Build="AlliedWarFactory" />
-		<Order Time="95s" Build="AlliedPowerPlant" />
-		<Order Time="105s" Build="AlliedAirfield" />
-		<Order Time="105s" Build="AlliedAirfield" />
-		<Order Time="120s" Build="AlliedPowerPlant" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
+		<Order Time="70s" Build="AlliedAirfield" /> <!-- Power balance: 250/175 -->
+		<Order Time="70s" Build="AlliedWarFactory" /> <!-- Power balance: 250/225 -->
+		<Order Time="85s" Build="AlliedPowerPlant" /> <!-- Power balance: 350/225 -->
+		<Order Time="90s" Build="AlliedAirfield" /> <!-- Power balance: 350/275 -->
+		<Order Time="95s" Build="AlliedWarFactory" /> <!-- Power balance: 350/325 -->
+		<Order Time="105s" Build="AlliedPowerPlant" /> <!-- Power balance: 450/325 -->
+		<Order Time="115s" Build="AlliedAirfield" /> <!-- Power balance: 450/375 -->
+		<Order Time="115s" Build="AlliedAirfield" /> <!-- Power balance: 450/425 -->
+		<Order Time="130s" Build="AlliedPowerPlant" /> <!-- Power balance: 550/425 -->
 		<Order Time="130s" Build="Upgrade_AlliedTech2" />
-		<Order Time="145s"/>
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="AlliedSquadronLeader_Water_BRUTAL"
-		Side="PlayerTemplate:Allies">
-		<Order Time="0s" Build="AlliedCrane" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="50s" Build="AlliedAirfield" />
-		<Order Time="50s" Build="AlliedNavalYard" />
-		<Order Time="65s" Build="AlliedPowerPlant" />
-		<Order Time="70s" Build="AlliedAirfield" />
-		<Order Time="75s" Build="AlliedNavalYard" />
-		<Order Time="85s" Build="AlliedPowerPlant" />
-		<Order Time="95s" Build="AlliedAirfield" />
-		<Order Time="95s" Build="AlliedAirfield" />
-		<Order Time="110s" Build="AlliedPowerPlant" />
-		<Order Time="110s" Build="Upgrade_AlliedTech2" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="135s"/>
+		<Order Time="140s" Build="Upgrade_AlliedTech2" />
 	</SkirmishOpeningMove>
 </AssetDeclaration>

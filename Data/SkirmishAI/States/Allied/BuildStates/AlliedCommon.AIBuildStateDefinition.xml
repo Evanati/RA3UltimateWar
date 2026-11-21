@@ -6,6 +6,8 @@
 		id="AlliedMCVLandBuildState">
 		
 		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
 			<IntervalHeuristic
 				IntervalTime="20s"
 				ActiveTime="10s"
@@ -48,6 +50,8 @@
 		id="AlliedMCVWaterBuildState">
 		
 		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
 			<IntervalHeuristic
 				IntervalTime="20s"
 				ActiveTime="10s"

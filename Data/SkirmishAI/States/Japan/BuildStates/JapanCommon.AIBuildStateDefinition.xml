@@ -6,6 +6,8 @@
 		id="JapanMCVLandBuildState">
 		
 		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
 			<IntervalHeuristic
 				IntervalTime="20s"
 				ActiveTime="10s"
@@ -48,6 +50,8 @@
 		id="JapanMCVWaterBuildState">
 		
 		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
 			<IntervalHeuristic
 				IntervalTime="20s"
 				ActiveTime="10s"
