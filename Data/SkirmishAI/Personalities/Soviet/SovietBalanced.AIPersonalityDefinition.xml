@@ -18,7 +18,7 @@
 		UnitBuilderEnemyNearbyMultiplier="4"
 		BuildTechEfficiencyThreshold="1"
 		BuildTechMinPowerAdvantage="0.1"
-		BuildExtraFactoryMinTime="180s"
+		BuildExtraFactoryMinTime="240s"
 		ResourceNodeSearchRadius="700"
 		ResourceNodeValueRemainingForExpansion="80000"
 		RefineryPlacementStartDistanceDelta="-30"
@@ -194,30 +194,6 @@
 				<PathToTargetHeuristic
 					Surface="Land"
 					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="true"/>
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="SovietBalanced_Island_BRUTAL"
-			Weight="100%"
-			Difficulty="BRUTAL">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Land"
-					ObjectTypeToUseForTest="SovietAntiInfantryInfantry"
-					LocomotorConditionToUseForTest="NORMAL"
-					PathExists="false"/>
-			</Heuristic>
-		</OpeningMove>
-		<OpeningMove
-			Name="SovietBalanced_Water_BRUTAL"
-			Weight="100%"
-			Difficulty="BRUTAL">
-			<Heuristic>
-				<PathToTargetHeuristic
-					Surface="Water"
-					ObjectTypeToUseForTest="SovietScoutInfantry"
 					LocomotorConditionToUseForTest="NORMAL"
 					PathExists="true"/>
 			</Heuristic>

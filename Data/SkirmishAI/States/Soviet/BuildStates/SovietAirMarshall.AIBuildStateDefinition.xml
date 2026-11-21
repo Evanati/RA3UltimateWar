@@ -36,19 +36,19 @@
 			MinTime="210s" />
 			
 		<BuildEntry
-			Build="SovietSuperWeapon"
-			Heuristic="TECH"
-			MinTime="210s" />
-			
-		<BuildEntry
 			Build="SovietTechStructure"
 			Heuristic="TECH"
-			MinTime="270s" />
+			MinTime="250s" />
 			
 		<BuildEntry
 			Build="SovietSuperWeaponAdvanced"
 			Heuristic="TECH"
 			MinTime="360s" />
+			
+		<BuildEntry
+			Build="SovietSuperWeapon"
+			Heuristic="TECH"
+			MinTime="390s" />
 			
 		<BuildEntry
 			Build="SovietNewTower"

@@ -40,63 +40,15 @@
 		<!-- Rush units -->
 		<Order Time="70s" Build="SovietAntiInfantryInfantry" />
 		<Order Time="74s" Build="SovietAntiInfantryInfantry" />
-		<Order Time="78s" Build="SovietAntiInfantryInfantry" />
-		<Order Time="82s" Build="SovietAntiInfantryInfantry" />
-		<Order Time="86s" Build="SovietAntiVehicleInfantry" />
+		<Order Time="78s" Build="SovietAntiVehicleInfantry" />
 		<!-- Rush units -->
 		
-		<Order Time="90s" Build="SovietPowerPlantAdvanced" />
-		<Order Time="90s" Build="SovietBarracks" />
-		<Order Time="100s" Build="SovietWarFactory" />
-		<Order Time="120s" Build="SovietBarracks" />
+		<Order Time="80s" Build="SovietPowerPlantAdvanced" />
+		<Order Time="80s" Build="SovietBarracks" />
+		<Order Time="90s" Build="SovietWarFactory" />
+		<Order Time="110s" Build="SovietBarracks" />
+		<Order Time="110s" Build="SovietWarFactory" />
 		<Order Time="120s" Build="SovietWarFactory" />
-		<Order Time="130s" Build="SovietWarFactory" />
-		<Order Time="140s" Build="SovietAirfield" />
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="SovietShockSpecialist_Island_BRUTAL"
-		Side="PlayerTemplate:Soviet">
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="10s" Build="AlliedCrane" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="60s" Build="AlliedAirfield" />
-		<Order Time="60s" Build="AlliedNavalYard" />
-		<Order Time="75s" Build="AlliedPowerPlant" />
-		<Order Time="80s" Build="AlliedAirfield" />
-		<Order Time="85s" Build="AlliedWarFactory" />
-		<Order Time="95s" Build="AlliedPowerPlant" />
-		<Order Time="105s" Build="AlliedAirfield" />
-		<Order Time="105s" Build="AlliedAirfield" />
-		<Order Time="120s" Build="AlliedPowerPlant" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="130s" Build="Upgrade_AlliedTech2" />
-		<Order Time="145s"/>
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="SovietShockSpecialist_Water_BRUTAL"
-		Side="PlayerTemplate:Soviet">
-		<Order Time="0s" Build="AlliedCrane" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="50s" Build="AlliedAirfield" />
-		<Order Time="50s" Build="AlliedNavalYard" />
-		<Order Time="65s" Build="AlliedPowerPlant" />
-		<Order Time="70s" Build="AlliedAirfield" />
-		<Order Time="75s" Build="AlliedNavalYard" />
-		<Order Time="85s" Build="AlliedPowerPlant" />
-		<Order Time="95s" Build="AlliedAirfield" />
-		<Order Time="95s" Build="AlliedAirfield" />
-		<Order Time="110s" Build="AlliedPowerPlant" />
-		<Order Time="110s" Build="Upgrade_AlliedTech2" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="135s"/>
+		<Order Time="130s" Build="SovietAirfield" />
 	</SkirmishOpeningMove>
 </AssetDeclaration>

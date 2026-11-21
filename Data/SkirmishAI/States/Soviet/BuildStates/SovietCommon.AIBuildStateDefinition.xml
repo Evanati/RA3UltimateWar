@@ -6,6 +6,8 @@
 		id="SovietMCVLandBuildState">
 		
 		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
 			<IntervalHeuristic
 				IntervalTime="20s"
 				ActiveTime="10s"
@@ -48,6 +50,8 @@
 		id="SovietMCVWaterBuildState">
 		
 		<Heuristic>
+			<OpeningMoveHeuristic
+				Complete="true" />
 			<IntervalHeuristic
 				IntervalTime="20s"
 				ActiveTime="10s"

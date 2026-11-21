@@ -41,62 +41,14 @@
 		<Order Time="70s" Build="SovietAntiVehicleInfantry" />
 		<Order Time="75s" Build="SovietAntiVehicleInfantry" />
 		<Order Time="80s" Build="SovietAntiVehicleInfantry" />
-		<Order Time="85s" Build="SovietAntiVehicleInfantry" />
-		<Order Time="90s" Build="SovietAntiVehicleInfantry" />
 		<!-- Rush units -->
 		
-		<Order Time="90s" Build="SovietPowerPlantAdvanced" />
-		<Order Time="90s" Build="SovietBarracks" />
-		<Order Time="100s" Build="SovietWarFactory" />
-		<Order Time="120s" Build="SovietAirfield" />
-		<Order Time="120s" Build="SovietAirfield" />
-		<Order Time="150s" Build="SovietWarFactory" />
-		<Order Time="150s" Build="SovietAirfield" />
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="SovietAirMarshall_Island_BRUTAL"
-		Side="PlayerTemplate:Soviet">
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="10s" Build="AlliedCrane" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="60s" Build="AlliedBarracks" />
-		<Order Time="60s" Build="AlliedNavalYard" />
-		<Order Time="70s" Build="AlliedPowerPlant" />
-		<Order Time="80s" Build="AlliedAirfield" />
-		<Order Time="80s" Build="AlliedNavalYard" />
-		<Order Time="95s" Build="AlliedPowerPlant" />
-		<Order Time="100s" Build="AlliedAirfield" />
-		<Order Time="105s" Build="AlliedWarFactory" />
-		<Order Time="115s" Build="AlliedPowerPlant" />
-		<Order Time="125s" Build="Upgrade_AlliedTech2" />
-		<Order Time="125s" Build="Upgrade_AlliedTech2" />
-		<Order Time="140s"/>
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="SovietAirMarshall_Water_BRUTAL"
-		Side="PlayerTemplate:Soviet">
-		<Order Time="0s" Build="AlliedCrane" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="50s" Build="AlliedNavalYard" />
-		<Order Time="50s" Build="AlliedAirfield" />
-		<Order Time="65s" Build="AlliedPowerPlant" />
-		<Order Time="70s" Build="AlliedNavalYard" />
-		<Order Time="75s" Build="AlliedAirfield" />
-		<Order Time="90s" Build="AlliedPowerPlant" />
-		<Order Time="90s" Build="AlliedAirfield" />
-		<Order Time="100s" Build="AlliedNavalYard" />
-		<Order Time="105s" Build="AlliedPowerPlant" />
-		<Order Time="115s" Build="Upgrade_AlliedTech2" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="135s"/>
+		<Order Time="80s" Build="SovietPowerPlantAdvanced" />
+		<Order Time="80s" Build="SovietBarracks" />
+		<Order Time="90s" Build="SovietWarFactory" />
+		<Order Time="110s" Build="SovietAirfield" />
+		<Order Time="110s" Build="SovietAirfield" />
+		<Order Time="140s" Build="SovietWarFactory" />
+		<Order Time="140s" Build="SovietAirfield" />
 	</SkirmishOpeningMove>
 </AssetDeclaration>

@@ -38,7 +38,7 @@
 		<BuildEntry
 			Build="SovietSuperWeapon"
 			Heuristic="TECH"
-			MinTime="210s" />
+			MinTime="270s" />
 			
 		<BuildEntry
 			Build="SovietAirFieldTechStructure"

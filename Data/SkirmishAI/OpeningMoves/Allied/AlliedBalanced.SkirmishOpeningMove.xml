@@ -36,69 +36,21 @@
 		<Order Time="40s" Build="AlliedRefinery" /> <!-- Power balance: 250/125 -->
 		
 		<!-- Rush units -->
-		<Order Time="60s" Build="AlliedGrenadeInfantry" />
-		<Order Time="65s" Build="AlliedGrenadeInfantry" />
+		<Order Time="60s" Build="AlliedAntiVehicleInfantry" />
+		<Order Time="65s" Build="AlliedAntiVehicleInfantry" />
 		<Order Time="70s" Build="AlliedAntiVehicleInfantry" />
-		<Order Time="75s" Build="AlliedAntiVehicleInfantry" />
-		<Order Time="80s" Build="AlliedAntiVehicleInfantry" />
 		<!-- Rush units -->
 		
-		<Order Time="80s" Build="AlliedBarracks" /> <!-- Power balance: 250/150 -->
-		<Order Time="80s" Build="AlliedWarFactory" /> <!-- Power balance: 250/200 -->
-		<Order Time="90s" Build="AlliedPowerPlant" /> <!-- Power balance: 350/200 -->
-		<Order Time="100s" Build="AlliedWarFactory" /> <!-- Power balance: 350/250 -->
-		<Order Time="100s" Build="AlliedAirfield" /> <!-- Power balance: 350/300 -->
-		<Order Time="115s" Build="AlliedPowerPlant" /> <!-- Power balance: 450/300 -->
-		<Order Time="120s" Build="AlliedWarFactory" /> <!-- Power balance: 450/350 -->
-		<Order Time="125s" Build="AlliedAirfield" /> <!-- Power balance: 450/400 -->
-		<Order Time="140s" Build="AlliedPowerPlant" /> <!-- Power balance: 550/400 -->
+		<Order Time="70s" Build="AlliedBarracks" /> <!-- Power balance: 250/150 -->
+		<Order Time="70s" Build="AlliedWarFactory" /> <!-- Power balance: 250/200 -->
+		<Order Time="80s" Build="AlliedPowerPlant" /> <!-- Power balance: 350/200 -->
+		<Order Time="90s" Build="AlliedWarFactory" /> <!-- Power balance: 350/250 -->
+		<Order Time="90s" Build="AlliedAirfield" /> <!-- Power balance: 350/300 -->
+		<Order Time="105s" Build="AlliedPowerPlant" /> <!-- Power balance: 450/300 -->
+		<Order Time="110s" Build="AlliedWarFactory" /> <!-- Power balance: 450/350 -->
+		<Order Time="115s" Build="AlliedAirfield" /> <!-- Power balance: 450/400 -->
+		<Order Time="130s" Build="AlliedPowerPlant" /> <!-- Power balance: 550/400 -->
+		<Order Time="130s" Build="Upgrade_AlliedTech2" />
 		<Order Time="140s" Build="Upgrade_AlliedTech2" />
-		<Order Time="150s" Build="Upgrade_AlliedTech2" />
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="AlliedBalanced_Island_BRUTAL"
-		Side="PlayerTemplate:Allies">
-		<Order Time="0s" Build="AlliedBarracks" />
-		<Order Time="0s" Build="AlliedDogHouse" />
-		<Order Time="10s" Build="AlliedCrane" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedPowerPlant" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="40s" Build="AlliedRefinery" />
-		<Order Time="60s" Build="AlliedNavalYard" />
-		<Order Time="60s" Build="AlliedWarFactory" />
-		<Order Time="80s" Build="AlliedPowerPlant" />
-		<Order Time="80s" Build="AlliedNavalYard" />
-		<Order Time="90s" Build="AlliedAirfield" />
-		<Order Time="100s" Build="AlliedPowerPlant" />
-		<Order Time="105s" Build="AlliedWarFactory" />
-		<Order Time="110s" Build="AlliedAirfield" />
-		<Order Time="125s" Build="AlliedPowerPlant" />
-		<Order Time="125s" Build="Upgrade_AlliedTech2" />
-		<Order Time="135s" Build="Upgrade_AlliedTech2" />
-		<Order Time="150s"/>
-	</SkirmishOpeningMove>
-	
-	<SkirmishOpeningMove
-		id="AlliedBalanced_Water_BRUTAL"
-		Side="PlayerTemplate:Allies">
-		<Order Time="0s" Build="AlliedCrane" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="20s" Build="AlliedPowerPlant" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="30s" Build="AlliedRefinery" />
-		<Order Time="50s" Build="AlliedNavalYard" />
-		<Order Time="50s" Build="AlliedNavalYard" />
-		<Order Time="70s" Build="AlliedPowerPlant" />
-		<Order Time="70s" Build="AlliedAirfield" />
-		<Order Time="80s" Build="AlliedNavalYard" />
-		<Order Time="85s" Build="AlliedPowerPlant" />
-		<Order Time="95s" Build="AlliedAirfield" />
-		<Order Time="100s" Build="AlliedNavalYard" />
-		<Order Time="110s" Build="AlliedPowerPlant" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="120s" Build="Upgrade_AlliedTech2" />
-		<Order Time="135s"/>
 	</SkirmishOpeningMove>
 </AssetDeclaration>

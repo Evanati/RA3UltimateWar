@@ -33,7 +33,7 @@
 		<BuildEntry
 			Build="JapanSuperWeaponEgg"
 			Heuristic="TECH"
-			MinTime="300s" />
+			MinTime="330s" />
 			
 		<BuildEntry
 			Build="JapanSuperWeaponAdvancedEgg"
